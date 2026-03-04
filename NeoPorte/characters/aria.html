@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昏昏アリア — Neo-Porte</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Teko:wght@400;600;700&family=Noto+Sans+JP:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #7d3c98;
+            --char-glow: rgba(125, 60, 152, 0.5);
+            --char-color-soft: rgba(125, 60, 152, 0.08);
+            --char-border: rgba(125, 60, 152, 0.28);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a href="../neoporte_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO NEO-PORTE</a>
+        <span class="cp-nav-gen">🏢 3期生</span>
+    </nav>
+    <section class="cp-hero">
+        <div class="cp-bg-letter">布</div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">NEO-PORTE // 3期生</div>
+            <h1 class="cp-hero-name">昏昏アリア</h1>
+            <span class="cp-hero-en">Konkon Aria</span>
+            <p class="cp-chara-desc">
+                その辺にいる<strong>悪魔教祖</strong>。ネオポルテを布教して大金持ちになり、人間界に土地と家を買って住むのが夢。挨拶は「<strong>こんこんこんちゃ</strong>」。</p>
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">#悪魔教祖</span>
+                <span class="cp-tag cp-tag-primary">#アリア布教中</span>
+                <span class="cp-tag cp-tag-muted">#イラスト得意</span>
+                <span class="cp-tag cp-tag-muted">#動画編集得意</span>
+                <span class="cp-tag cp-tag-muted">#バッドエンド好き</span>
+            </div>
+        </div>
+        <div class="cp-hero-orb">👁️</div>
+    </section>
+    <div class="cp-section cp-reveal">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>基本情報</h3>
+                <table class="cp-table">
+                    <tr>
+                        <th>見た目年齢</th>
+                        <td>18歳</td>
+                    </tr>
+                    <tr>
+                        <th>挨拶</th>
+                        <td><strong>こんこんこんちゃ</strong></td>
+                    </tr>
+                    <tr>
+                        <th>夢</th>
+                        <td>布教資金で人間界に土地と家を購入</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="cp-card">
+                <h3>特技・配信スタイル</h3>
+                <ul>
+                    <li><strong>イラスト・動画編集</strong>が得意</li>
+                    <li>配信内の「不教動画」「札束風呂」などを<strong>自作</strong></li>
+                    <li>バッドエンドな物語・ダークな世界観が好き</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer class="cp-footer">
+        <p>© 2026 NeoPorte Fan Archive — 非公式ファンサイト</p>
+    </footer>
+    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+</body>
+
+</html>

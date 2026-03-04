@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日裏クロ — Neo-Porte</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Teko:wght@400;600;700&family=Noto+Sans+JP:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #9b59b6;
+            --char-glow: rgba(155, 89, 182, 0.5);
+            --char-color-soft: rgba(155, 89, 182, 0.08);
+            --char-border: rgba(155, 89, 182, 0.28);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a href="../neoporte_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO NEO-PORTE</a>
+        <span class="cp-nav-gen">🎲 6期生 · #ヒウラの裏側</span>
+    </nav>
+    <section class="cp-hero">
+        <div class="cp-bg-letter">賭</div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">NEO-PORTE // 6期生</div>
+            <h1 class="cp-hero-name">日裏クロ</h1>
+            <span class="cp-hero-en">Hiura Kuro</span>
+            <p class="cp-chara-desc">
+                異界から来た<strong>元ギャンブラー</strong>。借金取りから逃げるため変装が得意。LoLを<strong>1万時間</strong>プレイした経歴を持ち、初配信でライブ開始ボタンを押し忘れた伝説もある。
+            </p>
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">#ヒウライブ</span>
+                <span class="cp-tag cp-tag-primary">#LoL 1万時間</span>
+                <span class="cp-tag cp-tag-muted">#元ギャンブラー</span>
+                <span class="cp-tag cp-tag-muted">#借金逃亡中</span>
+                <span class="cp-tag cp-tag-muted">#サウナ好き</span>
+            </div>
+        </div>
+        <div class="cp-hero-orb">🎲</div>
+    </section>
+    <div class="cp-section cp-reveal">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>ゲーム実績</h3>
+                <ul>
+                    <li>League of Legends（LoL）：<strong>1万時間</strong>プレイ</li>
+                    <li>借金取りから逃げるため<strong>変装（差分）</strong>が得意</li>
+                    <li>サウナが好き</li>
+                </ul>
+            </div>
+            <div class="cp-card">
+                <h3>初配信の伝説</h3>
+                <p>デビュー配信でライブ開始ボタンを<strong>押し忘れ</strong>、1人で歌って喋り続けるという前代未聞のやらかしをした。</p>
+            </div>
+        </div>
+    </div>
+    <footer class="cp-footer">
+        <p>© 2026 NeoPorte Fan Archive — 非公式ファンサイト</p>
+    </footer>
+    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+</body>
+
+</html>

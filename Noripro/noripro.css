@@ -1,0 +1,529 @@
+/* ============================================================
+   noripro.css — のりプロ Agency Page
+   Concept: "Creator First, Creative Next."
+   Aesthetic: Cozy manga creator studio — warm ink on paper,
+   fanzine energy, handmade charm with subtle digital polish.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&family=M+PLUS+Rounded+1c:wght@400;700;900&family=Bebas+Neue&family=Noto+Sans+JP:wght@400;700;900&display=swap');
+
+:root {
+    /* Warm ink palette */
+    --nr-ink: #1a0a00;
+    --nr-orange: #e85d04;
+    --nr-orange-dk: #c74b03;
+    --nr-orange-gw: rgba(232, 93, 4, 0.55);
+    --nr-orange-sf: rgba(232, 93, 4, 0.1);
+    --nr-amber: #f48c06;
+    --nr-cream: #faf7f2;
+    --nr-paper: #f2ece1;
+
+    /* Dark side */
+    --nr-dark: #110800;
+    --nr-surface: rgba(255, 255, 255, 0.04);
+    --nr-border: rgba(232, 93, 4, 0.2);
+    --nr-subtle: rgba(255, 255, 255, 0.07);
+    --nr-text: #e8e0d5;
+    --nr-muted: rgba(232, 224, 213, 0.55);
+    --nr-white: #ffffff;
+}
+
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--nr-dark);
+    color: var(--nr-text);
+    overflow-x: hidden;
+    line-height: 1.7;
+}
+
+.nr-container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 5vw;
+}
+
+/* ============================================================
+   BACKGROUND — warm paper texture + ink splatter
+   ============================================================ */
+.nr-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+/* Halftone-ish radial gradient */
+.nr-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 15% 30%, rgba(232, 93, 4, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 85% 70%, rgba(244, 140, 6, 0.1) 0%, transparent 50%);
+}
+
+/* Subtle manga-panel hatching lines */
+.nr-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(-45deg,
+            transparent,
+            transparent 28px,
+            rgba(232, 93, 4, 0.025) 28px,
+            rgba(232, 93, 4, 0.025) 29px);
+}
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+.nr-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1.1rem 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(17, 8, 0, 0.85);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--nr-border);
+}
+
+.nr-nav-logo {
+    font-family: 'Kiwi Maru', serif;
+    font-size: 1.4rem;
+    color: var(--nr-white);
+    letter-spacing: 2px;
+}
+
+.nr-nav-logo span {
+    color: var(--nr-orange);
+}
+
+.nr-nav-back {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: var(--nr-muted);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: color 0.3s;
+}
+
+.nr-nav-back:hover {
+    color: var(--nr-orange);
+}
+
+.nr-nav-tag {
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    color: var(--nr-muted);
+    background: var(--nr-surface);
+    border: 1px solid var(--nr-subtle);
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.nr-hero {
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 9rem 5vw 5rem;
+    overflow: hidden;
+}
+
+.nr-hero-bg-text {
+    position: absolute;
+    right: -3%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 42vw;
+    color: var(--nr-orange);
+    opacity: 0.04;
+    line-height: 0.85;
+    user-select: none;
+    pointer-events: none;
+}
+
+.nr-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 650px;
+}
+
+.nr-eyebrow {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 5px;
+    color: var(--nr-orange);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.85;
+}
+
+.nr-eyebrow::before {
+    content: '';
+    width: 24px;
+    height: 2px;
+    background: var(--nr-orange);
+}
+
+.nr-hero-name {
+    font-family: 'Kiwi Maru', serif;
+    font-size: clamp(3.5rem, 9vw, 7rem);
+    line-height: 1;
+    color: var(--nr-white);
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 50px var(--nr-orange-gw);
+}
+
+.nr-hero-name span {
+    color: var(--nr-orange);
+}
+
+.nr-hero-tagline {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(1rem, 2.5vw, 1.6rem);
+    letter-spacing: 6px;
+    color: var(--nr-amber);
+    margin-bottom: 2rem;
+    opacity: 0.8;
+}
+
+.nr-hero-concept {
+    font-family: 'Kiwi Maru', serif;
+    font-size: 1rem;
+    color: var(--nr-text);
+    line-height: 1.9;
+    background: var(--nr-orange-sf);
+    border-left: 3px solid var(--nr-orange);
+    padding: 1rem 1.5rem;
+    margin-bottom: 2.5rem;
+    border-radius: 0 4px 4px 0;
+}
+
+.nr-hero-stats {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.nr-stat {
+    text-align: center;
+}
+
+.nr-stat-value {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.8rem;
+    color: var(--nr-white);
+    line-height: 1;
+}
+
+.nr-stat-label {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: var(--nr-orange);
+    text-transform: uppercase;
+}
+
+/* ============================================================
+   SECTION
+   ============================================================ */
+.nr-section {
+    position: relative;
+    z-index: 10;
+    padding: 5.5rem 0;
+}
+
+.nr-section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 1.2rem;
+    margin-bottom: 3.5rem;
+}
+
+.nr-section-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3.5rem;
+    color: var(--nr-orange);
+    opacity: 0.25;
+    line-height: 1;
+}
+
+.nr-section-title {
+    font-family: 'Kiwi Maru', serif;
+    font-size: 1.9rem;
+    color: var(--nr-white);
+    letter-spacing: 2px;
+}
+
+.nr-section-title-sub {
+    font-size: 0.8rem;
+    color: var(--nr-orange);
+    letter-spacing: 3px;
+    display: block;
+    margin-top: 0.15rem;
+    text-transform: uppercase;
+}
+
+.nr-divider {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--nr-border), transparent);
+    align-self: center;
+}
+
+/* ============================================================
+   MEMBER GROUP HEADER
+   ============================================================ */
+.nr-group-title {
+    font-family: 'Kiwi Maru', serif;
+    font-size: 1.2rem;
+    color: var(--nr-white);
+    margin: 3rem 0 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid var(--nr-subtle);
+}
+
+.nr-unit-badge {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: var(--nr-orange);
+    border: 1px solid var(--nr-border);
+    padding: 0.2rem 0.8rem;
+    border-radius: 20px;
+}
+
+/* ============================================================
+   MEMBER CARDS — gossip/episode style
+   ============================================================ */
+.nr-member-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.nr-member-card {
+    background: var(--nr-surface);
+    border: 1px solid var(--nr-subtle);
+    border-radius: 6px;
+    padding: 1.8rem;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s, transform 0.2s;
+}
+
+/* Left ink bar */
+.nr-member-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--nr-orange);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.nr-member-card:hover {
+    border-color: var(--nr-border);
+    transform: translateY(-3px);
+}
+
+.nr-member-card:hover::before {
+    opacity: 1;
+}
+
+.nr-member-name {
+    font-family: 'Kiwi Maru', serif;
+    font-size: 1.2rem;
+    color: var(--nr-white);
+    line-height: 1.3;
+    margin-bottom: 0.3rem;
+    display: block;
+    transition: color 0.25s;
+}
+
+a.nr-member-name:hover {
+    color: var(--nr-orange);
+}
+
+.nr-member-read {
+    font-size: 0.75rem;
+    color: var(--nr-orange);
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
+
+.nr-member-ep {
+    font-size: 0.88rem;
+    color: var(--nr-muted);
+    line-height: 1.85;
+}
+
+.nr-member-ep strong {
+    color: var(--nr-text);
+}
+
+/* ============================================================
+   ABOUT INFO CARDS
+   ============================================================ */
+.nr-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.2rem;
+}
+
+.nr-info-card {
+    background: var(--nr-surface);
+    border: 1px solid var(--nr-subtle);
+    border-radius: 6px;
+    padding: 2rem;
+    transition: border-color 0.3s;
+}
+
+.nr-info-card:hover {
+    border-color: var(--nr-border);
+}
+
+.nr-info-card::before {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 3px;
+    background: var(--nr-orange);
+    border-radius: 2px;
+    margin-bottom: 1rem;
+}
+
+.nr-info-card h3 {
+    font-family: 'Kiwi Maru', serif;
+    font-size: 1rem;
+    color: var(--nr-white);
+    margin-bottom: 0.8rem;
+}
+
+.nr-info-card p,
+.nr-info-card li {
+    font-size: 0.9rem;
+    color: var(--nr-muted);
+    line-height: 1.85;
+}
+
+.nr-info-card strong {
+    color: var(--nr-text);
+}
+
+.nr-info-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.nr-info-card ul li {
+    padding: 0.4rem 0 0.4rem 1.2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    position: relative;
+}
+
+.nr-info-card ul li::before {
+    content: '●';
+    position: absolute;
+    left: 0;
+    color: var(--nr-orange);
+    font-size: 0.45rem;
+    top: 0.85rem;
+}
+
+/* ============================================================
+   REVEAL
+   ============================================================ */
+.nr-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.nr-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.nr-footer {
+    position: relative;
+    z-index: 10;
+    border-top: 1px solid var(--nr-subtle);
+    padding: 4rem 5vw;
+    text-align: center;
+    color: var(--nr-muted);
+    font-size: 0.82rem;
+}
+
+.nr-footer-logo {
+    font-family: 'Kiwi Maru', serif;
+    font-size: 2rem;
+    color: var(--nr-white);
+    margin-bottom: 0.8rem;
+    letter-spacing: 2px;
+}
+
+.nr-footer-logo span {
+    color: var(--nr-orange);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 768px) {
+    .nr-member-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nr-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nr-section-header {
+        flex-wrap: wrap;
+    }
+
+    .nr-hero-stats {
+        gap: 2rem;
+    }
+}

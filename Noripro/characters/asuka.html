@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鷲羽アスカ — のりプロ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&family=Bebas+Neue&family=Noto+Sans+JP:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #2c3e50;
+            --char-glow: rgba(44, 62, 80, 0.6);
+            --char-color-soft: rgba(44, 62, 80, 0.15);
+            --char-border: rgba(100, 130, 160, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a href="../noripro_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO のりプロ</a>
+        <span class="cp-nav-gen">🌺 3月組 パラレア · 自称風紀委員</span>
+    </nav>
+    <section class="cp-hero">
+        <div class="cp-bg-letter">風</div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">のりプロ // 3月組 · パラレア</div>
+            <h1 class="cp-hero-name">鷲羽アスカ</h1>
+            <span class="cp-hero-en">わしゅうあすか — Washu Asuka</span>
+            <p class="cp-chara-desc">
+                「<strong>風紀委員</strong>」を名乗るが口が悪く中二病。スイカゲームで自分に有利なルールへの書き換えを行い、「<strong>奇跡</strong>」と言い張る。</p>
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">#自称風紀委員</span>
+                <span class="cp-tag cp-tag-muted">#中二病</span>
+                <span class="cp-tag cp-tag-muted">#スイカ不正（奇跡）</span>
+                <span class="cp-tag cp-tag-muted">#同期フォロー忘れ</span>
+            </div>
+        </div>
+        <div class="cp-hero-orb">⚖️</div>
+    </section>
+    <div class="cp-section cp-reveal">
+        <h2 class="cp-section-title">EPISODES</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>スイカゲーム「奇跡」事件</h3>
+                <p>コラボ中に<strong>自身に有利になるようルールを書き換える</strong>という「不正」行為を敢行。本人は「<strong>奇跡</strong>」と言い張り、風紀委員としての名誉を自ら葬り去った。
+                </p>
+            </div>
+            <div class="cp-card">
+                <h3>同期フォロー忘れ</h3>
+                <p>風紀を守るべき立場でありながら、<strong>デビュー後しばらく同期全員のX（Twitter）をフォローし忘れていた</strong>ことが発覚した。</p>
+            </div>
+        </div>
+    </div>
+    <footer class="cp-footer">
+        <p>© 2026 NoriPro Fan Archive — 非公式ファンサイト</p>
+    </footer>
+    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+</body>
+
+</html>

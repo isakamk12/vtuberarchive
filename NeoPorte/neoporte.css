@@ -1,0 +1,778 @@
+/* ============================================================
+   neoporte.css — Neo-Porte Agency Page
+   Concept: "もしもデジタルの世界へ行けたら"
+   Aesthetic: Cyber gateway, digital portal, esports x music
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Teko:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;700;900&display=swap');
+
+:root {
+    /* Neo-Porte Red (Crazy Raccoon / Brave Group influenced) */
+    --np-red: #e52929;
+    --np-red-dark: #b01f1f;
+    --np-red-glow: rgba(229, 41, 41, 0.55);
+    --np-red-soft: rgba(229, 41, 41, 0.12);
+
+    /* Neutrals */
+    --np-black: #080c0f;
+    --np-dark: #0d1117;
+    --np-surface: #131920;
+    --np-card: rgba(255, 255, 255, 0.03);
+    --np-border: rgba(229, 41, 41, 0.2);
+    --np-border-subtle: rgba(255, 255, 255, 0.07);
+
+    /* Text */
+    --np-text: #e8eaed;
+    --np-muted: rgba(232, 234, 237, 0.5);
+    --np-white: #ffffff;
+
+    /* Digital accents */
+    --np-cyan: #00d4ff;
+    --np-cyan-glow: rgba(0, 212, 255, 0.3);
+}
+
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: var(--np-black);
+    color: var(--np-text);
+    overflow-x: hidden;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.np-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5vw;
+}
+
+/* ============================================================
+   BACKGROUND — digital grid + glow
+   ============================================================ */
+.np-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+/* Subtle grid */
+.np-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(229, 41, 41, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(229, 41, 41, 0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+}
+
+/* Red portal glow top-center */
+.np-bg::after {
+    content: '';
+    position: absolute;
+    top: -30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70vw;
+    height: 70vw;
+    border-radius: 50%;
+    background: radial-gradient(ellipse, rgba(229, 41, 41, 0.18) 0%, transparent 65%);
+    animation: portal-pulse 8s ease-in-out infinite;
+}
+
+@keyframes portal-pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+    }
+
+    50% {
+        opacity: 0.7;
+        transform: translateX(-50%) scale(1.05);
+    }
+}
+
+.np-glow-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    pointer-events: none;
+    animation: orb-float 20s ease-in-out infinite;
+}
+
+.np-orb-1 {
+    width: 500px;
+    height: 500px;
+    background: var(--np-red);
+    opacity: 0.07;
+    bottom: 0;
+    right: -100px;
+}
+
+.np-orb-2 {
+    width: 400px;
+    height: 400px;
+    background: var(--np-cyan);
+    opacity: 0.04;
+    bottom: 30%;
+    left: -100px;
+    animation-delay: -10s;
+}
+
+@keyframes orb-float {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(20px, -30px);
+    }
+}
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+.np-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1.2rem 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(8, 12, 15, 0.75);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--np-border);
+}
+
+.np-nav-logo {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 4px;
+    color: var(--np-white);
+    text-transform: uppercase;
+}
+
+.np-nav-logo span {
+    color: var(--np-red);
+}
+
+.np-nav-back {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    color: var(--np-muted);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: color 0.3s ease;
+}
+
+.np-nav-back:hover {
+    color: var(--np-red);
+}
+
+.np-nav-tag {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: var(--np-muted);
+    border: 1px solid var(--np-border-subtle);
+    padding: 0.3rem 0.9rem;
+    border-radius: 2px;
+}
+
+.np-nav-tag .dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #00d26a;
+    margin-right: 6px;
+    animation: blink 2s ease-in-out infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+}
+
+/* ============================================================
+   HERO — Digital Portal Gate
+   ============================================================ */
+.np-hero {
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 8rem 5vw 4rem;
+    overflow: hidden;
+}
+
+.np-hero-inner {
+    position: relative;
+    z-index: 2;
+}
+
+/* Big scan line decorative element */
+.np-scan {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 6px;
+    color: var(--np-red);
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+    opacity: 0.7;
+}
+
+.np-hero-title {
+    font-family: 'Teko', sans-serif;
+    font-size: clamp(5rem, 14vw, 12rem);
+    line-height: 0.9;
+    color: var(--np-white);
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    text-shadow: 0 0 80px var(--np-red-glow);
+    margin-bottom: 0.5rem;
+}
+
+.np-hero-title span {
+    display: block;
+    color: var(--np-red);
+    font-size: 0.6em;
+    letter-spacing: 8px;
+}
+
+.np-hero-sub {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    color: var(--np-muted);
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+}
+
+.np-hero-concept {
+    display: inline-block;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.1rem;
+    color: var(--np-text);
+    background: var(--np-red-soft);
+    border: 1px solid var(--np-border);
+    padding: 1rem 2.5rem;
+    border-radius: 2px;
+    letter-spacing: 0.05em;
+    margin-bottom: 3rem;
+}
+
+.np-hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.np-stat {
+    text-align: center;
+}
+
+.np-stat-value {
+    font-family: 'Teko', sans-serif;
+    font-size: 3rem;
+    line-height: 1;
+    color: var(--np-white);
+}
+
+.np-stat-label {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    color: var(--np-red);
+    text-transform: uppercase;
+}
+
+/* ============================================================
+   SECTION LAYOUT
+   ============================================================ */
+.np-section {
+    position: relative;
+    z-index: 10;
+    padding: 6rem 0;
+}
+
+.np-section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.np-section-num {
+    font-family: 'Teko', sans-serif;
+    font-size: 4rem;
+    color: var(--np-red);
+    opacity: 0.3;
+    line-height: 1;
+}
+
+.np-section-title {
+    font-family: 'Teko', sans-serif;
+    font-size: 2.5rem;
+    letter-spacing: 4px;
+    color: var(--np-white);
+    text-transform: uppercase;
+}
+
+.np-section-title-jp {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.85rem;
+    color: var(--np-red);
+    letter-spacing: 4px;
+    display: block;
+    margin-top: 0.2rem;
+}
+
+.np-divider {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--np-border), transparent);
+    align-self: center;
+}
+
+/* ============================================================
+   OWNER CARDS — premium esports style
+   ============================================================ */
+.np-owners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+.np-owner-card {
+    background: var(--np-card);
+    border: 1px solid var(--np-border-subtle);
+    border-radius: 4px;
+    padding: 2.5rem 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.np-owner-card:hover {
+    border-color: var(--np-border);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 25px var(--np-red-glow);
+}
+
+/* Top red bar */
+.np-owner-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--np-red), transparent 60%);
+}
+
+/* Background initial letter */
+.np-owner-initial {
+    position: absolute;
+    bottom: -20px;
+    right: -10px;
+    font-family: 'Teko', sans-serif;
+    font-size: 8rem;
+    color: var(--np-red);
+    opacity: 0.04;
+    line-height: 1;
+    user-select: none;
+    pointer-events: none;
+}
+
+.np-owner-role {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 4px;
+    color: var(--np-red);
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+}
+
+.np-owner-name {
+    font-family: 'Teko', sans-serif;
+    font-size: 2rem;
+    color: var(--np-white);
+    line-height: 1.1;
+    margin-bottom: 1.2rem;
+}
+
+.np-owner-desc {
+    font-size: 0.9rem;
+    color: var(--np-muted);
+    line-height: 1.8;
+}
+
+.np-owner-desc strong {
+    color: var(--np-text);
+}
+
+/* ============================================================
+   FEATURE ROWS
+   ============================================================ */
+.np-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.np-feature-card {
+    background: var(--np-card);
+    border: 1px solid var(--np-border-subtle);
+    border-radius: 4px;
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+}
+
+.np-feature-card:hover {
+    border-color: var(--np-border);
+}
+
+.np-feature-card.wide {
+    grid-column: 1 / -1;
+}
+
+.np-feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.2rem;
+    display: block;
+    filter: drop-shadow(0 0 10px var(--np-red-glow));
+}
+
+.np-feature-card h3 {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    color: var(--np-white);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.np-feature-card p,
+.np-feature-card li {
+    font-size: 0.95rem;
+    color: var(--np-muted);
+    line-height: 1.8;
+}
+
+.np-feature-card strong {
+    color: var(--np-text);
+}
+
+.np-feature-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.np-feature-card ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.np-feature-card ul li::before {
+    content: '▶';
+    position: absolute;
+    left: 0;
+    color: var(--np-red);
+    font-size: 0.6rem;
+    top: 0.85rem;
+}
+
+/* ============================================================
+   NEWS / TIMELINE — recent events
+   ============================================================ */
+.np-timeline {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.np-timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, var(--np-red), transparent);
+}
+
+.np-event {
+    position: relative;
+    padding: 0 0 3rem 2.5rem;
+}
+
+.np-event::before {
+    content: '';
+    position: absolute;
+    left: -2.5rem;
+    top: 8px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--np-red);
+    box-shadow: 0 0 10px var(--np-red-glow);
+}
+
+.np-event-year {
+    font-family: 'Teko', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    color: var(--np-red);
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+}
+
+.np-event-title {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--np-white);
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.np-event p {
+    font-size: 0.95rem;
+    color: var(--np-muted);
+    line-height: 1.8;
+}
+
+.np-event strong {
+    color: var(--np-text);
+}
+
+/* ============================================================
+   REVEAL ANIMATION
+   ============================================================ */
+.np-reveal {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.np-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.np-footer {
+    position: relative;
+    z-index: 10;
+    border-top: 1px solid var(--np-border-subtle);
+    padding: 4rem 5vw;
+    text-align: center;
+    color: var(--np-muted);
+    font-size: 0.85rem;
+}
+
+.np-footer-logo {
+    font-family: 'Teko', sans-serif;
+    font-size: 2.5rem;
+    letter-spacing: 6px;
+    color: var(--np-white);
+    margin-bottom: 1rem;
+}
+
+.np-footer-logo span {
+    color: var(--np-red);
+}
+
+@media (max-width: 768px) {
+    .np-hero-stats {
+        gap: 2rem;
+    }
+
+    .np-features {
+        grid-template-columns: 1fr;
+    }
+
+    .np-feature-card.wide {
+        grid-column: 1;
+    }
+
+    .np-owners-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .np-section-header {
+        flex-wrap: wrap;
+    }
+
+    .np-talent-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================================
+   TALENT ROSTER CARDS
+   ============================================================ */
+.np-gen-title {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 3px;
+    color: var(--np-white);
+    text-transform: uppercase;
+    margin: 3.5rem 0 1.5rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid var(--np-border-subtle);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.np-unit-tag {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: var(--np-red);
+    border: 1px solid var(--np-border);
+    padding: 0.2rem 0.8rem;
+    border-radius: 2px;
+    text-transform: uppercase;
+}
+
+.np-talent-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.np-talent-card {
+    background: var(--np-card);
+    border: 1px solid var(--np-border-subtle);
+    border-radius: 4px;
+    padding: 1.5rem;
+    position: relative;
+    transition: border-color 0.3s ease, transform 0.2s ease;
+    overflow: hidden;
+}
+
+.np-talent-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--np-red);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.np-talent-card:hover {
+    border-color: var(--np-border);
+    transform: translateX(4px);
+}
+
+.np-talent-card:hover::before {
+    opacity: 1;
+}
+
+.np-talent-name {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.4rem;
+    color: var(--np-white);
+    line-height: 1.2;
+    margin-bottom: 0.8rem;
+    letter-spacing: 1px;
+    display: block;
+    transition: color 0.25s ease;
+}
+
+a.np-talent-name:hover {
+    color: var(--np-red);
+}
+
+.np-talent-name small {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.7em;
+    color: var(--np-red);
+    letter-spacing: 2px;
+    margin-left: 0.5rem;
+    opacity: 0.8;
+    text-transform: uppercase;
+}
+
+.np-talent-desc {
+    font-size: 0.88rem;
+    color: var(--np-muted);
+    line-height: 1.75;
+    margin-bottom: 1rem;
+}
+
+.np-talent-desc strong {
+    color: var(--np-text);
+}
+
+.np-talent-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: auto;
+}
+
+.np-hashtag {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.75rem;
+    color: var(--np-red);
+    letter-spacing: 1px;
+    opacity: 0.7;
+}
+
+.np-fan-name {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.75rem;
+    color: var(--np-muted);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--np-border-subtle);
+    padding: 0.15rem 0.6rem;
+    border-radius: 2px;
+    letter-spacing: 1px;
+}

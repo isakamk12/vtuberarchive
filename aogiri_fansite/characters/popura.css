@@ -1,0 +1,383 @@
+/* --- Popura Custom Styles --- */
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=M+PLUS+Rounded+1c:wght@400;700;900&display=swap');
+
+:root {
+    --popura-main: #f1c40f;
+    /* Sunflower Yellow */
+    --popura-sub: #2ecc71;
+    /* Fresh Green */
+    --popura-accent: #e74c3c;
+    /* Tomato Red (Burger connection) */
+    --popura-text: #2c3e50;
+    --popura-bg: #fef9e7;
+    --p-white: #ffffff;
+}
+
+body.popura-page {
+    background-color: var(--popura-bg);
+    color: var(--popura-text);
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+/* Background Shapes (Pop/Energetic) */
+.popura-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: radial-gradient(circle at 80% 20%, #fff 0%, #fef9e7 100%);
+    overflow: hidden;
+}
+
+.p-shape {
+    position: absolute;
+    opacity: 0.15;
+    animation: spin 20s linear infinite;
+}
+
+.s-circle {
+    width: 200px;
+    height: 200px;
+    border: 30px solid var(--popura-sub);
+    border-radius: 50%;
+    top: -50px;
+    left: -50px;
+}
+
+.s-square {
+    width: 150px;
+    height: 150px;
+    background: var(--popura-main);
+    transform: rotate(45deg);
+    bottom: 10%;
+    right: -20px;
+    animation-direction: reverse;
+}
+
+.s-triangle {
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 170px solid var(--popura-accent);
+    top: 40%;
+    left: 10%;
+    animation-duration: 25s;
+}
+
+.s-cross {
+    width: 100px;
+    height: 300px;
+    background: var(--popura-main);
+    top: 20%;
+    right: 30%;
+    clip-path: polygon(33% 0, 66% 0, 66% 33%, 100% 33%, 100% 66%, 66% 66%, 66% 100%, 33% 100%, 33% 66%, 0 66%, 0 33%, 33% 33%);
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Navbar */
+.popura-nav {
+    background: rgba(254, 249, 231, 0.95);
+    border-bottom: 4px dotted var(--popura-sub);
+}
+
+.popura-nav .logo {
+    color: var(--popura-sub);
+    font-family: 'Cherry Bomb One', cursive;
+    font-size: 1.8rem;
+}
+
+/* Hero Section */
+.p-hero {
+    padding-top: 10rem;
+    padding-bottom: 4rem;
+}
+
+.p-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.p-icon-box {
+    width: 160px;
+    height: 160px;
+    background: white;
+    border-radius: 50%;
+    margin: 0 auto 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px dashed var(--popura-main);
+    box-shadow: 0 10px 20px rgba(241, 196, 15, 0.2);
+    animation: bounce 2s infinite alternate ease-in-out;
+}
+
+.p-icon-text {
+    font-size: 5.5rem;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-15px);
+    }
+}
+
+.p-name {
+    font-family: 'Cherry Bomb One', cursive;
+    font-size: 4.5rem;
+    color: var(--popura-sub);
+    text-shadow: 3px 3px 0 white, 5px 5px 0 var(--popura-main);
+    margin-bottom: 0px;
+    line-height: 1.1;
+    letter-spacing: 2px;
+}
+
+.p-kana {
+    font-size: 1.5rem;
+    color: #888;
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin-bottom: 2rem;
+}
+
+.p-catchphrase {
+    background: var(--popura-accent);
+    color: white;
+    display: inline-block;
+    padding: 0.6rem 2rem;
+    border-radius: 30px;
+    font-size: 1.3rem;
+    font-weight: 900;
+    box-shadow: 0 5px 0 #c0392b;
+    margin-bottom: 2rem;
+}
+
+.p-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+.p-tags span {
+    background: var(--popura-main);
+    color: var(--popura-text);
+    padding: 0.4rem 1.2rem;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    transform: rotate(-2deg);
+}
+
+.p-tags span:nth-child(even) {
+    transform: rotate(2deg);
+    background: var(--popura-sub);
+    color: white;
+}
+
+/* Main Content */
+.p-main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem 5rem;
+}
+
+.p-section {
+    margin-bottom: 4rem;
+}
+
+.p-section-title {
+    font-family: 'Cherry Bomb One', cursive;
+    font-size: 2.5rem;
+    color: var(--popura-text);
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 0 var(--popura-main);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.text-center .p-section-title {
+    justify-content: center;
+}
+
+.p-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 8px 8px 0 rgba(46, 204, 113, 0.2);
+    border: 3px solid var(--popura-sub);
+}
+
+/* Grids */
+.p-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+}
+
+/* Lists */
+.p-list {
+    list-style: none;
+    padding: 0;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.p-list li {
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px dotted #eee;
+}
+
+.p-list strong {
+    color: var(--popura-sub);
+    display: inline-block;
+    width: 130px;
+}
+
+.p-character h4 {
+    font-size: 1.4rem;
+    color: var(--popura-main);
+    margin-bottom: 1rem;
+    background: var(--popura-text);
+    color: white;
+    padding: 0.3rem 1rem;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.p-character p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.p-hobby-list {
+    list-style: none;
+    padding: 0;
+}
+
+.p-hobby-list li {
+    margin-bottom: 1.2rem;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.p-hobby-list li::before {
+    content: '🍟';
+    position: absolute;
+    left: 0;
+}
+
+.p-hobby-list strong {
+    color: var(--popura-accent);
+}
+
+.p-art-card .p-hobby-list li::before {
+    content: '🖌️';
+}
+
+.p-art-card .p-hobby-list strong {
+    color: var(--popura-sub);
+}
+
+.p-eating {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: #fff5e6;
+    border-radius: 8px;
+    font-weight: bold;
+    color: #d35400;
+    text-align: center;
+}
+
+/* Episodes */
+.p-ep-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.p-ep-item {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    border: 2px dashed var(--popura-main);
+    transition: transform 0.2s;
+}
+
+.p-ep-item:hover {
+    transform: scale(1.02);
+}
+
+.p-ep-icon {
+    font-size: 3.5rem;
+    background: var(--popura-bg);
+    width: 90px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 3px solid var(--popura-accent);
+    flex-shrink: 0;
+}
+
+.p-ep-content h3 {
+    font-size: 1.4rem;
+    color: var(--popura-text);
+    margin-bottom: 0.8rem;
+    border-bottom: 3px solid var(--popura-main);
+    display: inline-block;
+    padding-bottom: 0.2rem;
+}
+
+.p-ep-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* Reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 900px) {
+    .p-grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .p-ep-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}

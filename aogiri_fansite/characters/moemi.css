@@ -1,0 +1,361 @@
+/* --- Moemi Custom Styles --- */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
+:root {
+    --moemi-main: #800020;
+    /* Burgundy / Wine Red */
+    --moemi-sub: #f3e5f5;
+    /* Pale Pink */
+    --moemi-accent: #d4af37;
+    /* Elegant Gold */
+    --moemi-text: #3c2f2f;
+    --moemi-bg: #fffcfcf;
+}
+
+body.moemi-page {
+    background-color: var(--moemi-bg);
+    color: var(--moemi-text);
+    font-family: 'Noto Serif JP', serif;
+}
+
+/* Background Elegance */
+.moemi-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: radial-gradient(circle at 50% 10%, #fff7f9 0%, #fff0f5 50%, #ffe4e1 100%);
+    overflow: hidden;
+}
+
+.mo-rose {
+    position: absolute;
+    font-size: 3rem;
+    opacity: 0.1;
+    animation: float Elegant 15s infinite ease-in-out;
+}
+
+.r-1 {
+    top: 20%;
+    left: 15%;
+    animation-duration: 12s;
+}
+
+.r-2 {
+    top: 60%;
+    right: 20%;
+    animation-duration: 18s;
+    font-size: 4rem;
+    animation-delay: 2s;
+}
+
+.r-3 {
+    bottom: 15%;
+    left: 40%;
+    animation-duration: 14s;
+    font-size: 2.5rem;
+    animation-delay: 1s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(-10deg);
+    }
+
+    50% {
+        transform: translateY(-30px) rotate(10deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(-10deg);
+    }
+}
+
+/* Navbar */
+.moemi-nav {
+    background: rgba(255, 252, 252, 0.95);
+    border-bottom: 1px solid var(--moemi-accent);
+}
+
+.moemi-nav .logo {
+    color: var(--moemi-main);
+    font-family: 'Cinzel', serif;
+}
+
+/* Hero Section */
+.mo-hero {
+    padding-top: 10rem;
+    padding-bottom: 4rem;
+}
+
+.mo-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mo-badge {
+    display: inline-block;
+    background: transparent;
+    border: 1px solid var(--moemi-accent);
+    color: var(--moemi-accent);
+    padding: 0.3rem 1.5rem;
+    border-radius: 20px;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.mo-name {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 4.5rem;
+    font-weight: 900;
+    color: var(--moemi-main);
+    margin-bottom: 0px;
+    text-shadow: 2px 2px 5px rgba(128, 0, 32, 0.1);
+}
+
+.mo-kana {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    color: #999;
+    letter-spacing: 12px;
+    margin-bottom: 2rem;
+}
+
+.mo-greeting {
+    font-size: 1.3rem;
+    color: var(--moemi-main);
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.mo-form-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.mo-form {
+    background: transparent;
+    border: 1px solid var(--moemi-main);
+    color: var(--moemi-main);
+    padding: 0.6rem 1.5rem;
+    border-radius: 4px;
+    cursor: default;
+    transition: all 0.3s;
+}
+
+.mo-form.active {
+    background: var(--moemi-main);
+    color: white;
+}
+
+.mo-tags span {
+    background: var(--moemi-sub);
+    color: var(--moemi-main);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    margin: 0 0.5rem 0.5rem;
+    font-size: 0.95rem;
+    display: inline-block;
+}
+
+/* Main Content */
+.mo-main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem 5rem;
+}
+
+.mo-section {
+    margin-bottom: 5rem;
+}
+
+.mo-section-title {
+    font-size: 2rem;
+    color: var(--moemi-main);
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--moemi-accent);
+    padding-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.text-center .mo-section-title {
+    justify-content: center;
+}
+
+.mo-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 3rem;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(128, 0, 32, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+/* Grids */
+.mo-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.mo-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* Profile Table */
+.mo-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.1rem;
+}
+
+.mo-table th,
+.mo-table td {
+    padding: 1rem 0;
+    border-bottom: 1px dashed #eec;
+    text-align: left;
+}
+
+.mo-table th {
+    color: var(--moemi-accent);
+    font-weight: bold;
+    width: 35%;
+    padding-right: 1rem;
+}
+
+.mo-table td {
+    line-height: 1.6;
+}
+
+/* History/Forms */
+.mo-form-desc {
+    margin-bottom: 2rem;
+}
+
+.mo-form-desc h4 {
+    font-size: 1.3rem;
+    color: var(--moemi-main);
+    margin-bottom: 0.8rem;
+}
+
+.mo-form-desc p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Hobbies */
+.mo-hobby-card {
+    background: white;
+    padding: 2.5rem 2rem;
+    border-top: 3px solid;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s;
+}
+
+.mo-hobby-card:hover {
+    transform: translateY(-5px);
+}
+
+.border-red {
+    border-color: var(--moemi-main);
+}
+
+.border-gold {
+    border-color: var(--moemi-accent);
+}
+
+.border-black {
+    border-color: var(--moemi-text);
+}
+
+.mo-h-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.mo-hobby-card h3 {
+    font-size: 1.3rem;
+    color: var(--moemi-main);
+    margin-bottom: 1rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mo-hobby-card p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    text-align: left;
+}
+
+/* Personality List */
+.mo-list {
+    list-style: none;
+    padding: 0;
+}
+
+.mo-list li {
+    margin-bottom: 1.2rem;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.mo-list li::before {
+    content: '♦';
+    position: absolute;
+    left: 0;
+    color: var(--moemi-accent);
+    font-size: 1.2rem;
+}
+
+.mo-list strong {
+    color: var(--moemi-main);
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+/* Reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 900px) {
+    .mo-grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .mo-grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .mo-form-toggle {
+        flex-direction: column;
+        align-items: center;
+    }
+}

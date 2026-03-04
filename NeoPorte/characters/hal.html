@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>渋谷ハル — Neo-Porte</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Teko:wght@400;600;700&family=Noto+Sans+JP:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #e74c3c;
+            --char-glow: rgba(231, 76, 60, 0.55);
+            --char-color-soft: rgba(231, 76, 60, 0.08);
+            --char-border: rgba(231, 76, 60, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a href="../neoporte_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO NEO-PORTE</a>
+        <span class="cp-nav-gen">👑 0期生 / OWNER</span>
+    </nav>
+    <section class="cp-hero">
+        <div class="cp-bg-letter">HAL</div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">NEO-PORTE // 0期生 · OWNER</div>
+            <h1 class="cp-hero-name">渋谷ハル</h1>
+            <span class="cp-hero-en">Shibuya Hal</span>
+            <p class="cp-chara-desc">ネオポルテの創設メンバーであり、オーナーの一人。<strong>VTuber最協決定戦</strong>の主催者として、VTuber業界に多大な影響力を持つ。</p>
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">#APEX LEGENDS</span>
+                <span class="cp-tag cp-tag-primary">#最協決定戦</span>
+                <span class="cp-tag cp-tag-muted">#毎日配信</span>
+                <span class="cp-tag cp-tag-muted">#世界大会経験</span>
+            </div>
+        </div>
+        <div class="cp-hero-orb">ハ</div>
+    </section>
+    <div class="cp-section cp-reveal">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>活動スタイル</h3>
+                <ul>
+                    <li><strong>Apex Legends</strong>の配信・動画投稿がメイン</li>
+                    <li>過去の競技シーンで<strong>世界大会の出場権</strong>を獲得</li>
+                    <li><strong>毎日配信・動画投稿</strong>を長期継続する圧倒的努力家</li>
+                    <li>大会では実況・解説としても活躍</li>
+                </ul>
+            </div>
+            <div class="cp-card">
+                <h3>特徴</h3>
+                <p>「ゲーム実況者やプロゲーマーを見る感覚に近い」と言われるほど<strong>ゲームに特化した配信スタイル</strong>。ストイックな練習と継続力が最大の武器。</p>
+            </div>
+        </div>
+    </div>
+    <footer class="cp-footer">
+        <p>© 2026 NeoPorte Fan Archive — 非公式ファンサイト</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const r = document.querySelectorAll('.cp-reveal');
+            const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 });
+            r.forEach(el => o.observe(el));
+        });
+    </script>
+</body>
+
+</html>

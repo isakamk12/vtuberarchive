@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>梟雄しろや — のりプロ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&family=Bebas+Neue&family=Noto+Sans+JP:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #7f8c8d;
+            --char-glow: rgba(127, 140, 141, 0.5);
+            --char-color-soft: rgba(127, 140, 141, 0.08);
+            --char-border: rgba(127, 140, 141, 0.25);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a href="../noripro_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO のりプロ</a>
+        <span class="cp-nav-gen">🌸 1月組 ポニアリ · 動画クリエイター</span>
+    </nav>
+    <section class="cp-hero">
+        <div class="cp-bg-letter">偽</div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">のりプロ // 1月組 · ポニアリ</div>
+            <h1 class="cp-hero-name">梟雄しろや</h1>
+            <span class="cp-hero-en">きょうゆうしろや — Kyoyu Shiroya</span>
+            <p class="cp-chara-desc">
+                動画クリエイターの技術を活かし、初配信の最初<strong>20分間を「生放送風の動画」</strong>で乗り切り、視聴者と先輩を完全に騙した大胆なデビューを果たした。</p>
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">#偽装デビュー20分</span>
+                <span class="cp-tag cp-tag-muted">#動画クリエイター</span>
+                <span class="cp-tag cp-tag-muted">#4日徹夜バキバキ</span>
+            </div>
+        </div>
+        <div class="cp-hero-orb">🦉</div>
+    </section>
+    <div class="cp-section cp-reveal">
+        <h2 class="cp-section-title">EPISODES</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>生放送偽装デビュー事件</h3>
+                <p>初配信の最初<strong>20分間を「生放送風に作った動画」</strong>で完全に乗り切った。視聴者・先輩どちらも騙し切るという大胆かつ大局を見据えたデビューだった。</p>
+            </div>
+            <div class="cp-card">
+                <h3>4日徹夜バキバキ事件</h3>
+                <p>4日間徹夜した結果、自律神経がおかしくなり、<strong>電車の中で下半身が「バキバキ」に反応してしまう</strong>という恐ろしい体験を配信内で語った。</p>
+            </div>
+        </div>
+    </div>
+    <footer class="cp-footer">
+        <p>© 2026 NoriPro Fan Archive — 非公式ファンサイト</p>
+    </footer>
+    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+</body>
+
+</html>

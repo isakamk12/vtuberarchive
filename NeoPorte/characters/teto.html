@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>心白てと — Neo-Porte</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Teko:wght@400;600;700&family=Noto+Sans+JP:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #a8d5a2;
+            --char-glow: rgba(168, 213, 162, 0.45);
+            --char-color-soft: rgba(168, 213, 162, 0.07);
+            --char-border: rgba(168, 213, 162, 0.25);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a href="../neoporte_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO NEO-PORTE</a>
+        <span class="cp-nav-gen">🍀 2期生 Quattro · ファン: 琥珀糖 🤍</span>
+    </nav>
+    <section class="cp-hero">
+        <div class="cp-bg-letter">エ</div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">NEO-PORTE // 2期生 · Quattro</div>
+            <h1 class="cp-hero-name">心白てと</h1>
+            <span class="cp-hero-en">Kohaku Teto</span>
+            <p class="cp-chara-desc">エルフの国から来た<strong>ハーフエルフ</strong>。人間との共存を目指して活動する。BGMや音作りにもこだわる配信者。</p>
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">🤍 #琥珀糖</span>
+                <span class="cp-tag cp-tag-muted">#ハーフエルフ</span>
+                <span class="cp-tag cp-tag-muted">#APEX</span>
+                <span class="cp-tag cp-tag-muted">#原神</span>
+                <span class="cp-tag cp-tag-muted">#BGMこだわり</span>
+            </div>
+        </div>
+        <div class="cp-hero-orb">🤍</div>
+    </section>
+    <div class="cp-section cp-reveal">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid cp-grid-2">
+            <div class="cp-card">
+                <h3>基本情報</h3>
+                <table class="cp-table">
+                    <tr>
+                        <th>身長</th>
+                        <td>150cm</td>
+                    </tr>
+                    <tr>
+                        <th>キャラクター</th>
+                        <td>エルフの国出身のハーフエルフ</td>
+                    </tr>
+                    <tr>
+                        <th>目標</th>
+                        <td>人間との共存を目指す</td>
+                    </tr>
+                    <tr>
+                        <th>ファン</th>
+                        <td>琥珀糖 🤍</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="cp-card">
+                <h3>好きなもの・配信スタイル</h3>
+                <ul>
+                    <li>アニメ・漫画・ゲーム（<strong>APEX、原神</strong>など）が大好き</li>
+                    <li>フリーBGMを探すのが好き</li>
+                    <li><strong>配信の雰囲気に合わせた音作り</strong>にこだわっている</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer class="cp-footer">
+        <p>© 2026 NeoPorte Fan Archive — 非公式ファンサイト</p>
+    </footer>
+    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+</body>
+
+</html>
