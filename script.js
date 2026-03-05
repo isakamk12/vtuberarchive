@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Data Structure tailored for the Omni-Terminal
     const agencies = [
         // MAJOR
-        { name: "ホロライブ", sub: "hololive production", filter: "major", color: "0, 210, 255", icon: "H", url: "Hololive/hololive_index.html", tags: ["Idol", "Global"] },
+        { name: "ホロライブプロダクション", sub: "hololive production", filter: "major", color: "0, 210, 255", icon: "H", url: "Hololive/hololive_index.html", tags: ["Idol", "Global"] },
         { name: "にじさんじ", sub: "NIJISANJI", filter: "major", color: "255, 65, 108", icon: "N", url: "Nijisanji/nijisanji_index.html", tags: ["Pop", "Streamer"] },
         { name: "ぶいすぽっ！", sub: "VSPO!", filter: "major", color: "142, 45, 226", icon: "V", url: "Vspo/vspo_index.html", tags: ["Esports", "FPS"] },
         { name: "あおぎり高校", sub: "Aogiri High School", filter: "major", color: "17, 153, 142", icon: "A", url: "aogiri_fansite/aogiri_index.html", tags: ["Comedy", "Shorts"] },
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: "個人勢 VTuber", sub: "Independent", filter: "indie", color: "255, 142, 83", icon: "I", tags: ["Indie", "Global"], url: "IndieVtubers/indie_index.html" },
 
         // GLOBAL (EN, CN, KR)
-        { name: "Idol Corp", sub: "EN/IL", filter: "global", color: "255, 8, 68", icon: "I", tags: ["EN", "IL"], url: "IdolCorp/idolcorp_index.html" },
+        { name: "ChromaSHIFT", sub: "EN/IL", filter: "global", color: "255, 8, 68", icon: "C", tags: ["EN", "IL"], url: "IdolCorp/idolcorp_index.html" },
         { name: "Phase Connect", sub: "EN Focus", filter: "global", color: "63, 43, 150", icon: "P", tags: ["EN", "Coffee"], url: "PhaseConnect/phaseconnect_index.html" },
         { name: "VShojo", sub: "US/JP Indie", filter: "global", color: "255, 126, 179", icon: "V", tags: ["EN", "JP"], url: "VShojo/vshojo_index.html" },
         { name: "A-SOUL", sub: "CN", filter: "global", color: "195, 20, 50", icon: "A", tags: ["CN", "3D Idol"], url: "ASOUL/asoul_index.html" },
