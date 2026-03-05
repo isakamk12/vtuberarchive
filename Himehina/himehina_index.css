@@ -1,42 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;800&family=M+PLUS+Rounded+1c:wght@300;500;800&display=swap');
 
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700;900&family=M+PLUS+Rounded+1c:wght@500;800&family=Teko:wght@400;700&family=Playfair+Display:wght@400;700&family=Shippori+Mincho:wght@400;700&display=swap');
-    
-    :root { 
-        --c1: #ff69b4; 
-        --c2: #00ced1; 
-        --bg: #0a0307; 
-        --text: #ffeeef; 
-        --glass-bg: rgba(20, 25, 40, 0.4);
-        --glass-border: rgba(255, 255, 255, 0.1);
-    }
-    
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    
-    body { 
-        background-color: var(--bg); 
-        color: var(--text); 
-        font-family: 'Noto Sans JP', sans-serif; 
-        overflow-x: hidden; 
-        line-height: 1.8; 
-    }
-    
-    h1, h2, h3, .nav-brand { font-family: 'M PLUS Rounded 1c', sans-serif; }
-    a { color: inherit; text-decoration: none; transition: 0.3s; }
-    a:hover { color: var(--c1); }
-    
-    /* Navigation */
-    .nav { position: fixed; top: 0; width: 100%; padding: 1.5rem 3rem; display: flex; justify-content: space-between; align-items: center; z-index: 1000; background: rgba(0,0,0,0.5); backdrop-filter: blur(15px); border-bottom: 1px solid var(--glass-border); }
-    .nav-brand { font-size: 1.8rem; font-weight: 900; background: linear-gradient(90deg, var(--c1), var(--c2)); -webkit-background-clip: text; color: transparent; letter-spacing: 2px; }
-    .nav-links { display: flex; gap: 2.5rem; font-weight: bold; font-family: 'Montserrat', sans-serif; letter-spacing: 1px; }
-    .nav-links a { position:relative; }
-    .nav-links a::after { content:''; position:absolute; bottom:-5px; left:0; width:0%; height:2px; background:var(--c1); transition:0.3s; }
-    .nav-links a:hover::after { width:100%; }
-    .bg-fx { position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1; background: repeating-linear-gradient(45deg, transparent, transparent 15px, var(--glass-border) 15px, var(--glass-border) 16px); opacity: 0.3; animation: speed 2s infinite linear; } @keyframes speed { 100%{background-position:31px 31px;} } .bg-fx::after { content:''; position:absolute; inset:0; background: radial-gradient(transparent, var(--bg)); }.hero { min-height: 70vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; position:relative; padding-top: 80px; margin-bottom: 4rem; z-index: 10; }.hero-subtitle { font-family: 'Montserrat', sans-serif; font-weight: bold; font-size: 1.2rem; letter-spacing: 0.5rem; color: var(--c2); margin-top: 2rem; opacity: 0.8; text-transform: uppercase; }.hero-title { font-size: 6rem; font-weight: 900; color: #ffffff; position:relative; display:inline-block; margin: 0; text-transform: uppercase; } .hero-title::before, .hero-title::after { content: attr(data-text); position:absolute; top:0; left:0; width:100%; height:100%; opacity:0.8; } .hero-title::before { color: var(--c1); z-index:-1; transform: translate(-4px, 2px); animation: glitch 0.4s cubic-bezier(.25, .46, .45, .94) both infinite; } .hero-title::after { color: var(--c2); z-index:-2; transform: translate(4px, -2px); animation: glitch 0.4s cubic-bezier(.25, .46, .45, .94) both infinite reverse; } @keyframes glitch { 0%{transform:translate(0);} 20%{transform:translate(-3px, 3px);} 40%{transform:translate(-3px, -3px);} 60%{transform:translate(3px, 3px);} 80%{transform:translate(3px, -3px);} 100%{transform:translate(0);} }
-/* Layout */
-.main-content { margin: 0 auto; padding: 2rem; position: relative; z-index: 10; }
-.main-content { max-width: 900px; } .content-grid { position: relative; padding-left: 4rem; display: flex; flex-direction: column; gap: 4rem; } .content-grid::before { content:''; position:absolute; left:0; top:0; bottom:0; width:4px; background: linear-gradient(to bottom, var(--c1), var(--c2), transparent); border-radius: 2px; } .card { position: relative; width: 100%; } .card::before { content:''; position:absolute; left:-4.4rem; top:3rem; width:24px; height:24px; background:var(--bg); border:4px solid var(--c1); border-radius:50%; z-index:2; box-shadow: 0 0 15px var(--c1); }.card { background: rgba(10, 15, 20, 0.8); border: 1px solid var(--glass-border); border-left: 4px solid var(--c1); padding: 4rem; position: relative; clip-path: polygon(0 0, calc(100% - 40px) 0, 100% 40px, 100% 100%, 40px 100%, 0 calc(100% - 40px)); transition: all 0.3s ease; box-shadow: 10px 10px 30px rgba(0,0,0,0.8); } .card::before { content:''; position:absolute; top:0; right:40px; width:40px; height:2px; background:var(--c2); box-shadow: 0 0 10px var(--c2); } .card::after { content:''; position:absolute; bottom:0; left:40px; width:40px; height:2px; background:var(--c1); box-shadow: 0 0 10px var(--c1); } .card:hover { background: rgba(20, 25, 30, 0.9); border-color: var(--c1); filter: brightness(1.2); }
-.card h2 { color: #ffffff; border-left: 6px solid var(--c1); padding-left: 1.5rem; margin-top: 0; font-size: 2.2rem; font-weight: 900; letter-spacing: 1px; margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem; }
-.card p { font-size: 1.1rem; color: rgba(255,255,255,0.85); line-height: 2; margin-bottom: 1.5rem; letter-spacing: 0.5px; }
-.highlight-card { border: 1px solid var(--c1) !important; position:relative; overflow:hidden; box-shadow: 0 0 40px rgba(var(--c1), 0.1); } .highlight-card::before { content:''; position:absolute; top:0;left:0;width:100%;height:100%; background: linear-gradient(135deg, var(--c1), transparent); opacity:0.05; pointer-events:none; } .highlight-card h2 { color: var(--c1); text-shadow: 0 0 20px rgba(var(--c1), 0.5); border-left-color: var(--c2); }
-.reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1); } .reveal.active { opacity: 1; transform: translateY(0); }
-@media (max-width: 900px) { .main-content { padding: 2rem 1rem; } .card { padding: 2rem !important; } .hero-title { font-size: 4rem !important; } .content-grid { gap: 2rem !important; } .sidebar-hero { display:none; } .nav { padding: 1rem; } .nav-brand { font-size: 1.2rem; } .card:nth-child(even), .card:nth-child(odd) { width: 100% !important; margin: 0 !important; } .card:nth-child(even) h2 { border-right: none; border-left: 6px solid var(--c1); text-align: left; padding-right: 0; padding-left: 1.5rem; } }
+:root {
+    --stage-bg: #050508;
+    /* Deep stage black */
+    --hime-red: #ff2a55;
+    /* Hime pink/red */
+    --hina-blue: #2a8dff;
+    /* Hina cyan/blue */
+    --gold: #d4af37;
+    /* Theatrical gold */
+    --text-main: #f0e6d2;
+    /* Parchment/warm white */
+    --velvet: #2b0b14;
+    /* Deep red velvet */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--stage-bg);
+    color: var(--text-main);
+    font-family: 'Shippori Mincho', serif;
+    overflow-x: hidden;
+    /* Stage curtain texture overlay */
+    background-image: repeating-linear-gradient(90deg, transparent, transparent 100px, rgba(0, 0, 0, 0.2) 100px, rgba(0, 0, 0, 0.2) 102px);
+}
+
+::selection {
+    background: var(--gold);
+    color: var(--stage-bg);
+}
+
+/* Spotlight Background Effect */
+.bg-fx {
+    position: fixed;
+    top: -50vh;
+    left: 0;
+    width: 100vw;
+    height: 150vh;
+    background: radial-gradient(ellipse at 30% top, rgba(255, 42, 85, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% top, rgba(42, 141, 255, 0.15) 0%, transparent 50%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Navigation */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 4rem;
+    position: relative;
+    z-index: 100;
+    border-bottom: 2px solid var(--velvet);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(to bottom, rgba(5, 5, 8, 0.9), transparent);
+}
+
+.nav-brand {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: 800;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--gold);
+    letter-spacing: 2px;
+}
+
+.nav-links a {
+    color: var(--text-main);
+    text-decoration: none;
+    margin-left: 2rem;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+/* Hero */
+.hero {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    border-bottom: 3px solid var(--gold);
+    /* Curtain drop shadow */
+    box-shadow: inset 0 -50px 100px rgba(0, 0, 0, 0.8);
+}
+
+.hero-title {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 7rem;
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: 20px;
+    background: linear-gradient(135deg, var(--hime-red), var(--hina-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.8));
+    position: relative;
+    z-index: 2;
+}
+
+.hero-subtitle {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1.5rem;
+    letter-spacing: 10px;
+    color: var(--gold);
+    margin-top: 1rem;
+    opacity: 0.8;
+}
+
+/* Main Content Grid */
+.main-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+}
+
+/* Script / Parchment Cards */
+.card {
+    background: rgba(20, 20, 25, 0.8);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    padding: 3rem;
+    position: relative;
+    border-radius: 4px;
+    /* Slightly rough edges like old script */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Theater Frame Effect */
+.card::before,
+.card::after {
+    content: '';
+    position: absolute;
+    border: 1px solid var(--gold);
+    opacity: 0;
+    transition: 0.4s;
+    pointer-events: none;
+}
+
+.card::before {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+}
+
+.card::after {
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background: rgba(30, 30, 35, 0.9);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+}
+
+.card:hover::before {
+    opacity: 0.5;
+}
+
+.card:hover::after {
+    opacity: 0.2;
+}
+
+.card h2 {
+    font-size: 1.8rem;
+    margin-top: 0;
+    font-weight: 600;
+    color: var(--gold);
+    border-bottom: 2px dotted rgba(212, 175, 55, 0.3);
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.card p {
+    font-size: 1.05rem;
+    line-height: 2;
+    opacity: 0.85;
+    text-align: justify;
+}
+
+.highlight-card {
+    grid-column: 1 / -1;
+    background: linear-gradient(to bottom, var(--velvet), transparent);
+    border-top: 3px solid var(--gold);
+}
+
+.highlight-card h2 {
+    color: var(--text-main);
+}
+
+/* Roster Section - Dual Spotlight */
+.roster-section {
+    grid-column: 1 / -1;
+    padding: 5rem 2rem;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.roster-section:hover,
+.roster-section::before,
+.roster-section::after {
+    display: none;
+}
+
+.roster-section h2 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--gold);
+    margin-bottom: 4rem;
+    letter-spacing: 5px;
+}
+
+.member-grid {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    flex-wrap: wrap;
+}
+
+/* Stage Character Card */
+.member-card {
+    width: 380px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-main);
+    padding: 4rem 2rem 3rem;
+    position: relative;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+    border-bottom: 4px solid var(--gold);
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Individual Spotlight on Hover */
+.member-card::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 100%;
+    background: radial-gradient(ellipse at top, rgba(255, 255, 255, 0.1) 0%, transparent 60%);
+    opacity: 0;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.member-card:first-child::before {
+    background: radial-gradient(ellipse at top, rgba(255, 42, 85, 0.2) 0%, transparent 70%);
+}
+
+/* Hime */
+.member-card:last-child::before {
+    background: radial-gradient(ellipse at top, rgba(42, 141, 255, 0.2) 0%, transparent 70%);
+}
+
+/* Hina */
+
+.member-card:hover {
+    transform: translateY(-10px);
+}
+
+.member-card:hover::before {
+    opacity: 1;
+    height: 150%;
+}
+
+.member-card>* {
+    position: relative;
+    z-index: 1;
+}
+
+.member-name {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    display: block;
+    margin-bottom: 0.5rem;
+    letter-spacing: 3px;
+}
+
+.member-card:first-child .member-name {
+    color: var(--hime-red);
+    text-shadow: 0 0 10px rgba(255, 42, 85, 0.5);
+}
+
+.member-card:last-child .member-name {
+    color: var(--hina-blue);
+    text-shadow: 0 0 10px rgba(42, 141, 255, 0.5);
+}
+
+.member-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1.2rem;
+    letter-spacing: 5px;
+    opacity: 0.6;
+    display: block;
+    margin-bottom: 2rem;
+}
+
+.member-status {
+    text-align: justify;
+    font-size: 1rem;
+    line-height: 1.8;
+    opacity: 0.8;
+    margin-bottom: 3rem;
+}
+
+.member-tags {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.member-tag {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 0.8rem;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    padding: 0.4rem 1rem;
+    transition: 0.3s;
+}
+
+.member-card:hover .member-tag {
+    background: var(--gold);
+    color: var(--stage-bg);
+}
+
+/* Reveal Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 1s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}

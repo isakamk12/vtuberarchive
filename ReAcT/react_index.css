@@ -1,42 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Rajdhani:wght@500;600;700&display=swap');
 
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700;900&family=M+PLUS+Rounded+1c:wght@500;800&family=Teko:wght@400;700&family=Playfair+Display:wght@400;700&family=Shippori+Mincho:wght@400;700&display=swap');
-    
-    :root { 
-        --c1: #96fbc4; 
-        --c2: #20e2d7; 
-        --bg: #02120e; 
-        --text: #eefcf5; 
-        --glass-bg: rgba(20, 25, 40, 0.4);
-        --glass-border: rgba(255, 255, 255, 0.1);
+:root {
+    --req-bg: #05050a;
+    --req-dark: #121218;
+    --req-cyan: #00f3ff;
+    --req-magenta: #ff0055;
+    --req-text: #ffffff;
+    --req-glow: 0 0 15px rgba(0, 243, 255, 0.4);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--req-bg);
+    color: var(--req-text);
+    font-family: 'Rajdhani', sans-serif;
+    line-height: 1.4;
+    overflow-x: hidden;
+    /* subtle equalizer grid background */
+    background-image:
+        linear-gradient(rgba(0, 243, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 243, 255, 0.03) 1px, transparent 1px);
+    background-size: 30px 30px;
+}
+
+::selection {
+    background: var(--req-magenta);
+    color: white;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    border-bottom: 2px solid var(--req-cyan);
+    box-shadow: var(--req-glow);
+    background: var(--req-dark);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-brand {
+    font-family: 'Audiowide', cursive;
+    font-size: 2rem;
+    color: var(--req-cyan);
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+/* Audio Visualizer Hero */
+.hero {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    border-bottom: 5px solid var(--req-magenta);
+}
+
+.hero-title {
+    font-family: 'Audiowide', cursive;
+    font-size: 6rem;
+    color: var(--req-text);
+    text-shadow: 0 0 20px var(--req-magenta);
+    letter-spacing: 5px;
+    z-index: 2;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 10px;
+    color: var(--req-cyan);
+    text-transform: uppercase;
+    margin-top: 1rem;
+    z-index: 2;
+}
+
+/* Massive background equalizer */
+.bg-eq {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: flex-end;
+    gap: 1%;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.bg-eq-bar {
+    flex: 1;
+    background: linear-gradient(to top, var(--req-cyan), var(--req-magenta));
+    animation: eq-bounce 1.5s infinite alternate ease-in-out;
+}
+
+@keyframes eq-bounce {
+    0% {
+        height: 10%;
     }
-    
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    
-    body { 
-        background-color: var(--bg); 
-        color: var(--text); 
-        font-family: 'Noto Sans JP', sans-serif; 
-        overflow-x: hidden; 
-        line-height: 1.8; 
+
+    100% {
+        height: 100%;
     }
-    
-    h1, h2, h3, .nav-brand { font-family: 'Montserrat', sans-serif; }
-    a { color: inherit; text-decoration: none; transition: 0.3s; }
-    a:hover { color: var(--c1); }
-    
-    /* Navigation */
-    .nav { position: fixed; top: 0; width: 100%; padding: 1.5rem 3rem; display: flex; justify-content: space-between; align-items: center; z-index: 1000; background: rgba(0,0,0,0.5); backdrop-filter: blur(15px); border-bottom: 1px solid var(--glass-border); }
-    .nav-brand { font-size: 1.8rem; font-weight: 900; background: linear-gradient(90deg, var(--c1), var(--c2)); -webkit-background-clip: text; color: transparent; letter-spacing: 2px; }
-    .nav-links { display: flex; gap: 2.5rem; font-weight: bold; font-family: 'Montserrat', sans-serif; letter-spacing: 1px; }
-    .nav-links a { position:relative; }
-    .nav-links a::after { content:''; position:absolute; bottom:-5px; left:0; width:0%; height:2px; background:var(--c1); transition:0.3s; }
-    .nav-links a:hover::after { width:100%; }
-    .bg-fx { position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1; pointer-events:none; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.08'/%3E%3C/svg%3E"); opacity: 0.8; mix-blend-mode: overlay; }.hero { min-height: 70vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; position:relative; padding-top: 80px; margin-bottom: 4rem; z-index: 10; }.hero-subtitle { font-family: 'Montserrat', sans-serif; font-weight: bold; font-size: 1.2rem; letter-spacing: 0.5rem; color: var(--c2); margin-top: 2rem; opacity: 0.8; text-transform: uppercase; }.hero-title { font-size: 6rem; font-weight: 400; color: #ffffff; letter-spacing: 0.6em; text-transform: uppercase; animation: fadeTrack 2.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; margin: 0; text-shadow: 0 0 30px var(--c1); } @keyframes fadeTrack { 0%{opacity:0; letter-spacing:0.1em; filter:blur(20px); transform: translateY(30px);} 100%{opacity:1; letter-spacing:0.6em; filter:blur(0); transform: translateY(0);} }
-/* Layout */
-.main-content { margin: 0 auto; padding: 2rem; position: relative; z-index: 10; }
-.main-content { max-width: 900px; } .content-grid { display: flex; flex-direction: column; gap: 4rem; }.card { background: var(--glass-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-top: 1px solid rgba(255,255,255,0.2); border-left: 1px solid rgba(255,255,255,0.1); border-radius: 24px; padding: 4rem; box-shadow: 0 25px 50px rgba(0,0,0,0.5); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); position: relative; overflow: hidden; } .card::before { content:''; position:absolute; top:0; right:0; width:150px; height:150px; background: radial-gradient(circle, var(--c1) 0%, transparent 70%); opacity: 0.1; filter: blur(30px); pointer-events:none; } .card:hover { transform: translateY(-10px); box-shadow: 0 30px 60px rgba(0,0,0,0.6), 0 0 40px rgba(var(--c1), 0.2); border-color: rgba(255,255,255,0.3); }
-.card h2 { color: #ffffff; border-left: 6px solid var(--c1); padding-left: 1.5rem; margin-top: 0; font-size: 2.2rem; font-weight: 900; letter-spacing: 1px; margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem; }
-.card p { font-size: 1.1rem; color: rgba(255,255,255,0.85); line-height: 2; margin-bottom: 1.5rem; letter-spacing: 0.5px; }
-.highlight-card { border: 1px solid var(--c1) !important; position:relative; overflow:hidden; box-shadow: 0 0 40px rgba(var(--c1), 0.1); } .highlight-card::before { content:''; position:absolute; top:0;left:0;width:100%;height:100%; background: linear-gradient(135deg, var(--c1), transparent); opacity:0.05; pointer-events:none; } .highlight-card h2 { color: var(--c1); text-shadow: 0 0 20px rgba(var(--c1), 0.5); border-left-color: var(--c2); }
-.reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1); } .reveal.active { opacity: 1; transform: translateY(0); }
-@media (max-width: 900px) { .main-content { padding: 2rem 1rem; } .card { padding: 2rem !important; } .hero-title { font-size: 4rem !important; } .content-grid { gap: 2rem !important; } .sidebar-hero { display:none; } .nav { padding: 1rem; } .nav-brand { font-size: 1.2rem; } .card:nth-child(even), .card:nth-child(odd) { width: 100% !important; margin: 0 !important; } .card:nth-child(even) h2 { border-right: none; border-left: 6px solid var(--c1); text-align: left; padding-right: 0; padding-left: 1.5rem; } }
+}
+
+.container {
+    padding: 6rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.cat-section {
+    margin-bottom: 8rem;
+}
+
+.cat-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.cat-title {
+    font-family: 'Audiowide', cursive;
+    font-size: 3rem;
+    color: var(--req-cyan);
+    text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+    white-space: nowrap;
+}
+
+.cat-line {
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(90deg, var(--req-cyan), transparent);
+}
+
+/* DJ Vinyl Layout */
+.vinyl-deck {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+}
+
+/* The Record */
+.vinyl-card {
+    display: block;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: #000;
+    position: relative;
+    text-decoration: none;
+    color: var(--req-text);
+    box-shadow:
+        0 0 0 5px var(--req-dark),
+        0 0 20px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease;
+    /* Grooves */
+    background-image:
+        repeating-radial-gradient(circle at center,
+            #111 0,
+            #000 2px,
+            #111 4px);
+}
+
+/* The Label (Center) */
+.vinyl-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: var(--req-dark);
+    border: 2px solid var(--req-cyan);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+/* The spindle hole */
+.vinyl-label::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: var(--req-bg);
+    border: 1px solid #333;
+}
+
+.card-num {
+    font-size: 0.7rem;
+    color: var(--req-cyan);
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+}
+
+.card-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.1;
+    /* Avoid center hole */
+    margin-top: 15px;
+}
+
+/* Hover Effects */
+.vinyl-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px var(--req-magenta);
+}
+
+.vinyl-card:hover .vinyl-label {
+    border-color: var(--req-magenta);
+    background: #1a0011;
+}
+
+/* The Vinyl Spin */
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Create a spinning container for the grooves, leaving label upright */
+.vinyl-grooves {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-image: repeating-radial-gradient(circle at center, #111 0, #000 2px, #111 4px);
+    z-index: 1;
+    /* Fake reflection */
+    mask-image: linear-gradient(45deg, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 1) 60%);
+}
+
+.vinyl-card:hover .vinyl-grooves {
+    animation: spin 2s linear infinite;
+}
+
+/* Mini Equalizer inside label on hover */
+.mini-eq {
+    position: absolute;
+    top: 15px;
+    display: flex;
+    gap: 2px;
+    height: 15px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.vinyl-card:hover .mini-eq {
+    opacity: 1;
+}
+
+.mini-bar {
+    width: 3px;
+    background: var(--req-magenta);
+    animation: eq-bounce 0.5s infinite alternate ease-in-out;
+}
+
+.mini-bar:nth-child(2) {
+    animation-duration: 0.7s;
+}
+
+.mini-bar:nth-child(3) {
+    animation-duration: 0.4s;
+}
+
+.mini-bar:nth-child(4) {
+    animation-duration: 0.6s;
+}
+
+.mini-bar:nth-child(5) {
+    animation-duration: 0.8s;
+}
+
+.gaming-tag {
+    position: absolute;
+    bottom: 10px;
+    font-size: 0.6rem;
+    background: var(--req-cyan);
+    color: var(--req-bg);
+    padding: 0 5px;
+    border-radius: 3px;
+}
+
+.reveal {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 3.5rem;
+    }
+
+    .vinyl-deck {
+        gap: 2rem;
+    }
+
+    .vinyl-card {
+        width: 180px;
+        height: 180px;
+    }
+
+    .vinyl-label {
+        width: 90px;
+        height: 90px;
+    }
+
+    .card-name {
+        font-size: 0.9rem;
+        margin-top: 10px;
+    }
+
+    .card-num {
+        font-size: 0.6rem;
+    }
+}

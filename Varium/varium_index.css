@@ -1,42 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Noto+Sans+JP:wght@300;400;700&display=swap');
 
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700;900&family=M+PLUS+Rounded+1c:wght@500;800&family=Teko:wght@400;700&family=Playfair+Display:wght@400;700&family=Shippori+Mincho:wght@400;700&display=swap');
-    
-    :root { 
-        --c1: #fccb90; 
-        --c2: #d57eeb; 
-        --bg: #120512; 
-        --text: #ffeefb; 
-        --glass-bg: rgba(20, 25, 40, 0.4);
-        --glass-border: rgba(255, 255, 255, 0.1);
+:root {
+    --var-bg: #050a1f;
+    /* Deep night sky */
+    --var-text: #e6f0ff;
+    /* Starlight */
+    --var-gold: #ffd700;
+    /* Star gold */
+    --var-line: rgba(255, 215, 0, 0.2);
+    /* Constellation lines */
+    --var-glow: rgba(255, 215, 0, 0.5);
+
+    /* Generation Colors */
+    --gen1: #ffffff;
+    /* White */
+    --gen2: #ff99cc;
+    /* Pink */
+    --gen3: #99ccff;
+    /* Blue */
+    --gen4: #aaffaa;
+    /* Green */
+    --grad: #888888;
+    /* Grey/Faded */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--var-bg);
+    color: var(--var-text);
+    font-family: 'Noto Sans JP', sans-serif;
+    overflow: hidden;
+    /* Hide scrollbars for the map feel */
+    position: relative;
+}
+
+/* Base Cosmos Texture */
+.cosmos-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -2;
+    background: radial-gradient(circle at center, #0a1130 0%, #030614 100%);
+    /* Animated stars via multiple box-shadows (simulated here with CSS gradient noise for speed, but actual stars are better) */
+    background-image:
+        radial-gradient(white, rgba(255, 255, 255, .2) 2px, transparent 4px),
+        radial-gradient(white, rgba(255, 255, 255, .15) 1px, transparent 2px),
+        radial-gradient(white, rgba(255, 255, 255, .1) 2px, transparent 3px);
+    background-size: 550px 550px, 350px 350px, 250px 250px;
+    background-position: 0 0, 40px 60px, 130px 270px;
+    animation: driftStarfield 120s linear infinite;
+}
+
+@keyframes driftStarfield {
+    0% {
+        background-position: 0 0, 40px 60px, 130px 270px;
     }
-    
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    
-    body { 
-        background-color: var(--bg); 
-        color: var(--text); 
-        font-family: 'Noto Sans JP', sans-serif; 
-        overflow-x: hidden; 
-        line-height: 1.8; 
+
+    100% {
+        background-position: -550px -550px, -310px -490px, -120px -280px;
     }
-    
-    h1, h2, h3, .nav-brand { font-family: 'M PLUS Rounded 1c', sans-serif; }
-    a { color: inherit; text-decoration: none; transition: 0.3s; }
-    a:hover { color: var(--c1); }
-    
-    /* Navigation */
-    .nav { position: fixed; top: 0; width: 100%; padding: 1.5rem 3rem; display: flex; justify-content: space-between; align-items: center; z-index: 1000; background: rgba(0,0,0,0.5); backdrop-filter: blur(15px); border-bottom: 1px solid var(--glass-border); }
-    .nav-brand { font-size: 1.8rem; font-weight: 900; background: linear-gradient(90deg, var(--c1), var(--c2)); -webkit-background-clip: text; color: transparent; letter-spacing: 2px; }
-    .nav-links { display: flex; gap: 2.5rem; font-weight: bold; font-family: 'Montserrat', sans-serif; letter-spacing: 1px; }
-    .nav-links a { position:relative; }
-    .nav-links a::after { content:''; position:absolute; bottom:-5px; left:0; width:0%; height:2px; background:var(--c1); transition:0.3s; }
-    .nav-links a:hover::after { width:100%; }
-    .bg-fx { position:fixed; top:20%; left:20%; width:60vw; height:60vw; z-index:-1; border: 1px solid rgba(255,255,255,0.05); opacity:1; border-radius: 30px; transform: rotate(45deg); animation: spin 40s infinite linear; box-shadow: 0 0 100px var(--c1) inset; } @keyframes spin { 100%{transform: rotate(405deg);} }.hero { min-height: 70vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; position:relative; padding-top: 80px; margin-bottom: 4rem; z-index: 10; }.hero-subtitle { font-family: 'Montserrat', sans-serif; font-weight: bold; font-size: 1.2rem; letter-spacing: 0.5rem; color: var(--c2); margin-top: 2rem; opacity: 0.8; text-transform: uppercase; }.hero-title { font-size: 7rem; font-weight: 900; color: #fff; margin: 0; text-transform: uppercase; text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px var(--c1), 0 0 80px var(--c1), 0 0 120px var(--c2); animation: flicker 3s infinite alternate; } @keyframes flicker { 0%, 18%, 22%, 25%, 53%, 57%, 100% {text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px var(--c1), 0 0 80px var(--c1), 0 0 120px var(--c2);} 20%, 24%, 55% {text-shadow: none;} }
-/* Layout */
-.main-content { margin: 0 auto; padding: 2rem; position: relative; z-index: 10; }
-.main-content { max-width: 1400px; display: flex; gap: 5rem; align-items: flex-start; } .sidebar-hero { flex: 0 0 350px; position: sticky; top: 120px; } .content-grid { flex: 1; min-width: 0; display:flex; flex-direction:column; gap:4rem; } .hero { display:none; } .sidebar-hero .hero-title { font-size:3.5rem; margin-bottom:1rem; line-height: 1.1; } .sidebar-hero .hero-subtitle { font-size: 1rem; text-align:left; margin-top: 1rem; }.card { background: #1a1a24; border: 3px solid var(--glass-border); border-radius: 16px; padding: 4rem; box-shadow: 12px 12px 0px 0px var(--c1); transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); position: relative; } .card:hover { transform: translate(-8px, -8px); box-shadow: 20px 20px 0px 0px var(--c2); border-color: rgba(255,255,255,0.3); }
-.card h2 { color: #ffffff; border-left: 6px solid var(--c1); padding-left: 1.5rem; margin-top: 0; font-size: 2.2rem; font-weight: 900; letter-spacing: 1px; margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem; }
-.card p { font-size: 1.1rem; color: rgba(255,255,255,0.85); line-height: 2; margin-bottom: 1.5rem; letter-spacing: 0.5px; }
-.highlight-card { border: 1px solid var(--c1) !important; position:relative; overflow:hidden; box-shadow: 0 0 40px rgba(var(--c1), 0.1); } .highlight-card::before { content:''; position:absolute; top:0;left:0;width:100%;height:100%; background: linear-gradient(135deg, var(--c1), transparent); opacity:0.05; pointer-events:none; } .highlight-card h2 { color: var(--c1); text-shadow: 0 0 20px rgba(var(--c1), 0.5); border-left-color: var(--c2); }
-.reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1); } .reveal.active { opacity: 1; transform: translateY(0); }
-@media (max-width: 900px) { .main-content { padding: 2rem 1rem; } .card { padding: 2rem !important; } .hero-title { font-size: 4rem !important; } .content-grid { gap: 2rem !important; } .sidebar-hero { display:none; } .nav { padding: 1rem; } .nav-brand { font-size: 1.2rem; } .card:nth-child(even), .card:nth-child(odd) { width: 100% !important; margin: 0 !important; } .card:nth-child(even) h2 { border-right: none; border-left: 6px solid var(--c1); text-align: left; padding-right: 0; padding-left: 1.5rem; } }
+}
+
+::selection {
+    background: var(--var-gold);
+    color: #000;
+}
+
+/* Navigation & Title Overlay */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    pointer-events: none;
+}
+
+.nav>* {
+    pointer-events: auto;
+}
+
+.nav-brand {
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--var-gold);
+    text-decoration: none;
+    letter-spacing: 5px;
+    text-shadow: 0 0 10px var(--var-glow);
+}
+
+.map-title {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    z-index: 100;
+    font-family: 'Cinzel', serif;
+    pointer-events: none;
+}
+
+.map-title h1 {
+    font-size: 4rem;
+    line-height: 1;
+    letter-spacing: 1rem;
+    color: var(--var-text);
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Interactive Cosmos Container */
+.cosmos {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300vw;
+    /* Massive pan-able area */
+    height: 300vh;
+    overflow: auto;
+    /* Use scroll-snap or smooth scrolling on body instead, or JS pan logic */
+    display: block;
+}
+
+/* Hide scrollbars but allow scrolling inside cosmos */
+.cosmos::-webkit-scrollbar {
+    display: none;
+}
+
+.cosmos {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Constellation SVG Lines */
+.constellation-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.constellation-lines line {
+    stroke: var(--var-line);
+    stroke-width: 1.5;
+    stroke-dasharray: 4, 8;
+    animation: pulseLine 4s infinite alternate;
+}
+
+@keyframes pulseLine {
+    0% {
+        stroke: rgba(255, 215, 0, 0.1);
+    }
+
+    100% {
+        stroke: rgba(255, 215, 0, 0.4);
+    }
+}
+
+/* Background Gen Labels */
+.cluster-label {
+    position: absolute;
+    font-family: 'Cinzel', serif;
+    font-size: 15vw;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.02);
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    pointer-events: none;
+    letter-spacing: 2vw;
+}
+
+/* Star Nodes (Talent Cards) */
+.star-node {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+    transition: transform 0.3s;
+}
+
+/* The physical star */
+.star-core {
+    width: 12px;
+    height: 12px;
+    background: var(--var-gold);
+    border-radius: 50%;
+    box-shadow: 0 0 10px 2px var(--var-glow);
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Outer ring / orbit effect */
+.star-core::after {
+    content: '';
+    position: absolute;
+    top: -14px;
+    left: -14px;
+    width: 40px;
+    height: 40px;
+    border: 1px dashed rgba(255, 215, 0, 0.3);
+    border-radius: 50%;
+    animation: spinRotate 10s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+@keyframes spinRotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* The label container */
+.star-label {
+    margin-top: 15px;
+    background: rgba(5, 10, 31, 0.8);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    text-align: center;
+    opacity: 0.7;
+    transform: translateY(10px);
+    transition: opacity 0.3s, transform 0.3s, border-color 0.3s;
+    min-width: 160px;
+}
+
+.star-name {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--var-text);
+    letter-spacing: 2px;
+    margin-bottom: 0.2rem;
+}
+
+.star-sub {
+    font-size: 0.7rem;
+    color: var(--var-gold);
+    font-family: 'Cinzel', serif;
+    letter-spacing: 2px;
+}
+
+/* Interaction States */
+.star-node:hover {
+    z-index: 100;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.star-node:hover .star-core {
+    transform: scale(1.5);
+    box-shadow: 0 0 30px 5px var(--var-glow), 0 0 60px 10px rgba(255, 255, 255, 0.2);
+    background: #fff;
+}
+
+.star-node:hover .star-core::after {
+    opacity: 1;
+}
+
+.star-node:hover .star-label {
+    opacity: 1;
+    transform: translateY(0);
+    border-color: var(--var-gold);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Alumni variations */
+.star-node.alumni .star-core {
+    background: var(--grad);
+    box-shadow: 0 0 10px 2px rgba(136, 136, 136, 0.3);
+}
+
+.star-node.alumni .star-sub {
+    color: var(--grad);
+}
+
+.star-node.alumni:hover .star-core {
+    background: #bbb;
+    box-shadow: 0 0 20px 2px rgba(136, 136, 136, 0.8);
+}
+
+.star-node.alumni:hover .star-label {
+    border-color: var(--grad);
+}
+
+/* Specific generation coloring via :nth-child or classes on node if added. 
+   Assuming they are grouped in specific areas, but we'll apply global gold/white styles 
+   for the core magical aesthetic. */

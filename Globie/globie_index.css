@@ -1,42 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Montserrat:wght@400;700&display=swap');
 
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700;900&family=M+PLUS+Rounded+1c:wght@500;800&family=Teko:wght@400;700&family=Playfair+Display:wght@400;700&family=Shippori+Mincho:wght@400;700&display=swap');
-    
-    :root { 
-        --c1: #ffd700; 
-        --c2: #daa520; 
-        --bg: #11110a; 
-        --text: #fffff0; 
-        --glass-bg: rgba(20, 25, 40, 0.4);
-        --glass-border: rgba(255, 255, 255, 0.1);
-    }
-    
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    
-    body { 
-        background-color: var(--bg); 
-        color: var(--text); 
-        font-family: 'Noto Sans JP', sans-serif; 
-        overflow-x: hidden; 
-        line-height: 1.8; 
-    }
-    
-    h1, h2, h3, .nav-brand { font-family: 'Montserrat', sans-serif; }
-    a { color: inherit; text-decoration: none; transition: 0.3s; }
-    a:hover { color: var(--c1); }
-    
-    /* Navigation */
-    .nav { position: fixed; top: 0; width: 100%; padding: 1.5rem 3rem; display: flex; justify-content: space-between; align-items: center; z-index: 1000; background: rgba(0,0,0,0.5); backdrop-filter: blur(15px); border-bottom: 1px solid var(--glass-border); }
-    .nav-brand { font-size: 1.8rem; font-weight: 900; background: linear-gradient(90deg, var(--c1), var(--c2)); -webkit-background-clip: text; color: transparent; letter-spacing: 2px; }
-    .nav-links { display: flex; gap: 2.5rem; font-weight: bold; font-family: 'Montserrat', sans-serif; letter-spacing: 1px; }
-    .nav-links a { position:relative; }
-    .nav-links a::after { content:''; position:absolute; bottom:-5px; left:0; width:0%; height:2px; background:var(--c1); transition:0.3s; }
-    .nav-links a:hover::after { width:100%; }
-    .bg-fx { position:fixed; top:20%; left:20%; width:60vw; height:60vw; z-index:-1; border: 1px solid rgba(255,255,255,0.05); opacity:1; border-radius: 30px; transform: rotate(45deg); animation: spin 40s infinite linear; box-shadow: 0 0 100px var(--c1) inset; } @keyframes spin { 100%{transform: rotate(405deg);} }.hero { min-height: 70vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; position:relative; padding-top: 80px; margin-bottom: 4rem; z-index: 10; }.hero-subtitle { font-family: 'Montserrat', sans-serif; font-weight: bold; font-size: 1.2rem; letter-spacing: 0.5rem; color: var(--c2); margin-top: 2rem; opacity: 0.8; text-transform: uppercase; }.hero { perspective: 1200px; } .hero-title { font-size: 7rem; font-weight: 900; color: #ffffff; text-shadow: 1px 1px 0 var(--c1), 2px 2px 0 var(--c1), 3px 3px 0 var(--c1), 4px 4px 0 var(--c1), 5px 5px 0 var(--c1), 20px 20px 30px rgba(0,0,0,0.8); transform: rotateX(15deg) rotateY(-15deg); transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); margin: 0; text-transform: uppercase; } .hero:hover .hero-title { transform: rotateX(0) rotateY(0) scale(1.05); }
-/* Layout */
-.main-content { margin: 0 auto; padding: 2rem; position: relative; z-index: 10; }
-.main-content { max-width: 1000px; } .content-grid { display: flex; flex-direction: column; gap: 4rem; } .card:nth-child(even) { margin-left: auto; width: 85%; } .card:nth-child(odd) { margin-right: auto; width: 85%; } .card:nth-child(even) h2 { border-left: none; border-right: 6px solid var(--c1); padding-left:0; padding-right:1.5rem; text-align:right; }.card { background: var(--glass-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-top: 1px solid rgba(255,255,255,0.2); border-left: 1px solid rgba(255,255,255,0.1); border-radius: 24px; padding: 4rem; box-shadow: 0 25px 50px rgba(0,0,0,0.5); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); position: relative; overflow: hidden; } .card::before { content:''; position:absolute; top:0; right:0; width:150px; height:150px; background: radial-gradient(circle, var(--c1) 0%, transparent 70%); opacity: 0.1; filter: blur(30px); pointer-events:none; } .card:hover { transform: translateY(-10px); box-shadow: 0 30px 60px rgba(0,0,0,0.6), 0 0 40px rgba(var(--c1), 0.2); border-color: rgba(255,255,255,0.3); }
-.card h2 { color: #ffffff; border-left: 6px solid var(--c1); padding-left: 1.5rem; margin-top: 0; font-size: 2.2rem; font-weight: 900; letter-spacing: 1px; margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem; }
-.card p { font-size: 1.1rem; color: rgba(255,255,255,0.85); line-height: 2; margin-bottom: 1.5rem; letter-spacing: 0.5px; }
-.highlight-card { border: 1px solid var(--c1) !important; position:relative; overflow:hidden; box-shadow: 0 0 40px rgba(var(--c1), 0.1); } .highlight-card::before { content:''; position:absolute; top:0;left:0;width:100%;height:100%; background: linear-gradient(135deg, var(--c1), transparent); opacity:0.05; pointer-events:none; } .highlight-card h2 { color: var(--c1); text-shadow: 0 0 20px rgba(var(--c1), 0.5); border-left-color: var(--c2); }
-.reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1); } .reveal.active { opacity: 1; transform: translateY(0); }
-@media (max-width: 900px) { .main-content { padding: 2rem 1rem; } .card { padding: 2rem !important; } .hero-title { font-size: 4rem !important; } .content-grid { gap: 2rem !important; } .sidebar-hero { display:none; } .nav { padding: 1rem; } .nav-brand { font-size: 1.2rem; } .card:nth-child(even), .card:nth-child(odd) { width: 100% !important; margin: 0 !important; } .card:nth-child(even) h2 { border-right: none; border-left: 6px solid var(--c1); text-align: left; padding-right: 0; padding-left: 1.5rem; } }
+:root {
+    --gb-bg: #2b1d14;
+    /* Dark Wood */
+    --gb-parchment: #f4e8d1;
+    --gb-ink: #2c1e16;
+    --gb-red: #8b0000;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--gb-bg);
+    color: var(--gb-ink);
+    font-family: 'IM Fell English', serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+    /* Wood texture background */
+    background-image:
+        repeating-linear-gradient(90deg,
+            rgba(0, 0, 0, 0.1) 0px,
+            rgba(0, 0, 0, 0.1) 2px,
+            transparent 2px,
+            transparent 20px),
+        linear-gradient(90deg, #3d2b1f, #2b1d14, #3d2b1f);
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.8);
+}
+
+::selection {
+    background: var(--gb-red);
+    color: var(--gb-parchment);
+}
+
+/* Antique Nav */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(43, 29, 20, 0.9);
+    border-bottom: 3px double #5a3d2b;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.nav-brand {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #d4af37;
+    /* Antique Gold */
+    text-decoration: none;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.nav-status {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    color: #a08050;
+    letter-spacing: 2px;
+}
+
+/* Bulletin Board Hero */
+.hero {
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 6rem;
+    color: var(--gb-parchment);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    letter-spacing: 15px;
+}
+
+.hero-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: #d4af37;
+    letter-spacing: 8px;
+    margin-top: 1rem;
+    text-transform: uppercase;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 2rem auto 6rem;
+    padding: 2rem;
+}
+
+/* 
+ * The Noticeboard Grid
+ * Items placed somewhat haphazardly using masonry or flex with rotations
+ */
+.guild-board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    padding: 4rem 2rem;
+    background: rgba(0, 0, 0, 0.2);
+    border: 15px solid #1a110c;
+    border-radius: 10px;
+    box-shadow:
+        inset 0 0 50px rgba(0, 0, 0, 0.8),
+        0 20px 50px rgba(0, 0, 0, 0.8);
+    position: relative;
+}
+
+/* Plaque title */
+.board-title {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #d4af37;
+    color: #1a110c;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    padding: 0.5rem 3rem;
+    border: 3px solid #1a110c;
+    border-radius: 5px;
+    letter-spacing: 4px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+.gen-divider {
+    width: 100%;
+    text-align: center;
+    color: #d4af37;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 10px;
+    margin: 2rem 0;
+    text-shadow: 1px 1px 2px black;
+    border-bottom: 1px dashed rgba(212, 175, 55, 0.3);
+    padding-bottom: 1rem;
+}
+
+/* 
+ * Bounties / Member Posters 
+ */
+.poster-card {
+    width: 250px;
+    min-height: 320px;
+    background: var(--gb-parchment);
+    color: var(--gb-ink);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    /* Torn edge effect via clip-path */
+    clip-path: polygon(0% 0%, 100% 0%,
+            100% 95%, 95% 100%, 85% 98%, 75% 100%, 65% 97%, 55% 100%, 45% 98%, 35% 100%, 25% 96%, 15% 100%, 5% 98%, 0% 100%);
+}
+
+/* Nifty CSS Pin */
+.poster-card::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 15px;
+    background: radial-gradient(circle at 30% 30%, #a00, #400);
+    border-radius: 50%;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.5);
+    z-index: 5;
+}
+
+.poster-card:hover {
+    transform: scale(1.05) rotate(0deg) !important;
+    z-index: 10;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Random rotations for that messy board look applied inline in HTML */
+
+.p-header {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #664433;
+    border-bottom: 1px solid #664433;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.p-name {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.p-sub {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #553322;
+    margin-bottom: 1.5rem;
+}
+
+/* Wax Seal for Status */
+.status-seal {
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: var(--gb-red);
+    border-radius: 50%;
+    color: var(--gb-parchment);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transform: rotate(-15deg);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4), inset 0 0 10px rgba(0, 0, 0, 0.5);
+    border: 2px solid #500;
+}
+
+.seal-indie {
+    background: #226622;
+    border-color: #113311;
+}
+
+.seal-grad {
+    background: #444;
+    border-color: #222;
+}
+
+.seal-term {
+    background: #000;
+    color: #f00;
+    border-color: #333;
+}
+
+/* Typographic Flourishes */
+.flourish {
+    font-size: 2rem;
+    color: rgba(44, 30, 22, 0.2);
+    margin: 1rem 0;
+}
+
+.reveal {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: scale(1);
+}

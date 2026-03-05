@@ -1,750 +1,631 @@
-/* ============================================================
-   neoporte.css — Neo-Porte Agency Page
-   Concept: "もしもデジタルの世界へ行けたら"
-   Aesthetic: Cyber gateway, digital portal, esports x music
-   ============================================================ */
-
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Teko:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;700;900&display=swap');
 
 :root {
-    /* Neo-Porte Red (Crazy Raccoon / Brave Group influenced) */
-    --np-red: #e52929;
-    --np-red-dark: #b01f1f;
-    --np-red-glow: rgba(229, 41, 41, 0.55);
-    --np-red-soft: rgba(229, 41, 41, 0.12);
+    --np-bg: #090b10;
+    --np-text: #e6e9f0;
+    --np-accent: #00ffcc;
+    /* Cyan/Teal from Neo-Porte branding */
+    --np-secondary: #7400e0;
+    /* Deep Purple */
+    --np-dark: #121520;
+    --np-border: rgba(0, 255, 204, 0.3);
 
-    /* Neutrals */
-    --np-black: #080c0f;
-    --np-dark: #0d1117;
-    --np-surface: #131920;
-    --np-card: rgba(255, 255, 255, 0.03);
-    --np-border: rgba(229, 41, 41, 0.2);
-    --np-border-subtle: rgba(255, 255, 255, 0.07);
-
-    /* Text */
-    --np-text: #e8eaed;
-    --np-muted: rgba(232, 234, 237, 0.5);
-    --np-white: #ffffff;
-
-    /* Digital accents */
-    --np-cyan: #00d4ff;
-    --np-cyan-glow: rgba(0, 212, 255, 0.3);
+    /* Specific Cyber Gradient */
+    --np-grad: linear-gradient(135deg, var(--np-secondary) 0%, var(--np-accent) 100%);
 }
 
-/* ============================================================
-   RESET & BASE
-   ============================================================ */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Noto Sans JP', sans-serif;
-    background-color: var(--np-black);
+    background-color: var(--np-bg);
     color: var(--np-text);
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.6;
     overflow-x: hidden;
-    line-height: 1.7;
+    /* Hexagon/Cyber Grid Background */
+    background-image:
+        radial-gradient(rgba(0, 255, 204, 0.05) 1px, transparent 1px),
+        radial-gradient(rgba(0, 255, 204, 0.05) 1px, transparent 1px);
+    background-position: 0 0, 20px 20px;
+    background-size: 40px 40px;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
+::selection {
+    background: var(--np-accent);
+    color: #000;
 }
 
-.np-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 5vw;
-}
-
-/* ============================================================
-   BACKGROUND — digital grid + glow
-   ============================================================ */
+/* Background Entities */
 .np-bg {
     position: fixed;
-    inset: 0;
-    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
     pointer-events: none;
-    overflow: hidden;
-}
-
-/* Subtle grid */
-.np-bg::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image:
-        linear-gradient(rgba(229, 41, 41, 0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(229, 41, 41, 0.04) 1px, transparent 1px);
-    background-size: 60px 60px;
-}
-
-/* Red portal glow top-center */
-.np-bg::after {
-    content: '';
-    position: absolute;
-    top: -30%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 70vw;
-    height: 70vw;
-    border-radius: 50%;
-    background: radial-gradient(ellipse, rgba(229, 41, 41, 0.18) 0%, transparent 65%);
-    animation: portal-pulse 8s ease-in-out infinite;
-}
-
-@keyframes portal-pulse {
-
-    0%,
-    100% {
-        opacity: 1;
-        transform: translateX(-50%) scale(1);
-    }
-
-    50% {
-        opacity: 0.7;
-        transform: translateX(-50%) scale(1.05);
-    }
 }
 
 .np-glow-orb {
     position: absolute;
     border-radius: 50%;
-    filter: blur(100px);
-    pointer-events: none;
-    animation: orb-float 20s ease-in-out infinite;
+    filter: blur(120px);
+    opacity: 0.3;
+    animation: drift 20s infinite alternate ease-in-out;
 }
 
 .np-orb-1 {
-    width: 500px;
-    height: 500px;
-    background: var(--np-red);
-    opacity: 0.07;
-    bottom: 0;
-    right: -100px;
+    width: 40vw;
+    height: 40vw;
+    background: var(--np-secondary);
+    top: -10vw;
+    left: -10vw;
 }
 
 .np-orb-2 {
-    width: 400px;
-    height: 400px;
-    background: var(--np-cyan);
-    opacity: 0.04;
-    bottom: 30%;
-    left: -100px;
+    width: 30vw;
+    height: 30vw;
+    background: var(--np-accent);
+    bottom: -5vw;
+    right: -5vw;
     animation-delay: -10s;
 }
 
-@keyframes orb-float {
-
-    0%,
+@keyframes drift {
     100% {
-        transform: translate(0, 0);
-    }
-
-    50% {
-        transform: translate(20px, -30px);
+        transform: scale(1.1) translate(10vw, 5vw);
     }
 }
 
-/* ============================================================
-   NAVIGATION
-   ============================================================ */
+/* Glitch Typography Utility */
+.glitch {
+    position: relative;
+    display: inline-block;
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+}
+
+.glitch::before {
+    left: 2px;
+    text-shadow: -2px 0 var(--np-accent);
+    clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+    animation: glitch-anim 2s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+    left: -2px;
+    text-shadow: -2px 0 var(--np-secondary);
+    clip-path: polygon(0 80%, 100% 20%, 100% 100%, 0 100%);
+    animation: glitch-anim 2.5s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+    0% {
+        transform: translate(0);
+    }
+
+    20% {
+        transform: translate(-2px, 1px);
+    }
+
+    40% {
+        transform: translate(2px, -1px);
+    }
+
+    60% {
+        transform: translate(0, 2px);
+    }
+
+    80% {
+        transform: translate(1px, -2px);
+    }
+
+    100% {
+        transform: translate(-1px, 1px);
+    }
+}
+
+/* Nav */
 .np-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    background: rgba(9, 11, 16, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--np-border);
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    padding: 1.2rem 5vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(8, 12, 15, 0.75);
-    backdrop-filter: blur(16px);
-    border-bottom: 1px solid var(--np-border);
 }
 
 .np-nav-logo {
     font-family: 'Teko', sans-serif;
-    font-size: 1.8rem;
-    letter-spacing: 4px;
-    color: var(--np-white);
-    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--np-text);
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(0, 255, 204, 0.3);
 }
 
 .np-nav-logo span {
-    color: var(--np-red);
+    color: var(--np-accent);
 }
 
-.np-nav-back {
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 0.9rem;
-    letter-spacing: 2px;
-    color: var(--np-muted);
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    transition: color 0.3s ease;
-}
-
-.np-nav-back:hover {
-    color: var(--np-red);
-}
-
+.np-nav-back,
 .np-nav-tag {
     font-family: 'Rajdhani', sans-serif;
-    font-size: 0.8rem;
+    font-weight: 600;
     letter-spacing: 2px;
-    color: var(--np-muted);
-    border: 1px solid var(--np-border-subtle);
-    padding: 0.3rem 0.9rem;
-    border-radius: 2px;
+    text-decoration: none;
+    color: var(--np-text);
 }
 
 .np-nav-tag .dot {
     display: inline-block;
-    width: 6px;
-    height: 6px;
+    width: 8px;
+    height: 8px;
+    background: var(--np-accent);
     border-radius: 50%;
-    background: #00d26a;
-    margin-right: 6px;
-    animation: blink 2s ease-in-out infinite;
+    box-shadow: 0 0 8px var(--np-accent);
+    animation: pulse 1s infinite;
+    margin-right: 5px;
 }
 
-@keyframes blink {
-
-    0%,
-    100% {
+@keyframes pulse {
+    0% {
         opacity: 1;
     }
 
     50% {
-        opacity: 0.3;
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
 
-/* ============================================================
-   HERO — Digital Portal Gate
-   ============================================================ */
+/* Hero */
 .np-hero {
-    position: relative;
-    z-index: 10;
-    min-height: 100vh;
+    height: 80vh;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    text-align: center;
-    padding: 8rem 5vw 4rem;
-    overflow: hidden;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid var(--np-border);
+    margin-top: 80px;
+    /* Offset for fix nav */
+}
+
+/* Gate effect behind hero text */
+.np-hero::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150vw;
+    height: 150vh;
+    background: conic-gradient(from 180deg at 50% 50%, transparent 120deg, var(--np-border) 180deg, transparent 240deg);
+    animation: rotateScan 10s linear infinite;
+    z-index: 0;
+}
+
+@keyframes rotateScan {
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
 }
 
 .np-hero-inner {
     position: relative;
-    z-index: 2;
+    z-index: 1;
+    text-align: center;
 }
 
-/* Big scan line decorative element */
 .np-scan {
     font-family: 'Rajdhani', sans-serif;
-    font-size: 0.75rem;
-    letter-spacing: 6px;
-    color: var(--np-red);
-    text-transform: uppercase;
-    margin-bottom: 2.5rem;
-    opacity: 0.7;
+    color: var(--np-accent);
+    font-size: 1.2rem;
+    letter-spacing: 4px;
+    margin-bottom: 2rem;
+    opacity: 0.8;
 }
 
 .np-hero-title {
     font-family: 'Teko', sans-serif;
-    font-size: clamp(5rem, 14vw, 12rem);
+    font-size: 8rem;
+    color: #fff;
     line-height: 0.9;
-    color: var(--np-white);
-    text-transform: uppercase;
-    letter-spacing: -2px;
-    text-shadow: 0 0 80px var(--np-red-glow);
-    margin-bottom: 0.5rem;
+    text-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+    letter-spacing: 1rem;
 }
 
 .np-hero-title span {
     display: block;
-    color: var(--np-red);
-    font-size: 0.6em;
-    letter-spacing: 8px;
-}
-
-.np-hero-sub {
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 1.2rem;
-    letter-spacing: 3px;
-    color: var(--np-muted);
-    margin-bottom: 3rem;
-    text-transform: uppercase;
-}
-
-.np-hero-concept {
-    display: inline-block;
     font-family: 'Noto Sans JP', sans-serif;
-    font-size: 1.1rem;
-    color: var(--np-text);
-    background: var(--np-red-soft);
+    font-size: 2rem;
+    letter-spacing: 10px;
+    font-weight: 900;
+    -webkit-text-stroke: 1px var(--np-accent);
+    color: transparent;
+    margin-top: 1rem;
+}
+
+.np-hero-sub,
+.np-hero-concept {
+    font-family: 'Rajdhani', sans-serif;
+    letter-spacing: 3px;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(0, 0, 0, 0.5);
     border: 1px solid var(--np-border);
-    padding: 1rem 2.5rem;
-    border-radius: 2px;
-    letter-spacing: 0.05em;
-    margin-bottom: 3rem;
 }
 
 .np-hero-stats {
     display: flex;
     justify-content: center;
     gap: 4rem;
+    margin-top: 4rem;
 }
 
 .np-stat {
-    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem 2rem;
+    border-top: 4px solid var(--np-accent);
+    border-bottom: 4px solid var(--np-secondary);
 }
 
 .np-stat-value {
     font-family: 'Teko', sans-serif;
-    font-size: 3rem;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #fff;
     line-height: 1;
-    color: var(--np-white);
 }
 
 .np-stat-label {
     font-family: 'Rajdhani', sans-serif;
-    font-size: 0.75rem;
-    letter-spacing: 3px;
-    color: var(--np-red);
-    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    color: var(--np-accent);
 }
 
-/* ============================================================
-   SECTION LAYOUT
-   ============================================================ */
+/* Containers & Sections */
+.np-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
 .np-section {
+    margin-bottom: 8rem;
     position: relative;
-    z-index: 10;
-    padding: 6rem 0;
 }
 
 .np-section-header {
     display: flex;
-    align-items: baseline;
-    gap: 1.5rem;
-    margin-bottom: 4rem;
+    align-items: flex-end;
+    gap: 2rem;
+    margin-bottom: 3rem;
 }
 
 .np-section-num {
     font-family: 'Teko', sans-serif;
-    font-size: 4rem;
-    color: var(--np-red);
-    opacity: 0.3;
-    line-height: 1;
+    font-size: 6rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.05);
+    line-height: 0.8;
 }
 
 .np-section-title {
     font-family: 'Teko', sans-serif;
-    font-size: 2.5rem;
-    letter-spacing: 4px;
-    color: var(--np-white);
-    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--np-text);
+    letter-spacing: 2px;
 }
 
 .np-section-title-jp {
-    font-family: 'Noto Sans JP', sans-serif;
-    font-size: 0.85rem;
-    color: var(--np-red);
+    font-size: 1rem;
+    color: var(--np-accent);
     letter-spacing: 4px;
-    display: block;
-    margin-top: 0.2rem;
+    font-weight: 700;
 }
 
 .np-divider {
     flex: 1;
     height: 1px;
-    background: linear-gradient(90deg, var(--np-border), transparent);
-    align-self: center;
+    background: linear-gradient(90deg, var(--np-accent), transparent);
+    margin-bottom: 1rem;
 }
 
-/* ============================================================
-   OWNER CARDS — premium esports style
-   ============================================================ */
+/* Owners/Management Grid */
 .np-owners-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
 }
 
 .np-owner-card {
-    background: var(--np-card);
-    border: 1px solid var(--np-border-subtle);
-    border-radius: 4px;
-    padding: 2.5rem 2rem;
+    background: var(--np-dark);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem;
     position: relative;
     overflow: hidden;
-    transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s;
 }
 
-.np-owner-card:hover {
-    border-color: var(--np-border);
-    transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 25px var(--np-red-glow);
-}
-
-/* Top red bar */
 .np-owner-card::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--np-red), transparent 60%);
+    width: 4px;
+    height: 100%;
+    background: var(--np-secondary);
+    transition: width 0.3s;
 }
 
-/* Background initial letter */
+.np-owner-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--np-accent);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.np-owner-card:hover::before {
+    width: 8px;
+    background: var(--np-accent);
+}
+
 .np-owner-initial {
     position: absolute;
-    bottom: -20px;
-    right: -10px;
+    top: 1rem;
+    right: 1rem;
     font-family: 'Teko', sans-serif;
-    font-size: 8rem;
-    color: var(--np-red);
-    opacity: 0.04;
-    line-height: 1;
-    user-select: none;
+    font-size: 4rem;
+    opacity: 0.1;
+    font-weight: 700;
     pointer-events: none;
 }
 
 .np-owner-role {
     font-family: 'Rajdhani', sans-serif;
-    font-size: 0.75rem;
-    letter-spacing: 4px;
-    color: var(--np-red);
+    font-size: 0.9rem;
+    color: var(--np-accent);
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
     text-transform: uppercase;
-    margin-bottom: 0.8rem;
 }
 
 .np-owner-name {
-    font-family: 'Teko', sans-serif;
-    font-size: 2rem;
-    color: var(--np-white);
-    line-height: 1.1;
-    margin-bottom: 1.2rem;
+    font-size: 1.8rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    color: #fff;
 }
 
 .np-owner-desc {
-    font-size: 0.9rem;
-    color: var(--np-muted);
-    line-height: 1.8;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .np-owner-desc strong {
     color: var(--np-text);
+    font-weight: 700;
 }
 
-/* ============================================================
-   FEATURE ROWS
-   ============================================================ */
+/* Features Grid */
 .np-features {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
 }
 
 .np-feature-card {
-    background: var(--np-card);
-    border: 1px solid var(--np-border-subtle);
-    border-radius: 4px;
-    padding: 2.5rem;
-    position: relative;
-    overflow: hidden;
-    transition: border-color 0.3s ease;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    padding: 3rem 2rem;
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 0.3s;
 }
 
 .np-feature-card:hover {
+    transform: translateY(-10px);
+    background: linear-gradient(135deg, rgba(0, 255, 204, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
     border-color: var(--np-border);
 }
 
-.np-feature-card.wide {
-    grid-column: 1 / -1;
-}
-
 .np-feature-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1.2rem;
+    font-size: 3rem;
     display: block;
-    filter: drop-shadow(0 0 10px var(--np-red-glow));
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 20px var(--np-secondary);
 }
 
 .np-feature-card h3 {
-    font-family: 'Teko', sans-serif;
-    font-size: 1.6rem;
-    letter-spacing: 2px;
-    color: var(--np-white);
-    text-transform: uppercase;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.5rem;
+    color: var(--np-accent);
     margin-bottom: 1rem;
 }
 
-.np-feature-card p,
-.np-feature-card li {
-    font-size: 0.95rem;
-    color: var(--np-muted);
-    line-height: 1.8;
+.np-feature-card p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
 }
 
-.np-feature-card strong {
-    color: var(--np-text);
-}
-
-.np-feature-card ul {
-    list-style: none;
-    padding: 0;
-}
-
-.np-feature-card ul li {
-    padding: 0.5rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-    padding-left: 1.5rem;
-    position: relative;
-}
-
-.np-feature-card ul li::before {
-    content: '▶';
-    position: absolute;
-    left: 0;
-    color: var(--np-red);
-    font-size: 0.6rem;
-    top: 0.85rem;
-}
-
-/* ============================================================
-   NEWS / TIMELINE — recent events
-   ============================================================ */
+/* Timeline */
 .np-timeline {
     position: relative;
     padding-left: 2rem;
-}
-
-.np-timeline::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 8px;
-    bottom: 0;
-    width: 2px;
-    background: linear-gradient(180deg, var(--np-red), transparent);
+    border-left: 2px dashed rgba(255, 255, 255, 0.2);
 }
 
 .np-event {
+    margin-bottom: 3rem;
     position: relative;
-    padding: 0 0 3rem 2.5rem;
 }
 
 .np-event::before {
     content: '';
     position: absolute;
-    left: -2.5rem;
-    top: 8px;
-    width: 10px;
-    height: 10px;
+    left: -2.6rem;
+    top: 0.5rem;
+    width: 15px;
+    height: 15px;
+    background: var(--np-secondary);
     border-radius: 50%;
-    background: var(--np-red);
-    box-shadow: 0 0 10px var(--np-red-glow);
+    border: 3px solid var(--np-bg);
+    transition: background 0.3s;
+}
+
+.np-event:hover::before {
+    background: var(--np-accent);
+    box-shadow: 0 0 10px var(--np-accent);
 }
 
 .np-event-year {
     font-family: 'Teko', sans-serif;
-    font-size: 1rem;
-    letter-spacing: 3px;
-    color: var(--np-red);
-    text-transform: uppercase;
-    margin-bottom: 0.3rem;
+    font-size: 2rem;
+    color: var(--np-accent);
+    line-height: 1;
 }
 
 .np-event-title {
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 700;
-    color: var(--np-white);
-    letter-spacing: 1px;
-    margin-bottom: 0.5rem;
+    color: #fff;
+    margin: 0.5rem 0;
 }
 
 .np-event p {
     font-size: 0.95rem;
-    color: var(--np-muted);
-    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.7);
 }
 
-.np-event strong {
-    color: var(--np-text);
-}
-
-/* ============================================================
-   REVEAL ANIMATION
-   ============================================================ */
-.np-reveal {
-    opacity: 0;
-    transform: translateY(35px);
-    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
-}
-
-.np-reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* ============================================================
-   FOOTER
-   ============================================================ */
-.np-footer {
-    position: relative;
-    z-index: 10;
-    border-top: 1px solid var(--np-border-subtle);
-    padding: 4rem 5vw;
-    text-align: center;
-    color: var(--np-muted);
-    font-size: 0.85rem;
-}
-
-.np-footer-logo {
-    font-family: 'Teko', sans-serif;
-    font-size: 2.5rem;
-    letter-spacing: 6px;
-    color: var(--np-white);
-    margin-bottom: 1rem;
-}
-
-.np-footer-logo span {
-    color: var(--np-red);
-}
-
-@media (max-width: 768px) {
-    .np-hero-stats {
-        gap: 2rem;
-    }
-
-    .np-features {
-        grid-template-columns: 1fr;
-    }
-
-    .np-feature-card.wide {
-        grid-column: 1;
-    }
-
-    .np-owners-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .np-section-header {
-        flex-wrap: wrap;
-    }
-
-    .np-talent-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* ============================================================
-   TALENT ROSTER CARDS
-   ============================================================ */
+/* Talent Roster */
 .np-gen-title {
-    font-family: 'Teko', sans-serif;
-    font-size: 1.4rem;
-    letter-spacing: 3px;
-    color: var(--np-white);
-    text-transform: uppercase;
-    margin: 3.5rem 0 1.5rem;
-    padding-bottom: 0.8rem;
-    border-bottom: 1px solid var(--np-border-subtle);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 2rem;
+    color: #fff;
+    margin: 4rem 0 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 0.5rem;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 1rem;
 }
 
 .np-unit-tag {
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 0.75rem;
-    letter-spacing: 2px;
-    color: var(--np-red);
-    border: 1px solid var(--np-border);
-    padding: 0.2rem 0.8rem;
-    border-radius: 2px;
-    text-transform: uppercase;
+    font-size: 0.9rem;
+    color: var(--np-accent);
+    background: rgba(0, 255, 204, 0.1);
+    padding: 0.2rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
 }
 
 .np-talent-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-    gap: 1rem;
-    margin-bottom: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
 }
 
+/* Cyber Trading Card / Player Card Style */
 .np-talent-card {
-    background: var(--np-card);
-    border: 1px solid var(--np-border-subtle);
-    border-radius: 4px;
-    padding: 1.5rem;
+    background: var(--np-dark);
+    border: 1px solid var(--np-border);
     position: relative;
-    transition: border-color 0.3s ease, transform 0.2s ease;
-    overflow: hidden;
+    padding: 2rem;
+    text-decoration: none;
+    color: var(--np-text);
+    clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .np-talent-card::before {
     content: '';
     position: absolute;
-    left: 0;
     top: 0;
-    bottom: 0;
-    width: 2px;
-    background: var(--np-red);
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--np-grad);
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.4s;
+    z-index: 0;
 }
 
 .np-talent-card:hover {
-    border-color: var(--np-border);
-    transform: translateX(4px);
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
+    border: 1px solid transparent;
 }
 
 .np-talent-card:hover::before {
-    opacity: 1;
+    opacity: 0.1;
 }
+
+.np-talent-card>* {
+    position: relative;
+    z-index: 1;
+}
+
+/* Ensure text stays above gradient */
 
 .np-talent-name {
-    font-family: 'Teko', sans-serif;
-    font-size: 1.4rem;
-    color: var(--np-white);
-    line-height: 1.2;
-    margin-bottom: 0.8rem;
-    letter-spacing: 1px;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #fff;
     display: block;
-    transition: color 0.25s ease;
-}
-
-a.np-talent-name:hover {
-    color: var(--np-red);
+    margin-bottom: 1rem;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
 .np-talent-name small {
+    display: block;
     font-family: 'Rajdhani', sans-serif;
-    font-size: 0.7em;
-    color: var(--np-red);
-    letter-spacing: 2px;
-    margin-left: 0.5rem;
-    opacity: 0.8;
+    font-size: 1rem;
+    color: var(--np-accent);
+    font-weight: 600;
     text-transform: uppercase;
 }
 
+.np-talent-card:hover .np-talent-name {
+    color: var(--np-accent);
+}
+
 .np-talent-desc {
-    font-size: 0.88rem;
-    color: var(--np-muted);
-    line-height: 1.75;
-    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 2rem;
+    min-height: 80px;
 }
 
 .np-talent-desc strong {
@@ -753,26 +634,67 @@ a.np-talent-name:hover {
 
 .np-talent-meta {
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: auto;
-}
-
-.np-hashtag {
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1rem;
     font-family: 'Rajdhani', sans-serif;
-    font-size: 0.75rem;
-    color: var(--np-red);
-    letter-spacing: 1px;
-    opacity: 0.7;
+    font-size: 0.9rem;
 }
 
 .np-fan-name {
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 600;
+}
+
+.np-hashtag {
+    color: var(--np-secondary);
+    background: rgba(116, 0, 224, 0.1);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 700;
+}
+
+.np-talent-card:hover .np-hashtag {
+    background: var(--np-accent);
+    color: var(--np-bg);
+}
+
+/* Reveal Animation */
+.np-reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s ease-out;
+}
+
+.np-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Footer */
+.np-footer {
+    background: #050508;
+    padding: 4rem 2rem;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.np-footer-logo {
+    font-family: 'Teko', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.1);
+    margin-bottom: 1rem;
+}
+
+.np-footer-logo span {
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+}
+
+.np-footer p {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 0.8rem;
     font-family: 'Rajdhani', sans-serif;
-    font-size: 0.75rem;
-    color: var(--np-muted);
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid var(--np-border-subtle);
-    padding: 0.15rem 0.6rem;
-    border-radius: 2px;
-    letter-spacing: 1px;
 }

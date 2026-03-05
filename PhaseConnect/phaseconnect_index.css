@@ -1,42 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Noto+Sans+JP:wght@400;700;900&display=swap');
 
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700;900&family=M+PLUS+Rounded+1c:wght@500;800&family=Teko:wght@400;700&family=Playfair+Display:wght@400;700&family=Shippori+Mincho:wght@400;700&display=swap');
-    
-    :root { 
-        --c1: #a8c0ff; 
-        --c2: #3f2b96; 
-        --bg: #0a0a14; 
-        --text: #e0e0fa; 
-        --glass-bg: rgba(20, 25, 40, 0.4);
-        --glass-border: rgba(255, 255, 255, 0.1);
+:root {
+    --pc-bg: #ece5dd;
+    /* Spilled coffee paper / warm off-white */
+    --pc-text: #2f2723;
+    /* Espresso dark brown */
+    --pc-accent: #cc00ff;
+    /* Piercing Magenta/Purple for glitch */
+    --pc-secondary: #00ffcc;
+    /* Cyan for secondary glitch */
+    --pc-stain: rgba(140, 100, 70, 0.1);
+    /* Coffee stain color */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--pc-bg);
+    color: var(--pc-text);
+    font-family: 'Courier Prime', monospace;
+    /* Typewriter/Terminal feel */
+    line-height: 1.6;
+    overflow-x: hidden;
+    /* Noise texture */
+    background-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)" opacity="0.08"/%3E%3C/svg%3E');
+}
+
+::selection {
+    background: var(--pc-text);
+    color: var(--pc-bg);
+}
+
+/* Global Glitch overlay */
+.bg-fx {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    background: repeating-linear-gradient(0deg, transparent, transparent 4px, rgba(0, 0, 0, 0.02) 4px, rgba(0, 0, 0, 0.02) 8px);
+    opacity: 0.5;
+    mix-blend-mode: multiply;
+}
+
+/* Nav */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    mix-blend-mode: difference;
+    color: #fff;
+}
+
+.nav-brand {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-bottom: 2px dashed var(--pc-text);
+    overflow: hidden;
+}
+
+/* Large abstract coffee stain shape in hero */
+.hero::before {
+    content: '';
+    position: absolute;
+    width: 60vw;
+    height: 60vw;
+    background: var(--pc-stain);
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    animation: morphStain 15s ease-in-out infinite alternate;
+    z-index: 0;
+}
+
+@keyframes morphStain {
+    0% {
+        border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+        transform: rotate(0deg) scale(1);
     }
-    
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    
-    body { 
-        background-color: var(--bg); 
-        color: var(--text); 
-        font-family: 'Shippori Mincho', sans-serif; 
-        overflow-x: hidden; 
-        line-height: 1.8; 
+
+    100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        transform: rotate(45deg) scale(1.1);
     }
-    
-    h1, h2, h3, .nav-brand { font-family: 'Playfair Display', sans-serif; }
-    a { color: inherit; text-decoration: none; transition: 0.3s; }
-    a:hover { color: var(--c1); }
-    
-    /* Navigation */
-    .nav { position: fixed; top: 0; width: 100%; padding: 1.5rem 3rem; display: flex; justify-content: space-between; align-items: center; z-index: 1000; background: rgba(0,0,0,0.5); backdrop-filter: blur(15px); border-bottom: 1px solid var(--glass-border); }
-    .nav-brand { font-size: 1.8rem; font-weight: 900; background: linear-gradient(90deg, var(--c1), var(--c2)); -webkit-background-clip: text; color: transparent; letter-spacing: 2px; }
-    .nav-links { display: flex; gap: 2.5rem; font-weight: bold; font-family: 'Montserrat', sans-serif; letter-spacing: 1px; }
-    .nav-links a { position:relative; }
-    .nav-links a::after { content:''; position:absolute; bottom:-5px; left:0; width:0%; height:2px; background:var(--c1); transition:0.3s; }
-    .nav-links a:hover::after { width:100%; }
-    .bg-fx { position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1; background: repeating-linear-gradient(180deg, transparent 0, transparent 40px, var(--c1) 40px, var(--c1) 42px); background-size: 100% 42px; opacity: 0.1; animation: matrixMove 3s infinite linear; } @keyframes matrixMove { 100%{background-position:0 42px;} }.hero { min-height: 70vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; position:relative; padding-top: 80px; margin-bottom: 4rem; z-index: 10; }.hero-subtitle { font-family: 'Montserrat', sans-serif; font-weight: bold; font-size: 1.2rem; letter-spacing: 0.5rem; color: var(--c2); margin-top: 2rem; opacity: 0.8; text-transform: uppercase; }.hero-title { font-size: 6rem; font-weight: 900; color: #ffffff; position:relative; display:inline-block; margin: 0; text-transform: uppercase; } .hero-title::before, .hero-title::after { content: attr(data-text); position:absolute; top:0; left:0; width:100%; height:100%; opacity:0.8; } .hero-title::before { color: var(--c1); z-index:-1; transform: translate(-4px, 2px); animation: glitch 0.4s cubic-bezier(.25, .46, .45, .94) both infinite; } .hero-title::after { color: var(--c2); z-index:-2; transform: translate(4px, -2px); animation: glitch 0.4s cubic-bezier(.25, .46, .45, .94) both infinite reverse; } @keyframes glitch { 0%{transform:translate(0);} 20%{transform:translate(-3px, 3px);} 40%{transform:translate(-3px, -3px);} 60%{transform:translate(3px, 3px);} 80%{transform:translate(3px, -3px);} 100%{transform:translate(0);} }
-/* Layout */
-.main-content { margin: 0 auto; padding: 2rem; position: relative; z-index: 10; }
-.main-content { max-width: 1400px; display: flex; gap: 5rem; align-items: flex-start; } .sidebar-hero { flex: 0 0 350px; position: sticky; top: 120px; } .content-grid { flex: 1; min-width: 0; display:flex; flex-direction:column; gap:4rem; } .hero { display:none; } .sidebar-hero .hero-title { font-size:3.5rem; margin-bottom:1rem; line-height: 1.1; } .sidebar-hero .hero-subtitle { font-size: 1rem; text-align:left; margin-top: 1rem; }.card { background: #08080c; border: 1px solid var(--glass-border); padding: 4rem; position: relative; border-radius: 0; box-shadow: 0 20px 40px rgba(0,0,0,0.8); } .card::after { content:''; position:absolute; top:12px; left:12px; right:12px; bottom:12px; border: 1px solid var(--glass-border); pointer-events:none; opacity: 0.5; transition: 0.4s; } .card::before { content:''; position:absolute; top:0; left:50%; transform:translateX(-50%); width: 30%; height: 2px; background: linear-gradient(90deg, transparent, var(--c1), transparent); } .card:hover::after { opacity: 1; border-color: var(--c2); }
-.card h2 { color: #ffffff; border-left: 6px solid var(--c1); padding-left: 1.5rem; margin-top: 0; font-size: 2.2rem; font-weight: 900; letter-spacing: 1px; margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem; }
-.card p { font-size: 1.1rem; color: rgba(255,255,255,0.85); line-height: 2; margin-bottom: 1.5rem; letter-spacing: 0.5px; }
-.highlight-card { border: 1px solid var(--c1) !important; position:relative; overflow:hidden; box-shadow: 0 0 40px rgba(var(--c1), 0.1); } .highlight-card::before { content:''; position:absolute; top:0;left:0;width:100%;height:100%; background: linear-gradient(135deg, var(--c1), transparent); opacity:0.05; pointer-events:none; } .highlight-card h2 { color: var(--c1); text-shadow: 0 0 20px rgba(var(--c1), 0.5); border-left-color: var(--c2); }
-.reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1); } .reveal.active { opacity: 1; transform: translateY(0); }
-@media (max-width: 900px) { .main-content { padding: 2rem 1rem; } .card { padding: 2rem !important; } .hero-title { font-size: 4rem !important; } .content-grid { gap: 2rem !important; } .sidebar-hero { display:none; } .nav { padding: 1rem; } .nav-brand { font-size: 1.2rem; } .card:nth-child(even), .card:nth-child(odd) { width: 100% !important; margin: 0 !important; } .card:nth-child(even) h2 { border-right: none; border-left: 6px solid var(--c1); text-align: left; padding-right: 0; padding-left: 1.5rem; } }
+}
+
+.hero-title {
+    position: relative;
+    z-index: 1;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 10vw;
+    color: var(--pc-text);
+    line-height: 0.8;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Specific Glitch on Title on Hover */
+.hero-title:hover {
+    animation: textGlitch 0.2s infinite;
+    color: var(--pc-accent);
+}
+
+@keyframes textGlitch {
+    0% {
+        transform: translate(2px, -2px);
+        text-shadow: -2px 0 var(--pc-secondary), 2px 0 var(--pc-text);
+    }
+
+    25% {
+        transform: translate(-2px, 2px);
+        text-shadow: 2px 0 var(--pc-secondary), -2px 0 var(--pc-text);
+    }
+
+    50% {
+        transform: translate(2px, 2px);
+        text-shadow: -2px 0 var(--pc-text), 2px 0 var(--pc-secondary);
+    }
+
+    75% {
+        transform: translate(-2px, -2px);
+        text-shadow: 2px 0 var(--pc-text), -2px 0 var(--pc-secondary);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
+.hero-subtitle {
+    position: relative;
+    z-index: 1;
+    font-family: 'Courier Prime', monospace;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    background: var(--pc-text);
+    color: var(--pc-bg);
+    padding: 0.2rem 1rem;
+    transform: rotate(-2deg);
+}
+
+.main-content {
+    max-width: 1400px;
+    margin: 4rem auto;
+    padding: 2rem;
+}
+
+/* Roster Groups */
+.roster-group {
+    margin-bottom: 8rem;
+    position: relative;
+    border-top: 4px solid var(--pc-text);
+    padding-top: 2rem;
+}
+
+.group-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4rem;
+    color: var(--pc-text);
+    letter-spacing: 2px;
+    margin-bottom: 3rem;
+    display: inline-block;
+}
+
+.group-title::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 10px;
+    background: var(--pc-accent);
+    margin-top: -10px;
+}
+
+/* Offset Grid Layout for Chaos */
+.roster-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 3rem;
+}
+
+/* Member Cards - Polaroid / Classified File Mix */
+.member-card {
+    background: #fff;
+    /* Stark white against warm background */
+    border: 1px solid #ccc;
+    padding: 1.5rem;
+    padding-bottom: 4rem;
+    /* Space for polaroid text */
+    position: relative;
+    text-decoration: none;
+    color: var(--pc-text);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    transform: rotate(calc(var(--rot, 0deg)));
+    /* Random rotation placeholder */
+    transition: all 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+/* We can use nth-child for pseudo-random rotation in css */
+.member-card:nth-child(even) {
+    transform: rotate(2deg);
+}
+
+.member-card:nth-child(odd) {
+    transform: rotate(-2deg);
+}
+
+.member-card:nth-child(3n) {
+    transform: rotate(1deg);
+}
+
+.member-card:nth-child(4n) {
+    transform: rotate(-3deg);
+    margin-top: 2rem;
+}
+
+/* The photo area placeholder */
+.member-card::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 200px;
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+    margin-bottom: 1rem;
+    /* Noise */
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0, 0, 0, 0.05) 10px, rgba(0, 0, 0, 0.05) 20px);
+}
+
+.m-id {
+    font-family: 'Courier Prime', monospace;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--pc-accent);
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 0.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.m-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    line-height: 1;
+    margin-bottom: 0.2rem;
+}
+
+.m-sub {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* CHAOS Hover Effects */
+.member-card.chaos:hover,
+.member-card:hover {
+    z-index: 10;
+    transform: scale(1.1) rotate(0deg) !important;
+    border-color: var(--pc-text);
+    box-shadow: 15px 15px 0 var(--pc-accent), -5px -5px 0 var(--pc-secondary);
+    background: var(--pc-text);
+    color: var(--pc-bg);
+}
+
+.member-card:hover::before {
+    background: var(--pc-bg);
+    filter: invert(1);
+    background-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="5" numOctaves="1" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)" opacity="0.5"/%3E%3C/svg%3E');
+}
+
+.member-card:hover .m-id {
+    color: var(--pc-secondary);
+    border-color: var(--pc-secondary);
+}
+
+.member-card:hover .m-sub {
+    color: #aaa;
+}
+
+/* Redacted Effect for some IDs on hover */
+.member-card:hover .m-name {
+    position: relative;
+    display: inline-block;
+}
+
+.member-card:hover .m-name::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -5%;
+    width: 110%;
+    height: 12px;
+    background: var(--pc-accent);
+    transform: translateY(-50%) rotate(-3deg);
+    mix-blend-mode: color-burn;
+}
+
+/* Reveal Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px) rotate(-5deg);
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
+}

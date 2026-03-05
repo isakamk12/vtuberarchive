@@ -1,42 +1,430 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@500;700&family=Noto+Sans+JP:wght@700;900&display=swap');
 
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700;900&family=M+PLUS+Rounded+1c:wght@500;800&family=Teko:wght@400;700&family=Playfair+Display:wght@400;700&family=Shippori+Mincho:wght@400;700&display=swap');
-    
-    :root { 
-        --c1: #ff416c; 
-        --c2: #ff4b2b; 
-        --bg: #110305; 
-        --text: #ffeeef; 
-        --glass-bg: rgba(20, 25, 40, 0.4);
-        --glass-border: rgba(255, 255, 255, 0.1);
+:root {
+    --nji-bg: #f4f4f4;
+    /* Light pop art background */
+    --nji-text: #000000;
+    --nji-border: #000000;
+    --c-cyan: #00ffff;
+    --c-magenta: #ff00ff;
+    --c-yellow: #ffff00;
+    --c-lime: #39ff14;
+    --c-red: #ff3333;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--nji-bg);
+    color: var(--nji-text);
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+    /* Halftone dot pattern background */
+    background-image: radial-gradient(var(--nji-border) 10%, transparent 10%);
+    background-size: 10px 10px;
+    background-position: 0 0, 5px 5px;
+}
+
+/* Add a solid block behind everything to soften the dots */
+.bg-fx {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(244, 244, 244, 0.95);
+    z-index: -1;
+}
+
+::selection {
+    background: var(--c-magenta);
+    color: #fff;
+}
+
+/* Navigation */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: #fff;
+    border-bottom: 4px solid var(--nji-border);
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.nav-brand {
+    font-family: 'Teko', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--nji-text);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--nji-text);
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    padding: 0.2rem 0.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: var(--c-yellow);
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a[style*="color:"]::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Hero Section */
+.hero {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    border-bottom: 5px solid var(--nji-border);
+    background: #fff;
+    overflow: hidden;
+}
+
+/* Comic book speed lines behind hero */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: repeating-conic-gradient(from 0deg, #fff 0deg 10deg, #f0f0f0 10deg 20deg);
+    animation: spin 60s linear infinite;
+    z-index: 0;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
     }
-    
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    
-    body { 
-        background-color: var(--bg); 
-        color: var(--text); 
-        font-family: 'Noto Sans JP', sans-serif; 
-        overflow-x: hidden; 
-        line-height: 1.8; 
-    }
-    
-    h1, h2, h3, .nav-brand { font-family: 'Montserrat', sans-serif; }
-    a { color: inherit; text-decoration: none; transition: 0.3s; }
-    a:hover { color: var(--c1); }
-    
-    /* Navigation */
-    .nav { position: fixed; top: 0; width: 100%; padding: 1.5rem 3rem; display: flex; justify-content: space-between; align-items: center; z-index: 1000; background: rgba(0,0,0,0.5); backdrop-filter: blur(15px); border-bottom: 1px solid var(--glass-border); }
-    .nav-brand { font-size: 1.8rem; font-weight: 900; background: linear-gradient(90deg, var(--c1), var(--c2)); -webkit-background-clip: text; color: transparent; letter-spacing: 2px; }
-    .nav-links { display: flex; gap: 2.5rem; font-weight: bold; font-family: 'Montserrat', sans-serif; letter-spacing: 1px; }
-    .nav-links a { position:relative; }
-    .nav-links a::after { content:''; position:absolute; bottom:-5px; left:0; width:0%; height:2px; background:var(--c1); transition:0.3s; }
-    .nav-links a:hover::after { width:100%; }
-    .bg-fx { position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1; pointer-events:none; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.08'/%3E%3C/svg%3E"); opacity: 0.8; mix-blend-mode: overlay; }.hero { min-height: 70vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; position:relative; padding-top: 80px; margin-bottom: 4rem; z-index: 10; }.hero-subtitle { font-family: 'Montserrat', sans-serif; font-weight: bold; font-size: 1.2rem; letter-spacing: 0.5rem; color: var(--c2); margin-top: 2rem; opacity: 0.8; text-transform: uppercase; }.hero { overflow: hidden; justify-content: center; } .hero-title { font-size: 7rem; font-weight: 900; color: var(--bg); position:relative; z-index:2; text-transform: uppercase; border: 8px solid var(--text); padding: 1.5rem 4rem; background: var(--c1); box-shadow: 20px 20px 0 var(--c2); margin: 0; transform: rotate(-2deg); } .hero::before { content: 'NIJISANJI NIJISANJI NIJISANJI NIJISANJI'; position:absolute; top:50%; left:0; transform:translateY(-50%) rotate(5deg); font-size: 20rem; font-weight:900; color:var(--glass-border); white-space:nowrap; animation: marquee 30s linear infinite; z-index:1; } @keyframes marquee { 0%{transform:translate(0, -50%) rotate(5deg);} 100%{transform:translate(-50%, -50%) rotate(5deg);} }
-/* Layout */
-.main-content { margin: 0 auto; padding: 2rem; position: relative; z-index: 10; }
-.main-content { max-width: 900px; } .content-grid { position: relative; padding-left: 4rem; display: flex; flex-direction: column; gap: 4rem; } .content-grid::before { content:''; position:absolute; left:0; top:0; bottom:0; width:4px; background: linear-gradient(to bottom, var(--c1), var(--c2), transparent); border-radius: 2px; } .card { position: relative; width: 100%; } .card::before { content:''; position:absolute; left:-4.4rem; top:3rem; width:24px; height:24px; background:var(--bg); border:4px solid var(--c1); border-radius:50%; z-index:2; box-shadow: 0 0 15px var(--c1); }.card { background: transparent; border-top: 2px solid var(--glass-border); border-bottom: 2px solid var(--glass-border); padding: 4rem 2rem; transition: all 0.4s ease; position: relative; } .card::before { content:''; position:absolute; left:0; top:0; width:5px; height:0; background: var(--c1); transition: 0.4s ease; } .card:hover { background: rgba(255,255,255,0.02); } .card:hover::before { height: 100%; box-shadow: 0 0 20px var(--c1); }
-.card h2 { color: #ffffff; border-left: 6px solid var(--c1); padding-left: 1.5rem; margin-top: 0; font-size: 2.2rem; font-weight: 900; letter-spacing: 1px; margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem; }
-.card p { font-size: 1.1rem; color: rgba(255,255,255,0.85); line-height: 2; margin-bottom: 1.5rem; letter-spacing: 0.5px; }
-.highlight-card { border: 1px solid var(--c1) !important; position:relative; overflow:hidden; box-shadow: 0 0 40px rgba(var(--c1), 0.1); } .highlight-card::before { content:''; position:absolute; top:0;left:0;width:100%;height:100%; background: linear-gradient(135deg, var(--c1), transparent); opacity:0.05; pointer-events:none; } .highlight-card h2 { color: var(--c1); text-shadow: 0 0 20px rgba(var(--c1), 0.5); border-left-color: var(--c2); }
-.reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1); } .reveal.active { opacity: 1; transform: translateY(0); }
-@media (max-width: 900px) { .main-content { padding: 2rem 1rem; } .card { padding: 2rem !important; } .hero-title { font-size: 4rem !important; } .content-grid { gap: 2rem !important; } .sidebar-hero { display:none; } .nav { padding: 1rem; } .nav-brand { font-size: 1.2rem; } .card:nth-child(even), .card:nth-child(odd) { width: 100% !important; margin: 0 !important; } .card:nth-child(even) h2 { border-right: none; border-left: 6px solid var(--c1); text-align: left; padding-right: 0; padding-left: 1.5rem; } }
+}
+
+.hero-title {
+    font-family: 'Teko', sans-serif;
+    font-size: 10rem;
+    font-weight: 700;
+    line-height: 0.8;
+    color: #fff;
+    text-shadow:
+        4px 4px 0 var(--nji-border),
+        -2px -2px 0 var(--nji-border),
+        2px -2px 0 var(--nji-border),
+        -2px 2px 0 var(--nji-border),
+        8px 8px 0 var(--c-cyan);
+    position: relative;
+    z-index: 2;
+    transform: rotate(-3deg);
+}
+
+.hero-subtitle {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    background: var(--nji-text);
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    transform: rotate(2deg);
+    position: relative;
+    z-index: 2;
+    margin-top: 1rem;
+    box-shadow: 4px 4px 0 var(--c-magenta);
+}
+
+.main-content {
+    max-width: 1400px;
+    margin: 3rem auto;
+    padding: 2rem;
+}
+
+/* Branch Navigation - Comic Tabs */
+.roster-header {
+    margin-top: 2rem;
+}
+
+.roster-title {
+    font-family: 'Teko', sans-serif;
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-shadow: 3px 3px 0 var(--c-yellow);
+}
+
+.branch-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.branch-link {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.8rem;
+    padding: 0.5rem 2rem;
+    background: #fff;
+    border: 3px solid var(--nji-border);
+    color: var(--nji-text);
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 4px 4px 0 var(--nji-border);
+    transition: all 0.1s;
+    font-weight: 700;
+}
+
+.branch-link:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 var(--c-magenta);
+}
+
+.branch-link.active {
+    background: var(--nji-border);
+    color: #fff;
+    box-shadow: 4px 4px 0 var(--c-cyan);
+    transform: translate(2px, 2px);
+}
+
+/* Generation Groups */
+.gen-group {
+    margin-bottom: 4rem;
+    background: #fff;
+    border: 4px solid var(--nji-border);
+    padding: 2rem;
+    box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.gen-title {
+    font-size: 1.5rem;
+    font-weight: 900;
+    background: var(--c-yellow);
+    border: 3px solid var(--nji-border);
+    padding: 0.5rem 1.5rem;
+    display: inline-block;
+    position: absolute;
+    top: -24px;
+    left: -20px;
+    transform: rotate(-2deg);
+    box-shadow: 4px 4px 0 var(--nji-border);
+    z-index: 10;
+}
+
+/* Comic Grid */
+.roster-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* Member Cards - Manga Panels */
+.member-card {
+    background: #fff;
+    border: 3px solid var(--nji-border);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    color: var(--nji-text);
+    position: relative;
+    box-shadow: 4px 4px 0 var(--nji-border);
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+}
+
+/* Pseudo-element for hover color fill */
+.member-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--c-cyan);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.3s ease;
+    z-index: 0;
+}
+
+/* Randomize hover colors using nth-child */
+.member-card:nth-child(4n+1)::before {
+    background: var(--c-cyan);
+}
+
+.member-card:nth-child(4n+2)::before {
+    background: var(--c-magenta);
+}
+
+.member-card:nth-child(4n+3)::before {
+    background: var(--c-yellow);
+}
+
+.member-card:nth-child(4n+4)::before {
+    background: var(--c-lime);
+}
+
+.member-card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 8px 8px 0 var(--nji-border);
+}
+
+.member-card:hover::before {
+    transform: scaleY(1);
+}
+
+.member-card:hover * {
+    color: #fff !important;
+    /* Forces text to white/black depending on contrast, but let's stick to black for pop art */
+}
+
+.member-card:hover .m-icon,
+.member-card:hover .m-name,
+.member-card:hover .m-sub {
+    color: #000 !important;
+    /* Ensure black text over bright CMYK colors */
+}
+
+/* Inner content layering */
+.m-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    z-index: 1;
+    position: relative;
+    color: var(--nji-text);
+    transition: transform 0.3s;
+}
+
+.member-card:hover .m-icon {
+    transform: scale(1.2) rotate(10deg);
+}
+
+.m-name {
+    font-size: 1.2rem;
+    font-weight: 900;
+    margin-bottom: 0.2rem;
+    z-index: 1;
+    position: relative;
+}
+
+.m-sub {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.1rem;
+    color: #555;
+    z-index: 1;
+    position: relative;
+    margin-top: 0.2rem;
+}
+
+/* Status Tags (Graduated) */
+.status-tag {
+    position: absolute;
+    top: 10px;
+    right: -25px;
+    background: var(--c-red);
+    color: #fff;
+    font-family: 'Teko', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 2px 30px;
+    transform: rotate(45deg);
+    border: 2px solid var(--nji-border);
+    z-index: 2;
+}
+
+.member-card.graduated {
+    background: #eee;
+    filter: grayscale(0.8);
+}
+
+.member-card.graduated:hover {
+    filter: grayscale(0);
+}
+
+/* Content Reports */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.card {
+    background: #fff;
+    border: 4px solid var(--nji-border);
+    padding: 2rem;
+    box-shadow: 6px 6px 0 var(--nji-border);
+    position: relative;
+}
+
+.highlight-card {
+    grid-column: 1 / -1;
+    background: var(--c-yellow);
+}
+
+.content-grid>.card {
+    grid-column: 1 / -1;
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid var(--nji-border);
+    padding-bottom: 0.5rem;
+}
+
+/* Reveal Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px) skewY(2deg);
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0) skewY(0);
+}

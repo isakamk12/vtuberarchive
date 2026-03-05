@@ -1,42 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Inter:wght@300;400;600&display=swap');
 
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700;900&family=M+PLUS+Rounded+1c:wght@500;800&family=Teko:wght@400;700&family=Playfair+Display:wght@400;700&family=Shippori+Mincho:wght@400;700&display=swap');
-    
-    :root { 
-        --c1: #00c6ff; 
-        --c2: #0072ff; 
-        --bg: #000511; 
-        --text: #e0f7fa; 
-        --glass-bg: rgba(20, 25, 40, 0.4);
-        --glass-border: rgba(255, 255, 255, 0.1);
+:root {
+    --vm-bg: #090b14;
+    /* Deep digital space */
+    --vm-primary: #00ffcc;
+    /* Cyan */
+    --vm-secondary: #cc00ff;
+    /* Magenta/Purple */
+    --vm-text: #e0faff;
+    --vm-dim: #4a6fa5;
+
+    /* Holographic Gradient */
+    --holo-grad: linear-gradient(135deg, rgba(0, 255, 204, 0.1), rgba(204, 0, 255, 0.1));
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--vm-bg);
+    color: var(--vm-text);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+    /* Clean Dot Grid */
+    background-image: radial-gradient(var(--vm-dim) 1px, transparent 1px);
+    background-size: 30px 30px;
+    background-position: 0 0;
+}
+
+/* CRT Scanline Overlay */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 1000;
+    background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) 1px, transparent 1px, transparent 3px);
+    background-size: 100% 3px;
+}
+
+::selection {
+    background: var(--vm-primary);
+    color: #000;
+}
+
+/* Navigation HUD */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(9, 11, 20, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 255, 204, 0.2);
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.nav-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--vm-primary);
+    text-decoration: none;
+    letter-spacing: 4px;
+    text-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+}
+
+.nav-status {
+    font-size: 0.8rem;
+    color: var(--vm-dim);
+    letter-spacing: 2px;
+}
+
+/* Hero Section */
+.hero {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid rgba(204, 0, 255, 0.3);
+    background: radial-gradient(circle at bottom center, rgba(0, 255, 204, 0.1) 0%, transparent 60%);
+    overflow: hidden;
+}
+
+.hero-title {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 6rem;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--vm-primary);
+    position: relative;
+    letter-spacing: 5px;
+}
+
+/* Glitch effect on title */
+.hero-title::before,
+.hero-title::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+}
+
+.hero-title::before {
+    left: 2px;
+    text-shadow: -1px 0 var(--vm-secondary);
+    clip: rect(24px, 550px, 90px, 0);
+    animation: glitch-anim 3s infinite linear alternate-reverse;
+}
+
+.hero-title::after {
+    left: -2px;
+    text-shadow: -1px 0 var(--vm-primary);
+    clip: rect(85px, 550px, 140px, 0);
+    animation: glitch-anim 2.5s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+    0% {
+        clip: rect(10px, 9999px, 80px, 0);
     }
-    
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    
-    body { 
-        background-color: var(--bg); 
-        color: var(--text); 
-        font-family: 'Noto Sans JP', sans-serif; 
-        overflow-x: hidden; 
-        line-height: 1.8; 
+
+    20% {
+        clip: rect(30px, 9999px, 10px, 0);
     }
-    
-    h1, h2, h3, .nav-brand { font-family: 'Teko', sans-serif; }
-    a { color: inherit; text-decoration: none; transition: 0.3s; }
-    a:hover { color: var(--c1); }
-    
-    /* Navigation */
-    .nav { position: fixed; top: 0; width: 100%; padding: 1.5rem 3rem; display: flex; justify-content: space-between; align-items: center; z-index: 1000; background: rgba(0,0,0,0.5); backdrop-filter: blur(15px); border-bottom: 1px solid var(--glass-border); }
-    .nav-brand { font-size: 1.8rem; font-weight: 900; background: linear-gradient(90deg, var(--c1), var(--c2)); -webkit-background-clip: text; color: transparent; letter-spacing: 2px; }
-    .nav-links { display: flex; gap: 2.5rem; font-weight: bold; font-family: 'Montserrat', sans-serif; letter-spacing: 1px; }
-    .nav-links a { position:relative; }
-    .nav-links a::after { content:''; position:absolute; bottom:-5px; left:0; width:0%; height:2px; background:var(--c1); transition:0.3s; }
-    .nav-links a:hover::after { width:100%; }
-    .bg-fx { position:fixed; top:0; left:0; width:100vw; height:100vh; z-index:-1; background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 60px 60px; transform: perspective(800px) rotateX(60deg) translateY(-100px) scale(2); animation: gridMove 10s infinite linear; opacity: 0.5; } @keyframes gridMove { 0%{background-position:0 0;} 100%{background-position:0 60px;} } .bg-fx::after { content:''; position:absolute; top:0; left:0; right:0; bottom:0; background: radial-gradient(circle at center, transparent, var(--bg) 70%); }.hero { min-height: 70vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; position:relative; padding-top: 80px; margin-bottom: 4rem; z-index: 10; }.hero-subtitle { font-family: 'Montserrat', sans-serif; font-weight: bold; font-size: 1.2rem; letter-spacing: 0.5rem; color: var(--c2); margin-top: 2rem; opacity: 0.8; text-transform: uppercase; }.hero-title { font-size: 7rem; font-weight: 900; color: #fff; margin: 0; text-transform: uppercase; text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px var(--c1), 0 0 80px var(--c1), 0 0 120px var(--c2); animation: flicker 3s infinite alternate; } @keyframes flicker { 0%, 18%, 22%, 25%, 53%, 57%, 100% {text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px var(--c1), 0 0 80px var(--c1), 0 0 120px var(--c2);} 20%, 24%, 55% {text-shadow: none;} }
-/* Layout */
-.main-content { margin: 0 auto; padding: 2rem; position: relative; z-index: 10; }
-.main-content { max-width: 1400px; display: flex; gap: 5rem; align-items: flex-start; } .sidebar-hero { flex: 0 0 350px; position: sticky; top: 120px; } .content-grid { flex: 1; min-width: 0; display:flex; flex-direction:column; gap:4rem; } .hero { display:none; } .sidebar-hero .hero-title { font-size:3.5rem; margin-bottom:1rem; line-height: 1.1; } .sidebar-hero .hero-subtitle { font-size: 1rem; text-align:left; margin-top: 1rem; }.card { background: rgba(10, 15, 20, 0.8); border: 1px solid var(--glass-border); border-left: 4px solid var(--c1); padding: 4rem; position: relative; clip-path: polygon(0 0, calc(100% - 40px) 0, 100% 40px, 100% 100%, 40px 100%, 0 calc(100% - 40px)); transition: all 0.3s ease; box-shadow: 10px 10px 30px rgba(0,0,0,0.8); } .card::before { content:''; position:absolute; top:0; right:40px; width:40px; height:2px; background:var(--c2); box-shadow: 0 0 10px var(--c2); } .card::after { content:''; position:absolute; bottom:0; left:40px; width:40px; height:2px; background:var(--c1); box-shadow: 0 0 10px var(--c1); } .card:hover { background: rgba(20, 25, 30, 0.9); border-color: var(--c1); filter: brightness(1.2); }
-.card h2 { color: #ffffff; border-left: 6px solid var(--c1); padding-left: 1.5rem; margin-top: 0; font-size: 2.2rem; font-weight: 900; letter-spacing: 1px; margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem; }
-.card p { font-size: 1.1rem; color: rgba(255,255,255,0.85); line-height: 2; margin-bottom: 1.5rem; letter-spacing: 0.5px; }
-.highlight-card { border: 1px solid var(--c1) !important; position:relative; overflow:hidden; box-shadow: 0 0 40px rgba(var(--c1), 0.1); } .highlight-card::before { content:''; position:absolute; top:0;left:0;width:100%;height:100%; background: linear-gradient(135deg, var(--c1), transparent); opacity:0.05; pointer-events:none; } .highlight-card h2 { color: var(--c1); text-shadow: 0 0 20px rgba(var(--c1), 0.5); border-left-color: var(--c2); }
-.reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1); } .reveal.active { opacity: 1; transform: translateY(0); }
-@media (max-width: 900px) { .main-content { padding: 2rem 1rem; } .card { padding: 2rem !important; } .hero-title { font-size: 4rem !important; } .content-grid { gap: 2rem !important; } .sidebar-hero { display:none; } .nav { padding: 1rem; } .nav-brand { font-size: 1.2rem; } .card:nth-child(even), .card:nth-child(odd) { width: 100% !important; margin: 0 !important; } .card:nth-child(even) h2 { border-right: none; border-left: 6px solid var(--c1); text-align: left; padding-right: 0; padding-left: 1.5rem; } }
+
+    40% {
+        clip: rect(90px, 9999px, 50px, 0);
+    }
+
+    60% {
+        clip: rect(20px, 9999px, 100px, 0);
+    }
+
+    80% {
+        clip: rect(60px, 9999px, 20px, 0);
+    }
+
+    100% {
+        clip: rect(50px, 9999px, 70px, 0);
+    }
+}
+
+.hero-subtitle {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.2rem;
+    color: var(--vm-text);
+    margin-top: 1rem;
+    letter-spacing: 3px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--vm-dim);
+}
+
+.container {
+    max-width: 1400px;
+    margin: 4rem auto;
+    padding: 2rem;
+}
+
+/* Unit Sections */
+.unit-section {
+    margin-bottom: 6rem;
+    position: relative;
+}
+
+.unit-title {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 2.5rem;
+    color: var(--vm-primary);
+    letter-spacing: 5px;
+    margin-bottom: 2rem;
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    border-left: 4px solid var(--vm-secondary);
+    background: linear-gradient(90deg, rgba(204, 0, 255, 0.1) 0%, transparent 100%);
+}
+
+.ar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+/* Glass Panels (Holographic Cards) */
+.glass-pane {
+    position: relative;
+    background: rgba(20, 25, 40, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 255, 204, 0.1);
+    border-radius: 8px;
+    padding: 2rem;
+    height: 300px;
+    /* Fixed height for directory look */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-decoration: none;
+    color: var(--vm-text);
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Inner Holographic Gradient */
+.glass-pane::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--holo-grad);
+    opacity: 0;
+    transition: opacity 0.4s;
+    z-index: -1;
+}
+
+/* HUD Corners */
+.hud-corners {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 2px solid transparent;
+    /* Container for corners */
+    pointer-events: none;
+    transition: all 0.4s;
+}
+
+/* Creating the corner brackets using heavy linear gradients on background */
+.hud-corners::before,
+.hud-corners::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--vm-dim);
+    transition: border-color 0.4s, width 0.4s, height 0.4s;
+}
+
+.hud-corners::before {
+    top: 0;
+    left: 0;
+    border-right: none;
+    border-bottom: none;
+}
+
+.hud-corners::after {
+    bottom: 0;
+    right: 0;
+    border-left: none;
+    border-top: none;
+}
+
+/* The horizontal scanning line */
+.scanner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--vm-primary);
+    box-shadow: 0 0 10px var(--vm-primary);
+    opacity: 0;
+    transition: opacity 0.3s;
+    animation: scan 3s linear infinite;
+}
+
+@keyframes scan {
+    0% {
+        top: 0%;
+    }
+
+    100% {
+        top: 100%;
+    }
+}
+
+/* Card Content Details */
+.card-tag {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--vm-secondary);
+    letter-spacing: 2px;
+    align-self: flex-end;
+}
+
+.card-info {
+    z-index: 2;
+}
+
+.card-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Interactions */
+.glass-pane:hover {
+    transform: translateY(-10px) scale(1.05);
+    border-color: var(--vm-primary);
+    box-shadow: 0 15px 40px rgba(0, 255, 204, 0.2);
+}
+
+.glass-pane:hover::before {
+    opacity: 1;
+}
+
+.glass-pane:hover .scanner {
+    opacity: 0.5;
+}
+
+.glass-pane:hover .hud-corners {
+    left: 5px;
+    right: 5px;
+    top: 5px;
+    bottom: 5px;
+}
+
+.glass-pane:hover .hud-corners::before,
+.glass-pane:hover .hud-corners::after {
+    border-color: var(--vm-primary);
+    width: 30px;
+    height: 30px;
+    box-shadow: 0 0 10px var(--vm-primary) inset;
+}
+
+/* Reveal Animation */
+.reveal {
+    opacity: 0;
+    transform: scale(0.95) translateY(20px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}

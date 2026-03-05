@@ -1,238 +1,157 @@
-/* ============================================================
-   noripro.css — のりプロ Agency Page
-   Concept: "Creator First, Creative Next."
-   Aesthetic: Cozy manga creator studio — warm ink on paper,
-   fanzine energy, handmade charm with subtle digital polish.
-   ============================================================ */
-
-@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&family=M+PLUS+Rounded+1c:wght@400;700;900&family=Bebas+Neue&family=Noto+Sans+JP:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&family=Bebas+Neue&family=Noto+Sans+JP:wght@400;700;900&display=swap');
 
 :root {
-    /* Warm ink palette */
-    --nr-ink: #1a0a00;
-    --nr-orange: #e85d04;
-    --nr-orange-dk: #c74b03;
-    --nr-orange-gw: rgba(232, 93, 4, 0.55);
-    --nr-orange-sf: rgba(232, 93, 4, 0.1);
-    --nr-amber: #f48c06;
-    --nr-cream: #faf7f2;
-    --nr-paper: #f2ece1;
-
-    /* Dark side */
-    --nr-dark: #110800;
-    --nr-surface: rgba(255, 255, 255, 0.04);
-    --nr-border: rgba(232, 93, 4, 0.2);
-    --nr-subtle: rgba(255, 255, 255, 0.07);
-    --nr-text: #e8e0d5;
-    --nr-muted: rgba(232, 224, 213, 0.55);
-    --nr-white: #ffffff;
+    --nr-bg: #fffdf5;
+    /* Off-white manga paper */
+    --nr-text: #2c2c2c;
+    /* Ink black */
+    --nr-accent: #ff6b6b;
+    /* Soft pastel red */
+    --nr-blue: #4ecdc4;
+    /* Pastel cyan */
+    --nr-yellow: #ffe66d;
+    /* Pastel yellow */
+    --nr-halftone: rgba(44, 44, 44, 0.05);
+    /* Very subtle halftone dot */
 }
 
-/* ============================================================
-   RESET & BASE
-   ============================================================ */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
 }
 
 body {
-    font-family: 'Noto Sans JP', sans-serif;
-    background: var(--nr-dark);
+    background-color: var(--nr-bg);
     color: var(--nr-text);
+    font-family: 'Kiwi Maru', serif;
+    /* Handwritten manga dialogue feel */
+    line-height: 1.6;
     overflow-x: hidden;
-    line-height: 1.7;
+    /* Halftone dot background */
+    background-image: radial-gradient(var(--nr-halftone) 15%, transparent 16%), radial-gradient(var(--nr-halftone) 15%, transparent 16%);
+    background-size: 8px 8px;
+    background-position: 0 0, 4px 4px;
 }
 
-.nr-container {
-    max-width: 1180px;
-    margin: 0 auto;
-    padding: 0 5vw;
+::selection {
+    background: var(--nr-yellow);
+    color: var(--nr-text);
 }
 
-/* ============================================================
-   BACKGROUND — warm paper texture + ink splatter
-   ============================================================ */
-.nr-bg {
-    position: fixed;
-    inset: 0;
-    z-index: 0;
-    pointer-events: none;
-    overflow: hidden;
-}
-
-/* Halftone-ish radial gradient */
-.nr-bg::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background:
-        radial-gradient(ellipse at 15% 30%, rgba(232, 93, 4, 0.15) 0%, transparent 50%),
-        radial-gradient(ellipse at 85% 70%, rgba(244, 140, 6, 0.1) 0%, transparent 50%);
-}
-
-/* Subtle manga-panel hatching lines */
-.nr-bg::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: repeating-linear-gradient(-45deg,
-            transparent,
-            transparent 28px,
-            rgba(232, 93, 4, 0.025) 28px,
-            rgba(232, 93, 4, 0.025) 29px);
-}
-
-/* ============================================================
-   NAVIGATION
-   ============================================================ */
+/* Navigation */
 .nr-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    padding: 1.1rem 5vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(17, 8, 0, 0.85);
-    backdrop-filter: blur(14px);
-    border-bottom: 1px solid var(--nr-border);
+    background: var(--nr-bg);
+    border-bottom: 2px solid var(--nr-text);
 }
 
 .nr-nav-logo {
-    font-family: 'Kiwi Maru', serif;
-    font-size: 1.4rem;
-    color: var(--nr-white);
-    letter-spacing: 2px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--nr-text);
+    text-decoration: none;
 }
 
 .nr-nav-logo span {
-    color: var(--nr-orange);
+    color: var(--nr-accent);
 }
 
-.nr-nav-back {
-    font-family: 'Noto Sans JP', sans-serif;
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-    color: var(--nr-muted);
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    transition: color 0.3s;
-}
-
-.nr-nav-back:hover {
-    color: var(--nr-orange);
-}
-
+.nr-nav-back,
 .nr-nav-tag {
-    font-size: 0.75rem;
-    letter-spacing: 1px;
-    color: var(--nr-muted);
-    background: var(--nr-surface);
-    border: 1px solid var(--nr-subtle);
-    padding: 0.3rem 1rem;
-    border-radius: 20px;
+    font-family: 'Kiwi Maru', serif;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--nr-text);
 }
 
-/* ============================================================
-   HERO
-   ============================================================ */
+/* Hero Section */
 .nr-hero {
-    position: relative;
-    z-index: 10;
-    min-height: 100vh;
+    height: 70vh;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding: 9rem 5vw 5rem;
+    position: relative;
+    border-bottom: 4px solid var(--nr-text);
     overflow: hidden;
+    margin-top: 60px;
+    /* Offset for fix nav */
 }
 
+/* Manga screentone burst behind hero */
 .nr-hero-bg-text {
     position: absolute;
-    right: -3%;
-    top: 50%;
-    transform: translateY(-50%);
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 42vw;
-    color: var(--nr-orange);
-    opacity: 0.04;
-    line-height: 0.85;
-    user-select: none;
+    font-size: 40vw;
+    color: rgba(44, 44, 44, 0.03);
+    line-height: 0.8;
+    z-index: 0;
     pointer-events: none;
 }
 
 .nr-hero-content {
     position: relative;
-    z-index: 2;
-    max-width: 650px;
+    z-index: 1;
+    text-align: center;
+    background: var(--nr-bg);
+    padding: 3rem 4rem;
+    border: 3px solid var(--nr-text);
+    border-radius: 20px 2px 20px 2px;
+    /* Irregular hand-drawn box */
+    box-shadow: 8px 8px 0 var(--nr-yellow);
+    transform: rotate(-1deg);
+    max-width: 800px;
 }
 
 .nr-eyebrow {
-    font-family: 'Noto Sans JP', sans-serif;
-    font-size: 0.75rem;
-    letter-spacing: 5px;
-    color: var(--nr-orange);
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-    opacity: 0.85;
-}
-
-.nr-eyebrow::before {
-    content: '';
-    width: 24px;
-    height: 2px;
-    background: var(--nr-orange);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    color: var(--nr-blue);
 }
 
 .nr-hero-name {
-    font-family: 'Kiwi Maru', serif;
-    font-size: clamp(3.5rem, 9vw, 7rem);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 5rem;
+    font-weight: 900;
+    color: var(--nr-text);
     line-height: 1;
-    color: var(--nr-white);
-    margin-bottom: 0.5rem;
-    text-shadow: 0 0 50px var(--nr-orange-gw);
+    margin: 1rem 0;
 }
 
 .nr-hero-name span {
-    color: var(--nr-orange);
+    color: var(--nr-accent);
 }
 
 .nr-hero-tagline {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(1rem, 2.5vw, 1.6rem);
-    letter-spacing: 6px;
-    color: var(--nr-amber);
-    margin-bottom: 2rem;
-    opacity: 0.8;
+    font-size: 1.8rem;
+    border-bottom: 2px dashed var(--nr-text);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
 .nr-hero-concept {
-    font-family: 'Kiwi Maru', serif;
     font-size: 1rem;
-    color: var(--nr-text);
-    line-height: 1.9;
-    background: var(--nr-orange-sf);
-    border-left: 3px solid var(--nr-orange);
-    padding: 1rem 1.5rem;
-    margin-bottom: 2.5rem;
-    border-radius: 0 4px 4px 0;
+    text-align: left;
 }
 
 .nr-hero-stats {
     display: flex;
-    gap: 3rem;
-    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(44, 44, 44, 0.1);
 }
 
 .nr-stat {
@@ -241,240 +160,231 @@ body {
 
 .nr-stat-value {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 2.8rem;
-    color: var(--nr-white);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--nr-text);
     line-height: 1;
 }
 
 .nr-stat-label {
-    font-size: 0.7rem;
-    letter-spacing: 2px;
-    color: var(--nr-orange);
-    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--nr-text);
+    opacity: 0.7;
 }
 
-/* ============================================================
-   SECTION
-   ============================================================ */
+/* Containers & Sections */
+.nr-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
 .nr-section {
+    margin-bottom: 6rem;
     position: relative;
-    z-index: 10;
-    padding: 5.5rem 0;
 }
 
+/* Section Header - Styled like a manga chapter title */
 .nr-section-header {
     display: flex;
-    align-items: baseline;
-    gap: 1.2rem;
-    margin-bottom: 3.5rem;
+    align-items: flex-end;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    border-bottom: 3px solid var(--nr-text);
+    padding-bottom: 0.5rem;
 }
 
 .nr-section-num {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 3.5rem;
-    color: var(--nr-orange);
-    opacity: 0.25;
-    line-height: 1;
+    font-size: 4rem;
+    color: var(--nr-blue);
+    line-height: 0.8;
 }
 
 .nr-section-title {
-    font-family: 'Kiwi Maru', serif;
-    font-size: 1.9rem;
-    color: var(--nr-white);
-    letter-spacing: 2px;
-}
-
-.nr-section-title-sub {
-    font-size: 0.8rem;
-    color: var(--nr-orange);
-    letter-spacing: 3px;
-    display: block;
-    margin-top: 0.15rem;
-    text-transform: uppercase;
-}
-
-.nr-divider {
-    flex: 1;
-    height: 1px;
-    background: linear-gradient(90deg, var(--nr-border), transparent);
-    align-self: center;
-}
-
-/* ============================================================
-   MEMBER GROUP HEADER
-   ============================================================ */
-.nr-group-title {
-    font-family: 'Kiwi Maru', serif;
-    font-size: 1.2rem;
-    color: var(--nr-white);
-    margin: 3rem 0 1.5rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding-bottom: 0.8rem;
-    border-bottom: 1px solid var(--nr-subtle);
-}
-
-.nr-unit-badge {
     font-family: 'Noto Sans JP', sans-serif;
-    font-size: 0.7rem;
-    letter-spacing: 2px;
-    color: var(--nr-orange);
-    border: 1px solid var(--nr-border);
-    padding: 0.2rem 0.8rem;
-    border-radius: 20px;
-}
-
-/* ============================================================
-   MEMBER CARDS — gossip/episode style
-   ============================================================ */
-.nr-member-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.2rem;
-    margin-bottom: 0.5rem;
-}
-
-.nr-member-card {
-    background: var(--nr-surface);
-    border: 1px solid var(--nr-subtle);
-    border-radius: 6px;
-    padding: 1.8rem;
-    position: relative;
-    overflow: hidden;
-    transition: border-color 0.3s, transform 0.2s;
-}
-
-/* Left ink bar */
-.nr-member-card::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 3px;
-    background: var(--nr-orange);
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.nr-member-card:hover {
-    border-color: var(--nr-border);
-    transform: translateY(-3px);
-}
-
-.nr-member-card:hover::before {
-    opacity: 1;
-}
-
-.nr-member-name {
-    font-family: 'Kiwi Maru', serif;
-    font-size: 1.2rem;
-    color: var(--nr-white);
-    line-height: 1.3;
-    margin-bottom: 0.3rem;
-    display: block;
-    transition: color 0.25s;
-}
-
-a.nr-member-name:hover {
-    color: var(--nr-orange);
-}
-
-.nr-member-read {
-    font-size: 0.75rem;
-    color: var(--nr-orange);
-    letter-spacing: 2px;
-    margin-bottom: 1rem;
-    opacity: 0.8;
-}
-
-.nr-member-ep {
-    font-size: 0.88rem;
-    color: var(--nr-muted);
-    line-height: 1.85;
-}
-
-.nr-member-ep strong {
+    font-size: 2.5rem;
+    font-weight: 900;
     color: var(--nr-text);
 }
 
-/* ============================================================
-   ABOUT INFO CARDS
-   ============================================================ */
+.nr-section-title-sub {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+    color: var(--nr-accent);
+    letter-spacing: 2px;
+    margin-left: 1rem;
+}
+
+/* Info Grid */
 .nr-info-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 1.2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
 }
 
 .nr-info-card {
-    background: var(--nr-surface);
-    border: 1px solid var(--nr-subtle);
-    border-radius: 6px;
+    background: var(--nr-bg);
+    border: 2px solid var(--nr-text);
     padding: 2rem;
-    transition: border-color 0.3s;
-}
-
-.nr-info-card:hover {
-    border-color: var(--nr-border);
+    border-radius: 10px;
+    box-shadow: 4px 4px 0 rgba(44, 44, 44, 0.1);
+    position: relative;
 }
 
 .nr-info-card::before {
     content: '';
-    display: block;
-    width: 32px;
-    height: 3px;
-    background: var(--nr-orange);
-    border-radius: 2px;
-    margin-bottom: 1rem;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 20px 20px;
+    border-color: transparent transparent var(--nr-yellow) transparent;
 }
 
 .nr-info-card h3 {
-    font-family: 'Kiwi Maru', serif;
-    font-size: 1rem;
-    color: var(--nr-white);
-    margin-bottom: 0.8rem;
-}
-
-.nr-info-card p,
-.nr-info-card li {
-    font-size: 0.9rem;
-    color: var(--nr-muted);
-    line-height: 1.85;
-}
-
-.nr-info-card strong {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
     color: var(--nr-text);
+    border-bottom: 1px dotted var(--nr-text);
+    padding-bottom: 0.5rem;
 }
 
-.nr-info-card ul {
-    list-style: none;
-    padding: 0;
+/* Group Titles */
+.nr-group-title {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.8rem;
+    color: var(--nr-text);
+    margin: 4rem 0 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
-.nr-info-card ul li {
-    padding: 0.4rem 0 0.4rem 1.2rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+.nr-unit-badge {
+    font-family: 'Kiwi Maru', serif;
+    font-size: 0.9rem;
+    color: var(--nr-bg);
+    background: var(--nr-text);
+    padding: 0.2rem 1rem;
+    border-radius: 20px;
+}
+
+/* Member Grid - Manga Strip Layout */
+.nr-member-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Manga Frame (Card) */
+.nr-member-card {
+    background: var(--nr-bg);
+    border: 3px solid var(--nr-text);
+    padding: 1.5rem;
     position: relative;
+    text-decoration: none;
+    color: var(--nr-text);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* Irregular hand-drawn look */
+    border-radius: 2px 8px 3px 6px;
+    min-height: 250px;
 }
 
-.nr-info-card ul li::before {
-    content: '●';
+/* Tone overlay on hover */
+.nr-member-card::before {
+    content: '';
     position: absolute;
+    top: 0;
     left: 0;
-    color: var(--nr-orange);
-    font-size: 0.45rem;
-    top: 0.85rem;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(45deg, var(--nr-yellow), var(--nr-yellow) 2px, transparent 2px, transparent 10px);
+    opacity: 0;
+    transition: opacity 0.2s;
+    z-index: 0;
+    pointer-events: none;
+    border-radius: inherit;
+    mix-blend-mode: multiply;
 }
 
-/* ============================================================
-   REVEAL
-   ============================================================ */
+.nr-member-card:hover {
+    transform: translateY(-5px) scale(1.02) rotate(1deg);
+    box-shadow: 6px 6px 0 var(--nr-text);
+}
+
+.nr-member-card:hover::before {
+    opacity: 0.3;
+}
+
+.nr-member-card>* {
+    position: relative;
+    z-index: 1;
+}
+
+.nr-member-name {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--nr-text);
+    text-decoration: none;
+    display: inline-block;
+    transition: color 0.2s;
+}
+
+.nr-member-card:hover .nr-member-name {
+    color: var(--nr-accent);
+}
+
+.nr-member-read {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem;
+    color: var(--nr-blue);
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(44, 44, 44, 0.1);
+    padding-bottom: 0.5rem;
+}
+
+.nr-member-ep {
+    font-size: 0.95rem;
+}
+
+/* Speech Bubble Hover Effect */
+.nr-member-card::after {
+    content: 'CHECK!';
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background: var(--nr-bg);
+    border: 2px solid var(--nr-text);
+    border-radius: 50%;
+    padding: 0.5rem 0.8rem;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+    color: var(--nr-text);
+    transform: scale(0);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 5;
+    box-shadow: 2px 2px 0 var(--nr-yellow);
+}
+
+.nr-member-card:hover::after {
+    transform: scale(1) rotate(15deg);
+}
+
+/* Reveal Animation */
 .nr-reveal {
     opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.65s ease, transform 0.65s ease;
+    transform: translateY(20px);
+    transition: all 0.8s ease-out;
 }
 
 .nr-reveal.active {
@@ -482,48 +392,26 @@ a.nr-member-name:hover {
     transform: translateY(0);
 }
 
-/* ============================================================
-   FOOTER
-   ============================================================ */
+/* Footer */
 .nr-footer {
-    position: relative;
-    z-index: 10;
-    border-top: 1px solid var(--nr-subtle);
-    padding: 4rem 5vw;
+    background: var(--nr-text);
+    padding: 4rem 2rem;
     text-align: center;
-    color: var(--nr-muted);
-    font-size: 0.82rem;
+    color: var(--nr-bg);
 }
 
 .nr-footer-logo {
-    font-family: 'Kiwi Maru', serif;
-    font-size: 2rem;
-    color: var(--nr-white);
-    margin-bottom: 0.8rem;
-    letter-spacing: 2px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
 }
 
 .nr-footer-logo span {
-    color: var(--nr-orange);
+    color: var(--nr-blue);
 }
 
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
-@media (max-width: 768px) {
-    .nr-member-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .nr-info-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .nr-section-header {
-        flex-wrap: wrap;
-    }
-
-    .nr-hero-stats {
-        gap: 2rem;
-    }
+.nr-footer p {
+    opacity: 0.6;
+    font-size: 0.8rem;
 }

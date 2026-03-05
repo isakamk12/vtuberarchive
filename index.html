@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VTuber Archive Hub</title>
+    <title>VTuber Archive | Omni-Terminal</title>
     <!-- Fonts -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@300;400;600&family=Noto+Sans+JP:wght@400;700;900&display=swap"
         rel="stylesheet">
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -16,104 +16,175 @@
 </head>
 
 <body>
-    <!-- Dynamic Background -->
-    <div class="bg-layer" id="bgLayer"></div>
+    <!-- Immersive Deep Void Background -->
+    <div class="omni-bg">
+        <div class="omni-orb orb-1"></div>
+        <div class="omni-orb orb-2"></div>
+        <div class="omni-orb orb-3"></div>
+        <div class="omni-grid"></div>
+    </div>
 
-    <!-- Main Navigation Bar (Traditional Homepage Feel) -->
-    <nav class="top-nav">
-        <div class="nav-brand">
-            <i class="fa-solid fa-layer-group"></i>
-            <span>VT_ARCHIVE</span>
+    <!-- Floating Dock Navigation -->
+    <nav class="omni-dock">
+        <div class="dock-brand">
+            <i class="fa-solid fa-database"></i>
+            <span>AKASHIC</span>
         </div>
-        <div class="nav-links">
-            <a href="#" class="active"><i class="fa-solid fa-home"></i> HOME</a>
-            <a href="#"><i class="fa-solid fa-chart-pie"></i> STATISTICS</a>
-            <a href="#"><i class="fa-solid fa-clock-rotate-left"></i> HISTORY</a>
-            <a href="#"><i class="fa-solid fa-circle-info"></i> ABOUT</a>
+        <div class="dock-links">
+            <a href="#" class="active"><i class="fa-solid fa-cubes"></i> <span>AGENCIES</span></a>
+            <a href="#"><i class="fa-solid fa-chart-network"></i> <span>STATISTICS</span></a>
+            <a href="#"><i class="fa-solid fa-clock-rotate-left"></i> <span>HISTORY</span></a>
         </div>
-        <div class="nav-search">
-            <input type="text" id="searchInput" placeholder="Search Database...">
+        <div class="dock-search">
             <i class="fa-solid fa-search"></i>
+            <input type="text" id="searchInput" placeholder="Query Database...">
         </div>
     </nav>
 
-    <!-- Hero Section (Magazine/Dynamic Feel) -->
-    <header class="hero-section">
-        <div class="hero-content">
-            <div class="glitch-text" data-text="VTUBER">VTUBER</div>
-            <h1>ARCHIVE <span>DATABASE</span></h1>
-            <p>総合観測記録・事務所インデックス</p>
-            <div class="hero-stats">
-                <div class="stat-box">
-                    <span class="value" id="totalAgencies">0</span>
-                    <span class="label">AGENCIES</span>
+    <!-- Data Core Hero Section -->
+    <header class="omni-hero">
+        <div class="hero-core">
+            <div class="core-ring core-ring-1"></div>
+            <div class="core-ring core-ring-2"></div>
+            <div class="core-ring core-ring-3"></div>
+        </div>
+        <div class="hero-text-container">
+            <h1 class="hero-title">VT_ARCHIVE</h1>
+            <p class="hero-subtitle">GLOBAL OBSERVATIONAL DATABASE</p>
+            <div class="hero-metrics">
+                <div class="metric">
+                    <span class="metric-val" id="totalAgencies">0</span>
+                    <span class="metric-lbl">ACTIVE SECTORS</span>
                 </div>
-                <div class="stat-box">
-                    <span class="value">ACTIVE</span>
-                    <span class="label">SYSTEM STATUS</span>
+                <div class="metric">
+                    <span class="metric-val status-ok">ONLINE</span>
+                    <span class="metric-lbl">SYSTEM STATUS</span>
                 </div>
             </div>
         </div>
-        <div class="hero-graphics">
-            <!-- Decorative circle animation -->
-            <div class="radar"></div>
-        </div>
     </header>
 
-    <!-- Main Content Area -->
-    <main class="container">
-        <!-- Filter Bar -->
-        <div class="filter-bar" id="filterBar">
-            <button class="filter-btn active" data-filter="all">ALL</button>
+    <!-- Status Notice -->
+    <div class="status-notice" style="
+        max-width: 900px;
+        margin: -20px auto 30px;
+        padding: 24px 30px;
+        background: rgba(10, 10, 20, 0.85);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border: 1px solid rgba(255, 200, 60, 0.25);
+        border-radius: 14px;
+        position: relative;
+        z-index: 10;
+        font-family: 'Inter', 'Noto Sans JP', sans-serif;
+    ">
+        <div style="
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 14px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            color: #ffc83d;
+        ">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            STATUS: EARLY ACCESS — 構築中
+        </div>
+        <p style="
+            font-size: 0.82rem;
+            color: rgba(255,255,255,0.6);
+            line-height: 1.7;
+            margin-bottom: 16px;
+        ">
+            本アーカイブは現在構築中のため、各セクターの完成度にばらつきがあります。<br>
+            アクセス自体は可能ですが、一部ページはレイアウト未整備・内容暫定の状態です。
+        </p>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+            <div style="
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-size: 0.78rem;
+                color: rgba(255,255,255,0.85);
+            ">
+                <span style="
+                    display: inline-block;
+                    width: 8px; height: 8px;
+                    border-radius: 50%;
+                    background: #39ff72;
+                    box-shadow: 0 0 6px rgba(57,255,114,0.5);
+                    flex-shrink: 0;
+                "></span>
+                <strong style="min-width: 110px;">あおぎり高校</strong>
+                <span style="color: rgba(255,255,255,0.5);">── 最低限の構成が完成</span>
+            </div>
+            <div style="
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-size: 0.78rem;
+                color: rgba(255,255,255,0.85);
+            ">
+                <span style="
+                    display: inline-block;
+                    width: 8px; height: 8px;
+                    border-radius: 50%;
+                    background: #ffc83d;
+                    box-shadow: 0 0 6px rgba(255,200,61,0.5);
+                    flex-shrink: 0;
+                "></span>
+                <strong style="min-width: 110px;">ぶいすぽっ！</strong>
+                <span style="color: rgba(255,255,255,0.5);">── 試験的なUI実装段階</span>
+            </div>
+            <div style="
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-size: 0.78rem;
+                color: rgba(255,255,255,0.85);
+            ">
+                <span style="
+                    display: inline-block;
+                    width: 8px; height: 8px;
+                    border-radius: 50%;
+                    background: #66aaff;
+                    box-shadow: 0 0 6px rgba(102,170,255,0.5);
+                    flex-shrink: 0;
+                "></span>
+                <strong style="min-width: 110px;">その他セクター</strong>
+                <span style="color: rgba(255,255,255,0.5);">── 設計中（ページへのアクセスは可能）</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Datacore Content Area -->
+    <main class="omni-container">
+        <!-- Filter Controls -->
+        <div class="omni-filters" id="filterBar">
+            <button class="filter-btn active" data-filter="all">ALL SECTORS</button>
             <button class="filter-btn" data-filter="major">MAJOR</button>
             <button class="filter-btn" data-filter="corporate">CORPORATE</button>
             <button class="filter-btn" data-filter="indie">INDIE / MID</button>
             <button class="filter-btn" data-filter="global">GLOBAL</button>
         </div>
 
-        <!-- Masonry Grid for Agencies -->
-        <div class="masonry-grid" id="agencyGrid">
+        <!-- 3D Card Grid -->
+        <div class="datapanel-grid" id="agencyGrid">
             <!-- Cards injected via JS -->
         </div>
 
-        <!-- Search Empty State -->
+        <!-- Empty State -->
         <div class="empty-state" id="emptyState" style="display: none;">
-            <i class="fa-solid fa-ghost"></i>
-            <h3>No Records Found</h3>
-            <p>Try adjusting your search parameters.</p>
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <h3>No Data Matches Query</h3>
+            <p>Recalibrate search parameters and try again.</p>
         </div>
     </main>
-
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="footer-content">
-            <div class="footer-brand">
-                <h3>VTUBER ARCHIVE</h3>
-                <p>Observational recording system for virtual talents.</p>
-            </div>
-            <div class="footer-links">
-                <div class="link-group">
-                    <h4>SYSTEM</h4>
-                    <a href="#">Status</a>
-                    <a href="#">Updates</a>
-                </div>
-                <div class="link-group">
-                    <h4>LEGAL</h4>
-                    <a href="#">Guidelines</a>
-                    <a href="#">Terms</a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 VTuber Archive Project.</p>
-        </div>
-    </footer>
 
     <!-- Script -->
     <script src="script.js"></script>
 </body>
 
 </html>
-
-
-
