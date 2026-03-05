@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>海潮すみ | PRISM Project Archive</title>
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        .grad-badge {
+            background: #eee;
+            color: #888;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 900;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .grad-theme {
+            filter: grayscale(0.6);
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body class="grad-theme">
+    <div class="bg-refract"></div>
+    <nav class="nav">
+        <a href="../prismproject_index.html" class="nav-brand">PRISM PROJECT ARCHIVE</a>
+    </nav>
+
+    <header class="hero">
+        <div class="grad-badge">GRADUATED</div>
+        <h1 class="hero-name">海潮すみ</h1>
+        <p class="hero-subtitle">SUMI USHIO</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item"><span class="label">GEN</span><span class="value">4期生</span></div>
+                    <div class="data-item"><span class="label">ID</span><span class="value">PRM-04-04</span></div>
+                    <div class="data-item"><span class="label">STATUS</span><span class="value">卒業 (2022/01)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">DESCRIPTION</h2>
+            <div class="description">
+                <p>PRISM
+                    Projectの4期生として活動していたタレント。海の潮風のように爽やかで、多くのリスナーに愛された。2022年1月に卒業を発表した。彼女が残した軌跡は、今もアーカイブとして大切に保管されている。
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>

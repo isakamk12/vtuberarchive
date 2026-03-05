@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepWeb Underground | SHINSOGUMI Archive</title>
+    <link rel="stylesheet" href="char-base.css">
+</head>
+
+<body>
+    <nav class="nav">
+        <a href="../shinsogumi_index.html" class="nav-brand">SHINSOGUMI_DATABASE</a>
+    </nav>
+
+    <header class="hero">
+        <h1 class="hero-name">DWU</h1>
+        <p class="hero-subtitle">DeepWeb Underground</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <h2 class="section-title">SYSTEM_PROFILE</h2>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item"><span class="label">ROLE</span><span class="value">ELDEST_DAUGHTER</span>
+                    </div>
+                    <div class="data-item"><span class="label">NODE_ID</span><span class="value">DWU-01</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">LOG_CONTENT</h2>
+            <div class="description">
+                <p>深層家の長女であり、深層組の象徴的存在。深淵より現れたその姿は、多くのリスナーを「深層」へと誘う。類まれなるトークセンスと、時折見せる知性、そして深層組全体の屋台骨を支えるリーダーシップが魅力。</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>

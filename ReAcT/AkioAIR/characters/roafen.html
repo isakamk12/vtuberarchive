@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoaFen — AkioAIR</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&family=Bebas+Neue&family=Noto+Sans+JP:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #32cd32;
+            --char-glow: rgba(50, 205, 50, 0.55);
+            --char-color-soft: rgba(50, 205, 50, 0.08);
+            --char-border: rgba(50, 205, 50, 0.25);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a href="../akioair_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO AkioAIR</a>
+        <span class="cp-nav-gen">Season 1 // REfract</span>
+    </nav>
+    <section class="cp-hero">
+        <div class="cp-bg-letter">R</div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">AkioAIR // REfract</div>
+            <h1 class="cp-hero-name">RoaFen</h1>
+            <span class="cp-hero-en">ロアフェン</span>
+            <p class="cp-chara-desc">
+                ピアノやヴァイオリン、ダルブッカ演奏をこなす<strong>音楽的才能に溢れたピクシー（妖精）</strong>。AkioAIR初のソロオリジナル曲をリリースするなど、初期の音楽活動を牽引した。</p>
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">#Pixie</span>
+                <span class="cp-tag cp-tag-muted">#Musician</span>
+                <span class="cp-tag cp-tag-muted">#FirstGraduate</span>
+            </div>
+        </div>
+        <div class="cp-hero-orb">R</div>
+    </section>
+    <div class="cp-section cp-reveal">
+        <h2 class="cp-section-title">ARCHIVE DATA</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>PROFILE</h3>
+                <table class="cp-table">
+                    <tr>
+                        <th>STATUS</th>
+                        <td>Graduated (2023.1.7)</td>
+                    </tr>
+                    <tr>
+                        <th>RACE</th>
+                        <td>Pixie</td>
+                    </tr>
+                    <tr>
+                        <th>INSTRUMENTS</th>
+                        <td>Piano, Violin, Darbuka</td>
+                    </tr>
+                    <tr>
+                        <th>ORIGINAL</th>
+                        <td>Happy Samhain</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="cp-card">
+                <h3>EPISODES</h3>
+                <p>2023年1月7日、自身の誕生日に卒業。企業理念との不一致を理由に早期契約終了を申し出た、AkioAIRにおける最初の離脱者となった。</p>
+            </div>
+        </div>
+    </div>
+    <footer class="cp-footer">
+        <p>© 2026 AkioAIR Archive — 非公式ファンサイト</p>
+    </footer>
+    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+</body>
+
+</html>

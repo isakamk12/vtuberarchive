@@ -1,0 +1,417 @@
+/* --- Tamako Custom Styles --- */
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700;900&display=swap');
+
+:root {
+    --tamako-main: #ff6b81;
+    /* Pink */
+    --tamako-sub: #ffcccc;
+    /* Light Pink */
+    --tamako-accent: #fbc531;
+    /* Yellow */
+    --tamako-text: #2f3542;
+    --tamako-bg: #fff0f5;
+    /* Lavender Blush (very light pink) */
+}
+
+body.tamako-page {
+    background-color: var(--tamako-bg);
+    color: var(--tamako-text);
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+/* Floating Bubble Background */
+.tamako-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(135deg, #fff0f5 0%, #ffe4e1 100%);
+    overflow: hidden;
+}
+
+.bubble {
+    position: absolute;
+    background: rgba(255, 107, 129, 0.1);
+    border-radius: 50%;
+    animation: floatUp infinite ease-in;
+}
+
+.bubble-1 {
+    width: 40px;
+    height: 40px;
+    left: 10%;
+    bottom: -50px;
+    animation-duration: 8s;
+}
+
+.bubble-2 {
+    width: 80px;
+    height: 80px;
+    left: 30%;
+    bottom: -100px;
+    animation-duration: 12s;
+    animation-delay: 2s;
+}
+
+.bubble-3 {
+    width: 30px;
+    height: 30px;
+    left: 60%;
+    bottom: -40px;
+    animation-duration: 6s;
+    animation-delay: 4s;
+}
+
+.bubble-4 {
+    width: 60px;
+    height: 60px;
+    left: 80%;
+    bottom: -80px;
+    animation-duration: 10s;
+    animation-delay: 1s;
+}
+
+.bubble-5 {
+    width: 20px;
+    height: 20px;
+    left: 45%;
+    bottom: -30px;
+    animation-duration: 5s;
+    animation-delay: 3s;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100vh) scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* Navbar override */
+.tamako-nav {
+    background: rgba(255, 240, 245, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--tamako-main);
+}
+
+.tamako-nav .logo {
+    color: var(--tamako-main);
+    font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+.tamako-nav .nav-links a {
+    color: var(--tamako-text);
+    font-weight: bold;
+}
+
+.tamako-nav .nav-links a:hover {
+    color: var(--tamako-main);
+}
+
+/* Hero Section */
+.t-hero {
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+    text-align: center;
+}
+
+.t-icon-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 2rem;
+}
+
+.t-icon {
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    color: var(--tamako-main);
+    border: 4px solid var(--tamako-sub);
+    box-shadow: 0 10px 20px rgba(255, 107, 129, 0.2);
+    font-family: 'Zen Maru Gothic', sans-serif;
+    animation: pulseIcon 3s infinite alternate;
+}
+
+@keyframes pulseIcon {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 10px 20px rgba(255, 107, 129, 0.2);
+    }
+
+    100% {
+        transform: scale(1.05);
+        box-shadow: 0 15px 30px rgba(255, 107, 129, 0.4);
+    }
+}
+
+.t-sparkle {
+    position: absolute;
+    font-size: 2rem;
+    animation: twinkle 2s infinite alternate;
+}
+
+.sparkle-1 {
+    top: -10px;
+    left: -10px;
+    animation-delay: 0s;
+}
+
+.sparkle-2 {
+    top: 20px;
+    right: -20px;
+    animation-delay: 0.5s;
+}
+
+.sparkle-3 {
+    bottom: -5px;
+    right: 10px;
+    animation-delay: 1s;
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 0.3;
+        transform: scale(0.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+.t-name {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 4rem;
+    color: var(--tamako-main);
+    margin-bottom: 0.5rem;
+}
+
+.t-kana {
+    font-size: 1.2rem;
+    color: #a4b0be;
+    letter-spacing: 5px;
+    margin-bottom: 2rem;
+}
+
+.t-catchphrase-box {
+    margin-bottom: 2rem;
+}
+
+.t-quote {
+    background: white;
+    color: var(--tamako-main);
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: inline-block;
+    border: 2px dashed var(--tamako-sub);
+}
+
+.t-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+.t-tag {
+    background: var(--tamako-main);
+    color: white;
+    padding: 0.4rem 1.2rem;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    font-weight: bold;
+}
+
+/* Main Content */
+.t-main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem 5rem;
+}
+
+.t-section {
+    margin-bottom: 4rem;
+}
+
+.t-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.t-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(255, 107, 129, 0.1);
+    border-top: 5px solid var(--tamako-main);
+}
+
+.t-section-title {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 1.8rem;
+    color: var(--tamako-text);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--tamako-sub);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.center-title {
+    justify-content: center;
+}
+
+/* Profile Table */
+.t-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.05rem;
+}
+
+.t-table th,
+.t-table td {
+    padding: 0.8rem 0;
+    border-bottom: 1px dashed #fee;
+    text-align: left;
+}
+
+.t-table th {
+    color: var(--tamako-main);
+    width: 35%;
+    padding-right: 1rem;
+}
+
+.t-table td {
+    line-height: 1.5;
+}
+
+/* Character Features */
+.t-feature-block {
+    margin-bottom: 2rem;
+}
+
+.t-feature-block:last-child {
+    margin-bottom: 0;
+}
+
+.t-feature-block h3 {
+    color: var(--tamako-main);
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.t-feature-block p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+/* Episodes Timeline */
+.t-timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 2rem;
+}
+
+.t-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--tamako-sub);
+    border-radius: 2px;
+}
+
+.t-timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.t-timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.t-timeline-icon {
+    position: absolute;
+    left: -2rem;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    background: white;
+    border: 3px solid var(--tamako-main);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    transform: translateX(-50%);
+}
+
+.t-timeline-content {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--tamako-sub);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+.t-timeline-content h3 {
+    color: var(--tamako-main);
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+}
+
+.t-timeline-content p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+/* Reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 800px) {
+    .t-row {
+        grid-template-columns: 1fr;
+    }
+
+    .t-name {
+        font-size: 3rem;
+    }
+}

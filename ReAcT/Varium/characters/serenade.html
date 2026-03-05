@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>セレナーデ・オックスブラッド | Varium Archive</title>
+    <link rel="stylesheet" href="char-base.css">
+</head>
+
+<body>
+    <header class="hero">
+        <h1 class="hero-name">SERENADE</h1>
+        <p class="hero-subtitle">セレナーデ・オックスブラッド</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item"><span class="label">GEN</span><span class="value">2期生</span></div>
+                    <div class="data-item"><span class="label">ID</span><span class="value">VAR-02-01</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">STORY</h2>
+            <div class="description">
+                <p>ぶいありうむっ！2期生。高貴な血筋を感じさせる優雅な立ち振る舞いと、深みのある歌声が特徴。夜空に響くセレナーデのように、リスナーの心に深く刻まれるようなパフォーマンスを追求している。</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>

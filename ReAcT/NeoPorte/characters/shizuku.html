@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>白那しずく — Neo-Porte</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Teko:wght@400;600;700&family=Noto+Sans+JP:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #a3c4bc;
+            --char-glow: rgba(163, 196, 188, 0.4);
+            --char-color-soft: rgba(163, 196, 188, 0.07);
+            --char-border: rgba(163, 196, 188, 0.22);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a href="../neoporte_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO NEO-PORTE</a>
+        <span class="cp-nav-gen">⛩️ 5期生 #しずくも · 🍎💧</span>
+    </nav>
+    <section class="cp-hero">
+        <div class="cp-bg-letter">蛇</div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">NEO-PORTE // 5期生 · #しずくも</div>
+            <h1 class="cp-hero-name">白那しずく</h1>
+            <span class="cp-hero-en">Shirona Shizuku</span>
+            <p class="cp-chara-desc">助けた手負いの<strong>白蛇（神様）に取り憑かれている</strong>。哲学が好き。りんごは丸かじり派。同期のストッパー的存在として一目置かれる。</p>
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">🍎💧 #しずクレヨン</span>
+                <span class="cp-tag cp-tag-muted">#白蛇憑依</span>
+                <span class="cp-tag cp-tag-muted">#哲学好き</span>
+                <span class="cp-tag cp-tag-muted">#VALORANT</span>
+                <span class="cp-tag cp-tag-muted">#左手FPS</span>
+            </div>
+        </div>
+        <div class="cp-hero-orb">🍎</div>
+    </section>
+    <div class="cp-section cp-reveal">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid cp-grid-2">
+            <div class="cp-card">
+                <h3>基本情報</h3>
+                <table class="cp-table">
+                    <tr>
+                        <th>身長</th>
+                        <td>151cm</td>
+                    </tr>
+                    <tr>
+                        <th>キャラクター</th>
+                        <td>白蛇（神様）に取り憑かれた存在</td>
+                    </tr>
+                    <tr>
+                        <th>ファンマーク</th>
+                        <td>🍎💧</td>
+                    </tr>
+                    <tr>
+                        <th>こだわり</th>
+                        <td>りんごは丸かじり</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="cp-card">
+                <h3>特徴・スキル</h3>
+                <ul>
+                    <li>ピアノを習っていたため<strong>実質両利き</strong></li>
+                    <li>FPS（VALORANTなど）では<strong>左手持ち</strong>にすることも</li>
+                    <li>哲学が好き</li>
+                    <li>同期の<strong>ストッパー的立ち位置</strong></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer class="cp-footer">
+        <p>© 2026 NeoPorte Fan Archive — 非公式ファンサイト</p>
+    </footer>
+    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+</body>
+
+</html>

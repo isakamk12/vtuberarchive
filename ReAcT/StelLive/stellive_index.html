@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StelLive - VTuber Archive Premium</title>
+    <link rel="stylesheet" href="stellive_index.css">
+</head>
+
+<body>
+
+    <nav class="nav">
+        <a href="../index.html" class="nav-brand">STELLIVE</a>
+        <div class="nav-status">VIRTUAL IDOL PROJECT</div>
+    </nav>
+
+    <header class="hero">
+        <div class="orbit-ring orbit-1"></div>
+        <div class="orbit-ring orbit-2"></div>
+        <h1 class="hero-title reveal">STELLIVE</h1>
+        <p class="hero-subtitle reveal" style="transition-delay: 0.2s;">Universe of Idols</p>
+    </header>
+
+    <main class="container">
+
+        <div class="intro-text reveal">
+            STELLIVE（ステライブ）は、韓国発のグローバルバーチャルタレントプロダクション。
+            日韓国境を越えた「Cosmic Idol（宇宙的アイドル）」として、
+            次世代のY2Kサイバー美学と圧倒的なクオリティを誇る。
+        </div>
+
+        <!-- EVERYS -->
+        <h2 class="unit-title ut-everys reveal">EVERYS</h2>
+        <div class="member-grid">
+            <a href="characters/uni.html" class="album-card reveal">
+                <div class="album-disc"></div>
+                <div class="album-cover" style="border-bottom: 5px solid #ff3399;">
+                    <span class="m-name">아야츠노 유니</span>
+                    <span class="m-jp">純角 ユニ / Ayatsuno Yuni</span>
+                </div>
+            </a>
+            <a href="characters/huyu.html" class="album-card reveal">
+                <div class="album-disc"></div>
+                <div class="album-cover" style="border-bottom: 5px solid #ff3399;">
+                    <span class="m-name">사키하네 후야</span>
+                    <span class="m-jp">咲羽 風夜 / Sakihane Huya</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- UNIVERSE -->
+        <h2 class="unit-title ut-universe reveal">UNIVERSE</h2>
+        <div class="member-grid">
+            <a href="characters/hina.html" class="album-card reveal">
+                <div class="album-disc"></div>
+                <div class="album-cover" style="border-bottom: 5px solid #00ccff;">
+                    <span class="m-name">시라유키 히나</span>
+                    <span class="m-jp">白雪 ひな / Shirayuki Hina</span>
+                </div>
+            </a>
+            <a href="characters/mashiro.html" class="album-card reveal">
+                <div class="album-disc"></div>
+                <div class="album-cover" style="border-bottom: 5px solid #00ccff;">
+                    <span class="m-name">네네코 마시로</span>
+                    <span class="m-jp">ねねこ ましろ / Neneko Mashiro</span>
+                </div>
+            </a>
+            <a href="characters/lise.html" class="album-card reveal">
+                <div class="album-disc"></div>
+                <div class="album-cover" style="border-bottom: 5px solid #00ccff;">
+                    <span class="m-name">아카네 리제</span>
+                    <span class="m-jp">朱音 リゼ / Akane Lise</span>
+                </div>
+            </a>
+            <a href="characters/tabi.html" class="album-card reveal">
+                <div class="album-disc"></div>
+                <div class="album-cover" style="border-bottom: 5px solid #00ccff;">
+                    <span class="m-name">아라하시 타비</span>
+                    <span class="m-jp">荒波子 タビ / Arahashi Tabi</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- Cliché -->
+        <h2 class="unit-title ut-cliche reveal">Cliché</h2>
+        <div class="member-grid">
+            <a href="characters/shibuki.html" class="album-card reveal">
+                <div class="album-disc"></div>
+                <div class="album-cover" style="border-bottom: 5px solid #9933ff;">
+                    <span class="m-name">텐코 시ぶき</span>
+                    <span class="m-jp">天狐 紫吹 / Tenko Shibuki</span>
+                </div>
+            </a>
+            <a href="characters/rin.html" class="album-card reveal">
+                <div class="album-disc"></div>
+                <div class="album-cover" style="border-bottom: 5px solid #9933ff;">
+                    <span class="m-name">아오쿠모 린</span>
+                    <span class="m-jp">青雲 凛 / Aokumo Rin</span>
+                </div>
+            </a>
+            <a href="characters/nana.html" class="album-card reveal">
+                <div class="album-disc"></div>
+                <div class="album-cover" style="border-bottom: 5px solid #9933ff;">
+                    <span class="m-name">하나코 나나</span>
+                    <span class="m-jp">花子 ナナ / Hanako Nana</span>
+                </div>
+            </a>
+            <a href="characters/riko.html" class="album-card reveal">
+                <div class="album-disc"></div>
+                <div class="album-cover" style="border-bottom: 5px solid #9933ff;">
+                    <span class="m-name">유즈ハ 리코</span>
+                    <span class="m-jp">柚葉 莉子 / Yuzuha Riko</span>
+                </div>
+            </a>
+        </div>
+
+    </main>
+
+    <footer
+        style="text-align:center; padding:4rem; margin-top:5rem; opacity:0.3; font-family:'Syncopate', sans-serif; letter-spacing:5px; font-size: 0.8rem;">
+        STELLIVE ARCHIVE &copy; 2026
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>

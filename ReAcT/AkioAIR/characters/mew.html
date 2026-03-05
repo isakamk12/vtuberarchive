@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEW Horizon — AkioAIR</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&family=Bebas+Neue&family=Noto+Sans+JP:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #8a2be2;
+            --char-glow: rgba(138, 43, 226, 0.55);
+            --char-color-soft: rgba(138, 43, 226, 0.08);
+            --char-border: rgba(138, 43, 226, 0.25);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a href="../akioair_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO AkioAIR</a>
+        <span class="cp-nav-gen">Season 1 // REfract</span>
+    </nav>
+    <section class="cp-hero">
+        <div class="cp-bg-letter">M</div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">AkioAIR // REfract</div>
+            <h1 class="cp-hero-name">MEW Horizon</h1>
+            <span class="cp-hero-en">ミュー・ホライズン（地平線未夕）</span>
+            <p class="cp-chara-desc">
+                地球を平らにすることを目的に掲げる、<strong>宇宙的な背景</strong>を持つキャラクター。タレント活動の傍ら、マネージャー業務も兼任するという極めて特殊な立ち位置で組織を支えた。</p>
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">#Cosmic</span>
+                <span class="cp-tag cp-tag-muted">#ManagerTalent</span>
+                <span class="cp-tag cp-tag-muted">#FlatEarth</span>
+            </div>
+        </div>
+        <div class="cp-hero-orb">M</div>
+    </section>
+    <div class="cp-section cp-reveal">
+        <h2 class="cp-section-title">ARCHIVE DATA</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>PROFILE</h3>
+                <table class="cp-table">
+                    <tr>
+                        <th>STATUS</th>
+                        <td>Graduated (2023.1.2)</td>
+                    </tr>
+                    <tr>
+                        <th>ROLE</th>
+                        <td>Talent & Manager</td>
+                    </tr>
+                    <tr>
+                        <th>ORIGIN</th>
+                        <td>Cosmic / Space</td>
+                    </tr>
+                    <tr>
+                        <th>SKILLS</th>
+                        <td>Management, Streaming</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="cp-card">
+                <h3>EPISODES</h3>
+                <p>2023年10月の退職時には、運営側への抗議としてSNSのバナーを同期全員の別れのツイートに変更するなど、強い仲間意識と不屈の精神を示した。</p>
+            </div>
+        </div>
+    </div>
+    <footer class="cp-footer">
+        <p>© 2026 AkioAIR Archive — 非公式ファンサイト</p>
+    </footer>
+    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+</body>
+
+</html>

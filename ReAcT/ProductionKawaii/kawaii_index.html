@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Production kawaii | Sweet Database</title>
+    <link rel="stylesheet" href="kawaii_index.css">
+</head>
+
+<body>
+
+    <nav class="nav">
+        <a href="../index.html" class="nav-brand">production kawaii</a>
+    </nav>
+
+    <header class="hero">
+        <!-- Floating decorative backgrounds -->
+        <div class="bg-bubble" style="width: 300px; height: 300px; top: -50px; left: -50px; animation-duration: 20s;">
+        </div>
+        <div class="bg-bubble"
+            style="width: 200px; height: 200px; bottom: 10%; right: 5%; animation-duration: 15s; background: linear-gradient(135deg, white, var(--kw-lavender));">
+        </div>
+        <div class="bg-bubble"
+            style="width: 150px; height: 150px; top: 20%; right: 20%; animation-duration: 18s; background: linear-gradient(135deg, white, var(--kw-mint));">
+        </div>
+        <div class="bg-bubble"
+            style="width: 400px; height: 400px; bottom: -100px; left: 10%; animation-duration: 25s; opacity: 0.3;">
+        </div>
+
+        <h1 class="hero-title">Kawaii<br>Collection</h1>
+        <div class="hero-subtitle">Sparkling Talents Archive</div>
+    </header>
+
+    <main class="roster-container">
+
+        <!-- Eonia (1st Gen) -->
+        <section class="bubble-cluster gen-1 pop-in" data-cluster="Eonia (1st Gen)">
+            <a href="characters/reina.html" class="bubble-card">
+                <div class="card-icon">☀️</div>
+                <span class="card-name">Reina Sun</span>
+                <span class="card-sub">レイナ・サン</span>
+            </a>
+            <a href="characters/nene.html" class="bubble-card" style="transform: translateY(40px);">
+                <div class="card-icon">🐈</div>
+                <span class="card-name">Nene<br>Amano</span>
+                <span class="card-sub">天野寧々</span>
+            </a>
+            <a href="characters/charlotte.html" class="bubble-card" style="transform: translateY(-20px);">
+                <div class="card-icon">🎀</div>
+                <span class="card-name">Charlotte<br>Suzu</span>
+                <span class="card-sub">シャーロット・スズ</span>
+            </a>
+            <a href="characters/isla.html" class="bubble-card" style="transform: translateY(20px);">
+                <div class="card-icon">💧</div>
+                <span class="card-name">Isla<br>Coleman</span>
+                <span class="card-sub">アイラ・コールマン</span>
+            </a>
+        </section>
+
+        <!-- 2nd Gen -->
+        <section class="bubble-cluster gen-2 pop-in" data-cluster="2nd Gen">
+            <a href="characters/namiji.html" class="bubble-card" style="transform: translateY(-30px);">
+                <div class="card-icon">🌊</div>
+                <span class="card-name">Namiji<br>Freesia</span>
+                <span class="card-sub">波路フリージア</span>
+            </a>
+            <a href="characters/shee.html" class="bubble-card" style="transform: translateY(30px);">
+                <div class="card-icon">🍂</div>
+                <span class="card-name">Shee Icho</span>
+                <span class="card-sub">銀杏しぃ</span>
+            </a>
+            <a href="characters/lua.html" class="bubble-card">
+                <div class="card-icon">🌙</div>
+                <span class="card-name">Lua Asuka</span>
+                <span class="card-sub">飛鳥瑠藍</span>
+            </a>
+        </section>
+
+        <!-- Hanamizuki -->
+        <section class="bubble-cluster gen-hana pop-in" data-cluster="Hanamizuki">
+            <a href="characters/yuno.html" class="bubble-card" style="transform: translateY(20px);">
+                <div class="card-icon">🌸</div>
+                <span class="card-name">Yuno<br>Hanaki</span>
+                <span class="card-sub">華鬼結望</span>
+            </a>
+            <a href="characters/kaya.html" class="bubble-card" style="transform: translateY(-20px);">
+                <div class="card-icon">🍁</div>
+                <span class="card-name">Kaya<br>Nishikino</span>
+                <span class="card-sub">錦野楓夜</span>
+            </a>
+            <a href="characters/ephemira.html" class="bubble-card" style="transform: translateY(10px);">
+                <div class="card-icon">🦋</div>
+                <span class="card-name">Ephemira</span>
+                <span class="card-sub">エフェミラ</span>
+            </a>
+        </section>
+
+        <!-- Other / Alumni -->
+        <section class="bubble-cluster pop-in" data-cluster="Other Talents"
+            style="filter: grayscale(0.5); opacity: 0.8;">
+            <a href="characters/aletta.html" class="bubble-card" style="width: 180px; height: 180px;">
+                <div class="card-icon" style="font-size: 2.5rem;">🕊️</div>
+                <span class="card-name" style="font-size: 1.1rem;">Aletta Sky</span>
+            </a>
+            <a href="characters/peony.html" class="bubble-card"
+                style="width: 180px; height: 180px; transform: translateY(20px);">
+                <div class="card-icon" style="font-size: 2.5rem;">🌺</div>
+                <span class="card-name" style="font-size: 1.1rem;">Peony Aeria</span>
+            </a>
+            <a href="characters/sava.html" class="bubble-card"
+                style="width: 180px; height: 180px; transform: translateY(-10px);">
+                <div class="card-icon" style="font-size: 2.5rem;">🐾</div>
+                <span class="card-name" style="font-size: 1.1rem;">Sava Safari</span>
+            </a>
+        </section>
+
+    </main>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.pop-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>

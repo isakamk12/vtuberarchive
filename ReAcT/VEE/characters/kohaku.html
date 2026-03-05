@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>秋雪こはく | VEE Archive</title>
+    <link rel="stylesheet" href="char-base.css">
+</head>
+
+<body>
+    <header class="hero">
+        <h1 class="hero-name">KOHAKU</h1>
+        <p class="hero-subtitle">秋雪こはく / Syusetu Kohaku</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <span class="section-label">IDENTIFIER</span>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item"><span class="label">STATUS</span><span class="value">ALUMNI</span></div>
+                    <div class="data-item"><span class="label">GRADUATED</span><span class="value">2025/12</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <span class="section-label">RECORDS</span>
+            <div class="description">
+                <p>元VEE所属。圧倒的なFPSスキルを持ち、ストリーマーとしても非常に高い人気を誇る。2025年12月をもってVEEを卒業し、プロeスポーツチーム「REJECT」へと移籍。バーチャル界有数の競技者として、次なるステージへと進んでいる。
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>

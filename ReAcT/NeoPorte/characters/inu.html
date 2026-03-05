@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>或世イヌ — Neo-Porte</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Teko:wght@400;600;700&family=Noto+Sans+JP:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #8e44ad;
+            --char-glow: rgba(142, 68, 173, 0.5);
+            --char-color-soft: rgba(142, 68, 173, 0.08);
+            --char-border: rgba(142, 68, 173, 0.28);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a href="../neoporte_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO NEO-PORTE</a>
+        <span class="cp-nav-gen">🐾 1期生</span>
+    </nav>
+    <section class="cp-hero">
+        <div class="cp-bg-letter">怪</div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">NEO-PORTE // 1期生</div>
+            <h1 class="cp-hero-name">或世イヌ</h1>
+            <span class="cp-hero-en">Aruse Inu</span>
+            <p class="cp-chara-desc">
+                会社員を辞めるために配信を始めた<strong>怪盗</strong>。相棒は変身できる猫の<strong>「ネビル」</strong>。初配信の音声50%カット事件で伝説を刻んだ男。</p>
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">#怪盗</span>
+                <span class="cp-tag cp-tag-primary">#音声50%カット伝説</span>
+                <span class="cp-tag cp-tag-muted">#APEX ソロダイヤ</span>
+                <span class="cp-tag cp-tag-muted">#あるせ残業中</span>
+            </div>
+        </div>
+        <div class="cp-hero-orb">盗</div>
+    </section>
+    <div class="cp-section cp-reveal">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>キャラクター</h3>
+                <ul>
+                    <li>怪盗として会社の<strong>社長の金庫</strong>に盗みに入り逮捕された設定</li>
+                    <li>相棒の猫<strong>「ネビル」</strong>は変身能力を持つ</li>
+                    <li>APEXのランクは<strong>ソロダイヤ到達</strong>経験あり</li>
+                </ul>
+            </div>
+            <div class="cp-card">
+                <h3>初配信の伝説</h3>
+                <p>機材トラブルにより<strong>「音声50%カット」</strong>という状態でデビューし、そのままトレンド入りを果たす。この事件によってイジられキャラが完全に確立された。</p>
+            </div>
+        </div>
+    </div>
+    <footer class="cp-footer">
+        <p>© 2026 NeoPorte Fan Archive — 非公式ファンサイト</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const r = document.querySelectorAll('.cp-reveal');
+            const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 });
+            r.forEach(el => o.observe(el));
+        });
+    </script>
+</body>
+
+</html>

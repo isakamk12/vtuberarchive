@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bella — A-SOUL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Noto+Sans+JP:wght@400;700;900&family=Kiwi+Maru:wght@300;400;500&family=Bebas+Neue&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a href="../asoul_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO A-SOUL</a>
+        <span class="cp-nav-gen">Current Member // Leader</span>
+    </nav>
+    <section class="cp-hero">
+        <div class="cp-bg-letter">B</div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">A-SOUL // Leader</div>
+            <h1 class="cp-hero-name">Bella</h1>
+            <span class="cp-hero-en">貝拉 (ベラ)</span>
+            <p class="cp-chara-desc">
+                A-SOULの<strong>リーダー兼メインダンス担当</strong>。幼少期からのバレエ経験に裏打ちされた高いダンススキルを持ち、そのストイックな姿勢と確かな実力でグループを強く牽引している。</p>
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">#Leader</span>
+                <span class="cp-tag cp-tag-muted">#MainDancer</span>
+                <span class="cp-tag cp-tag-muted">#Ballet</span>
+            </div>
+        </div>
+        <div class="cp-hero-orb">B</div>
+    </section>
+    <div class="cp-section cp-reveal">
+        <h2 class="cp-section-title">ARCHIVE DATA</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>PROFILE</h3>
+                <table class="cp-table">
+                    <tr>
+                        <th>STATUS</th>
+                        <td>Active</td>
+                    </tr>
+                    <tr>
+                        <th>POSITION</th>
+                        <td>Leader, Main Dancer</td>
+                    </tr>
+                    <tr>
+                        <th>ZODIAC</th>
+                        <td>Cancer (蟹座)</td>
+                    </tr>
+                    <tr>
+                        <th>HOBBY</th>
+                        <td>Dancing, Ballet</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="cp-card">
+                <h3>CHARACTER</h3>
+                <p>非常に責任感が強く、メンバー想いのリーダー。ステージ上での圧倒的な存在感とは裏腹に、普段は優しく温かい人柄で知られる。高い身体能力を活かしたアクロバティックなパフォーマンスも魅力の一つ。</p>
+            </div>
+        </div>
+    </div>
+    <footer class="cp-footer">
+        <p>© 2026 A-SOUL Archive — 非公式ファンサイト</p>
+    </footer>
+    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+</body>
+
+</html>

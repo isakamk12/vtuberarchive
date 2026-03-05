@@ -1,0 +1,364 @@
+/* --- Mujina Custom Styles --- */
+@import url('https://fonts.googleapis.com/css2?family=Train+One&display=swap');
+
+:root {
+    --mujina-main: #8e44ad;
+    /* Yokai Purple */
+    --mujina-sub: #d35400;
+    /* Orange/Brown for Badger */
+    --mujina-dark: #2c3e50;
+    --mujina-bg: #ececec;
+    --m-green: #16a085;
+}
+
+body.mujina-page {
+    background-color: var(--mujina-bg);
+    color: var(--mujina-dark);
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Yokai Background */
+.mujina-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: radial-gradient(circle at 50% 100%, #e0e0e0 0%, #ececec 100%);
+    overflow: hidden;
+}
+
+.mu-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        radial-gradient(rgba(142, 68, 173, 0.05) 20%, transparent 20%),
+        radial-gradient(rgba(142, 68, 173, 0.05) 20%, transparent 20%);
+    background-size: 60px 60px;
+    background-position: 0 0, 30px 30px;
+    opacity: 0.5;
+}
+
+/* Navbar override */
+.mujina-nav {
+    background: rgba(236, 236, 236, 0.95);
+    border-bottom: 2px solid var(--mujina-main);
+}
+
+.mujina-nav .logo {
+    color: var(--mujina-main);
+    font-family: 'Train One', sans-serif;
+}
+
+/* Hero Section */
+.mu-hero {
+    padding-top: 10rem;
+    padding-bottom: 4rem;
+    position: relative;
+}
+
+.mu-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mu-icon-box {
+    width: 150px;
+    height: 150px;
+    background: var(--mujina-dark);
+    border-radius: 20px;
+    transform: rotate(10deg);
+    margin: 0 auto 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid var(--mujina-main);
+    box-shadow: 10px 10px 0 var(--mujina-sub);
+    transition: transform 0.3s;
+}
+
+.mu-icon-box:hover {
+    transform: rotate(0deg) scale(1.05);
+}
+
+.mu-icon-text {
+    font-size: 5rem;
+    transform: rotate(-10deg);
+    transition: transform 0.3s;
+}
+
+.mu-icon-box:hover .mu-icon-text {
+    transform: rotate(0deg);
+}
+
+.mu-name {
+    font-family: 'Train One', sans-serif;
+    font-size: 4rem;
+    color: var(--mujina-dark);
+    text-shadow: 2px 2px 0px var(--mujina-sub), 4px 4px 0px var(--mujina-main);
+    margin-bottom: 0px;
+    letter-spacing: 5px;
+}
+
+.mu-kana {
+    font-size: 1.5rem;
+    color: #7f8c8d;
+    letter-spacing: 10px;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.mu-catchphrase {
+    background: var(--mujina-main);
+    color: white;
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transform: skewX(-15deg);
+    box-shadow: 4px 4px 0 var(--mujina-sub);
+    margin-bottom: 2rem;
+}
+
+.mu-tags span {
+    background: var(--mujina-dark);
+    color: white;
+    padding: 0.3rem 1rem;
+    border-radius: 4px;
+    margin: 0 0.5rem 0.5rem;
+    font-size: 0.9rem;
+    display: inline-block;
+    border-left: 3px solid var(--mujina-sub);
+}
+
+/* Layout */
+.mu-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem 5rem;
+}
+
+.mu-section {
+    margin-bottom: 5rem;
+}
+
+.mu-section-title {
+    font-size: 2.2rem;
+    color: var(--mujina-dark);
+    margin-bottom: 2rem;
+    border-bottom: 4px solid var(--mujina-main);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.mu-card {
+    background: white;
+    padding: 3rem;
+    border-left: 8px solid var(--mujina-main);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Profile Grids */
+.mu-grid-2 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+}
+
+.mu-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.mu-list {
+    list-style: none;
+    padding: 0;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.mu-list li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.mu-list li::before {
+    content: '▶';
+    position: absolute;
+    left: 0;
+    color: var(--mujina-sub);
+    font-size: 0.8rem;
+    top: 5px;
+}
+
+.mu-list strong {
+    color: var(--mujina-main);
+}
+
+.mu-fan-info h4 {
+    color: var(--mujina-dark);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px dashed #ccc;
+    padding-bottom: 0.5rem;
+}
+
+.mu-fan-term {
+    background: var(--mujina-bg);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    border-left: 4px solid var(--mujina-sub);
+    line-height: 1.6;
+}
+
+/* Hobbies */
+.mu-hobby-box {
+    background: white;
+    padding: 2rem;
+    border-top: 5px solid;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.border-purple {
+    border-color: var(--mujina-main);
+}
+
+.border-brown {
+    border-color: var(--mujina-sub);
+}
+
+.border-green {
+    border-color: var(--m-green);
+}
+
+.mu-hobby-box h3 {
+    font-size: 1.3rem;
+    color: var(--mujina-dark);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.mu-hobby-box p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.mu-hobby-box strong {
+    color: var(--mujina-main);
+}
+
+/* Streaming Style */
+.mu-stream-style h4,
+.mu-rules h4 {
+    font-size: 1.4rem;
+    color: var(--mujina-main);
+    margin-bottom: 1rem;
+    display: inline-block;
+    border-bottom: 2px solid var(--mujina-sub);
+    padding-bottom: 0.3rem;
+}
+
+.mu-stream-style p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.mu-rules ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.mu-rules li {
+    padding-left: 2rem;
+    position: relative;
+    margin-bottom: 0.8rem;
+}
+
+.mu-rules li::before {
+    content: '❌';
+    position: absolute;
+    left: 0;
+}
+
+/* Legends */
+.mu-legend-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.mu-legend-item {
+    background: white;
+    padding: 2rem;
+    border: 2px solid #ccc;
+    position: relative;
+}
+
+.mu-legend-item::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 40px;
+    height: 40px;
+    background: var(--mujina-main);
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.mu-legend-item h4 {
+    font-size: 1.4rem;
+    color: var(--mujina-dark);
+    margin-bottom: 1rem;
+    border-bottom: 2px dashed #ddd;
+    padding-bottom: 0.5rem;
+}
+
+.mu-legend-item p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* Reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 900px) {
+    .mu-grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .mu-grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .mu-name {
+        font-size: 2.8rem;
+        letter-spacing: 2px;
+    }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>七海 ロナ | Palette Project アーカイブ</title>
+    <link rel="stylesheet" href="char-base.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="bg-fx"></div>
+    <nav class="nav">
+        <a href="../paletteproject_index.html" class="nav-brand">PALETTE PROJECT ARCHIVE</a>
+    </nav>
+
+    <header class="hero">
+        <h1 class="hero-name">七海 ロナ</h1>
+        <p class="hero-subtitle">Nanami Rona</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item"><span class="label">Gen</span><span class="value">1期生</span></div>
+                    <div class="data-item"><span class="label">Unit</span><span class="value">RouteHeart</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">DESCRIPTION</h2>
+            <div class="description">
+                <p>パレプロの1期生。王道アイドルユニット「RouteHeart」の中心メンバー。圧倒的な歌唱唱パフォーマンスと、マイペースなキャラクターのギャップが魅力。長時間睡眠を好むという癒やし系の側面も持つ。
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>

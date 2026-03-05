@@ -1,0 +1,154 @@
+:root {
+    --bg: #050b1a;
+    --text: #ffffff;
+    --text-muted: #a0a0c0;
+    --c-everys: #ff3399;
+    /* Pink */
+    --c-universe: #00ccff;
+    /* Cyan */
+    --c-cliche: #9933ff;
+    /* Purple */
+    --accent: #ffffff;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.bg-stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, #1a1a3a 0%, #050b1a 100%);
+    z-index: -1;
+}
+
+.cp-nav {
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+}
+
+.cp-back {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.cp-label {
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.cp-hero {
+    padding: 8rem 5% 5rem;
+    text-align: center;
+    position: relative;
+}
+
+.cp-name {
+    font-size: 4.5rem;
+    font-weight: 900;
+    margin: 0;
+    letter-spacing: -1px;
+    background: linear-gradient(to bottom, #fff, var(--text-muted));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cp-en {
+    font-size: 1.4rem;
+    color: var(--text-muted);
+    margin-top: 0.5rem;
+}
+
+.cp-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 5% 8rem;
+    display: grid;
+    gap: 3rem;
+}
+
+.cp-card {
+    background: var(--card-bg);
+    padding: 2.5rem;
+    border: 1px solid var(--border);
+    backdrop-filter: blur(10px);
+}
+
+.cp-card h3 {
+    margin-top: 0;
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border);
+    display: block;
+    padding-bottom: 0.8rem;
+    margin-bottom: 2rem;
+}
+
+.cp-info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2.5rem;
+}
+
+.cp-info-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.cp-info-label {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.cp-info-value {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.unit-badge {
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #fff;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+.badge-everys {
+    background: var(--c-everys);
+    box-shadow: 0 0 15px var(--c-everys);
+}
+
+.badge-universe {
+    background: var(--c-universe);
+    box-shadow: 0 0 15px var(--c-universe);
+}
+
+.badge-cliche {
+    background: var(--c-cliche);
+    box-shadow: 0 0 15px var(--c-cliche);
+}

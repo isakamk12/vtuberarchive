@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>佃煮のりお / 犬山たまき — のりプロ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&family=Bebas+Neue&family=Noto+Sans+JP:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #e85d04;
+            --char-glow: rgba(232, 93, 4, 0.55);
+            --char-color-soft: rgba(232, 93, 4, 0.08);
+            --char-border: rgba(232, 93, 4, 0.25);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a href="../noripro_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO のりプロ</a>
+        <span class="cp-nav-gen">👑 代表・運営</span>
+    </nav>
+    <section class="cp-hero">
+        <div class="cp-bg-letter">社</div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">のりプロ // 代表・プロデューサー</div>
+            <h1 class="cp-hero-name">佃煮のりお</h1>
+            <span class="cp-hero-en">Tsukudani Norio / Inuyama Tamaki</span>
+            <p class="cp-chara-desc">漫画家にして<strong>のりプロ社長</strong>。犬山たまきとして自らもVTuberとして活動。過去にニコ生主・ネット声優として活動した経歴を持つ。</p>
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">#漫画家</span>
+                <span class="cp-tag cp-tag-primary">#犬山たまき</span>
+                <span class="cp-tag cp-tag-muted">#のりプロNEWS</span>
+                <span class="cp-tag cp-tag-muted">#タレント監視役</span>
+            </div>
+        </div>
+        <div class="cp-hero-orb">社</div>
+    </section>
+    <div class="cp-section cp-reveal">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>活動スタイル</h3>
+                <ul>
+                    <li>漫画家・VTuber（<strong>犬山たまき</strong>名義）として活動</li>
+                    <li>過去にニコ生主・ネット声優として活躍</li>
+                    <li>会社経営者の男性と結婚後も活動スタイル変わらず</li>
+                </ul>
+            </div>
+            <div class="cp-card">
+                <h3>のりプロNEWS</h3>
+                <p>毎月恒例の看板番組。タレントたちの<strong>「やらかしエピソード」を嬉々として暴露</strong>する監視役として君臨。タレントにとっては恐怖と愛が入り混じる恒例行事。</p>
+            </div>
+        </div>
+    </div>
+    <footer class="cp-footer">
+        <p>© 2026 NoriPro Fan Archive — 非公式ファンサイト</p>
+    </footer>
+    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+</body>
+
+</html>

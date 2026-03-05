@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaneko Lumi — CyberLive</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Noto+Sans+JP:wght@400;700;900&family=Teko:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a href="../cyberlive_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO CyberLive</a>
+        <span class="cp-nav-gen">1st Gen // CyberFable</span>
+    </nav>
+    <section class="cp-hero">
+        <div class="cp-bg-letter">L</div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">CyberLive // CyberFable</div>
+            <h1 class="cp-hero-name">Lumi</h1>
+            <span class="cp-hero-en">Kaneko Lumi (金子瑠美)</span>
+            <p class="cp-chara-desc">
+                自称「宇宙最大の泥棒」。高い歌唱力と多言語を操る知性、そして時折見せる<strong>激しい気性（Crashout）</strong>のギャップで絶大な支持を得た、CyberLiveを代表するタレントの一人。
+            </p>
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">#Thief</span>
+                <span class="cp-tag cp-tag-muted">#PhaseConnect</span>
+                <span class="cp-tag cp-tag-muted">#Multilingual</span>
+            </div>
+        </div>
+        <div class="cp-hero-orb">L</div>
+    </section>
+    <div class="cp-section cp-reveal">
+        <h2 class="cp-section-title">ARCHIVE DATA</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>PROFILE</h3>
+                <table class="cp-table">
+                    <tr>
+                        <th>STATUS</th>
+                        <td>Active (Phase Connect)</td>
+                    </tr>
+                    <tr>
+                        <th>AFFILIATION</th>
+                        <td>CyberLive → Phase Connect</td>
+                    </tr>
+                    <tr>
+                        <th>RACE</th>
+                        <td>Star Person / Thief</td>
+                    </tr>
+                    <tr>
+                        <th>LANGUAGES</th>
+                        <td>EN, JP, CN, ES</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="cp-card">
+                <h3>EPISODES</h3>
+                <p>2022年3月のCyberLive解散後、個人勢としての活動を経てPhase Connectへ加入。「Phase
+                    Invaders」の一員として、旧来のモデルと名義を維持したまま、現在も北米VTuber界の最前線で活躍し続けている。</p>
+            </div>
+        </div>
+    </div>
+    <footer class="cp-footer">
+        <p>© 2026 CyberLive Archive — 非公式ファンサイト</p>
+    </footer>
+    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+</body>
+
+</html>

@@ -1,0 +1,382 @@
+/* ============================================================
+   CyberLive char-base.css — Shared Character Page Styles
+   Cyber-Teal aesthetic — cyan ink on dark tech paper
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Noto+Sans+JP:wght@400;700;900&family=Kiwi+Maru:wght@300;400;500&family=Teko:wght@400;700;900&display=swap');
+
+:root {
+    --char-color: #00ffff;
+    /* Cyber Cyan */
+    --char-glow: rgba(0, 255, 255, 0.55);
+    --char-color-soft: rgba(0, 255, 255, 0.08);
+    --char-border: rgba(0, 255, 255, 0.25);
+
+    --nr-dark: #020f0f;
+    /* Deep Dark Cyan */
+    --nr-surface: rgba(255, 255, 255, 0.04);
+    --nr-subtle: rgba(255, 255, 255, 0.07);
+    --nr-text: #e0ffff;
+    --nr-muted: rgba(224, 255, 255, 0.55);
+    --nr-white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--nr-dark);
+    color: var(--nr-text);
+    overflow-x: hidden;
+}
+
+/* BACKGROUND */
+.cp-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.cp-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 80% 0%, color-mix(in srgb, var(--char-color) 20%, transparent) 0%, transparent 50%),
+        radial-gradient(ellipse at 20% 100%, color-mix(in srgb, var(--char-color) 8%, transparent) 0%, transparent 50%);
+}
+
+.cp-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.15;
+}
+
+/* NAV */
+.cp-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1.1rem 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(2, 15, 15, 0.85);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--char-border);
+}
+
+.cp-back {
+    font-size: 0.82rem;
+    letter-spacing: 2px;
+    color: var(--nr-muted);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: color 0.3s;
+}
+
+.cp-back:hover {
+    color: var(--char-color);
+}
+
+.cp-nav-gen {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 4px;
+    color: var(--char-color);
+    opacity: 0.85;
+    text-transform: uppercase;
+}
+
+/* HERO */
+.cp-hero {
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 9rem 5vw 5rem;
+    overflow: hidden;
+}
+
+.cp-bg-letter {
+    position: absolute;
+    right: -2%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Teko', sans-serif;
+    font-size: 50vw;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--char-color);
+    opacity: 0.04;
+    user-select: none;
+    pointer-events: none;
+}
+
+.cp-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 680px;
+}
+
+.cp-gen-label {
+    font-size: 0.75rem;
+    letter-spacing: 5px;
+    color: var(--char-color);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.cp-gen-label::before {
+    content: '';
+    width: 24px;
+    height: 2px;
+    background: var(--char-color);
+}
+
+.cp-hero-name {
+    font-family: 'Teko', sans-serif;
+    font-size: clamp(3.5rem, 10vw, 7.5rem);
+    font-weight: 900;
+    line-height: 0.95;
+    color: var(--nr-white);
+    text-shadow: 0 0 50px var(--char-glow);
+    margin-bottom: 0.2rem;
+    text-transform: uppercase;
+}
+
+.cp-hero-en {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1rem, 2.2vw, 1.4rem);
+    letter-spacing: 5px;
+    color: var(--char-color);
+    display: block;
+    margin-bottom: 2rem;
+    opacity: 0.8;
+}
+
+.cp-chara-desc {
+    font-size: 0.95rem;
+    color: var(--nr-muted);
+    line-height: 1.9;
+    border-left: 3px solid var(--char-color);
+    padding: 0.8rem 1.5rem;
+    background: var(--char-color-soft);
+    margin-bottom: 2rem;
+}
+
+.cp-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.cp-tag {
+    font-size: 0.78rem;
+    letter-spacing: 1px;
+    padding: 0.3rem 1rem;
+    border-radius: 2px;
+    border: 1px solid;
+}
+
+.cp-tag-primary {
+    border-color: var(--char-color);
+    color: var(--char-color);
+}
+
+.cp-tag-muted {
+    border-color: rgba(255, 255, 255, 0.13);
+    color: var(--nr-muted);
+}
+
+/* Right orb */
+.cp-hero-orb {
+    position: absolute;
+    right: 8vw;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--char-border);
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Teko', sans-serif;
+    font-size: 7rem;
+    font-weight: 900;
+    color: var(--char-color);
+    opacity: 0.85;
+    box-shadow: 0 0 60px var(--char-glow), inset 0 0 40px color-mix(in srgb, var(--char-color) 8%, transparent);
+    animation: orb-pulse 5s ease-in-out infinite;
+}
+
+@keyframes orb-pulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 60px var(--char-glow), inset 0 0 40px color-mix(in srgb, var(--char-color) 8%, transparent);
+    }
+
+    50% {
+        box-shadow: 0 0 90px var(--char-glow), inset 0 0 60px color-mix(in srgb, var(--char-color) 14%, transparent);
+    }
+}
+
+/* SECTIONS */
+.cp-section {
+    position: relative;
+    z-index: 10;
+    padding: 5rem 5vw;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.cp-section-title {
+    font-family: 'Teko', sans-serif;
+    font-weight: 900;
+    font-size: 1.8rem;
+    color: var(--nr-white);
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-transform: uppercase;
+}
+
+.cp-section-title::after {
+    content: '';
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(90deg, var(--char-color), transparent);
+}
+
+/* Cards */
+.cp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.2rem;
+}
+
+.cp-card {
+    background: rgba(10, 15, 20, 0.8);
+    border: 1px solid var(--char-border);
+    border-left: 4px solid var(--char-color);
+    padding: 2.5rem;
+    position: relative;
+    clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
+    transition: all 0.3s ease;
+}
+
+.cp-card:hover {
+    background: rgba(20, 25, 30, 0.9);
+    border-color: var(--char-color);
+    transform: translate(-4px, -4px);
+}
+
+.cp-card h3 {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var(--char-color);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.cp-card p,
+.cp-card li {
+    font-size: 0.88rem;
+    color: var(--nr-muted);
+    line-height: 1.85;
+}
+
+/* Table */
+.cp-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cp-table tr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cp-table tr:hover {
+    background: var(--char-color-soft);
+}
+
+.cp-table th {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: var(--char-color);
+    text-align: left;
+    padding: 0.8rem 1rem 0.8rem 0;
+    white-space: nowrap;
+    width: 35%;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-family: 'Teko', sans-serif;
+}
+
+.cp-table td {
+    font-size: 0.88rem;
+    color: var(--nr-text);
+    padding: 0.8rem 0;
+    line-height: 1.7;
+}
+
+/* FOOTER */
+.cp-footer {
+    position: relative;
+    z-index: 10;
+    border-top: 1px solid var(--nr-subtle);
+    padding: 3rem 5vw;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--nr-muted);
+}
+
+/* REVEAL */
+.cp-reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.cp-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .cp-hero-orb {
+        display: none;
+    }
+
+    .cp-bg-letter {
+        font-size: 100vw;
+    }
+}

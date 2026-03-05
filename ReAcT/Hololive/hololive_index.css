@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;600;800&family=M+PLUS+Rounded+1c:wght@400;700&display=swap');
+
+:root {
+    --hl-bg: #050510;
+    /* Very dark blue, almost black */
+    --hl-primary: #32A4FF;
+    /* Holo Blue */
+    --hl-accent: #FF3278;
+    /* Vibrant Pink */
+    --hl-text: #FFFFFF;
+    --hl-card-bg: rgba(20, 25, 40, 0.6);
+    --hl-border: rgba(50, 164, 255, 0.3);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--hl-bg);
+    color: var(--hl-text);
+    font-family: 'Jost', 'M PLUS Rounded 1c', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Dynamic Concert Lighting Background */
+.bg-fx {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+    background: radial-gradient(circle at 50% -20%, rgba(50, 164, 255, 0.15), transparent 70%);
+}
+
+.bg-fx::before,
+.bg-fx::after {
+    content: '';
+    position: absolute;
+    width: 200vw;
+    height: 100vh;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 50, 120, 0.05) 0%, transparent 60%);
+    animation: sweep 15s infinite alternate ease-in-out;
+    transform-origin: center top;
+}
+
+.bg-fx::before {
+    top: -50vh;
+    left: -50vw;
+}
+
+.bg-fx::after {
+    top: -50vh;
+    right: -50vw;
+    animation-delay: -7.5s;
+    background: radial-gradient(circle, rgba(50, 164, 255, 0.05) 0%, transparent 60%);
+}
+
+@keyframes sweep {
+    0% {
+        transform: rotate(-15deg) scale(1.2);
+    }
+
+    100% {
+        transform: rotate(15deg) scale(0.8);
+    }
+}
+
+::selection {
+    background: var(--hl-primary);
+    color: #fff;
+}
+
+/* Navigation */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(5, 5, 16, 0.8);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-brand,
+.nav-links a {
+    color: var(--hl-text);
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a:hover {
+    color: var(--hl-primary);
+}
+
+/* Hero */
+.hero {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 6rem;
+    font-weight: 800;
+    letter-spacing: 8px;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, #ffffff, var(--hl-primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 20px rgba(50, 164, 255, 0.4));
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    letter-spacing: 5px;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+}
+
+.main-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Branch Navigation */
+.branch-nav {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
+}
+
+.branch-link {
+    padding: 0.8rem 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    color: var(--hl-text);
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(5px);
+}
+
+.branch-link:hover {
+    background: var(--hl-primary);
+    border-color: var(--hl-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(50, 164, 255, 0.4);
+}
+
+/* Roster Grids */
+.gen-group {
+    margin-bottom: 5rem;
+    padding-top: 60px;
+    /* Offset for sticky nav scrolling */
+}
+
+.branch-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--hl-primary);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border-bottom: 1px solid rgba(50, 164, 255, 0.2);
+    padding-bottom: 1rem;
+}
+
+.gen-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.gen-title::before,
+.gen-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.member-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Stage Light Cards */
+.member-card {
+    background: var(--hl-card-bg);
+    border: 1px solid var(--hl-border);
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    color: var(--hl-text);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    backdrop-filter: blur(10px);
+}
+
+/* The Spotlight Hover Effect */
+.member-card::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(50, 164, 255, 0.4) 40%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.5s, top 0.5s;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+}
+
+.member-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    border-color: rgba(255, 255, 255, 0.6);
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.5),
+        0 0 20px rgba(50, 164, 255, 0.3) inset;
+    background: rgba(30, 40, 60, 0.8);
+}
+
+.member-card:hover::before {
+    opacity: 1;
+    top: -20px;
+}
+
+.m-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+    z-index: 1;
+}
+
+.m-title {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+/* Status Badges */
+.m-status {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 0.65rem;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 12px;
+    letter-spacing: 1px;
+    z-index: 2;
+}
+
+.m-status.grad {
+    background: rgba(255, 50, 120, 0.2);
+    color: #FF3278;
+    border: 1px solid rgba(255, 50, 120, 0.5);
+}
+
+.m-status.retired {
+    background: rgba(150, 150, 150, 0.2);
+    color: #ccc;
+    border: 1px solid rgba(150, 150, 150, 0.5);
+}
+
+/* Graduated Specific Styling */
+.member-card:has(.grad),
+.member-card:has(.retired) {
+    opacity: 0.7;
+    filter: grayscale(0.5);
+}
+
+.member-card:has(.grad):hover,
+.member-card:has(.retired):hover {
+    opacity: 1;
+    filter: grayscale(0);
+}
+
+/* Content Report Cards */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 5rem;
+}
+
+.card {
+    background: var(--hl-card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 2.5rem;
+    backdrop-filter: blur(10px);
+}
+
+.highlight-card {
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg, rgba(50, 164, 255, 0.1), rgba(255, 50, 120, 0.05));
+    border: 1px solid rgba(50, 164, 255, 0.3);
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--hl-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.card p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+/* Reveal Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Adjust initial container visibility */
+.roster-section {
+    opacity: 1 !important;
+    transform: none !important;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.roster-section>h2 {
+    display: none;
+}
+
+/* Hide old h2 since we have a custom hero now */

@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Quicksand:wght@500;700&display=swap');
+
+:root {
+    --kw-bg: #fff0f5;
+    /* Lavender blush base */
+    --kw-pink: #ffb6c1;
+    --kw-mint: #98ff98;
+    --kw-lavender: #e6e6fa;
+    --kw-text: #5d4037;
+    /* Soft brown text instead of harsh black */
+    --kw-card-bg: rgba(255, 255, 255, 0.7);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--kw-bg);
+    color: var(--kw-text);
+    font-family: 'Quicksand', sans-serif;
+    line-height: 1.5;
+    overflow-x: hidden;
+    position: relative;
+    /* Soft cloud background pattern */
+    background-image: radial-gradient(var(--kw-pink) 2px, transparent 2px), radial-gradient(var(--kw-lavender) 2px, transparent 2px);
+    background-size: 60px 60px;
+    background-position: 0 0, 30px 30px;
+}
+
+/* Custom rounded selection */
+::selection {
+    background: var(--kw-pink);
+    color: white;
+}
+
+.nav {
+    position: fixed;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--kw-card-bg);
+    backdrop-filter: blur(10px);
+    padding: 1rem 3rem;
+    border-radius: 50px;
+    box-shadow: 0 10px 25px rgba(255, 182, 193, 0.4);
+    z-index: 1000;
+    border: 3px solid white;
+}
+
+.nav-brand {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--kw-text);
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+/* Massive Bubbly Hero */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-title {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 8rem;
+    color: white;
+    text-shadow: 4px 4px 0 var(--kw-pink), 8px 8px 0 var(--kw-lavender);
+    z-index: 10;
+    animation: float 4s ease-in-out infinite;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: white;
+    padding: 0.5rem 2rem;
+    border-radius: 30px;
+    color: var(--kw-pink);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    z-index: 10;
+    margin-top: -20px;
+}
+
+/* Floating Decorative Bubbles */
+.bg-bubble {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(135deg, white, var(--kw-pink));
+    opacity: 0.6;
+    animation: drift 15s infinite linear;
+    z-index: 0;
+    box-shadow: inset 5px 5px 10px rgba(255, 255, 255, 0.8), 5px 5px 15px rgba(255, 182, 193, 0.3);
+}
+
+@keyframes drift {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-50px) rotate(180deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(360deg);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Pop-up Book Roster - Removing grids */
+.roster-container {
+    max-width: 1400px;
+    margin: -10vh auto 10rem;
+    padding: 2rem;
+    position: relative;
+    z-index: 5;
+}
+
+.bubble-cluster {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 8rem;
+    padding: 4rem 0;
+    position: relative;
+}
+
+.bubble-cluster::before {
+    content: attr(data-cluster);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Fredoka', sans-serif;
+    font-size: 3rem;
+    color: var(--kw-pink);
+    opacity: 0.3;
+}
+
+/* Interactive Roster Bubble */
+.bubble-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: white;
+    text-decoration: none;
+    color: var(--kw-text);
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    box-shadow:
+        0 15px 35px rgba(255, 182, 193, 0.3),
+        inset -5px -5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.bubble-card::after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 30px;
+    width: 40px;
+    height: 15px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    transform: rotate(-30deg);
+}
+
+.bubble-card:hover {
+    transform: scale(1.1) translateY(-10px);
+    box-shadow:
+        0 25px 45px rgba(255, 182, 193, 0.5),
+        inset -5px -5px 15px rgba(0, 0, 0, 0.05);
+    background: var(--kw-lavender);
+}
+
+.card-icon {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s;
+}
+
+.bubble-card:hover .card-icon {
+    transform: scale(1.2) rotate(10deg);
+}
+
+.card-name {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.1;
+}
+
+.card-sub {
+    font-size: 0.8rem;
+    opacity: 0.6;
+    margin-top: 0.2rem;
+}
+
+/* Specific Bubble Themes based on generation */
+.gen-1 .bubble-card:hover {
+    background: #ffe4e1;
+}
+
+/* Misty rose */
+.gen-2 .bubble-card:hover {
+    background: #e0ffff;
+}
+
+/* Light cyan */
+.gen-hana .bubble-card:hover {
+    background: #fffacd;
+}
+
+/* Lemon chiffon */
+
+/* Pop-in animation */
+.pop-in {
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.pop-in.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 4rem;
+        text-shadow: 2px 2px 0 var(--kw-pink);
+    }
+
+    .bubble-card {
+        width: 180px;
+        height: 180px;
+    }
+
+    .card-icon {
+        font-size: 3rem;
+    }
+
+    .card-name {
+        font-size: 1.2rem;
+    }
+}

@@ -1,0 +1,241 @@
+:root {
+    --nanashi-cyan: #00e5ff;
+    --nanashi-dark: #0a0a0c;
+    --nanashi-gray: #1a1a1e;
+    --nanashi-accent: var(--nanashi-cyan);
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.7);
+    --glass-bg: rgba(20, 20, 25, 0.8);
+    --glass-border: rgba(0, 229, 255, 0.2);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--nanashi-dark);
+    color: var(--text-primary);
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Background Effect */
+.bg-fx {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, #1a1a2e 0%, #0a0a0c 100%);
+    z-index: -1;
+}
+
+.bg-fx::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        linear-gradient(rgba(0, 229, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 255, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+
+/* Navigation */
+.nav {
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(10, 10, 12, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--glass-border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-brand {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--nanashi-cyan);
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.nav-links a {
+    color: var(--text-primary);
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--nanashi-cyan);
+}
+
+/* Hero Section */
+.hero {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.hero-name {
+    font-size: 4rem;
+    font-weight: 900;
+    letter-spacing: 4px;
+    margin-bottom: 1rem;
+    background: linear-gradient(180deg, #fff, var(--nanashi-cyan));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 20px rgba(0, 229, 255, 0.3);
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    color: var(--nanashi-cyan);
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+/* Content Container */
+.container {
+    max-width: 1000px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.section {
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    border-left: 4px solid var(--nanashi-cyan);
+    padding-left: 1rem;
+    margin-bottom: 2rem;
+    color: var(--nanashi-cyan);
+}
+
+/* Profile Grid */
+.profile-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    padding: 2.5rem;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-card::before {
+    content: "774INC";
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 5rem;
+    font-weight: 900;
+    color: rgba(0, 229, 255, 0.05);
+    pointer-events: none;
+}
+
+.data-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.data-item .label {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--nanashi-cyan);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.data-item .value {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/* Tags */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 2rem;
+}
+
+.tag {
+    padding: 0.4rem 1rem;
+    background: rgba(0, 229, 255, 0.1);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: var(--nanashi-cyan);
+}
+
+/* Description */
+.description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+/* History Box */
+.history-box {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 4px;
+    font-size: 0.95rem;
+}
+
+.history-item {
+    margin-bottom: 0.8rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.history-date {
+    color: var(--nanashi-cyan);
+    font-family: 'monospace';
+    min-width: 100px;
+}
+
+/* Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .hero-name {
+        font-size: 2.5rem;
+    }
+
+    .data-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}

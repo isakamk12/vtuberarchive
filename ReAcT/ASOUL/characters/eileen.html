@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eileen — A-SOUL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Noto+Sans+JP:wght@400;700;900&family=Kiwi+Maru:wght@300;400;500&family=Bebas+Neue&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a href="../asoul_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO A-SOUL</a>
+        <span class="cp-nav-gen">Current Member // Mature</span>
+    </nav>
+    <section class="cp-hero">
+        <div class="cp-bg-letter">E</div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">A-SOUL // MC</div>
+            <h1 class="cp-hero-name">Eileen</h1>
+            <span class="cp-hero-en">乃琳 (アイリーン)</span>
+            <p class="cp-chara-desc">
+                グループの<strong>「お姉ちゃん担当」</strong>。卓越したトークスキルと広範な知識を持ち、公式番組やライブ配信ではMCとして進行を司ることが多い。知的で落ち着いた雰囲気の中に、時折見せる茶目っ気がファンの心を捉えている。
+            </p>
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">#MC</span>
+                <span class="cp-tag cp-tag-muted">#Intelligent</span>
+                <span class="cp-tag cp-tag-muted">#BigSister</span>
+            </div>
+        </div>
+        <div class="cp-hero-orb">E</div>
+    </section>
+    <div class="cp-section cp-reveal">
+        <h2 class="cp-section-title">ARCHIVE DATA</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>PROFILE</h3>
+                <table class="cp-table">
+                    <tr>
+                        <th>STATUS</th>
+                        <td>Active</td>
+                    </tr>
+                    <tr>
+                        <th>POSITION</th>
+                        <td>Main MC, Big Sister</td>
+                    </tr>
+                    <tr>
+                        <th>ZODIAC</th>
+                        <td>Leo (獅子座)</td>
+                    </tr>
+                    <tr>
+                        <th>STRENGTH</th>
+                        <td>Talk skills, Knowledge</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="cp-card">
+                <h3>CHARACTER</h3>
+                <p>メンバーの中で最もクールに見えるが、実は非常に面倒見がよく、グループ全体のバランスを常に考えている。豆知識の共有が大好きで、彼女のトークからは学ぶことも多い。そのスタイリッシュな佇まいは、モデルさながらの美しさを持つ。
+                </p>
+            </div>
+        </div>
+    </div>
+    <footer class="cp-footer">
+        <p>© 2026 A-SOUL Archive — 非公式ファンサイト</p>
+    </footer>
+    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+</body>
+
+</html>

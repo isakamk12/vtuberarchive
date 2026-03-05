@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REM Kanashibari | V4Mirai Archive</title>
+    <link rel="stylesheet" href="char-base.css">
+</head>
+
+<body>
+    <header class="hero">
+        <h1 class="hero-name">REM</h1>
+        <p class="hero-subtitle">REM Kanashibari</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item"><span class="label">UNIT</span><span class="value">Lunalia</span></div>
+                    <div class="data-item"><span class="label">ID</span><span class="value">LUNA-01</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">DESCRIPTION</h2>
+            <div class="description">
+                <p>V4Miraiの第3世代（Lunalia）メンバー。夢と現実の狭間に住まうかのような、幻想的な声とビジュアルが魅力。リスナーを心地よい眠り、あるいは鮮明な夢の世界へと誘うような、唯一無二の配信を展開している。
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>

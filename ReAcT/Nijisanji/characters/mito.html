@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>月ノ美兎 | にじさんじアーカイブ</title>
+    <link rel="stylesheet" href="char-base.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="bg-fx"></div>
+    <nav class="nav">
+        <a href="../nijisanji_index.html" class="nav-brand">NIJISANJI ARCHIVE</a>
+    </nav>
+
+    <header class="hero">
+        <h1 class="hero-name">月ノ美兎</h1>
+        <p class="hero-subtitle">Tsukino Mito</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item"><span class="label">Birthday</span><span class="value">9月24日</span></div>
+                    <div class="data-item"><span class="label">Debut</span><span class="value">2018年2月8日</span></div>
+                    <div class="data-item"><span class="label">Gen</span><span class="value">1期生 (委員長)</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">DESCRIPTION</h2>
+            <div class="description">
+                <p>高校2年生。数々の伝説を作り上げたにじさんじの絶対的エース。生放送での奇想天外な企画とトーク力で、VTuber界に革命を起こした。「起立、気をつけ」の挨拶で知られる。</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>

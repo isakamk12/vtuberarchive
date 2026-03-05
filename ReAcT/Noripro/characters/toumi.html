@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>海月とうみ — のりプロ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&family=Bebas+Neue&family=Noto+Sans+JP:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #00bcd4;
+            --char-glow: rgba(0, 188, 212, 0.5);
+            --char-color-soft: rgba(0, 188, 212, 0.07);
+            --char-border: rgba(0, 188, 212, 0.22);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a href="../noripro_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO のりプロ</a>
+        <span class="cp-nav-gen">🌷 4月組 · 芸大生クリエイター</span>
+    </nav>
+    <section class="cp-hero">
+        <div class="cp-bg-letter">天</div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">のりプロ // 4月組</div>
+            <h1 class="cp-hero-name">海月とうみ</h1>
+            <span class="cp-hero-en">くらげとうみ — Kurage Toumi</span>
+            <p class="cp-chara-desc">
+                創作大好きな<strong>芸大生VTuber</strong>。クラゲから人間にされてしまった存在。映像・デザイン・プログラミングまでこなす<strong>天才肌のクリエイター</strong>。理系三冠・イガク原作者絶賛など実績多数。
+            </p>
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">#芸大生天才</span>
+                <span class="cp-tag cp-tag-primary">#理系三冠</span>
+                <span class="cp-tag cp-tag-muted">#5分スマブラ画面自作</span>
+                <span class="cp-tag cp-tag-muted">#イガク原作者絶賛</span>
+                <span class="cp-tag cp-tag-muted">#トミ君は女の子（社長談）</span>
+            </div>
+        </div>
+        <div class="cp-hero-orb">🎨</div>
+    </section>
+    <div class="cp-section cp-reveal">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>スキル・実績</h3>
+                <ul>
+                    <li><strong>映像制作・デザイン・プログラミング</strong>をこなす天才肌</li>
+                    <li>のりプロ学力テストで<strong>数学・理科・英語の三冠満点</strong></li>
+                    <li>漢字・暗記系は苦手</li>
+                    <li>相棒キャラクター「<strong>きーちゃん</strong>」</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="cp-section cp-reveal">
+        <h2 class="cp-section-title">EPISODES</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>5分でスマブラ参戦画面を自作</h3>
+                <p>話の流れで「挑戦者が現れました」風の画面を<strong>その場で5分以内に自作</strong>してしまうというバケモノ級の技術力を披露。その画面でことりを雑魚狩りしたのはご愛嬌。</p>
+            </div>
+            <div class="cp-card">
+                <h3>イガク原作者・原口沙輔氏に絶賛</h3>
+                <p>自作の歌ってみた動画のクオリティが高すぎた結果、<strong>『イガク』の原作者・原口沙輔先生本人に発見</strong>され「<strong>普通に動画お願いしたい</strong>」と絶賛された快挙。
+                </p>
+            </div>
+            <div class="cp-card">
+                <h3>女児・ショタ扱いと女装</h3>
+                <p>「キラふわグミ」好きなどの愛らしい言動から社長や先輩に<strong>「女児」「ショタ」</strong>扱いされる。社長から「<strong>トミ君は女の子</strong>」と謎断言され、公式ボイスのキービジュアルでは当たり前のように<strong>女装</strong>させられている。
+                </p>
+            </div>
+            <div class="cp-card">
+                <h3>お菓子追いはぎ被害</h3>
+                <p>先輩（瀬兎一也）からもらった誕生日プレゼントの<strong>ラスクを、ルチカとことりに引き剥がされて奪われる</strong>という不憫な被害に遭った。</p>
+            </div>
+        </div>
+    </div>
+    <footer class="cp-footer">
+        <p>© 2026 NoriPro Fan Archive — 非公式ファンサイト</p>
+    </footer>
+    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宗谷いちか - 774inc. Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+</head>
+
+<body>
+    <div class="bg-fx"></div>
+    <nav class="nav">
+        <a href="../nanashi_index.html" class="nav-brand"><i class="fa-solid fa-7"></i> 774inc.</a>
+        <div class="nav-links">
+            <a href="../nanashi_index.html">BACK TO LIST</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1 class="hero-name">宗谷いちか</h1>
+        <p class="hero-subtitle">Souya Ichika</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item">
+                        <span class="label">Unit</span>
+                        <span class="value">有閑喫茶あにまーれ (AniMare)</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Debut</span>
+                        <span class="value">2018.06.0 balance</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Status</span>
+                        <span class="value">Active</span>
+                    </div>
+                </div>
+                <div class="tags">
+                    <span class="tag">#宗谷いちか</span>
+                    <span class="tag">#あにまーれ</span>
+                    <span class="tag">#ななしいんく</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">DESCRIPTION</h2>
+            <p class="description">
+                有閑喫茶あにまーれの初期メンバー。高い歌唱力と落ち着いた雰囲気を持ち、音楽活動においても中心的な役割を果たす。優しくも芯の強いキャラクターで、多くのファンから支持されている。
+            </p>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

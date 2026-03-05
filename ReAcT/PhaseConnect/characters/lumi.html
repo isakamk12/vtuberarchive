@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaneko Lumi | Phase Connect Archive</title>
+    <link rel="stylesheet" href="char-base.css">
+</head>
+
+<body>
+    <div class="bg-fx"></div>
+    <nav class="nav">
+        <a href="../phaseconnect_index.html" class="nav-brand">PHASE CONNECT ARCHIVE</a>
+    </nav>
+
+    <header class="hero">
+        <h1 class="hero-name">Kaneko Lumi</h1>
+        <p class="hero-subtitle">金子 瑠美</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item"><span class="label">ID</span><span class="value">PH-IN-01</span></div>
+                    <div class="data-item"><span class="label">Phase</span><span class="value">Invaders</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">DESCRIPTION</h2>
+            <div class="description">
+                <p>Invadersのメンバー。別の世界からやってきた少女。非常に個性的で、予測不能な面白さを持つ。独特の感性とトークスキルで、多くのファンを魅了している。</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>

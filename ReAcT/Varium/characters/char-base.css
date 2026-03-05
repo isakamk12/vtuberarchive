@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=M+PLUS+Rounded+1c:wght@300;400;700;900&display=swap');
+
+:root {
+    --var-bg: #0c0e25;
+    --var-text: #ffffff;
+    --var-gold: #ffcc33;
+    --var-purple: #7a5fff;
+    --var-deep: #050614;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--var-bg);
+    color: var(--var-text);
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    line-height: 1.6;
+}
+
+.hero {
+    background: radial-gradient(circle at 50% 100%, #1a1c3a 0%, #0c0e25 100%);
+    padding: 6rem 2rem;
+    text-align: center;
+    border-bottom: 2px solid var(--var-gold);
+}
+
+.hero-name {
+    font-family: 'Cinzel', serif;
+    font-size: 5rem;
+    font-weight: 900;
+    color: var(--var-gold);
+    text-shadow: 0 0 20px rgba(255, 204, 51, 0.3);
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    letter-spacing: 0.8rem;
+    opacity: 0.5;
+    margin-top: 1rem;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.section {
+    margin-bottom: 5rem;
+}
+
+.section-title {
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    color: var(--var-purple);
+    margin-bottom: 2.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--var-purple), transparent);
+}
+
+.profile-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(122, 95, 255, 0.2);
+    padding: 4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.data-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
+}
+
+.data-item .label {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--var-gold);
+    margin-bottom: 0.8rem;
+    letter-spacing: 2px;
+}
+
+.data-item .value {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.description {
+    font-size: 1.2rem;
+    line-height: 2;
+    color: #bbb;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .hero-name {
+        font-size: 3rem;
+    }
+}

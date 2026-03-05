@@ -1,0 +1,386 @@
+/* --- Garu Custom Styles --- */
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+:root {
+    --garu-main: #f39c12;
+    /* Tiger Orange/Yellow */
+    --garu-dark: #2c3e50;
+    /* Black/Dark blue for stripes */
+    --garu-text: #ecf0f1;
+    --garu-bg: #111;
+    /* Dark background */
+    --g-white: #ffffff;
+    --g-gray: #7f8c8d;
+}
+
+body.garu-page {
+    background-color: var(--garu-bg);
+    color: var(--garu-text);
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Background Stripes */
+.garu-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: #111;
+    overflow: hidden;
+}
+
+.g-stripe {
+    position: absolute;
+    width: 250%;
+    height: 100px;
+    background: rgba(243, 156, 18, 0.05);
+    transform: rotate(-30deg);
+}
+
+.s-1 {
+    top: -20%;
+    left: -50%;
+}
+
+.s-2 {
+    top: 10%;
+    left: -50%;
+    height: 200px;
+    background: rgba(243, 156, 18, 0.03);
+}
+
+.s-3 {
+    top: 40%;
+    left: -50%;
+}
+
+.s-4 {
+    top: 70%;
+    left: -50%;
+    height: 150px;
+    background: rgba(243, 156, 18, 0.04);
+}
+
+.s-5 {
+    top: 100%;
+    left: -50%;
+}
+
+/* Navbar */
+.garu-nav {
+    background: rgba(17, 17, 17, 0.9);
+    border-bottom: 2px solid var(--garu-main);
+}
+
+.garu-nav .logo {
+    color: var(--garu-main);
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 2px;
+}
+
+.garu-nav .nav-links a {
+    color: var(--garu-text);
+}
+
+.garu-nav .nav-links a:hover {
+    color: var(--garu-main);
+}
+
+/* Hero Section */
+.g-hero {
+    padding-top: 10rem;
+    padding-bottom: 4rem;
+}
+
+.g-hero-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 3rem;
+}
+
+.g-icon-box {
+    width: 180px;
+    height: 180px;
+    background: var(--garu-main);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid white;
+    box-shadow: 10px 10px 0 var(--garu-dark), 0 0 30px rgba(243, 156, 18, 0.3);
+    transform: rotate(-10deg);
+    flex-shrink: 0;
+}
+
+.g-icon-text {
+    font-size: 6rem;
+    filter: drop-shadow(2px 2px 0px rgba(0, 0, 0, 0.5));
+}
+
+.g-title-block {
+    flex: 1;
+}
+
+.g-catch {
+    background: white;
+    color: var(--garu-dark);
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    font-weight: 900;
+    font-size: 1.3rem;
+    transform: skewX(-15deg);
+    margin-bottom: 1rem;
+    box-shadow: 4px 4px 0 var(--garu-main);
+}
+
+.g-name {
+    font-size: 5rem;
+    font-weight: 900;
+    color: var(--garu-main);
+    text-shadow: 3px 3px 0px var(--garu-dark), -1px -1px 0px white, 1px -1px 0px white, -1px 1px 0px white, 1px 1px 0px white;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+}
+
+.g-kana {
+    font-family: 'Anton', sans-serif;
+    font-size: 2.5rem;
+    color: var(--g-gray);
+    letter-spacing: 5px;
+    margin-bottom: 2rem;
+}
+
+.g-tags {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.g-tags span {
+    background: transparent;
+    color: var(--g-white);
+    border: 1px dotted var(--garu-main);
+    padding: 0.3rem 1rem;
+    margin: 0 0.5rem 0.5rem 0;
+    font-size: 0.95rem;
+    display: inline-block;
+}
+
+/* Main content */
+.g-main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem 5rem;
+}
+
+.g-section {
+    margin-bottom: 4rem;
+}
+
+.g-section-title {
+    font-family: 'Anton', sans-serif;
+    font-size: 2.2rem;
+    color: var(--garu-main);
+    margin-bottom: 2rem;
+    border-bottom: 4px solid var(--garu-dark);
+    padding-bottom: 0.5rem;
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+}
+
+.g-section-title span {
+    font-size: 1.5rem;
+}
+
+/* e.g. the emoji */
+.text-center {
+    text-align: center;
+    justify-content: center;
+}
+
+/* Grid / Profile */
+.g-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.g-profile-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 3rem;
+    border-radius: 12px;
+    border: 1px solid rgba(243, 156, 18, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.g-list {
+    list-style: none;
+    padding: 0;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.g-list li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.g-list li::before {
+    content: '🐅';
+    position: absolute;
+    left: -5px;
+    font-size: 1rem;
+}
+
+.g-list strong {
+    color: var(--garu-main);
+}
+
+.g-character h4 {
+    color: var(--garu-main);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px dashed var(--g-gray);
+    padding-bottom: 0.5rem;
+}
+
+.g-character p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.g-bullet-list {
+    list-style: square;
+    padding-left: 1.5rem;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.g-bullet-list li {
+    margin-bottom: 0.8rem;
+}
+
+/* Skills Grid */
+.g-skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.g-skill-box {
+    background: white;
+    color: var(--garu-dark);
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0 var(--garu-main);
+    border: 2px solid var(--garu-dark);
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.g-skill-box:hover {
+    transform: translateY(-5px);
+}
+
+.g-s-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.g-skill-box h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--garu-main);
+    display: inline-block;
+    padding-bottom: 0.2rem;
+}
+
+.g-skill-box p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    font-weight: bold;
+}
+
+/* Likes Card */
+.g-likes-card {
+    background: #1a1a1a;
+    padding: 3rem;
+    border-top: 5px solid var(--garu-main);
+}
+
+.g-like-col h3,
+.g-dislike-col h3 {
+    color: var(--g-white);
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.g-dl dt {
+    color: var(--garu-main);
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+    border-left: 4px solid var(--garu-main);
+}
+
+.g-dl dt:first-child {
+    margin-top: 0;
+}
+
+.g-dl dd {
+    margin-left: 0;
+    padding-left: 1.5rem;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.g-dislike-col dt {
+    color: #e74c3c;
+    border-left-color: #e74c3c;
+}
+
+/* Reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 900px) {
+    .g-hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .g-icon-box {
+        margin: 0 auto;
+    }
+
+    .g-grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .g-name {
+        font-size: 3.5rem;
+    }
+}

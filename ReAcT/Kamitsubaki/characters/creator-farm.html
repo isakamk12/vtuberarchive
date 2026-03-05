@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CREATOR FARM — KAMITSUBAKI STUDIO</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="kamitsubaki-char-base.css">
+    <style>
+        :root {
+            --char-color: #33ff33;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a href="../kamitsubaki_index.html" class="cp-back">← KAMITSUBAKI</a>
+        <span class="cp-nav-gen">INCUBATOR // CREATOR FARM</span>
+    </nav>
+    <section class="cp-hero">
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">Incubator Program</div>
+            <h1 class="cp-hero-name">CREATOR FARM</h1>
+            <span class="cp-hero-en">CREATOR FARM</span>
+            <p class="cp-chara-desc">
+                次世代の才能を発掘し、育成するための「苗床」。神椿の未来を担うコンポーザーやサウンドクリエイターたちが集い、切磋琢磨するインキュベーション部門。ここから多くの才能が主要レーベルへと羽ばたき、新たな音楽の潮流を作っている。
+            </p>
+        </div>
+    </section>
+    <div class="cp-section cp-reveal">
+        <h2 class="cp-section-title">MANIFESTO</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>PURPOSE</h3>
+                <table class="cp-table">
+                    <tr>
+                        <th>ROLE</th>
+                        <td>Talent Development</td>
+                    </tr>
+                    <tr>
+                        <th>LEVEL</th>
+                        <td>Incubator</td>
+                    </tr>
+                    <tr>
+                        <th>MEMBERS</th>
+                        <td>Numerous Emerging Talents</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="cp-card">
+                <h3>LOG</h3>
+                <p>梓川などの成功事例に見られるように、実力主義に基づいた昇格制度を確立。神椿の「循環」を支える最も重要な基盤の一つであり、常に新しい風が吹き込むクリエイティブの実験場としての役割を果たしている。</p>
+            </div>
+        </div>
+    </div>
+    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(entries => entries.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+</body>
+
+</html>

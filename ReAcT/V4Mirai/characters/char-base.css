@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&family=Outfit:wght@300;400;700;900&display=swap');
+
+:root {
+    --vm-cyan: #00f2fe;
+    --vm-purple: #ae37ff;
+    --vm-pink: #ff00de;
+    --vm-grad: linear-gradient(135deg, #00f2fe 0%, #ae37ff 50%, #ff00de 100%);
+    --vm-dark: #0a0b10;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--vm-dark);
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    line-height: 1.6;
+}
+
+.hero {
+    padding: 8rem 2rem 4rem;
+    text-align: center;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 2px;
+    background: var(--vm-grad);
+}
+
+.hero-name {
+    font-size: 5rem;
+    font-weight: 900;
+    background: var(--vm-grad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+    font-size: 1rem;
+    letter-spacing: 0.5rem;
+    opacity: 0.4;
+    margin-top: 1rem;
+    text-transform: uppercase;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 2rem 10rem;
+}
+
+.section {
+    margin-bottom: 6rem;
+}
+
+.section-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+    color: var(--vm-cyan);
+}
+
+.profile-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    padding: 4rem;
+}
+
+.data-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
+}
+
+.data-item .label {
+    display: block;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: #555;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.data-item .value {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.description {
+    font-size: 1.2rem;
+    line-height: 2;
+    color: #ccc;
+    font-weight: 300;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .hero-name {
+        font-size: 3rem;
+    }
+}

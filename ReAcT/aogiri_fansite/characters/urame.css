@@ -1,0 +1,619 @@
+/* ============================================================
+   urame.css - 春雨 麗女 (はるさめ うらめ) CHARACTER PAGE
+   Concept: Smoky izakaya, rock live house, sea & red lantern night
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&family=Noto+Sans+JP:wght@400;700;900&family=Oswald:wght@400;700&display=swap');
+
+:root {
+    --u-red: #c0392b;
+    --u-red-bright: #e74c3c;
+    --u-red-glow: rgba(192, 57, 43, 0.6);
+    --u-smoke: #1a1010;
+    --u-ash: #2e1a1a;
+    --u-ember: #ff6b35;
+    --u-cream: rgba(255, 235, 205, 0.85);
+    --u-muted: rgba(255, 235, 205, 0.45);
+    --u-white: #fff8f0;
+    --u-glass: rgba(255, 255, 255, 0.04);
+    --u-border: rgba(192, 57, 43, 0.3);
+}
+
+/* ============================================================
+   RESET & BASE (completely override aogiri.css defaults)
+   ============================================================ */
+body.urame-page {
+    background-color: var(--u-smoke) !important;
+    color: var(--u-cream) !important;
+    font-family: 'Noto Sans JP', sans-serif !important;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+body.urame-page *,
+body.urame-page *::before,
+body.urame-page *::after {
+    box-sizing: border-box;
+}
+
+/* ============================================================
+   BACKGROUND - smoky izakaya atmosphere
+   ============================================================ */
+.u-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background:
+        /* Red lantern glow top right */
+        radial-gradient(ellipse at 90% 10%, rgba(192, 57, 43, 0.25) 0%, transparent 45%),
+        /* Ember warmth bottom left */
+        radial-gradient(ellipse at 10% 90%, rgba(255, 107, 53, 0.15) 0%, transparent 40%),
+        /* base smoke */
+        #0f0a0a;
+    pointer-events: none;
+}
+
+/* Noise texture overlay for paper/smoke effect */
+.u-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+    opacity: 1;
+    mix-blend-mode: screen;
+    pointer-events: none;
+}
+
+/* Animated floating smoke particles */
+.u-smoke-particle {
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.08;
+    pointer-events: none;
+    animation: smoke-drift 30s ease-in-out infinite;
+}
+
+.u-smoke-particle:nth-child(1) {
+    background: var(--u-red);
+    top: 20%;
+    left: 60%;
+    animation-delay: 0s;
+}
+
+.u-smoke-particle:nth-child(2) {
+    background: var(--u-ember);
+    top: 60%;
+    left: 10%;
+    animation-delay: -10s;
+    opacity: 0.05;
+}
+
+.u-smoke-particle:nth-child(3) {
+    background: var(--u-red);
+    bottom: 10%;
+    right: 10%;
+    animation-delay: -20s;
+}
+
+@keyframes smoke-drift {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    33% {
+        transform: translate(30px, -30px) scale(1.1);
+    }
+
+    66% {
+        transform: translate(-20px, 20px) scale(0.9);
+    }
+}
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+.u-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1.2rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(15, 10, 10, 0.7);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--u-border);
+    transition: background 0.3s ease;
+}
+
+.u-back-link {
+    text-decoration: none;
+    color: var(--u-muted);
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: color 0.3s ease;
+}
+
+.u-back-link:hover {
+    color: var(--u-red-bright);
+}
+
+.u-nav-brand {
+    font-family: 'Kiwi Maru', serif;
+    font-size: 1.1rem;
+    color: var(--u-muted);
+}
+
+/* ============================================================
+   HERO - 春雨麗女の最初の印象
+   ============================================================ */
+.u-hero {
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 5vw;
+    overflow: hidden;
+}
+
+/* Red kanji watermark - massive background character */
+.u-hero-kanji {
+    position: absolute;
+    right: -2%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Kiwi Maru', serif;
+    font-size: 55vw;
+    font-weight: 900;
+    line-height: 0.8;
+    color: var(--u-red);
+    opacity: 0.04;
+    user-select: none;
+    pointer-events: none;
+    letter-spacing: -0.1em;
+}
+
+.u-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+}
+
+.u-eyebrow {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 6px;
+    color: var(--u-red-bright);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.u-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 2px;
+    background: var(--u-red-bright);
+}
+
+.u-hero-name {
+    font-family: 'Kiwi Maru', serif;
+    font-size: clamp(4rem, 10vw, 8rem);
+    line-height: 1;
+    color: var(--u-white);
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 40px var(--u-red-glow);
+}
+
+.u-hero-kana {
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+    color: var(--u-muted);
+    display: block;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+}
+
+/* The legendary catchphrase */
+.u-catchphrase {
+    font-family: 'Kiwi Maru', serif;
+    font-size: 1.3rem;
+    color: var(--u-red-bright);
+    border-left: 4px solid var(--u-red-bright);
+    padding: 0.8rem 1.5rem;
+    background: rgba(192, 57, 43, 0.08);
+    margin-bottom: 2.5rem;
+    display: inline-block;
+}
+
+.u-hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.u-tag {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    padding: 0.4rem 1.2rem;
+    border: 1px solid;
+    border-radius: 2px;
+    text-transform: uppercase;
+}
+
+.u-tag-red {
+    border-color: var(--u-red-bright);
+    color: var(--u-red-bright);
+}
+
+.u-tag-smoke {
+    border-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Right-side visual */
+.u-hero-visual {
+    position: absolute;
+    right: 5vw;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.u-glass-circle {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: var(--u-glass);
+    border: 1px solid var(--u-border);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Kiwi Maru', serif;
+    font-size: 10rem;
+    color: var(--u-red-bright);
+    opacity: 0.8;
+    box-shadow:
+        0 0 60px var(--u-red-glow),
+        inset 0 0 60px rgba(192, 57, 43, 0.1);
+    animation: pulse-lantern 4s ease-in-out infinite;
+}
+
+@keyframes pulse-lantern {
+
+    0%,
+    100% {
+        box-shadow: 0 0 60px var(--u-red-glow), inset 0 0 60px rgba(192, 57, 43, 0.1);
+    }
+
+    50% {
+        box-shadow: 0 0 100px var(--u-red-glow), inset 0 0 80px rgba(192, 57, 43, 0.2);
+    }
+}
+
+/* ============================================================
+   SCROLL REVEAL
+   ============================================================ */
+.u-reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.u-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ============================================================
+   SECTION LAYOUT
+   ============================================================ */
+.u-section {
+    position: relative;
+    z-index: 10;
+    padding: 7rem 5vw;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.u-section-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5rem;
+    letter-spacing: 4px;
+    color: var(--u-white);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.u-section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--u-border), transparent);
+}
+
+.u-section-sub {
+    font-family: 'Kiwi Maru', serif;
+    font-size: 1rem;
+    color: var(--u-red-bright);
+    letter-spacing: 2px;
+}
+
+/* ============================================================
+   INFO CARDS - izakaya menu card style
+   ============================================================ */
+.u-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.u-card {
+    background: var(--u-glass);
+    border: 1px solid var(--u-border);
+    border-radius: 4px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.u-card:hover {
+    border-color: rgba(192, 57, 43, 0.6);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(192, 57, 43, 0.15);
+}
+
+/* Red top accent line */
+.u-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--u-red), transparent);
+}
+
+.u-card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+    filter: drop-shadow(0 0 8px rgba(192, 57, 43, 0.5));
+}
+
+.u-card h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    color: var(--u-red-bright);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.u-card p,
+.u-card li {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--u-muted);
+}
+
+.u-card strong {
+    color: var(--u-cream);
+}
+
+.u-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.u-card ul li {
+    padding: 0.4rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    position: relative;
+    padding-left: 1.2rem;
+}
+
+.u-card ul li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: var(--u-red);
+    font-size: 0.7rem;
+    top: 0.7rem;
+}
+
+/* ============================================================
+   PROFILE TABLE - izakaya "menu" style
+   ============================================================ */
+.u-profile-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.u-profile-table tr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: background 0.2s ease;
+}
+
+.u-profile-table tr:hover {
+    background: rgba(192, 57, 43, 0.05);
+}
+
+.u-profile-table th {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    color: var(--u-red-bright);
+    text-transform: uppercase;
+    text-align: left;
+    padding: 1rem 1.5rem 1rem 0;
+    white-space: nowrap;
+    width: 30%;
+}
+
+.u-profile-table td {
+    font-size: 0.95rem;
+    color: var(--u-cream);
+    padding: 1rem 0;
+    line-height: 1.7;
+}
+
+/* ============================================================
+   FEATURED - drink poster style highlight
+   ============================================================ */
+.u-feature-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.u-feature-large {
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg, rgba(192, 57, 43, 0.12), rgba(192, 57, 43, 0.04));
+    border: 1px solid rgba(192, 57, 43, 0.4);
+    border-radius: 4px;
+    padding: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.u-feature-large::after {
+    content: '🍺';
+    position: absolute;
+    right: 2rem;
+    bottom: -1rem;
+    font-size: 8rem;
+    opacity: 0.06;
+    line-height: 1;
+    font-family: sans-serif;
+}
+
+.u-feature-large .u-card-icon {
+    font-size: 3.5rem;
+}
+
+.u-feature-large h3 {
+    font-family: 'Kiwi Maru', serif;
+    font-size: 1.8rem;
+    color: var(--u-white);
+    margin-bottom: 1.2rem;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+.u-feature-large p {
+    font-size: 1rem;
+    line-height: 1.9;
+    color: var(--u-muted);
+}
+
+.u-feature-large strong {
+    color: var(--u-cream);
+}
+
+/* ============================================================
+   RELATIONSHIP WEB - pub gossip board style
+   ============================================================ */
+.u-rel-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+}
+
+.u-rel-card {
+    background: var(--u-glass);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 4px;
+    padding: 1.5rem;
+    transition: border-color 0.3s ease;
+}
+
+.u-rel-card:hover {
+    border-color: var(--u-border);
+}
+
+.u-rel-card h4 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    color: var(--u-red-bright);
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+}
+
+.u-rel-card p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--u-muted);
+}
+
+.u-rel-card strong {
+    color: var(--u-cream);
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.u-footer {
+    position: relative;
+    z-index: 10;
+    padding: 4rem 5vw;
+    text-align: center;
+    border-top: 1px solid var(--u-border);
+    color: var(--u-muted);
+    font-size: 0.85rem;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 900px) {
+    .u-hero {
+        flex-direction: column;
+        padding-top: 8rem;
+        text-align: center;
+    }
+
+    .u-hero-visual {
+        display: none;
+    }
+
+    .u-eyebrow {
+        justify-content: center;
+    }
+
+    .u-hero-tags {
+        justify-content: center;
+    }
+
+    .u-feature-row {
+        grid-template-columns: 1fr;
+    }
+
+    .u-feature-large {
+        grid-column: 1;
+    }
+}

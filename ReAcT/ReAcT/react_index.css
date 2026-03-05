@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Rajdhani:wght@500;600;700&display=swap');
+
+:root {
+    --req-bg: #05050a;
+    --req-dark: #121218;
+    --req-cyan: #00f3ff;
+    --req-magenta: #ff0055;
+    --req-text: #ffffff;
+    --req-glow: 0 0 15px rgba(0, 243, 255, 0.4);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--req-bg);
+    color: var(--req-text);
+    font-family: 'Rajdhani', sans-serif;
+    line-height: 1.4;
+    overflow-x: hidden;
+    /* subtle equalizer grid background */
+    background-image:
+        linear-gradient(rgba(0, 243, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 243, 255, 0.03) 1px, transparent 1px);
+    background-size: 30px 30px;
+}
+
+::selection {
+    background: var(--req-magenta);
+    color: white;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    border-bottom: 2px solid var(--req-cyan);
+    box-shadow: var(--req-glow);
+    background: var(--req-dark);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-brand {
+    font-family: 'Audiowide', cursive;
+    font-size: 2rem;
+    color: var(--req-cyan);
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+/* Audio Visualizer Hero */
+.hero {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    border-bottom: 5px solid var(--req-magenta);
+}
+
+.hero-title {
+    font-family: 'Audiowide', cursive;
+    font-size: 6rem;
+    color: var(--req-text);
+    text-shadow: 0 0 20px var(--req-magenta);
+    letter-spacing: 5px;
+    z-index: 2;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 10px;
+    color: var(--req-cyan);
+    text-transform: uppercase;
+    margin-top: 1rem;
+    z-index: 2;
+}
+
+/* Massive background equalizer */
+.bg-eq {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: flex-end;
+    gap: 1%;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.bg-eq-bar {
+    flex: 1;
+    background: linear-gradient(to top, var(--req-cyan), var(--req-magenta));
+    animation: eq-bounce 1.5s infinite alternate ease-in-out;
+}
+
+@keyframes eq-bounce {
+    0% {
+        height: 10%;
+    }
+
+    100% {
+        height: 100%;
+    }
+}
+
+.container {
+    padding: 6rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.cat-section {
+    margin-bottom: 8rem;
+}
+
+.cat-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.cat-title {
+    font-family: 'Audiowide', cursive;
+    font-size: 3rem;
+    color: var(--req-cyan);
+    text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+    white-space: nowrap;
+}
+
+.cat-line {
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(90deg, var(--req-cyan), transparent);
+}
+
+/* DJ Vinyl Layout */
+.vinyl-deck {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+}
+
+/* The Record */
+.vinyl-card {
+    display: block;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: #000;
+    position: relative;
+    text-decoration: none;
+    color: var(--req-text);
+    box-shadow:
+        0 0 0 5px var(--req-dark),
+        0 0 20px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease;
+    /* Grooves */
+    background-image:
+        repeating-radial-gradient(circle at center,
+            #111 0,
+            #000 2px,
+            #111 4px);
+}
+
+/* The Label (Center) */
+.vinyl-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: var(--req-dark);
+    border: 2px solid var(--req-cyan);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+/* The spindle hole */
+.vinyl-label::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: var(--req-bg);
+    border: 1px solid #333;
+}
+
+.card-num {
+    font-size: 0.7rem;
+    color: var(--req-cyan);
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+}
+
+.card-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.1;
+    /* Avoid center hole */
+    margin-top: 15px;
+}
+
+/* Hover Effects */
+.vinyl-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px var(--req-magenta);
+}
+
+.vinyl-card:hover .vinyl-label {
+    border-color: var(--req-magenta);
+    background: #1a0011;
+}
+
+/* The Vinyl Spin */
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Create a spinning container for the grooves, leaving label upright */
+.vinyl-grooves {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-image: repeating-radial-gradient(circle at center, #111 0, #000 2px, #111 4px);
+    z-index: 1;
+    /* Fake reflection */
+    mask-image: linear-gradient(45deg, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 1) 60%);
+}
+
+.vinyl-card:hover .vinyl-grooves {
+    animation: spin 2s linear infinite;
+}
+
+/* Mini Equalizer inside label on hover */
+.mini-eq {
+    position: absolute;
+    top: 15px;
+    display: flex;
+    gap: 2px;
+    height: 15px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.vinyl-card:hover .mini-eq {
+    opacity: 1;
+}
+
+.mini-bar {
+    width: 3px;
+    background: var(--req-magenta);
+    animation: eq-bounce 0.5s infinite alternate ease-in-out;
+}
+
+.mini-bar:nth-child(2) {
+    animation-duration: 0.7s;
+}
+
+.mini-bar:nth-child(3) {
+    animation-duration: 0.4s;
+}
+
+.mini-bar:nth-child(4) {
+    animation-duration: 0.6s;
+}
+
+.mini-bar:nth-child(5) {
+    animation-duration: 0.8s;
+}
+
+.gaming-tag {
+    position: absolute;
+    bottom: 10px;
+    font-size: 0.6rem;
+    background: var(--req-cyan);
+    color: var(--req-bg);
+    padding: 0 5px;
+    border-radius: 3px;
+}
+
+.reveal {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 3.5rem;
+    }
+
+    .vinyl-deck {
+        gap: 2rem;
+    }
+
+    .vinyl-card {
+        width: 180px;
+        height: 180px;
+    }
+
+    .vinyl-label {
+        width: 90px;
+        height: 90px;
+    }
+
+    .card-name {
+        font-size: 0.9rem;
+        margin-top: 10px;
+    }
+
+    .card-num {
+        font-size: 0.6rem;
+    }
+}

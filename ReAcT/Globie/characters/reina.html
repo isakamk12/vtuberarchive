@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reina Ronronea — Globie</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a href="../globie_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO Globie</a>
+        <span class="cp-nav-gen">1st Generation</span>
+    </nav>
+    <section class="cp-hero">
+        <div class="cp-bg-letter">R</div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">Globie // 1st Gen</div>
+            <h1 class="cp-hero-name">Reina</h1>
+            <span class="cp-hero-en">Reina Ronronea (レイナ・ロンロネア)</span>
+            <p class="cp-chara-desc">スペイン出身のVSinger。スペイン語と英語での配信と、その高い歌唱力でファンを魅了した。2025年10月に卒業。</p>
+            <div class="cp-tags">
+                <span class="cp-tag">#Cat</span>
+                <span class="cp-tag">#Spain</span>
+                <span class="cp-tag">#VSinger</span>
+            </div>
+        </div>
+    </section>
+    <div class="cp-section cp-reveal">
+        <h2 class="cp-section-title">ARCHIVE DATA</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>PROFILE</h3>
+                <table class="cp-table">
+                    <tr>
+                        <th>STATUS</th>
+                        <td>Graduated</td>
+                    </tr>
+                    <tr>
+                        <th>RACE</th>
+                        <td>Cat</td>
+                    </tr>
+                    <tr>
+                        <th>SPEC</th>
+                        <td>VSinger</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="cp-card">
+                <h3>EPISODES</h3>
+                <p>2025年10月に惜しまれつつ卒業。彼女の卒業は、globie第2期生の大量卒業と同時期であり、運営体制の変更が影響したと言われている。</p>
+            </div>
+        </div>
+    </div>
+    <footer class="cp-footer">
+        <p>© 2026 Globie Archive</p>
+    </footer>
+    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+</body>
+
+</html>

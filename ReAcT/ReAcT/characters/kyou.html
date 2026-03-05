@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>花鋏キョウ | Re:AcT Archive</title>
+    <link rel="stylesheet" href="char-base.css">
+</head>
+
+<body>
+    <div class="bg-glow"></div>
+    <nav class="nav">
+        <a href="../react_index.html" class="nav-brand">RE:ACT ARCHIVE</a>
+    </nav>
+
+    <header class="hero">
+        <h1 class="hero-name">Kyou</h1>
+        <p class="hero-subtitle">花鋏キョウ</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item"><span class="label">ID</span><span class="value">REA-002</span></div>
+                    <div class="data-item"><span class="label">STATUS</span><span class="value">MAIN</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">DESCRIPTION</h2>
+            <div class="description">
+                <p>Re:AcT所属のバーチャルアーティスト。繊細さと力強さを兼ね備えた唯一無二の歌声が魅力。独自の世界観を大切にした楽曲やパフォーマンスで、リスナーを深い感動の渦へと誘う。</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>

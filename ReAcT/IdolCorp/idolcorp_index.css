@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;900&family=Outfit:wght@400;700;900&display=swap');
+
+:root {
+    --cs-bg: #0b0b1a;
+    /* Deep Space Blue */
+    --cs-gold: #ffd700;
+    --cs-silver: #c0c0c0;
+    --cs-text: #ffffff;
+    --cs-foil: linear-gradient(125deg, #ff0080, #ff8c00, #40e0d0);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--cs-bg);
+    color: var(--cs-text);
+    font-family: 'Outfit', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+    /* Subtle starfield or dark gradient */
+    background-image: radial-gradient(circle at 50% -20%, rgba(64, 224, 208, 0.15) 0%, transparent 60%);
+}
+
+::selection {
+    background: var(--cs-gold);
+    color: #000;
+}
+
+/* Chroma Nav */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(11, 11, 26, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-brand {
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    font-weight: 900;
+    background: var(--cs-foil);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.nav-status {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.9rem;
+    color: var(--cs-silver);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* Hero */
+.hero {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero-title {
+    font-family: 'Cinzel', serif;
+    font-size: 7rem;
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+    letter-spacing: 5px;
+    text-shadow: 0 0 30px rgba(64, 224, 208, 0.2);
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 5px;
+    left: -5px;
+    background: var(--cs-foil);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0.8;
+    z-index: -1;
+    filter: blur(8px);
+}
+
+.hero-subtitle {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.2rem;
+    color: var(--cs-gold);
+    letter-spacing: 12px;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 4rem auto;
+    padding: 2rem;
+}
+
+.unit-title {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    color: white;
+    text-align: center;
+    margin: 6rem 0 3rem;
+    letter-spacing: 4px;
+    position: relative;
+}
+
+.unit-title::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 2px;
+    background: var(--cs-gold);
+    margin: 1rem auto 0;
+}
+
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+}
+
+/* 
+ * TCG HOLOGRAPHIC CARD SYSTEM
+ * Utilizing 3D perspective and pseudo-elements for glare/foil 
+ */
+.tcg-wrapper {
+    perspective: 1000px;
+    width: 260px;
+    height: 380px;
+    text-decoration: none;
+    color: var(--cs-text);
+}
+
+.tcg-card {
+    width: 100%;
+    height: 100%;
+    background: #111;
+    border-radius: 12px;
+    border: 8px solid #222;
+    /* Simulate card frame */
+    box-shadow:
+        0 0 10px rgba(0, 0, 0, 0.8),
+        inset 0 0 0 2px var(--cs-gold);
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.2s ease-out;
+    /* JavaScript will handle active tilting */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+/* Base state for CSS-only hover (fallback if JS fails) */
+.tcg-wrapper:hover .tcg-card {
+    transform: rotateY(10deg) rotateX(10deg) scale(1.05);
+    border-color: #333;
+    box-shadow:
+        -10px 10px 20px rgba(0, 0, 0, 0.6),
+        inset 0 0 0 2px var(--cs-gold);
+    z-index: 10;
+}
+
+/* The Holographic Foil Layer overlay */
+.tcg-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--cs-foil);
+    mix-blend-mode: color-dodge;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    z-index: 5;
+}
+
+/* The Glare Effect overlay */
+.tcg-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(105deg, transparent 40%, rgba(255, 255, 255, 0.4) 45%, rgba(255, 255, 255, 0.6) 50%, transparent 55%);
+    transform: translateY(100%);
+    transition: transform 0.6s;
+    pointer-events: none;
+    z-index: 6;
+    mix-blend-mode: overlay;
+}
+
+.tcg-wrapper:hover .tcg-card::before {
+    opacity: 0.15;
+}
+
+.tcg-wrapper:hover .tcg-card::after {
+    transform: translateY(-100%);
+}
+
+/* Card Content / Nameplate */
+.tcg-content {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    width: 100%;
+    padding: 1.5rem 1rem;
+    border-top: 2px solid var(--cs-gold);
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    transform: translateZ(30px);
+    /* Pops out slightly in 3D space */
+}
+
+.tcg-tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--cs-gold);
+    color: #000;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900;
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: 4px;
+    z-index: 3;
+    transform: translateZ(20px);
+}
+
+.m-name {
+    font-family: 'Cinzel', serif;
+    font-weight: 900;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    margin-bottom: 0.3rem;
+    display: block;
+}
+
+.m-sub {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.8rem;
+    color: var(--cs-silver);
+    display: block;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}

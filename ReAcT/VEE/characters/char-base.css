@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Syne:wght@400;700;800&display=swap');
+
+:root {
+    --vee-bg: #ffffff;
+    --vee-text: #000000;
+    --vee-accent: #ff0055;
+    --vee-sub: #f0f0f0;
+    --vee-border: #e0e0e0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--vee-bg);
+    color: var(--vee-text);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+}
+
+.hero {
+    border-bottom: 5px solid var(--vee-text);
+    padding: 8rem 3rem 4rem;
+}
+
+.hero-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 6rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -0.05em;
+    line-height: 0.9;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 6rem 3rem;
+}
+
+.section {
+    margin-bottom: 8rem;
+}
+
+.section-label {
+    font-size: 0.8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--vee-accent);
+    margin-bottom: 2rem;
+    display: block;
+}
+
+.profile-card {
+    background: var(--vee-sub);
+    padding: 4rem;
+    border-left: 10px solid var(--vee-text);
+}
+
+.data-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 4rem;
+}
+
+.data-item .label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    opacity: 0.4;
+    margin-bottom: 1rem;
+}
+
+.data-item .value {
+    font-family: 'Syne', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #444;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .hero-name {
+        font-size: 3rem;
+    }
+}

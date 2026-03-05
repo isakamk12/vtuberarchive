@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Noto+Sans+JP:wght@400;700;900&display=swap');
+
+:root {
+    --vp-bg: #050b14;
+    /* Deep cyber blue/black */
+    --vp-text: #e0f2f1;
+    --vp-main: #00ffcc;
+    /* Cyan / Neon Green */
+    --vp-alert: #ff3366;
+    /* Critical Red */
+    --vp-dim: #4d6a79;
+    --vp-card: #0a192f;
+    --vp-border: rgba(0, 255, 204, 0.3);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--vp-bg);
+    color: var(--vp-text);
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+    /* Grid + Scanlines */
+    background-image:
+        linear-gradient(rgba(0, 255, 204, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 204, 0.05) 1px, transparent 1px),
+        repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 0, 0, 0.1) 2px, rgba(0, 0, 0, 0.1) 4px);
+    background-size: 100px 100px, 100px 100px, 100% 100%;
+}
+
+::selection {
+    background: var(--vp-main);
+    color: #000;
+}
+
+/* HUD Navigation */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(5, 11, 20, 0.95);
+    border-bottom: 2px solid var(--vp-main);
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.2);
+}
+
+.nav-brand {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--vp-main);
+    text-decoration: none;
+    letter-spacing: 4px;
+    text-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+}
+
+.nav-status {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.9rem;
+    color: var(--vp-main);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    animation: pulse 2s infinite;
+}
+
+.nav-status::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: var(--vp-main);
+    box-shadow: 0 0 10px var(--vp-main);
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Hero Section */
+.hero {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    border-bottom: 1px solid var(--vp-border);
+}
+
+.hero::after {
+    /* Corner brackets */
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    right: 10%;
+    bottom: 20%;
+    border: 1px solid var(--vp-border);
+    clip-path: polygon(0 0, 10% 0, 10% 100%, 0 100%, 0 0, 90% 0, 100% 0, 100% 100%, 90% 100%, 90% 0);
+    pointer-events: none;
+}
+
+.hero-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 8rem;
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 2px var(--vp-main);
+    letter-spacing: 1.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.hero-subtitle {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 5px;
+    color: var(--vp-text);
+    text-shadow: 0 0 15px rgba(0, 255, 204, 0.4);
+}
+
+.container {
+    max-width: 1400px;
+    margin: 4rem auto;
+    padding: 2rem;
+}
+
+/* Bracket Titles - Data Categories */
+.bracket-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    color: var(--vp-main);
+    letter-spacing: 3px;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.bracket-title::before {
+    content: '[ ';
+    font-size: 3rem;
+    font-weight: 300;
+    opacity: 0.5;
+}
+
+.bracket-title::after {
+    content: ' ]';
+    font-size: 3rem;
+    font-weight: 300;
+    opacity: 0.5;
+}
+
+/* Roster Grids */
+.roster-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 3rem;
+}
+
+/* HUD Data Cards */
+.vogi-card {
+    background: var(--vp-card);
+    border: 1px solid var(--vp-border);
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-decoration: none;
+    color: var(--vp-text);
+    position: relative;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8) inset;
+    transition: all 0.3s;
+    overflow: hidden;
+}
+
+/* Diagonal cut corner */
+.vogi-card {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+}
+
+/* UI details inside card */
+.vogi-card::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    border-top: 2px solid var(--vp-main);
+    border-left: 2px solid var(--vp-main);
+    transition: width 0.3s, height 0.3s;
+}
+
+.vogi-card:hover {
+    background: rgba(0, 255, 204, 0.05);
+    border-color: var(--vp-main);
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.1);
+    transform: translateY(-5px);
+}
+
+.vogi-card:hover::before {
+    width: 60px;
+    height: 60px;
+}
+
+.crosshair {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 40px;
+    height: 40px;
+    border: 1px dashed var(--vp-dim);
+    border-radius: 50%;
+    opacity: 0.3;
+    transition: transform 0.5s, opacity 0.3s;
+}
+
+.crosshair::before,
+.crosshair::after {
+    content: '';
+    position: absolute;
+    background: var(--vp-dim);
+}
+
+.crosshair::before {
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+}
+
+.crosshair::after {
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+}
+
+.vogi-card:hover .crosshair {
+    transform: rotate(90deg) scale(1.2);
+    opacity: 1;
+    border-color: var(--vp-main);
+}
+
+.vogi-card:hover .crosshair::before,
+.vogi-card:hover .crosshair::after {
+    background: var(--vp-main);
+}
+
+.status-badge {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+}
+
+.badge-active {
+    background: rgba(0, 255, 204, 0.2);
+    color: var(--vp-main);
+    border: 1px solid var(--vp-main);
+}
+
+.badge-offline {
+    background: rgba(255, 51, 102, 0.2);
+    color: var(--vp-alert);
+    border: 1px solid var(--vp-alert);
+}
+
+.c-name {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #fff;
+    z-index: 1;
+}
+
+.c-sub {
+    font-size: 0.9rem;
+    color: var(--vp-dim);
+    letter-spacing: 2px;
+    z-index: 1;
+}
+
+/* Offline Card specifics */
+.vogi-card:has(.badge-offline) {
+    border-color: rgba(255, 51, 102, 0.3);
+}
+
+.vogi-card:has(.badge-offline)::before {
+    border-color: var(--vp-alert);
+}
+
+.vogi-card:has(.badge-offline):hover {
+    border-color: var(--vp-alert);
+    background: rgba(255, 51, 102, 0.05);
+    box-shadow: 0 0 20px rgba(255, 51, 102, 0.1);
+}
+
+.vogi-card:has(.badge-offline) .c-name {
+    color: #ccc;
+}
+
+/* Reveal Animations */
+.reveal {
+    opacity: 0;
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform: translateY(20px);
+}
+
+.reveal.active {
+    opacity: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transform: translateY(0);
+}

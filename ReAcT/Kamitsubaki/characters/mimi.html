@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIMI — KAMITSUBAKI STUDIO</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="kamitsubaki-char-base.css">
+    <style>
+        :root {
+            --char-color: #ff99cc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a href="../kamitsubaki_index.html" class="cp-back">← KAMITSUBAKI</a>
+        <span class="cp-nav-gen">VIRTUAL & REAL // MIMI</span>
+    </nav>
+    <section class="cp-hero">
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">Virtual & Real Artist</div>
+            <h1 class="cp-hero-name">MIMI</h1>
+            <span class="cp-hero-en">MIMI</span>
+            <p class="cp-chara-desc">
+                ピアノを基調とした、どこか切なくも温かい旋律を紡ぐクリエイター。繊細な心の機微を描き出す歌詞と、透明感のあるメロディで、多くのリスナーの涙を誘う。神椿の中でも一際「優しさ」と「寂しさ」の共生を美しく描き出す才能。
+            </p>
+        </div>
+    </section>
+    <div class="cp-section cp-reveal">
+        <h2 class="cp-section-title">MANIFESTO</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>ESSENCE</h3>
+                <table class="cp-table">
+                    <tr>
+                        <th>AFFILIATION</th>
+                        <td>SINSEKAI RECORD</td>
+                    </tr>
+                    <tr>
+                        <th>ROLE</th>
+                        <td>Composer / Pianist</td>
+                    </tr>
+                    <tr>
+                        <th>STYLE</th>
+                        <td>Piano Pop / Emotional</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="cp-card">
+                <h3>LOG</h3>
+                <p>ボカロ曲「ハナタバ」などの大ヒットにより、その名を知らしめる。神椿・深脊界においても、その天性のメロディセンスはいかんなく発揮されており、提供楽曲においてもアーティストの新たな一面を引き出している。リスナーの心に寄り添う、癒しの旋律。
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(entries => entries.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+</body>
+
+</html>

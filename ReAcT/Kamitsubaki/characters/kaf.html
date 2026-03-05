@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>花譜 (KAF) — KAMITSUBAKI STUDIO</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="kamitsubaki-char-base.css">
+    <style>
+        :root {
+            --char-color: #33aaff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a href="../kamitsubaki_index.html" class="cp-back">← KAMITSUBAKI</a>
+        <span class="cp-nav-gen">VIRTUAL SINGER // KAF</span>
+    </nav>
+    <section class="cp-hero">
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">Virtual Artist</div>
+            <h1 class="cp-hero-name">花譜</h1>
+            <span class="cp-hero-en">KAF</span>
+            <p class="cp-chara-desc">日本の何処かに棲む、何処にでもいる、何処にもいない18才。その歌声は、繊細さと力強さを併せ持ち、聴く者の深淵へと潜り込む。KAMITSUBAKI
+                STUDIOの原点であり、バーチャルシンガーという存在を世に知らしめた現象そのもの。</p>
+        </div>
+    </section>
+    <div class="cp-section cp-reveal">
+        <h2 class="cp-section-title">MANIFESTO</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>ESSENCE</h3>
+                <table class="cp-table">
+                    <tr>
+                        <th>DEBUT</th>
+                        <td>2018.10.18</td>
+                    </tr>
+                    <tr>
+                        <th>AFFILIATION</th>
+                        <td>KAMITSUBAKI STUDIO</td>
+                    </tr>
+                    <tr>
+                        <th>TYPE</th>
+                        <td>Virtual Singer</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="cp-card">
+                <h3>BIOGRAPHY</h3>
+                <p>YouTubeを中心とした活動から、数々のワンマンライブ（不可解）を成功させ、日本武道館公演、そして代々木第一体育館での「怪歌」を成し遂げる。彼女の歌は、一個人の内省的な感情を普遍的な芸術へと昇華させ続けている。
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(entries => entries.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+</body>
+
+</html>

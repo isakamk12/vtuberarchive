@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天籠りのん | VEE Archive</title>
+    <link rel="stylesheet" href="char-base.css">
+</head>
+
+<body>
+    <header class="hero">
+        <h1 class="hero-name">RINON</h1>
+        <p class="hero-subtitle">天籠りのん / Amago Rinon</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <span class="section-label">IDENTIFIER</span>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item"><span class="label">GROUP</span><span class="value">VEE</span></div>
+                    <div class="data-item"><span class="label">ENTRY</span><span class="value">02</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <span class="section-label">LOGS</span>
+            <div class="description">
+                <p>VEE所属。キレのあるトークと、どこかミステリアスな雰囲気を併せ持つ。多様な才能が集まるVEEの中でも、独自のポジションを確立し、多くの熱狂的なファン（観測者）を生み出し続けている。</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>

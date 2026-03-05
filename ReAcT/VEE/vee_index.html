@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VEE | SONY MUSIC V-PROJECT</title>
+    <link rel="stylesheet" href="vee_index.css">
+</head>
+
+<body>
+
+    <nav class="nav">
+        <a href="../index.html" class="nav-brand">VEE</a>
+        <div style="font-size: 0.8rem; letter-spacing: 0.1rem; text-transform: uppercase;">Talent Index</div>
+    </nav>
+
+    <header class="hero">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">VEE</h1>
+            <p class="hero-subtitle">Virtual Entertainment Experience</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- Dev-A to Dev-E Mix -->
+        <section class="reveal">
+            <h2 class="section-title"><span>Chapter I</span>The<br>Pioneers</h2>
+
+            <div class="editorial-grid">
+                <a href="characters/uparu.html" class="editorial-card span-6 h-wide">
+                    <div class="card-placeholder">01</div>
+                    <div class="card-content">
+                        <span class="card-index">No. 01</span>
+                        <h3 class="card-name">Asei Uparu<br>亞生うぱる</h3>
+                    </div>
+                </a>
+
+                <a href="characters/tulsi.html" class="editorial-card span-3 h-tall">
+                    <div class="card-placeholder">18</div>
+                    <div class="card-content">
+                        <span class="card-index">No. 18</span>
+                        <h3 class="card-name">Mao Tulsi<br>魔王トゥルシー</h3>
+                    </div>
+                </a>
+
+                <a href="characters/rinon.html" class="editorial-card span-3 h-tall">
+                    <div class="card-placeholder">02</div>
+                    <div class="card-content">
+                        <span class="card-index">No. 02</span>
+                        <h3 class="card-name">Amago Rinon<br>天籠りのん</h3>
+                    </div>
+                </a>
+
+                <a href="characters/ruki.html" class="editorial-card span-4 h-square">
+                    <div class="card-placeholder">06</div>
+                    <div class="card-content">
+                        <span class="card-index">No. 06</span>
+                        <h3 class="card-name">Otokado Ruki<br>音門るき</h3>
+                    </div>
+                </a>
+
+                <a href="characters/hizumi.html" class="editorial-card span-8 h-wide">
+                    <div class="card-placeholder">15</div>
+                    <div class="card-content">
+                        <span class="card-index">No. 15</span>
+                        <h3 class="card-name">Hizumi<br>緋墨</h3>
+                    </div>
+                </a>
+
+                <a href="characters/rui.html" class="editorial-card span-5 h-tall">
+                    <div class="card-placeholder">13</div>
+                    <div class="card-content">
+                        <span class="card-index">No. 13</span>
+                        <h3 class="card-name">Tsukishiro Rui<br>月白累</h3>
+                    </div>
+                </a>
+
+                <a href="characters/an.html" class="editorial-card span-7 h-wide">
+                    <div class="card-placeholder">21</div>
+                    <div class="card-content">
+                        <span class="card-index">No. 21</span>
+                        <h3 class="card-name">Mememori An<br>芽々守あん</h3>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Alumni / Records -->
+        <section class="reveal" style="margin-top: 15rem;">
+            <h2 class="section-title"><span>Archive</span>The<br>Records</h2>
+
+            <div class="editorial-grid" style="opacity: 0.8; filter: grayscale(1);">
+                <a href="characters/kohaku.html" class="editorial-card span-8 h-wide">
+                    <div class="card-placeholder">ARC</div>
+                    <div class="card-content">
+                        <span class="card-index" style="color: #666;">ALUMNI 2025</span>
+                        <h3 class="card-name">Syusetu Kohaku<br>秋雪こはく</h3>
+                    </div>
+                </a>
+
+                <a href="characters/kakapo.html" class="editorial-card span-4 h-square">
+                    <div class="card-placeholder">ARC</div>
+                    <div class="card-content">
+                        <span class="card-index" style="color: #666;">ALUMNI 2026</span>
+                        <h3 class="card-name">Shirakawa Kakapo<br>北白川かかぽ</h3>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>

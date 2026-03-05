@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inukai Purin | Tsunderia Archive</title>
+    <link rel="stylesheet" href="char-base.css">
+</head>
+
+<body>
+    <header class="hero">
+        <h1 class="hero-name">Purin</h1>
+        <p class="hero-subtitle">犬飼ぷりん</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item"><span class="label">UNIT</span><span class="value">Generation 0</span></div>
+                    <div class="data-item"><span class="label">TYPE</span><span class="value">PURE_TSUN</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">DESCRIPTION</h2>
+            <div class="description">
+                <p>Tsunderiaの0期生メンバー。犬のような人懐っこさと、時折見せる鋭いツッコミのギャップが魅力。リスナーへの愛情表現は不器用だが、その「ツン」の裏に隠された「デレ」が多くのファンを虜にしている。
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALIS — KAMITSUBAKI STUDIO</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="kamitsubaki-char-base.css">
+    <style>
+        :root {
+            --char-color: #ff3399;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a href="../kamitsubaki_index.html" class="cp-back">← KAMITSUBAKI</a>
+        <span class="cp-nav-gen">VIRTUAL & REAL GROUP // VALIS</span>
+    </nav>
+    <section class="cp-hero">
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">Virtual & Real Artist</div>
+            <h1 class="cp-hero-name">VALIS</h1>
+            <span class="cp-hero-en">VALIS</span>
+            <p class="cp-chara-desc">
+                バーチャルとリアルの境界を往来する、6人（現在は5人）組のサーカス・ユニット。圧倒的なダンスパフォーマンスと、多層的な物語。仮面の下に隠された素顔と、デジタルな依代を使い分け、観客を魅惑のエンターテインメントへと誘う。これこそが神椿の「実体」への挑戦。
+            </p>
+        </div>
+    </section>
+    <div class="cp-section cp-reveal">
+        <h2 class="cp-section-title">MANIFESTO</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>STRUCTURE</h3>
+                <table class="cp-table">
+                    <tr>
+                        <th>DEBUT</th>
+                        <td>2020.05.15</td>
+                    </tr>
+                    <tr>
+                        <th>MEMBERS</th>
+                        <td>CHINO, MYU, NEKO, RARA, VITTE</td>
+                    </tr>
+                    <tr>
+                        <th>CONCEPT</th>
+                        <td>Virtual Circus</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="cp-card">
+                <h3>LOG</h3>
+                <p>「アバター（仮装）」と「オリジン（素体）」の双方を提示する勇気ある決断を下し、ライブ「転生フェス」でその実力を証明。メンバーの卒業という苦難を乗り越え、現在は5人体制でより強固な絆を武器に活動を継続している、神椿の「不屈」の象徴。
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(entries => entries.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+</body>
+
+</html>

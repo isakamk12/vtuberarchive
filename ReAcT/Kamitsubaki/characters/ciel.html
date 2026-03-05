@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIEL — KAMITSUBAKI STUDIO</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="kamitsubaki-char-base.css">
+    <style>
+        :root {
+            --char-color: #88ccff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a href="../kamitsubaki_index.html" class="cp-back">← KAMITSUBAKI</a>
+        <span class="cp-nav-gen">VIRTUAL SINGER // CIEL</span>
+    </nav>
+    <section class="cp-hero">
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">Virtual Artist</div>
+            <h1 class="cp-hero-name">CIEL</h1>
+            <span class="cp-hero-en">CIEL</span>
+            <p class="cp-chara-desc">
+                空のように広がり、どこまでも透き通る歌声を持つバーチャルシンガー。2021年、神椿の物語の中に突如として現れた彼女は、その圧倒的な存在感とパフォーマンスで観る者を魅了する。静謐な中に確かな情熱を秘めた、期待の表現者。
+            </p>
+        </div>
+    </section>
+    <div class="cp-section cp-reveal">
+        <h2 class="cp-section-title">MANIFESTO</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>ESSENCE</h3>
+                <table class="cp-table">
+                    <tr>
+                        <th>DEBUT</th>
+                        <td>2021.06.05</td>
+                    </tr>
+                    <tr>
+                        <th>AFFILIATION</th>
+                        <td>KAMITSUBAKI STUDIO</td>
+                    </tr>
+                    <tr>
+                        <th>TYPE</th>
+                        <td>Virtual Singer</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="cp-card">
+                <h3>BIOGRAPHY</h3>
+                <p>アニメ「映画大好きポンポさん」の主題歌担当など、デビュー当初から高い注目を集めている。バーチャルとリアルの狭間で揺れるような、繊細な感性から生み出される音楽は、多くのリスナーの心に深い余韻を残し続けている。
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(entries => entries.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+</body>
+
+</html>

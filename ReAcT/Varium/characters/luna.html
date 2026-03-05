@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ルナ・ゴールドレイン | Varium Archive</title>
+    <link rel="stylesheet" href="char-base.css">
+</head>
+
+<body>
+    <header class="hero">
+        <h1 class="hero-name">LUNA</h1>
+        <p class="hero-subtitle">ルナ・ゴールドレイン</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item"><span class="label">GEN</span><span class="value">4期生</span></div>
+                    <div class="data-item"><span class="label">ID</span><span class="value">VAR-04-01</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">STORY</h2>
+            <div class="description">
+                <p>ぶいありうむっ！4期生。黄金の雨のように降り注ぐ祝福と共に現れた。輝く未来を感じさせる明るさと、新世代らしい感性で、これからの「ぶいありうむっ！」をさらに光り輝かせていく。</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>

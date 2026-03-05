@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鈴音にあ | PRISM Project Archive</title>
+    <link rel="stylesheet" href="char-base.css">
+</head>
+
+<body>
+    <div class="bg-refract"></div>
+    <nav class="nav">
+        <a href="../prismproject_index.html" class="nav-brand">PRISM PROJECT ARCHIVE</a>
+    </nav>
+
+    <header class="hero">
+        <h1 class="hero-name">鈴音にあ</h1>
+        <p class="hero-subtitle">SUZUNE NIA</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item"><span class="label">GEN</span><span class="value">3期生</span></div>
+                    <div class="data-item"><span class="label">ID</span><span class="value">PRM-03-02</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">DESCRIPTION</h2>
+            <div class="description">
+                <p>PRISM Projectの3期生。鈴の音のように清らかで澄んだ歌声が特徴のタレント。天真爛漫な性格と、周囲をパッと明るくする笑顔がリスナーに元気を与えている。</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pandora — CyberLive</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Noto+Sans+JP:wght@400;700;900&family=Teko:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a href="../cyberlive_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO CyberLive</a>
+        <span class="cp-nav-gen">1st Gen // CyberFable</span>
+    </nav>
+    <section class="cp-hero">
+        <div class="cp-bg-letter">P</div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">CyberLive // CyberFable</div>
+            <h1 class="cp-hero-name">Pandora</h1>
+            <span class="cp-hero-en">Utano Pandora (歌野パンドラ)</span>
+            <p class="cp-chara-desc">
+                パンダのバーチャルアイドル兼VSinger。ドジっ子な一面を持ちつつも、<strong>圧倒的な歌唱パフォーマンス</strong>で多くのファンを魅了し、解散後も確固たる地位を築いている。</p>
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">#VSinger</span>
+                <span class="cp-tag cp-tag-muted">#PandaIdol</span>
+                <span class="cp-tag cp-tag-muted">#Independent</span>
+            </div>
+        </div>
+        <div class="cp-hero-orb">P</div>
+    </section>
+    <div class="cp-section cp-reveal">
+        <h2 class="cp-section-title">ARCHIVE DATA</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>PROFILE</h3>
+                <table class="cp-table">
+                    <tr>
+                        <th>STATUS</th>
+                        <td>Active (Indie)</td>
+                    </tr>
+                    <tr>
+                        <th>SPEC</th>
+                        <td>VSinger</td>
+                    </tr>
+                    <tr>
+                        <th>THEME</th>
+                        <td>Panda / Idol</td>
+                    </tr>
+                    <tr>
+                        <th>FANS</th>
+                        <td>Pandas</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="cp-card">
+                <h3>EPISODES</h3>
+                <p>グループ解散後も一貫して「Utano Pandora」として活動を継続。音楽活動に心血を注ぎ、3Dコンサートの開催や多数のオリジナル楽曲のリリースを通じて、独立勢VSingerとして成功を収めている。
+                </p>
+            </div>
+        </div>
+    </div>
+    <footer class="cp-footer">
+        <p>© 2026 CyberLive Archive — 非公式ファンサイト</p>
+    </footer>
+    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+</body>
+
+</html>

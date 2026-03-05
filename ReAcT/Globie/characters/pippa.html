@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pippa Pebblesworth — Globie</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a href="../globie_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO Globie</a>
+        <span class="cp-nav-gen">1st Generation</span>
+    </nav>
+    <section class="cp-hero">
+        <div class="cp-bg-letter">P</div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">Globie // 1st Gen</div>
+            <h1 class="cp-hero-name">Pippa</h1>
+            <span class="cp-hero-en">Pippa Pebblesworth</span>
+            <p class="cp-chara-desc">2023年12月にデビューし、独自のアップデートギミックで話題となった。2025年1月に卒業。</p>
+            <div class="cp-tags">
+                <span class="cp-tag">#Historical</span>
+                <span class="cp-tag">#Pippa</span>
+                <span class="cp-tag">#1stGen</span>
+            </div>
+        </div>
+    </section>
+    <div class="cp-section cp-reveal">
+        <h2 class="cp-section-title">ARCHIVE DATA</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>PROFILE</h3>
+                <table class="cp-table">
+                    <tr>
+                        <th>STATUS</th>
+                        <td>Graduated</td>
+                    </tr>
+                    <tr>
+                        <th>DEBUT</th>
+                        <td>2023/12</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="cp-card">
+                <h3>EPISODES</h3>
+                <p>デビュー直後に「2.0から5.0」までアップデートを繰り返すという奇抜な演出で注目を集めた。彼女の卒業配信「No crying, just dying」は今も語り草となっている。</p>
+            </div>
+        </div>
+    </div>
+    <footer class="cp-footer">
+        <p>© 2026 Globie Archive</p>
+    </footer>
+    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+</body>
+
+</html>

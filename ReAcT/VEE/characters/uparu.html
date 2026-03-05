@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>亞生うぱる | VEE Archive</title>
+    <link rel="stylesheet" href="char-base.css">
+</head>
+
+<body>
+    <header class="hero">
+        <h1 class="hero-name">UPARU</h1>
+        <p class="hero-subtitle">亞生うぱる / Asei Uparu</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <span class="section-label">IDENTIFIER</span>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item"><span class="label">GROUP</span><span class="value">VEE</span></div>
+                    <div class="data-item"><span class="label">ENTRY</span><span class="value">01</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <span class="section-label">LOGS</span>
+            <div class="description">
+                <p>VEE所属。独特の感性と、リスナーを惹きつけるトークが魅力。Sony Musicが手掛ける大規模プロジェクトの顔の一人として、バーチャルとリアルの境界線を鮮やかに彩る活動を展開している。</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>

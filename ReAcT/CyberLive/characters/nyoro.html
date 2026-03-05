@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanilla Nyoro — CyberLive</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Noto+Sans+JP:wght@400;700;900&family=Teko:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a href="../cyberlive_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO CyberLive</a>
+        <span class="cp-nav-gen">Special // CyberLive Taiwan</span>
+    </nav>
+    <section class="cp-hero">
+        <div class="cp-bg-letter">V</div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">CyberLive // Taiwan</div>
+            <h1 class="cp-hero-name">Nyoro</h1>
+            <span class="cp-hero-en">Vanilla Nyoro (香草奈若)</span>
+            <p class="cp-chara-desc">
+                CyberLiveの<strong>台湾支部メンバー</strong>としてデビュー。グループ解散後も名義を変えることなく、個人勢から企業勢へと歩みを進めた、台湾VTuber界における象徴的なタレントの一人。
+            </p>
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">#Taiwan</span>
+                <span class="cp-tag cp-tag-muted">#Historical</span>
+                <span class="cp-tag cp-tag-muted">#Corporate</span>
+            </div>
+        </div>
+        <div class="cp-hero-orb">V</div>
+    </section>
+    <div class="cp-section cp-reveal">
+        <h2 class="cp-section-title">ARCHIVE DATA</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>PROFILE</h3>
+                <table class="cp-table">
+                    <tr>
+                        <th>STATUS</th>
+                        <td>Active (Corporate)</td>
+                    </tr>
+                    <tr>
+                        <th>BRANCH</th>
+                        <td>CyberLive Taiwan</td>
+                    </tr>
+                    <tr>
+                        <th>LANGUAGES</th>
+                        <td>Chinese (Traditional)</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="cp-card">
+                <h3>EPISODES</h3>
+                <p>2021年5月のグループ解散に伴い個人勢へ移行。その後、同名義のまま別の企業へ所属し、台湾拠点の人気VTuberとして安定した活動を継続している。組織の壁を越えて「Vanilla
+                    Nyoro」という個人ブランドを確立させた成功例である。</p>
+            </div>
+        </div>
+    </div>
+    <footer class="cp-footer">
+        <p>© 2026 CyberLive Archive — 非公式ファンサイト</p>
+    </footer>
+    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taring Hu — Globie</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a href="../globie_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO Globie</a>
+        <span class="cp-nav-gen">1st Generation</span>
+    </nav>
+    <section class="cp-hero">
+        <div class="cp-bg-letter">T</div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">Globie // 1st Gen</div>
+            <h1 class="cp-hero-name">Taring</h1>
+            <span class="cp-hero-en">Taring Hu</span>
+            <p class="cp-chara-desc">globie第1期メンバー。2025年1月に卒業（または契約終了）。</p>
+            <div class="cp-tags">
+                <span class="cp-tag">#Historical</span>
+                <span class="cp-tag">#1stGen</span>
+            </div>
+        </div>
+    </section>
+    <div class="cp-section cp-reveal">
+        <h2 class="cp-section-title">ARCHIVE DATA</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>PROFILE</h3>
+                <table class="cp-table">
+                    <tr>
+                        <th>STATUS</th>
+                        <td>Graduated</td>
+                    </tr>
+                    <tr>
+                        <th>GENERATION</th>
+                        <td>1st Gen</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <footer class="cp-footer">
+        <p>© 2026 Globie Archive</p>
+    </footer>
+    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+</body>
+
+</html>

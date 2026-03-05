@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>江波 キョウカ | Palette Project アーカイブ</title>
+    <link rel="stylesheet" href="char-base.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="bg-fx"></div>
+    <nav class="nav">
+        <a href="../paletteproject_index.html" class="nav-brand">PALETTE PROJECT ARCHIVE</a>
+    </nav>
+
+    <header class="hero">
+        <h1 class="hero-name">江波 キョウカ</h1>
+        <p class="hero-subtitle">Enami Kyouka</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item"><span class="label">Gen</span><span class="value">3期生</span></div>
+                    <div class="data-item"><span class="label">Unit</span><span class="value">REGALILIA</span></div>
+                    <div class="data-item"><span class="label">Origin</span><span class="value">広島県</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">DESCRIPTION</h2>
+            <div class="description">
+                <p>パレプロの3期生。広島県出身。アニメやミニチュア模型といった多岐にわたる趣味を持ち、その知見を「REGALILIA」の重厚で洗練された世界観に投影している。クールな装いの中に熱い情熱を秘めたパフォーマンスが特徴。
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>

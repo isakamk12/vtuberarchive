@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>深狼れんげ — のりプロ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&family=Bebas+Neue&family=Noto+Sans+JP:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #e74c3c;
+            --char-glow: rgba(231, 76, 60, 0.5);
+            --char-color-soft: rgba(231, 76, 60, 0.08);
+            --char-border: rgba(231, 76, 60, 0.25);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a href="../noripro_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO のりプロ</a>
+        <span class="cp-nav-gen">🌺 3月組 パラレア</span>
+    </nav>
+    <section class="cp-hero">
+        <div class="cp-bg-letter">狼</div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">のりプロ // 3月組 · パラレア</div>
+            <h1 class="cp-hero-name">深狼れんげ</h1>
+            <span class="cp-hero-en">みかみれんげ — Mikami Renge</span>
+            <p class="cp-chara-desc">大のお酒好き。のりプロに<strong>封印された闇のゲーム「お○っこ我慢テトリス」</strong>をなぜか同期とやりたがり、周囲を恐怖に陥れている。</p>
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">#お酒大好き</span>
+                <span class="cp-tag cp-tag-muted">#封印ゲーム提唱者</span>
+                <span class="cp-tag cp-tag-muted">#パラレア</span>
+            </div>
+        </div>
+        <div class="cp-hero-orb">🍺</div>
+    </section>
+    <div class="cp-section cp-reveal">
+        <h2 class="cp-section-title">EPISODES</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>封印された闇のゲーム提唱</h3>
+                <p>のりプロに存在する<strong>封印された闇のゲーム「お○っこ我慢テトリス」</strong>を、なぜか同期と一緒にやりたがっているという情報が流れ、周囲を恐怖に陥れた。</p>
+            </div>
+            <div class="cp-card">
+                <h3>お酒への情熱</h3>
+                <p>お酒をこよなく愛する。のりプロ内でも屈指の飲み師として知られる。</p>
+            </div>
+        </div>
+    </div>
+    <footer class="cp-footer">
+        <p>© 2026 NoriPro Fan Archive — 非公式ファンサイト</p>
+    </footer>
+    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+</body>
+
+</html>

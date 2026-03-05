@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>愛染 アネラ | Palette Project アーカイブ</title>
+    <link rel="stylesheet" href="char-base.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="bg-fx"></div>
+    <nav class="nav">
+        <a href="../paletteproject_index.html" class="nav-brand">PALETTE PROJECT ARCHIVE</a>
+    </nav>
+
+    <header class="hero">
+        <h1 class="hero-name">愛染 アネラ</h1>
+        <p class="hero-subtitle">Aizen Anela</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item"><span class="label">Gen</span><span class="value">5期研究生</span></div>
+                    <div class="data-item"><span class="label">Role</span><span class="value">Trainee</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">DESCRIPTION</h2>
+            <div class="description">
+                <p>パレプロの5期研究生。次世代のバーチャルアイドルを目指し、日々研鑽を積んでいる。研究生としての活動を通じて、個性的な魅力とパフォーマンススキルを磨き、正規メンバーへの昇格を目指す。</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>

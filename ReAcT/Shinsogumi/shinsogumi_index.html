@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHINSOGUMI.SYS</title>
+    <link rel="stylesheet" href="shinsogumi_index.css">
+</head>
+
+<body class="flicker">
+
+    <div class="terminal-header">
+        <div class="ascii-art">
+            _____ __ __ _____ _ _ _____ ____ _____ _ _ __ __ _____
+            / ____|| \/ ||_ _|| \ | | / ____| / __ \ / ____|| | | || \/ ||_ _|
+            | (___ | \ / | | | | \| || (___ | | | || | __ | | | || \ / | | |
+            \___ \ | |\/| | | | | . ` | \___ \ | | | || | |_ || | | || |\/| | | |
+            ____) || | | | _| |_ | |\ | ____) || |__| || |__| || |__| || | | | _| |_
+            |_____/ |_| |_||_____||_| \_||_____/ \____/ \_____| \____/ |_| |_||_____|
+        </div>
+        <div>System: DEEP_WEB_OS v1.0.4</div>
+        <div>Connection: SECURE (Encrypted)</div>
+        <div id="sys-time">Time: Loading...</div>
+    </div>
+
+    <div class="prompt typing-effect" style="animation-duration: 1s;">ls -la /home/family/</div>
+
+    <div class="cmd-output">
+        <div class="dir-listing">
+            <!-- Header -->
+            <div style="display:flex; color: var(--dim-color); font-size: 0.9em; margin-bottom: 0.5rem;">
+                <span class="item-perms">PERMISSIONS</span>
+                <span class="item-owner">OWNER</span>
+                <span class="item-size">SIZE</span>
+                <span class="item-name">FILE_NAME</span>
+                <span class="item-status">STATUS</span>
+            </div>
+
+            <!-- DeepWeb Sisters -->
+            <a href="characters/dwu.html" class="dir-item">
+                <span class="item-perms">-rwxrw-r--</span><span class="item-owner">root</span><span
+                    class="item-size">4.2K</span>
+                <span class="item-name">1_DWU.exe</span><span class="item-status status-online">ONLINE_ELDEST</span>
+            </a>
+            <a href="characters/namahoshi.html" class="dir-item">
+                <span class="item-perms">-rwxrw-r--</span><span class="item-owner">sys</span><span
+                    class="item-size">3.8K</span>
+                <span class="item-name">3_namahoshi.sh</span><span class="item-status status-online">ONLINE_3RD</span>
+            </a>
+            <a href="characters/tomeru.html" class="dir-item">
+                <span class="item-perms">-rwxrw-r--</span><span class="item-owner">admin</span><span
+                    class="item-size">9.9K</span>
+                <span class="item-name">5_tomeru.bat</span><span class="item-status status-online">ONLINE_5TH</span>
+            </a>
+            <a href="characters/rururu.html" class="dir-item">
+                <span class="item-perms">-rwxrw-r--</span><span class="item-owner">sys</span><span
+                    class="item-size">2.1K</span>
+                <span class="item-name">6_rururu.bin</span><span class="item-status status-online">ONLINE_6TH</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="prompt typing-effect"
+        style="animation-duration: 1.5s; animation-delay: 1s; width:0; animation-fill-mode: forwards;">ls -la
+        /home/recruits/</div>
+
+    <div class="cmd-output" style="opacity:0; animation: fadeIn 0.1s forwards; animation-delay: 2.5s;">
+        <div class="dir-listing">
+            <!-- Adoptees & New Blood -->
+            <a href="characters/asti.html" class="dir-item">
+                <span class="item-perms">-rw-r--r--</span><span class="item-owner">guest</span><span
+                    class="item-size">1.2K</span>
+                <span class="item-name">adoptee_asti.sys</span><span class="item-status status-online">ACTIVE</span>
+            </a>
+            <a href="characters/ataru.html" class="dir-item">
+                <span class="item-perms">-rw-r--r--</span><span class="item-owner">guest</span><span
+                    class="item-size">0.8K</span>
+                <span class="item-name">apprentice_ataru.log</span><span class="item-status status-online">ACTIVE</span>
+            </a>
+            <a href="characters/suu.html" class="dir-item">
+                <span class="item-perms">-rw-r--r--</span><span class="item-owner">guest</span><span
+                    class="item-size">0.9K</span>
+                <span class="item-name">apprentice_suu.log</span><span class="item-status status-online">ACTIVE</span>
+            </a>
+            <a href="characters/pyokora.html" class="dir-item">
+                <span class="item-perms">-rw-r--r--</span><span class="item-owner">guest</span><span
+                    class="item-size">1.1K</span>
+                <span class="item-name">apprentice_pyoko.log</span><span class="item-status status-online">ACTIVE</span>
+            </a>
+            <a href="characters/naguru.html" class="dir-item">
+                <span class="item-perms">-rw-r--r--</span><span class="item-owner">guest</span><span
+                    class="item-size">0.5K</span>
+                <span class="item-name">new_naguru.tmp</span><span class="item-status status-online">ACTIVE</span>
+            </a>
+            <a href="characters/mairu.html" class="dir-item">
+                <span class="item-perms">-rw-r--r--</span><span class="item-owner">guest</span><span
+                    class="item-size">0.4K</span>
+                <span class="item-name">new_mairu.tmp</span><span class="item-status status-online">ACTIVE</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="prompt typing-effect"
+        style="animation-duration: 1.5s; animation-delay: 3s; width:0; animation-fill-mode: forwards;">ls -la
+        /home/archive/alumni/</div>
+
+    <div class="cmd-output" style="opacity:0; animation: fadeIn 0.1s forwards; animation-delay: 4.5s;">
+        <div class="dir-listing">
+            <!-- Alumni -->
+            <a href="characters/nenemaru.html" class="dir-item">
+                <span class="item-perms">-r--------</span><span class="item-owner">system</span><span
+                    class="item-size">0.0b</span>
+                <span class="item-name">nenemaru.old</span><span class="item-status status-offline">DISCONNECTED</span>
+            </a>
+            <a href="characters/naota.html" class="dir-item">
+                <span class="item-perms">-r--------</span><span class="item-owner">system</span><span
+                    class="item-size">0.0b</span>
+                <span class="item-name">naota.bak</span><span class="item-status status-offline">DISCONNECTED</span>
+            </a>
+            <a href="characters/choro.html" class="dir-item">
+                <span class="item-perms">-r--------</span><span class="item-owner">system</span><span
+                    class="item-size">0.0b</span>
+                <span class="item-name">choro.bak</span><span class="item-status status-offline">DISCONNECTED</span>
+            </a>
+            <a href="characters/desu.html" class="dir-item">
+                <span class="item-perms">-r--------</span><span class="item-owner">system</span><span
+                    class="item-size">0.0b</span>
+                <span class="item-name">desu.bak</span><span class="item-status status-offline">DISCONNECTED</span>
+            </a>
+            <a href="characters/nora.html" class="dir-item">
+                <span class="item-perms">-r--------</span><span class="item-owner">system</span><span
+                    class="item-size">0.0b</span>
+                <span class="item-name">nora.old</span><span class="item-status status-offline">DISCONNECTED</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="prompt blink-caret"
+        style="animation-delay: 5s; opacity:0; animation: fadeIn 0.1s forwards; animation-delay: 4.6s;"></div>
+
+    <style>
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                width: 100%;
+            }
+        }
+    </style>
+
+    <script>
+        setInterval(() => {
+            const d = new Date();
+            document.getElementById('sys-time').innerText = `Time: ${d.toISOString()}`;
+        }, 1000);
+    </script>
+</body>
+
+</html>

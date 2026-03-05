@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Noto+Sans+JP:wght@300;400;700;900&display=swap');
+
+:root {
+    --react-bg: #0a0a0c;
+    --react-text: #ffffff;
+    --react-cyan: #00ffff;
+    --react-magenta: #ff00ff;
+    --react-grad: linear-gradient(135deg, #00ffff 0%, #0088ff 100%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--react-bg);
+    color: var(--react-text);
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.6;
+}
+
+.bg-glow {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background: radial-gradient(circle, rgba(0, 255, 255, 0.05) 0%, transparent 70%);
+}
+
+.nav {
+    padding: 2rem 4rem;
+}
+
+.nav-brand {
+    font-family: 'Syncopate', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 5px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.3);
+    text-transform: uppercase;
+}
+
+.hero {
+    padding: 6rem 2rem 4rem;
+    text-align: center;
+}
+
+.hero-name {
+    font-family: 'Syncopate', sans-serif;
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1;
+    background: var(--react-grad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+}
+
+.hero-subtitle {
+    font-size: 1rem;
+    letter-spacing: 1.2rem;
+    opacity: 0.2;
+    margin-top: 1.5rem;
+    text-indent: 1.2rem;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem 5rem;
+}
+
+.section {
+    margin-bottom: 5rem;
+}
+
+.section-title {
+    font-family: 'Syncopate', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    color: var(--react-cyan);
+    letter-spacing: 3px;
+}
+
+.profile-card {
+    background: #151518;
+    padding: 4rem;
+    border: 1px solid #222;
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--react-grad);
+}
+
+.data-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
+}
+
+.data-item .label {
+    display: block;
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    color: #444;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+}
+
+.data-item .value {
+    font-size: 2.2rem;
+    font-weight: 900;
+}
+
+.description {
+    font-size: 1.2rem;
+    line-height: 2.2;
+    color: #999;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .hero-name {
+        font-size: 3rem;
+    }
+
+    .profile-card {
+        padding: 2rem;
+    }
+}

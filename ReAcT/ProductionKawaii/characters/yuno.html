@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuno Hanaki | Production kawaii Archive</title>
+    <link rel="stylesheet" href="char-base.css">
+</head>
+
+<body>
+    <div class="bg-pattern"></div>
+    <nav class="nav">
+        <a href="../kawaii_index.html" class="nav-brand">production kawaii ARCHIVE</a>
+    </nav>
+
+    <header class="hero">
+        <h1 class="hero-name">Yuno Hanaki</h1>
+        <p class="hero-subtitle">華鬼結望</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item"><span class="label">GROUP</span><span class="value">花美月</span></div>
+                    <div class="data-item"><span class="label">ICON</span><span class="value">🌸</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">DESCRIPTION</h2>
+            <div class="description">
+                <p>Production kawaiiのユニット「花美月」のメンバー。華やかなオーラと、力強い歌声が魅力。リスナーへの感謝を常に忘れず、全力で歌い、踊る姿が多くのファンに勇気を与えている。</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>

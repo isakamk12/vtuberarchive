@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diana — A-SOUL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Noto+Sans+JP:wght@400;700;900&family=Kiwi+Maru:wght@300;400;500&family=Bebas+Neue&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a href="../asoul_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO A-SOUL</a>
+        <span class="cp-nav-gen">Current Member // Cute</span>
+    </nav>
+    <section class="cp-hero">
+        <div class="cp-bg-letter">D</div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">A-SOUL // Cute</div>
+            <h1 class="cp-hero-name">Diana</h1>
+            <span class="cp-hero-en">嘉然 (ダイアナ)</span>
+            <p class="cp-chara-desc">
+                A-SOULの<strong>「かわいい担当」</strong>。その愛らしいルックスと天真爛漫なキャラクターで、絶大な人気を誇る。ファン（嘉心糖）との交流を非常に大切にしており、その温かい言葉は多くの人々を励ましている。
+            </p>
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">#Cute</span>
+                <span class="cp-tag cp-tag-muted">#Visual</span>
+                <span class="cp-tag cp-tag-muted">#Sweetheart</span>
+            </div>
+        </div>
+        <div class="cp-hero-orb">D</div>
+    </section>
+    <div class="cp-section cp-reveal">
+        <h2 class="cp-section-title">ARCHIVE DATA</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>PROFILE</h3>
+                <table class="cp-table">
+                    <tr>
+                        <th>STATUS</th>
+                        <td>Active</td>
+                    </tr>
+                    <tr>
+                        <th>POSITION</th>
+                        <td>Cute, Visual</td>
+                    </tr>
+                    <tr>
+                        <th>ZODIAC</th>
+                        <td>Pisces (魚座)</td>
+                    </tr>
+                    <tr>
+                        <th>FANS</th>
+                        <td>嘉心糖 (Diana-sugar)</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="cp-card">
+                <h3>CHARACTER</h3>
+                <p>見た目通りの可愛らしさだけでなく、非常にプロ意識が高く、ファンの心を掴んで離さない魅力を持つ。食べることが大好きで、特に美味しいものについて語る時の輝く瞳はファンの間で語り草となっている。</p>
+            </div>
+        </div>
+    </div>
+    <footer class="cp-footer">
+        <p>© 2026 A-SOUL Archive — 非公式ファンサイト</p>
+    </footer>
+    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+</body>
+
+</html>

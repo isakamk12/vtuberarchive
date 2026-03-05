@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700;900&family=Poppins:wght@400;700;900&display=swap');
+
+:root {
+    --tsun-pink: #ff2e63;
+    --tsun-dark: #252a34;
+    --tsun-light: #eaeaea;
+    --tsun-accent: #08d9d6;
+    --tsun-white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--tsun-white);
+    color: var(--tsun-dark);
+    font-family: 'Poppins', 'M PLUS 1p', sans-serif;
+    line-height: 1.6;
+}
+
+.hero {
+    background: var(--tsun-pink);
+    color: white;
+    padding: 6rem 2rem;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
+
+.hero-name {
+    font-size: 5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.section {
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: var(--tsun-pink);
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.section-title::after {
+    content: '';
+    flex: 1;
+    height: 10px;
+    background: var(--tsun-light);
+}
+
+.profile-card {
+    background: var(--tsun-dark);
+    color: white;
+    padding: 3rem;
+}
+
+.data-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+}
+
+.data-item .label {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--tsun-accent);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.data-item .value {
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}

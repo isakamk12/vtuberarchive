@@ -1,0 +1,201 @@
+:root {
+    --char-color: #00f2ff;
+    /* VOGI Cyan */
+    --char-color-alt: #7000ff;
+    /* VOGI Purple */
+    --bg-dark: #050510;
+    --text-main: #e0e0ff;
+    --glass-bg: rgba(10, 10, 30, 0.6);
+    --glass-border: rgba(0, 242, 255, 0.2);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&family=Noto+Sans+JP:wght@300;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Rajdhani', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-image:
+        radial-gradient(circle at 20% 30%, rgba(0, 242, 255, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(112, 0, 255, 0.05) 0%, transparent 40%);
+}
+
+/* Background FX */
+.vogi-grid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0, 242, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 242, 255, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: -1;
+    mask-image: radial-gradient(circle at center, black, transparent 80%);
+}
+
+/* Navigation */
+.cp-nav {
+    padding: 2rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--glass-border);
+    background: rgba(5, 5, 20, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.cp-back {
+    color: var(--char-color);
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    transition: 0.3s;
+}
+
+.cp-back:hover {
+    text-shadow: 0 0 10px var(--char-color);
+    transform: translateX(-5px);
+}
+
+/* Hero Section */
+.cp-hero {
+    padding: 8rem 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.cp-label {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--char-color-alt);
+    font-size: 0.9rem;
+    letter-spacing: 5px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.cp-name {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 5rem;
+    font-weight: 900;
+    letter-spacing: -2px;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(to bottom, #fff, var(--char-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 20px rgba(0, 242, 255, 0.3));
+}
+
+.cp-en {
+    font-size: 1.2rem;
+    color: var(--text-main);
+    opacity: 0.5;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+}
+
+/* Content Grid */
+.cp-container {
+    max-width: 1200px;
+    margin: 0 auto 10rem;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.cp-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    padding: 3rem;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(15px);
+}
+
+.cp-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--char-color);
+}
+
+.cp-card h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: var(--char-color);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cp-info-list {
+    list-style: none;
+}
+
+.cp-info-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cp-info-label {
+    color: var(--text-main);
+    opacity: 0.6;
+    font-weight: 500;
+}
+
+.cp-info-value {
+    font-weight: 700;
+    color: #fff;
+}
+
+.status-badge {
+    padding: 0.2rem 1rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.status-active {
+    background: var(--char-color);
+    color: #000;
+}
+
+.status-grad {
+    background: #ff0055;
+    color: #fff;
+}
+
+@media (max-width: 900px) {
+    .cp-container {
+        grid-template-columns: 1fr;
+    }
+
+    .cp-name {
+        font-size: 3rem;
+    }
+
+    .cp-nav {
+        padding: 1.5rem 2rem;
+    }
+}

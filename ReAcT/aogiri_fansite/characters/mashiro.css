@@ -1,0 +1,371 @@
+/* --- Mashiro Custom Styles --- */
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
+
+:root {
+    --mashiro-main: #f1c40f;
+    /* Beer / Gasoline Yellow */
+    --mashiro-accent: #e67e22;
+    /* Deeper orange/brown */
+    --mashiro-text: #34495e;
+    --mashiro-bg: #fffcf2;
+    --m-white: #ffffff;
+}
+
+body.mashiro-page {
+    background-color: var(--mashiro-bg);
+    color: var(--mashiro-text);
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Background Bubbles (Beer) */
+.mashiro-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(180deg, #fffcf2 0%, #ffeb99 100%);
+    overflow: hidden;
+}
+
+.m-beer-bubble {
+    position: absolute;
+    bottom: -50px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    animation: rise infinite ease-in;
+}
+
+.m-beer-bubble:nth-child(1) {
+    width: 40px;
+    height: 40px;
+    left: 10%;
+    animation-duration: 8s;
+}
+
+.m-beer-bubble:nth-child(2) {
+    width: 20px;
+    height: 20px;
+    left: 30%;
+    animation-duration: 5s;
+    animation-delay: 1s;
+}
+
+.m-beer-bubble:nth-child(3) {
+    width: 50px;
+    height: 50px;
+    left: 50%;
+    animation-duration: 10s;
+    animation-delay: 2s;
+}
+
+.m-beer-bubble:nth-child(4) {
+    width: 30px;
+    height: 30px;
+    left: 70%;
+    animation-duration: 6s;
+    animation-delay: 3s;
+}
+
+.m-beer-bubble:nth-child(5) {
+    width: 60px;
+    height: 60px;
+    left: 90%;
+    animation-duration: 12s;
+    animation-delay: 0.5s;
+}
+
+@keyframes rise {
+    0% {
+        bottom: -50px;
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(20px);
+    }
+
+    100% {
+        bottom: 110%;
+        transform: translateX(-20px);
+    }
+}
+
+/* Navbar override */
+.mashiro-nav {
+    background: rgba(255, 252, 242, 0.9);
+    border-bottom: 2px solid var(--mashiro-main);
+}
+
+.mashiro-nav .logo {
+    color: var(--mashiro-accent);
+    font-family: 'RocknRoll One', sans-serif;
+}
+
+/* Hero Section */
+.m-hero {
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+    position: relative;
+}
+
+.m-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.m-liver-icon {
+    font-size: 6rem;
+    margin-bottom: 1rem;
+    animation: cheers 2s infinite alternate ease-in-out;
+    display: inline-block;
+}
+
+@keyframes cheers {
+    0% {
+        transform: rotate(-10deg) scale(1);
+    }
+
+    100% {
+        transform: rotate(10deg) scale(1.1);
+    }
+}
+
+.m-name {
+    font-family: 'RocknRoll One', sans-serif;
+    font-size: 4.5rem;
+    color: var(--mashiro-accent);
+    margin-bottom: 0px;
+    text-shadow: 2px 2px 0 var(--mashiro-main);
+}
+
+.m-kana {
+    font-size: 1.5rem;
+    color: #888;
+    letter-spacing: 5px;
+    margin-bottom: 2rem;
+}
+
+.m-catchphrase {
+    background: var(--mashiro-accent);
+    color: white;
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 4px 4px 0 var(--mashiro-main);
+}
+
+.m-tags span {
+    display: inline-block;
+    border: 2px solid var(--mashiro-accent);
+    color: var(--mashiro-accent);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    margin: 0 0.5rem;
+    font-weight: bold;
+    background: white;
+}
+
+/* Main Content */
+.m-main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem 5rem;
+}
+
+.m-section {
+    margin-bottom: 5rem;
+}
+
+.m-section-title {
+    font-family: 'RocknRoll One', sans-serif;
+    font-size: 2rem;
+    color: var(--mashiro-accent);
+    margin-bottom: 2rem;
+    border-bottom: 3px dashed var(--mashiro-main);
+    padding-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.text-center .m-section-title {
+    justify-content: center;
+}
+
+.m-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 20px rgba(241, 196, 15, 0.2);
+    border: 2px solid var(--mashiro-main);
+}
+
+/* Grids */
+.m-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.m-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+/* Profile List */
+.m-list {
+    list-style: none;
+    padding: 0;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.m-list li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.m-list li::before {
+    content: '🍻';
+    position: absolute;
+    left: -10px;
+    font-size: 0.9rem;
+}
+
+.m-list strong {
+    color: var(--mashiro-accent);
+}
+
+/* Features */
+.m-feature {
+    margin-bottom: 2rem;
+}
+
+.m-feature h3 {
+    font-size: 1.3rem;
+    color: var(--mashiro-main);
+    background: var(--mashiro-text);
+    color: white;
+    padding: 0.4rem 1rem;
+    display: inline-block;
+    border-radius: 4px;
+    margin-bottom: 0.8rem;
+}
+
+.m-feature p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* Term Boxes */
+.m-term-box {
+    background: white;
+    border: 2px solid #eee;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 4px 4px 0 var(--mashiro-main);
+    transition: transform 0.2s;
+}
+
+.m-term-box:hover {
+    transform: translateY(-5px);
+}
+
+.m-term-box h4 {
+    font-size: 1.2rem;
+    color: var(--mashiro-accent);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.m-term-box p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Legends */
+.m-legend-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.m-legend-item {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    border-left: 6px solid var(--mashiro-main);
+}
+
+.m-legend-icon {
+    font-size: 3rem;
+    background: var(--mashiro-bg);
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 2px solid var(--mashiro-accent);
+    flex-shrink: 0;
+}
+
+.m-legend-content h3 {
+    font-size: 1.4rem;
+    color: var(--mashiro-accent);
+    margin-bottom: 0.8rem;
+}
+
+.m-legend-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+
+    .m-grid-2,
+    .m-grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .m-term-box[style] {
+        grid-column: auto !important;
+    }
+
+    .m-legend-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .m-name {
+        font-size: 3rem;
+    }
+}

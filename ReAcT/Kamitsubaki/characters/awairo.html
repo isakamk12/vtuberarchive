@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awairo — KAMITSUBAKI STUDIO</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="kamitsubaki-char-base.css">
+    <style>
+        :root {
+            --char-color: #eeeeee;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a href="../kamitsubaki_index.html" class="cp-back">← KAMITSUBAKI</a>
+        <span class="cp-nav-gen">VIRTUAL & REAL // AWAIRO</span>
+    </nav>
+    <section class="cp-hero">
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">Virtual & Real Artist</div>
+            <h1 class="cp-hero-name">Awairo</h1>
+            <span class="cp-hero-en">Awairo</span>
+            <p class="cp-chara-desc">
+                淡く、儚く、しかし確かな色彩を帯びた音楽を奏でるプロジェクト。形にならない感情や、言葉にできない想いを、繊細な音の連なりへと昇華させる。リスナーの心に、静かに、しかし深く浸透していくような神椿の「機微」を担当する才能。
+            </p>
+        </div>
+    </section>
+    <div class="cp-section cp-reveal">
+        <h2 class="cp-section-title">MANIFESTO</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>ESSENCE</h3>
+                <table class="cp-table">
+                    <tr>
+                        <th>AFFILIATION</th>
+                        <td>SINSEKAI RECORD</td>
+                    </tr>
+                    <tr>
+                        <th>TYPE</th>
+                        <td>Virtual & Real</td>
+                    </tr>
+                    <tr>
+                        <th>TONE</th>
+                        <td>Delicate / Ethereal</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="cp-card">
+                <h3>LOG</h3>
+                <p>ネットシーンにおける高い評価を背景に、神椿への参画によりその表現領域を拡張。ソロ活動のみならず、様々なコラボレーションを通じても独自の色彩を放ち続けている。バーチャルな空間における、静寂と美の極致を追求する一人。
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(entries => entries.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+</body>
+
+</html>
