@@ -1,0 +1,462 @@
+/* ============================================================
+   エアリープロダクション — airylee.css
+   ============================================================ */
+
+/* 物語性・透明感を感じさせる明朝体とサンセリフ体の組み合わせ */
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;700&display=swap');
+
+/* ─── TOKENS ───────────────────────────────────────────────── */
+:root {
+    /* エアリー（空気のような）透明感のある水色・ブルー系 */
+    --ay-accent: #8bd3e6;
+    --ay-accent-glow: rgba(139, 211, 230, 0.4);
+    --ay-accent-soft: rgba(139, 211, 230, 0.1);
+    --ay-border: rgba(139, 211, 230, 0.3);
+
+    /* 卒業生用（セピア/薄いゴールド） */
+    --ay-muted-accent: #b0a18e;
+
+    /* Neutrals - 夜明けや夕暮れの空のような淡いダークブルー */
+    --ay-dark: #12161f;
+    --ay-surface: rgba(255, 255, 255, 0.04);
+    --ay-subtle: rgba(255, 255, 255, 0.08);
+    --ay-text: #eaf2f8;
+    --ay-muted: rgba(234, 242, 248, 0.6);
+    --ay-white: #ffffff;
+}
+
+/* ─── RESET ─────────────────────────────────────────────────── */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--ay-dark);
+    color: var(--ay-text);
+    overflow-x: hidden;
+}
+
+/* ─── BACKGROUND AND PARTICLES ─────────────────────────────── */
+.ay-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: radial-gradient(circle at 50% 0%, #1a2233 0%, #12161f 70%);
+}
+
+.ay-particles {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.ay-particles::before,
+.ay-particles::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow:
+        10vw 20vh #fff, 30vw 50vh #fff, 60vw 10vh #fff, 80vw 80vh #fff,
+        40vw 90vh #fff, 20vw 70vh #fff, 90vw 40vh #fff, 50vw 30vh #fff,
+        15vw 85vh #fff, 75vw 15vh #fff, 85vw 60vh #fff, 35vw 45vh #fff;
+    animation: drift 150s linear infinite;
+    opacity: 0.3;
+}
+
+.ay-particles::after {
+    box-shadow:
+        5vw 10vh #8bd3e6, 25vw 60vh #8bd3e6, 55vw 20vh #8bd3e6, 70vw 90vh #8bd3e6,
+        45vw 80vh #8bd3e6, 15vw 40vh #8bd3e6, 95vw 30vh #8bd3e6, 60vw 70vh #8bd3e6;
+    animation: drift 100s linear infinite reverse;
+    opacity: 0.5;
+}
+
+@keyframes drift {
+    from {
+        transform: translateY(0) translateX(0);
+    }
+
+    to {
+        transform: translateY(-1000px) translateX(200px);
+    }
+}
+
+/* ─── NAV ────────────────────────────────────────────────────── */
+.ay-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1.2rem 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(18, 22, 31, 0.75);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--ay-border);
+}
+
+.ay-nav-back {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: var(--ay-muted);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: color 0.3s;
+}
+
+.ay-nav-back:hover {
+    color: var(--ay-accent);
+}
+
+.ay-nav-logo {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    color: var(--ay-white);
+}
+
+.ay-nav-logo span {
+    color: var(--ay-accent);
+}
+
+.ay-nav-tag {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: var(--ay-accent);
+    opacity: 0.7;
+    text-transform: uppercase;
+}
+
+/* ─── HERO ───────────────────────────────────────────────────── */
+.ay-hero {
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 9rem 5vw 5rem;
+    overflow: hidden;
+}
+
+.ay-hero-bg-text {
+    position: absolute;
+    right: -2%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Shippori Mincho', serif;
+    font-size: 40vw;
+    font-weight: 700;
+    line-height: 0.85;
+    color: var(--ay-accent);
+    opacity: 0.03;
+    user-select: none;
+    pointer-events: none;
+    letter-spacing: -2vw;
+}
+
+.ay-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 720px;
+}
+
+.ay-hero-name {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(2.8rem, 7vw, 5.5rem);
+    font-weight: 600;
+    line-height: 1.1;
+    color: var(--ay-white);
+    text-shadow: 0 0 40px var(--ay-accent-glow);
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.ay-hero-name span {
+    color: var(--ay-accent);
+    font-weight: 400;
+    font-size: 0.8em;
+}
+
+.ay-hero-tagline {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+    letter-spacing: 4px;
+    color: var(--ay-accent);
+    margin-bottom: 2.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.ay-hero-tagline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--ay-accent), transparent);
+}
+
+.ay-hero-concept {
+    font-size: 0.95rem;
+    color: var(--ay-muted);
+    line-height: 2.1;
+    margin-bottom: 3.5rem;
+    max-width: 600px;
+    font-weight: 300;
+}
+
+.ay-hero-stats {
+    display: flex;
+    gap: 3.5rem;
+}
+
+.ay-stat-value {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 2.5rem;
+    color: var(--ay-white);
+    line-height: 1;
+}
+
+.ay-stat-label {
+    font-size: 0.65rem;
+    letter-spacing: 3px;
+    color: var(--ay-accent);
+    margin-top: 0.6rem;
+    opacity: 0.8;
+}
+
+/* ─── CONTAINER ──────────────────────────────────────────────── */
+.ay-container {
+    position: relative;
+    z-index: 10;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 5vw 8rem;
+}
+
+/* ─── SECTION HEADER ─────────────────────────────────────────── */
+.ay-section {
+    margin-bottom: 7rem;
+}
+
+.ay-section-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3.5rem;
+}
+
+.ay-section-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--ay-white);
+    letter-spacing: 3px;
+}
+
+.ay-section-title-sub {
+    font-size: 0.65rem;
+    letter-spacing: 5px;
+    color: var(--ay-accent);
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.ay-divider {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--ay-border), transparent);
+}
+
+/* ─── INFO CARDS ─────────────────────────────────────────────── */
+.ay-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.ay-info-card {
+    background: linear-gradient(180deg, var(--ay-surface), transparent);
+    border-top: 1px solid var(--ay-subtle);
+    border-radius: 4px;
+    padding: 2.5rem 2rem;
+    position: relative;
+    transition: all 0.4s;
+    text-align: center;
+}
+
+.ay-info-card:hover {
+    border-color: var(--ay-accent);
+    transform: translateY(-5px);
+    background: linear-gradient(180deg, var(--ay-accent-soft), transparent);
+}
+
+.ay-info-card h3 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1.1rem;
+    color: var(--ay-white);
+    margin-bottom: 1.2rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.ay-info-card p {
+    font-size: 0.9rem;
+    color: var(--ay-muted);
+    line-height: 1.9;
+    text-align: left;
+    font-weight: 300;
+}
+
+/* ─── MEMBER GRID ────────────────────────────────────────────── */
+.ay-group-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1.4rem;
+    color: var(--ay-white);
+    margin: 4rem 0 1.5rem;
+    letter-spacing: 2px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.ay-alumni-title {
+    color: var(--ay-muted-accent);
+    margin-top: 6rem;
+}
+
+.ay-member-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.ay-alumni-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1rem;
+}
+
+.ay-member-card {
+    background: var(--ay-surface);
+    border: 1px solid transparent;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: all 0.4s ease;
+    border-radius: 2px;
+}
+
+.ay-member-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--ay-border);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.ay-member-name {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--ay-white);
+    display: block;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+a.ay-member-name:hover {
+    color: var(--ay-accent);
+}
+
+.ay-member-read {
+    font-size: 0.65rem;
+    color: var(--ay-accent);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Alumni specific styling */
+.ay-alumni-grid .ay-member-card {
+    padding: 1.5rem 1rem;
+    background: transparent;
+    border: 1px solid var(--ay-subtle);
+}
+
+.ay-alumni-grid .ay-member-name {
+    font-size: 0.95rem;
+    color: var(--ay-muted);
+    margin: 0;
+    font-weight: 400;
+}
+
+.ay-alumni-grid .ay-member-card:hover {
+    border-color: var(--ay-muted-accent);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+/* ─── FOOTER ─────────────────────────────────────────────────── */
+.ay-footer {
+    position: relative;
+    z-index: 10;
+    border-top: 1px solid var(--ay-subtle);
+    padding: 4rem 5vw;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--ay-muted);
+}
+
+.ay-footer-logo {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    color: var(--ay-white);
+    margin-bottom: 1rem;
+}
+
+.ay-footer-logo span {
+    color: var(--ay-accent);
+}
+
+/* ─── REVEAL ANIMATION ───────────────────────────────────────── */
+.ay-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.ay-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ─── RESPONSIVE ─────────────────────────────────────────────── */
+@media (max-width: 900px) {
+    .ay-hero-bg-text {
+        font-size: 55vw;
+    }
+
+    .ay-hero-stats {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .ay-member-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ay-info-grid {
+        grid-template-columns: 1fr;
+    }
+}

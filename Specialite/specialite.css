@@ -1,0 +1,531 @@
+/* ============================================================
+   すぺしゃりて (Specialite) — specialite.css
+   ============================================================ */
+
+/* ゲーミング・eスポーツ感を出すためのフォント (Teko & M PLUS Rounded 1c) */
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;800;900&family=Noto+Sans+JP:wght@400;700;900&family=Teko:wght@500;600;700&display=swap');
+
+/* ─── TOKENS ───────────────────────────────────────────────── */
+:root {
+    /* ゲーミングデバイスを思わせるネオンミント × ビビッドピンク */
+    --sp-brand-blue: #00ffcc;
+    /* ネオンミント/シアン */
+    --sp-brand-pink: #ff00a0;
+    /* ビビッドピンク */
+    --sp-brand-yellow: #ffea00;
+    /* アテンションイエロー */
+
+    --sp-glow: rgba(0, 255, 204, 0.4);
+    --sp-gradient: linear-gradient(135deg, var(--sp-brand-blue) 0%, #0099ff 100%);
+    --sp-gradient-hover: linear-gradient(135deg, var(--sp-brand-pink) 0%, #ff0055 100%);
+
+    /* ダークテーマ */
+    --sp-dark: #0b0c10;
+    --sp-surface: #1f2833;
+    --sp-surface-L: rgba(31, 40, 51, 0.8);
+    --sp-text: #c5c6c7;
+    --sp-white: #ffffff;
+    --sp-subtle: rgba(255, 255, 255, 0.05);
+}
+
+/* ─── RESET ─────────────────────────────────────────────────── */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--sp-dark);
+    color: var(--sp-text);
+    overflow-x: hidden;
+}
+
+/* ─── BACKGROUND ───────────────────────────────────────────── */
+.sp-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: radial-gradient(circle at 50% -20%, #151d26 0%, var(--sp-dark) 80%);
+}
+
+.sp-bg-grid {
+    position: absolute;
+    inset: 0;
+    background-size: 50px 50px;
+    background-image:
+        linear-gradient(to right, rgba(0, 255, 204, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 255, 204, 0.05) 1px, transparent 1px);
+    transform: perspective(500px) rotateX(60deg) translateY(100px) translateZ(-200px);
+    transform-origin: bottom center;
+    opacity: 0.3;
+}
+
+.sp-bg-glow {
+    position: absolute;
+    bottom: -20vh;
+    left: 0;
+    right: 0;
+    height: 40vh;
+    background: radial-gradient(ellipse at center, rgba(0, 255, 204, 0.15) 0%, transparent 60%);
+}
+
+/* ─── NAV ────────────────────────────────────────────────────── */
+.sp-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1.2rem 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(11, 12, 16, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--sp-surface);
+}
+
+.sp-nav-back {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.2rem;
+    color: var(--sp-text);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: color 0.3s;
+    letter-spacing: 2px;
+}
+
+.sp-nav-back:hover {
+    color: var(--sp-brand-yellow);
+    text-shadow: 0 0 10px var(--sp-brand-yellow);
+}
+
+.sp-nav-logo {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: var(--sp-white);
+    letter-spacing: 1px;
+}
+
+.sp-nav-logo span {
+    font-family: 'Teko', sans-serif;
+    color: var(--sp-brand-blue);
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    margin-left: 0.5rem;
+}
+
+.sp-nav-tag {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    color: var(--sp-dark);
+    background: var(--sp-brand-blue);
+    padding: 0 0.8rem;
+    border-radius: 2px;
+    transform: skewX(-15deg);
+}
+
+/* ─── HERO ───────────────────────────────────────────────────── */
+.sp-hero {
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 9rem 5vw 5rem;
+    overflow: hidden;
+}
+
+.sp-hero-bg-text {
+    position: absolute;
+    right: -2%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Teko', sans-serif;
+    font-size: 35vw;
+    font-weight: 600;
+    line-height: 0.85;
+    color: var(--sp-brand-blue);
+    opacity: 0.03;
+    user-select: none;
+    pointer-events: none;
+}
+
+.sp-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 680px;
+}
+
+.sp-eyebrow {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 4px;
+    color: var(--sp-brand-blue);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.sp-hero-name {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    font-weight: 900;
+    line-height: 1.1;
+    color: var(--sp-white);
+    margin-bottom: 0.8rem;
+    letter-spacing: 2px;
+    text-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
+}
+
+.sp-hero-tagline {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    letter-spacing: 2px;
+    color: var(--sp-text);
+    margin-bottom: 2.5rem;
+    border-left: 4px solid var(--sp-brand-blue);
+    padding-left: 1rem;
+    font-weight: 700;
+}
+
+.sp-hero-concept {
+    font-size: 0.95rem;
+    color: var(--sp-text);
+    line-height: 1.9;
+    background: var(--sp-surface-L);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 3px solid var(--sp-brand-pink);
+    padding: 2rem;
+    border-radius: 4px;
+    margin-bottom: 3.5rem;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    transform: skewX(-2deg);
+}
+
+.sp-hero-stats {
+    display: flex;
+    gap: 3rem;
+}
+
+.sp-stat-value {
+    font-family: 'Teko', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: var(--sp-brand-yellow);
+    line-height: 1;
+}
+
+.sp-stat-label {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    color: var(--sp-white);
+    margin-top: 0.2rem;
+}
+
+/* Controller Deco */
+.sp-hero-deco {
+    position: absolute;
+    right: 8vw;
+    bottom: 20vh;
+    opacity: 0.2;
+    transform: rotate(15deg) scale(1.5);
+    z-index: 1;
+}
+
+.sp-button-gp {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 40px;
+}
+
+.sp-btn {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #333;
+    border: 2px solid #555;
+}
+
+.sp-btn.red {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ff3b30;
+}
+
+.sp-btn.yellow {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffcc00;
+}
+
+.sp-btn.blue {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background: #007aff;
+}
+
+.sp-btn.green {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background: #34c759;
+}
+
+/* ─── CONTAINER ──────────────────────────────────────────────── */
+.sp-container {
+    position: relative;
+    z-index: 10;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 5vw 8rem;
+}
+
+/* ─── SECTION HEADER ─────────────────────────────────────────── */
+.sp-section {
+    margin-bottom: 7rem;
+}
+
+.sp-section-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 3.5rem;
+}
+
+.sp-header-slash {
+    font-family: 'Teko', sans-serif;
+    font-size: 3rem;
+    color: var(--sp-brand-pink);
+    line-height: 1;
+}
+
+.sp-section-title {
+    font-family: 'Teko', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--sp-white);
+    letter-spacing: 2px;
+    line-height: 1;
+}
+
+.sp-section-title-sub {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: var(--sp-brand-blue);
+    display: block;
+    margin-top: 0.2rem;
+    font-weight: 700;
+}
+
+.sp-divider {
+    flex: 1;
+    height: 2px;
+    background: var(--sp-surface);
+    position: relative;
+}
+
+.sp-divider::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -1px;
+    width: 50px;
+    height: 4px;
+    background: var(--sp-gradient);
+}
+
+/* ─── INFO CARDS (UI Widget Style) ───────────────────────────── */
+.sp-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.sp-info-card {
+    background: var(--sp-surface-L);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    padding: 2.5rem 2rem;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.sp-info-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--sp-gradient);
+}
+
+.sp-info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 255, 204, 0.1);
+    background: var(--sp-surface);
+}
+
+.sp-info-icon {
+    font-size: 2rem;
+    color: var(--sp-brand-blue);
+    margin-bottom: 1.5rem;
+}
+
+.sp-info-card h3 {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 1.15rem;
+    color: var(--sp-white);
+    margin-bottom: 1.2rem;
+    font-weight: 800;
+}
+
+.sp-info-card p {
+    font-size: 0.95rem;
+    color: var(--sp-text);
+    line-height: 1.8;
+}
+
+/* ─── MEMBER GRID (Character Select Screen Style) ──────────────── */
+.sp-member-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.sp-member-card {
+    background: var(--sp-surface);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 2rem 1.5rem;
+    position: relative;
+    transition: all 0.2s ease-out;
+    cursor: pointer;
+    clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+}
+
+.sp-member-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 2px solid transparent;
+    transition: all 0.2s;
+    opacity: 0;
+}
+
+.sp-member-card:hover {
+    background: var(--sp-surface-L);
+    transform: scale(1.05);
+    z-index: 2;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+}
+
+.sp-member-card:hover::before {
+    border-color: var(--sp-brand-yellow);
+    opacity: 1;
+}
+
+.sp-member-player {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.2rem;
+    color: var(--sp-brand-blue);
+    margin-bottom: 0.8rem;
+    letter-spacing: 2px;
+}
+
+.sp-member-name {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var(--sp-white);
+    display: block;
+    margin-bottom: 0.4rem;
+}
+
+.sp-member-read {
+    font-family: 'Teko', sans-serif;
+    font-size: 1rem;
+    color: var(--sp-text);
+    letter-spacing: 1px;
+}
+
+/* ─── FOOTER ─────────────────────────────────────────────────── */
+.sp-footer {
+    position: relative;
+    z-index: 10;
+    border-top: 1px solid var(--sp-surface);
+    padding: 4rem 5vw;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--sp-text);
+}
+
+.sp-footer-logo {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: var(--sp-white);
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.sp-footer-logo span {
+    font-family: 'Teko', sans-serif;
+    color: var(--sp-brand-blue);
+}
+
+/* ─── REVEAL ANIMATION ───────────────────────────────────────── */
+.sp-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.sp-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ─── RESPONSIVE ─────────────────────────────────────────────── */
+@media (max-width: 900px) {
+    .sp-hero-bg-text {
+        display: none;
+    }
+
+    .sp-hero-deco {
+        display: none;
+    }
+
+    .sp-hero-stats {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .sp-member-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    }
+
+    .sp-info-grid {
+        grid-template-columns: 1fr;
+    }
+}

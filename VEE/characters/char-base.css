@@ -1,105 +1,288 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Syne:wght@400;700;800&display=swap');
+/* ============================================================
+   VEE char-base.css — Shared Character Page Styles
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,600;0,800;0,900;1,600&family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
 
 :root {
-    --vee-bg: #ffffff;
-    --vee-text: #000000;
-    --vee-accent: #ff0055;
-    --vee-sub: #f0f0f0;
-    --vee-border: #e0e0e0;
+    /* Override per-character based on their theme color or tag */
+    --char-color: #ffffff;
+    /* default */
+    --char-glow: rgba(255, 255, 255, 0.2);
+
+    --vee-bg: #111111;
+    --vee-surface: #1a1a1a;
+    --vee-text: #ffffff;
+    --vee-muted: #888888;
+    --vee-border: #333333;
 }
 
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 body {
-    background-color: var(--vee-bg);
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--vee-bg);
     color: var(--vee-text);
-    font-family: 'Inter', sans-serif;
-    line-height: 1.5;
+    overflow-x: hidden;
 }
 
-.hero {
-    border-bottom: 5px solid var(--vee-text);
-    padding: 8rem 3rem 4rem;
+/* BACKGROUND */
+.cp-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: var(--vee-bg);
 }
 
-.hero-name {
-    font-family: 'Syne', sans-serif;
-    font-size: 6rem;
+.cp-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 80% 20%, color-mix(in srgb, var(--char-color) 15%, transparent) 0%, transparent 50%),
+        radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+    filter: blur(20px);
+}
+
+.cp-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('data:image/svg+xml,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)"/%3E%3C/svg%3E');
+    opacity: 0.05;
+}
+
+/* NAV */
+.cp-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1.5rem 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(17, 17, 17, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--char-color);
+}
+
+.cp-back {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
     font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: -0.05em;
-    line-height: 0.9;
+    color: var(--vee-muted);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: color 0.3s;
+    letter-spacing: 2px;
 }
 
-.container {
+.cp-back:hover {
+    color: var(--vee-text);
+    text-shadow: 0 0 10px var(--char-glow);
+}
+
+.cp-nav-gen {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: var(--vee-bg);
+    background: var(--char-color);
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    font-weight: 700;
+}
+
+/* HERO */
+.cp-hero {
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 10rem 5vw 5rem;
+    overflow: hidden;
+}
+
+.cp-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 680px;
+}
+
+.cp-gen-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    color: var(--char-color);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-weight: 800;
+}
+
+.cp-hero-name {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: clamp(3rem, 8vw, 5rem);
+    font-weight: 900;
+    line-height: 1.1;
+    color: var(--vee-text);
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+}
+
+.cp-hero-en {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    letter-spacing: 4px;
+    color: var(--vee-muted);
+    display: block;
+    margin-bottom: 3rem;
+}
+
+.cp-chara-desc {
+    font-size: 1rem;
+    color: #cccccc;
+    line-height: 2;
+    background: rgba(26, 26, 26, 0.5);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--vee-border);
+    border-left: 4px solid var(--char-color);
+    padding: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.cp-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.cp-tag {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    padding: 0.4rem 1.2rem;
+    border: 1px solid var(--char-color);
+    color: var(--char-color);
+    border-radius: 20px;
+}
+
+/* VEE-specific Hero Visual: Large circle behind the name */
+.cp-hero-motif {
+    position: absolute;
+    right: 5vw;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40vw;
+    height: 40vw;
+    max-width: 600px;
+    max-height: 600px;
+    border-radius: 50%;
+    border: 2px solid color-mix(in srgb, var(--char-color) 30%, transparent);
+    background: radial-gradient(circle, color-mix(in srgb, var(--char-color) 10%, transparent) 0%, transparent 60%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: pulse-ring 4s cubic-bezier(0.4, 0, 0.6, 1) infinite alternate;
+}
+
+@keyframes pulse-ring {
+    100% {
+        transform: translateY(-50%) scale(1.05);
+        border-color: color-mix(in srgb, var(--char-color) 60%, transparent);
+        box-shadow: 0 0 50px var(--char-glow);
+    }
+}
+
+/* SECTIONS */
+.cp-section {
+    position: relative;
+    z-index: 10;
+    padding: 5rem 5vw;
     max-width: 1000px;
     margin: 0 auto;
-    padding: 6rem 3rem;
 }
 
-.section {
-    margin-bottom: 8rem;
-}
-
-.section-label {
-    font-size: 0.8rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    color: var(--vee-accent);
-    margin-bottom: 2rem;
-    display: block;
-}
-
-.profile-card {
-    background: var(--vee-sub);
-    padding: 4rem;
-    border-left: 10px solid var(--vee-text);
-}
-
-.data-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 4rem;
-}
-
-.data-item .label {
-    display: block;
-    font-size: 0.7rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    opacity: 0.4;
-    margin-bottom: 1rem;
-}
-
-.data-item .value {
-    font-family: 'Syne', sans-serif;
+.cp-section-title {
+    font-family: 'Montserrat', sans-serif;
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 900;
+    color: var(--vee-text);
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    letter-spacing: 2px;
 }
 
-.description {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: #444;
+.cp-section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--vee-border);
 }
 
-.reveal {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease-out;
+/* Cards */
+.cp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
 }
 
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
+.cp-card {
+    background: var(--vee-surface);
+    border: 1px solid var(--vee-border);
+    border-top: 3px solid var(--char-color);
+    padding: 2.5rem;
+    transition: all 0.3s;
 }
 
-@media (max-width: 768px) {
-    .hero-name {
-        font-size: 3rem;
-    }
+.cp-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--char-color);
+}
+
+.cp-card h3 {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.25rem;
+    color: var(--vee-text);
+    margin-bottom: 1.2rem;
+    font-weight: 800;
+}
+
+.cp-card p,
+.cp-card li {
+    font-size: 0.95rem;
+    color: var(--vee-muted);
+    line-height: 1.9;
+}
+
+.cp-card strong {
+    color: var(--vee-text);
+    border-bottom: 2px solid var(--char-color);
+}
+
+/* FOOTER */
+.cp-footer {
+    position: relative;
+    z-index: 10;
+    border-top: 1px solid var(--vee-border);
+    padding: 4rem 5vw;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--vee-muted);
 }

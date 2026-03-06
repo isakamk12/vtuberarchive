@@ -1,0 +1,472 @@
+/* ============================================================
+   FIRST STAGE PRODUCTION — firststage.css
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
+
+/* ─── TOKENS ───────────────────────────────────────────────── */
+:root {
+    /* クリーンで輝かしいステージのイメージ (白、ライトブルー、ゴールド) */
+    --fs-primary: #00b0f0;
+    /* クリーンな舞台ライトブルー */
+    --fs-accent-gold: #ffd700;
+    /* スターダム・ゴールド */
+    --fs-accent-pink: #ff6b81;
+    /* アイドル感のあるピンク */
+
+    --fs-bg-light: #f4f8ff;
+    /* 爽やかな白青背景 */
+    --fs-surface: #ffffff;
+    --fs-surface-hov: #fcfdff;
+    --fs-text-main: #1a2a3a;
+    --fs-text-muted: #687a8f;
+    --fs-border: #dbe4f0;
+
+    --fs-gradient: linear-gradient(135deg, var(--fs-primary) 0%, var(--fs-accent-pink) 100%);
+    --fs-shadow: 0 10px 30px rgba(0, 176, 240, 0.1);
+}
+
+/* ─── RESET ─────────────────────────────────────────────────── */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--fs-bg-light);
+    color: var(--fs-text-main);
+    overflow-x: hidden;
+}
+
+/* ─── STAGE BACKGROUND ─────────────────────────────────────── */
+.fs-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: var(--fs-bg-light);
+}
+
+.fs-bg-spotlight {
+    position: absolute;
+    top: -30vh;
+    width: 60vw;
+    height: 120vh;
+    background: linear-gradient(180deg, rgba(0, 176, 240, 0.08) 0%, transparent 80%);
+    transform-origin: top center;
+    clip-path: polygon(30% 0, 70% 0, 100% 100%, 0 100%);
+}
+
+.fs-bg-spotlight.left {
+    left: 0vw;
+    transform: rotate(10deg);
+}
+
+.fs-bg-spotlight.right {
+    right: 0vw;
+    transform: rotate(-10deg);
+    background: linear-gradient(180deg, rgba(255, 107, 129, 0.05) 0%, transparent 80%);
+}
+
+.fs-bg-particles {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(var(--fs-accent-gold) 1px, transparent 1px);
+    background-size: 80px 80px;
+    opacity: 0.15;
+    animation: stage-dust 20s linear infinite;
+}
+
+@keyframes stage-dust {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-80px);
+    }
+}
+
+/* ─── NAV ────────────────────────────────────────────────────── */
+.fs-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1.2rem 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--fs-border);
+}
+
+.fs-nav-back {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--fs-text-muted);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: color 0.3s;
+    letter-spacing: 2px;
+}
+
+.fs-nav-back:hover {
+    color: var(--fs-primary);
+}
+
+.fs-nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: var(--fs-text-main);
+    letter-spacing: 2px;
+}
+
+.fs-logo-icon {
+    font-size: 1rem;
+    color: var(--fs-accent-gold);
+}
+
+.fs-nav-logo span {
+    color: var(--fs-primary);
+    font-weight: 700;
+}
+
+.fs-nav-tag {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: var(--fs-surface);
+    background: var(--fs-text-main);
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    font-weight: 700;
+}
+
+/* ─── HERO ───────────────────────────────────────────────────── */
+.fs-hero {
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 9rem 5vw 5rem;
+    overflow: hidden;
+}
+
+.fs-hero-bg-text {
+    position: absolute;
+    right: -2%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Outfit', sans-serif;
+    font-size: 35vw;
+    font-weight: 900;
+    color: var(--fs-primary);
+    opacity: 0.04;
+    user-select: none;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.fs-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 680px;
+}
+
+.fs-eyebrow {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 4px;
+    color: var(--fs-primary);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-weight: 700;
+    background: rgba(0, 176, 240, 0.1);
+    display: inline-flex;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+}
+
+.fs-hero-name {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    font-weight: 900;
+    line-height: 1.1;
+    color: var(--fs-text-main);
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.fs-hero-tagline {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    letter-spacing: 2px;
+    color: var(--fs-text-muted);
+    margin-bottom: 2.5rem;
+    font-weight: 700;
+}
+
+.fs-hero-concept {
+    font-size: 0.95rem;
+    color: var(--fs-text-main);
+    line-height: 1.9;
+    background: var(--fs-surface);
+    border: 1px solid var(--fs-border);
+    border-radius: 12px;
+    padding: 2.5rem;
+    margin-bottom: 3.5rem;
+    box-shadow: var(--fs-shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+.fs-hero-concept::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--fs-gradient);
+}
+
+.fs-hero-stats {
+    display: flex;
+    gap: 3rem;
+}
+
+.fs-stat-value {
+    font-family: 'Outfit', sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--fs-primary);
+    line-height: 1;
+}
+
+.fs-stat-label {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    color: var(--fs-text-muted);
+    margin-top: 0.4rem;
+    font-weight: 700;
+}
+
+/* ─── CONTAINER ──────────────────────────────────────────────── */
+.fs-container {
+    position: relative;
+    z-index: 10;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 5vw 8rem;
+}
+
+/* ─── SECTION HEADER ─────────────────────────────────────────── */
+.fs-section {
+    margin-bottom: 5rem;
+}
+
+.fs-section-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 3.5rem;
+}
+
+.fs-section-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--fs-text-main);
+    letter-spacing: 2px;
+}
+
+.fs-section-title-sub {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    color: var(--fs-primary);
+    display: block;
+    margin-top: 0.2rem;
+    font-weight: 700;
+}
+
+.fs-divider {
+    flex: 1;
+    height: 1px;
+    background: var(--fs-border);
+    position: relative;
+}
+
+.fs-divider::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -1px;
+    width: 60px;
+    height: 3px;
+    background: var(--fs-gradient);
+}
+
+/* ─── ROSTER GRID ────────────────────────────────────────────── */
+.fs-member-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.fs-member-card {
+    display: block;
+    background: var(--fs-surface);
+    border: 1px solid var(--fs-border);
+    border-radius: 8px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.fs-card-inner {
+    position: relative;
+    z-index: 1;
+}
+
+.fs-member-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--fs-gradient);
+    opacity: 0;
+    transition: opacity 0.4s;
+    z-index: 0;
+}
+
+.fs-member-card:hover {
+    transform: translateY(-8px);
+    border-color: transparent;
+    box-shadow: 0 15px 30px rgba(0, 176, 240, 0.2);
+}
+
+.fs-member-card:hover::before {
+    opacity: 1;
+}
+
+.fs-member-icon,
+.fs-member-name,
+.fs-member-read {
+    transition: color 0.4s;
+    position: relative;
+}
+
+.fs-member-icon {
+    font-size: 2rem;
+    color: var(--fs-primary);
+    margin-bottom: 1.2rem;
+}
+
+/* Alternate colors for variety */
+.fs-member-card:nth-child(2n) .fs-member-icon {
+    color: var(--fs-accent-pink);
+}
+
+.fs-member-card:nth-child(3n) .fs-member-icon {
+    color: var(--fs-accent-gold);
+}
+
+.fs-member-read {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.75rem;
+    color: var(--fs-text-muted);
+    letter-spacing: 1px;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+}
+
+.fs-member-name {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--fs-text-main);
+}
+
+/* Hover State Texts */
+.fs-member-card:hover .fs-member-icon,
+.fs-member-card:hover .fs-member-name,
+.fs-member-card:hover .fs-member-read {
+    color: white;
+}
+
+
+/* ─── FOOTER ─────────────────────────────────────────────────── */
+.fs-footer {
+    position: relative;
+    z-index: 10;
+    border-top: 1px solid var(--fs-border);
+    padding: 4rem 5vw;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--fs-text-muted);
+    background: var(--fs-surface);
+}
+
+.fs-footer-logo {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var(--fs-text-main);
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.fs-footer-logo span {
+    color: var(--fs-primary);
+}
+
+/* ─── REVEAL ANIMATION ───────────────────────────────────────── */
+.fs-reveal,
+.fs-member-card {
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.active {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* ─── RESPONSIVE ─────────────────────────────────────────────── */
+@media (max-width: 900px) {
+    .fs-hero-bg-text {
+        display: none;
+    }
+
+    .fs-hero-stats {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .fs-member-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}

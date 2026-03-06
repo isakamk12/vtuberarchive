@@ -1,0 +1,500 @@
+/* ============================================================
+   けものフレンズVぷろじぇくと — kemonov.css
+   ============================================================ */
+
+/* ポップで楽しげな雰囲気と、少し素朴な丸ゴシックの組み合わせ */
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500&family=M+PLUS+Rounded+1c:wght@400;700;800;900&family=Noto+Sans+JP:wght@400;700;900&display=swap');
+
+/* ─── TOKENS ───────────────────────────────────────────────── */
+:root {
+    /* ジャパリパークを連想させる自然のカラーパレット */
+    --kv-accent: #f4a261;
+    /* 温かみのあるオレンジ/イエロー */
+    --kv-accent-alt: #2a9d8f;
+    /* 葉っぱのグリーン */
+    --kv-accent-glow: rgba(244, 162, 97, 0.4);
+    --kv-accent-soft: rgba(244, 162, 97, 0.15);
+
+    --kv-border: rgba(244, 162, 97, 0.3);
+
+    /* ライトテーマ寄りのナチュラルなベースだが、アーカイブ統一感のためダーク寄りに調整 */
+    --kv-dark: #1a1e16;
+    /* 深い森の緑褐色 */
+    --kv-surface: rgba(255, 255, 255, 0.05);
+    --kv-subtle: rgba(255, 255, 255, 0.1);
+    --kv-text: #fdfcf0;
+    --kv-muted: rgba(253, 252, 240, 0.7);
+    --kv-white: #ffffff;
+
+    /* フレンズの動物カテゴリに応じた差し色想定 */
+    --kv-color-beast: #e76f51;
+    /* 猛獣・肉食系 */
+    --kv-color-bird: #4eb5db;
+    /* 鳥・ペンギン系 */
+    --kv-color-small: #f4a261;
+    /* 小動物・草食系 */
+    --kv-color-night: #9d4edd;
+    /* 夜行性・コウモリ系 */
+}
+
+/* ─── RESET ─────────────────────────────────────────────────── */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--kv-dark);
+    color: var(--kv-text);
+    overflow-x: hidden;
+}
+
+/* ─── BACKGROUND AND LEAVES ────────────────────────────────── */
+.kv-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: radial-gradient(circle at 50% 100%, #2a3325 0%, #1a1e16 80%);
+}
+
+.kv-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    /* サバンナ・ジャングル風のドットパターン */
+    background-image: radial-gradient(var(--kv-accent-soft) 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.3;
+}
+
+.kv-leaves {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.kv-leaves::after,
+.kv-leaves::before {
+    content: '🍃';
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0.1;
+    filter: drop-shadow(0 0 10px var(--kv-accent-alt));
+    animation: leaf-fall 15s linear infinite;
+}
+
+.kv-leaves::before {
+    content: '🍂';
+    font-size: 1.5rem;
+    left: 20%;
+    animation: leaf-fall 20s linear infinite 5s;
+}
+
+.kv-leaves::after {
+    left: 80%;
+    animation: leaf-fall 12s linear infinite 2s;
+}
+
+@keyframes leaf-fall {
+    0% {
+        top: -10%;
+        transform: translateX(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.15;
+    }
+
+    90% {
+        opacity: 0.15;
+    }
+
+    100% {
+        top: 110%;
+        transform: translateX(100px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* ─── NAV ────────────────────────────────────────────────────── */
+.kv-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1.2rem 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(26, 30, 22, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--kv-accent-alt);
+}
+
+.kv-nav-back {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--kv-muted);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: color 0.3s;
+}
+
+.kv-nav-back:hover {
+    color: var(--kv-accent);
+}
+
+.kv-nav-logo {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: var(--kv-white);
+}
+
+.kv-nav-logo span {
+    color: var(--kv-accent);
+    font-size: 1.5rem;
+}
+
+.kv-nav-tag {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: var(--kv-white);
+    background: var(--kv-accent-alt);
+    padding: 0.2rem 0.8rem;
+    border-radius: 20px;
+    font-weight: 700;
+}
+
+/* ─── HERO ───────────────────────────────────────────────────── */
+.kv-hero {
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 9rem 5vw 5rem;
+    overflow: hidden;
+}
+
+.kv-hero-bg-text {
+    position: absolute;
+    right: -5%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 35vw;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--kv-accent-alt);
+    opacity: 0.05;
+    user-select: none;
+    pointer-events: none;
+}
+
+.kv-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 720px;
+}
+
+.kv-eyebrow {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    color: var(--kv-accent);
+    margin-bottom: 1.2rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.kv-eyebrow::before {
+    content: '🎪';
+}
+
+.kv-hero-name {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: clamp(3rem, 7vw, 5rem);
+    font-weight: 900;
+    line-height: 1.2;
+    color: var(--kv-white);
+    text-shadow: 0 4px 20px var(--kv-accent-glow);
+    margin-bottom: 0.8rem;
+    letter-spacing: 2px;
+}
+
+.kv-hero-name span {
+    color: var(--kv-accent);
+    font-size: 1.2em;
+}
+
+.kv-hero-tagline {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    letter-spacing: 2px;
+    color: var(--kv-text);
+    margin-bottom: 2rem;
+    font-weight: 700;
+    border-left: 5px solid var(--kv-accent-alt);
+    padding-left: 1rem;
+}
+
+.kv-hero-concept {
+    font-size: 1rem;
+    color: var(--kv-muted);
+    line-height: 1.9;
+    background: var(--kv-surface);
+    padding: 2rem;
+    border-radius: 16px;
+    border: 2px dashed var(--kv-border);
+    margin-bottom: 3.5rem;
+    max-width: 650px;
+}
+
+.kv-hero-stats {
+    display: flex;
+    gap: 3.5rem;
+}
+
+.kv-stat-value {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--kv-accent);
+    line-height: 1;
+}
+
+.kv-stat-label {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: var(--kv-muted);
+    margin-top: 0.6rem;
+    font-weight: 700;
+}
+
+/* ─── CONTAINER ──────────────────────────────────────────────── */
+.kv-container {
+    position: relative;
+    z-index: 10;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 5vw 8rem;
+}
+
+/* ─── SECTION HEADER ─────────────────────────────────────────── */
+.kv-section {
+    margin-bottom: 7rem;
+}
+
+.kv-section-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 3.5rem;
+}
+
+.kv-section-title {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--kv-white);
+    letter-spacing: 2px;
+}
+
+.kv-section-title-sub {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 4px;
+    color: var(--kv-accent-alt);
+    display: block;
+    margin-top: 0.4rem;
+    font-weight: 700;
+}
+
+.kv-divider {
+    flex: 1;
+    height: 4px;
+    background: repeating-linear-gradient(90deg, var(--kv-accent-alt), var(--kv-accent-alt) 10px, transparent 10px, transparent 20px);
+    opacity: 0.5;
+    border-radius: 2px;
+}
+
+/* ─── INFO CARDS ─────────────────────────────────────────────── */
+.kv-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.kv-info-card {
+    background: var(--kv-surface);
+    border: 2px solid var(--kv-subtle);
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+}
+
+.kv-info-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    border-color: var(--kv-accent);
+    background: rgba(244, 162, 97, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.kv-info-card h3 {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 1.15rem;
+    color: var(--kv-white);
+    margin-bottom: 1.2rem;
+    font-weight: 900;
+}
+
+.kv-info-card p {
+    font-size: 0.95rem;
+    color: var(--kv-muted);
+    line-height: 1.8;
+}
+
+/* ─── MEMBER GRID ────────────────────────────────────────────── */
+.kv-member-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 2rem;
+}
+
+.kv-member-card {
+    background: var(--kv-surface);
+    border: 2px solid var(--kv-subtle);
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.kv-member-icon {
+    font-size: 2.5rem;
+    color: var(--kv-accent-soft);
+    margin-bottom: 1.5rem;
+    transition: all 0.3s;
+}
+
+.kv-member-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--kv-accent-alt);
+    background: rgba(42, 157, 143, 0.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.kv-member-card:hover .kv-member-icon {
+    color: var(--kv-accent);
+    transform: scale(1.2) rotate(-10deg);
+}
+
+.kv-member-name {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 900;
+    color: var(--kv-white);
+    display: block;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s;
+}
+
+a.kv-member-name:hover {
+    color: var(--kv-accent);
+}
+
+.kv-member-read {
+    font-family: 'Kiwi Maru', serif;
+    font-size: 0.8rem;
+    color: var(--kv-muted);
+}
+
+/* ─── FOOTER ─────────────────────────────────────────────────── */
+.kv-footer {
+    position: relative;
+    z-index: 10;
+    border-top: 2px dashed var(--kv-subtle);
+    padding: 4rem 5vw;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--kv-muted);
+}
+
+.kv-footer-logo {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: var(--kv-white);
+    margin-bottom: 1rem;
+}
+
+.kv-footer-logo span {
+    color: var(--kv-accent);
+    font-size: 1.2em;
+}
+
+/* ─── REVEAL ANIMATION ───────────────────────────────────────── */
+.kv-reveal {
+    opacity: 0;
+    transform: translateY(30px) scale(0.98);
+    transition: opacity 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275), transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.kv-reveal.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* ─── RESPONSIVE ─────────────────────────────────────────────── */
+@media (max-width: 900px) {
+    .kv-hero-bg-text {
+        font-size: 45vw;
+    }
+
+    .kv-hero-stats {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .kv-member-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    }
+
+    .kv-member-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .kv-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .kv-hero-name {
+        font-size: 2.8rem;
+    }
+}

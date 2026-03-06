@@ -1,0 +1,525 @@
+/* ============================================================
+   VEE — vee.css
+   ============================================================ */
+
+/* ソリッド・スタイリッシュなファッション誌やレーベルサイトのようなフォント */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,600;0,800;0,900;1,600&family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
+
+/* ─── TOKENS ───────────────────────────────────────────────── */
+:root {
+    /* モノトーン × ネオンアクセント（多様性のカラー） */
+    --vee-bg: #111111;
+    --vee-surface: #1a1a1a;
+    --vee-surface-hov: #222222;
+    --vee-text: #ffffff;
+    --vee-muted: #888888;
+    --vee-border: #333333;
+
+    /* Tag Colors (Music, Game, Art, Talk) */
+    --vee-c-music: #ff3366;
+    /* ピンク・レッド */
+    --vee-c-game: #33ccff;
+    /* シアン */
+    --vee-c-art: #ffcc00;
+    /* イエロー */
+    --vee-c-talk: #00ff66;
+    /* グリーン */
+}
+
+/* ─── RESET ─────────────────────────────────────────────────── */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--vee-bg);
+    color: var(--vee-text);
+    overflow-x: hidden;
+}
+
+/* ─── BACKGROUND ───────────────────────────────────────────── */
+.vee-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: var(--vee-bg);
+}
+
+/* ざらっとしたノイズテクスチャ */
+.vee-bg-noise {
+    position: absolute;
+    inset: 0;
+    background: url('data:image/svg+xml,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)"/%3E%3C/svg%3E');
+    opacity: 0.05;
+}
+
+/* うっすらとしたスポットライトグラデーション */
+.vee-bg-gradient {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 80% 20%, rgba(255, 51, 102, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 20% 80%, rgba(51, 204, 255, 0.08) 0%, transparent 40%);
+}
+
+.vee-bg-lines {
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, 0.03) 25%, rgba(255, 255, 255, 0.03) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 0.03) 75%, rgba(255, 255, 255, 0.03) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, 0.03) 25%, rgba(255, 255, 255, 0.03) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 0.03) 75%, rgba(255, 255, 255, 0.03) 76%, transparent 77%, transparent);
+    background-size: 50px 50px;
+    opacity: 0.5;
+}
+
+/* ─── NAV ────────────────────────────────────────────────────── */
+.vee-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1.5rem 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(17, 17, 17, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--vee-border);
+}
+
+.vee-nav-back {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: var(--vee-muted);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: color 0.3s;
+    letter-spacing: 2px;
+}
+
+.vee-nav-back:hover {
+    color: var(--vee-text);
+}
+
+.vee-nav-logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: var(--vee-text);
+    letter-spacing: 4px;
+}
+
+.vee-nav-logo span {
+    font-size: 0.8rem;
+    color: var(--vee-muted);
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-left: 0.5rem;
+}
+
+.vee-nav-tag {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    color: var(--vee-text);
+    border: 1px solid var(--vee-border);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+}
+
+/* ─── HERO ───────────────────────────────────────────────────── */
+.vee-hero {
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10rem 5vw 5rem;
+    overflow: hidden;
+}
+
+.vee-hero-content {
+    max-width: 600px;
+    position: relative;
+    z-index: 2;
+}
+
+.vee-hero-badges {
+    display: flex;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.vee-badge {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    letter-spacing: 1px;
+}
+
+.vee-badge.c-music {
+    background: rgba(255, 51, 102, 0.1);
+    color: var(--vee-c-music);
+    border: 1px solid var(--vee-c-music);
+}
+
+.vee-badge.c-game {
+    background: rgba(51, 204, 255, 0.1);
+    color: var(--vee-c-game);
+    border: 1px solid var(--vee-c-game);
+}
+
+.vee-badge.c-art {
+    background: rgba(255, 204, 0, 0.1);
+    color: var(--vee-c-art);
+    border: 1px solid var(--vee-c-art);
+}
+
+.vee-badge.c-talk {
+    background: rgba(0, 255, 102, 0.1);
+    color: var(--vee-c-talk);
+    border: 1px solid var(--vee-c-talk);
+}
+
+.vee-hero-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(4rem, 12vw, 8rem);
+    font-weight: 900;
+    line-height: 1;
+    color: var(--vee-text);
+    margin-bottom: 0.5rem;
+    letter-spacing: -2px;
+}
+
+.vee-hero-tagline {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1rem, 3vw, 1.8rem);
+    letter-spacing: 4px;
+    color: var(--vee-muted);
+    margin-bottom: 3rem;
+    font-weight: 600;
+}
+
+.vee-hero-concept {
+    font-size: 1rem;
+    color: #cccccc;
+    line-height: 2;
+    background: rgba(26, 26, 26, 0.5);
+    border-left: 2px solid var(--vee-text);
+    padding: 2rem;
+    backdrop-filter: blur(5px);
+}
+
+/* 音波・ライブステージを意識した円形のアニメーションバブル */
+.vee-hero-visual {
+    position: absolute;
+    right: -10vw;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50vw;
+    height: 50vw;
+    pointer-events: none;
+}
+
+.vee-hero-circle {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 1px solid var(--vee-border);
+    animation: ripple 6s cubic-bezier(0.2, 0.8, 0.4, 1) infinite;
+}
+
+.vee-hero-circle.delay-1 {
+    animation-delay: 2s;
+    border-color: rgba(255, 51, 102, 0.3);
+}
+
+.vee-hero-circle.delay-2 {
+    animation-delay: 4s;
+    border-color: rgba(51, 204, 255, 0.3);
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0.1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* ─── CONTAINER ──────────────────────────────────────────────── */
+.vee-container {
+    position: relative;
+    z-index: 10;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5vw 8rem;
+}
+
+/* ─── SECTION HEADER ─────────────────────────────────────────── */
+.vee-section {
+    margin-bottom: 8rem;
+}
+
+.vee-section-header {
+    margin-bottom: 3.5rem;
+    border-bottom: 1px solid var(--vee-border);
+    padding-bottom: 1.5rem;
+}
+
+.vee-section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--vee-text);
+    letter-spacing: 2px;
+    display: flex;
+    align-items: baseline;
+    gap: 1.5rem;
+}
+
+.vee-section-title span {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    color: var(--vee-muted);
+    font-weight: 700;
+}
+
+/* ─── INFO CARDS (ライブハウス的なソリッド感) ────────────────── */
+.vee-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.vee-info-card {
+    background: var(--vee-surface);
+    border: 1px solid var(--vee-border);
+    padding: 3rem 2.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.vee-info-card:hover {
+    background: var(--vee-surface-hov);
+    transform: translateY(-5px);
+    border-color: var(--vee-muted);
+}
+
+.vee-info-icon {
+    font-size: 2.5rem;
+    color: var(--vee-text);
+    margin-bottom: 1.5rem;
+}
+
+.vee-info-card h3 {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.25rem;
+    color: var(--vee-text);
+    margin-bottom: 1.2rem;
+    font-weight: 800;
+}
+
+.vee-info-card p {
+    font-size: 0.95rem;
+    color: var(--vee-muted);
+    line-height: 1.9;
+}
+
+/* ─── ROSTER ─────────────────────────────────────────────────── */
+.vee-roster-group {
+    margin-bottom: 5rem;
+}
+
+.vee-group-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--vee-text);
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+}
+
+.vee-group-title.grad {
+    color: var(--vee-muted);
+}
+
+/* Member Grid - Tags / Label Aesthetic */
+.vee-member-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.vee-member-grid.min {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+
+.vee-member-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    border: 1px solid var(--vee-border);
+    padding: 1.5rem 2rem;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ホバー時に左から色面が広がる演出 */
+.vee-member-overlay {
+    position: absolute;
+    inset: 0;
+    background: var(--vee-surface);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+    z-index: 0;
+}
+
+.vee-member-card:hover {
+    border-color: var(--vee-text);
+}
+
+.vee-member-card:hover .vee-member-overlay {
+    transform: scaleX(1);
+}
+
+.vee-member-info {
+    position: relative;
+    z-index: 1;
+}
+
+.vee-member-read {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--vee-muted);
+    display: block;
+    margin-bottom: 0.4rem;
+    transition: color 0.3s;
+}
+
+.vee-member-name {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--vee-text);
+    display: block;
+}
+
+.vee-member-arrow {
+    position: relative;
+    z-index: 1;
+    color: var(--vee-muted);
+    transition: all 0.3s;
+    transform: translateX(-10px);
+    opacity: 0;
+}
+
+.vee-member-card:hover .vee-member-arrow {
+    transform: translateX(0);
+    opacity: 1;
+    color: var(--vee-text);
+}
+
+.vee-member-card:hover .vee-member-read {
+    color: var(--vee-c-game);
+    /* Hover時のアクセント */
+}
+
+/* Graduated Members */
+.vee-member-card.grad {
+    opacity: 0.6;
+    border-style: dashed;
+}
+
+.vee-member-card.grad:hover {
+    opacity: 1;
+    border-style: solid;
+    background: #1a1a1a;
+}
+
+.vee-member-card.grad .vee-member-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #aaaaaa;
+}
+
+.vee-member-card.grad:hover .vee-member-name {
+    color: white;
+}
+
+
+/* ─── FOOTER ─────────────────────────────────────────────────── */
+.vee-footer {
+    position: relative;
+    z-index: 10;
+    border-top: 1px solid var(--vee-border);
+    padding: 4rem 5vw;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--vee-muted);
+}
+
+.vee-footer-logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--vee-text);
+    margin-bottom: 1rem;
+    letter-spacing: 4px;
+}
+
+/* ─── REVEAL ANIMATION ───────────────────────────────────────── */
+.vee-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.vee-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* ─── RESPONSIVE ─────────────────────────────────────────────── */
+@media (max-width: 900px) {
+    .vee-hero {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .vee-hero-visual {
+        width: 100vw;
+        height: 100vw;
+        right: -50vw;
+        top: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .vee-member-grid {
+        grid-template-columns: 1fr;
+    }
+}

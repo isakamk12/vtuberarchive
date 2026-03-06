@@ -1,0 +1,541 @@
+/* ============================================================
+   バルス (Balus) — balus.css
+   ============================================================ */
+
+/* 先進的なxRテック企業をイメージしたフォント (Jura, Montserrat) */
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@400;600;700&family=Montserrat:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
+
+/* ─── TOKENS ───────────────────────────────────────────────── */
+:root {
+    /* デジタル・テクノロジーを感じさせるブルーグリーン × 白の輝き */
+    --bl-primary: #00f0b5;
+    /* テックグリーン・エメラルド */
+    --bl-secondary: #00c0ff;
+    /* xRブルー */
+
+    --bl-bg-dark: #08090b;
+    /* 漆黒のステージ背景 */
+    --bl-bg-panel: rgba(16, 18, 22, 0.8);
+    --bl-text: #f0f5fa;
+    --bl-muted: #8b95a5;
+    --bl-border: rgba(255, 255, 255, 0.08);
+
+    --bl-gradient: linear-gradient(135deg, var(--bl-primary) 0%, var(--bl-secondary) 100%);
+    --bl-glow: rgba(0, 240, 181, 0.3);
+}
+
+/* ─── RESET ─────────────────────────────────────────────────── */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--bl-bg-dark);
+    color: var(--bl-text);
+    overflow-x: hidden;
+}
+
+/* ─── BACKGROUND (xR LIVE STAGE) ───────────────────────────── */
+.bl-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: var(--bl-bg-dark);
+}
+
+/* 遠近感のあるステージグリッド床 */
+.bl-bg-grid {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60vh;
+    background-size: 60px 60px;
+    background-image:
+        linear-gradient(rgba(0, 240, 181, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 240, 181, 0.1) 1px, transparent 1px);
+    transform: perspective(600px) rotateX(70deg) translateY(100px) translateZ(-100px);
+    transform-origin: bottom center;
+}
+
+/* バーチャルスポットライト */
+.bl-bg-spotlight {
+    position: absolute;
+    top: -20vh;
+    width: 60vw;
+    height: 100vh;
+    background: linear-gradient(180deg, rgba(0, 192, 255, 0.08) 0%, transparent 80%);
+    transform-origin: top center;
+    clip-path: polygon(40% 0, 60% 0, 100% 100%, 0 100%);
+}
+
+.sl1 {
+    left: -10vw;
+    transform: rotate(15deg);
+}
+
+.sl2 {
+    right: -10vw;
+    transform: rotate(-15deg);
+    background: linear-gradient(180deg, rgba(0, 240, 181, 0.05) 0%, transparent 80%);
+}
+
+/* 浮遊する光の粒子（CSS） */
+.bl-bg-particles {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(var(--bl-primary) 1.5px, transparent 1.5px);
+    background-size: 80px 80px;
+    opacity: 0.1;
+    animation: particles 30s linear infinite;
+}
+
+@keyframes particles {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-80px);
+    }
+}
+
+/* ─── NAV ────────────────────────────────────────────────────── */
+.bl-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1.5rem 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(8, 9, 11, 0.6);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--bl-border);
+}
+
+.bl-nav-back {
+    font-family: 'Jura', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--bl-muted);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: color 0.3s;
+    letter-spacing: 2px;
+}
+
+.bl-nav-back:hover {
+    color: var(--bl-primary);
+    text-shadow: 0 0 10px var(--bl-glow);
+}
+
+.bl-nav-logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: var(--bl-text);
+    letter-spacing: 2px;
+}
+
+.bl-nav-logo span {
+    font-family: 'Jura', sans-serif;
+    color: transparent;
+    background: var(--bl-gradient);
+    -webkit-background-clip: text;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+    font-weight: 700;
+}
+
+.bl-nav-tag {
+    font-family: 'Jura', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: var(--bl-bg-dark);
+    background: var(--bl-primary);
+    padding: 0.3rem 1rem;
+    border-radius: 2px;
+    font-weight: 700;
+}
+
+/* ─── HERO ───────────────────────────────────────────────────── */
+.bl-hero {
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 9rem 5vw 5rem;
+    overflow: hidden;
+}
+
+.bl-hero-bg-text {
+    position: absolute;
+    left: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40vw;
+    font-weight: 900;
+    color: var(--bl-primary);
+    opacity: 0.02;
+    user-select: none;
+    pointer-events: none;
+}
+
+.bl-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 720px;
+}
+
+.bl-eyebrow {
+    font-family: 'Jura', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 4px;
+    color: var(--bl-primary);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-weight: 700;
+}
+
+.bl-hero-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(3rem, 10vw, 7rem);
+    font-weight: 900;
+    line-height: 1.1;
+    color: var(--bl-text);
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+}
+
+.bl-hero-tagline {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
+    letter-spacing: 2px;
+    color: var(--bl-text);
+    margin-bottom: 2.5rem;
+    font-weight: 700;
+}
+
+.bl-hero-concept {
+    font-size: 1rem;
+    color: var(--bl-muted);
+    line-height: 1.9;
+    border-left: 2px solid var(--bl-primary);
+    padding-left: 2rem;
+    margin-bottom: 3.5rem;
+    position: relative;
+}
+
+.bl-hero-stats {
+    display: flex;
+    gap: 4rem;
+}
+
+.bl-stat-value {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    color: transparent;
+    background: var(--bl-gradient);
+    -webkit-background-clip: text;
+    line-height: 1;
+}
+
+.bl-stat-label {
+    font-family: 'Jura', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    color: var(--bl-muted);
+    margin-top: 0.6rem;
+    font-weight: 700;
+}
+
+/* ─── CONTAINER ──────────────────────────────────────────────── */
+.bl-container {
+    position: relative;
+    z-index: 10;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 5vw 8rem;
+}
+
+/* ─── SECTION HEADER ─────────────────────────────────────────── */
+.bl-section {
+    margin-bottom: 8rem;
+}
+
+.bl-section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.bl-header-line {
+    width: 2px;
+    height: 30px;
+    background: var(--bl-primary);
+    margin: 1rem 0;
+}
+
+.bl-section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--bl-text);
+    letter-spacing: 4px;
+}
+
+.bl-section-title-sub {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    color: var(--bl-secondary);
+    font-weight: 700;
+}
+
+/* ─── INFO CARDS (Tech Glassmorphism) ────────────────────────── */
+.bl-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.bl-info-card {
+    background: var(--bl-bg-panel);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--bl-border);
+    padding: 3rem 2.5rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+.bl-info-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background: var(--bl-gradient);
+    transition: width 0.4s;
+}
+
+.bl-info-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(0, 240, 181, 0.3);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 240, 181, 0.1);
+}
+
+.bl-info-card:hover::before {
+    width: 100%;
+}
+
+.bl-info-icon {
+    font-size: 2.5rem;
+    color: var(--bl-primary);
+    margin-bottom: 1.5rem;
+}
+
+.bl-info-card h3 {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.3rem;
+    color: var(--bl-text);
+    margin-bottom: 1.2rem;
+    font-weight: 800;
+}
+
+.bl-info-card p {
+    font-size: 0.95rem;
+    color: var(--bl-muted);
+    line-height: 1.9;
+}
+
+/* ─── MEMBER LIST (Horizontal Row layout for fewer members) ──── */
+.bl-member-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.bl-member-row {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background: var(--bl-bg-panel);
+    border: 1px solid var(--bl-border);
+    padding: 2.5rem 3rem;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.bl-member-row::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--bl-gradient);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.bl-member-row:hover {
+    background: rgba(16, 18, 22, 1);
+    border-color: var(--bl-primary);
+    transform: translateX(10px);
+}
+
+.bl-member-row:hover::after {
+    opacity: 1;
+}
+
+.bl-member-deco {
+    font-size: 3rem;
+    color: var(--bl-primary);
+    opacity: 0.3;
+    transition: color 0.3s, opacity 0.3s;
+    width: 60px;
+    text-align: center;
+}
+
+.bl-member-row:hover .bl-member-deco {
+    color: var(--bl-text);
+    opacity: 1;
+}
+
+.bl-member-info {
+    flex: 1;
+}
+
+.bl-member-read {
+    font-family: 'Jura', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    color: var(--bl-secondary);
+    margin-bottom: 0.4rem;
+    font-weight: 700;
+}
+
+.bl-member-name {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: var(--bl-text);
+    margin-bottom: 0.8rem;
+}
+
+.bl-unit-sub {
+    font-size: 1rem;
+    color: var(--bl-muted);
+    font-weight: normal;
+}
+
+.bl-member-desc {
+    font-size: 0.95rem;
+    color: var(--bl-muted);
+    line-height: 1.8;
+}
+
+.bl-member-arrow {
+    font-size: 1.5rem;
+    color: var(--bl-primary);
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.3s;
+}
+
+.bl-member-row:hover .bl-member-arrow {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* ─── FOOTER ─────────────────────────────────────────────────── */
+.bl-footer {
+    position: relative;
+    z-index: 10;
+    border-top: 1px solid var(--bl-border);
+    padding: 4rem 5vw;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--bl-muted);
+}
+
+.bl-footer-logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: var(--bl-text);
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.bl-footer-logo span {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1rem;
+    color: var(--bl-primary);
+}
+
+/* ─── REVEAL ANIMATION ───────────────────────────────────────── */
+.bl-reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.bl-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ─── RESPONSIVE ─────────────────────────────────────────────── */
+@media (max-width: 900px) {
+    .bl-hero-bg-text {
+        display: none;
+    }
+
+    .bl-hero-stats {
+        gap: 2rem;
+    }
+
+    .bl-member-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 2rem;
+    }
+
+    .bl-member-arrow {
+        display: none;
+    }
+
+    .bl-member-row:hover {
+        transform: translateY(-5px);
+    }
+}
+
+@media (max-width: 600px) {
+    .bl-info-grid {
+        grid-template-columns: 1fr;
+    }
+}

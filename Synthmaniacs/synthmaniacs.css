@@ -1,0 +1,579 @@
+/* ============================================================
+   SYNTHMANIACS — synthmaniacs.css
+   ============================================================ */
+
+/* シンセサイザーのデジタル/アナログ感を出すフォント (Audiowide & Zen Kaku Gothic New) */
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;700;900&display=swap');
+
+/* ─── TOKENS ───────────────────────────────────────────────── */
+:root {
+    /* DJ機材やシンセのLEDを思わせるネオンイエロー / マゼンタ */
+    --sm-accent: #f5df4d;
+    /* ネオンイエロー */
+    --sm-accent-alt: #ff007f;
+    /* マゼンタ */
+    --sm-accent-glow: rgba(245, 223, 77, 0.4);
+    --sm-accent-soft: rgba(245, 223, 77, 0.15);
+
+    --sm-border: rgba(255, 255, 255, 0.2);
+
+    /* 機材シャーシのようなダークグレー/ブラック */
+    --sm-dark: #121214;
+    --sm-surface: #1e1e22;
+    /* 浮き出たパネル感 */
+    --sm-subtle: rgba(255, 255, 255, 0.08);
+    --sm-text: #f0f0f5;
+    --sm-muted: #9fa0a8;
+    --sm-white: #ffffff;
+
+    /* 学校別のイメージカラー（パネルのLED色） */
+    --sm-school-hakken: #00e5ff;
+    /* 白鍵学院: クリアなシアン */
+    --sm-school-mei: #ff007f;
+    /* 鳴愛高校: ポップなマゼンタ */
+    --sm-school-mikoto: #b700ff;
+    /* 尊音メディア: ダークなパープル */
+}
+
+/* ─── RESET ─────────────────────────────────────────────────── */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    background: var(--sm-dark);
+    color: var(--sm-text);
+    overflow-x: hidden;
+    /* アナログ機材のザラつきをうっすら */
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+}
+
+/* ─── BACKGROUND AND VISUALIZER ────────────────────────────── */
+.sm-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.sm-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    /* シーケンサーのグリッド */
+    background-size: 60px 60px;
+    background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+.sm-bg::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30vh;
+    /* オーディオビジュアライザー風のうっすらグラデ */
+    background: linear-gradient(0deg, var(--sm-accent-soft) 0%, transparent 100%);
+    opacity: 0.5;
+}
+
+/* ─── NAV ────────────────────────────────────────────────────── */
+.sm-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1.2rem 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(18, 18, 20, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--sm-accent);
+}
+
+.sm-nav-back {
+    font-family: 'Audiowide', sans-serif;
+    font-size: 0.8rem;
+    color: var(--sm-muted);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.sm-nav-back:hover {
+    color: var(--sm-accent-alt);
+    text-shadow: 0 0 8px var(--sm-accent-alt);
+}
+
+.sm-nav-logo {
+    font-family: 'Audiowide', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    color: var(--sm-white);
+}
+
+.sm-nav-logo span {
+    color: var(--sm-accent);
+}
+
+.sm-nav-tag {
+    font-family: 'Audiowide', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: var(--sm-dark);
+    background: var(--sm-accent);
+    padding: 0.2rem 0.6rem;
+    border-radius: 2px;
+}
+
+/* ─── HERO ───────────────────────────────────────────────────── */
+.sm-hero {
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 9rem 5vw 5rem;
+    overflow: hidden;
+}
+
+.sm-hero-bg-text {
+    position: absolute;
+    right: -2%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Audiowide', sans-serif;
+    font-size: 32vw;
+    line-height: 0.85;
+    color: var(--sm-accent);
+    opacity: 0.04;
+    user-select: none;
+    pointer-events: none;
+    letter-spacing: -1vw;
+}
+
+.sm-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 760px;
+}
+
+.sm-eyebrow {
+    font-family: 'Audiowide', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 4px;
+    color: var(--sm-accent);
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.sm-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: var(--sm-accent-alt);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--sm-accent-alt);
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0.3;
+    }
+}
+
+.sm-hero-name {
+    font-family: 'Audiowide', sans-serif;
+    font-size: clamp(2.8rem, 7vw, 5.5rem);
+    line-height: 1.1;
+    color: var(--sm-white);
+    margin-bottom: 0.8rem;
+    letter-spacing: 2px;
+}
+
+.sm-hero-name span {
+    color: transparent;
+    -webkit-text-stroke: 2px var(--sm-accent);
+}
+
+.sm-hero-tagline {
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    letter-spacing: 2px;
+    color: var(--sm-accent);
+    margin-bottom: 2.5rem;
+    font-weight: 700;
+}
+
+.sm-hero-concept {
+    font-size: 1rem;
+    color: var(--sm-muted);
+    line-height: 2;
+    margin-bottom: 3.5rem;
+    background: var(--sm-surface);
+    padding: 2rem;
+    border-radius: 4px;
+    border: 1px solid var(--sm-subtle);
+    border-left: 4px solid var(--sm-accent-alt);
+    box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.sm-hero-stats {
+    display: flex;
+    gap: 4rem;
+}
+
+.sm-stat-value {
+    font-family: 'Audiowide', sans-serif;
+    font-size: 2.5rem;
+    color: var(--sm-white);
+    line-height: 1;
+}
+
+.sm-stat-label {
+    font-family: 'Audiowide', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    color: var(--sm-muted);
+    margin-top: 0.6rem;
+}
+
+/* Synth UI Deco */
+.sm-hero-synth-ui {
+    position: absolute;
+    right: 8vw;
+    bottom: 15vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    opacity: 0.3;
+}
+
+.sm-knob {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #444, #111);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5), inset 0 2px 2px rgba(255, 255, 255, 0.2);
+    position: relative;
+    border: 2px solid #333;
+}
+
+.sm-knob::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 50%;
+    background: var(--sm-white);
+    transform-origin: top;
+    transform: rotate(45deg);
+}
+
+.sm-knob.active::after {
+    background: var(--sm-accent);
+    box-shadow: 0 0 5px var(--sm-accent);
+    transform: rotate(-30deg);
+}
+
+.sm-slider {
+    width: 60px;
+    height: 150px;
+    background: #111;
+    border: 2px solid #333;
+    border-radius: 4px;
+    position: relative;
+}
+
+.sm-slider-track {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 15px;
+    background: #333;
+    border-radius: 2px;
+    border-top: 2px solid var(--sm-accent-alt);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.8);
+}
+
+/* ─── CONTAINER ──────────────────────────────────────────────── */
+.sm-container {
+    position: relative;
+    z-index: 10;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 5vw 8rem;
+}
+
+/* ─── SECTION HEADER ─────────────────────────────────────────── */
+.sm-section {
+    margin-bottom: 7rem;
+}
+
+.sm-section-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 3.5rem;
+}
+
+.sm-section-title {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--sm-white);
+    letter-spacing: 2px;
+}
+
+.sm-section-title-sub {
+    font-family: 'Audiowide', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 5px;
+    color: var(--sm-accent);
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.sm-divider {
+    flex: 1;
+    height: 2px;
+    background: var(--sm-border);
+    position: relative;
+}
+
+.sm-divider::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -3px;
+    width: 20px;
+    height: 8px;
+    background: var(--sm-accent-alt);
+}
+
+/* ─── INFO CARDS (Synth Module Style) ────────────────────────── */
+.sm-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.sm-info-card {
+    background: var(--sm-surface);
+    border: 1px solid #333;
+    border-top: 4px solid var(--sm-accent);
+    border-radius: 4px;
+    padding: 2.5rem 2rem;
+    transition: all 0.3s;
+    position: relative;
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+.sm-info-card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.4);
+    border-top-color: var(--sm-accent-alt);
+}
+
+.sm-info-card h3 {
+    font-size: 1.15rem;
+    color: var(--sm-white);
+    margin-bottom: 1.2rem;
+    font-weight: 900;
+}
+
+.sm-info-card p {
+    font-size: 0.95rem;
+    color: var(--sm-muted);
+    line-height: 1.9;
+}
+
+/* ─── MEMBER GRID ────────────────────────────────────────────── */
+.sm-member-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.sm-member-card {
+    background: var(--sm-surface);
+    border: 1px solid #333;
+    border-radius: 4px;
+    padding: 2rem;
+    position: relative;
+    transition: all 0.3s;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* 学校別のLEDインジケーター */
+.sm-member-card::before {
+    content: '';
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #333;
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.8);
+    transition: all 0.3s;
+}
+
+.sm-member-card:hover {
+    border-color: #555;
+    background: #25252a;
+}
+
+.sm-member-card.sm-school-hakken:hover::before {
+    background: var(--sm-school-hakken);
+    box-shadow: 0 0 10px var(--sm-school-hakken);
+}
+
+.sm-member-card.sm-school-mei:hover::before {
+    background: var(--sm-school-mei);
+    box-shadow: 0 0 10px var(--sm-school-mei);
+}
+
+.sm-member-card.sm-school-mikoto:hover::before {
+    background: var(--sm-school-mikoto);
+    box-shadow: 0 0 10px var(--sm-school-mikoto);
+}
+
+.sm-member-school {
+    font-size: 0.75rem;
+    color: var(--sm-muted);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.sm-member-name {
+    font-size: 1.35rem;
+    font-weight: 900;
+    color: var(--sm-white);
+    display: block;
+    margin-bottom: 0.2rem;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.sm-member-card.sm-school-hakken .sm-member-name:hover {
+    color: var(--sm-school-hakken);
+}
+
+.sm-member-card.sm-school-mei .sm-member-name:hover {
+    color: var(--sm-school-mei);
+}
+
+.sm-member-card.sm-school-mikoto .sm-member-name:hover {
+    color: var(--sm-school-mikoto);
+}
+
+.sm-member-read {
+    font-family: 'Audiowide', sans-serif;
+    font-size: 0.8rem;
+    color: var(--sm-accent);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.sm-member-tags {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.sm-tag {
+    font-family: 'Audiowide', sans-serif;
+    font-size: 0.65rem;
+    background: #111;
+    border: 1px solid #333;
+    padding: 0.2rem 0.6rem;
+    color: var(--sm-text);
+    border-radius: 2px;
+}
+
+.sm-member-ep {
+    font-size: 0.9rem;
+    color: var(--sm-muted);
+    line-height: 1.8;
+    border-top: 1px dashed #444;
+    padding-top: 1rem;
+}
+
+/* ─── FOOTER ─────────────────────────────────────────────────── */
+.sm-footer {
+    position: relative;
+    z-index: 10;
+    border-top: 2px solid #333;
+    padding: 4rem 5vw;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--sm-muted);
+    background: var(--sm-dark);
+}
+
+.sm-footer-logo {
+    font-family: 'Audiowide', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    color: var(--sm-white);
+    margin-bottom: 1rem;
+}
+
+.sm-footer-logo span {
+    color: var(--sm-accent);
+}
+
+/* ─── REVEAL ANIMATION ───────────────────────────────────────── */
+.sm-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.sm-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ─── RESPONSIVE ─────────────────────────────────────────────── */
+@media (max-width: 900px) {
+    .sm-hero-bg-text {
+        font-size: 40vw;
+    }
+
+    .sm-hero-synth-ui {
+        display: none;
+    }
+
+    .sm-hero-stats {
+        gap: 2.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .sm-member-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sm-info-grid {
+        grid-template-columns: 1fr;
+    }
+}

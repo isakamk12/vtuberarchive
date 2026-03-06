@@ -1,0 +1,285 @@
+/* ============================================================
+   NexuStella char-base.css — Shared Character Page Styles
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
+
+:root {
+    /* Override per-character based on their image color/group */
+    --char-color: #06b6d4;
+    /* Default to spark cyan */
+    --char-color-glow: rgba(6, 182, 212, 0.4);
+
+    --nx-bg-deep: #020617;
+    --nx-bg-nebula: #0f172a;
+    --nx-text: #f8fafc;
+    --nx-muted: #94a3b8;
+    --nx-surface: rgba(30, 41, 59, 0.4);
+    --nx-border: rgba(248, 250, 252, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--nx-bg-deep);
+    color: var(--nx-text);
+    overflow-x: hidden;
+}
+
+/* BACKGROUND */
+.cp-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: var(--nx-bg-deep);
+}
+
+.cp-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(1px 1px at 50% 50%, #fff, rgba(0, 0, 0, 0));
+    background-size: 80px 80px;
+    opacity: 0.1;
+}
+
+.cp-bg::after {
+    content: '';
+    position: absolute;
+    width: 60vw;
+    height: 60vw;
+    top: -20vw;
+    right: -20vw;
+    background: radial-gradient(circle, color-mix(in srgb, var(--char-color) 15%, transparent) 0%, transparent 60%);
+    filter: blur(40px);
+}
+
+/* NAV */
+.cp-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1.2rem 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(2, 6, 23, 0.8);
+    backdrop-filter: blur(12px);
+    border-bottom: 2px solid var(--char-color);
+}
+
+.cp-back {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--nx-muted);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: color 0.3s;
+    letter-spacing: 2px;
+}
+
+.cp-back:hover {
+    color: var(--nx-text);
+}
+
+.cp-nav-gen {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: var(--nx-bg-deep);
+    background: var(--char-color);
+    padding: 0.2rem 0.8rem;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+/* HERO */
+.cp-hero {
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 9rem 5vw 5rem;
+    overflow: hidden;
+}
+
+.cp-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 680px;
+}
+
+.cp-gen-label {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--char-color);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.cp-hero-name {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: clamp(3rem, 7vw, 5rem);
+    font-weight: 900;
+    line-height: 1.1;
+    color: var(--nx-text);
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+    text-shadow: 0 0 20px var(--char-color-glow);
+}
+
+.cp-hero-en {
+    font-family: 'Exo 2', sans-serif;
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
+    letter-spacing: 3px;
+    color: var(--char-color);
+    display: block;
+    margin-bottom: 2.5rem;
+}
+
+.cp-chara-desc {
+    font-size: 0.95rem;
+    color: var(--nx-muted);
+    line-height: 1.9;
+    background: var(--nx-surface);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--nx-border);
+    border-left: 4px solid var(--char-color);
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.cp-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.cp-tag {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 0.4rem 1rem;
+    border: 1px solid var(--char-color);
+    background: color-mix(in srgb, var(--char-color) 10%, transparent);
+    color: var(--char-color);
+    border-radius: 4px;
+}
+
+/* RIGHT OBJECT (Star motif) */
+.cp-hero-motif {
+    position: absolute;
+    right: 10vw;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--char-color);
+    font-size: 15vw;
+    opacity: 0.1;
+    filter: blur(2px);
+    animation: pulseObj 4s ease-in-out infinite alternate;
+}
+
+@keyframes pulseObj {
+    100% {
+        opacity: 0.3;
+        filter: blur(4px) drop-shadow(0 0 20px var(--char-color));
+        transform: translateY(-50%) scale(1.1);
+    }
+}
+
+/* SECTIONS */
+.cp-section {
+    position: relative;
+    z-index: 10;
+    padding: 5rem 5vw;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.cp-section-title {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--nx-text);
+    margin-bottom: 2.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.cp-section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--nx-border);
+}
+
+/* Cards */
+.cp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.cp-card {
+    background: var(--nx-surface);
+    border: 1px solid var(--nx-border);
+    border-top: 3px solid var(--char-color);
+    border-radius: 6px;
+    padding: 2.5rem;
+    transition: all 0.3s;
+}
+
+.cp-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--char-color);
+    box-shadow: 0 10px 20px var(--char-color-glow);
+    background: rgba(30, 41, 59, 0.8);
+}
+
+.cp-card h3 {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.15rem;
+    color: var(--char-color);
+    margin-bottom: 1.2rem;
+    font-weight: 800;
+}
+
+.cp-card p {
+    font-size: 0.95rem;
+    color: var(--nx-muted);
+    line-height: 1.9;
+}
+
+/* FOOTER */
+.cp-footer {
+    position: relative;
+    z-index: 10;
+    border-top: 1px solid var(--nx-border);
+    padding: 4rem 5vw;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--nx-muted);
+}

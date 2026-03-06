@@ -1,0 +1,490 @@
+/* ============================================================
+   にゃんたじあ！ (Nyantasia!) — nyantasia.css
+   ============================================================ */
+
+/* 魔法のファンタジー感と猫の可愛らしさを出すフォント (Fredoka & M PLUS Rounded 1c) */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=M+PLUS+Rounded+1c:wght@400;700;800;900&family=Noto+Sans+JP:wght@400;700;900&display=swap');
+
+/* ─── TOKENS ───────────────────────────────────────────────── */
+:root {
+    /* 魔法や夜空を思わせるネイビー～パープル、アクセントにゴールド/ピンク */
+    --ny-primary: #9c8bbd;
+    /* 落ち着いたマジカルパープル */
+    --ny-secondary: #f7b0c3;
+    /* 魔法使いリボンのようなピンク */
+    --ny-gold: #f1d37a;
+    /* 星や魔法のきらめき */
+
+    --ny-glow: rgba(156, 139, 189, 0.4);
+    --ny-glow-gold: rgba(241, 211, 122, 0.5);
+
+    /* ベースは夜空や魔法使いの部屋をイメージした深い色合い */
+    --ny-dark: #1f1c2c;
+    --ny-darker: #15121e;
+    --ny-surface: rgba(43, 38, 59, 0.6);
+    --ny-subtle: rgba(255, 255, 255, 0.1);
+    --ny-text: #fdfdfd;
+    --ny-muted: #c1bad5;
+    --ny-white: #ffffff;
+
+    /* 境界線や装飾に使うマジカルグラデーション */
+    --ny-gradient: linear-gradient(135deg, var(--ny-primary) 0%, var(--ny-secondary) 100%);
+}
+
+/* ─── RESET ─────────────────────────────────────────────────── */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--ny-darker);
+    color: var(--ny-text);
+    overflow-x: hidden;
+}
+
+/* ─── BACKGROUND ───────────────────────────────────────────── */
+.ny-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: radial-gradient(circle at 50% 10%, #2b223d 0%, var(--ny-darker) 100%);
+}
+
+.ny-bg-stars {
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(1px 1px at 20px 30px, #eee, rgba(0, 0, 0, 0)),
+        radial-gradient(1px 1px at 40px 70px, #fff, rgba(0, 0, 0, 0)),
+        radial-gradient(1.5px 1.5px at 50px 160px, #ddd, rgba(0, 0, 0, 0)),
+        radial-gradient(2px 2px at 90px 40px, #fff, rgba(0, 0, 0, 0)),
+        radial-gradient(2px 2px at 130px 80px, #fff, rgba(0, 0, 0, 0)),
+        radial-gradient(1.5px 1.5px at 160px 120px, #ddd, rgba(0, 0, 0, 0));
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    opacity: 0.3;
+    animation: twinkle 15s linear infinite;
+}
+
+@keyframes twinkle {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-200px);
+    }
+}
+
+.ny-bg-magic {
+    position: absolute;
+    inset: 0;
+    /* 魔法の粉のようなダストエフェクト */
+    background-image: radial-gradient(var(--ny-glow-gold) 1px, transparent 1px);
+    background-size: 50px 50px;
+    opacity: 0.15;
+    animation: magic-dust 20s linear infinite alternate;
+}
+
+@keyframes magic-dust {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-20px, 30px) rotate(5deg);
+    }
+}
+
+/* ─── NAV ────────────────────────────────────────────────────── */
+.ny-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1.2rem 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(21, 18, 30, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px dashed var(--ny-primary);
+}
+
+.ny-nav-back {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--ny-muted);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: color 0.3s;
+}
+
+.ny-nav-back:hover {
+    color: var(--ny-secondary);
+}
+
+.ny-nav-logo {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--ny-white);
+    letter-spacing: 1px;
+}
+
+.ny-nav-logo span {
+    font-family: 'Fredoka', sans-serif;
+    color: var(--ny-primary);
+    font-size: 1rem;
+    letter-spacing: 2px;
+    margin-left: 0.5rem;
+    font-weight: 600;
+}
+
+.ny-nav-tag {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    color: var(--ny-dark);
+    background: var(--ny-gold);
+    padding: 0.2rem 0.8rem;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+/* ─── HERO ───────────────────────────────────────────────────── */
+.ny-hero {
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 9rem 5vw 5rem;
+    overflow: hidden;
+}
+
+.ny-hero-bg-text {
+    position: absolute;
+    right: -2%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 45vw;
+    color: var(--ny-primary);
+    opacity: 0.05;
+    user-select: none;
+    pointer-events: none;
+}
+
+.ny-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 680px;
+}
+
+.ny-eyebrow {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 3px;
+    color: var(--ny-gold);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.ny-hero-name {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: clamp(3rem, 8vw, 5rem);
+    font-weight: 900;
+    line-height: 1.2;
+    color: var(--ny-text);
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+    text-shadow: 0 4px 15px var(--ny-glow);
+}
+
+.ny-hero-tagline {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+    letter-spacing: 2px;
+    color: var(--ny-secondary);
+    margin-bottom: 2.5rem;
+    font-weight: 700;
+}
+
+.ny-hero-concept {
+    font-size: 0.95rem;
+    color: var(--ny-muted);
+    line-height: 1.9;
+    background: var(--ny-surface);
+    backdrop-filter: blur(5px);
+    border: 2px solid var(--ny-primary);
+    border-radius: 24px;
+    padding: 2rem;
+    margin-bottom: 3.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.ny-hero-concept::before {
+    content: '✦';
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    font-size: 1.5rem;
+    color: var(--ny-gold);
+    text-shadow: 0 0 10px var(--ny-gold);
+}
+
+.ny-hero-stats {
+    display: flex;
+    gap: 3rem;
+}
+
+.ny-stat-value {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--ny-gold);
+    line-height: 1;
+}
+
+.ny-stat-label {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: var(--ny-muted);
+    margin-top: 0.5rem;
+}
+
+/* ─── CONTAINER ──────────────────────────────────────────────── */
+.ny-container {
+    position: relative;
+    z-index: 10;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 5vw 8rem;
+}
+
+/* ─── SECTION HEADER ─────────────────────────────────────────── */
+.ny-section {
+    margin-bottom: 7rem;
+}
+
+.ny-section-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 3.5rem;
+}
+
+.ny-section-title {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--ny-white);
+    letter-spacing: 2px;
+}
+
+.ny-section-title-sub {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 4px;
+    color: var(--ny-primary);
+    display: block;
+    margin-top: 0.4rem;
+}
+
+.ny-divider {
+    flex: 1;
+    height: 2px;
+    background: var(--ny-subtle);
+    position: relative;
+}
+
+.ny-divider::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -1px;
+    width: 60px;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--ny-gradient);
+}
+
+/* ─── INFO CARDS (Magical/Cute Style) ────────────────────────── */
+.ny-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.ny-info-card {
+    background: var(--ny-surface);
+    border: 2px solid var(--ny-subtle);
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+}
+
+.ny-info-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--ny-secondary);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    background: rgba(43, 38, 59, 0.8);
+}
+
+.ny-info-icon {
+    font-size: 2.2rem;
+    color: var(--ny-gold);
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 10px var(--ny-glow-gold);
+}
+
+.ny-info-card h3 {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 1.15rem;
+    color: var(--ny-white);
+    margin-bottom: 1.2rem;
+    font-weight: 800;
+}
+
+.ny-info-card p {
+    font-size: 0.95rem;
+    color: var(--ny-muted);
+    line-height: 1.8;
+}
+
+/* ─── MEMBER GRID ────────────────────────────────────────────── */
+.ny-member-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 2rem;
+}
+
+.ny-member-card {
+    background: var(--ny-surface);
+    border: 2px dashed var(--ny-subtle);
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.ny-member-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--ny-primary);
+    border-style: solid;
+    box-shadow: 0 10px 25px var(--ny-glow);
+}
+
+.ny-member-deco {
+    font-size: 2.5rem;
+    color: var(--ny-primary);
+    margin-bottom: 1.2rem;
+    opacity: 0.5;
+    transition: all 0.3s;
+}
+
+.ny-member-card:hover .ny-member-deco {
+    color: var(--ny-secondary);
+    opacity: 1;
+    transform: scale(1.1) rotate(10deg);
+}
+
+.ny-member-name {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--ny-white);
+    display: block;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s;
+}
+
+.ny-member-card:hover .ny-member-name {
+    color: var(--ny-secondary);
+}
+
+.ny-member-read {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 0.8rem;
+    color: var(--ny-muted);
+    letter-spacing: 1px;
+}
+
+/* ─── FOOTER ─────────────────────────────────────────────────── */
+.ny-footer {
+    position: relative;
+    z-index: 10;
+    border-top: 2px dashed var(--ny-subtle);
+    padding: 4rem 5vw;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--ny-muted);
+}
+
+.ny-footer-logo {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: var(--ny-white);
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.ny-footer-logo span {
+    font-family: 'Fredoka', sans-serif;
+    color: var(--ny-primary);
+}
+
+/* ─── REVEAL ANIMATION ───────────────────────────────────────── */
+.ny-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275), transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.ny-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ─── RESPONSIVE ─────────────────────────────────────────────── */
+@media (max-width: 900px) {
+    .ny-hero-bg-text {
+        display: none;
+    }
+
+    .ny-hero-stats {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .ny-member-grid {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    }
+
+    .ny-member-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .ny-info-grid {
+        grid-template-columns: 1fr;
+    }
+}

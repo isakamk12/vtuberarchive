@@ -1,0 +1,515 @@
+/* ============================================================
+   NexuStella (ネクサステラ) — nexustella.css
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
+
+/* ─── TOKENS ───────────────────────────────────────────────── */
+:root {
+    /* 宇宙・星々の煌めきをイメージしたカラーパレット */
+    --nx-bg-deep: #020617;
+    /* 最深の宇宙色 */
+    --nx-bg-nebula: #0f172a;
+    /* 星雲の暗雲 */
+    --nx-primary: #3b82f6;
+    /* 青い星の輝き */
+    --nx-accent-cyan: #06b6d4;
+    /* シアン系の輝き */
+    --nx-accent-pink: #ec4899;
+    /* ピンク系の輝き */
+    --nx-accent-gold: #eab308;
+    /* 星のようなゴールド */
+
+    --nx-gradient-star: linear-gradient(135deg, var(--nx-accent-cyan) 0%, var(--nx-primary) 100%);
+    --nx-text: #f8fafc;
+    --nx-muted: #94a3b8;
+    --nx-surface: rgba(30, 41, 59, 0.4);
+    --nx-surface-high: rgba(30, 41, 59, 0.8);
+    --nx-border: rgba(248, 250, 252, 0.1);
+}
+
+/* ─── RESET ─────────────────────────────────────────────────── */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--nx-bg-deep);
+    color: var(--nx-text);
+    overflow-x: hidden;
+}
+
+/* ─── BACKGROUND ───────────────────────────────────────────── */
+.nx-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: var(--nx-bg-deep);
+}
+
+.nx-bg-stars {
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(1px 1px at 10% 20%, #fff, rgba(0, 0, 0, 0)),
+        radial-gradient(1.5px 1.5px at 30% 60%, var(--nx-accent-cyan), rgba(0, 0, 0, 0)),
+        radial-gradient(1px 1px at 80% 40%, #fff, rgba(0, 0, 0, 0)),
+        radial-gradient(2px 2px at 70% 90%, var(--nx-accent-pink), rgba(0, 0, 0, 0)),
+        radial-gradient(1.5px 1.5px at 45% 15%, var(--nx-primary), rgba(0, 0, 0, 0));
+    background-size: 100vw 100vh;
+    animation: rotateSpace 100s linear infinite;
+}
+
+.nx-bg-nebula {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 80% 20%, rgba(59, 130, 246, 0.15), transparent 50%),
+        radial-gradient(ellipse at 20% 80%, rgba(236, 72, 153, 0.1), transparent 50%);
+    filter: blur(20px);
+}
+
+.nx-bg-flare {
+    position: absolute;
+    top: -10vw;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60vw;
+    height: 10vw;
+    background: radial-gradient(ellipse, rgba(6, 182, 212, 0.3) 0%, transparent 70%);
+    filter: blur(30px);
+}
+
+@keyframes rotateSpace {
+    0% {
+        transform: rotate(0deg) scale(1.5);
+    }
+
+    100% {
+        transform: rotate(360deg) scale(1.5);
+    }
+}
+
+/* ─── NAV ────────────────────────────────────────────────────── */
+.nx-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1.2rem 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(2, 6, 23, 0.7);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--nx-border);
+}
+
+.nx-nav-back {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--nx-muted);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: color 0.3s;
+    letter-spacing: 2px;
+}
+
+.nx-nav-back:hover {
+    color: var(--nx-text);
+}
+
+.nx-nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--nx-text);
+    letter-spacing: 1px;
+}
+
+.nx-logo-icon {
+    font-size: 1rem;
+    color: transparent;
+    background: var(--nx-gradient-star);
+    -webkit-background-clip: text;
+}
+
+.nx-nav-logo span {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: var(--nx-muted);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.nx-nav-tag {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: var(--nx-text);
+    border: 1px solid var(--nx-accent-cyan);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+}
+
+/* ─── HERO ───────────────────────────────────────────────────── */
+.nx-hero {
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 9rem 5vw 5rem;
+    overflow: hidden;
+}
+
+.nx-hero-bg-text {
+    position: absolute;
+    left: -2%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Exo 2', sans-serif;
+    font-size: 30vw;
+    font-weight: 800;
+    color: var(--nx-primary);
+    opacity: 0.03;
+    user-select: none;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.nx-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 680px;
+}
+
+.nx-eyebrow {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 4px;
+    color: var(--nx-accent-cyan);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-weight: 600;
+}
+
+.nx-hero-name {
+    font-family: 'Exo 2', sans-serif;
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--nx-text);
+    margin-bottom: 0.8rem;
+    letter-spacing: 2px;
+    text-shadow: 0 0 30px rgba(59, 130, 246, 0.4);
+}
+
+.nx-hero-tagline {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    letter-spacing: 3px;
+    color: var(--nx-text);
+    margin-bottom: 2.5rem;
+    font-weight: 700;
+}
+
+.nx-hero-concept {
+    font-size: 0.95rem;
+    color: var(--nx-muted);
+    line-height: 1.9;
+    background: var(--nx-surface);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--nx-border);
+    border-radius: 8px;
+    padding: 2.5rem;
+    margin-bottom: 3.5rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.nx-hero-concept::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--nx-gradient-star);
+}
+
+.nx-hero-stats {
+    display: flex;
+    gap: 3rem;
+}
+
+.nx-stat-value {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--nx-accent-cyan);
+    line-height: 1;
+}
+
+.nx-stat-label {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    color: var(--nx-muted);
+    margin-top: 0.4rem;
+    font-weight: 600;
+}
+
+/* ─── CONTAINER ──────────────────────────────────────────────── */
+.nx-container {
+    position: relative;
+    z-index: 10;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 5vw 8rem;
+}
+
+/* ─── SECTION HEADER ─────────────────────────────────────────── */
+.nx-section {
+    margin-bottom: 5rem;
+}
+
+.nx-section-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 3.5rem;
+}
+
+.nx-section-title {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--nx-text);
+    letter-spacing: 2px;
+}
+
+.nx-section-title-sub {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    color: var(--nx-muted);
+    display: block;
+    margin-top: 0.2rem;
+    font-weight: 700;
+}
+
+.nx-divider {
+    flex: 1;
+    height: 1px;
+    background: var(--nx-border);
+    position: relative;
+}
+
+.nx-divider::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50px;
+    height: 3px;
+    background: var(--nx-gradient-star);
+    transform: translateY(-1px);
+}
+
+/* ─── GROUPS AND ROSTER ──────────────────────────────────────── */
+.nx-group {
+    margin-bottom: 5rem;
+}
+
+.nx-group-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--nx-surface-high);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.nx-group-title {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: var(--nx-text);
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+}
+
+.nx-group-title span {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--nx-accent-cyan);
+    letter-spacing: 2px;
+}
+
+/* Base Card Grid */
+.nx-member-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Compact layout for groups with many artists (Colorful, V-iii, etc) */
+.nx-member-grid.scale {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.nx-member-card {
+    background: var(--nx-surface);
+    border: 1px solid var(--nx-border);
+    border-radius: 6px;
+    padding: 1.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.nx-member-grid.scale .nx-member-card {
+    padding: 1.2rem;
+}
+
+/* Holo glare effect on hover */
+.nx-member-holo {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transform: skewX(-20deg);
+    transition: left 0.5s;
+    pointer-events: none;
+}
+
+.nx-member-card:hover .nx-member-holo {
+    left: 200%;
+}
+
+.nx-member-card:hover {
+    background: var(--nx-surface-high);
+    border-color: rgba(6, 182, 212, 0.5);
+    transform: translateY(-4px) scale(1.02) !important;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6), 0 0 15px rgba(6, 182, 212, 0.2);
+}
+
+.nx-member-icon {
+    font-size: 1.8rem;
+    color: var(--nx-primary);
+    margin-bottom: 0.8rem;
+    opacity: 0.6;
+}
+
+.nx-member-card:hover .nx-member-icon {
+    color: var(--nx-accent-cyan);
+    opacity: 1;
+}
+
+.nx-member-name {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--nx-text);
+    display: block;
+    margin-bottom: 0.2rem;
+}
+
+.nx-member-grid.scale .nx-member-name {
+    font-size: 1rem;
+}
+
+.nx-member-read {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 0.75rem;
+    color: var(--nx-muted);
+    letter-spacing: 1px;
+}
+
+.nx-member-grid.scale .nx-member-read {
+    font-size: 0.7rem;
+}
+
+
+/* ─── FOOTER ─────────────────────────────────────────────────── */
+.nx-footer {
+    position: relative;
+    z-index: 10;
+    border-top: 1px solid var(--nx-surface-high);
+    padding: 3rem 5vw;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--nx-muted);
+}
+
+.nx-footer-logo {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--nx-text);
+    margin-bottom: 0.5rem;
+}
+
+.nx-footer-logo span {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* ─── REVEAL ANIMATION ───────────────────────────────────────── */
+.nx-reveal,
+.nx-group-header,
+.nx-member-card {
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.active {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* ─── RESPONSIVE ─────────────────────────────────────────────── */
+@media (max-width: 900px) {
+    .nx-hero-bg-text {
+        display: none;
+    }
+
+    .nx-hero-stats {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .nx-member-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .nx-member-grid.scale {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    }
+}

@@ -1,0 +1,368 @@
+/* ============================================================
+   えのぐ char-base.css — Shared Character Page Styles
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;700;900&display=swap');
+
+:root {
+    /* Override per-character with their individual member color */
+    --char-color: #ffffff;
+    --char-glow: rgba(255, 255, 255, 0.4);
+    --char-color-soft: rgba(255, 255, 255, 0.1);
+    --char-border: rgba(255, 255, 255, 0.3);
+
+    --eg-dark: #1a1016;
+    --eg-surface: rgba(255, 255, 255, 0.05);
+    --eg-subtle: rgba(255, 255, 255, 0.1);
+    --eg-text: #fdfbfb;
+    --eg-muted: rgba(253, 251, 251, 0.65);
+    --eg-white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--eg-dark);
+    color: var(--eg-text);
+    overflow-x: hidden;
+}
+
+/* BACKGROUND */
+.cp-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: radial-gradient(ellipse at top, #2d1822 0%, #1a1016 100%);
+}
+
+.cp-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    /* Member color ambient light */
+    background:
+        radial-gradient(circle at 80% 0%, color-mix(in srgb, var(--char-color) 20%, transparent) 0%, transparent 60%),
+        radial-gradient(circle at 20% 100%, color-mix(in srgb, var(--char-color) 10%, transparent) 0%, transparent 50%);
+}
+
+.cp-sparkles {
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(circle at 20% 30%, color-mix(in srgb, var(--char-color) 40%, transparent) 1px, transparent 1px),
+        radial-gradient(circle at 80% 40%, rgba(255, 255, 255, 0.05) 2px, transparent 2px),
+        radial-gradient(circle at 40% 80%, color-mix(in srgb, var(--char-color) 30%, transparent) 1px, transparent 1px),
+        radial-gradient(circle at 90% 90%, rgba(255, 255, 255, 0.05) 2px, transparent 2px);
+    background-size: 100px 100px;
+    animation: twinkle 10s infinite alternate linear;
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 0.5;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(-20px);
+    }
+}
+
+/* NAV */
+.cp-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1.2rem 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(26, 16, 22, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 2px solid var(--char-color);
+}
+
+.cp-back {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--eg-muted);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: color 0.3s;
+}
+
+.cp-back:hover {
+    color: var(--char-color);
+}
+
+.cp-nav-gen {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    color: var(--eg-white);
+    font-weight: 900;
+}
+
+.cp-nav-gen span {
+    color: var(--char-color);
+}
+
+/* HERO */
+.cp-hero {
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 9rem 5vw 5rem;
+    overflow: hidden;
+}
+
+.cp-bg-letter {
+    position: absolute;
+    right: -2%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 40vw;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--char-color);
+    opacity: 0.05;
+    user-select: none;
+    pointer-events: none;
+}
+
+.cp-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 680px;
+}
+
+.cp-gen-label {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    color: var(--char-color);
+    margin-bottom: 1.2rem;
+    font-weight: 700;
+    background: var(--char-color-soft);
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    border-radius: 30px;
+}
+
+.cp-hero-name {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 900;
+    line-height: 1.1;
+    color: var(--eg-white);
+    text-shadow: 0 0 30px var(--char-glow);
+    margin-bottom: 0.5rem;
+    letter-spacing: 4px;
+}
+
+.cp-hero-en {
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    letter-spacing: 4px;
+    color: var(--char-color);
+    display: block;
+    margin-bottom: 2.5rem;
+}
+
+.cp-chara-desc {
+    font-size: 1rem;
+    color: var(--eg-muted);
+    line-height: 2;
+    margin-bottom: 2.5rem;
+    background: var(--char-color-soft);
+    padding: 1.8rem;
+    border-radius: 16px;
+    border-left: 4px solid var(--char-color);
+}
+
+.cp-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.cp-tag {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    padding: 0.5rem 1.2rem;
+    border: 1px solid;
+    border-radius: 30px;
+    font-weight: 700;
+}
+
+.cp-tag-primary {
+    border-color: var(--char-color);
+    background: var(--char-color);
+    color: var(--eg-dark);
+}
+
+.cp-tag-muted {
+    border-color: var(--char-border);
+    color: var(--eg-text);
+}
+
+/* RIGHT OBJECT (Spotlight Motif) */
+.cp-hero-motif {
+    position: absolute;
+    right: 8vw;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--char-color-soft) 20%, transparent 70%);
+    border: 2px solid var(--char-border);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 50px var(--char-glow);
+    animation: pulse-ring 4s infinite alternate ease-in-out;
+}
+
+.cp-hero-motif::after {
+    content: '🎤';
+    font-size: 4rem;
+    opacity: 0.8;
+}
+
+@keyframes pulse-ring {
+    0% {
+        transform: translateY(-50%) scale(0.95);
+        box-shadow: 0 0 30px var(--char-glow);
+    }
+
+    100% {
+        transform: translateY(-50%) scale(1.05);
+        box-shadow: 0 0 80px var(--char-glow);
+    }
+}
+
+/* SECTIONS */
+.cp-section {
+    position: relative;
+    z-index: 10;
+    padding: 5rem 5vw;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.cp-section-title {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: var(--eg-white);
+    margin-bottom: 2.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.cp-section-title::after {
+    content: '';
+    flex: 1;
+    height: 2px;
+    background: var(--char-border);
+    border-radius: 2px;
+}
+
+/* Cards */
+.cp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.cp-card {
+    background: var(--eg-surface);
+    border: 1px solid var(--eg-subtle);
+    border-radius: 16px;
+    padding: 2.5rem;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.cp-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--char-color);
+    box-shadow: 0 10px 30px var(--char-color-soft);
+}
+
+.cp-card h3 {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 1.15rem;
+    color: var(--char-color);
+    margin-bottom: 1.2rem;
+    font-weight: 800;
+}
+
+.cp-card p,
+.cp-card li {
+    font-size: 0.95rem;
+    color: var(--eg-muted);
+    line-height: 1.9;
+}
+
+.cp-card strong {
+    color: var(--eg-text);
+    padding: 0 0.2em;
+    border-bottom: 1px dashed var(--char-color);
+}
+
+/* FOOTER */
+.cp-footer {
+    position: relative;
+    z-index: 10;
+    border-top: 1px solid var(--eg-subtle);
+    padding: 4rem 5vw;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--eg-muted);
+}
+
+/* REVEAL */
+.cp-reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275), transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.cp-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .cp-hero-motif {
+        display: none;
+    }
+
+    .cp-bg-letter {
+        font-size: 55vw;
+    }
+}

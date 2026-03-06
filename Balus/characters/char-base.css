@@ -1,0 +1,354 @@
+/* ============================================================
+   バルス (Balus) char-base.css — Shared Character Page Styles
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@400;600;700&family=Montserrat:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
+
+:root {
+    /* Override per-character based on their theme color */
+    --char-color: #00f0b5;
+    /* default */
+    --char-glow: rgba(0, 240, 181, 0.4);
+
+    --bl-bg-dark: #08090b;
+    --bl-bg-panel: rgba(16, 18, 22, 0.8);
+    --bl-text: #f0f5fa;
+    --bl-muted: #8b95a5;
+    --bl-border: rgba(255, 255, 255, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--bl-bg-dark);
+    color: var(--bl-text);
+    overflow-x: hidden;
+}
+
+/* BACKGROUND */
+.cp-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: var(--bl-bg-dark);
+}
+
+.cp-bg::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60vh;
+    background-size: 60px 60px;
+    background-image:
+        linear-gradient(color-mix(in srgb, var(--char-color) 15%, transparent) 1px, transparent 1px),
+        linear-gradient(90deg, color-mix(in srgb, var(--char-color) 15%, transparent) 1px, transparent 1px);
+    transform: perspective(600px) rotateX(70deg) translateY(100px) translateZ(-100px);
+    transform-origin: bottom center;
+}
+
+.cp-bg::after {
+    content: '';
+    position: absolute;
+    top: -20vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60vw;
+    height: 100vh;
+    background: linear-gradient(180deg, color-mix(in srgb, var(--char-color) 10%, transparent) 0%, transparent 80%);
+    clip-path: polygon(40% 0, 60% 0, 100% 100%, 0 100%);
+}
+
+/* NAV */
+.cp-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1.5rem 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(8, 9, 11, 0.8);
+    backdrop-filter: blur(15px);
+    border-bottom: 2px solid var(--char-color);
+}
+
+.cp-back {
+    font-family: 'Jura', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--bl-muted);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: color 0.3s;
+    letter-spacing: 2px;
+}
+
+.cp-back:hover {
+    color: var(--char-color);
+    text-shadow: 0 0 10px var(--char-glow);
+}
+
+.cp-nav-gen {
+    font-family: 'Jura', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: var(--bl-bg-dark);
+    background: var(--char-color);
+    padding: 0.3rem 1rem;
+    border-radius: 2px;
+    font-weight: 700;
+}
+
+/* HERO */
+.cp-hero {
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 9rem 5vw 5rem;
+    overflow: hidden;
+}
+
+.cp-bg-letter {
+    position: absolute;
+    right: -2%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40vw;
+    font-weight: 900;
+    color: var(--char-color);
+    opacity: 0.03;
+    user-select: none;
+    pointer-events: none;
+}
+
+.cp-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 680px;
+}
+
+.cp-gen-label {
+    font-family: 'Jura', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 4px;
+    color: var(--char-color);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-weight: 700;
+}
+
+.cp-hero-name {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: clamp(3rem, 8vw, 5rem);
+    font-weight: 900;
+    line-height: 1.2;
+    color: var(--bl-text);
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+    text-shadow: 0 0 15px var(--char-glow);
+}
+
+.cp-hero-en {
+    font-family: 'Jura', sans-serif;
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
+    letter-spacing: 2px;
+    color: var(--char-color);
+    display: block;
+    margin-bottom: 2.5rem;
+}
+
+.cp-chara-desc {
+    font-size: 0.95rem;
+    color: var(--bl-muted);
+    line-height: 1.9;
+    background: var(--bl-bg-panel);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--bl-border);
+    border-left: 4px solid var(--char-color);
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.cp-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.cp-tag {
+    font-family: 'Jura', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 0.4rem 1.2rem;
+    border: 1px solid;
+    border-color: var(--char-color);
+    background: color-mix(in srgb, var(--char-color) 10%, transparent);
+    color: var(--char-color);
+}
+
+/* RIGHT OBJECT (Tech Motif) */
+.cp-hero-motif {
+    position: absolute;
+    right: 8vw;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    height: 300px;
+    border: 1px dashed var(--char-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: rotate-chara 20s linear infinite;
+}
+
+.cp-hero-motif::before {
+    content: '';
+    position: absolute;
+    inset: 20px;
+    border: 4px solid var(--char-color);
+    border-radius: 50%;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    opacity: 0.3;
+    animation: rotate-chara 10s linear infinite reverse;
+}
+
+.cp-hero-motif::after {
+    content: '';
+    position: absolute;
+    inset: -40px;
+    border: 1px solid var(--bl-border);
+    border-radius: 50%;
+}
+
+@keyframes rotate-chara {
+    100% {
+        transform: translateY(-50%) rotate(360deg);
+    }
+}
+
+/* SECTIONS */
+.cp-section {
+    position: relative;
+    z-index: 10;
+    padding: 5rem 5vw;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.cp-section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--bl-text);
+    margin-bottom: 2.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    letter-spacing: 4px;
+}
+
+.cp-section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--bl-border);
+}
+
+/* Cards */
+.cp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.cp-card {
+    background: var(--bl-bg-panel);
+    border: 1px solid var(--bl-border);
+    border-top: 2px solid var(--char-color);
+    border-radius: 4px;
+    padding: 2.5rem;
+    transition: all 0.3s;
+}
+
+.cp-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--char-color);
+    box-shadow: 0 10px 20px var(--char-glow);
+}
+
+.cp-card h3 {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.15rem;
+    color: var(--char-color);
+    margin-bottom: 1.2rem;
+    font-weight: 800;
+}
+
+.cp-card p,
+.cp-card li {
+    font-size: 0.95rem;
+    color: var(--bl-muted);
+    line-height: 1.9;
+}
+
+.cp-card strong {
+    color: var(--bl-text);
+}
+
+/* FOOTER */
+.cp-footer {
+    position: relative;
+    z-index: 10;
+    border-top: 1px solid var(--bl-border);
+    padding: 4rem 5vw;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--bl-muted);
+}
+
+/* REVEAL */
+.cp-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275), transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.cp-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .cp-bg-letter {
+        display: none;
+    }
+
+    .cp-hero-motif {
+        display: none;
+    }
+}

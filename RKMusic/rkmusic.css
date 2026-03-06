@@ -1,0 +1,478 @@
+/* ============================================================
+   RK Music — rkmusic.css
+   ============================================================ */
+
+/* 音楽系を意識したシャープでモダンなフォント (Montserrat) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Noto+Sans+JP:wght@400;700;900&display=swap');
+
+/* ─── TOKENS ───────────────────────────────────────────────── */
+:root {
+    /* RK Music のアクセントカラー (紫/マゼンタ系) */
+    --rk-accent: #b829ff;
+    --rk-accent-glow: rgba(184, 41, 255, 0.45);
+    --rk-accent-soft: rgba(184, 41, 255, 0.08);
+    --rk-border: rgba(184, 41, 255, 0.25);
+
+    /* Neutrals */
+    --rk-dark: #0a050f;
+    --rk-surface: rgba(255, 255, 255, 0.03);
+    --rk-subtle: rgba(255, 255, 255, 0.06);
+    --rk-text: #f0eafa;
+    --rk-muted: rgba(240, 234, 250, 0.55);
+    --rk-white: #ffffff;
+}
+
+/* ─── RESET ─────────────────────────────────────────────────── */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--rk-dark);
+    color: var(--rk-text);
+    overflow-x: hidden;
+}
+
+/* ─── BACKGROUND ─────────────────────────────────────────────── */
+.rk-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.rk-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 80% 0%, color-mix(in srgb, var(--rk-accent) 20%, transparent) 0%, transparent 55%),
+        radial-gradient(ellipse at 15% 100%, color-mix(in srgb, var(--rk-accent) 10%, transparent) 0%, transparent 60%);
+}
+
+.rk-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    /* 音波のような水平ストライプ */
+    background-image: repeating-linear-gradient(0deg,
+            transparent, transparent 18px,
+            rgba(184, 41, 255, 0.02) 18px, rgba(184, 41, 255, 0.02) 19px);
+}
+
+/* ─── NAV ────────────────────────────────────────────────────── */
+.rk-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1.1rem 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(10, 5, 15, 0.85);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--rk-border);
+}
+
+.rk-nav-back {
+    font-size: 0.82rem;
+    letter-spacing: 2px;
+    color: var(--rk-muted);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: color 0.3s;
+}
+
+.rk-nav-back:hover {
+    color: var(--rk-accent);
+}
+
+.rk-nav-logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: var(--rk-white);
+}
+
+.rk-nav-logo span {
+    color: var(--rk-accent);
+    font-weight: 300;
+    margin-left: 2px;
+}
+
+.rk-nav-tag {
+    font-size: 0.78rem;
+    letter-spacing: 2px;
+    color: var(--rk-accent);
+    opacity: 0.7;
+    text-transform: uppercase;
+}
+
+/* ─── HERO ───────────────────────────────────────────────────── */
+.rk-hero {
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 9rem 5vw 5rem;
+    overflow: hidden;
+}
+
+.rk-hero-bg-text {
+    position: absolute;
+    right: -2%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 45vw;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--rk-accent);
+    opacity: 0.03;
+    user-select: none;
+    pointer-events: none;
+    letter-spacing: -2vw;
+}
+
+.rk-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 760px;
+}
+
+.rk-eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 5px;
+    color: var(--rk-accent);
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.rk-eyebrow::before {
+    content: '';
+    width: 30px;
+    height: 1px;
+    background: var(--rk-accent);
+}
+
+.rk-hero-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(3.5rem, 9vw, 8.5rem);
+    font-weight: 900;
+    line-height: 0.9;
+    color: var(--rk-white);
+    text-shadow: 0 0 60px var(--rk-accent-glow);
+    margin-bottom: 0.6rem;
+    letter-spacing: 2px;
+}
+
+.rk-hero-name span {
+    color: var(--rk-accent);
+    font-weight: 300;
+}
+
+.rk-hero-tagline {
+    font-size: clamp(1rem, 1.8vw, 1.2rem);
+    letter-spacing: 4px;
+    color: var(--rk-accent);
+    opacity: 0.9;
+    margin-bottom: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+.rk-hero-concept {
+    font-size: 0.95rem;
+    color: var(--rk-muted);
+    line-height: 1.95;
+    border-left: 2px solid var(--rk-accent);
+    padding: 1rem 1.8rem;
+    background: linear-gradient(90deg, var(--rk-accent-soft), transparent);
+    margin-bottom: 2.8rem;
+    max-width: 640px;
+}
+
+.rk-hero-stats {
+    display: flex;
+    gap: 3rem;
+}
+
+.rk-stat-value {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--rk-white);
+    line-height: 1;
+}
+
+.rk-stat-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 4px;
+    color: var(--rk-accent);
+    margin-top: 0.5rem;
+    font-weight: 600;
+}
+
+/* ─── CONTAINER ──────────────────────────────────────────────── */
+.rk-container {
+    position: relative;
+    z-index: 10;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5vw 8rem;
+}
+
+/* ─── SECTION HEADER ─────────────────────────────────────────── */
+.rk-section {
+    margin-bottom: 6rem;
+}
+
+.rk-section-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.rk-section-num {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(184, 41, 255, 0.4);
+    line-height: 1;
+}
+
+.rk-section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--rk-white);
+    letter-spacing: 2px;
+}
+
+.rk-section-title-sub {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 6px;
+    color: var(--rk-accent);
+    opacity: 0.8;
+    display: block;
+    margin-top: 0.3rem;
+}
+
+.rk-divider {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--rk-border), transparent);
+}
+
+/* ─── INFO CARDS ─────────────────────────────────────────────── */
+.rk-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.rk-info-card {
+    background: var(--rk-surface);
+    border: 1px solid var(--rk-subtle);
+    border-radius: 2px;
+    padding: 2.2rem;
+    position: relative;
+    transition: all 0.3s;
+    overflow: hidden;
+}
+
+.rk-info-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: var(--rk-accent);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.rk-info-card:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--rk-border);
+    transform: translateX(4px);
+}
+
+.rk-info-card:hover::before {
+    opacity: 1;
+}
+
+.rk-info-card h3 {
+    font-size: 0.95rem;
+    color: var(--rk-accent);
+    margin-bottom: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.rk-info-card p {
+    font-size: 0.88rem;
+    color: var(--rk-muted);
+    line-height: 1.8;
+}
+
+/* ─── MEMBER GRID ────────────────────────────────────────────── */
+.rk-group-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    color: var(--rk-white);
+    margin: 3.5rem 0 1.2rem;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 600;
+}
+
+.rk-unit-badge {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 3px;
+    padding: 0.2rem 0.8rem;
+    background: var(--rk-accent-soft);
+    color: var(--rk-accent);
+    border-radius: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.rk-member-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.2rem;
+}
+
+.rk-member-card {
+    background: var(--rk-surface);
+    border: 1px solid var(--rk-subtle);
+    border-radius: 4px;
+    padding: 1.5rem 1.8rem;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.rk-member-card:hover {
+    border-color: var(--rk-border);
+    background: rgba(184, 41, 255, 0.04);
+}
+
+.rk-member-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--rk-white);
+    display: block;
+    margin-bottom: 0.2rem;
+    transition: color 0.25s;
+    letter-spacing: 1px;
+}
+
+a.rk-member-name:hover {
+    color: var(--rk-accent);
+    text-shadow: 0 0 10px var(--rk-accent-glow);
+}
+
+.rk-member-read {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.65rem;
+    color: var(--rk-accent);
+    opacity: 0.8;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.rk-member-ep {
+    font-size: 0.82rem;
+    color: var(--rk-muted);
+    line-height: 1.7;
+}
+
+/* ─── FOOTER ─────────────────────────────────────────────────── */
+.rk-footer {
+    position: relative;
+    z-index: 10;
+    border-top: 1px solid rgba(184, 41, 255, 0.15);
+    padding: 4rem 5vw;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--rk-muted);
+}
+
+.rk-footer-logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: var(--rk-white);
+    margin-bottom: 1rem;
+}
+
+.rk-footer-logo span {
+    color: var(--rk-accent);
+    font-weight: 300;
+    margin-left: 2px;
+}
+
+/* ─── REVEAL ANIMATION ───────────────────────────────────────── */
+.rk-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.rk-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ─── RESPONSIVE ─────────────────────────────────────────────── */
+@media (max-width: 900px) {
+    .rk-hero-bg-text {
+        font-size: 60vw;
+    }
+
+    .rk-hero-stats {
+        gap: 1.5rem;
+    }
+
+    .rk-section-num {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .rk-member-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rk-info-grid {
+        grid-template-columns: 1fr;
+    }
+}

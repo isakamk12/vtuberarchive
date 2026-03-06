@@ -1,0 +1,505 @@
+/* ============================================================
+   AKA Virtual — akavirtual.css
+   ============================================================ */
+
+/* テクノロジー感のあるモノスペース＋シャープなサンセリフ体 */
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Inter:wght@400;600;800;900&family=Noto+Sans+JP:wght@400;700;900&display=swap');
+
+/* ─── TOKENS ───────────────────────────────────────────────── */
+:root {
+    /* AKA Virtualの「テクノロジー」を感じさせるサイバーレッド / ネオンカラー */
+    --ak-accent: #ff2a4b;
+    --ak-accent-alt: #00f0ff;
+    /* 補色のシアン */
+    --ak-accent-glow: rgba(255, 42, 75, 0.45);
+    --ak-accent-soft: rgba(255, 42, 75, 0.1);
+    --ak-border: rgba(255, 42, 75, 0.3);
+
+    /* Neutrals - サイバーパンクな暗闇 */
+    --ak-dark: #050508;
+    --ak-surface: rgba(20, 20, 25, 0.6);
+    --ak-subtle: rgba(255, 255, 255, 0.08);
+    --ak-text: #e5e7f0;
+    --ak-muted: rgba(229, 231, 240, 0.6);
+    --ak-white: #ffffff;
+}
+
+/* ─── RESET ─────────────────────────────────────────────────── */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: 'Noto Sans JP', 'Inter', sans-serif;
+    background: var(--ak-dark);
+    color: var(--ak-text);
+    overflow-x: hidden;
+    cursor: crosshair;
+    /* 開発者・システムライクなカーソル */
+}
+
+/* ─── BACKGROUND AND GLITCH EFFECTS ────────────────────────── */
+.ak-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-color: var(--ak-dark);
+}
+
+.ak-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    /* サイバーグリッド */
+    background-size: 40px 40px;
+    background-image:
+        linear-gradient(to right, rgba(255, 42, 75, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 42, 75, 0.05) 1px, transparent 1px);
+    transform: perspective(500px) rotateX(60deg) translateY(-100px) translateZ(-200px);
+    animation: gridMove 20s linear infinite;
+    opacity: 0.6;
+}
+
+@keyframes gridMove {
+    0% {
+        transform: perspective(500px) rotateX(60deg) translateY(0) translateZ(-200px);
+    }
+
+    100% {
+        transform: perspective(500px) rotateX(60deg) translateY(40px) translateZ(-200px);
+    }
+}
+
+.ak-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 10% 90%, rgba(0, 240, 255, 0.05) 0%, transparent 60%);
+}
+
+/* ─── NAV ────────────────────────────────────────────────────── */
+.ak-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1.2rem 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(5, 5, 8, 0.85);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--ak-border);
+    box-shadow: 0 0 20px rgba(255, 42, 75, 0.1);
+}
+
+.ak-nav-back {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--ak-muted);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: color 0.2s, text-shadow 0.2s;
+}
+
+.ak-nav-back:hover {
+    color: var(--ak-accent);
+    text-shadow: 0 0 8px var(--ak-accent);
+}
+
+.ak-nav-logo {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: var(--ak-white);
+}
+
+.ak-nav-logo span {
+    color: var(--ak-accent);
+}
+
+.ak-nav-tag {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--ak-accent-alt);
+    border: 1px solid var(--ak-accent-alt);
+    padding: 0.2rem 0.6rem;
+    border-radius: 2px;
+    background: rgba(0, 240, 255, 0.05);
+}
+
+/* ─── HERO ───────────────────────────────────────────────────── */
+.ak-hero {
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 9rem 5vw 5rem;
+    overflow: hidden;
+}
+
+.ak-hero-bg-text {
+    position: absolute;
+    right: -2%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Inter', sans-serif;
+    font-size: 35vw;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--ak-accent);
+    opacity: 0.03;
+    user-select: none;
+    pointer-events: none;
+    letter-spacing: -1vw;
+}
+
+.ak-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.ak-eyebrow {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--ak-accent-alt);
+    margin-bottom: 1.2rem;
+    display: block;
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+}
+
+.ak-hero-name {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(3rem, 9vw, 7.5rem);
+    font-weight: 900;
+    line-height: 1;
+    color: var(--ak-white);
+    text-shadow: 2px 2px 0 var(--ak-accent), -2px -2px 0 var(--ak-accent-alt), 0 0 30px var(--ak-accent-glow);
+    margin-bottom: 0.8rem;
+    letter-spacing: -1px;
+}
+
+.ak-hero-name span {
+    color: transparent;
+    -webkit-text-stroke: 1px var(--ak-white);
+}
+
+.ak-hero-tagline {
+    font-size: clamp(1rem, 2.2vw, 1.4rem);
+    letter-spacing: 2px;
+    color: var(--ak-text);
+    margin-bottom: 2rem;
+    font-weight: 700;
+    border-left: 4px solid var(--ak-accent);
+    padding-left: 1rem;
+}
+
+.ak-hero-concept {
+    font-size: 0.95rem;
+    color: var(--ak-muted);
+    line-height: 2;
+    margin-bottom: 3rem;
+    max-width: 680px;
+    font-weight: 400;
+    background: linear-gradient(90deg, var(--ak-surface), transparent);
+    padding: 1.5rem;
+    border: 1px solid var(--ak-subtle);
+    border-top-color: var(--ak-accent);
+}
+
+.ak-hero-stats {
+    display: flex;
+    gap: 4rem;
+}
+
+.ak-stat {
+    position: relative;
+}
+
+.ak-stat::before {
+    content: '';
+    position: absolute;
+    left: -1rem;
+    top: 10%;
+    bottom: 10%;
+    width: 2px;
+    background: var(--ak-accent-alt);
+    opacity: 0.5;
+}
+
+.ak-stat-value {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 2.5rem;
+    color: var(--ak-white);
+    line-height: 1;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.ak-stat-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 4px;
+    color: var(--ak-muted);
+    margin-top: 0.5rem;
+    font-weight: 600;
+}
+
+/* ─── CONTAINER ──────────────────────────────────────────────── */
+.ak-container {
+    position: relative;
+    z-index: 10;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5vw 8rem;
+}
+
+/* ─── SECTION HEADER ─────────────────────────────────────────── */
+.ak-section {
+    margin-bottom: 8rem;
+}
+
+.ak-section-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.ak-section-num {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 3rem;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--ak-accent);
+    line-height: 1;
+    opacity: 0.6;
+}
+
+.ak-section-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--ak-white);
+    letter-spacing: 2px;
+}
+
+.ak-section-title-sub {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 5px;
+    color: var(--ak-accent-alt);
+    display: block;
+    margin-top: 0.3rem;
+}
+
+.ak-divider {
+    flex: 1;
+    height: 1px;
+    background: repeating-linear-gradient(90deg, var(--ak-accent), var(--ak-accent) 4px, transparent 4px, transparent 8px);
+    opacity: 0.3;
+}
+
+/* ─── INFO CARDS (Tech Style) ────────────────────────────────── */
+.ak-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.ak-info-card {
+    background: var(--ak-surface);
+    border: 1px solid var(--ak-subtle);
+    padding: 2.5rem;
+    position: relative;
+    transition: all 0.3s;
+    /* サイバー感のある角落ちクリップパス */
+    clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
+}
+
+.ak-info-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--ak-accent);
+    transition: height 0.3s;
+}
+
+.ak-info-card:hover {
+    background: rgba(255, 42, 75, 0.05);
+    border-color: var(--ak-accent-alt);
+}
+
+.ak-info-card:hover::before {
+    height: 100%;
+    opacity: 0.05;
+}
+
+.ak-info-card h3 {
+    font-size: 1.1rem;
+    color: var(--ak-white);
+    margin-bottom: 1.2rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.ak-info-card h3 i {
+    color: var(--ak-accent-alt);
+    font-size: 1.2em;
+}
+
+.ak-info-card p {
+    font-size: 0.92rem;
+    color: var(--ak-muted);
+    line-height: 1.8;
+}
+
+/* ─── MEMBER GRID ────────────────────────────────────────────── */
+.ak-member-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.ak-member-card {
+    background: var(--ak-surface);
+    border: 1px solid var(--ak-subtle);
+    padding: 1.8rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.ak-member-card::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    width: 20px;
+    height: 20px;
+    border-bottom: 2px solid var(--ak-accent);
+    border-right: 2px solid var(--ak-accent);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.ak-member-card:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), inset 0 0 0 1px var(--ak-accent-soft);
+}
+
+.ak-member-card:hover::after {
+    opacity: 1;
+}
+
+.ak-member-name {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--ak-white);
+    display: block;
+    margin-bottom: 0.6rem;
+    letter-spacing: 0.5px;
+    transition: color 0.3s;
+}
+
+a.ak-member-name:hover {
+    color: var(--ak-accent-alt);
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.4);
+}
+
+.ak-member-langs {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--ak-accent);
+    background: rgba(255, 42, 75, 0.1);
+    padding: 0.2rem 0.5rem;
+    display: inline-block;
+    border: 1px solid var(--ak-border);
+    margin-bottom: 1rem;
+}
+
+.ak-member-ep {
+    font-size: 0.82rem;
+    color: var(--ak-muted);
+    line-height: 1.6;
+    border-top: 1px solid var(--ak-subtle);
+    padding-top: 0.8rem;
+}
+
+/* ─── FOOTER ─────────────────────────────────────────────────── */
+.ak-footer {
+    position: relative;
+    z-index: 10;
+    border-top: 1px solid var(--ak-border);
+    padding: 3rem 5vw;
+    text-align: center;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--ak-muted);
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.ak-footer-logo {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--ak-white);
+    margin-bottom: 1rem;
+}
+
+.ak-footer-logo span {
+    color: var(--ak-accent);
+    -webkit-text-stroke: 0;
+}
+
+/* ─── REVEAL ANIMATION ───────────────────────────────────────── */
+.ak-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.ak-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ─── RESPONSIVE ─────────────────────────────────────────────── */
+@media (max-width: 900px) {
+    .ak-hero-bg-text {
+        font-size: 45vw;
+    }
+
+    .ak-hero-stats {
+        gap: 2.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .ak-member-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ak-info-grid {
+        grid-template-columns: 1fr;
+    }
+}

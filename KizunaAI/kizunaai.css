@@ -1,0 +1,566 @@
+/* ============================================================
+   Kizuna AI — kizunaai.css
+   ============================================================ */
+
+/* AI・デジタル空間と親しみやすさの融合 */
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&family=Montserrat:wght@400;700;900&family=Noto+Sans+JP:wght@400;700;900&display=swap');
+
+/* ─── TOKENS ───────────────────────────────────────────────── */
+:root {
+    /* Kizuna AIの象徴的なピンク */
+    --kz-pink: #ff6b9e;
+    --kz-pink-glow: rgba(255, 107, 158, 0.45);
+    --kz-pink-soft: rgba(255, 107, 158, 0.1);
+
+    /* 4人のテーマカラー */
+    --kz-color-pink: #ff6b9e;
+    /* オリジナル */
+    --kz-color-cyan: #00dbff;
+    /* loveちゃん */
+    --kz-color-yellow: #ffdf00;
+    /* あいぴー */
+    --kz-color-red: #e60012;
+    /* 爱哥 */
+
+    /* Cyber/Virtual White/Gray backgrounds */
+    --kz-dark: #0a0a0c;
+    --kz-surface: rgba(255, 255, 255, 0.05);
+    --kz-subtle: rgba(255, 255, 255, 0.1);
+    --kz-text: #fdfdfd;
+    --kz-muted: rgba(253, 253, 253, 0.65);
+    --kz-white: #ffffff;
+}
+
+/* ─── RESET ─────────────────────────────────────────────────── */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--kz-dark);
+    color: var(--kz-text);
+    overflow-x: hidden;
+}
+
+/* ─── BACKGROUND AND PARTICLES ─────────────────────────────── */
+.kz-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: radial-gradient(circle at 50% 10%, #1a1015 0%, #0a0a0c 80%);
+}
+
+.kz-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-size: 50px 50px;
+    background-image:
+        linear-gradient(to right, rgba(255, 107, 158, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 107, 158, 0.03) 1px, transparent 1px);
+    mask-image: radial-gradient(circle at center, black 30%, transparent 80%);
+    -webkit-mask-image: radial-gradient(circle at center, black 30%, transparent 80%);
+}
+
+.kz-particles {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.kz-particles::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow:
+        10vw 20vh var(--kz-pink), 30vw 50vh var(--kz-white), 60vw 10vh var(--kz-pink),
+        80vw 80vh var(--kz-white), 40vw 90vh var(--kz-pink), 20vw 70vh var(--kz-white);
+    animation: drift 60s linear infinite;
+    opacity: 0.5;
+}
+
+@keyframes drift {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-1000px);
+    }
+}
+
+/* ─── NAV ────────────────────────────────────────────────────── */
+.kz-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1.2rem 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(10, 10, 12, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--kz-subtle);
+    border-top: 3px solid var(--kz-pink);
+}
+
+.kz-nav-back {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--kz-muted);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: color 0.3s;
+}
+
+.kz-nav-back:hover {
+    color: var(--kz-pink);
+}
+
+.kz-nav-logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: var(--kz-white);
+}
+
+.kz-nav-logo span {
+    color: var(--kz-pink);
+}
+
+.kz-nav-tag {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: var(--kz-pink);
+    text-transform: uppercase;
+    border: 1px solid var(--kz-pink);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    background: var(--kz-pink-soft);
+}
+
+/* ─── HERO ───────────────────────────────────────────────────── */
+.kz-hero {
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 9rem 5vw 5rem;
+    overflow: hidden;
+}
+
+.kz-hero-bg-text {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40vw;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--kz-pink);
+    opacity: 0.04;
+    user-select: none;
+    pointer-events: none;
+    letter-spacing: -2vw;
+}
+
+.kz-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 720px;
+}
+
+.kz-eyebrow {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 4px;
+    color: var(--kz-pink);
+    margin-bottom: 1.2rem;
+    font-weight: 700;
+}
+
+.kz-hero-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(3rem, 8vw, 6.5rem);
+    font-weight: 900;
+    line-height: 1;
+    color: var(--kz-white);
+    text-shadow: 0 0 40px var(--kz-pink-glow);
+    margin-bottom: 0.8rem;
+    letter-spacing: 2px;
+}
+
+.kz-hero-name span {
+    color: var(--kz-pink);
+}
+
+.kz-hero-tagline {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    letter-spacing: 2px;
+    color: var(--kz-text);
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.kz-hero-concept {
+    font-size: 0.95rem;
+    color: var(--kz-muted);
+    line-height: 2;
+    margin-bottom: 3.5rem;
+    max-width: 650px;
+    font-weight: 400;
+    background: var(--kz-surface);
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--kz-pink);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.kz-hero-stats {
+    display: flex;
+    gap: 4rem;
+}
+
+.kz-stat-value {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--kz-white);
+    line-height: 1;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.kz-stat-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    color: var(--kz-pink);
+    margin-top: 0.8rem;
+    font-weight: 700;
+}
+
+/* ─── CONTAINER ──────────────────────────────────────────────── */
+.kz-container {
+    position: relative;
+    z-index: 10;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 5vw 8rem;
+}
+
+/* ─── SECTION HEADER ─────────────────────────────────────────── */
+.kz-section {
+    margin-bottom: 8rem;
+}
+
+.kz-section-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 3.5rem;
+}
+
+.kz-section-num {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--kz-pink);
+    opacity: 0.6;
+    line-height: 1;
+}
+
+.kz-section-title {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--kz-white);
+    letter-spacing: 2px;
+}
+
+.kz-section-title-sub {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 5px;
+    color: var(--kz-pink);
+    display: block;
+    margin-top: 0.4rem;
+}
+
+.kz-divider {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--kz-subtle), transparent);
+}
+
+/* ─── INFO CARDS ─────────────────────────────────────────────── */
+.kz-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.kz-info-card {
+    background: var(--kz-surface);
+    border: 1px solid var(--kz-subtle);
+    border-radius: 8px;
+    padding: 2.5rem 2rem;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.kz-info-card::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 30px;
+    height: 30px;
+    border-top: 2px solid var(--kz-pink);
+    border-left: 2px solid var(--kz-pink);
+    border-radius: 8px 0 0 0;
+    transition: width 0.3s, height 0.3s;
+}
+
+.kz-info-card:hover {
+    background: rgba(255, 107, 158, 0.05);
+    border-color: rgba(255, 107, 158, 0.2);
+    transform: translateY(-5px);
+}
+
+.kz-info-card:hover::before {
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    border-radius: 8px;
+    border-bottom: 2px solid var(--kz-pink);
+    border-right: 2px solid var(--kz-pink);
+    opacity: 0.5;
+}
+
+.kz-info-card h3 {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 1.1rem;
+    color: var(--kz-white);
+    margin-bottom: 1.2rem;
+    font-weight: 800;
+}
+
+.kz-info-card p {
+    font-size: 0.95rem;
+    color: var(--kz-muted);
+    line-height: 1.9;
+}
+
+/* ─── MEMBER GRID ────────────────────────────────────────────── */
+.kz-member-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.kz-member-card {
+    background: var(--kz-surface);
+    border: 1px solid var(--kz-subtle);
+    border-radius: 8px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.kz-member-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--kz-subtle);
+    transition: background 0.3s;
+}
+
+.kz-member-card.kz-color-pink::before {
+    background: var(--kz-color-pink);
+}
+
+.kz-member-card.kz-color-cyan::before {
+    background: var(--kz-color-cyan);
+}
+
+.kz-member-card.kz-color-yellow::before {
+    background: var(--kz-color-yellow);
+}
+
+.kz-member-card.kz-color-red::before {
+    background: var(--kz-color-red);
+}
+
+.kz-member-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.kz-member-header {
+    margin-bottom: 1.5rem;
+}
+
+.kz-member-name {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--kz-white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+.kz-member-card.kz-color-pink .kz-member-name:hover {
+    color: var(--kz-color-pink);
+}
+
+.kz-member-card.kz-color-cyan .kz-member-name:hover {
+    color: var(--kz-color-cyan);
+}
+
+.kz-member-card.kz-color-yellow .kz-member-name:hover {
+    color: var(--kz-color-yellow);
+}
+
+.kz-member-card.kz-color-red .kz-member-name:hover {
+    color: var(--kz-color-red);
+}
+
+.kz-badge {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.65rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.kz-member-read {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    color: var(--kz-muted);
+    margin-top: 0.4rem;
+}
+
+.kz-member-icon {
+    position: absolute;
+    top: 2rem;
+    right: 1.5rem;
+    font-size: 3rem;
+    font-weight: 900;
+    opacity: 0.05;
+    font-family: 'Montserrat', sans-serif;
+    user-select: none;
+    pointer-events: none;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.kz-member-card:hover .kz-member-icon {
+    opacity: 0.15;
+    transform: scale(1.1) rotate(10deg);
+}
+
+.kz-member-card.kz-color-pink .kz-member-icon {
+    color: var(--kz-color-pink);
+}
+
+.kz-member-card.kz-color-cyan .kz-member-icon {
+    color: var(--kz-color-cyan);
+}
+
+.kz-member-card.kz-color-yellow .kz-member-icon {
+    color: var(--kz-color-yellow);
+}
+
+.kz-member-card.kz-color-red .kz-member-icon {
+    color: var(--kz-color-red);
+}
+
+.kz-member-ep {
+    font-size: 0.9rem;
+    color: var(--kz-muted);
+    line-height: 1.8;
+}
+
+/* ─── FOOTER ─────────────────────────────────────────────────── */
+.kz-footer {
+    position: relative;
+    z-index: 10;
+    border-top: 1px solid var(--kz-subtle);
+    padding: 3rem 5vw;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--kz-muted);
+}
+
+.kz-footer-logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: var(--kz-white);
+    margin-bottom: 0.8rem;
+}
+
+.kz-footer-logo span {
+    color: var(--kz-pink);
+}
+
+/* ─── REVEAL ANIMATION ───────────────────────────────────────── */
+.kz-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.kz-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ─── RESPONSIVE ─────────────────────────────────────────────── */
+@media (max-width: 900px) {
+    .kz-hero-bg-text {
+        font-size: 55vw;
+    }
+
+    .kz-hero-stats {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .kz-member-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .kz-info-grid {
+        grid-template-columns: 1fr;
+    }
+}

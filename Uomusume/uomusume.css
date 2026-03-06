@@ -1,0 +1,508 @@
+/* ============================================================
+   うおむすめ — uomusume.css
+   ============================================================ */
+
+/* 海や水を連想させる、丸みのある柔らかいフォント (M PLUS Rounded 1c) */
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&family=Noto+Sans+JP:wght@400;700;900&display=swap');
+
+/* ─── TOKENS ───────────────────────────────────────────────── */
+:root {
+    /* 海の鮮やかなブルー */
+    --uo-accent: #00b4d8;
+    --uo-accent-glow: rgba(0, 180, 216, 0.45);
+    --uo-accent-soft: rgba(0, 180, 216, 0.12);
+    --uo-border: rgba(0, 180, 216, 0.3);
+
+    /* 魚モチーフごとのテーマカラー（CSS変数で管理） */
+    --uo-color-aji: #ffd166;
+    /* アジの黄金色 */
+    --uo-color-madai: #ef476f;
+    /* マダイの紅色 */
+    --uo-color-nijimasu: #fca311;
+    /* ニジマスの水玉・帯イメージ */
+
+    /* Neutrals - 深海から浅瀬へ */
+    --uo-dark: #030b14;
+    --uo-surface: rgba(10, 40, 70, 0.4);
+    --uo-subtle: rgba(0, 180, 216, 0.15);
+    --uo-text: #e0f7fa;
+    --uo-muted: rgba(224, 247, 250, 0.6);
+    --uo-white: #ffffff;
+}
+
+/* ─── RESET ─────────────────────────────────────────────────── */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--uo-dark);
+    color: var(--uo-text);
+    overflow-x: hidden;
+}
+
+/* ─── BACKGROUND AND BUBBLES ───────────────────────────────── */
+.uo-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: linear-gradient(180deg, #030b14 0%, #06192e 100%);
+}
+
+.uo-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    /* 水面の光の差し込みを表現 */
+    background:
+        radial-gradient(ellipse at 50% -20%, color-mix(in srgb, var(--uo-accent) 25%, transparent) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 80%, color-mix(in srgb, var(--uo-accent) 15%, transparent) 0%, transparent 50%);
+}
+
+.uo-bubbles {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.uo-bubbles::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    box-shadow:
+        20vw 10vh 0 2px rgba(255, 255, 255, 0.1),
+        80vw 30vh 0 4px rgba(255, 255, 255, 0.2),
+        40vw 60vh 0 1px rgba(255, 255, 255, 0.15),
+        70vw 80vh 0 3px rgba(255, 255, 255, 0.25),
+        10vw 90vh 0 5px rgba(255, 255, 255, 0.1);
+    animation: floatUp 25s linear infinite;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-20vh);
+        opacity: 0;
+    }
+}
+
+/* ─── NAV ────────────────────────────────────────────────────── */
+.uo-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1.1rem 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(3, 11, 20, 0.8);
+    backdrop-filter: blur(12px);
+    border-bottom: 2px solid var(--uo-subtle);
+}
+
+.uo-nav-back {
+    font-size: 0.82rem;
+    letter-spacing: 2px;
+    color: var(--uo-muted);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: color 0.3s;
+}
+
+.uo-nav-back:hover {
+    color: var(--uo-accent);
+}
+
+.uo-nav-logo {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: var(--uo-white);
+}
+
+.uo-nav-logo span {
+    color: var(--uo-accent);
+}
+
+.uo-nav-tag {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    color: var(--uo-accent);
+    opacity: 0.85;
+    background: var(--uo-accent-soft);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+}
+
+/* ─── HERO ───────────────────────────────────────────────────── */
+.uo-hero {
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 9rem 5vw 5rem;
+    overflow: hidden;
+}
+
+.uo-hero-bg-text {
+    position: absolute;
+    right: -2%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 55vw;
+    font-weight: 800;
+    line-height: 0.85;
+    color: var(--uo-accent);
+    opacity: 0.04;
+    user-select: none;
+    pointer-events: none;
+    letter-spacing: -2vw;
+}
+
+.uo-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 720px;
+}
+
+.uo-eyebrow {
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+    color: var(--uo-accent);
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 700;
+}
+
+.uo-eyebrow::before {
+    content: '🫧';
+    font-size: 1.2rem;
+}
+
+.uo-hero-name {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: clamp(3.2rem, 9vw, 6.5rem);
+    font-weight: 800;
+    line-height: 1;
+    color: var(--uo-white);
+    text-shadow: 0 4px 20px var(--uo-accent-glow);
+    margin-bottom: 0.8rem;
+    letter-spacing: 2px;
+}
+
+.uo-hero-name span {
+    color: var(--uo-accent);
+}
+
+.uo-hero-tagline {
+    font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+    letter-spacing: 3px;
+    color: var(--uo-text);
+    margin-bottom: 2rem;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: 700;
+}
+
+.uo-hero-concept {
+    font-size: 0.98rem;
+    color: var(--uo-muted);
+    line-height: 2;
+    border-radius: 12px;
+    padding: 1.4rem 2rem;
+    background: var(--uo-surface);
+    border: 1px solid var(--uo-subtle);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    margin-bottom: 3rem;
+    max-width: 660px;
+}
+
+.uo-hero-stats {
+    display: flex;
+    gap: 3.5rem;
+}
+
+.uo-stat-value {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--uo-accent);
+    line-height: 1;
+    text-shadow: 0 0 15px var(--uo-accent-glow);
+}
+
+.uo-stat-label {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: var(--uo-text);
+    margin-top: 0.6rem;
+    opacity: 0.8;
+}
+
+/* ─── CONTAINER ──────────────────────────────────────────────── */
+.uo-container {
+    position: relative;
+    z-index: 10;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 5vw 8rem;
+}
+
+/* ─── SECTION HEADER ─────────────────────────────────────────── */
+.uo-section {
+    margin-bottom: 6.5rem;
+}
+
+.uo-section-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 3.5rem;
+}
+
+.uo-section-num {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--uo-accent-soft);
+    line-height: 1;
+}
+
+.uo-section-title {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--uo-white);
+    letter-spacing: 2px;
+}
+
+.uo-section-title-sub {
+    font-size: 0.75rem;
+    letter-spacing: 5px;
+    color: var(--uo-accent);
+    display: block;
+    margin-top: 0.4rem;
+}
+
+.uo-divider {
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(90deg, var(--uo-subtle), transparent);
+    border-radius: 2px;
+}
+
+/* ─── INFO CARDS ─────────────────────────────────────────────── */
+.uo-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.8rem;
+}
+
+.uo-info-card {
+    background: var(--uo-surface);
+    border: 1px solid var(--uo-subtle);
+    border-radius: 16px;
+    padding: 2.2rem 1.8rem;
+    position: relative;
+    transition: all 0.3s;
+    backdrop-filter: blur(8px);
+}
+
+.uo-info-card:hover {
+    background: rgba(10, 50, 90, 0.5);
+    border-color: var(--uo-border);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 180, 216, 0.1);
+}
+
+.uo-info-card h3 {
+    font-size: 1.05rem;
+    color: var(--uo-white);
+    margin-bottom: 1.2rem;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.uo-info-card p {
+    font-size: 0.92rem;
+    color: var(--uo-muted);
+    line-height: 1.8;
+}
+
+/* ─── MEMBER GRID ────────────────────────────────────────────── */
+.uo-member-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.uo-member-card {
+    background: var(--uo-surface);
+    border: 1px solid var(--uo-subtle);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(8px);
+}
+
+/* カラーバリエーション（魚に応じたハイライト） */
+.uo-member-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--uo-accent);
+    opacity: 0.8;
+}
+
+.uo-member-card.uo-color-aji::before {
+    background: var(--uo-color-aji);
+}
+
+.uo-member-card.uo-color-madai::before {
+    background: var(--uo-color-madai);
+}
+
+.uo-member-card.uo-color-nijimasu::before {
+    background: var(--uo-color-nijimasu);
+}
+
+.uo-member-card:hover {
+    border-color: var(--uo-accent);
+    transform: translateY(-6px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3), 0 0 20px var(--uo-accent-soft);
+}
+
+.uo-member-name {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--uo-white);
+    display: block;
+    margin-bottom: 0.4rem;
+    transition: color 0.25s;
+    letter-spacing: 1px;
+}
+
+.uo-member-card.uo-color-aji .uo-member-name:hover {
+    color: var(--uo-color-aji);
+}
+
+.uo-member-card.uo-color-madai .uo-member-name:hover {
+    color: var(--uo-color-madai);
+}
+
+.uo-member-card.uo-color-nijimasu .uo-member-name:hover {
+    color: var(--uo-color-nijimasu);
+}
+
+.uo-member-read {
+    font-size: 0.75rem;
+    color: var(--uo-accent);
+    letter-spacing: 2px;
+    margin-bottom: 1.2rem;
+}
+
+.uo-member-ep {
+    font-size: 0.9rem;
+    color: var(--uo-muted);
+    line-height: 1.8;
+}
+
+/* ─── FOOTER ─────────────────────────────────────────────────── */
+.uo-footer {
+    position: relative;
+    z-index: 10;
+    border-top: 1px solid var(--uo-subtle);
+    padding: 4rem 5vw;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--uo-muted);
+}
+
+.uo-footer-logo {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: var(--uo-white);
+    margin-bottom: 1.2rem;
+}
+
+.uo-footer-logo span {
+    color: var(--uo-accent);
+}
+
+/* ─── REVEAL ANIMATION ───────────────────────────────────────── */
+.uo-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.uo-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ─── RESPONSIVE ─────────────────────────────────────────────── */
+@media (max-width: 900px) {
+    .uo-hero-bg-text {
+        font-size: 70vw;
+    }
+
+    .uo-hero-stats {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .uo-member-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .uo-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .uo-section-num {
+        font-size: 2.5rem;
+    }
+}

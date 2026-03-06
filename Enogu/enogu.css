@@ -1,0 +1,470 @@
+/* ============================================================
+   えのぐ — enogu.css
+   ============================================================ */
+
+/* 青春・アイドルの可愛らしさを表現する丸ゴシック */
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;700;900&display=swap');
+
+/* ─── TOKENS ───────────────────────────────────────────────── */
+:root {
+    /* 青春・えのぐのパレットを感じさせる、白ベースにカラフルなアクセント */
+    --eg-accent: #ff5757;
+    /* ベースは赤/ピンク系 */
+    --eg-accent-glow: rgba(255, 87, 87, 0.4);
+    --eg-accent-soft: rgba(255, 87, 87, 0.1);
+
+    /* メンバーカラー想定 (適宜公式カラーに寄せます) */
+    --eg-color-anzu: #4a90e2;
+    /* 青系想定 */
+    --eg-color-tamaki: #f5a623;
+    /* オレンジ/黄系想定 */
+    --eg-color-nao: #d0021b;
+    /* 赤系想定 */
+
+    /* 背景は暗めのパレットでアイドルステージ感を維持しつつ柔らかく */
+    --eg-dark: #1a1016;
+    --eg-surface: rgba(255, 255, 255, 0.05);
+    --eg-subtle: rgba(255, 255, 255, 0.1);
+    --eg-text: #fdfbfb;
+    --eg-muted: rgba(253, 251, 251, 0.65);
+    --eg-white: #ffffff;
+}
+
+/* ─── RESET ─────────────────────────────────────────────────── */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--eg-dark);
+    color: var(--eg-text);
+    overflow-x: hidden;
+}
+
+/* ─── BACKGROUND AND SPARKLES ──────────────────────────────── */
+.eg-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: radial-gradient(ellipse at top, #2d1822 0%, #1a1016 100%);
+}
+
+.eg-sparkles {
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        radial-gradient(circle at 80% 40%, rgba(255, 255, 255, 0.05) 2px, transparent 2px),
+        radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        radial-gradient(circle at 90% 90%, rgba(255, 255, 255, 0.05) 2px, transparent 2px);
+    background-size: 100px 100px;
+    animation: twinkle 10s infinite alternate linear;
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 0.5;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(-20px);
+    }
+}
+
+/* ─── NAV ────────────────────────────────────────────────────── */
+.eg-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1.2rem 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(26, 16, 22, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--eg-subtle);
+}
+
+.eg-nav-back {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--eg-muted);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: color 0.3s;
+}
+
+.eg-nav-back:hover {
+    color: var(--eg-white);
+}
+
+.eg-nav-logo {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: var(--eg-white);
+}
+
+.eg-nav-logo span {
+    font-size: 0.8rem;
+    color: var(--eg-accent);
+    font-weight: 700;
+}
+
+.eg-nav-tag {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: var(--eg-white);
+    background: linear-gradient(135deg, var(--eg-color-anzu), var(--eg-color-tamaki), var(--eg-color-nao));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+}
+
+/* ─── HERO ───────────────────────────────────────────────────── */
+.eg-hero {
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 9rem 5vw 5rem;
+    overflow: hidden;
+}
+
+.eg-hero-bg-text {
+    position: absolute;
+    right: -2%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 45vw;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--eg-white);
+    opacity: 0.02;
+    user-select: none;
+    pointer-events: none;
+}
+
+.eg-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 680px;
+}
+
+.eg-eyebrow {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 5px;
+    color: var(--eg-accent);
+    margin-bottom: 1.2rem;
+    font-weight: 700;
+}
+
+.eg-hero-name {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: clamp(3.5rem, 9vw, 7rem);
+    font-weight: 900;
+    line-height: 1.1;
+    color: var(--eg-white);
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+    margin-bottom: 0.5rem;
+    letter-spacing: 8px;
+}
+
+.eg-hero-tagline {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: clamp(1.2rem, 2.8vw, 1.8rem);
+    letter-spacing: 2px;
+    color: var(--eg-white);
+    margin-bottom: 2.5rem;
+    font-weight: 700;
+}
+
+.eg-hero-concept {
+    font-size: 0.98rem;
+    color: var(--eg-muted);
+    line-height: 2;
+    margin-bottom: 3.5rem;
+    background: var(--eg-surface);
+    padding: 1.8rem;
+    border-radius: 16px;
+    border: 1px solid var(--eg-subtle);
+}
+
+.eg-hero-stats {
+    display: flex;
+    gap: 3.5rem;
+}
+
+.eg-stat-value {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--eg-white);
+    line-height: 1;
+}
+
+.eg-stat-label {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: var(--eg-muted);
+    margin-top: 0.5rem;
+    font-weight: 700;
+}
+
+/* ─── CONTAINER ──────────────────────────────────────────────── */
+.eg-container {
+    position: relative;
+    z-index: 10;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 5vw 8rem;
+}
+
+/* ─── SECTION HEADER ─────────────────────────────────────────── */
+.eg-section {
+    margin-bottom: 7rem;
+}
+
+.eg-section-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3.5rem;
+}
+
+.eg-section-title {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--eg-white);
+    letter-spacing: 2px;
+}
+
+.eg-section-title-sub {
+    font-size: 0.7rem;
+    letter-spacing: 4px;
+    color: var(--eg-muted);
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.eg-divider {
+    flex: 1;
+    height: 2px;
+    background: var(--eg-subtle);
+    border-radius: 2px;
+}
+
+/* ─── INFO CARDS ─────────────────────────────────────────────── */
+.eg-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.eg-info-card {
+    background: var(--eg-surface);
+    border: 1px solid var(--eg-subtle);
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.eg-info-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.eg-info-card h3 {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 1.15rem;
+    color: var(--eg-white);
+    margin-bottom: 1.2rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.eg-info-card p {
+    font-size: 0.95rem;
+    color: var(--eg-muted);
+    line-height: 1.9;
+}
+
+/* ─── MEMBER GRID ────────────────────────────────────────────── */
+.eg-member-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2.5rem;
+}
+
+.eg-member-card {
+    position: relative;
+    border-radius: 24px;
+    padding: 2.5rem 2rem;
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 260px;
+}
+
+/* カードごとのグラデーション背景 */
+.eg-card-bg {
+    position: absolute;
+    inset: 0;
+    background: var(--eg-surface);
+    border: 1px solid var(--eg-subtle);
+    border-radius: 24px;
+    z-index: 1;
+    transition: background 0.4s;
+}
+
+.eg-member-card.eg-color-anzu .eg-card-bg {
+    background: linear-gradient(135deg, rgba(74, 144, 226, 0.1), transparent);
+    border-top: 2px solid var(--eg-color-anzu);
+}
+
+.eg-member-card.eg-color-tamaki .eg-card-bg {
+    background: linear-gradient(135deg, rgba(245, 166, 35, 0.1), transparent);
+    border-top: 2px solid var(--eg-color-tamaki);
+}
+
+.eg-member-card.eg-color-nao .eg-card-bg {
+    background: linear-gradient(135deg, rgba(208, 2, 27, 0.1), transparent);
+    border-top: 2px solid var(--eg-color-nao);
+}
+
+.eg-member-card:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+.eg-member-card.eg-color-anzu:hover .eg-card-bg {
+    background: rgba(74, 144, 226, 0.15);
+    border-color: var(--eg-color-anzu);
+}
+
+.eg-member-card.eg-color-tamaki:hover .eg-card-bg {
+    background: rgba(245, 166, 35, 0.15);
+    border-color: var(--eg-color-tamaki);
+}
+
+.eg-member-card.eg-color-nao:hover .eg-card-bg {
+    background: rgba(208, 2, 27, 0.15);
+    border-color: var(--eg-color-nao);
+}
+
+.eg-card-content {
+    position: relative;
+    z-index: 2;
+}
+
+.eg-member-name {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--eg-white);
+    display: block;
+    margin-bottom: 0.2rem;
+    letter-spacing: 2px;
+}
+
+.eg-member-card.eg-color-anzu .eg-member-name:hover {
+    color: var(--eg-color-anzu);
+}
+
+.eg-member-card.eg-color-tamaki .eg-member-name:hover {
+    color: var(--eg-color-tamaki);
+}
+
+.eg-member-card.eg-color-nao .eg-member-name:hover {
+    color: var(--eg-color-nao);
+}
+
+.eg-member-read {
+    font-size: 0.8rem;
+    color: var(--eg-muted);
+    letter-spacing: 1px;
+    margin-bottom: 1.2rem;
+    font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+.eg-member-ep {
+    font-size: 0.95rem;
+    color: var(--eg-muted);
+    line-height: 1.8;
+}
+
+/* ─── FOOTER ─────────────────────────────────────────────────── */
+.eg-footer {
+    position: relative;
+    z-index: 10;
+    border-top: 1px solid var(--eg-subtle);
+    padding: 4rem 5vw;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--eg-muted);
+}
+
+.eg-footer-logo {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 900;
+    letter-spacing: 4px;
+    color: var(--eg-white);
+    margin-bottom: 1rem;
+}
+
+/* ─── REVEAL ANIMATION ───────────────────────────────────────── */
+.eg-reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275), transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.eg-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ─── RESPONSIVE ─────────────────────────────────────────────── */
+@media (max-width: 900px) {
+    .eg-hero-bg-text {
+        display: none;
+    }
+
+    .eg-hero-stats {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .eg-member-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .eg-info-grid {
+        grid-template-columns: 1fr;
+    }
+}
