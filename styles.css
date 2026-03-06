@@ -499,8 +499,43 @@ body {
     font-family: var(--font-body);
     font-size: 0.95rem;
     color: var(--text-dim);
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.6rem;
 }
+
+.card-desc {
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.38);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    letter-spacing: 0.01em;
+}
+
+/* Defunct / Archived agency cards */
+.card-defunct {
+    opacity: 0.6;
+    filter: saturate(0.4);
+}
+
+.card-defunct:hover {
+    opacity: 0.85;
+    filter: saturate(0.7);
+}
+
+.tag-defunct {
+    background: rgba(255, 60, 60, 0.12) !important;
+    border-color: rgba(255, 60, 60, 0.3) !important;
+    color: #ff6b6b !important;
+}
+
+.card-tag[data-tag="調査中"],
+.tag-chosa {
+    background: rgba(255, 180, 0, 0.1) !important;
+    border-color: rgba(255, 180, 0, 0.3) !important;
+    color: #ffc83d !important;
+}
+
+
 
 .card-tags {
     display: flex;
