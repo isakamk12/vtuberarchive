@@ -4,67 +4,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>レグルシュ・ライオンハート — のりプロ</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&family=Bebas+Neue&family=Noto+Sans+JP:wght@400;700;900&display=swap"
-        rel="stylesheet">
+    <title>レグルシュ・ライオンハート - ROYAL HUD CONSOLE</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="char-base.css">
-    <style>
-        :root {
-            --char-color: #8e44ad;
-            --char-glow: rgba(142, 68, 173, 0.5);
-            --char-color-soft: rgba(142, 68, 173, 0.08);
-            --char-border: rgba(142, 68, 173, 0.25);
-        }
-    </style>
+    <link rel="stylesheet" href="regul.css">
 </head>
 
 <body>
-    <div class="cp-bg"></div>
-    <nav class="cp-nav">
-        <a href="../noripro_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO のりプロ</a>
-        <span class="cp-nav-gen">🎮 先輩組 · やらかしMVP</span>
-    </nav>
-    <section class="cp-hero">
-        <div class="cp-bg-letter">獅</div>
-        <div class="cp-hero-content">
-            <div class="cp-gen-label">のりプロ // 先輩組</div>
-            <h1 class="cp-hero-name">レグルシュ<br>ライオンハート</h1>
-            <span class="cp-hero-en">Regulshu Lionheart</span>
-            <p class="cp-chara-desc">初配信で自ら<strong>「音痴なので歌枠は期待しないで」</strong>と宣言したやらかしMVP常連。伝説的なやらかしを量産し続ける不動の存在。</p>
-            <div class="cp-tags">
-                <span class="cp-tag cp-tag-primary">#やらかしMVP</span>
-                <span class="cp-tag cp-tag-muted">#自称音痴</span>
-                <span class="cp-tag cp-tag-muted">#泥酔放送事故</span>
-                <span class="cp-tag cp-tag-muted">#他人配信乱入</span>
-            </div>
-        </div>
-        <div class="cp-hero-orb">🦁</div>
-    </section>
-    <div class="cp-section cp-reveal">
-        <h2 class="cp-section-title">EPISODES</h2>
-        <div class="cp-grid">
-            <div class="cp-card">
-                <h3>初配信 自己申告</h3>
-                <p>デビュー初配信から<strong>「音痴なので歌枠は期待しないでください」</strong>と自ら宣言。自己開示のスピードがあまりにも速い。</p>
-            </div>
-            <div class="cp-card">
-                <h3>泥酔放送事故</h3>
-                <p>飲酒配信で<strong>泥酔して放送事故</strong>のような状態になった。のりプロNEWSにて社長に嬉々として暴露された。</p>
-            </div>
-            <div class="cp-card">
-                <h3>他人の配信に寝起きボイス乱入</h3>
-                <p>他事務所VTuber（<strong>緑仙</strong>）の家に泊まった際、相手の配信に寝起きボイスを乗せてしまうという事故を引き起こした。</p>
-            </div>
-        </div>
+    <!-- HUD Background & FX -->
+    <div class="hud-frame">
+        <div class="hud-corner top-left"></div>
+        <div class="hud-corner top-right"></div>
+        <div class="hud-corner bottom-left"></div>
+        <div class="hud-corner bottom-right"></div>
     </div>
-    <footer class="cp-footer">
-        <p>© 2026 NoriPro Fan Archive — 非公式ファンサイト</p>
-    </footer>
-    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+    <div class="hud-scanner"></div>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-visual">
+                <div class="royal-emblem">🦁</div>
+                <div class="avatar-container">
+                    <i class="fa-solid fa-crown"></i>
+                </div>
+            </div>
+            <div class="hero-content">
+                <span class="name-en">REGLUSH LIONHEART</span>
+                <h1 class="name-ja">レグルシュ・<br>ライオンハート</h1>
+                <div class="desc-box">
+                    獣人族の異世界から家出してきた王女様。<br>
+                    「こんがうがう！」の挨拶と共に、内向的な自分を変えるため人間界でVTuber活動中。
+                </div>
+                <div class="tags">
+                    <span class="tag">#のりプロゲーマーズ</span>
+                    <span class="tag">#王女様</span>
+                    <span class="tag">#食いしん坊</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Stats Grid -->
+        <div class="info-grid">
+
+            <!-- Basic Specification -->
+            <div class="panel">
+                <div class="panel-title">
+                    BASIC_SPECIFICATION <i class="fa-solid fa-dna"></i>
+                </div>
+                <ul class="stats-list">
+                    <li><strong>BIRTHDAY:</strong> 04.04 (獅子の日)</li>
+                    <li><strong>AGE:</strong> 15歳くらい</li>
+                    <li><strong>HEIGHT:</strong> 148.2 cm</li>
+                    <li><strong>WEIGHT:</strong> 35 kg</li>
+                    <li><strong>MAMA:</strong> 館田ダン</li>
+                </ul>
+            </div>
+
+            <!-- Gaming Profile -->
+            <div class="panel">
+                <div class="panel-title">
+                    GAMING_PROFILE <i class="fa-solid fa-headset"></i>
+                </div>
+                <p style="margin-bottom: 15px;"><strong>LoL歴 10年以上の大ベテラン。</strong><br>NAサーバー時代からの知識を持つガチ勢。高いゲームスキルを誇る。
+                </p>
+                <p><strong>ガノタ（ガンダムオタク）</strong><br>宇宙世紀から最新作まで網羅。ガンプラ製作や同時視聴も行う熱量を持つ。</p>
+                <div class="tags">
+                    <span class="tag">#LoL</span><span class="tag">#FPS</span><span class="tag">#GUNDAM</span>
+                </div>
+            </div>
+
+            <!-- Blackhole Stomach -->
+            <div class="panel" style="border-top: 3px solid var(--color-warning);">
+                <div class="panel-title" style="color: var(--color-warning);">
+                    ENERGY_RECHARGE_LOG <i class="fa-solid fa-utensils"></i>
+                </div>
+                <p>「ブラックホール」と称される圧倒的胃袋。バーガーキングやマックの新作を複数個完食する食レポは名物。</p>
+                <div class="eat-gauge">
+                    <div class="eat-fill"></div>
+                </div>
+                <p style="font-size: 0.8rem; text-align: right; color: var(--color-warning);">STATUS: STILL_HUNGRY</p>
+            </div>
+
+            <!-- Incident Archive -->
+            <div class="panel">
+                <div class="panel-title">
+                    INCIDENT_ARCHIVE <i class="fa-solid fa-clock-rotate-left"></i>
+                </div>
+                <div class="timeline">
+                    <div class="event">
+                        <div class="event-title">滑舌よわよわ愛されライオン</div>
+                        <p>噛み癖やPONが多く「ポンデライオン」といじられるが、それが最大の魅力。</p>
+                    </div>
+                    <div class="event">
+                        <div class="event-title">激レア「お遊戯会」歌枠</div>
+                        <p>歌は苦手だが、たまに行われる歌枠は「孫を見守る気持ち」で全リスナーが温かくなる。</p>
+                    </div>
+                    <div class="event">
+                        <div class="event-title">にじさんじ竜胆尊との絆</div>
+                        <p>デビューのきっかけを作った恩人であり、今も旅行に行くなど大親友。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Costume Variations -->
+            <div class="panel">
+                <div class="panel-title">
+                    COSTUME_DATA <i class="fa-solid fa-shirt"></i>
+                </div>
+                <p>・通常：王族の礼装<br>
+                    ・部屋着：ジャージメイド（サブカル）<br>
+                    ・戦闘服：分からせバニー（露出高め）<br>
+                    ・アイドル：王道可愛い姿</p>
+            </div>
+
+            <!-- Terminal Analysis -->
+            <div class="panel" style="background: #000; font-family: 'Orbitron';">
+                <div class="panel-title" style="color: var(--color-hud-blue);">
+                    SYSTEM_ANALYSIS <i class="fa-solid fa-terminal"></i>
+                </div>
+                <p style="color: var(--color-hud-blue); font-size: 0.8rem;">
+                    > FAV: ジャンクフード, 肉, ミニトマト<br>
+                    > HATE: 食べ物を水で流し込むこと, 注射<br>
+                    > TRAIT: 絶叫ホイッスル悲鳴, 台パン<br>
+                    > ACTION: 米国一人旅（謎の行動力）
+                </p>
+            </div>
+
+        </div>
+
+        <div style="margin-top: 50px; text-align: center;">
+            <a href="../noripro_index.html"
+                style="color: var(--color-gold); text-decoration: none; font-family: 'Orbitron';">
+                <i class="fa-solid fa-chevron-left"></i> RETURN_TO_BASE
+            </a>
+        </div>
+
+        <footer class="footer">
+            <p>© 2026 REGLUSH HUD v1.0 // NO LIMIT FOOD INTAKE</p>
+        </footer>
+    </div>
+
+    <script src="regul_script.js"></script>
 </body>
 
 </html>

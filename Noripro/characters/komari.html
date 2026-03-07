@@ -4,68 +4,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>斎木こまり — のりプロ</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&family=Bebas+Neue&family=Noto+Sans+JP:wght@400;700;900&display=swap"
-        rel="stylesheet">
+    <title>斎木こまり - ATELIER & PASTURE ARCHIVE</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="char-base.css">
-    <style>
-        :root {
-            --char-color: #e91e8c;
-            --char-glow: rgba(233, 30, 140, 0.5);
-            --char-color-soft: rgba(233, 30, 140, 0.08);
-            --char-border: rgba(233, 30, 140, 0.25);
-        }
-    </style>
+    <link rel="stylesheet" href="komari.css">
 </head>
 
 <body>
-    <div class="cp-bg"></div>
-    <nav class="cp-nav">
-        <a href="../noripro_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO のりプロ</a>
-        <span class="cp-nav-gen">🌸 1月組 ポニアリ · 神絵師</span>
-    </nav>
-    <section class="cp-hero">
-        <div class="cp-bg-letter">絵</div>
-        <div class="cp-hero-content">
-            <div class="cp-gen-label">のりプロ // 1月組 · ポニアリ</div>
-            <h1 class="cp-hero-name">斎木こまり</h1>
-            <span class="cp-hero-en">さいきこまり — Saiki Komari</span>
-            <p class="cp-chara-desc">
-                美麗なイラストを描く<strong>神絵師</strong>にして<strong>既婚者（人妻）</strong>。朝方のマイクラ配信中の「あの発言」で内部を騒然とさせた。</p>
-            <div class="cp-tags">
-                <span class="cp-tag cp-tag-primary">#神絵師</span>
-                <span class="cp-tag cp-tag-primary">#人妻VTuber</span>
-                <span class="cp-tag cp-tag-muted">#疑惑の発言</span>
-                <span class="cp-tag cp-tag-muted">#あっちいこ（本人談）</span>
+    <div class="floating-elements" id="clouds"></div>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <header class="hero">
+            <div class="canvas-frame">
+                <div class="avatar-placeholder">
+                    <i class="fa-solid fa-palette"></i>
+                </div>
             </div>
-        </div>
-        <div class="cp-hero-orb">🎨</div>
-    </section>
-    <div class="cp-section cp-reveal">
-        <h2 class="cp-section-title">PROFILE & EPISODES</h2>
-        <div class="cp-grid">
-            <div class="cp-card">
-                <h3>プロフィール</h3>
-                <ul>
-                    <li>美麗なイラストを描く<strong>神絵師</strong></li>
-                    <li>既婚者（<strong>人妻VTuber</strong>）であることを公言</li>
-                </ul>
-            </div>
-            <div class="cp-card">
-                <h3>疑惑の朝マイクラ事件</h3>
-                <p>朝方のマイクラ配信中、寝ぼけた状態で<strong>「ちんちん」</strong>と発言した疑惑が浮上し、のりプロ内を騒然とさせた。本人は「<strong>あっちいこと言っただけ！</strong>」と必死に否定している。
+            <div class="hero-text">
+                <h1 class="name-ja">斎木こまり</h1>
+                <span class="name-en">SAIKI KOMARI // RAM PROJECT</span>
+                <p style="color: #666; max-width: 700px; margin: 0 auto; line-height: 1.8;">
+                    現役のプロイラストレーター。羊（ピチピチのラム）を自称するのどかな空気感を纏いつつ、<br>
+                    圧巻の筆致と作業スピードで、のりプロ国内外のクリエイティブを支える。
                 </p>
             </div>
+        </header>
+
+        <!-- Bento Grid Content -->
+        <div class="bento-grid">
+
+            <!-- Basic Data -->
+            <div class="card">
+                <div class="eye-lash-decor">👀</div>
+                <div class="card-title">BASIC_SPEC <i class="fa-solid fa-dna"></i></div>
+                <p><strong>BIRTHDAY:</strong> 05.01</p>
+                <p><strong>HEIGHT:</strong> 156 cm</p>
+                <p><strong>BLOOD:</strong> O型</p>
+                <p><strong>HOBBY:</strong> お昼寝、家系ラーメン</p>
+            </div>
+
+            <!-- Creator Career -->
+            <div class="card span-2">
+                <div class="card-title">CREATOR_ARCHIVE <i class="fa-solid fa-pen-nib"></i></div>
+                <p><strong>株式会社グリモア所属</strong>の現役イラストレーター。スマホゲームのキャラデザやスチルを担当。</p>
+                <p style="margin-top: 10px;">VTuberのママとしても活動。ブランディングとして、顔の上下に「特徴的なまつ毛」を描き込むこだわりを持つ。</p>
+                <div class="tags">
+                    <span class="tag">#プロ絵師</span>
+                    <span class="tag">#安価お絵描き</span>
+                    <span class="tag">#サークル:おやつはうどん</span>
+                </div>
+            </div>
+
+            <!-- Episodes -->
+            <div class="card span-row-2">
+                <div class="card-title">LEGENDARY_DATA <i class="fa-solid fa-star"></i></div>
+                <ul class="ep-list">
+                    <li>
+                        <strong>「既婚者」公言</strong>
+                        サラッと初配信で発表。隠し事をしない誠実なスタンス。
+                    </li>
+                    <li>
+                        <strong>風紀撲滅組</strong>
+                        清楚な見た目に反したセンシティブな発言や際どいイラストで「風紀」を揺るがす。
+                    </li>
+                    <li>
+                        <strong>のびこまり</strong>
+                        居眠り特技。オフコラボ中に豪快に寝てしまい、のび太並みの睡眠力を発揮。
+                    </li>
+                    <li>
+                        <strong>オーディション満点</strong>
+                        清潔感とポートフォリオで審査員全員から満点評価を受けた。
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Gaming & Gear -->
+            <div class="card">
+                <div class="card-title">GAME_&_REAK <i class="fa-solid fa-gamepad"></i></div>
+                <p>スプラトゥーン、マイクラ、エルデンリング。ホラーゲームは全力で拒否。</p>
+                <p style="margin-top: 10px;"><strong>FAV FOOD:</strong> サーモン塩辛、家系ラーメン（二郎系も可）。</p>
+            </div>
+
+            <!-- Relationships -->
+            <div class="card">
+                <div class="card-title">UNIT_RELATIONS <i class="fa-solid fa-link"></i></div>
+                <div class="tags">
+                    <span class="tag">#PONuary</span>
+                    <span class="tag">#コマコマセット</span>
+                    <span class="tag">#麺処さいきアスカ</span>
+                    <span class="tag">#ぴこクリ</span>
+                    <span class="tag">#ひつぢくも</span>
+                </div>
+            </div>
+
+            <!-- Personal History -->
+            <div class="card span-2">
+                <div class="card-title">PERSONAL_HISTORY <i class="fa-solid fa-scroll"></i></div>
+                <p>学生時代は新体操7年、テニス3年の<strong>意外な運動神経</strong>を持つ。一方で『銀魂』の夢小説メルマガや腐向け同人誌を描いていた、オタク全開の過去も隠さない。</p>
+                <p style="margin-top: 10px;">母親、妹もクリエイター系の一家。館田ダン先生とは元・ゲーム会社の同僚で、残業ラーメン仲間。</p>
+            </div>
+
         </div>
+
+        <div style="margin-top: 50px; text-align: center;">
+            <a href="../noripro_index.html"
+                style="color: var(--color-pink); text-decoration: none; font-weight: 700; font-family: 'Montserrat';">
+                <i class="fa-solid fa-chevron-left"></i> BACK_TO_NORIPRO
+            </a>
+        </div>
+
+        <footer class="footer">
+            <p>© 2026 SAIKI KOMARI // CREATIVE LAMB STATION</p>
+        </footer>
     </div>
-    <footer class="cp-footer">
-        <p>© 2026 NoriPro Fan Archive — 非公式ファンサイト</p>
-    </footer>
-    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+
+    <script src="komari_script.js"></script>
 </body>
 
 </html>

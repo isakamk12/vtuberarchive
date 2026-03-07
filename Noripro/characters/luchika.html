@@ -4,61 +4,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>透々ルチカ — のりプロ</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&family=Bebas+Neue&family=Noto+Sans+JP:wght@400;700;900&display=swap"
-        rel="stylesheet">
+    <title>透々ルチカ - GHOST PANDA ATELIER</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="char-base.css">
-    <style>
-        :root {
-            --char-color: #9b59b6;
-            --char-glow: rgba(155, 89, 182, 0.5);
-            --char-color-soft: rgba(155, 89, 182, 0.08);
-            --char-border: rgba(155, 89, 182, 0.25);
-        }
-    </style>
+    <link rel="stylesheet" href="luchika.css">
 </head>
 
 <body>
-    <div class="cp-bg"></div>
-    <nav class="cp-nav">
-        <a href="../noripro_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO のりプロ</a>
-        <span class="cp-nav-gen">🌷 4月組</span>
-    </nav>
-    <section class="cp-hero">
-        <div class="cp-bg-letter">言</div>
-        <div class="cp-hero-content">
-            <div class="cp-gen-label">のりプロ // 4月組</div>
-            <h1 class="cp-hero-name">透々ルチカ</h1>
-            <span class="cp-hero-en">すきとおるちか — Sukitoru Chika</span>
-            <p class="cp-chara-desc">配信中に癇癪を起こし、ファンが投げてくれた<strong>スパチャを消す（言論統制）</strong>という驚きの行動に出たことが報告されている。</p>
-            <div class="cp-tags">
-                <span class="cp-tag cp-tag-primary">#言論統制スパチャ削除</span>
-                <span class="cp-tag cp-tag-muted">#4月組</span>
+    <div class="floating-elements" id="bubbles-container"></div>
+
+    <div class="container">
+        <!-- Hero: The Wealthy Ghost Artist -->
+        <header class="hero">
+            <div class="frame-gold">
+                <i class="fa-solid fa-ghost"></i>
+                <div style="position: absolute; bottom: 5px; right: 5px; font-size: 0.6rem; color: #d4af37;">EST.
+                    2024.04.23</div>
+            </div>
+            <h1 class="name-ja">透々ルチカ</h1>
+            <p class="name-en">SUKITOU LUCCICA // BOXED DAUGHTER GHOST</p>
+            <p class="catch-phrase">「目指すは脱・箱入り娘！」</p>
+        </header>
+
+        <div class="grid">
+            <!-- Profile -->
+            <div class="glass-card">
+                <span class="card-label">IDENTITY_LOG</span>
+                <h3>基本プロフィール</h3>
+                <p><strong>BIRTH:</strong> 10.12 / <strong>AGE:</strong> 20±</p>
+                <p><strong>HEIGHT:</strong> 155cm (Heel: 163cm)</p>
+                <p><strong>SPECIES:</strong> ガイコツパンダホヤ</p>
+                <p style="margin-top: 10px; font-size: 0.85rem; opacity: 0.7;">
+                    裕福な家庭を飛び出し、オンボロアパートで夢を追う苦労人イラストレーター。
+                </p>
+            </div>
+
+            <!-- Creator Skills -->
+            <div class="glass-card">
+                <span class="card-label">CREATIVE_STATS</span>
+                <h3>ミニキャラの魔術師</h3>
+                <p>SD（スーパーディフォルメ）イラスト制作のスペシャリスト。コミケでの頒布実績やメンバーストラップ制作も。</p>
+                <div style="margin-top: 15px; font-size: 0.75rem;">
+                    <span style="background: var(--color-purple-deep); padding: 2px 8px; border-radius: 10px;">ADOBE
+                        AE</span>
+                    <span
+                        style="background: var(--color-purple-deep); padding: 2px 8px; border-radius: 10px; margin-left: 5px;">CLIP
+                        STUDIO</span>
+                </div>
+            </div>
+
+            <!-- Gacha Cult -->
+            <div class="glass-card">
+                <span class="card-label">GACHA_BLESSING</span>
+                <h3>ルチカ教・ガチャ神</h3>
+                <p style="font-size: 0.85rem;">本人の運は最悪だが、リスナーに「神引き」をもたらす不思議な加護。</p>
+                <div class="luck-meter">
+                    <div class="luck-fill" id="luck-fill"></div>
+                </div>
+                <div style="text-align: right; font-size: 0.6rem; margin-top: 5px; color: var(--color-purple);">
+                    BLESSING_LEVEL: MAX</div>
+            </div>
+
+            <!-- ASMR & Night Life -->
+            <div class="glass-card">
+                <span class="card-label">NIGHT_VIBES</span>
+                <h3>癒やしのASMR</h3>
+                <p>水・金・日曜日の深夜、甘くセクシーな声でリスナーを「睡眠導入」。</p>
+                <p style="font-style: italic; font-size: 0.8rem; margin-top: 10px; color: var(--color-purple);">
+                    「歩く18禁」の異名は、彼女の魅力の裏返し。</p>
+            </div>
+
+            <!-- Habits & Favorites -->
+            <div class="glass-card">
+                <span class="card-label">SYSTEM_DATA</span>
+                <h3>嗜好・習性</h3>
+                <p><strong>LOVE:</strong> お寿司(いくら/えんがわ)、ラーメン、漫画『ブルーピリオド』</p>
+                <p><strong>DISTRUST:</strong> ホラーゲーム (悲鳴の女王)</p>
+                <p><strong>RANK:</strong> やらかしMVP常連 (ポンコツ気味?)</p>
+            </div>
+
+            <!-- Connections -->
+            <div class="glass-card">
+                <span class="card-label">RELATIONSHIP_LOG</span>
+                <h3>深い絆</h3>
+                <p>・<strong>ルチくも:</strong> 雪ノ精くもちとはオフで旅行に行く大親友。</p>
+                <p>・<strong>しゅびぃ家:</strong> 4姉妹の長女的存在。</p>
+                <p>・<strong>あん豆:</strong> 同人活動を支え合う親友。</p>
+            </div>
+
+            <!-- Unit Banner -->
+            <div class="unit-banner">
+                <div style="text-align: center;">
+                    <div style="font-size: 0.7rem; color: var(--color-purple);">UNIT: 4月組</div>
+                    <div style="font-family: 'Kiwi Maru'; font-size: 1.5rem;">3ME (スリーミー)</div>
+                </div>
+                <div style="opacity: 0.6;">
+                    <i class="fa-solid fa-skull-crossbones"></i> & <i class="fa-solid fa-ghost"></i>
+                </div>
             </div>
         </div>
-        <div class="cp-hero-orb">🫧</div>
-    </section>
-    <div class="cp-section cp-reveal">
-        <h2 class="cp-section-title">EPISODES</h2>
-        <div class="cp-grid">
-            <div class="cp-card">
-                <h3>スパチャ言論統制事件</h3>
-                <p>配信中に癇癪を起こし、<strong>ファンが投げたスパチャを消す</strong>という前代未聞の行動に出た。言論統制と称され話題になった。</p>
-            </div>
-            <div class="cp-card">
-                <h3>連座エピソード</h3>
-                <p>同期の海月とうみのラスクを、ことりと共に引き剥がして奪う（<strong>お菓子追いはぎ</strong>）という行為にも加担している。</p>
-            </div>
+
+        <div style="margin-top: 60px; text-align: center;">
+            <a href="../noripro_index.html"
+                style="color: #fff; text-decoration: none; font-weight: 700; border: 1px solid rgba(255,255,255,0.2); padding: 12px 40px; border-radius: 30px; transition: 0.3s;">
+                <i class="fa-solid fa-door-open"></i> RETURN_TO_CITY
+            </a>
         </div>
+
+        <footer class="footer">
+            <p>SUKITOU LUCCICA // GHOST ATELIER MASTER. 2026.</p>
+        </footer>
     </div>
-    <footer class="cp-footer">
-        <p>© 2026 NoriPro Fan Archive — 非公式ファンサイト</p>
-    </footer>
-    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+
+    <script src="luchika_script.js"></script>
 </body>
 
 </html>

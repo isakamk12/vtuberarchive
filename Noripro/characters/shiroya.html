@@ -4,63 +4,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>梟雄しろや — のりプロ</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&family=Bebas+Neue&family=Noto+Sans+JP:wght@400;700;900&display=swap"
-        rel="stylesheet">
+    <title>梟雄しろや - CYBER EDIT CONSOLE ARCHIVE</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="char-base.css">
-    <style>
-        :root {
-            --char-color: #7f8c8d;
-            --char-glow: rgba(127, 140, 141, 0.5);
-            --char-color-soft: rgba(127, 140, 141, 0.08);
-            --char-border: rgba(127, 140, 141, 0.25);
-        }
-    </style>
+    <link rel="stylesheet" href="shiroya.css">
 </head>
 
 <body>
-    <div class="cp-bg"></div>
-    <nav class="cp-nav">
-        <a href="../noripro_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO のりプロ</a>
-        <span class="cp-nav-gen">🌸 1月組 ポニアリ · 動画クリエイター</span>
-    </nav>
-    <section class="cp-hero">
-        <div class="cp-bg-letter">偽</div>
-        <div class="cp-hero-content">
-            <div class="cp-gen-label">のりプロ // 1月組 · ポニアリ</div>
-            <h1 class="cp-hero-name">梟雄しろや</h1>
-            <span class="cp-hero-en">きょうゆうしろや — Kyoyu Shiroya</span>
-            <p class="cp-chara-desc">
-                動画クリエイターの技術を活かし、初配信の最初<strong>20分間を「生放送風の動画」</strong>で乗り切り、視聴者と先輩を完全に騙した大胆なデビューを果たした。</p>
-            <div class="cp-tags">
-                <span class="cp-tag cp-tag-primary">#偽装デビュー20分</span>
-                <span class="cp-tag cp-tag-muted">#動画クリエイター</span>
-                <span class="cp-tag cp-tag-muted">#4日徹夜バキバキ</span>
-            </div>
-        </div>
-        <div class="cp-hero-orb">🦉</div>
-    </section>
-    <div class="cp-section cp-reveal">
-        <h2 class="cp-section-title">EPISODES</h2>
-        <div class="cp-grid">
-            <div class="cp-card">
-                <h3>生放送偽装デビュー事件</h3>
-                <p>初配信の最初<strong>20分間を「生放送風に作った動画」</strong>で完全に乗り切った。視聴者・先輩どちらも騙し切るという大胆かつ大局を見据えたデビューだった。</p>
-            </div>
-            <div class="cp-card">
-                <h3>4日徹夜バキバキ事件</h3>
-                <p>4日間徹夜した結果、自律神経がおかしくなり、<strong>電車の中で下半身が「バキバキ」に反応してしまう</strong>という恐ろしい体験を配信内で語った。</p>
-            </div>
-        </div>
+    <div class="grid-bg"></div>
+
+    <div class="editor-top-bar">
+        <div class="status">REC LIVE</div>
+        <div>FILE: KYOYU_SHIROYA_PRIME.MP4</div>
+        <div style="margin-left: auto;">FPS: 60.00 // BITRATE: 12000kbps</div>
     </div>
-    <footer class="cp-footer">
-        <p>© 2026 NoriPro Fan Archive — 非公式ファンサイト</p>
-    </footer>
-    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+
+    <div class="container">
+        <main class="content-left">
+            <!-- Video Player Visual -->
+            <section class="player-section">
+                <i class="fa-solid fa-owl"></i>
+                <div class="player-ui">
+                    <div class="seek-bar">
+                        <div class="seek-progress"></div>
+                    </div>
+                    <div class="player-controls">
+                        <i class="fa-solid fa-play"></i>
+                        <i class="fa-solid fa-forward-step"></i>
+                        <i class="fa-solid fa-volume-high"></i>
+                        <span style="font-family: 'Orbitron'; font-size: 0.8rem; margin-left: auto;">20:00 /
+                            24:00:00</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Hero Text -->
+            <section class="hero-info">
+                <div class="name-block">
+                    <h1 class="name-ja">梟雄しろや</h1>
+                    <span class="name-en">KYOYU SHIROYA</span>
+                </div>
+                <span class="catch-phrase">昼は社畜、夜はのりプロの門番</span>
+                <p
+                    style="color: #bbb; line-height: 1.8; margin-bottom: 40px; border-left: 2px solid var(--color-accent); padding-left: 20px;">
+                    元・限界社畜映像クリエイター。伝説の「20分動画偽装デビュー」で度肝を抜き、<br>
+                    驚異の「配信モンスター」としてサイバーネオヨコハマ（静岡）の夜を支配する。
+                </p>
+            </section>
+
+            <!-- Dashboard Grid -->
+            <div class="dashboard">
+                <!-- Timeline/Career -->
+                <div class="panel">
+                    <div class="panel-header">PROJECT_TIMELINE <i class="fa-solid fa-timeline"></i></div>
+                    <div class="timeline-track">
+                        <div class="timeline-event">
+                            <span class="timeline-time">2024.01</span>
+                            <strong>DEBUT (THE TRICK)</strong>
+                            <p style="font-size: 0.8rem; color: #888;">開始20分間、完全録画動画を流し視聴者を欺く。</p>
+                        </div>
+                        <div class="timeline-event">
+                            <span class="timeline-time">2024.05</span>
+                            <strong>GO FREELANCE</strong>
+                            <p style="font-size: 0.8rem; color: #888;">会社員を卒業。配信モンスターとして加速。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ability/Memory -->
+                <div class="panel">
+                    <div class="panel-header">SYSTEM_SPEC <i class="fa-solid fa-microchip"></i></div>
+                    <h3>驚異の映像記憶</h3>
+                    <p style="font-size: 0.9rem;">一度見たリスナーのアイコン、名前、ツイート、漫画のコマとセリフを正確に把握。脳内ストレージは超高速アクセス仕様。</p>
+                    <div class="meter-container" id="memory-meter">
+                        <!-- Bars added by JS -->
+                    </div>
+                </div>
+
+                <!-- Epic Stats -->
+                <div class="panel">
+                    <div class="panel-header">EPIC_REPORTS <i class="fa-solid fa-file-invoice"></i></div>
+                    <h3>百人一首部・全国優勝</h3>
+                    <p style="font-size: 0.9rem;">軽音・吹奏楽と並行し、競技かるたで頂点へ。札を取るスピードは映像記憶と相まって神速の域。</p>
+                    <div style="margin-top: 15px; border: 1px solid #333; padding: 10px;">
+                        <span style="color: var(--color-success);">STATUS: DOMINATED</span>
+                    </div>
+                </div>
+
+                <!-- Sub-Interests -->
+                <div class="panel">
+                    <div class="panel-header">SUB_PROCESS <i class="fa-solid fa-gear"></i></div>
+                    <h3>美食と嗜好</h3>
+                    <ul style="list-style: none; font-size: 0.8rem; line-height: 1.6;">
+                        <li>・<strong>エビフライの尻尾</strong>（人が残した分までもらう）</li>
+                        <li>・<strong>ききコーラ</strong>（瓶・缶・ペットを飲み分け）</li>
+                        <li>・<strong>ストグラ</strong>（三否亭 四五六確として活躍）</li>
+                        <li>・<strong>PC新調</strong>（RTX4070 / 35万円投資）</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <aside class="sidebar">
+            <div class="mini-panel">
+                <span class="mini-title">PROPERTIES</span>
+                <div class="stat-row"><span class="stat-label">GEN:</span> <span class="stat-val">PONuary</span></div>
+                <div class="stat-row"><span class="stat-label">BIRTH:</span> <span class="stat-val">10.30</span></div>
+                <div class="stat-row"><span class="stat-label">AGE:</span> <span class="stat-val">2x (ADULT)</span>
+                </div>
+                <div class="stat-row"><span class="stat-label">BLOOD:</span> <span class="stat-val">A</span></div>
+            </div>
+
+            <div class="mini-panel">
+                <span class="mini-title">FAVORITE_MEDIA</span>
+                <p style="font-size: 0.8rem; color: #888;">HUNTER×HUNTER / 名探偵コナン / メイドインアビス / ガンダム / ホーリーランド</p>
+            </div>
+
+            <div style="margin-top: auto; padding: 20px 0;">
+                <a href="../noripro_index.html"
+                    style="color: var(--color-accent); text-decoration: none; font-family: 'Orbitron'; font-size: 0.8rem; letter-spacing: 2px;">
+                    <i class="fa-solid fa-chevron-left"></i> BACK_TO_NORIPRO
+                </a>
+            </div>
+        </aside>
+
+        <footer class="footer">
+            <p>© 2026 KYOYU SHIROYA // CYBER CONSOLE INTERFACE</p>
+        </footer>
+    </div>
+
+    <script src="shiroya_script.js"></script>
 </body>
 
 </html>

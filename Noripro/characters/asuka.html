@@ -4,65 +4,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>鷲羽アスカ — のりプロ</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&family=Bebas+Neue&family=Noto+Sans+JP:wght@400;700;900&display=swap"
-        rel="stylesheet">
+    <title>鷲羽アスカ - WASHU TERMINAL ARCHIVE</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="char-base.css">
-    <style>
-        :root {
-            --char-color: #2c3e50;
-            --char-glow: rgba(44, 62, 80, 0.6);
-            --char-color-soft: rgba(44, 62, 80, 0.15);
-            --char-border: rgba(100, 130, 160, 0.3);
-        }
-    </style>
+    <link rel="stylesheet" href="asuka.css">
 </head>
 
 <body>
-    <div class="cp-bg"></div>
-    <nav class="cp-nav">
-        <a href="../noripro_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO のりプロ</a>
-        <span class="cp-nav-gen">🌺 3月組 パラレア · 自称風紀委員</span>
-    </nav>
-    <section class="cp-hero">
-        <div class="cp-bg-letter">風</div>
-        <div class="cp-hero-content">
-            <div class="cp-gen-label">のりプロ // 3月組 · パラレア</div>
-            <h1 class="cp-hero-name">鷲羽アスカ</h1>
-            <span class="cp-hero-en">わしゅうあすか — Washu Asuka</span>
-            <p class="cp-chara-desc">
-                「<strong>風紀委員</strong>」を名乗るが口が悪く中二病。スイカゲームで自分に有利なルールへの書き換えを行い、「<strong>奇跡</strong>」と言い張る。</p>
-            <div class="cp-tags">
-                <span class="cp-tag cp-tag-primary">#自称風紀委員</span>
-                <span class="cp-tag cp-tag-muted">#中二病</span>
-                <span class="cp-tag cp-tag-muted">#スイカ不正（奇跡）</span>
-                <span class="cp-tag cp-tag-muted">#同期フォロー忘れ</span>
+    <div class="scanline"></div>
+
+    <!-- System Boot Overlay -->
+    <div id="boot-screen">
+        <div id="boot-log"></div>
+    </div>
+
+    <div class="container">
+        <!-- Hero: Disciplinary Terminal -->
+        <header class="hero">
+            <div class="hero-header">
+                <div class="badge-container">
+                    <i class="fa-solid fa-bullhorn"></i>
+                </div>
+                <div class="hero-text">
+                    <h1 class="name-ja">鷲羽アスカ</h1>
+                    <span class="hero-en">WASHU ASUKA // DISCIPLINARY COMMITTEE</span>
+                    <div class="typewriter-desc" id="typewriter-desc"></div>
+                    <div style="margin-top: 20px;">
+                        <span
+                            style="font-size: 0.8rem; background: var(--color-turquoise); color: #fff; padding: 4px 12px; border-radius: 20px;">#鷲羽視察隊</span>
+                        <span
+                            style="font-size: 0.8rem; background: var(--color-navy); color: #fff; padding: 4px 12px; border-radius: 20px; margin-left: 10px;">#アスカの日誌</span>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="cp-hero-orb">⚖️</div>
-    </section>
-    <div class="cp-section cp-reveal">
-        <h2 class="cp-section-title">EPISODES</h2>
-        <div class="cp-grid">
-            <div class="cp-card">
-                <h3>スイカゲーム「奇跡」事件</h3>
-                <p>コラボ中に<strong>自身に有利になるようルールを書き換える</strong>という「不正」行為を敢行。本人は「<strong>奇跡</strong>」と言い張り、風紀委員としての名誉を自ら葬り去った。
+        </header>
+
+        <div class="dashboard">
+            <!-- Profile Info -->
+            <div class="card">
+                <span class="card-title">USER_REGISTRY</span>
+                <h3>基本情報</h3>
+                <p><strong>BIRTH:</strong> 08.11 (山の日) / <strong>BLOOD:</strong> O</p>
+                <p><strong>CLASS:</strong> 高校1年生 / <strong>AGE:</strong> 16</p>
+                <p><strong>HEIGHT:</strong> 156cm (154cm + 2cm 成長期!)</p>
+                <p style="margin-top: 15px; font-size: 0.85rem; color: #666;">
+                    苗字の「鷲羽（わしう）」は岡山県の地名に由来。スマホで一発変換可能。
                 </p>
             </div>
-            <div class="cp-card">
-                <h3>同期フォロー忘れ</h3>
-                <p>風紀を守るべき立場でありながら、<strong>デビュー後しばらく同期全員のX（Twitter）をフォローし忘れていた</strong>ことが発覚した。</p>
+
+            <!-- Creator Skills -->
+            <div class="card">
+                <span class="card-title">SYSTEM_MODULES</span>
+                <h3>クリエイターの才能</h3>
+                <div class="skill-bar-container">
+                    <span class="skill-label">イラスト・デザイン</span>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 95%;"></div>
+                    </div>
+                </div>
+                <div class="skill-bar-container">
+                    <span class="skill-label">動画編集・制作</span>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="skill-bar-container">
+                    <span class="skill-label">高速タイピング (寿司打無敗)</span>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 100%;"></div>
+                    </div>
+                </div>
+                <p style="font-size: 0.75rem; color: #888; margin-top: 10px;">MV、配信画面、トランジションを自ら手掛けるマルチクリエイター。</p>
+            </div>
+
+            <!-- Morning Log -->
+            <div class="card">
+                <span class="card-title">DAILY_ROUTINE</span>
+                <h3>継続の力</h3>
+                <p>「おはようございます」のツイートを、デビュー前の準備期間から毎日欠かさず継続中。</p>
+                <div class="streak-box">
+                    <div style="font-size: 0.7rem;">MORNING_STREAK</div>
+                    <div class="streak-num" id="days-count">???</div>
+                    <div style="font-size: 0.7rem;">DAYS & COUNTING</div>
+                </div>
+                <p style="font-size: 0.75rem; margin-top: 10px; text-align: center; font-style: italic;">「ごきげんうるわしゅう」
+                </p>
+            </div>
+
+            <!-- Dietary Choices -->
+            <div class="card">
+                <span class="card-title">FAVORITE_DATABASE</span>
+                <h3>嗜好ログ</h3>
+                <p><strong>LOVE:</strong> ラーメン(天一こってり)、牛タン、甘いもの(ガトーショコラ等)</p>
+                <p style="margin-top:10px;"><strong>HATE (SYSTEM ERROR):</strong></p>
+                <div class="aspara-item">ASPARAGUS / VEGETABLES</div>
+                <p style="font-size: 0.75rem; color: #999; margin-top: 10px;">ジークアスパラ。炭酸飲料はしゃっくりが出るため苦手。</p>
+            </div>
+
+            <!-- Interests & Inspiration -->
+            <div class="card">
+                <span class="card-title">CORE_INSPIRATION</span>
+                <h3>愛と憧れ</h3>
+                <p><strong>傾向:</strong> 自信があって強い女性 (ダイワスカーレット、アスカ・ラングレー)</p>
+                <p><strong>WORKS:</strong> プリキュア、ラブライブ、アイカツ、フルーツバスケット</p>
+                <p style="margin-top:10px; font-size: 0.85rem;">山の日生まれだが体育の成績は2。でもバドミントンは得意。</p>
+            </div>
+
+            <!-- Unit Info -->
+            <div class="card">
+                <span class="card-title">NETWORK_CLUSTER</span>
+                <h3>所属ユニット</h3>
+                <p>・<strong>ぱられあ:</strong> デビュー同期。字ぴろぱる、深狼れんげ、冥海らぶかとの強い絆。</p>
+                <p>・<strong>ぴこクリ:</strong> クリエイティブ集団としての活動。</p>
+                <p style="margin-top:10px; font-size: 0.8rem; color: var(--color-turquoise);">「アスカマンは認めません。」</p>
             </div>
         </div>
+
+        <div style="margin-top: 60px; text-align: center;">
+            <a href="../noripro_index.html"
+                style="color: var(--color-navy); text-decoration: none; font-family: var(--font-terminal); text-transform: uppercase; border-bottom: 2px solid var(--color-turquoise); padding-bottom: 5px; font-weight: 700;">
+                <i class="fa-solid fa-arrow-left"></i> SHUTDOWN_AND_RETURN
+            </a>
+        </div>
+
+        <footer class="footer">
+            <p>WASHU ASUKA // DISCIPLINARY LOG SYSTEM. 2026_EST.</p>
+        </footer>
     </div>
-    <footer class="cp-footer">
-        <p>© 2026 NoriPro Fan Archive — 非公式ファンサイト</p>
-    </footer>
-    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+
+    <script src="asuka_script.js"></script>
 </body>
 
 </html>

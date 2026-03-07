@@ -1,0 +1,288 @@
+/* ============================================================
+   Inari Iroha Premium Modern Japanese UI v1.0
+   Theme: Divine Fox Shrine x Horror/Gamer Contrast
+   Colors: Inari Orange, Shinto Vermillion, Sacred White, Ink Black
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&family=Shippori+Mincho:wght@400;700&family=Bebas+Neue&family=Noto+Sans+JP:wght@400;700;900&display=swap');
+
+:root {
+    --color-inari: #e67e22;
+    --color-vermillion: #d35400;
+    --color-sacred: #fdfcfb;
+    --color-ink: #1a1a1c;
+    --color-gold: #f1c40f;
+    --glow-inari: 0 0 20px rgba(230, 126, 34, 0.4);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-ink);
+    color: var(--color-sacred);
+    font-family: 'Shippori Mincho', serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* --- AMBIENT BACKGROUND --- */
+.ambient-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: radial-gradient(circle at 50% 50%, #2c1a10 0%, var(--color-ink) 100%);
+}
+
+.foxfire {
+    position: fixed;
+    width: 20px;
+    height: 30px;
+    background: radial-gradient(circle, var(--color-inari), transparent 70%);
+    border-radius: 50% 50% 20% 20%;
+    filter: blur(5px);
+    opacity: 0.6;
+    z-index: 1;
+    pointer-events: none;
+    animation: flicker 4s ease-in-out infinite alternate;
+}
+
+@keyframes flicker {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.4;
+    }
+
+    100% {
+        transform: translateY(-50px) scale(1.2);
+        opacity: 0.8;
+    }
+}
+
+/* --- MAIN CONTAINER --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+    position: relative;
+    z-index: 10;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 120px;
+}
+
+.hero-visual {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.nine-tails {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(230,126,34,0.1)" stroke-width="0.5" stroke-dasharray="5 10"/></svg>');
+    opacity: 0.3;
+    z-index: -1;
+    animation: rotate 120s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.avatar-shrine {
+    width: 320px;
+    height: 320px;
+    background: var(--color-ink);
+    border: 2px solid var(--color-inari);
+    transform: rotate(45deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--glow-inari), inset 0 0 30px rgba(var(--color-inari), 0.2);
+    overflow: hidden;
+}
+
+.avatar-shrine i {
+    transform: rotate(-45deg);
+    font-size: 8rem;
+    color: var(--color-inari);
+    filter: drop-shadow(0 0 10px var(--color-inari));
+}
+
+.hero-text .title-ja {
+    font-family: 'Kiwi Maru', serif;
+    font-size: clamp(3.5rem, 8vw, 6rem);
+    letter-spacing: 0.2em;
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, var(--color-sacred), var(--color-inari));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.title-en {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 8px;
+    color: var(--color-vermillion);
+    display: block;
+    margin-bottom: 30px;
+}
+
+/* --- SECTIONS --- */
+.section {
+    margin-bottom: 100px;
+}
+
+.section-head {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.section-head h2 {
+    font-size: 2rem;
+    color: var(--color-inari);
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-head h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: var(--color-inari);
+}
+
+/* Grid Layout */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(230, 126, 34, 0.1);
+    padding: 40px;
+    position: relative;
+    transition: all 0.4s;
+    overflow: hidden;
+}
+
+.card:hover {
+    background: rgba(230, 126, 34, 0.05);
+    border-color: var(--color-inari);
+    transform: translateY(-5px);
+}
+
+.card::before {
+    content: '狐';
+    position: absolute;
+    bottom: -10px;
+    right: 5px;
+    font-size: 6rem;
+    opacity: 0.02;
+    font-family: 'Kiwi Maru';
+}
+
+.card h3 {
+    color: var(--color-inari);
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Horror Special Panel */
+.horror-panel {
+    border-left: 4px solid var(--color-vermillion);
+    background: linear-gradient(90deg, rgba(211, 84, 0, 0.1), transparent);
+}
+
+.horror-panel h3 {
+    color: var(--color-vermillion);
+}
+
+/* Timeline/Episodes */
+.episode-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.episode-item {
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+    padding-bottom: 15px;
+}
+
+.episode-tag {
+    font-family: 'Bebas Neue';
+    color: var(--color-gold);
+    display: block;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+}
+
+/* Costume Gallery */
+.costume-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.costume {
+    background: var(--color-ink);
+    border: 1px solid var(--color-inari);
+    padding: 10px 20px;
+    font-size: 0.9rem;
+}
+
+/* --- FOOTER --- */
+.footer {
+    text-align: center;
+    padding: 80px 0;
+    border-top: 1px solid rgba(230, 126, 34, 0.1);
+    color: #666;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding-top: 40px;
+    }
+
+    .hero-text .title-ja {
+        font-size: 3rem;
+    }
+
+    .avatar-shrine {
+        width: 240px;
+        height: 240px;
+    }
+}

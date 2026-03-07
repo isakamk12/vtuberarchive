@@ -4,61 +4,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>字ぴろぱる — のりプロ</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&family=Bebas+Neue&family=Noto+Sans+JP:wght@400;700;900&display=swap"
-        rel="stylesheet">
+    <title>字ぴろぱる - VIRTUAL SUMI-E & GEAR STUDIO</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="char-base.css">
-    <style>
-        :root {
-            --char-color: #27ae60;
-            --char-glow: rgba(39, 174, 96, 0.5);
-            --char-color-soft: rgba(39, 174, 96, 0.08);
-            --char-border: rgba(39, 174, 96, 0.25);
-        }
-    </style>
+    <link rel="stylesheet" href="piroparu.css">
 </head>
 
 <body>
-    <div class="cp-bg"></div>
-    <nav class="cp-nav">
-        <a href="../noripro_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO のりプロ</a>
-        <span class="cp-nav-gen">🌺 3月組 パラレア · ミュート芸の元祖</span>
-    </nav>
-    <section class="cp-hero">
-        <div class="cp-bg-letter">🔇</div>
-        <div class="cp-hero-content">
-            <div class="cp-gen-label">のりプロ // 3月組 · パラレア</div>
-            <h1 class="cp-hero-name">字ぴろぱる</h1>
-            <span class="cp-hero-en">あざなぴろぱる — Azana Piroparu</span>
-            <p class="cp-chara-desc">
-                初配信という大事な場面でマイクを<strong>ミュートにしたまま全力で喋り続ける</strong>という致命的なデビューを飾り、「<strong>ミュート芸</strong>」としていじられ続けている。
-            </p>
-            <div class="cp-tags">
-                <span class="cp-tag cp-tag-primary">#ミュート芸の元祖</span>
-                <span class="cp-tag cp-tag-muted">#初配信ミュート</span>
-                <span class="cp-tag cp-tag-muted">#パラレア</span>
+    <div class="ink-bleed"></div>
+    <div class="gear-grid"></div>
+
+    <div class="container">
+        <!-- Hero: Calligraphy Display -->
+        <header class="hero">
+            <div class="hero-sumi-bg"></div>
+            <div class="gear-monitor">
+                BIT_DEPTH: 32-BIT FLOAT<br>
+                SAMPLE_RATE: 192kHz<br>
+                STATUS: MASTERING...
             </div>
-        </div>
-        <div class="cp-hero-orb">🔇</div>
-    </section>
-    <div class="cp-section cp-reveal">
-        <h2 class="cp-section-title">EPISODES</h2>
-        <div class="cp-grid">
-            <div class="cp-card">
-                <h3>初配信ミュート事件</h3>
-                <p>デビュー初配信という<strong>最も大事な場面</strong>で、マイクを<strong>ミュートにしたまま一人で全力で喋り続ける</strong>という致命的なミスを犯した。誰にも音が届いていないまま熱量のある配信をした記録として語り継がれている。
+            <div class="hero-name-block">
+                <h1 class="name-ja">字ぴろぱる</h1>
+                <p class="name-en">AZANA PIROPARU // VIRTUAL CALLIGRAPHER</p>
+            </div>
+            <!-- Animated Ink Streak -->
+            <canvas id="ink-canvas" style="position: absolute; inset:0; pointer-events: none;"></canvas>
+        </header>
+
+        <!-- Main Content: Gear Rack -->
+        <main class="rack">
+            <!-- Gear Unit 1: Spec -->
+            <div class="unit">
+                <div class="unit-header">
+                    <span class="unit-title">CORE_PROCESSOR</span>
+                    <span class="unit-label">MODEL_V2.0</span>
+                </div>
+                <div style="font-size: 0.9rem; line-height: 1.8;">
+                    <p><strong>BIRTH:</strong> 02.11 / <strong>AGE:</strong> 20+</p>
+                    <p><strong>ORIGIN:</strong> 徳島県 / <strong>HEIGHT:</strong> 168cm</p>
+                    <p><strong>BLOOD:</strong> B (Recently Found Out)</p>
+                    <p style="margin-top: 15px; color: var(--color-copper);">
+                        「機械的」と評されるストイックな性格。やり始めたら極める負けず嫌い。
+                    </p>
+                </div>
+            </div>
+
+            <!-- Gear Unit 2: Studio Kit -->
+            <div class="unit">
+                <div class="unit-header">
+                    <span class="unit-title">SHELFORD_CHANNEL_INPUT</span>
+                    <span class="unit-label">GAIN_DRIVE</span>
+                </div>
+                <h3>総額500万超の機材沼</h3>
+                <p style="font-size: 0.8rem; color: #888; margin-bottom: 10px;">防音室3畳に鎮座するプロの武器。</p>
+                <div class="vu-meter">
+                    <div class="vu-needle" id="needle"></div>
+                    <div
+                        style="position: absolute; bottom: 5px; right: 10px; font-family: Montserrat; font-size: 0.6rem; color: #444;">
+                        -20 .. -10 .. 0 .. +3</div>
+                </div>
+                <p style="font-size: 0.75rem; margin-top: 10px;">
+                    Shelford Channel (¥52.8w) / Airdog / 公園で塗装した黒いコンクリブロック。
                 </p>
             </div>
-        </div>
+
+            <!-- Gear Unit 3: Physical & Skills -->
+            <div class="unit">
+                <div class="unit-header">
+                    <span class="unit-title">PHYSICAL_CALIBRATION</span>
+                    <span class="unit-label">STRETCH_RATIO</span>
+                </div>
+                <div style="display: flex; gap: 20px;">
+                    <div>
+                        <i class="fa-solid fa-person-running"
+                            style="font-size: 2rem; color: var(--color-neon-blue);"></i>
+                        <p style="font-size: 0.8rem; margin-top: 10px;"><strong>DDR
+                                9段</strong>の脚力。握力左55。前屈不可（ヒの字）、エビ反り特化。</p>
+                    </div>
+                </div>
+                <div style="margin-top: 20px; border: 1px solid #333; padding: 10px; font-size: 0.8rem;">
+                    <span style="color: var(--color-copper);">CREATIVE_FIELD:</span> 書道 / 動画編集 / MIX / VJ
+                </div>
+            </div>
+
+            <!-- Gear Unit 4: Episodes -->
+            <div class="unit">
+                <div class="unit-header">
+                    <span class="unit-title">SYSTEM_LOG</span>
+                    <span class="unit-label">ERROR_404_MUTE</span>
+                </div>
+                <h3>伝説のミュート芸</h3>
+                <p style="font-size: 0.85rem;">初配信20分間、全力の沈黙。誰も聞こえない熱唱。<br>
+                    3Dお披露目では一転、VJまで自らプロデュースし、個人勢時代の自分へ感謝を捧げ、全観客を泣かせた。</p>
+            </div>
+        </main>
+
+        <!-- Sidebar: Tags & Misc -->
+        <aside class="sidebar">
+            <div class="spec-block">
+                <span class="spec-title">FAVORITE_FOOD</span>
+                <span class="spec-val"> Curry (Spice) / Frozen Blueberry / Tenkaippin </span>
+            </div>
+            <div class="spec-block">
+                <span class="spec-title">UNIT_ID</span>
+                <span class="spec-val">パラレラ (Leader?)</span>
+            </div>
+            <div class="spec-block">
+                <span class="spec-title">CURRENT_OBJECTIVE</span>
+                <span class="spec-val">世界を墨で染め、機材をもう一機。</span>
+            </div>
+            <div class="spec-block">
+                <span class="spec-title">TAGS</span>
+                <div style="font-size: 0.7rem; color: #888; font-family: Montserrat;">
+                    #ぴろぱる (Gen) / #ぴろぱらいぶ (Live) / #ぴろぱる展 (Art)
+                </div>
+            </div>
+
+            <div style="margin-top: auto; padding: 40px 0;">
+                <a href="../noripro_index.html"
+                    style="color: var(--color-copper); text-decoration: none; font-family: 'Bebas Neue'; letter-spacing: 5px; border-bottom: 2px solid var(--color-copper);">
+                    <i class="fa-solid fa-chevron-left"></i> BACK_TO_NORIPRO
+                </a>
+            </div>
+        </aside>
+
+        <footer class="footer">
+            <p>© 2026 AZANA PIROPARU // STUDIO MASTER RECORD</p>
+        </footer>
     </div>
-    <footer class="cp-footer">
-        <p>© 2026 NoriPro Fan Archive — 非公式ファンサイト</p>
-    </footer>
-    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+
+    <script src="piroparu_script.js"></script>
 </body>
 
 </html>

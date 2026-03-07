@@ -4,67 +4,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>佃煮のりお / 犬山たまき — のりプロ</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&family=Bebas+Neue&family=Noto+Sans+JP:wght@400;700;900&display=swap"
-        rel="stylesheet">
+    <title>犬山たまき＆佃煮のりお - DUAL REALITY ARCHIVE</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="char-base.css">
-    <style>
-        :root {
-            --char-color: #e85d04;
-            --char-glow: rgba(232, 93, 4, 0.55);
-            --char-color-soft: rgba(232, 93, 4, 0.08);
-            --char-border: rgba(232, 93, 4, 0.25);
-        }
-    </style>
+    <link rel="stylesheet" href="norio.css">
 </head>
 
-<body>
-    <div class="cp-bg"></div>
-    <nav class="cp-nav">
-        <a href="../noripro_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO のりプロ</a>
-        <span class="cp-nav-gen">👑 代表・運営</span>
-    </nav>
-    <section class="cp-hero">
-        <div class="cp-bg-letter">社</div>
-        <div class="cp-hero-content">
-            <div class="cp-gen-label">のりプロ // 代表・プロデューサー</div>
-            <h1 class="cp-hero-name">佃煮のりお</h1>
-            <span class="cp-hero-en">Tsukudani Norio / Inuyama Tamaki</span>
-            <p class="cp-chara-desc">漫画家にして<strong>のりプロ社長</strong>。犬山たまきとして自らもVTuberとして活動。過去にニコ生主・ネット声優として活動した経歴を持つ。</p>
-            <div class="cp-tags">
-                <span class="cp-tag cp-tag-primary">#漫画家</span>
-                <span class="cp-tag cp-tag-primary">#犬山たまき</span>
-                <span class="cp-tag cp-tag-muted">#のりプロNEWS</span>
-                <span class="cp-tag cp-tag-muted">#タレント監視役</span>
-            </div>
-        </div>
-        <div class="cp-hero-orb">社</div>
-    </section>
-    <div class="cp-section cp-reveal">
-        <h2 class="cp-section-title">PROFILE</h2>
-        <div class="cp-grid">
-            <div class="cp-card">
-                <h3>活動スタイル</h3>
-                <ul>
-                    <li>漫画家・VTuber（<strong>犬山たまき</strong>名義）として活動</li>
-                    <li>過去にニコ生主・ネット声優として活躍</li>
-                    <li>会社経営者の男性と結婚後も活動スタイル変わらず</li>
-                </ul>
-            </div>
-            <div class="cp-card">
-                <h3>のりプロNEWS</h3>
-                <p>毎月恒例の看板番組。タレントたちの<strong>「やらかしエピソード」を嬉々として暴露</strong>する監視役として君臨。タレントにとっては恐怖と愛が入り混じる恒例行事。</p>
-            </div>
-        </div>
+<body class="mode-tamaki">
+    <div class="manga-bg"></div>
+    <div class="manga-panel-decor"></div>
+
+    <div class="mode-switch">
+        <button class="mode-btn active" onclick="setMode('tamaki')">TAMAKI</button>
+        <button class="mode-btn" onclick="setMode('norio')">NORIO</button>
     </div>
-    <footer class="cp-footer">
-        <p>© 2026 NoriPro Fan Archive — 非公式ファンサイト</p>
-    </footer>
-    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+
+    <div class="container">
+        <!-- Hero -->
+        <section class="hero">
+            <div class="hero-visual">
+                <div class="avatar-circle">
+                    <i id="hero-icon" class="fa-solid fa-dog"></i>
+                </div>
+            </div>
+            <div class="hero-content">
+                <span class="name-sub" id="sub-title">1.0M_SUBS_CELEBRATION</span>
+                <h1 class="name-main" id="main-name">犬山たまき</h1>
+                <div class="hero-desc" id="hero-desc">
+                    「はーい、ご主人様！わんたま～！」<br>
+                    世界を股にかけ活躍する男の娘VTuber。1000回を超える伝説のコラボと、100万人を魅了するトーク力でVTuber界の頂点を目指す。
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats -->
+        <div class="stats-bar">
+            <div class="stat-item">
+                <span class="stat-val">1,000,000</span>
+                <span class="stat-label">SUBSCRIBERS</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-val" id="total-views">400,000,000</span>
+                <span class="stat-label">TOTAL_VIEWS</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-val">1,000+</span>
+                <span class="stat-label">COLLABORATIONS</span>
+            </div>
+        </div>
+
+        <div class="main-grid">
+            <div class="content-left">
+                <!-- Biography -->
+                <div class="panel">
+                    <div class="panel-title">PRIME_INTEL <i class="fa-solid fa-id-card"></i></div>
+                    <div id="bio-content">
+                        <p><strong>BIRTHDAY:</strong> 06.01 / <strong>AGE:</strong> 17歳（公称）</p>
+                        <p style="margin-top: 20px;">
+                            元々は佃煮のりおの看板キャラクターとして誕生。2018年にVTuberデビュー。
+                            頭の「制御装置君」によって中身を封印しているが、時折「中の人」の切れ味鋭い社長としての顔が覗く。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Episodes -->
+                <div class="panel">
+                    <div class="panel-title">LEGENDARY_EPISODES <i class="fa-solid fa-book"></i></div>
+                    <div id="episode-content">
+                        <div class="episode-card">
+                            <span class="ep-tag">#UNICORN_PROF</span>
+                            <strong>ユニコーン大学教授</strong>
+                            <p>ガチ恋勢（ユニコーン）の生態を熟知し、彼らを解説・指導する独自の立ち位置を確立。</p>
+                        </div>
+                        <div class="episode-card">
+                            <span class="ep-tag">#OFFICIAL_CLIP</span>
+                            <strong>公認「見どころ！チャンネル」</strong>
+                            <p>愛と職人技を持つ伝説の切り抜き師を公認化。2025年だけで8913万再生を記録する最強の協力体制。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Programs -->
+                <div class="panel">
+                    <div class="panel-title">PROGRAM_DATA <i class="fa-solid fa-broadcast-tower"></i></div>
+                    <p>・<strong>対談バトル</strong>：ゲストを限界まで深掘りする看板企画。<br>
+                        ・<strong>魁！たまき塾</strong>：VTuber界の悩みにズバッと回答。<br>
+                        ・<strong>ANN Alternative</strong>：ニッポン放送でラジオ番組も担当。</p>
+                </div>
+            </div>
+
+            <div class="content-right">
+                <!-- Noripro Talent List -->
+                <div class="panel">
+                    <div class="panel-title">NORIPRO_ROSTER <i class="fa-solid fa-users-gear"></i></div>
+                    <ul style="list-style: none; font-size: 0.9rem; line-height: 2;">
+                        <li>・犬山たまき / 佃煮のりお</li>
+                        <li>・熊谷タクマ / 稲荷いろは</li>
+                        <li>・レグルシュ・ライオンハート</li>
+                        <li>・瀬兎一也 / 斎木こまり</li>
+                        <li>・雪ノ精くもち / 字ぴろぱる</li>
+                        <p style="color: #666;">...AND MORE</p>
+                    </ul>
+                </div>
+
+                <!-- Social/Global -->
+                <div class="panel">
+                    <div class="panel-title">GLOBAL_IMPACT <i class="fa-solid fa-earth-asia"></i></div>
+                    <p><strong>bilibili:</strong> 410,000+ Subs<br>
+                        <strong>Special:</strong> 滋慶学園COMグループ特別講師（VTuber基礎講座）
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 50px; text-align: center;">
+            <a href="../noripro_index.html"
+                style="color: var(--color-tamaki); text-decoration: none; font-family: 'Bebas Neue'; letter-spacing: 3px;"
+                id="back-link">
+                <i class="fa-solid fa-chevron-left"></i> BACK_TO_NORIPRO
+            </a>
+        </div>
+
+        <footer class="footer">
+            <p>© 2026 TAMAKI & NORIO DUAL ARCHIVE // 100M SUBS & COUNTING</p>
+        </footer>
+    </div>
+
+    <script src="norio_script.js"></script>
 </body>
 
 </html>

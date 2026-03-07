@@ -1,0 +1,336 @@
+/* ============================================================
+   Kumagai Takuma Premium Console UI v3.0
+   Theme: Immersive Gamer / Mud-Ship Console
+   Colors: NoriPro Orange, Deep Graphite, Neon Leak Cyan
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Kiwi+Maru:wght@300;400;500&family=Bebas+Neue&family=Noto+Sans+JP:wght@400;700;900&display=swap');
+
+:root {
+    --color-orange: #e85d04;
+    --color-orange-rgb: 232, 93, 4;
+    --color-cyan: #00f3ff;
+    --color-cyan-rgb: 0, 243, 255;
+    --color-bg: #08080a;
+    --color-surface: #121216;
+    --color-border: rgba(232, 93, 4, 0.3);
+    --glow-orange: 0 0 20px rgba(232, 93, 4, 0.4);
+    --glow-cyan: 0 0 20px rgba(0, 243, 255, 0.4);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: crosshair;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: #e0e0e0;
+    font-family: 'Noto Sans JP', sans-serif;
+    overflow: hidden;
+    /* Control via scroll inside console */
+    height: 100vh;
+}
+
+/* --- BACKGROUND FX --- */
+.console-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background:
+        radial-gradient(circle at 50% -20%, rgba(var(--color-orange-rgb), 0.15), transparent 60%),
+        radial-gradient(circle at 100% 100%, rgba(var(--color-cyan-rgb), 0.05), transparent 40%);
+}
+
+.console-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(232, 93, 4, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(232, 93, 4, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: -1;
+}
+
+.scanlines {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%,
+            rgba(0, 0, 0, 0.1) 50%);
+    background-size: 100% 4px;
+    z-index: 100;
+    pointer-events: none;
+}
+
+/* --- MAIN LAYOUT --- */
+.console-wrapper {
+    display: flex;
+    height: 100vh;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Sidebar Nav */
+.console-nav {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 10;
+}
+
+.nav-btn {
+    width: 60px;
+    height: 60px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-orange);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    border-radius: 4px;
+}
+
+.nav-btn.active,
+.nav-btn:hover {
+    background: var(--color-orange);
+    color: #fff;
+    box-shadow: var(--glow-orange);
+    transform: translateX(5px);
+}
+
+.nav-btn i {
+    font-size: 1.5rem;
+}
+
+.nav-btn span {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 1px;
+    margin-top: 4px;
+}
+
+/* Main Display */
+.console-display {
+    flex: 1;
+    background: rgba(18, 18, 22, 0.8);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    position: relative;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-orange) transparent;
+}
+
+/* --- CONTENT SECTIONS --- */
+.section-view {
+    padding: 60px;
+    display: none;
+    animation: slideIn 0.5s ease-out;
+}
+
+.section-view.active {
+    display: block;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hero Section */
+.hero-box {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 60px;
+    align-items: flex-end;
+    margin-bottom: 80px;
+}
+
+.hero-visual {
+    position: relative;
+}
+
+.hero-visual::before {
+    content: 'JACKPOT';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.8rem;
+    color: var(--color-orange);
+    letter-spacing: 5px;
+    animation: blink 1s infinite alternate;
+}
+
+@keyframes blink {
+    from {
+        opacity: 0.3;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.avatar-frame {
+    width: 100%;
+    aspect-ratio: 1;
+    background: radial-gradient(circle, rgba(var(--color-orange-rgb), 0.2) 0%, transparent 70%);
+    border: 2px solid var(--color-orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: var(--glow-orange), inset 0 0 30px rgba(var(--color-orange-rgb), 0.2);
+}
+
+.avatar-frame i {
+    font-size: 8rem;
+    color: var(--color-orange);
+    filter: drop-shadow(0 0 10px var(--color-orange));
+}
+
+.hero-text .title-ja {
+    font-family: 'Kiwi Maru', serif;
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    line-height: 1;
+    margin-bottom: 10px;
+    text-shadow: 4px 4px 0 #000;
+}
+
+.hero-text .title-en {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    color: var(--color-orange);
+    letter-spacing: 12px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* Information Panels */
+.data-deck {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.data-panel {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 3px solid var(--color-orange);
+    padding: 30px;
+    position: relative;
+}
+
+.data-panel h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem;
+    color: var(--color-orange);
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Slot Reel Effect */
+.slot-reel {
+    height: 1.6em;
+    overflow: hidden;
+    position: relative;
+    color: var(--color-cyan);
+    font-weight: 900;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.reel-item {
+    height: 1.6em;
+    display: flex;
+    align-items: center;
+}
+
+/* Episodes / Legends */
+.log-entry {
+    border-left: 2px solid var(--color-orange);
+    padding-left: 30px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.log-entry::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    background: var(--color-orange);
+    border-radius: 50%;
+    box-shadow: var(--glow-orange);
+}
+
+.log-title {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Tech / Game Tags */
+.tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.chip {
+    background: rgba(var(--color-cyan-rgb), 0.1);
+    color: var(--color-cyan);
+    border: 1px solid rgba(var(--color-cyan-rgb), 0.3);
+    padding: 4px 12px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* --- FOOTER UI --- */
+.console-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background: #000;
+    border-top: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.7rem;
+    color: var(--ms-muted);
+    justify-content: space-between;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+    .hero-box {
+        grid-template-columns: 1fr;
+    }
+
+    .console-nav {
+        width: 60px;
+    }
+}

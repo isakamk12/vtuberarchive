@@ -1,0 +1,226 @@
+/* ============================================================
+   Meikai Loveka Premium Merchant UI v1.0
+   Theme: Deep Sea Escape x Materials Merchant
+   Colors: Midnight Navy, Shark Silver, Cyan Blue, Neon Amber
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&family=Noto+Sans+JP:wght@400;700;900&family=Montserrat:wght@400;700;900&family=Bebas+Neue&display=swap');
+
+:root {
+    --color-deep: #0a192f;
+    --color-surface: #172a45;
+    --color-cyan: #64ffda;
+    --color-silver: #ccd6f6;
+    --color-amber: #ffb300;
+    --color-blood: #ff4d4d;
+    --font-main: 'Noto Sans JP', sans-serif;
+    --font-accent: 'Bebas Neue', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-deep);
+    background-image: linear-gradient(to bottom, var(--color-surface) 0%, var(--color-deep) 100%);
+    color: var(--color-silver);
+    font-family: var(--font-main);
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* --- AMBIENT ELEMENTS (RECYCLE CENTER) --- */
+.scrap-field {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.scrap {
+    position: absolute;
+    color: var(--color-cyan);
+    opacity: 0.2;
+    filter: blur(1px);
+}
+
+/* --- SHARK TOOTH PATTERN --- */
+.bg-pattern {
+    position: fixed;
+    inset: 0;
+    opacity: 0.05;
+    background-image: radial-gradient(var(--color-cyan) 0.5px, transparent 0.5px);
+    background-size: 20px 20px;
+    z-index: 0;
+}
+
+/* --- MAIN CONTAINER --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+    position: relative;
+    z-index: 10;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    text-align: center;
+    margin-bottom: 100px;
+    position: relative;
+}
+
+.shark-icon {
+    font-size: 10rem;
+    color: var(--color-cyan);
+    filter: drop-shadow(0 0 30px rgba(100, 255, 218, 0.4));
+    margin-bottom: 20px;
+}
+
+.name-block {
+    margin-bottom: 30px;
+}
+
+.name-ja {
+    font-family: 'Kiwi Maru', serif;
+    font-size: 4.5rem;
+    background: linear-gradient(to bottom, #fff, var(--color-cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.name-en {
+    font-family: var(--font-accent);
+    font-size: 1.2rem;
+    letter-spacing: 8px;
+    color: var(--color-cyan);
+}
+
+.status-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.status-tag {
+    border: 1px solid var(--color-cyan);
+    padding: 5px 15px;
+    color: var(--color-cyan);
+    border-radius: 4px;
+    font-family: var(--font-accent);
+}
+
+/* --- BENTO DASHBOARD --- */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    gap: 20px;
+}
+
+.panel {
+    background: rgba(23, 42, 69, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    border-radius: 8px;
+    padding: 30px;
+    position: relative;
+    transition: 0.3s;
+}
+
+.panel:hover {
+    border-color: var(--color-cyan);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.panel-title {
+    font-family: var(--font-accent);
+    color: var(--color-cyan);
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Column Spans */
+.col-4 {
+    grid-column: span 4;
+}
+
+.col-6 {
+    grid-column: span 6;
+}
+
+.col-8 {
+    grid-column: span 8;
+}
+
+.row-2 {
+    grid-row: span 2;
+}
+
+/* Growth Chart */
+.growth-display {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.height-bar {
+    width: 60px;
+    background: var(--color-cyan);
+    position: relative;
+    transition: 1s ease-out;
+}
+
+.label-val {
+    font-family: var(--font-accent);
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Material Inventory (Merchant Style) */
+.inventory-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.85rem;
+}
+
+.inventory-val {
+    color: var(--color-amber);
+    font-family: var(--font-accent);
+}
+
+/* --- FOOTER --- */
+.footer {
+    text-align: center;
+    padding: 100px 0;
+    color: rgba(100, 255, 218, 0.3);
+    font-family: var(--font-accent);
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+}
+
+@media (max-width: 900px) {
+
+    .col-4,
+    .col-6,
+    .col-8 {
+        grid-column: span 12;
+    }
+
+    .name-ja {
+        font-size: 3rem;
+    }
+}

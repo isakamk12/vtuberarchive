@@ -4,65 +4,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>冥海らぶか — のりプロ</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&family=Bebas+Neue&family=Noto+Sans+JP:wght@400;700;900&display=swap"
-        rel="stylesheet">
+    <title>冥海らぶか - DEEP SEA MERCHANT ARCHIVE</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="char-base.css">
-    <style>
-        :root {
-            --char-color: #1abc9c;
-            --char-glow: rgba(26, 188, 156, 0.5);
-            --char-color-soft: rgba(26, 188, 156, 0.07);
-            --char-border: rgba(26, 188, 156, 0.22);
-        }
-    </style>
+    <link rel="stylesheet" href="rabuka.css">
 </head>
 
 <body>
-    <div class="cp-bg"></div>
-    <nav class="cp-nav">
-        <a href="../noripro_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO のりプロ</a>
-        <span class="cp-nav-gen">🌺 3月組 パラレア · 深海の男の娘</span>
-    </nav>
-    <section class="cp-hero">
-        <div class="cp-bg-letter">深</div>
-        <div class="cp-hero-content">
-            <div class="cp-gen-label">のりプロ // 3月組 · パラレア</div>
-            <h1 class="cp-hero-name">冥海らぶか</h1>
-            <span class="cp-hero-en">めいかいらぶか — Meikai Rabuka</span>
-            <p class="cp-chara-desc">
-                深海から逃げてきた<strong>男の娘（オス）</strong>。致命的に漢字が読めず、「<strong>最寄り駅</strong>」を「<strong>さいきえき</strong>」と読んで駅員を困惑させた。
+    <div class="bg-pattern"></div>
+    <div class="scrap-field" id="scraps"></div>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <header class="hero">
+            <div class="shark-icon"><i class="fa-solid fa-shrimp"></i></div> <!-- Loveka shark surrogate -->
+            <div class="name-block">
+                <h1 class="name-ja">冥海らぶか</h1>
+                <p class="name-en">MEIKAI LOVEKA // THE MATERIAL FAIRY</p>
+                <div class="status-row">
+                    <span class="status-tag">CROSS-DRESSER</span>
+                    <span class="status-tag">SHARK_GIRL? (BOY)</span>
+                    <span class="status-tag">PHOBIA: DARK_SEA</span>
+                </div>
+            </div>
+            <p style="color: var(--color-silver); max-width: 600px; margin: 0 auto; line-height: 1.8; opacity: 0.8;">
+                「冥海、蒼海、奇々怪々！」<br>
+                深海に住みながら深海恐怖症。逃げ出した先はロスサントスのリサイクルセンターだった。
             </p>
-            <div class="cp-tags">
-                <span class="cp-tag cp-tag-primary">#男の娘（深海）</span>
-                <span class="cp-tag cp-tag-muted">#さいきえき</span>
-                <span class="cp-tag cp-tag-muted">#マイクラ大遅刻</span>
-                <span class="cp-tag cp-tag-muted">#土下座謝罪</span>
+        </header>
+
+        <div class="grid">
+            <!-- Merchant Stats -->
+            <div class="panel col-4 row-2">
+                <div class="panel-title">MERCHANT_INVENTORY <i class="fa-solid fa-boxes-packing"></i></div>
+                <div class="inventory-item"><span>IRON_REMAINSS</span> <span class="inventory-val">9999+</span></div>
+                <div class="inventory-item"><span>ELECTRONIC_CHIPS</span> <span class="inventory-val">4200</span></div>
+                <div class="inventory-item"><span>WEAPON_PARTS</span> <span class="inventory-val">750</span></div>
+                <div class="inventory-item"><span>KINKUMA_HAMSTER</span> <span class="inventory-val">HEALER</span></div>
+                <p style="margin-top: 20px; font-size: 0.8rem; color: #888;">
+                    ロスサントスでの通り名は「メイ・カイ」。<br>
+                    1日10時間を素材集めに費やす「リサ戦の妖精」。
+                </p>
+            </div>
+
+            <!-- Profile Info -->
+            <div class="panel col-8">
+                <div class="panel-title">CHARACTER_SPEC <i class="fa-solid fa-dna"></i></div>
+                <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 30px;">
+                    <div>
+                        <p><strong>BIRTH:</strong> 11.27 (いいツナ)</p>
+                        <p><strong>BLOOD:</strong> B / <strong>SEX:</strong> MALE</p>
+                        <p><strong>SKILL:</strong> レスバ (塾仕込み)</p>
+                    </div>
+                    <div>
+                        <p><strong>出身:</strong> 深海の田舎 (少し訛りアリ)</p>
+                        <p><strong>肩書き:</strong> 動画編集者 & 料理人</p>
+                        <p><strong>共食論:</strong> 「食物連鎖。魚は食べる。」</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Growth Logic -->
+            <div class="panel col-4">
+                <div class="panel-title">GROWTH_PHASE <i class="fa-solid fa-arrow-up-right-dots"></i></div>
+                <div class="growth-display">
+                    <div style="text-align: center;">
+                        <div class="height-bar" id="prev-h" style="height: 100px; opacity: 0.3;"></div>
+                        <div class="label-val">155</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div class="height-bar" id="curr-h" style="height: 140px; background: var(--color-amber);">
+                        </div>
+                        <div class="label-val">162</div>
+                    </div>
+                </div>
+                <p style="font-size: 0.75rem; margin-top: 15px;">第2フェーズ成長期により7cm増加。</p>
+            </div>
+
+            <!-- Interests -->
+            <div class="panel col-4">
+                <div class="panel-title">FAVORITE_ENT <i class="fa-solid fa-gamepad"></i></div>
+                <ul style="list-style: none; font-size: 0.85rem; line-height: 1.6;">
+                    <li>・<strong>OVERWATCH:</strong> 3度の飯より好き</li>
+                    <li>・<strong>FPS/格闘ゲーム:</strong> スト6本格参戦</li>
+                    <li>・<strong>パチンコ・スロット:</strong> 期待値の追求</li>
+                    <li>・<strong>インディカレー:</strong> 主食</li>
+                </ul>
+            </div>
+
+            <!-- Identity: Crossdresser -->
+            <div class="panel col-6">
+                <div class="panel-title">IDENTITY: CUTE <i class="fa-solid fa-person-dress"></i></div>
+                <h3 style="color: #fff; margin-bottom: 10px;">「可愛いものが好きだから」</h3>
+                <p style="font-size: 0.9rem;">
+                    女装男子。可愛い格好をするのが純粋に好きなサメの魚人。
+                    深海から拉致してきた謎の生物<strong>「ラブ丸」</strong>と共に、地上の都会で「友達」を探している。
+                </p>
+            </div>
+
+            <!-- Weaknesses -->
+            <div class="panel col-6">
+                <div class="panel-title">WARNING_REPORT <i class="fa-solid fa-triangle-exclamation"></i></div>
+                <p>・<strong>深海恐怖症:</strong> 本能に反する致命的弱点。</p>
+                <p>・<strong>ホラゲ耐性ゼロ:</strong> プレイするとガチで体調を崩す。</p>
+                <p>・<strong>学力テスト最下位:</strong> アスカに煽られる日々。</p>
             </div>
         </div>
-        <div class="cp-hero-orb">🦈</div>
-    </section>
-    <div class="cp-section cp-reveal">
-        <h2 class="cp-section-title">EPISODES</h2>
-        <div class="cp-grid">
-            <div class="cp-card">
-                <h3>「さいきえき」事件</h3>
-                <p>「<strong>最寄り駅（もよりえき）</strong>」を<strong>「さいきえき」</strong>と読んで駅員に困惑された。致命的な漢字読み能力の低さを全国に証明した。</p>
-            </div>
-            <div class="cp-card">
-                <h3>マイクラコラボ大遅刻・土下座</h3>
-                <p>同期とのマイクラコラボで<strong>大遅刻</strong>をかまし、<strong>土下座で謝罪</strong>した。</p>
-            </div>
+
+        <div style="margin-top: 60px; text-align: center;">
+            <a href="../noripro_index.html"
+                style="color: var(--color-cyan); text-decoration: none; font-family: var(--font-accent); letter-spacing: 3px; border: 1px solid var(--color-cyan); padding: 12px 35px; border-radius: 4px; transition: 0.3s;">
+                <i class="fa-solid fa-chevron-left"></i> RETURN_TO_BASE
+            </a>
         </div>
+
+        <footer class="footer">
+            <p>© 2026 MEIKAI LOVEKA // RECYCLE CENTER MASTER</p>
+        </footer>
     </div>
-    <footer class="cp-footer">
-        <p>© 2026 NoriPro Fan Archive — 非公式ファンサイト</p>
-    </footer>
-    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+
+    <script src="rabuka_script.js"></script>
 </body>
 
 </html>

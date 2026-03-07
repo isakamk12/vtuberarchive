@@ -4,63 +4,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>熊谷タクマ — のりプロ</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&family=Bebas+Neue&family=Noto+Sans+JP:wght@400;700;900&display=swap"
-        rel="stylesheet">
+    <title>熊谷タクマ - MUD-SHIP CONSOLE v3.0</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="char-base.css">
-    <style>
-        :root {
-            --char-color: #c0392b;
-            --char-glow: rgba(192, 57, 43, 0.55);
-            --char-color-soft: rgba(192, 57, 43, 0.08);
-            --char-border: rgba(192, 57, 43, 0.25);
-        }
-    </style>
+    <link rel="stylesheet" href="takuma.css">
 </head>
 
 <body>
-    <div class="cp-bg"></div>
-    <nav class="cp-nav">
-        <a href="../noripro_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO のりプロ</a>
-        <span class="cp-nav-gen">🎮 先輩組</span>
-    </nav>
-    <section class="cp-hero">
-        <div class="cp-bg-letter">7</div>
-        <div class="cp-hero-content">
-            <div class="cp-gen-label">のりプロ // 先輩組</div>
-            <h1 class="cp-hero-name">熊谷タクマ</h1>
-            <span class="cp-hero-en">Kumagai Takuma</span>
-            <p class="cp-chara-desc">
-                パチンコ・スロットを<strong>こよなく愛するガチ勢</strong>。VTuberでありながらパチンコ店での<strong>来店イベント</strong>まで開催してしまった前代未聞の男。</p>
-            <div class="cp-tags">
-                <span class="cp-tag cp-tag-primary">#パチンコ来店VTuber</span>
-                <span class="cp-tag cp-tag-muted">#スロット</span>
-                <span class="cp-tag cp-tag-muted">#ロリコン疑惑</span>
-            </div>
-        </div>
-        <div class="cp-hero-orb">7</div>
-    </section>
-    <div class="cp-section cp-reveal">
-        <h2 class="cp-section-title">EPISODES</h2>
-        <div class="cp-grid">
-            <div class="cp-card">
-                <h3>パチンコ来店イベント</h3>
-                <p>VTuberでありながらパチンコ店での<strong>リアル来店イベント</strong>を開催。VTuber界の常識を超えた行動として話題になった。</p>
-            </div>
-            <div class="cp-card">
-                <h3>ロリコン疑惑</h3>
-                <p>後輩のレグルシュに加え、新人の<strong>瀬兎一也・雪ノ精くもち</strong>をお持ち帰りしようとしている疑惑が浮上。ファンアートまで描かれている。</p>
-            </div>
-        </div>
+    <div class="console-bg">
+        <div class="console-grid"></div>
     </div>
-    <footer class="cp-footer">
-        <p>© 2026 NoriPro Fan Archive — 非公式ファンサイト</p>
+    <div class="scanlines"></div>
+
+    <div class="console-wrapper">
+        <!-- Vertical Side Navigation -->
+        <nav class="console-nav">
+            <button class="nav-btn active" data-target="status">
+                <i class="fa-solid fa-user"></i>
+                <span>STATUS</span>
+            </button>
+            <button class="nav-btn" data-target="archive">
+                <i class="fa-solid fa-folder-open"></i>
+                <span>ARCHIVE</span>
+            </button>
+            <button class="nav-btn" data-target="memory">
+                <i class="fa-solid fa-microchip"></i>
+                <span>MEMORY</span>
+            </button>
+            <button class="nav-btn" data-target="console">
+                <i class="fa-solid fa-terminal"></i>
+                <span>CONSOLE</span>
+            </button>
+            <div style="margin-top: auto; text-align: center;">
+                <a href="../noripro_index.html" class="nav-btn"
+                    style="text-decoration: none; width: 60px; height: 60px;">
+                    <i class="fa-solid fa-house"></i>
+                    <span>EXIT</span>
+                </a>
+            </div>
+        </nav>
+
+        <!-- Main Display Output -->
+        <main class="console-display">
+
+            <!-- SECTION: STATUS (Overview) -->
+            <section id="status" class="section-view active">
+                <div class="hero-box">
+                    <div class="hero-visual">
+                        <div class="avatar-frame">
+                            <i class="fa-solid fa-bear-pole"></i>
+                        </div>
+                    </div>
+                    <div class="hero-text">
+                        <span class="title-en">KUMAGAYA TAKUMA</span>
+                        <h1 class="title-ja">熊谷タクマ</h1>
+                        <p style="font-size: 1.1rem; line-height: 1.8; color: #ccc; max-width: 700px;">
+                            のりプロ所属の唯一無二の男性。佃煮のりお（犬山たまき）の「お兄ちゃん」であり、
+                            自由奔放な煽りと失言（自称）で泥船を操るエンジニア。
+                        </p>
+                        <div class="tag-cloud">
+                            <span class="chip">#のりプロ</span>
+                            <span class="chip">#唯一の男性</span>
+                            <span class="chip" style="border-color: var(--color-orange);">#泥船の乗組員</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="data-deck">
+                    <div class="data-panel">
+                        <h3>SPECIFICATIONS <span>01</span></h3>
+                        <ul style="list-style: none; line-height: 2.5;">
+                            <li><strong style="color: var(--color-orange);">BIRTHDAY:</strong> 04.01</li>
+                            <li><strong style="color: var(--color-orange);">CONCEPT:</strong> 佃煮のりお</li>
+                            <li><strong style="color: var(--color-orange);">MAMA:</strong> ニナハチ</li>
+                            <li><strong style="color: var(--color-orange);">DRIVE:</strong> Amazon Echo（愛用）</li>
+                        </ul>
+                    </div>
+                    <div class="data-panel">
+                        <h3>TASTE_PROFILE <span>02</span></h3>
+                        <p style="margin-bottom: 15px;">甘党の極北。アイス、パフェ、クレープを愛するスイーツ男子。31のアイスは「チョコチップ」を固定。</p>
+                        <p>一方、辛いものはトラウマレベルで苦手。お酒は梅酒派だが、二日酔いには勝てない。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION: ARCHIVE (Games) -->
+            <section id="archive" class="section-view">
+                <h2 style="font-family: 'Orbitron'; color: var(--color-orange); margin-bottom: 40px; font-size: 2rem;">>
+                    COMBAT_RECORDS</h2>
+
+                <div class="data-deck">
+                    <div class="data-panel">
+                        <h3>SMASH_BROS <span>RANK: VIP</span></h3>
+                        <p>「VIP」到達の実力者。ケン、テリー、リュウなどのコマンドキャラを主力としつつ、ガノンドロフからミェンミェンまで幅広く「介護」ならぬガチ対戦を繰り広げる。</p>
+                    </div>
+                    <div class="data-panel">
+                        <h3>UMA_MUSUME <span>TOTAL_GUESS: ???</span></h3>
+                        <p>サークル「クマクマ大学」学長。ヒシアマゾンやライスシャワーを完凸させるため、十数万円規模の「限界ガチャ」を回し、グロ画像（最低保証）を量産するのがお約束。</p>
+                    </div>
+                    <div class="data-panel">
+                        <h3>FF10 & MAHJONG <span>SUPPORT_MODE</span></h3>
+                        <p>FF10への愛は深く、初心者の犬山たまきを長時間見守る「介護実況」を完遂。麻雀でも同様の指導的ポジションを務める。</p>
+                    </div>
+                </div>
+
+                <div class="data-panel" style="margin-top: 30px;">
+                    <h3>FPS_LEGACY</h3>
+                    <p>元ガチ勢。『AVA』や『サドンアタック』でのクラン戦を日常としていた、叩き上げのゲーマー。</p>
+                </div>
+            </section>
+
+            <!-- SECTION: MEMORY (Log) -->
+            <section id="memory" class="section-view">
+                <h2 style="font-family: 'Orbitron'; color: var(--color-orange); margin-bottom: 40px; font-size: 2rem;">>
+                    INCIDENT_LOGS</h2>
+
+                <div class="log-entry">
+                    <div class="log-title">ヤクザのやり方で強制デビュー</div>
+                    <p>乗り気ではなかったが、犬山たまきに「外堀を完全に埋められ」、活動用の借金を背負わされてデビューが確定した「のりプロ伝説」の始まり。</p>
+                </div>
+                <div class="log-entry">
+                    <div class="log-title">不在の5万人突破</div>
+                    <p>トイレ（またはスマブラ）で離席中に登録者5万人を突破。主役がいないまま他の実況者がお祝いを行うシュールな結果に。</p>
+                </div>
+                <div class="log-entry">
+                    <div class="log-title">既読無視の鉄則</div>
+                    <p>犬山たまきからの雑談LINEは基本スルー、またはスタンプ1個。業務連絡以外の接触を極限までカットするスタイルを貫く。</p>
+                </div>
+                <div class="log-entry">
+                    <div class="log-title">机破壊と誕生日</div>
+                    <p>かつて犬山たまきに机を粉砕され、その弁償として新しい机を要求したリアルすぎるエピソード。</p>
+                </div>
+            </section>
+
+            <!-- SECTION: CONSOLE (Real Skills) -->
+            <section id="console" class="section-view">
+                <h2 style="font-family: 'Orbitron'; color: var(--color-orange); margin-bottom: 40px; font-size: 2rem;">>
+                    ANALYZE_REAL_SKILLS</h2>
+
+                <div
+                    style="background: rgba(0,0,0,0.5); padding: 40px; border-radius: 4px; border: 1px dashed var(--color-cyan); font-family: 'Orbitron', sans-serif; line-height: 2;">
+                    <p>> EDUCATION: バチバチの理系（数物得意 / 化学赤点）</p>
+                    <p>> LINGUISTICS: 日本語（漢字4級落ち） / 英語（苦手）</p>
+                    <p>> MUSICAL: ドラム演奏（実は可能）</p>
+                    <p>> SPORTS: バレーボール（アタッカー） / サッカー（FW/MF）</p>
+                    <p>> HOBBY: ROCK BAND (ONE OK ROCK / マキシマム ザ ホルモン)</p>
+                    <br>
+                    <p style="color: var(--color-cyan);">[INFO] ALEXA_INTEGRATION: ACTIVE</p>
+                    <p style="color: var(--color-orange);">[INFO] LOLI_STATUS: "ライスシャワーはロリだから選んだのではない、黒髪片目属性だ。" (強調)</p>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <footer class="console-footer">
+        <div>MUD-SHIP CONSOLE [STATUS: STABLE]</div>
+        <div>C:\USER\NORIPRO\TAKUMA.CMD</div>
     </footer>
-    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+
+    <script src="takuma_script.js"></script>
 </body>
 
 </html>

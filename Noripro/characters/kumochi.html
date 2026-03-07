@@ -4,68 +4,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>雪ノ精くもち — のりプロ</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&family=Bebas+Neue&family=Noto+Sans+JP:wght@400;700;900&display=swap"
-        rel="stylesheet">
+    <title>雪ノ精くもち - MOCHI-CAMP & EDIT ARCHIVE</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="char-base.css">
-    <style>
-        :root {
-            --char-color: #a8c8e8;
-            --char-glow: rgba(168, 200, 232, 0.5);
-            --char-color-soft: rgba(168, 200, 232, 0.07);
-            --char-border: rgba(168, 200, 232, 0.22);
-        }
-    </style>
+    <link rel="stylesheet" href="kumochi.css">
 </head>
 
 <body>
-    <div class="cp-bg"></div>
-    <nav class="cp-nav">
-        <a href="../noripro_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO のりプロ</a>
-        <span class="cp-nav-gen">🌸 1月組 ポニアリ</span>
-    </nav>
-    <section class="cp-hero">
-        <div class="cp-bg-letter">雪</div>
-        <div class="cp-hero-content">
-            <div class="cp-gen-label">のりプロ // 1月組 · ポニアリ</div>
-            <h1 class="cp-hero-name">雪ノ精くもち</h1>
-            <span class="cp-hero-en">ゆきのせくもち — Yukinose Kumochi</span>
-            <p class="cp-chara-desc">
-                <strong>魔法が使えない魔法少女</strong>。相棒の杖（鳥）の名前はリスナーとの相談で<strong>「ごまおにぎり」</strong>に決まった。配信中によくお腹の音が鳴る。</p>
-            <div class="cp-tags">
-                <span class="cp-tag cp-tag-primary">#魔法が使えない魔法少女</span>
-                <span class="cp-tag cp-tag-muted">#ごまおにぎり</span>
-                <span class="cp-tag cp-tag-muted">#靴が雑巾</span>
-                <span class="cp-tag cp-tag-muted">#お腹の音が出がち</span>
+    <div class="snow-container" id="snow"></div>
+    <div class="campfire-aura"></div>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <header class="hero">
+            <div class="snow-globe">
+                <i class="fa-solid fa-snowflake"></i>
             </div>
+            <div class="hero-text">
+                <h1 class="name-ja">雪ノ精くもち</h1>
+                <span class="name-en">YUKINOSE KUMOCHI // MOCHI-PROJECT</span>
+                <span class="mochi-tagline">人類もちもち化計画、進行中。</span>
+            </div>
+        </header>
+
+        <!-- Bento Grid Dashboard -->
+        <div class="grid">
+
+            <!-- Basic Data -->
+            <div class="card span-4">
+                <div class="card-title">BASIC_SPEC <i class="fa-solid fa-id-card"></i></div>
+                <p><strong>BIRTHDAY:</strong> 01.20 (シマエナガの日)</p>
+                <p><strong>HEIGHT:</strong> 153 cm / <strong>AGE:</strong> 20歳</p>
+                <p><strong>ORIGIN:</strong> 魔法界「エスプリーナ」</p>
+                <p style="margin-top: 10px; color: var(--color-mochi-dark);">魔法が使えない魔法少女。</p>
+            </div>
+
+            <!-- Career Timeline (Video Edit Style) -->
+            <div class="card span-8 row-2">
+                <div class="card-title">CAREER_TIMELINE <i class="fa-solid fa-clapperboard"></i></div>
+                <div class="timeline">
+                    <div class="track">
+                        <span class="time-stamp">PAST</span>
+                        <div><strong>社畜(会社員) & 深夜のコンビニ夜勤</strong>
+                            <p style="font-size: 0.8rem; color: #777;">弟と同じ職場で夜を越えた、カサカサしたあの日々。</p>
+                        </div>
+                    </div>
+                    <div class="track">
+                        <span class="time-stamp">2024.01</span>
+                        <div><strong>DEBUT (PONuary)</strong>
+                            <p style="font-size: 0.8rem; color: #777;">のりプロ所属。「魔法使いになれない」まま、世界をもちもちにする旅へ。</p>
+                        </div>
+                    </div>
+                    <div class="track">
+                        <span class="time-stamp">CURRENT</span>
+                        <div><strong>FREELANCE CREATOR</strong>
+                            <p style="font-size: 0.8rem; color: #777;">動画編集・MV制作。技術で「もちもち」の輪を広げる。</p>
+                        </div>
+                    </div>
+                </div>
+                <p style="margin-top: 20px; font-size: 0.85rem;">
+                    <strong>GOAL:</strong> 会社員時代に感じた「トゲトゲ」を、自身の活動で「もちもち」に上書きすること。
+                </p>
+            </div>
+
+            <!-- Winter Camp Kit -->
+            <div class="card span-4">
+                <div class="card-title">WINTER_CAMP_KIT <i class="fa-solid fa-tent"></i></div>
+                <div class="kit-item">
+                    <div class="kit-dot"></div> 冬キャン(虫がいない)
+                </div>
+                <div class="kit-item">
+                    <div class="kit-dot"></div> ソロキャンプ動画撮影
+                </div>
+                <div class="kit-item">
+                    <div class="kit-dot"></div> 今川焼き・和菓子
+                </div>
+                <div class="kit-item">
+                    <div class="kit-dot"></div> 激辛フード
+                </div>
+            </div>
+
+            <!-- Private Intelligence -->
+            <div class="card span-6">
+                <div class="card-title">PRIVATE_INTEL <i class="fa-solid fa-user-shield"></i></div>
+                <p>・<strong>ママち:</strong> プロデューサー気質の母親。配信に助言アリ。</p>
+                <p>・<strong>おち:</strong> 1歳半下の実弟。コンビニ夜勤時代の戦友。</p>
+                <p>・<strong>BODY_DATA:</strong> 視力弱（ブルーライトカット眼鏡）。歯列矯正中。</p>
+                <p>・<strong>FAVORITE:</strong> 相澤消太（ヒロアカ）、イケオジ、筋肉ドラゴン。</p>
+            </div>
+
+            <!-- Units & Friends -->
+            <div class="card span-6">
+                <div class="card-title">UNIT_CONNECTIONS <i class="fa-solid fa-link"></i></div>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                    <span
+                        style="background: var(--color-mochi-soft); padding: 5px 15px; border-radius: 20px; font-weight: 700; color: var(--color-mochi-dark); border: 1px solid var(--color-mochi);">#PONuary</span>
+                    <span
+                        style="background: var(--color-mochi-soft); padding: 5px 15px; border-radius: 20px; font-weight: 700; color: var(--color-mochi-dark); border: 1px solid var(--color-mochi);">#しもやけ(Fans)</span>
+                    <span
+                        style="background: var(--color-mochi-soft); padding: 5px 15px; border-radius: 20px; font-weight: 700; color: var(--color-mochi-dark); border: 1px solid var(--color-mochi);">#くもえな(FA)</span>
+                </div>
+                <p style="margin-top: 15px; font-size: 0.85rem;">
+                    相棒のシマエナガの杖は<strong>「ごまおにぎり」</strong>。リスナー命名。
+                </p>
+            </div>
+
         </div>
-        <div class="cp-hero-orb">❄️</div>
-    </section>
-    <div class="cp-section cp-reveal">
-        <h2 class="cp-section-title">PROFILE & EPISODES</h2>
-        <div class="cp-grid">
-            <div class="cp-card">
-                <h3>キャラクター</h3>
-                <ul>
-                    <li>魔法が使えない魔法少女</li>
-                    <li>相棒の杖（鳥）の名は<strong>「ごまおにぎり」</strong>（リスナー命名）</li>
-                    <li>配信中に<strong>お腹の音</strong>がよく鳴ってしまう</li>
-                </ul>
-            </div>
-            <div class="cp-card">
-                <h3>靴が雑巾になるまで事件</h3>
-                <p>靴をボロボロ（<strong>雑巾のよう</strong>）になるまで履き続け、見かねた<strong>犬山たまきに新しい靴を買ってもらった</strong>というエピソードが語られている。</p>
-            </div>
+
+        <div style="margin-top: 50px; text-align: center;">
+            <a href="../noripro_index.html"
+                style="color: #fff; text-decoration: none; font-weight: 700; background: var(--color-mochi-dark); padding: 10px 30px; border-radius: 30px; box-shadow: 0 5px 15px rgba(240, 98, 146, 0.3);">
+                <i class="fa-solid fa-chevron-left"></i> BACK_TO_NORIPRO
+            </a>
         </div>
+
+        <footer class="footer">
+            <p>© 2026 YUKINOSE KUMOCHI // HUMANKIND MOCHIFICATION ARCHIVE</p>
+        </footer>
     </div>
-    <footer class="cp-footer">
-        <p>© 2026 NoriPro Fan Archive — 非公式ファンサイト</p>
-    </footer>
-    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+
+    <script src="kumochi_script.js"></script>
 </body>
 
 </html>

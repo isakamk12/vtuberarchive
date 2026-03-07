@@ -1,0 +1,250 @@
+/* ============================================================
+   Yukinose Kumochi Premium Mochi-Camp UI v2.0
+   Theme: Winter Camping x Creative Video Studio
+   Colors: Mochi Pink, Snow White, Frost Blue, Campfire Amber
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&family=Noto+Sans+JP:wght@400;700;900&family=M+PLUS+Rounded+1c:wght@400;700;900&family=Outfit:wght@400;700&display=swap');
+
+:root {
+    --color-snow: #f8f9fa;
+    --color-frost: #e0f2f1;
+    --color-mochi: #fce4ec;
+    --color-mochi-dark: #f06292;
+    --color-amber: #ff8f00;
+    --color-night: #1a1a2e;
+    --glass: rgba(255, 255, 255, 0.7);
+    --border-radius-mochi: 40px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-night);
+    color: #444;
+    font-family: 'M PLUS Rounded 1c', 'Noto Sans JP', sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* --- AMBIENT ELEMENTS --- */
+.snow-container {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.campfire-aura {
+    position: fixed;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255, 143, 0, 0.2) 0%, transparent 70%);
+    filter: blur(50px);
+    z-index: 0;
+    animation: flicker 4s ease-in-out infinite;
+}
+
+@keyframes flicker {
+
+    0%,
+    100% {
+        opacity: 0.5;
+        transform: translateX(-50%) scale(1);
+    }
+
+    50% {
+        opacity: 0.8;
+        transform: translateX(-50%) scale(1.1);
+    }
+}
+
+/* --- MAIN LAYOUT --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+    position: relative;
+    z-index: 10;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.snow-globe {
+    width: 350px;
+    height: 350px;
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.snow-globe i {
+    font-size: 12rem;
+    color: var(--color-mochi-dark);
+    filter: drop-shadow(0 0 10px var(--color-mochi));
+}
+
+.name-ja {
+    font-family: 'Kiwi Maru', serif;
+    font-size: 4.5rem;
+    color: #fff;
+    margin-bottom: 10px;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.name-en {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 6px;
+    color: var(--color-mochi);
+    margin-bottom: 20px;
+}
+
+.mochi-tagline {
+    font-size: 1.2rem;
+    color: #fff;
+    background: var(--color-mochi-dark);
+    padding: 10px 30px;
+    border-radius: var(--border-radius-mochi);
+    box-shadow: 0 5px 15px rgba(240, 98, 146, 0.3);
+}
+
+/* --- BENTO DASHBOARD --- */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(150px, auto);
+    gap: 20px;
+}
+
+.card {
+    background: var(--glass);
+    backdrop-filter: blur(15px);
+    border-radius: 30px;
+    padding: 30px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.card:hover {
+    transform: scale(0.98);
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.card-title {
+    font-size: 0.8rem;
+    font-family: 'Outfit';
+    color: var(--color-mochi-dark);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+/* Character Specific Spans */
+.span-6 {
+    grid-column: span 6;
+}
+
+.span-4 {
+    grid-column: span 4;
+}
+
+.span-8 {
+    grid-column: span 8;
+}
+
+.row-2 {
+    grid-row: span 2;
+}
+
+/* Timeline UI (Video Editor Style) */
+.timeline {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.track {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.time-stamp {
+    font-family: 'Outfit';
+    font-size: 0.7rem;
+    background: var(--color-mochi-dark);
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 5px;
+}
+
+/* Gears (Camp Kit) */
+.kit-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.kit-dot {
+    width: 10px;
+    height: 10px;
+    background: var(--color-amber);
+    border-radius: 50%;
+}
+
+/* --- FOOTER --- */
+.footer {
+    text-align: center;
+    padding: 100px 0;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    font-family: 'Outfit';
+}
+
+@media (max-width: 900px) {
+
+    .span-6,
+    .span-4,
+    .span-8 {
+        grid-column: span 12;
+    }
+
+    .name-ja {
+        font-size: 3rem;
+    }
+
+    .snow-globe {
+        width: 250px;
+        height: 250px;
+    }
+}

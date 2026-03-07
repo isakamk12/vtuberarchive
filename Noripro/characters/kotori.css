@@ -1,0 +1,264 @@
+/* ============================================================
+   Fuejima Kotori Premium Artist UI v1.0
+   Theme: Analog Canvas x Digital Studio
+   Colors: Canvas Beige, Egg Yellow, Forest Green, Bird Blue
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&family=Noto+Sans+JP:wght@400;700;900&family=Montserrat:wght@400;700&family=Gaegu&display=swap');
+
+:root {
+    --color-canvas: #fdfaf1;
+    --color-egg: #ffeb3b;
+    --color-egg-soft: #fff9c4;
+    --color-forest: #2d5a27;
+    --color-bird: #81d4fa;
+    --color-ink: #333;
+    --font-hand: 'Kiwi Maru', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-canvas);
+    background-image:
+        url("https://www.transparenttextures.com/patterns/paper.png"),
+        radial-gradient(circle at 10% 20%, rgba(255, 235, 59, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(129, 212, 250, 0.05) 0%, transparent 40%);
+    color: var(--color-ink);
+    font-family: 'Noto Sans JP', sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* --- DECORATIVE ELEMENTS --- */
+.brush-stroke {
+    position: fixed;
+    height: 100px;
+    width: 300px;
+    background: var(--color-egg-soft);
+    filter: blur(40px);
+    z-index: -1;
+    opacity: 0.5;
+}
+
+/* Walking Bird (Kotori) Animation */
+.walking-kotori {
+    position: fixed;
+    bottom: 20px;
+    right: -100px;
+    font-size: 2rem;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    pointer-events: none;
+}
+
+.walking-kotori .bird {
+    animation: walk-wiggle 0.5s infinite;
+}
+
+.step-count {
+    font-family: 'Gaegu', cursive;
+    font-size: 0.8rem;
+    color: var(--color-ink);
+}
+
+@keyframes walk-wiggle {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(5deg);
+    }
+
+    50% {
+        transform: translateY(-5px) rotate(-5deg);
+    }
+}
+
+/* --- MAIN CONTAINER --- */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* --- HERO SECTION (EASEL STYLE) --- */
+.hero {
+    text-align: center;
+    margin-bottom: 80px;
+    position: relative;
+}
+
+.easel-frame {
+    width: 320px;
+    height: 320px;
+    margin: 0 auto 30px;
+    background: #fff;
+    padding: 15px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid #ddd;
+    position: relative;
+    transform: rotate(-2deg);
+}
+
+.easel-frame::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 140%;
+    height: 10px;
+    background: #8d6e63;
+    /* Wooden easel shelf */
+    border-radius: 5px;
+}
+
+.easel-frame i {
+    font-size: 10rem;
+    color: var(--color-bird);
+    line-height: 290px;
+}
+
+.name-ja {
+    font-family: var(--font-hand);
+    font-size: 4rem;
+    margin-bottom: 5px;
+}
+
+.name-en {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 5px;
+    color: #888;
+}
+
+.catch-phrase {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: var(--color-forest);
+    font-weight: 700;
+}
+
+/* --- GRID LAYOUT (PALETTE STYLE) --- */
+.palette {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.paint-patch {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 20px 60px 20px 60px;
+    padding: 30px;
+    border: 2px solid transparent;
+    transition: all 0.4s;
+    position: relative;
+    overflow: hidden;
+}
+
+.paint-patch:hover {
+    transform: translateY(-10px) rotate(1deg);
+    border-color: var(--color-egg);
+}
+
+.paint-patch::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: var(--color-egg);
+}
+
+.patch-title {
+    font-family: 'Montserrat';
+    font-size: 0.8rem;
+    color: #999;
+    margin-bottom: 20px;
+    display: block;
+    letter-spacing: 2px;
+}
+
+.paint-patch h3 {
+    font-family: var(--font-hand);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--color-egg-soft);
+    display: inline-block;
+}
+
+/* Specific Content Styles */
+.egg-list {
+    list-style: none;
+    font-size: 0.9rem;
+}
+
+.egg-list li {
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lang-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    background: #e1f5fe;
+    color: #0288d1;
+    border-radius: 10px;
+    font-size: 0.7rem;
+    margin-right: 5px;
+}
+
+/* Large Display Panel */
+.span-full {
+    grid-column: span 3;
+}
+
+.span-2 {
+    grid-column: span 2;
+}
+
+/* Status Bar */
+.status-bar {
+    margin-top: 40px;
+    padding: 20px;
+    background: #fff;
+    border: 1px dashed #ccc;
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* --- FOOTER --- */
+.footer {
+    text-align: center;
+    padding: 100px 0;
+    font-family: 'Montserrat';
+    font-size: 0.7rem;
+    color: #aaa;
+}
+
+@media (max-width: 900px) {
+    .palette {
+        grid-template-columns: 1fr;
+    }
+
+    .span-full,
+    .span-2 {
+        grid-column: span 1;
+    }
+
+    .name-ja {
+        font-size: 3rem;
+    }
+}

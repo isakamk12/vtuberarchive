@@ -4,69 +4,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>瀬兎一也 — のりプロ</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&family=Bebas+Neue&family=Noto+Sans+JP:wght@400;700;900&display=swap"
-        rel="stylesheet">
+    <title>瀬兎一也 - HAUNTED CREATIVE ARCHIVE</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="char-base.css">
-    <style>
-        :root {
-            --char-color: #2980b9;
-            --char-glow: rgba(41, 128, 185, 0.5);
-            --char-color-soft: rgba(41, 128, 185, 0.08);
-            --char-border: rgba(41, 128, 185, 0.25);
-        }
-    </style>
+    <link rel="stylesheet" href="kazuya.css">
 </head>
 
 <body>
-    <div class="cp-bg"></div>
-    <nav class="cp-nav">
-        <a href="../noripro_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO のりプロ</a>
-        <span class="cp-nav-gen">🌸 1月組 ポニアリ</span>
-    </nav>
-    <section class="cp-hero">
-        <div class="cp-bg-letter">怪</div>
-        <div class="cp-hero-content">
-            <div class="cp-gen-label">のりプロ // 1月組 · ポニアリ</div>
-            <h1 class="cp-hero-name">瀬兎一也</h1>
-            <span class="cp-hero-en">せとかずや — Seto Kazuya</span>
-            <p class="cp-chara-desc">
-                <strong>ブギーマン（恐怖が実体化したもの）</strong>から生まれた存在。見た目はショタだが実年齢は長生きの<strong>「ショタじじい」</strong>。</p>
-            <div class="cp-tags">
-                <span class="cp-tag cp-tag-primary">#ショタじじい</span>
-                <span class="cp-tag cp-tag-primary">#ブギーマン</span>
-                <span class="cp-tag cp-tag-muted">#ペーパードライバー</span>
-                <span class="cp-tag cp-tag-muted">#飲酒可</span>
+    <div class="ambient-bg"></div>
+    <div class="stitched-line"></div>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-visual">
+                <div class="avatar-lab">
+                    <i class="fa-solid fa-ghost"></i>
+                </div>
             </div>
-        </div>
-        <div class="cp-hero-orb">👻</div>
-    </section>
-    <div class="cp-section cp-reveal">
-        <h2 class="cp-section-title">PROFILE</h2>
-        <div class="cp-grid">
-            <div class="cp-card">
-                <h3>キャラクター</h3>
-                <ul>
-                    <li>ブギーマン（恐怖の実体化）から生まれた</li>
-                    <li>見た目ショタ・実年齢長生きの<strong>「ショタじじい」</strong></li>
-                    <li>車の免許あり、一度も運転したことがない<strong>ペーパードライバー</strong></li>
-                    <li>見た目によらず<strong>お酒も飲める</strong></li>
+            <div class="hero-text">
+                <span class="title-en">BOOGEYMAN ARCHIVE</span>
+                <h1 class="name-ja">瀬兎一也</h1>
+                <div class="desc-block">
+                    恐怖の象徴「ブギーマン」の概念から生まれた存在。<br>
+                    プロのLive2Dモデラー・イラストレーターとして業界を席巻しつつ、<br>
+                    自ら望んだ「ショタじじい」の姿でのんびりと合法に生きている。
+                </div>
+                <div style="margin-top: 20px;">
+                    <span
+                        style="color: var(--color-blood); border: 1px solid var(--color-blood); padding: 5px 15px; font-family: 'Montserrat';">#BLUE_BLOOD_ENTITY</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <div class="section-title">CREATIVE_LAB_SPEC</div>
+        <div class="grid">
+            <!-- Professional Career -->
+            <div class="panel">
+                <div class="panel-icon"><i class="fa-solid fa-pen-nib"></i></div>
+                <div class="award-badge">GRAND PRIX 2021</div>
+                <h3>CREATIVE MASTER</h3>
+                <p>自らのモデル、ロゴ、配信画面をすべて自作。元ゲーム会社勤務の経験を活かし、Live2D Creative Awardsにて最高賞を受賞したプロフェッショナル。</p>
+                <p style="margin-top: 15px; font-size: 0.9rem; color: #888;">
+                    ROF-MAO（にじさんじ）動画パーツ制作、京都芸術大学非常勤講師（コンテンツプロデュース担当）。
+                </p>
+            </div>
+
+            <!-- Biology -->
+            <div class="panel">
+                <div class="panel-icon"><i class="fa-solid fa-dna"></i></div>
+                <h3>BOOGEYMAN BIOLOGY</h3>
+                <ul style="list-style: none; line-height: 2;">
+                    <li><strong>BLOOD:</strong> <span style="color: var(--color-blood);">PURE BLUE</span> (興奮すると青ざめる)
+                    </li>
+                    <li><strong>HEIGHT:</strong> 155 cm</li>
+                    <li><strong>TRAIT:</strong> ショタじじい (中身は超多忙な専門家)</li>
+                    <li><strong>HATE:</strong> 虫 (中身には一匹も入っていない)</li>
                 </ul>
             </div>
-            <div class="cp-card">
-                <h3>連座エピソード</h3>
-                <p>先輩の熊谷タクマによる「お持ち帰り疑惑」の対象の一人。同期の雪ノ精くもちともども標的にされており、ファンアートまで描かれている。</p>
+
+            <!-- Culinary Disaster -->
+            <div class="panel warning-panel">
+                <div class="panel-icon"><i class="fa-solid fa-radiation"></i></div>
+                <h3>HAZARDOUS CULINARY</h3>
+                <p>「火」が怖すぎて、3年間コンロを一度も使わず電子レンジのみで生活した伝説の料理スキル。現代の魔法（マイクロウェーヴ）のみで生存中。</p>
             </div>
         </div>
+
+        <div class="section-title" style="margin-top: 80px;">HAUNTED_INTERESTS</div>
+        <div class="grid">
+            <!-- Disney / Horror -->
+            <div class="panel">
+                <div class="panel-icon"><i class="fa-solid fa-castle"></i></div>
+                <h3>DISNEY ADDICT</h3>
+                <p>月1〜2回は通う重度のディズニーオタク。一番の居場所は「ホーンテッドマンション」。ショーや食事のためだけに入園する情熱の持ち主。</p>
+            </div>
+
+            <!-- AI Singer -->
+            <div class="panel">
+                <div class="panel-icon"><i class="fa-solid fa-compact-disc"></i></div>
+                <h3>AI SINGING: SE TO HAJIME</h3>
+                <p>2024年、AIシンガー「瀬兎創」をリリース。双子の弟という設定で、自身の声を元にしたパワー系少年の声を世に送り出す。</p>
+            </div>
+
+            <!-- Archive Timeline -->
+            <div class="panel">
+                <div class="panel-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                <h3>INCIDENT_LOGS</h3>
+                <div class="timeline">
+                    <div class="event">
+                        <span class="event-tag">@2018</span>
+                        <strong>個人勢からの出発</strong>
+                        <p>名義そのままで企業勢へ。ファンレターの住所ができたことを何より喜んだ。</p>
+                    </div>
+                    <div class="event">
+                        <span class="event-tag">@2024</span>
+                        <strong>CF大成功 & C106参戦</strong>
+                        <p>最強のハロウィン楽曲制作CFを成功。コミケでものりプロ全員描き下ろし集を頒布。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 50px; text-align: center;">
+            <a href="../noripro_index.html"
+                style="color: var(--color-pumpkin); text-decoration: none; font-family: 'Creepster'; letter-spacing: 5px;">
+                <i class="fa-solid fa-door-open"></i> RETURN_TO_GRAVEYARD
+            </a>
+        </div>
+
+        <footer class="footer">
+            <p>© 2026 SETO KAZUYA // THE BOOGEYMAN COLLECTIVE</p>
+        </footer>
     </div>
-    <footer class="cp-footer">
-        <p>© 2026 NoriPro Fan Archive — 非公式ファンサイト</p>
-    </footer>
-    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+
+    <script src="kazuya_script.js"></script>
 </body>
 
 </html>
