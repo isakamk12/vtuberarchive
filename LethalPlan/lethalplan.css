@@ -1,0 +1,740 @@
+/* =====================================================
+   Lethal Plan — Agency Archive CSS
+   Theme: Fighting Game, Arcade, FGC, E-sports
+   Colors: Neon Red/Magenta, Cyan, Console Black, Warning Yellow
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;600;700&family=Noto+Sans+JP:wght@400;700;900&display=swap');
+
+:root {
+    --lp-bg: #050505;
+    /* Deep Arcade Black */
+    --lp-surface: #111111;
+    --lp-red: #FF1A55;
+    /* Arcade Red/Magenta */
+    --lp-cyan: #00F0FF;
+    /* Neon Cyan */
+    --lp-yellow: #FFEE00;
+    /* Warning Yellow */
+    --lp-text: #F3F4F6;
+    --lp-text-dim: #9CA3AF;
+
+    --lp-glow-red: 0 0 15px rgba(255, 26, 85, 0.6);
+    --lp-glow-cyan: 0 0 15px rgba(0, 240, 255, 0.6);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--lp-bg);
+    color: var(--lp-text);
+    font-family: 'Noto Sans JP', sans-serif;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+body::selection {
+    background: var(--lp-yellow);
+    color: #000;
+}
+
+/* CRT/Arcade Background Effects */
+.lp-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.lp-bg-grid {
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba(255, 26, 85, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 26, 85, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    transform: perspective(1000px) rotateX(60deg) translateY(-100px);
+    transform-origin: top center;
+    opacity: 0.3;
+}
+
+.lp-bg-scanlines {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    background-size: 100% 4px, 6px 100%;
+    opacity: 0.8;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.lp-bg-vignette {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, transparent 30%, #000 100%);
+    z-index: 5;
+}
+
+/* NAV */
+.lp-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2.5rem;
+    background: rgba(5, 5, 5, 0.9);
+    border-bottom: 2px solid var(--lp-red);
+    box-shadow: 0 4px 20px rgba(255, 26, 85, 0.2);
+}
+
+.lp-nav-back {
+    color: var(--lp-text);
+    text-decoration: none;
+    font-family: 'Teko', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s;
+    letter-spacing: 1px;
+}
+
+.lp-nav-back:hover {
+    color: var(--lp-yellow);
+    text-shadow: 0 0 10px rgba(255, 238, 0, 0.5);
+}
+
+.lp-nav-logo {
+    font-family: 'Teko', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.lp-text-red {
+    color: var(--lp-red);
+    text-shadow: var(--lp-glow-red);
+}
+
+.lp-nav-tag {
+    font-family: 'Teko', sans-serif;
+    font-size: 1rem;
+    color: #000;
+    background: var(--lp-yellow);
+    padding: 2px 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transform: skewX(-15deg);
+}
+
+/* Glitch Effect */
+.lp-glitch {
+    position: relative;
+    display: inline-block;
+    color: var(--lp-red);
+    text-shadow: var(--lp-glow-red);
+}
+
+.lp-glitch::before,
+.lp-glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+}
+
+.lp-glitch::before {
+    color: var(--lp-cyan);
+    z-index: -1;
+    left: 2px;
+    top: -1px;
+    animation: glitch-anim 2s infinite linear alternate-reverse;
+}
+
+.lp-glitch::after {
+    color: #0ff;
+    z-index: -2;
+    left: -2px;
+    top: 1px;
+    animation: glitch-anim 3s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+    0% {
+        clip-path: inset(20% 0 80% 0);
+    }
+
+    20% {
+        clip-path: inset(60% 0 10% 0);
+    }
+
+    40% {
+        clip-path: inset(40% 0 50% 0);
+    }
+
+    60% {
+        clip-path: inset(80% 0 5% 0);
+    }
+
+    80% {
+        clip-path: inset(10% 0 70% 0);
+    }
+
+    100% {
+        clip-path: inset(30% 0 20% 0);
+    }
+}
+
+/* HERO - Arcade Screen */
+.lp-hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 2rem 4rem;
+    position: relative;
+}
+
+.lp-hero-screen {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    width: 100%;
+    background: rgba(10, 10, 10, 0.8);
+    border: 2px solid var(--lp-cyan);
+    box-shadow: 0 0 30px rgba(0, 240, 255, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.8);
+    padding: 5rem 3rem;
+    overflow: hidden;
+}
+
+/* Diagonal hazard stripes in corners */
+.lp-hero-screen::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background: repeating-linear-gradient(45deg, var(--lp-yellow), var(--lp-yellow) 5px, rgba(10, 10, 10, 0.8) 5px, rgba(10, 10, 10, 0.8) 10px);
+    z-index: 1;
+}
+
+.lp-hero-screen::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background: repeating-linear-gradient(45deg, var(--lp-yellow), var(--lp-yellow) 5px, rgba(10, 10, 10, 0.8) 5px, rgba(10, 10, 10, 0.8) 10px);
+    z-index: 1;
+}
+
+.lp-hero-content {
+    position: relative;
+    z-index: 5;
+    text-align: center;
+}
+
+.lp-eyebrow {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--lp-cyan);
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+    text-shadow: var(--lp-glow-cyan);
+}
+
+.lp-hero-name {
+    font-family: 'Teko', sans-serif;
+    font-size: clamp(4rem, 12vw, 8rem);
+    font-weight: 700;
+    color: #fff;
+    line-height: 0.9;
+    margin-bottom: 0.5rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.lp-hero-subname {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--lp-text-dim);
+    margin-bottom: 3rem;
+    letter-spacing: 0.2em;
+}
+
+.lp-hero-concept {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-left: 4px solid var(--lp-red);
+    text-align: left;
+}
+
+.lp-concept-highlight {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.8rem;
+    color: var(--lp-yellow);
+    margin-bottom: 1rem !important;
+    letter-spacing: 2px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed rgba(255, 238, 0, 0.3);
+}
+
+.lp-hero-concept p {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ccc;
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+.lp-hero-concept p:last-child {
+    margin-bottom: 0;
+}
+
+/* Fake UI Elements */
+.lp-ui-top-left,
+.lp-ui-top-right,
+.lp-ui-bottom-center {
+    position: absolute;
+    font-family: 'Teko', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--lp-yellow);
+    z-index: 3;
+}
+
+.lp-ui-top-left {
+    top: 20px;
+    left: 20px;
+}
+
+.lp-ui-top-right {
+    top: 20px;
+    right: 20px;
+}
+
+.lp-ui-bottom-center {
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: blink 1s infinite alternate;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Health bars */
+.lp-health-bars {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    z-index: 3;
+}
+
+.lp-health-bar {
+    flex: 1;
+    height: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.lp-health-bar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: var(--lp-yellow);
+}
+
+.lp-hb-left::before {
+    right: 0;
+    width: 100%;
+}
+
+.lp-hb-right::before {
+    left: 0;
+    width: 100%;
+}
+
+.lp-vs-icon {
+    font-family: 'Teko', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--lp-red);
+    text-shadow: var(--lp-glow-red);
+    margin: 0 10px;
+    font-style: italic;
+}
+
+/* SECTIONS (Character Select Screen) */
+.lp-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 2rem 100px;
+    position: relative;
+    z-index: 2;
+}
+
+.lp-select-title {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.lp-select-title h2 {
+    font-family: 'Teko', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--lp-yellow);
+    letter-spacing: 5px;
+    text-shadow: 0 0 15px rgba(255, 238, 0, 0.4);
+    border-bottom: 2px solid var(--lp-yellow);
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.lp-section {
+    margin-bottom: 6rem;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: all 0.5s ease-out;
+}
+
+.lp-section.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.lp-section-header {
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.lp-section-title {
+    font-family: 'Teko', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.lp-gen-tag {
+    font-size: 1.2rem;
+    color: var(--lp-cyan);
+}
+
+.lp-divider {
+    height: 3px;
+    background: linear-gradient(90deg, var(--lp-cyan), transparent);
+    margin-top: 10px;
+}
+
+.lp-divider-alt {
+    background: linear-gradient(90deg, var(--lp-red), transparent);
+}
+
+/* GRID & CARDS (Fighter Slots) */
+.lp-member-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.lp-member-card {
+    background: var(--lp-surface);
+    position: relative;
+    transition: all 0.2s;
+    cursor: pointer;
+    border: 2px solid #333;
+    height: 160px;
+    display: block;
+    overflow: hidden;
+}
+
+/* Hover glowing border effect */
+.lp-card-border-effect {
+    position: absolute;
+    inset: 0;
+    border: 3px solid transparent;
+    z-index: 5;
+    transition: all 0.2s;
+    pointer-events: none;
+}
+
+.lp-card-inner {
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.lp-card-inner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 40%;
+    background: repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(255, 255, 255, 0.02) 5px, rgba(255, 255, 255, 0.02) 10px);
+    z-index: -1;
+}
+
+.lp-player-tag {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    font-family: 'Teko', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #555;
+    z-index: 3;
+}
+
+.lp-member-icon {
+    width: 80px;
+    height: 80px;
+    background: #222;
+    border: 2px solid #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: #888;
+    transition: all 0.3s;
+    flex-shrink: 0;
+    transform: skewX(-5deg);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.lp-member-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 3;
+}
+
+.lp-member-name {
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: #ccc;
+    text-decoration: none;
+    margin-bottom: 2px;
+    transition: color 0.3s;
+}
+
+.lp-member-read {
+    font-family: 'Teko', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #777;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.lp-fighter-type {
+    font-family: 'Teko', sans-serif;
+    font-size: 1rem;
+    color: #000;
+    background: #666;
+    padding: 0 10px;
+    display: inline-block;
+    align-self: flex-start;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Subtle graduation notice */
+.lp-card-graduating .lp-grad-notice {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    font-size: 0.7rem;
+    color: var(--lp-text-dim);
+}
+
+/* HOVER EFFECTS - Aggressive Selection */
+.lp-member-card:hover {
+    transform: scale(1.05);
+    background: #111;
+    z-index: 10;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+}
+
+.lp-member-card:hover .lp-card-border-effect {
+    border-color: var(--lp-cyan);
+    box-shadow: inset 0 0 20px rgba(0, 240, 255, 0.4), 0 0 20px rgba(0, 240, 255, 0.4);
+    animation: borderPulse 0.5s infinite alternate;
+}
+
+.lp-card-new:hover .lp-card-border-effect {
+    border-color: var(--lp-red);
+    box-shadow: inset 0 0 20px rgba(255, 26, 85, 0.4), 0 0 20px rgba(255, 26, 85, 0.4);
+}
+
+.lp-member-card:hover .lp-player-tag {
+    color: var(--lp-yellow);
+    text-shadow: 0 0 5px var(--lp-yellow);
+}
+
+.lp-member-card:hover .lp-member-icon {
+    background: rgba(0, 240, 255, 0.1);
+    border-color: var(--lp-cyan);
+    color: #fff;
+    text-shadow: var(--lp-glow-cyan);
+}
+
+.lp-card-new:hover .lp-member-icon {
+    background: rgba(255, 26, 85, 0.1);
+    border-color: var(--lp-red);
+    color: #fff;
+    text-shadow: var(--lp-glow-red);
+}
+
+.lp-member-card:hover .lp-member-name {
+    color: #fff;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.lp-member-card:hover .lp-member-read {
+    color: var(--lp-cyan);
+}
+
+.lp-card-new:hover .lp-member-read {
+    color: var(--lp-red);
+}
+
+.lp-member-card:hover .lp-fighter-type {
+    background: var(--lp-cyan);
+    color: #000;
+}
+
+.lp-card-new:hover .lp-fighter-type {
+    background: var(--lp-red);
+    color: #fff;
+}
+
+@keyframes borderPulse {
+    0% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* FOOTER */
+.lp-footer {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: #050505;
+    border-top: 2px solid #222;
+    position: relative;
+    z-index: 2;
+    margin-top: 50px;
+}
+
+.lp-footer::before {
+    content: 'GAME OVER';
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--lp-bg);
+    padding: 0 20px;
+    font-family: 'Teko', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #555;
+    letter-spacing: 5px;
+}
+
+.lp-footer-logo {
+    font-family: 'Teko', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+}
+
+.lp-footer-company {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #777;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.lp-footer p {
+    font-size: 0.8rem;
+    color: #444;
+}
+
+@media (max-width: 900px) {
+    .lp-hero-screen {
+        padding: 3rem 1.5rem;
+    }
+
+    .lp-health-bars {
+        width: 95%;
+        top: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .lp-hero-name {
+        font-size: 3rem;
+    }
+
+    .lp-nav-tag {
+        display: none;
+    }
+}

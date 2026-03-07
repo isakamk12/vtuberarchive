@@ -1,0 +1,541 @@
+/* =====================================================
+   VOne Production (ぶいわんプロダクション) — Agency Archive CSS
+   Theme: Corporate, Energetic, Professional
+   Colors: Corporate Blue, Energetic Orange, White
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
+
+:root {
+    --vo-blue: #1e90ff;
+    /* Dodger Blue */
+    --vo-blue-dark: #0f4c8a;
+    --vo-orange: #ff7f50;
+    /* Coral / Energetic Orange */
+    --vo-bg: #f8fbff;
+    --vo-text: #2c3e50;
+    --vo-white: #ffffff;
+    --vo-shadow: 0 12px 40px rgba(30, 144, 255, 0.1);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--vo-bg);
+    color: var(--vo-text);
+    font-family: 'Noto Sans JP', sans-serif;
+    overflow-x: hidden;
+    line-height: 1.7;
+}
+
+/* BG Elements */
+.vo-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.vo-bg-circles {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(30, 144, 255, 0.05) 2px, transparent 2px), radial-gradient(rgba(255, 127, 80, 0.05) 2px, transparent 2px);
+    background-size: 50px 50px;
+    background-position: 0 0, 25px 25px;
+}
+
+.vo-bg-fade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(248, 251, 255, 0.8) 0%, rgba(248, 251, 255, 0.2) 100%);
+}
+
+/* NAV */
+.vo-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2.5rem;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+}
+
+.vo-nav-back {
+    color: var(--vo-text);
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.2s;
+    padding: 8px 0;
+}
+
+.vo-nav-back:hover {
+    color: var(--vo-blue);
+}
+
+.vo-nav-logo {
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: var(--vo-text);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.vo-logo-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, var(--vo-blue), var(--vo-orange));
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(255, 127, 80, 0.3);
+}
+
+.vo-nav-logo span:not(.vo-logo-icon) {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    color: #888;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+}
+
+.vo-nav-tag {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    color: var(--vo-blue);
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    border: 1px solid var(--vo-blue);
+    padding: 4px 12px;
+    border-radius: 4px;
+}
+
+/* HERO */
+.vo-hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 2rem 4rem;
+    position: relative;
+    text-align: center;
+}
+
+.vo-hero-bg-text {
+    position: absolute;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(6rem, 20vw, 15rem);
+    font-weight: 900;
+    color: rgba(30, 144, 255, 0.03);
+    pointer-events: none;
+    user-select: none;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.vo-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vo-eyebrow {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: var(--vo-orange);
+    letter-spacing: 0.15em;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 127, 80, 0.1);
+    padding: 6px 16px;
+    border-radius: 20px;
+}
+
+.vo-hero-name {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 900;
+    color: var(--vo-text);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
+}
+
+.vo-hero-tagline {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--vo-blue);
+    margin-bottom: 2.5rem;
+    letter-spacing: 0.05em;
+}
+
+.vo-hero-concept {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #555;
+    max-width: 650px;
+    margin-bottom: 4rem;
+    text-align: justify;
+    text-align-last: center;
+    line-height: 2;
+}
+
+.vo-hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    padding-top: 3rem;
+}
+
+.vo-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vo-stat-value {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--vo-orange);
+    line-height: 1;
+}
+
+.vo-stat-icon {
+    font-size: 2.5rem;
+    color: var(--vo-blue);
+    line-height: 1;
+}
+
+.vo-stat-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: #888;
+    letter-spacing: 0.15em;
+    margin-top: 12px;
+}
+
+/* SECTIONS */
+.vo-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 2rem 100px;
+}
+
+.vo-section {
+    margin-bottom: 6rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.vo-section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.vo-section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.vo-section-title {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--vo-text);
+    margin-bottom: 5px;
+}
+
+.vo-section-title-sub {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: var(--vo-blue);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.vo-divider {
+    width: 50px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--vo-blue), var(--vo-orange));
+    border-radius: 2px;
+    margin-top: 1.5rem;
+}
+
+/* SPOTLIGHT (Since there's only 1 member) */
+.vo-member-spotlight {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
+    width: 100%;
+}
+
+.vo-member-card.spotlight {
+    background: var(--vo-white);
+    border-radius: 20px;
+    box-shadow: var(--vo-shadow);
+    position: relative;
+    overflow: hidden;
+    max-width: 700px;
+    width: 100%;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border: 1px solid rgba(30, 144, 255, 0.1);
+}
+
+.vo-member-card.spotlight:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(30, 144, 255, 0.15);
+    border-color: rgba(30, 144, 255, 0.3);
+}
+
+.vo-card-bg {
+    position: absolute;
+    right: -50px;
+    top: -50px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255, 127, 80, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.vo-card-inner {
+    position: relative;
+    z-index: 1;
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.vo-member-icon {
+    min-width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: var(--vo-blue);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    box-shadow: 0 10px 20px rgba(30, 144, 255, 0.3);
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.vo-member-card.spotlight:hover .vo-member-icon {
+    transform: rotate(20deg) scale(1.1);
+    background: var(--vo-orange);
+    box-shadow: 0 10px 20px rgba(255, 127, 80, 0.3);
+}
+
+.vo-member-info {
+    flex: 1;
+    text-align: left;
+}
+
+.vo-member-name {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--vo-text);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 4px;
+    transition: color 0.3s;
+}
+
+.vo-member-name:hover,
+.vo-member-card.spotlight:hover .vo-member-name {
+    color: var(--vo-blue);
+}
+
+.vo-member-read {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--vo-orange);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.vo-member-desc {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+.vo-member-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    color: var(--vo-blue);
+    padding: 12px 24px;
+    border: 2px solid var(--vo-blue);
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s;
+    white-space: nowrap;
+    margin-left: auto;
+}
+
+.vo-member-btn:hover {
+    background: var(--vo-blue);
+    color: #fff;
+}
+
+/* FUTURE MEMBERS */
+.vo-future {
+    text-align: center;
+    padding: 4rem;
+    background: rgba(30, 144, 255, 0.03);
+    border: 2px dashed rgba(30, 144, 255, 0.2);
+    border-radius: 20px;
+    transition: all 0.3s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.vo-future.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.vo-future-icon {
+    font-size: 2.5rem;
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+.vo-future-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #888;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+}
+
+.vo-future-desc {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #aaa;
+}
+
+/* FOOTER */
+.vo-footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 4rem 2rem;
+    text-align: center;
+    background: #fff;
+}
+
+.vo-footer-logo {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--vo-text);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.vo-logo-icon-small {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: var(--vo-blue);
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    border-radius: 6px;
+}
+
+.vo-footer-logo span:not(.vo-logo-icon-small) {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: #888;
+    font-weight: 600;
+}
+
+.vo-footer-company {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--vo-orange);
+    letter-spacing: 0.15em;
+    margin-bottom: 2rem;
+}
+
+.vo-footer p {
+    font-size: 0.8rem;
+    color: #999;
+}
+
+@media (max-width: 768px) {
+    .vo-hero-content {
+        padding: 2rem 1rem;
+    }
+
+    .vo-nav-tag {
+        display: none;
+    }
+
+    .vo-card-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .vo-member-info {
+        text-align: center;
+    }
+
+    .vo-member-btn {
+        margin: 1rem auto 0;
+    }
+}

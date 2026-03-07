@@ -1,0 +1,221 @@
+/* =====================================================
+   MEWLIVE — Character Page Base CSS
+   Brand color: Cyber Cyan, Neon Pink, Stage Dark
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Noto+Sans+JP:wght@300;400;700;900&display=swap');
+
+:root {
+    --c-main: #00F2FE;
+    /* Cyan */
+    --c-sub: #FF0055;
+    /* Pink */
+    --c-bg: #0D0E15;
+    --c-surface: #171823;
+    --c-text: #F8FAFC;
+    /* Override per character: */
+    --char-color: #00F2FE;
+    --char-rgb: 0, 242, 254;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--c-bg);
+    color: var(--c-text);
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.8;
+}
+
+.char-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 30px 30px;
+}
+
+.char-back {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--c-text);
+    text-decoration: none;
+    font-family: 'Syncopate', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 12px 24px;
+    background: rgba(23, 24, 35, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 3px solid var(--char-color);
+    border-radius: 4px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s;
+    z-index: 100;
+    letter-spacing: 1px;
+}
+
+.char-back:hover {
+    background: rgba(var(--char-rgb), 0.1);
+    border-color: var(--char-color);
+    color: var(--char-color);
+    box-shadow: inset 0 0 15px rgba(var(--char-rgb), 0.2);
+}
+
+.char-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    padding: 120px 2rem 4rem;
+    text-align: center;
+    position: relative;
+    background: radial-gradient(circle at 50% 100%, rgba(var(--char-rgb), 0.15) 0%, transparent 60%);
+    border-bottom: 2px solid rgba(var(--char-rgb), 0.3);
+}
+
+.char-hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--char-color);
+    box-shadow: 0 0 15px var(--char-color);
+}
+
+.char-name {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    letter-spacing: 2px;
+    text-shadow: 0 5px 20px rgba(0, 0, 0, 0.8), 0 0 10px rgba(var(--char-rgb), 0.5);
+}
+
+.char-read {
+    font-family: 'Syncopate', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--char-color);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 10px rgba(var(--char-rgb), 0.5);
+}
+
+.char-tag {
+    display: inline-block;
+    padding: 6px 20px;
+    background: transparent;
+    border: 1px solid var(--char-color);
+    color: #fff;
+    font-family: 'Syncopate', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 0;
+    letter-spacing: 1px;
+    margin: 4px;
+    box-shadow: 0 0 10px rgba(var(--char-rgb), 0.2), inset 0 0 10px rgba(var(--char-rgb), 0.2);
+}
+
+.char-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem 2rem 100px;
+}
+
+.char-section {
+    margin-bottom: 4rem;
+    background: var(--c-surface);
+    border-radius: 8px;
+    padding: 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.char-section::before {
+    content: '///';
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    font-family: 'Syncopate', sans-serif;
+    font-weight: 700;
+    color: var(--char-color);
+    font-size: 1rem;
+    opacity: 0.5;
+}
+
+.char-section h2 {
+    font-family: 'Syncopate', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1.8rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 15px;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.char-section h2::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(var(--char-rgb), 0.5), transparent);
+}
+
+.char-section p,
+.char-section li {
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: #94A3B8;
+    line-height: 2.2;
+    margin-bottom: 1.2rem;
+}
+
+.char-section ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.char-section ul li {
+    position: relative;
+    padding-left: 20px;
+}
+
+.char-section ul li::before {
+    content: '>';
+    position: absolute;
+    left: 0;
+    font-family: 'Syncopate', sans-serif;
+    color: var(--char-color);
+    font-weight: 700;
+}
+
+.char-footer {
+    padding: 4rem 2rem;
+    text-align: center;
+    font-family: 'Syncopate', sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: #444;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    letter-spacing: 2px;
+}

@@ -1,0 +1,678 @@
+/* =====================================================
+   Densetsu.EXE — Agency Archive CSS
+   Theme: Cyber Idol, .EXE, Terminal, Hacker
+   Colors: Terminal Black, Cyber Pink, Electric Cyan, Mint
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Noto+Sans+JP:wght@400;700;900&display=swap');
+
+:root {
+    --dx-bg: #050A0F;
+    /* Deep Terminal Black */
+    --dx-surface: #0B131D;
+    --dx-cyan: #00F0FF;
+    --dx-pink: #FF007F;
+    --dx-mint: #00FFAA;
+    --dx-text: #E0F2FE;
+    --dx-text-dim: #94A3B8;
+
+    --dx-glow-cyan: 0 0 15px rgba(0, 240, 255, 0.5);
+    --dx-glow-pink: 0 0 15px rgba(255, 0, 127, 0.5);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--dx-bg);
+    color: var(--dx-text);
+    font-family: 'Noto Sans JP', sans-serif;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+body::selection {
+    background: var(--dx-cyan);
+    color: #000;
+}
+
+/* Backgrounds - Cyber Grid */
+.dx-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.dx-bg-gradient {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 100% 100%, rgba(0, 240, 255, 0.05) 0%, transparent 60%), radial-gradient(circle at 0% 0%, rgba(255, 0, 127, 0.03) 0%, transparent 50%);
+}
+
+.dx-bg-grid {
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba(0, 240, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+    transform: perspective(500px) rotateX(45deg);
+    transform-origin: top;
+    opacity: 0.4;
+    animation: gridMove 20s linear infinite;
+}
+
+@keyframes gridMove {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 0 30px;
+    }
+}
+
+/* Digital Particles (JS generated) */
+.dx-particles {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    opacity: 0.5;
+}
+
+.dx-particle {
+    position: absolute;
+    width: 2px;
+    height: 15px;
+    background: var(--dx-cyan);
+    opacity: 0;
+    animation: dataFall linear infinite;
+}
+
+@keyframes dataFall {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.8;
+    }
+
+    80% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+/* NAV */
+.dx-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2.5rem;
+    background: rgba(5, 10, 15, 0.85);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(0, 240, 255, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 240, 255, 0.1);
+}
+
+.dx-nav-back {
+    color: var(--dx-cyan);
+    text-decoration: none;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s;
+}
+
+.dx-nav-back:hover {
+    color: #fff;
+    text-shadow: var(--dx-glow-cyan);
+    letter-spacing: 1px;
+}
+
+.dx-nav-logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.dx-ext {
+    color: var(--dx-pink);
+    font-family: 'Share Tech Mono', monospace;
+    font-weight: 400;
+}
+
+.dx-glow-text {
+    text-shadow: var(--dx-glow-cyan);
+}
+
+.dx-nav-tag {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--dx-mint);
+    background: rgba(0, 255, 170, 0.1);
+    padding: 4px 12px;
+    border: 1px solid var(--dx-mint);
+    box-shadow: 0 0 10px rgba(0, 255, 170, 0.2);
+}
+
+/* HERO - Terminal Style */
+.dx-hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 2rem 4rem;
+    position: relative;
+}
+
+.dx-hero-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 1000px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+/* Terminal Window */
+.dx-hero-content {
+    background: rgba(11, 19, 29, 0.8);
+    border: 1px solid #334155;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(0, 240, 255, 0.05);
+    backdrop-filter: blur(10px);
+}
+
+.dx-terminal-header {
+    background: #1E293B;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #334155;
+}
+
+.dx-term-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.dx-dot-r {
+    background: #FF5F56;
+}
+
+.dx-dot-y {
+    background: #FFBD2E;
+}
+
+.dx-dot-g {
+    background: #27C93F;
+}
+
+.dx-term-title {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.85rem;
+    color: #94A3B8;
+    margin-left: 10px;
+}
+
+.dx-terminal-body {
+    padding: 2rem;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.dx-cmd {
+    color: var(--dx-text);
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.dx-prompt {
+    color: var(--dx-pink);
+    margin-right: 10px;
+}
+
+.dx-sysout {
+    color: var(--dx-text-dim);
+    margin-bottom: 0.2rem;
+    font-size: 0.85rem;
+}
+
+.dx-success {
+    color: var(--dx-mint);
+    font-weight: bold;
+}
+
+.dx-hero-name {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 900;
+    color: #fff;
+    margin: 2rem 0 1.5rem;
+    letter-spacing: 2px;
+    text-shadow: var(--dx-glow-cyan);
+}
+
+.dx-hero-concept {
+    font-family: 'Noto Sans JP', sans-serif;
+    margin-bottom: 2rem;
+}
+
+.dx-highlight-text {
+    font-family: 'Share Tech Mono', monospace;
+    color: var(--dx-cyan);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.dx-hero-concept p {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: #CBD5E1;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.dx-history-note {
+    background: rgba(255, 0, 127, 0.05);
+    border-left: 3px solid var(--dx-pink);
+    padding: 15px;
+    font-size: 0.9rem !important;
+    color: #E2E8F0 !important;
+    margin-top: 1.5rem;
+}
+
+.dx-history-note i {
+    color: var(--dx-pink);
+    margin-right: 5px;
+}
+
+.dx-cursor {
+    display: inline-block;
+    width: 10px;
+    height: 18px;
+    background: var(--dx-cyan);
+    animation: blinkCursor 1s infinite;
+    vertical-align: middle;
+}
+
+@keyframes blinkCursor {
+
+    0%,
+    49% {
+        opacity: 1;
+    }
+
+    50%,
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Cyber Circle Visual */
+.dx-hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dx-cyber-circle {
+    width: 250px;
+    height: 250px;
+    border: 2px dashed rgba(0, 240, 255, 0.3);
+    border-radius: 50%;
+    position: relative;
+    animation: spin 20s linear infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--dx-glow-cyan);
+}
+
+.dx-circle-inner {
+    width: 220px;
+    height: 220px;
+    border: 1px solid rgba(255, 0, 127, 0.5);
+    border-radius: 50%;
+    position: absolute;
+    animation: spinReverse 15s linear infinite;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.dx-circle-core {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    color: var(--dx-cyan);
+    animation: spinReverse 20s linear infinite;
+    filter: drop-shadow(0 0 10px rgba(0, 240, 255, 0.8));
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spinReverse {
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+/* SECTIONS */
+.dx-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 2rem 100px;
+    position: relative;
+    z-index: 2;
+}
+
+.dx-section {
+    margin-bottom: 6rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.dx-section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dx-section-header {
+    margin-bottom: 3rem;
+}
+
+.dx-section-title {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.8rem;
+    color: var(--dx-cyan);
+    letter-spacing: 2px;
+    display: inline-block;
+    padding-right: 20px;
+    border-right: 15px solid var(--dx-cyan);
+}
+
+.dx-divider {
+    height: 1px;
+    background: linear-gradient(90deg, rgba(0, 240, 255, 0.5), transparent);
+    margin-top: 10px;
+    width: 100%;
+}
+
+/* GRID & CARDS */
+.dx-member-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2.5rem;
+    justify-content: center;
+}
+
+.dx-member-card {
+    background: rgba(11, 19, 29, 0.8);
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    border: 1px solid rgba(0, 240, 255, 0.2);
+    display: block;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+/* Diagonal cutoff shape */
+.dx-member-card::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    width: 30px;
+    height: 30px;
+    background: var(--dx-bg);
+    border-left: 1px solid rgba(0, 240, 255, 0.2);
+    border-bottom: 1px solid rgba(0, 240, 255, 0.2);
+    transform: rotate(45deg) translate(15px, -15px);
+    z-index: 3;
+}
+
+.dx-card-border-glow {
+    position: absolute;
+    inset: 0;
+    border: 2px solid transparent;
+    z-index: 5;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    pointer-events: none;
+}
+
+.dx-card-inner {
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    height: 100%;
+}
+
+.dx-sys-tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--dx-text-dim);
+    letter-spacing: 1px;
+}
+
+.dx-member-icon {
+    width: 70px;
+    height: 70px;
+    background: rgba(0, 240, 255, 0.05);
+    border: 1px dashed rgba(0, 240, 255, 0.3);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--dx-cyan);
+    margin-bottom: 1.5rem;
+    transition: all 0.4s;
+}
+
+.dx-member-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.dx-member-name {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 2px;
+    transition: color 0.3s;
+    letter-spacing: 1px;
+}
+
+.dx-member-read {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #64748B;
+    margin-bottom: 1rem;
+}
+
+.dx-member-desc {
+    font-size: 0.85rem;
+    color: var(--dx-text-dim);
+    line-height: 1.6;
+    border-left: 2px solid #334155;
+    padding-left: 10px;
+}
+
+.dx-concept-tag {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--dx-pink);
+    border: 1px solid var(--dx-pink);
+    padding: 1px 6px;
+    display: inline-block;
+    margin-bottom: 4px;
+    margin-right: 5px;
+}
+
+.dx-veteran-tag {
+    color: var(--dx-mint);
+    font-size: 0.75rem;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+/* HOVER EFFECTS */
+.dx-member-card:hover {
+    transform: translateY(-5px);
+    background: #0B131D;
+    z-index: 10;
+}
+
+.dx-member-card:hover .dx-card-border-glow {
+    border-color: var(--dx-cyan);
+    box-shadow: inset 0 0 15px rgba(0, 240, 255, 0.2);
+}
+
+.dx-member-card:hover .dx-member-icon {
+    background: rgba(0, 240, 255, 0.15);
+    border-style: solid;
+    color: #fff;
+    text-shadow: var(--dx-glow-cyan);
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
+}
+
+.dx-member-card:hover .dx-member-name {
+    color: var(--dx-cyan);
+    text-shadow: var(--dx-glow-cyan);
+}
+
+.dx-member-card:hover .dx-member-desc {
+    border-color: var(--dx-cyan);
+    color: #E2E8F0;
+}
+
+/* Assign colors per card strictly if needed, but cyan base looks cleaner for this theme */
+.dx-card-mint:hover .dx-card-border-glow {
+    border-color: var(--dx-mint);
+    box-shadow: inset 0 0 15px rgba(0, 255, 170, 0.2);
+}
+
+.dx-card-mint:hover .dx-member-icon {
+    background: rgba(0, 255, 170, 0.15);
+    color: #fff;
+    text-shadow: 0 0 15px rgba(0, 255, 170, 0.5);
+    box-shadow: 0 0 20px rgba(0, 255, 170, 0.3);
+    border-color: var(--dx-mint);
+}
+
+.dx-card-mint:hover .dx-member-name {
+    color: var(--dx-mint);
+    text-shadow: 0 0 15px rgba(0, 255, 170, 0.5);
+}
+
+.dx-card-mint:hover .dx-member-desc {
+    border-color: var(--dx-mint);
+}
+
+/* FOOTER */
+.dx-footer {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: #020408;
+    border-top: 1px solid #1E293B;
+    position: relative;
+    z-index: 2;
+    margin-top: 50px;
+}
+
+.dx-footer-logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+}
+
+.dx-footer-company {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--dx-text-dim);
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+}
+
+.dx-footer p {
+    font-size: 0.75rem;
+    color: #475569;
+}
+
+@media (max-width: 900px) {
+    .dx-hero-inner {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .dx-hero-visual {
+        order: -1;
+        margin-bottom: 2rem;
+    }
+
+    .dx-cyber-circle {
+        width: 200px;
+        height: 200px;
+    }
+
+    .dx-circle-inner {
+        width: 170px;
+        height: 170px;
+    }
+}
+
+@media (max-width: 600px) {
+    .dx-nav-tag {
+        display: none;
+    }
+
+    .dx-hero-name {
+        font-size: 2.2rem;
+    }
+}

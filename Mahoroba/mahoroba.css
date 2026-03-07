@@ -1,0 +1,503 @@
+/* =====================================================
+   MAHOROBA — Agency Archive CSS
+   Theme: Wa-Modern (Japanese Modern), Elegant, Warm
+   Colors: Washi Off-White, Vermilion RED, Indigo, Gold
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;800&family=Noto+Sans+JP:wght@300;400;700&display=swap');
+
+:root {
+    --mh-washi: #F9F8F6;
+    /* Traditional Washi paper color */
+    --mh-indigo: #1A237E;
+    /* Deep traditional navy */
+    --mh-vermilion: #E64A19;
+    /* Traditional 朱色 */
+    --mh-gold: #C0A062;
+    /* Elegant gold */
+    --mh-text: #2c2c2c;
+    /* Soft black for readability */
+    --mh-shadow: 0 10px 30px rgba(26, 35, 126, 0.08);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--mh-washi);
+    color: var(--mh-text);
+    font-family: 'Noto Sans JP', sans-serif;
+    overflow-x: hidden;
+    line-height: 1.8;
+}
+
+/* Background with Wa-pattern (Seigaiha/Asanoha simple representation) */
+.mh-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.mh-bg-pattern {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(212, 175, 55, 0.3) 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.6;
+}
+
+.mh-bg-pattern::after {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(230, 74, 25, 0.05) 0%, transparent 60%);
+    filter: blur(20px);
+}
+
+.mh-bg-pattern::before {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: -50px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(26, 35, 126, 0.03) 0%, transparent 60%);
+    filter: blur(30px);
+}
+
+/* NAV */
+.mh-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 2.5rem;
+    background: rgba(249, 248, 246, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.mh-nav-back {
+    color: var(--mh-indigo);
+    text-decoration: none;
+    font-family: 'Shippori Mincho', serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s;
+}
+
+.mh-nav-back:hover {
+    color: var(--mh-vermilion);
+}
+
+.mh-nav-logo {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--mh-text);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    letter-spacing: 0.1em;
+}
+
+.mh-logo-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: var(--mh-vermilion);
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 400;
+    border-radius: 50%;
+    padding-bottom: 2px;
+}
+
+.mh-nav-tag {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.75rem;
+    color: var(--mh-gold);
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    border: 1px solid var(--mh-gold);
+    padding: 4px 16px;
+    border-radius: 20px;
+}
+
+/* HERO */
+.mh-hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 2rem 4rem;
+    position: relative;
+    text-align: center;
+}
+
+.mh-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mh-hero-title-area {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.mh-hero-stamp {
+    position: absolute;
+    top: -30px;
+    left: -40px;
+    width: 70px;
+    height: 70px;
+    border: 2px solid var(--mh-vermilion);
+    border-radius: 50%;
+    color: var(--mh-vermilion);
+    font-family: 'Shippori Mincho', serif;
+    font-size: 0.9rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-15deg);
+    opacity: 0.8;
+    letter-spacing: 0.1em;
+    text-align: center;
+    padding: 10px;
+    line-height: 1.2;
+}
+
+.mh-hero-name {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(4rem, 10vw, 6rem);
+    font-weight: 800;
+    color: var(--mh-text);
+    line-height: 1;
+    letter-spacing: 0.2em;
+    margin-bottom: 0.5rem;
+    padding-left: 0.2em;
+}
+
+.mh-hero-subname {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--mh-gold);
+    letter-spacing: 0.4em;
+}
+
+.mh-hero-tagline {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--mh-indigo);
+    margin-bottom: 3rem;
+    line-height: 1.6;
+}
+
+.mh-hero-concept {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #555;
+    max-width: 650px;
+    margin-bottom: 2rem;
+    text-align: justify;
+    text-align-last: center;
+    line-height: 2.2;
+    position: relative;
+}
+
+.mh-hero-concept::before,
+.mh-hero-concept::after {
+    content: '✤';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--mh-gold);
+    font-size: 1.2rem;
+    opacity: 0.5;
+}
+
+.mh-hero-concept::before {
+    top: -30px;
+}
+
+.mh-hero-concept::after {
+    bottom: -30px;
+}
+
+/* SECTIONS */
+.mh-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 2rem 100px;
+}
+
+.mh-section {
+    margin-bottom: 6rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.mh-section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mh-section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.mh-section-title-en {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--mh-gold);
+    letter-spacing: 0.3em;
+    margin-bottom: 5px;
+}
+
+.mh-section-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--mh-text);
+    letter-spacing: 0.1em;
+}
+
+.mh-divider {
+    width: 1px;
+    height: 40px;
+    background: var(--mh-vermilion);
+    margin-top: 1.5rem;
+}
+
+/* GRID & CARDS */
+.mh-member-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 3rem;
+    justify-content: center;
+}
+
+/* Wa-Modern Cards */
+.mh-member-card {
+    background: #fff;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    position: relative;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    display: block;
+    overflow: hidden;
+}
+
+/* Folded corner effect */
+.mh-member-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-width: 0 30px 30px 0;
+    border-style: solid;
+    border-color: transparent var(--mh-washi) transparent transparent;
+    z-index: 10;
+    transition: border-width 0.3s;
+}
+
+.mh-member-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-width: 0 30px 30px 0;
+    border-style: solid;
+    border-color: var(--mh-gold) transparent transparent transparent;
+    z-index: 9;
+    transition: border-width 0.3s;
+}
+
+.mh-card-inner {
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    border: 1px solid transparent;
+    transition: border-color 0.4s;
+    height: 100%;
+}
+
+.mh-card-accent {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--mh-indigo);
+    transform: scaleX(0);
+    transition: transform 0.4s;
+    transform-origin: left;
+}
+
+.mh-member-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: var(--mh-washi);
+    border: 1px solid var(--mh-gold);
+    color: var(--mh-vermilion);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.4s;
+}
+
+.mh-member-name {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--mh-text);
+    text-decoration: none;
+    margin-bottom: 6px;
+    letter-spacing: 0.1em;
+    transition: color 0.3s;
+}
+
+.mh-member-read {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #888;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+/* HOVER EFFECTS */
+.mh-member-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--mh-shadow);
+    border-color: transparent;
+}
+
+.mh-member-card:hover::before {
+    border-width: 0 45px 45px 0;
+}
+
+.mh-member-card:hover::after {
+    border-width: 0 45px 45px 0;
+}
+
+.mh-member-card:hover .mh-card-inner {
+    border-color: rgba(212, 175, 55, 0.4);
+}
+
+.mh-member-card:hover .mh-card-accent {
+    transform: scaleX(1);
+}
+
+.mh-member-card:hover .mh-member-icon {
+    background: var(--mh-vermilion);
+    color: #fff;
+    border-color: var(--mh-vermilion);
+    transform: scale(1.1);
+}
+
+.mh-member-card:hover .mh-member-name {
+    color: var(--mh-indigo);
+}
+
+/* FOOTER */
+.mh-footer {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: #fff;
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+    position: relative;
+}
+
+.mh-footer::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: repeating-linear-gradient(90deg, var(--mh-gold), var(--mh-gold) 20px, transparent 20px, transparent 40px);
+    opacity: 0.5;
+}
+
+.mh-footer-logo {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--mh-text);
+    margin-bottom: 1rem;
+    letter-spacing: 0.1em;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.mh-footer-company {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--mh-indigo);
+    letter-spacing: 0.2em;
+    margin-bottom: 2rem;
+}
+
+.mh-footer p {
+    font-size: 0.75rem;
+    color: #999;
+}
+
+@media (max-width: 768px) {
+    .mh-hero-name {
+        font-size: 3.5rem;
+    }
+
+    .mh-hero-stamp {
+        width: 60px;
+        height: 60px;
+        font-size: 0.75rem;
+        top: -40px;
+        left: -20px;
+    }
+
+    .mh-nav-tag {
+        display: none;
+    }
+}

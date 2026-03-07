@@ -1,0 +1,181 @@
+/* =====================================================
+   Buijidai (ぶいじだい) — Character Page Base CSS
+   Brand color: Energetic Orange / Yellow / Cyan
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500;600&family=Noto+Sans+JP:wght@400;600;800;900&display=swap');
+
+:root {
+    --c-main: #ff8c00;
+    /* Orange */
+    --c-sub: #ffd700;
+    /* Yellow */
+    --c-accent: #00cccc;
+    /* Cyan */
+    --c-bg: #fdfaf6;
+    --c-text: #333333;
+    /* Override per character: */
+    --char-color: #ff8c00;
+    --char-rgb: 255, 140, 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--c-bg);
+    color: var(--c-text);
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.8;
+}
+
+.char-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-image: repeating-linear-gradient(45deg, rgba(var(--char-rgb), 0.05) 0, rgba(var(--char-rgb), 0.05) 20px, transparent 20px, transparent 40px);
+}
+
+.char-back {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    background: var(--char-color);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 800;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 2px solid var(--c-text);
+    transition: transform 0.2s;
+    z-index: 100;
+    box-shadow: 3px 3px 0 var(--c-text);
+}
+
+.char-back:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0 var(--c-text);
+}
+
+.char-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    padding: 100px 2rem 2rem;
+    text-align: center;
+}
+
+.char-name {
+    font-family: 'Kiwi Maru', serif;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 600;
+    color: var(--char-color);
+    text-shadow: 3px 3px 0 #fff, -1px -1px 0 var(--c-text), 1px -1px 0 var(--c-text), -1px 1px 0 var(--c-text), 1px 1px 0 var(--c-text);
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.char-read {
+    font-weight: 900;
+    font-size: 1rem;
+    color: #888;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.char-tag {
+    display: inline-block;
+    padding: 6px 16px;
+    background: #fff;
+    border: 2px solid var(--c-text);
+    border-radius: 8px;
+    font-weight: 800;
+    color: var(--c-text);
+    margin: 4px;
+    box-shadow: 2px 2px 0 var(--char-color);
+}
+
+.char-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem 2rem 80px;
+}
+
+.char-section {
+    margin-bottom: 4rem;
+    background: #fff;
+    border: 3px solid var(--c-text);
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 8px 8px 0 rgba(var(--char-rgb), 0.3);
+    position: relative;
+}
+
+.char-section::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 30px;
+    width: 40px;
+    height: 10px;
+    background: var(--char-color);
+    border: 2px solid var(--c-text);
+    border-radius: 5px;
+    transform: rotate(-5deg);
+}
+
+.char-section h2 {
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: var(--c-text);
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+}
+
+.char-section h2::after {
+    content: '';
+    position: absolute;
+    left: -5px;
+    right: -5px;
+    bottom: 2px;
+    height: 10px;
+    background: rgba(var(--char-rgb), 0.4);
+    z-index: -1;
+    transform: rotate(-2deg);
+}
+
+.char-section p,
+.char-section li {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--c-text);
+    line-height: 2;
+    margin-bottom: 1rem;
+}
+
+.char-section ul {
+    padding-left: 1.5rem;
+}
+
+.char-footer {
+    padding: 3rem;
+    text-align: center;
+    font-weight: 800;
+    font-size: 0.85rem;
+    color: rgba(0, 0, 0, 0.4);
+}

@@ -1,0 +1,195 @@
+/* =====================================================
+   PROFORMA NOVA — Character Page Base CSS
+   Brand color: Cyber Black, Neon Cyan
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
+
+:root {
+    --c-main: #00f0ff;
+    /* Neon Cyan */
+    --c-sub: #ff003c;
+    /* Magenta */
+    --c-bg: #0a0a0f;
+    --c-surface: #12121c;
+    --c-text: #e0e6ed;
+    /* Override per character: */
+    --char-color: #00f0ff;
+    --char-rgb: 0, 240, 255;
+    --char-shadow: 0 0 15px rgba(var(--char-rgb), 0.5);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--c-bg);
+    color: var(--c-text);
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.8;
+}
+
+.char-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-image: linear-gradient(rgba(var(--char-rgb), 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(var(--char-rgb), 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.5;
+}
+
+.char-back {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--c-text);
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 10px 20px;
+    background: rgba(10, 10, 15, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s;
+    z-index: 100;
+    clip-path: polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%);
+}
+
+.char-back:hover {
+    border-color: var(--char-color);
+    color: var(--char-color);
+    box-shadow: inset 0 0 10px rgba(var(--char-rgb), 0.3);
+}
+
+.char-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    padding: 120px 2rem 4rem;
+    text-align: center;
+    border-bottom: 2px solid rgba(var(--char-rgb), 0.2);
+    position: relative;
+}
+
+.char-hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 2px;
+    background: var(--char-color);
+    box-shadow: var(--char-shadow);
+}
+
+.char-name {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+    text-shadow: var(--char-shadow);
+}
+
+.char-read {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--char-color);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.char-tag {
+    display: inline-block;
+    padding: 6px 16px;
+    background: rgba(var(--char-rgb), 0.1);
+    border: 1px solid var(--char-color);
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin: 4px;
+    box-shadow: 0 0 10px rgba(var(--char-rgb), 0.2);
+    clip-path: polygon(5px 0, 100% 0, calc(100% - 5px) 100%, 0 100%);
+}
+
+.char-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem 2rem 100px;
+}
+
+.char-section {
+    margin-bottom: 4rem;
+    background: var(--c-surface);
+    padding: 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
+}
+
+.char-section h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 8px var(--char-color);
+}
+
+.char-section h2::before {
+    content: '/>';
+    color: var(--char-color);
+}
+
+.char-section p,
+.char-section li {
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: #aaa;
+    line-height: 2.2;
+    margin-bottom: 1.2rem;
+}
+
+.char-section ul {
+    padding-left: 1.5rem;
+    color: var(--char-color);
+}
+
+.char-section ul li span {
+    color: #aaa;
+}
+
+.char-footer {
+    padding: 4rem 2rem;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: #555;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    letter-spacing: 0.2em;
+}

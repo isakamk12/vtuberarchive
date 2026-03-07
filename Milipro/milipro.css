@@ -1,0 +1,488 @@
+/* =====================================================
+   Milipro (Million Production) — Agency Archive CSS
+   Theme: Premium Cute, Stars, Soft Sparkle
+   Colors: Million Gold, Sweet Pink, Pure White
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800;900&family=Quicksand:wght@500;700&display=swap');
+
+:root {
+    --mp-gold: #FFD700;
+    --mp-gold-light: #FFF8C4;
+    --mp-pink: #FF9EBB;
+    --mp-pink-light: #FFF0F5;
+    --mp-bg: #FCFBFE;
+    --mp-text: #5D5466;
+    /* Soft brown/greyish for cute vibe */
+    --mp-white: #FFFFFF;
+    --mp-shadow: 0 12px 30px rgba(255, 158, 187, 0.15);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--mp-bg);
+    color: var(--mp-text);
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    overflow-x: hidden;
+    line-height: 1.7;
+}
+
+body::selection {
+    background: var(--mp-pink);
+    color: #fff;
+}
+
+/* Background with soft gradients and floating circles */
+.mp-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+    background: #fff;
+}
+
+.mp-bg-gradient {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 10% 20%, var(--mp-pink-light) 0%, transparent 60%), radial-gradient(circle at 90% 80%, var(--mp-gold-light) 0%, transparent 60%);
+}
+
+.mp-bg-circles {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(var(--mp-pink) 2px, transparent 2px), radial-gradient(var(--mp-gold) 2px, transparent 2px);
+    background-position: 0 0, 50px 50px;
+    background-size: 100px 100px;
+    opacity: 0.1;
+}
+
+.mp-bg-sparkles {
+    position: absolute;
+    inset: 0;
+}
+
+.mp-sparkle {
+    position: absolute;
+    background: var(--mp-gold);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    animation: twinkle ease-in-out infinite alternate;
+}
+
+@keyframes twinkle {
+    0% {
+        transform: scale(0.5) rotate(0deg);
+        opacity: 0.2;
+    }
+
+    100% {
+        transform: scale(1.2) rotate(45deg);
+        opacity: 0.8;
+    }
+}
+
+/* NAV */
+.mp-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 2.5rem;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(12px);
+    border-bottom: 2px solid var(--mp-pink-light);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.mp-nav-back {
+    color: var(--mp-text);
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s;
+    background: var(--mp-pink-light);
+    padding: 6px 16px;
+    border-radius: 20px;
+    color: var(--mp-pink);
+}
+
+.mp-nav-back:hover {
+    background: var(--mp-pink);
+    color: #fff;
+}
+
+.mp-nav-logo {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--mp-text);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.mp-logo-icon {
+    color: var(--mp-gold);
+    font-size: 1.2rem;
+    filter: drop-shadow(0 2px 4px rgba(255, 215, 0, 0.4));
+}
+
+.mp-nav-tag {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: #fff;
+    background: linear-gradient(135deg, var(--mp-pink), var(--mp-gold));
+    padding: 6px 18px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(255, 158, 187, 0.3);
+}
+
+/* HERO */
+.mp-hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 2rem 4rem;
+    position: relative;
+    text-align: center;
+}
+
+.mp-hero-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 4rem;
+    border-radius: 40px;
+    border: 2px solid var(--mp-white);
+    box-shadow: var(--mp-shadow);
+    backdrop-filter: blur(10px);
+}
+
+.mp-hero-badge {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--mp-gold);
+    background: var(--mp-gold-light);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 24px;
+    border-radius: 30px;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.1em;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.mp-hero-name {
+    font-family: 'Quicksand', sans-serif;
+    font-size: clamp(3rem, 8vw, 5rem);
+    font-weight: 700;
+    color: var(--mp-text);
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+}
+
+.mp-hero-subname {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--mp-pink);
+    margin-bottom: 2rem;
+    letter-spacing: 0.2em;
+}
+
+.mp-hero-concept {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #777;
+    line-height: 2;
+    text-align: justify;
+    text-align-last: center;
+}
+
+/* SECTIONS */
+.mp-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 2rem 100px;
+}
+
+.mp-section {
+    margin-bottom: 5rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.mp-section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mp-section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.mp-section-title {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--mp-text);
+    margin-bottom: 4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.mp-section-title-sub {
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--mp-pink);
+    letter-spacing: 0.1em;
+    background: var(--mp-pink-light);
+    display: inline-block;
+    padding: 4px 16px;
+    border-radius: 20px;
+}
+
+/* NOVA & UNI Styles */
+.mp-nova-section .mp-section-title {
+    color: #8A2BE2;
+}
+
+/* Purple tint for Nova */
+.mp-nova-section .mp-section-title-sub {
+    color: #8A2BE2;
+    background: #F3E8FF;
+}
+
+.mp-uni-section .mp-section-title {
+    color: #00BFFF;
+}
+
+/* Blue tint for Uni */
+.mp-uni-section .mp-section-title-sub {
+    color: #00BFFF;
+    background: #E0F7FA;
+}
+
+/* GRID & CARDS */
+.mp-member-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2.5rem;
+}
+
+.mp-grid-center {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mp-grid-center .mp-member-card {
+    width: 300px;
+}
+
+.mp-member-card {
+    background: var(--mp-white);
+    border-radius: 30px;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    box-shadow: var(--mp-shadow);
+    border: 2px solid var(--mp-pink-light);
+    overflow: hidden;
+    display: block;
+}
+
+.mp-card-inner {
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* Cute top decoration */
+.mp-member-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(90deg, var(--mp-pink), var(--mp-gold));
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.mp-member-icon {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: var(--mp-pink-light);
+    color: var(--mp-pink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.4s;
+    box-shadow: 0 5px 15px rgba(255, 158, 187, 0.2);
+}
+
+.mp-member-name {
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: var(--mp-text);
+    text-decoration: none;
+    margin-bottom: 8px;
+    transition: color 0.3s;
+}
+
+.mp-member-read {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #999;
+    text-transform: uppercase;
+}
+
+/* Unit Specific Card Styling */
+.mp-nova-card {
+    border-color: #F3E8FF;
+}
+
+.mp-nova-card .mp-member-icon {
+    background: #F3E8FF;
+    color: #8A2BE2;
+    box-shadow: 0 5px 15px rgba(138, 43, 226, 0.2);
+}
+
+.mp-nova-card::before {
+    background: linear-gradient(90deg, #8A2BE2, var(--mp-gold));
+}
+
+.mp-uni-card {
+    border-color: #E0F7FA;
+}
+
+.mp-uni-card .mp-member-icon {
+    background: #E0F7FA;
+    color: #00BFFF;
+    box-shadow: 0 5px 15px rgba(0, 191, 255, 0.2);
+}
+
+.mp-uni-card::before {
+    background: linear-gradient(90deg, #00BFFF, var(--mp-gold));
+}
+
+/* HOVER EFFECTS */
+.mp-member-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(255, 158, 187, 0.25);
+    border-color: var(--mp-white);
+}
+
+.mp-member-card:hover::before {
+    opacity: 1;
+}
+
+.mp-member-card:hover .mp-member-icon {
+    transform: scale(1.1) rotate(5deg);
+    background: var(--mp-pink);
+    color: #fff;
+    box-shadow: 0 10px 20px rgba(255, 158, 187, 0.4);
+}
+
+.mp-member-card:hover .mp-member-name {
+    color: var(--mp-pink);
+}
+
+.mp-nova-card:hover .mp-member-icon {
+    background: #8A2BE2;
+    box-shadow: 0 10px 20px rgba(138, 43, 226, 0.4);
+}
+
+.mp-nova-card:hover .mp-member-name {
+    color: #8A2BE2;
+}
+
+.mp-uni-card:hover .mp-member-icon {
+    background: #00BFFF;
+    box-shadow: 0 10px 20px rgba(0, 191, 255, 0.4);
+}
+
+.mp-uni-card:hover .mp-member-name {
+    color: #00BFFF;
+}
+
+/* FOOTER */
+.mp-footer {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: var(--mp-white);
+    border-top: 2px solid var(--mp-pink-light);
+}
+
+.mp-footer-logo {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--mp-text);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.mp-footer-logo i {
+    color: var(--mp-gold);
+}
+
+.mp-footer p {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #aaa;
+}
+
+@media (max-width: 768px) {
+    .mp-hero-inner {
+        padding: 2rem 1.5rem;
+        border-radius: 20px;
+    }
+
+    .mp-hero-name {
+        font-size: 2.5rem;
+    }
+
+    .mp-nav-tag {
+        display: none;
+    }
+}

@@ -1,0 +1,222 @@
+/* =====================================================
+   Lethal Plan — Character Page Base CSS
+   Brand color: Arcade Red, Neon Cyan, Warning Yellow
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;600;700&family=Noto+Sans+JP:wght@400;700;900&display=swap');
+
+:root {
+    --c-main: #FF1A55;
+    /* Arcade Red */
+    --c-sub: #00F0FF;
+    /* Cyan */
+    --c-bg: #050505;
+    --c-surface: #111111;
+    --c-text: #F3F4F6;
+    /* Override per character: */
+    --char-color: #FF1A55;
+    --char-rgb: 255, 26, 85;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--c-bg);
+    color: var(--c-text);
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Scanlines for character page */
+.char-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+    background-size: 100% 4px, 6px 100%;
+    pointer-events: none;
+}
+
+.char-back {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Teko', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 5px 20px;
+    background: rgba(10, 10, 10, 0.9);
+    border: 2px solid var(--char-color);
+    transition: all 0.2s;
+    z-index: 100;
+    letter-spacing: 1px;
+    transform: skewX(-10deg);
+}
+
+.char-back i {
+    transform: skewX(10deg);
+}
+
+/* Un-skew icon */
+.char-back:hover {
+    background: var(--char-color);
+    color: #fff;
+    box-shadow: 0 0 15px rgba(var(--char-rgb), 0.5);
+}
+
+.char-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    padding: 120px 2rem 4rem;
+    text-align: center;
+    position: relative;
+    background: radial-gradient(circle at 50% 100%, rgba(var(--char-rgb), 0.2) 0%, transparent 60%);
+    border-bottom: 4px solid var(--char-color);
+}
+
+.char-hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    opacity: 0.5;
+}
+
+.char-name {
+    font-family: 'Teko', sans-serif;
+    font-size: clamp(4rem, 10vw, 7rem);
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: -10px;
+    line-height: 1;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-shadow: 4px 4px 0 rgba(var(--char-rgb), 0.8), -2px -2px 0 rgba(0, 240, 255, 0.5);
+}
+
+.char-read {
+    font-weight: 900;
+    font-size: 1.2rem;
+    color: #999;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.char-tag {
+    display: inline-block;
+    padding: 4px 16px;
+    background: var(--char-color);
+    color: #000;
+    font-family: 'Teko', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transform: skewX(-10deg);
+    margin: 4px;
+}
+
+.char-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem 2rem 100px;
+}
+
+.char-section {
+    margin-bottom: 4rem;
+    background: rgba(17, 17, 17, 0.8);
+    padding: 3rem;
+    position: relative;
+    border: 2px solid #333;
+}
+
+.char-section::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 30px;
+    height: 30px;
+    border-top: 4px solid var(--char-color);
+    border-left: 4px solid var(--char-color);
+}
+
+.char-section h2 {
+    font-family: 'Teko', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-transform: uppercase;
+}
+
+.char-section h2::before {
+    content: '>';
+    color: var(--char-color);
+}
+
+.char-section p,
+.char-section li {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #ccc;
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+}
+
+.char-section ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.char-section ul li {
+    position: relative;
+    padding-left: 20px;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+}
+
+.char-section ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 8px;
+    height: 8px;
+    background: var(--char-color);
+    transform: rotate(45deg);
+}
+
+.char-footer {
+    padding: 4rem 2rem;
+    text-align: center;
+    font-family: 'Teko', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: #555;
+    border-top: 1px dashed #333;
+    letter-spacing: 2px;
+}

@@ -1,0 +1,174 @@
+/* =====================================================
+   ENILIS — Character Page Base CSS
+   Theme: Multi-Prism Nexus / Fantasy Prism
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700;900&family=Cinzel:wght@700&display=swap');
+
+:root {
+    --ce-bg: #FFFFFF;
+    --ce-text: #2C3E50;
+    --ce-accent: #E91E63;
+    --ce-accent-rgb: 233, 30, 99;
+    --ce-muted: #7F8C8D;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--ce-bg);
+    color: var(--ce-text);
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.8;
+    overflow-x: hidden;
+}
+
+/* Prism/Glass BG */
+.char-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: radial-gradient(circle at 100% 0%, rgba(var(--ce-accent-rgb), 0.05) 0%, transparent 50%);
+}
+
+.char-back {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--ce-muted);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.8rem;
+    z-index: 1000;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s;
+}
+
+.char-back:hover {
+    color: var(--ce-accent);
+    transform: translateX(-5px);
+}
+
+.char-hero {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 5% 4rem;
+    position: relative;
+}
+
+.char-category {
+    font-weight: 900;
+    font-size: 0.8rem;
+    color: var(--ce-accent);
+    letter-spacing: 5px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.char-name {
+    font-family: 'Montserrat', 'Noto Sans JP', sans-serif;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 900;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+}
+
+.char-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 5% 100px;
+}
+
+.char-section {
+    margin-bottom: 4rem;
+    background: #fff;
+    padding: 4rem;
+    border-radius: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    position: relative;
+}
+
+.char-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: var(--ce-accent);
+    border-radius: 2px;
+    top: 20px;
+    opacity: 0.3;
+}
+
+.char-section h2 {
+    font-family: 'Montserrat', 'Noto Sans JP', sans-serif;
+    font-weight: 900;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #1a1a1a;
+}
+
+.char-section h2 i {
+    color: var(--ce-accent);
+    font-size: 1.2rem;
+}
+
+.char-section p,
+.char-section li {
+    font-size: 1.05rem;
+    color: #4a5568;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.char-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.char-section ul li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.char-section ul li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: var(--ce-accent);
+}
+
+.char-footer {
+    padding: 4rem 5%;
+    text-align: center;
+    opacity: 0.3;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+}

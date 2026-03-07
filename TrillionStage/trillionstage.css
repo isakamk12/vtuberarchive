@@ -1,0 +1,440 @@
+/* =====================================================
+   TRILLIONSTAGE — Agency Archive CSS
+   Theme: Multi-Verse Glitch Idol Stage
+   Colors: Galactic Purple, Trillion Gold, Error Cyan
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Noto+Sans+JP:wght@400;700;900&family=Space+Grotesk:wght@300;700&display=swap');
+
+:root {
+    --stage-bg: #03040A;
+    --stage-purple: #1A0B2E;
+    --stage-gold: #D4AF37;
+    --stage-cyan: #00F5FF;
+    --stage-crimson: #FF0060;
+    --stage-text: #E0E7FF;
+
+    --font-fancy: 'Syncopate', sans-serif;
+    --font-mono: 'Space Grotesk', sans-serif;
+    --font-body: 'Noto Sans JP', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--stage-bg);
+    color: var(--stage-text);
+    font-family: var(--font-body);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* Stage Background */
+.stage-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: radial-gradient(circle at 50% 100%, #1A0B2E 0%, #03040A 100%);
+}
+
+.stars {
+    position: absolute;
+    inset: 0;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png');
+    opacity: 0.3;
+}
+
+.glitch-overlay {
+    position: absolute;
+    inset: 0;
+    border: 2px solid transparent;
+    animation: stage-flicker 10s infinite;
+}
+
+@keyframes stage-flicker {
+
+    0%,
+    100% {
+        box-shadow: inset 0 0 100px rgba(0, 245, 255, 0.05);
+    }
+
+    50% {
+        box-shadow: inset 0 0 150px rgba(212, 175, 55, 0.05);
+    }
+}
+
+/* Nav */
+.stage-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    background: rgba(3, 4, 10, 0.8);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.nav-back {
+    color: var(--stage-gold);
+    text-decoration: none;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-logo {
+    font-family: var(--font-fancy);
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 4px;
+    color: #fff;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.8rem;
+    margin-left: 2rem;
+    letter-spacing: 2px;
+    font-family: var(--font-fancy);
+}
+
+/* Hero */
+.stage-hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 2rem 5rem;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 5px 20px;
+    border: 1px solid var(--stage-gold);
+    font-family: var(--font-mono);
+    color: var(--stage-gold);
+    font-size: 0.8rem;
+    letter-spacing: 5px;
+    margin-bottom: 2rem;
+}
+
+.hero-title {
+    font-family: var(--font-fancy);
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.glitch-title {
+    position: relative;
+    color: var(--stage-gold);
+    display: inline-block;
+}
+
+.glitch-title::before,
+.glitch-title::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+}
+
+.glitch-title::before {
+    color: var(--stage-cyan);
+    z-index: -1;
+    animation: glitch 2.5s infinite linear alternate-reverse;
+}
+
+.glitch-title::after {
+    color: var(--stage-crimson);
+    z-index: -2;
+    animation: glitch 3.5s infinite linear alternate-reverse;
+}
+
+@keyframes glitch {
+    0% {
+        transform: translate(2px, -2px);
+        clip-path: inset(10% 0 80% 0);
+    }
+
+    20% {
+        transform: translate(-2px, 2px);
+        clip-path: inset(50% 0 30% 0);
+    }
+
+    40% {
+        transform: translate(1px, -1px);
+        clip-path: inset(70% 0 10% 0);
+    }
+
+    100% {
+        transform: translate(-1px, 1px);
+        clip-path: inset(20% 0 60% 0);
+    }
+}
+
+.hero-desc {
+    font-size: 1.1rem;
+    color: #94a3b8;
+    margin: 0 auto 3rem;
+    line-height: 1.8;
+    max-width: 700px;
+}
+
+.hero-producers {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.producer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.producer .label {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: var(--stage-gold);
+    margin-bottom: 0.5rem;
+}
+
+.producer .name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    border-bottom: 2px solid var(--stage-cyan);
+}
+
+/* Grid */
+.stage-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+}
+
+.unit-block {
+    margin-bottom: 8rem;
+}
+
+.unit-header {
+    margin-bottom: 3rem;
+    text-align: left;
+}
+
+.unit-title {
+    font-family: var(--font-fancy);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.unit-line {
+    width: 80px;
+    height: 4px;
+    background: var(--stage-gold);
+    margin-top: 1rem;
+    box-shadow: 0 0 15px var(--stage-gold);
+}
+
+/* Unit Specific Lines */
+.color-unemployed {
+    background: #3B82F6;
+    box-shadow: 0 0 15px #3B82F6;
+}
+
+.color-extinction {
+    background: #EF4444;
+    box-shadow: 0 0 15px #EF4444;
+}
+
+.color-heresy {
+    background: #8B5CF6;
+    box-shadow: 0 0 15px #8B5CF6;
+}
+
+.color-secret {
+    background: #F8FAFC;
+    box-shadow: 0 0 15px #F8FAFC;
+}
+
+.talent-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.talent-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 3rem 2.5rem;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.talent-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: var(--stage-gold);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+.talent-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(212, 175, 55, 0.05), transparent);
+    transition: width 0.4s;
+}
+
+.talent-card:hover::before {
+    width: 100%;
+}
+
+.talent-card .name {
+    font-family: var(--font-body);
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 0.25rem;
+}
+
+.talent-card .sub {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--stage-gold);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.talent-card .desc {
+    font-size: 0.95rem;
+    color: #94a3b8;
+}
+
+/* Episode Section */
+.episode-section {
+    margin-top: 5rem;
+    padding: 5rem 3rem;
+    background: rgba(26, 11, 46, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+}
+
+.episode-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.episode-card {
+    position: relative;
+    padding-left: 2rem;
+    border-left: 1px solid var(--stage-cyan);
+}
+
+.epi-tag {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--stage-cyan);
+    margin-bottom: 0.5rem;
+    letter-spacing: 3px;
+}
+
+.episode-card h4 {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.episode-card p {
+    font-size: 0.9rem;
+    color: #94a3b8;
+}
+
+/* Footer */
+.stage-footer {
+    text-align: center;
+    padding: 6rem 2rem;
+    border-top: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.footer-logo {
+    font-family: var(--font-fancy);
+    font-size: 1.5rem;
+    color: #fff;
+    letter-spacing: 5px;
+}
+
+.accent-text {
+    color: var(--stage-gold);
+}
+
+/* Reveal Animation */
+.stage-reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.stage-reveal.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Resp */
+@media (max-width: 768px) {
+    .stage-nav {
+        padding: 1rem 2rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero-producers {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}

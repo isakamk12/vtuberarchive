@@ -4,152 +4,244 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Varium Archive | MAGICAL STELLAR DATABASE</title>
-    <link rel="stylesheet" href="varium_index.css">
+    <title>Varium (ぶいありうむっ！) | VTuber Archive</title>
+    <meta name="description"
+        content="「CUTE × DREAM」「かわいいのその先へ」をコンセプトに掲げるアイドルVTuber事務所「Varium（ぶいありうむっ！）」の非公式ファンサイト。所属タレント・卒業生の一覧。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=M+PLUS+Rounded+1c:wght@400;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="varium.css">
 </head>
 
 <body>
-    <div class="cosmos-bg"></div>
 
-    <nav class="nav">
-        <a href="../index.html" class="nav-brand">VARIUM</a>
-        <div style="font-family: 'Cinzel'; color: var(--var-text); letter-spacing: 3px; font-size: 0.8rem;">Celestial
-            Map [Interactive]</div>
-    </nav>
-
-    <div class="map-title">
-        <h1>STELLAR</h1>
-        <h1 style="color: rgba(255,215,0,0.05);">ARCHIVE</h1>
+    <div class="va-bg">
+        <div class="va-bg-shape va-shape-1"></div>
+        <div class="va-bg-shape va-shape-2"></div>
+        <div class="va-bg-shape va-shape-3"></div>
+        <div class="va-bg-particles"></div>
     </div>
 
-    <!-- Massive scrollable universe -->
-    <main class="cosmos">
-
-        <!-- Constellation Lines (SVG) -->
-        <svg class="constellation-lines">
-            <!-- Gen 1 Ursa Major style -->
-            <line x1="20%" y1="30%" x2="30%" y2="20%" /> <!-- Ume to Sui -->
-            <line x1="30%" y1="20%" x2="40%" y2="25%" /> <!-- Sui to Ahiru -->
-            <line x1="40%" y1="25%" x2="35%" y2="40%" /> <!-- Ahiru to Niina -->
-            <line x1="35%" y1="40%" x2="20%" y2="30%" /> <!-- Niina to Ume -->
-
-            <!-- Gen 2 Orion Style -->
-            <line x1="35%" y1="40%" x2="60%" y2="30%" /> <!-- Gen 1 to Gen 2 -->
-
-            <!-- Gen 3 Triangle -->
-            <line x1="60%" y1="30%" x2="75%" y2="25%" />
-            <line x1="75%" y1="25%" x2="85%" y2="40%" />
-            <line x1="85%" y1="40%" x2="70%" y2="50%" />
-            <line x1="70%" y1="50%" x2="75%" y2="25%" />
-
-            <!-- Gen 4 Southern Cross -->
-            <line x1="70%" y1="50%" x2="65%" y2="70%" />
-            <line x1="65%" y1="70%" x2="50%" y2="75%" />
-            <line x1="50%" y1="75%" x2="45%" y2="60%" />
-            <line x1="45%" y1="60%" x2="65%" y2="70%" />
-
-            <!-- Alumni Distant Stars -->
-            <line x1="45%" y1="60%" x2="25%" y2="80%" />
-        </svg>
-
-        <!-- Generation Clusters Background Text -->
-        <div class="cluster-label" style="top: 30%; left: 30%;">GEN 1</div>
-        <div class="cluster-label" style="top: 30%; left: 60%;">GEN 2</div>
-        <div class="cluster-label" style="top: 35%; left: 80%;">GEN 3</div>
-        <div class="cluster-label" style="top: 70%; left: 55%;">GEN 4</div>
-        <div class="cluster-label" style="top: 85%; left: 20%;">ALUMNI</div>
-
-        <!-- Gen 1 Stars -->
-        <a href="characters/ume.html" class="star-node" style="top: 30%; left: 20%;">
-            <div class="star-core"></div>
-            <div class="star-label"><span class="star-name">狛犬うめ</span><span class="star-sub">Ume Komainu</span></div>
+    <nav class="va-nav">
+        <a href="../index.html" class="va-nav-back">
+            <i class="fa-solid fa-cookie-bite"></i> BACK TO HUB
         </a>
-        <a href="characters/sui.html" class="star-node" style="top: 20%; left: 30%;">
-            <div class="star-core"></div>
-            <div class="star-label"><span class="star-name">涼月すい</span><span class="star-sub">Sui Suzutsuki</span></div>
-        </a>
-        <a href="characters/ahiru.html" class="star-node" style="top: 25%; left: 40%;">
-            <div class="star-core"></div>
-            <div class="star-label"><span class="star-name">綿宮あひる</span><span class="star-sub">Ahiru Watamiya</span>
+        <div class="va-nav-logo">
+            <img src="https://ui-avatars.com/api/?name=V&background=ffb6c1&color=fff&rounded=true&font-size=0.6"
+                alt="Icon" class="va-nav-icon">
+            Varium <span>(ぶいありうむっ！)</span>
+        </div>
+        <div class="va-nav-tag">“CUTE × DREAM” Idol VTuber Agency</div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="va-hero">
+        <div class="va-hero-bg-text">DREAM</div>
+        <div class="va-hero-content">
+            <div class="va-eyebrow"><i class="fa-solid fa-heart"></i> CUTE × DREAM</div>
+            <h1 class="va-hero-name">Varium</h1>
+            <p class="va-hero-tagline">“かわいいのその先へ”</p>
+            <div class="va-hero-concept">
+                「CUTE × DREAM」をコンセプトに掲げる、あなたの日常を彩るアイドルVTuber事務所。<br><br>
+                YouTubeやX（旧Twitter）などのプラットフォームにて、生放送や動画投稿を中心に活動を展開。個性豊かな「かわいい」を持ったタレントたちが、プロデューサー（ファン）と一緒に夢のような日常と「かわいいのその先」を目指して駆け抜けています。
             </div>
-        </a>
-        <a href="characters/niina.html" class="star-node" style="top: 40%; left: 35%;">
-            <div class="star-core"></div>
-            <div class="star-label"><span class="star-name">飴望にぃな</span><span class="star-sub">Niina Amemochi</span>
+            <div class="va-hero-stats">
+                <div class="va-stat">
+                    <div class="va-stat-value">11</div>
+                    <div class="va-stat-label">ACTIVE IDOLS</div>
+                </div>
+                <div class="va-stat">
+                    <div class="va-stat-value"><i class="fa-solid fa-ribbon va-stat-icon"></i></div>
+                    <div class="va-stat-label">KAWAII</div>
+                </div>
             </div>
-        </a>
+        </div>
+    </section>
 
-        <!-- Gen 2 Star -->
-        <a href="characters/serenade.html" class="star-node" style="top: 30%; left: 60%;">
-            <div class="star-core"></div>
-            <div class="star-label"><span class="star-name">セレナーデ・オックスブラッド</span><span class="star-sub">Serenade
-                    Oxblood</span></div>
-        </a>
-
-        <!-- Gen 3 Stars -->
-        <a href="characters/oto.html" class="star-node" style="top: 25%; left: 75%;">
-            <div class="star-core"></div>
-            <div class="star-label"><span class="star-name">透乃おと</span><span class="star-sub">Oto Tono</span></div>
-        </a>
-        <a href="characters/morfu.html" class="star-node" style="top: 40%; left: 85%;">
-            <div class="star-core"></div>
-            <div class="star-label"><span class="star-name">海汐もるふ</span><span class="star-sub">Morfu Umishio</span>
+    <!-- ROSTER ACTIVE -->
+    <div class="va-container">
+        <section class="va-section va-reveal">
+            <div class="va-section-header">
+                <div>
+                    <h2 class="va-section-title">所属タレント</h2>
+                    <span class="va-section-title-sub">Active Members</span>
+                </div>
+                <div class="va-divider"></div>
             </div>
-        </a>
-        <a href="characters/rhyme.html" class="star-node" style="top: 50%; left: 70%;">
-            <div class="star-core"></div>
-            <div class="star-label"><span class="star-name">紫電ライム</span><span class="star-sub">Rhyme Shiden</span></div>
-        </a>
 
-        <!-- Gen 4 Stars -->
-        <a href="characters/luna.html" class="star-node" style="top: 70%; left: 65%;">
-            <div class="star-core"></div>
-            <div class="star-label"><span class="star-name">ルナ・ゴールドレイン</span><span class="star-sub">Luna Goldrain</span>
-            </div>
-        </a>
-        <a href="characters/remu.html" class="star-node" style="top: 75%; left: 50%;">
-            <div class="star-core"></div>
-            <div class="star-label"><span class="star-name">綺音れむ</span><span class="star-sub">Remu Ayane</span></div>
-        </a>
-        <a href="characters/nonochi.html" class="star-node" style="top: 60%; left: 45%;">
-            <div class="star-core"></div>
-            <div class="star-label"><span class="star-name">兎ノ花ののち</span><span class="star-sub">Nonochi Unohana</span>
-            </div>
-        </a>
+            <!-- Members Grid -->
+            <div class="va-member-grid">
+                <!-- 狛犬うめ -->
+                <div class="va-member-card">
+                    <div class="va-card-inner">
+                        <div class="va-member-icon"><i class="fa-solid fa-dog"></i></div>
+                        <a href="characters/ume.html" class="va-member-name">狛犬うめ</a>
+                        <div class="va-member-read">Komainu Ume</div>
+                    </div>
+                </div>
 
-        <!-- Alumni / Distant Stars -->
-        <a href="characters/louise.html" class="star-node alumni" style="top: 80%; left: 25%;">
-            <div class="star-core"></div>
-            <div class="star-label"><span class="star-name">ルイズ・プリエール</span><span class="star-sub">Grad: 2024/03</span>
-            </div>
-        </a>
-        <a href="characters/abi.html" class="star-node alumni" style="top: 90%; left: 15%;">
-            <div class="star-core"></div>
-            <div class="star-label"><span class="star-name">月宵あび</span><span class="star-sub">Grad: 2024/04</span></div>
-        </a>
-        <a href="characters/awawa.html" class="star-node alumni" style="top: 75%; left: 10%;">
-            <div class="star-core"></div>
-            <div class="star-label"><span class="star-name">白星あわわ</span><span class="star-sub">Grad: 2025/03</span>
-            </div>
-        </a>
-        <a href="characters/eru.html" class="star-node alumni" style="top: 65%; left: 20%;">
-            <div class="star-core"></div>
-            <div class="star-label"><span class="star-name">七瀬える</span><span class="star-sub">Grad: 2025/06</span></div>
-        </a>
+                <!-- 涼月すい -->
+                <div class="va-member-card">
+                    <div class="va-card-inner">
+                        <div class="va-member-icon"><i class="fa-solid fa-moon"></i></div>
+                        <a href="characters/sui.html" class="va-member-name">涼月すい</a>
+                        <div class="va-member-read">Suzutsuki Sui</div>
+                    </div>
+                </div>
 
-    </main>
+                <!-- 綿宮あひる -->
+                <div class="va-member-card">
+                    <div class="va-card-inner">
+                        <div class="va-member-icon"><i class="fa-solid fa-feather"></i></div>
+                        <a href="characters/ahiru.html" class="va-member-name">綿宮あひる</a>
+                        <div class="va-member-read">Watamiya Ahiru</div>
+                    </div>
+                </div>
 
+                <!-- 飴望にぃな -->
+                <div class="va-member-card">
+                    <div class="va-card-inner">
+                        <div class="va-member-icon"><i class="fa-solid fa-candy-cane"></i></div>
+                        <a href="characters/niina.html" class="va-member-name">飴望にぃな</a>
+                        <div class="va-member-read">Amo Niina</div>
+                    </div>
+                </div>
+
+                <!-- セレナーデ・オックスブラッド -->
+                <div class="va-member-card">
+                    <div class="va-card-inner">
+                        <div class="va-member-icon"><i class="fa-solid fa-crown"></i></div>
+                        <a href="characters/serenade.html" class="va-member-name">セレナーデ<br>・オックスブラッド</a>
+                        <div class="va-member-read">Serenade Oxblood</div>
+                    </div>
+                </div>
+
+                <!-- 海汐もるふ -->
+                <div class="va-member-card">
+                    <div class="va-card-inner">
+                        <div class="va-member-icon"><i class="fa-solid fa-water"></i></div>
+                        <a href="characters/morph.html" class="va-member-name">海汐もるふ</a>
+                        <div class="va-member-read">Umishio Morph</div>
+                    </div>
+                </div>
+
+                <!-- 紫電ライム -->
+                <div class="va-member-card">
+                    <div class="va-card-inner">
+                        <div class="va-member-icon"><i class="fa-solid fa-bolt"></i></div>
+                        <a href="characters/lime.html" class="va-member-name">紫電ライム</a>
+                        <div class="va-member-read">Shiden Lime</div>
+                    </div>
+                </div>
+
+                <!-- 透乃おと -->
+                <div class="va-member-card">
+                    <div class="va-card-inner">
+                        <div class="va-member-icon"><i class="fa-solid fa-music"></i></div>
+                        <a href="characters/oto.html" class="va-member-name">透乃おと</a>
+                        <div class="va-member-read">Yukino Oto</div>
+                    </div>
+                </div>
+
+                <!-- ルナ・ゴールドレイン -->
+                <div class="va-member-card">
+                    <div class="va-card-inner">
+                        <div class="va-member-icon"><i class="fa-solid fa-cloud-showers-heavy"></i></div>
+                        <a href="characters/luna.html" class="va-member-name">ルナ<br>・ゴールドレイン</a>
+                        <div class="va-member-read">Luna Goldrain</div>
+                    </div>
+                </div>
+
+                <!-- 綺音れむ -->
+                <div class="va-member-card">
+                    <div class="va-card-inner">
+                        <div class="va-member-icon"><i class="fa-solid fa-bed"></i></div>
+                        <a href="characters/remu.html" class="va-member-name">綺音れむ</a>
+                        <div class="va-member-read">Ayane Remu</div>
+                    </div>
+                </div>
+
+                <!-- 兎ノ花ののち -->
+                <div class="va-member-card">
+                    <div class="va-card-inner">
+                        <div class="va-member-icon"><i class="fa-solid fa-carrot"></i></div>
+                        <a href="characters/nonochi.html" class="va-member-name">兎ノ花ののち</a>
+                        <div class="va-member-read">Unohana Nonochi</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ALUMNI -->
+        <section class="va-section va-reveal">
+            <div class="va-section-header">
+                <div>
+                    <h2 class="va-section-title">卒業生</h2>
+                    <span class="va-section-title-sub">Alumni Members</span>
+                </div>
+                <div class="va-divider"></div>
+            </div>
+
+            <!-- Alumni Grid -->
+            <div class="va-member-grid va-alumni-grid">
+                <!-- ルイズ・プリエール -->
+                <div class="va-member-card muted">
+                    <div class="va-card-inner">
+                        <a href="characters/louise.html" class="va-member-name">ルイズ<br>・プリエール</a>
+                        <div class="va-member-read">Louise Priere</div>
+                    </div>
+                </div>
+                <!-- 月宵あび -->
+                <div class="va-member-card muted">
+                    <div class="va-card-inner">
+                        <a href="characters/abi.html" class="va-member-name">月宵あび</a>
+                        <div class="va-member-read">Tsukiyoi Abi</div>
+                    </div>
+                </div>
+                <!-- 白星あわわ -->
+                <div class="va-member-card muted">
+                    <div class="va-card-inner">
+                        <a href="characters/awawa.html" class="va-member-name">白星あわわ</a>
+                        <div class="va-member-read">Shiraboshi Awawa</div>
+                    </div>
+                </div>
+                <!-- 七瀬える -->
+                <div class="va-member-card muted">
+                    <div class="va-card-inner">
+                        <a href="characters/eru.html" class="va-member-name">七瀬える</a>
+                        <div class="va-member-read">Nanase Eru</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="va-footer">
+        <div class="va-footer-logo">
+            Varium <span>(ぶいありうむっ！)</span>
+        </div>
+        <div class="va-footer-concept">CUTE × DREAM</div>
+        <p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with Varium.</p>
+    </footer>
+
+    <script src="varium_script.js"></script>
     <script>
-        // Start scroll position in the center
-        window.onload = () => {
-            const cosmos = document.querySelector('.cosmos');
-            window.scrollTo({
-                top: (cosmos.scrollHeight - window.innerHeight) / 2,
-                left: (cosmos.scrollWidth - window.innerWidth) / 2,
-                behavior: 'smooth'
-            });
-        };
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.va-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, i) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => entry.target.classList.add('active'), i * 80);
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+            reveals.forEach(el => observer.observe(el));
+        });
     </script>
+
 </body>
 
 </html>

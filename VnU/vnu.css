@@ -1,0 +1,616 @@
+/* =====================================================
+   V&U (Virtual & Universe) — Agency Archive CSS
+   Theme: Anime x Western Fusion, 3D Animation, K-Pop Neon
+   Colors: Cosmic Blue, Neon Pink, Deep Void Background
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;700&display=swap');
+
+:root {
+    --vu-blue: #3B82F6;
+    --vu-blue-light: #60A5FA;
+    --vu-pink: #EC4899;
+    --vu-pink-light: #F472B6;
+    --vu-bg: #09090B;
+    /* Zinc 950 essentially */
+    --vu-surface: #18181B;
+    /* Zinc 900 */
+    --vu-surface-hover: #27272A;
+    /* Zinc 800 */
+    --vu-white: #FFFFFF;
+    --vu-text: #F4F4F5;
+    --vu-text-dim: #A1A1AA;
+
+    --vu-gradient: linear-gradient(135deg, var(--vu-blue) 0%, var(--vu-pink) 100%);
+    --vu-gradient-hover: linear-gradient(135deg, var(--vu-blue-light) 0%, var(--vu-pink-light) 100%);
+
+    --vu-font-head: 'Outfit', sans-serif;
+    --vu-font-body: 'Plus Jakarta Sans', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--vu-bg);
+    color: var(--vu-text);
+    font-family: var(--vu-font-body);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+body::selection {
+    background: var(--vu-pink);
+    color: #fff;
+}
+
+/* Utilities */
+.vu-text-gradient {
+    background: var(--vu-gradient);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Background */
+.vu-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.vu-bg-shape {
+    position: absolute;
+    filter: blur(100px);
+    opacity: 0.15;
+    border-radius: 50%;
+    animation: floatShape 20s infinite alternate ease-in-out;
+}
+
+.vu-shape-1 {
+    width: 50vw;
+    height: 50vw;
+    background: var(--vu-blue);
+    top: -20vh;
+    left: -10vw;
+}
+
+.vu-shape-2 {
+    width: 40vw;
+    height: 40vw;
+    background: var(--vu-pink);
+    bottom: -10vh;
+    right: -5vw;
+    animation-direction: alternate-reverse;
+}
+
+.vu-bg-grid {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.5;
+}
+
+@keyframes floatShape {
+    0% {
+        transform: scale(1) translate(0);
+    }
+
+    100% {
+        transform: scale(1.2) translate(100px, 50px);
+    }
+}
+
+/* Navigation */
+.vu-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 4rem;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    border-bottom: 1px solid transparent;
+}
+
+.vu-nav.scrolled {
+    padding: 1rem 4rem;
+    background: rgba(9, 9, 11, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.vu-nav-back {
+    color: var(--vu-text-dim);
+    text-decoration: none;
+    font-family: var(--vu-font-head);
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s;
+}
+
+.vu-nav-back:hover {
+    color: var(--vu-white);
+}
+
+.vu-nav-logo {
+    font-family: var(--vu-font-head);
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+
+.vu-nav-tags {
+    display: flex;
+    gap: 10px;
+}
+
+.vu-tag {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-family: var(--vu-font-head);
+    font-size: 0.8rem;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--vu-text-dim);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Hero Section */
+.vu-hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 2rem 4rem;
+    position: relative;
+}
+
+.vu-hero-inner {
+    max-width: 1200px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    z-index: 2;
+    position: relative;
+}
+
+.vu-hero-subtitle {
+    font-family: var(--vu-font-head);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--vu-text-dim);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.vu-hero-title {
+    font-family: var(--vu-font-head);
+    font-size: clamp(3.5rem, 6vw, 5.5rem);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    color: var(--vu-white);
+    letter-spacing: -1px;
+}
+
+.vu-hero-desc {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: var(--vu-text-dim);
+    line-height: 1.8;
+    max-width: 500px;
+}
+
+/* 3D Visual Placeholder */
+.vu-hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.vu-3d-model-placeholder {
+    width: 350px;
+    height: 350px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+    animation: float3d 6s ease-in-out infinite alternate;
+}
+
+.vu-3d-ring {
+    position: absolute;
+    border: 2px solid;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.vu-3d-ring:nth-child(1) {
+    width: 100%;
+    height: 100%;
+    border-color: rgba(59, 130, 246, 0.5);
+    animation: spin3d 10s linear infinite;
+}
+
+.vu-3d-ring:nth-child(2) {
+    width: 75%;
+    height: 75%;
+    border-color: rgba(236, 72, 153, 0.5);
+    animation: spin3d 15s linear infinite reverse;
+    display: flex;
+}
+
+.vu-3d-ring::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #fff;
+}
+
+.vu-3d-core {
+    font-size: 4rem;
+    background: var(--vu-gradient);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: pulseCore 2s infinite alternate;
+}
+
+@keyframes float3d {
+    0% {
+        transform: translateY(-20px) rotateX(10deg);
+    }
+
+    100% {
+        transform: translateY(20px) rotateX(-10deg);
+    }
+}
+
+@keyframes spin3d {
+    100% {
+        transform: rotate3d(1, 1, 1, 360deg);
+    }
+}
+
+@keyframes pulseCore {
+    0% {
+        filter: drop-shadow(0 0 10px rgba(236, 72, 153, 0.5));
+        transform: scale(0.9);
+    }
+
+    100% {
+        filter: drop-shadow(0 0 30px rgba(59, 130, 246, 0.8));
+        transform: scale(1.1);
+    }
+}
+
+/* Scroll Down Indicator */
+.vu-scroll-down {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.6;
+}
+
+.vu-mouse {
+    width: 26px;
+    height: 40px;
+    border: 2px solid var(--vu-text-dim);
+    border-radius: 20px;
+    position: relative;
+}
+
+.vu-wheel {
+    width: 4px;
+    height: 8px;
+    background: var(--vu-text-dim);
+    border-radius: 2px;
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scrollWheel 2s infinite;
+}
+
+@keyframes scrollWheel {
+    0% {
+        top: 8px;
+        opacity: 1;
+    }
+
+    100% {
+        top: 24px;
+        opacity: 0;
+    }
+}
+
+/* Roster Section */
+.vu-main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem 100px;
+    position: relative;
+    z-index: 2;
+}
+
+.vu-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.vu-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.vu-section {
+    margin-bottom: 6rem;
+}
+
+.vu-section-header {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.vu-gen-badge {
+    display: inline-block;
+    font-family: var(--vu-font-head);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 6px 16px;
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--vu-blue-light);
+    border-radius: 30px;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.vu-section-title {
+    font-family: var(--vu-font-head);
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--vu-white);
+    letter-spacing: 1px;
+}
+
+/* Grid & Cards - 3D Tilt Applied in JS */
+.vu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+}
+
+.vu-grid-small {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1.5rem;
+}
+
+.vu-card {
+    background: var(--vu-surface);
+    border-radius: 12px;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    transform-style: preserve-3d;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.vu-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--vu-gradient);
+    opacity: 0;
+    border-radius: 12px;
+    transition: opacity 0.3s;
+    z-index: 0;
+}
+
+.vu-card-inner {
+    padding: 3rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    border-radius: 12px;
+    background: var(--vu-surface);
+    transition: transform 0.3s;
+    transform: translateZ(20px);
+}
+
+.vu-card-icon {
+    width: 70px;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: var(--vu-text-dim);
+    margin-bottom: 1.5rem;
+    transition: all 0.3s;
+    transform: translateZ(30px);
+}
+
+.vu-card-name {
+    font-family: var(--vu-font-head);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--vu-white);
+    margin-bottom: 0.5rem;
+    transition: color 0.3s;
+    transform: translateZ(40px);
+}
+
+/* Graduated State */
+.vu-card-graduated .vu-card-icon {
+    filter: grayscale(1);
+    opacity: 0.5;
+}
+
+.vu-card-graduated .vu-card-name {
+    color: var(--vu-text-dim);
+}
+
+.vu-grad-tag {
+    font-family: var(--vu-font-head);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #71717A;
+    border: 1px solid #3F3F46;
+    padding: 3px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    transform: translateZ(20px);
+}
+
+/* Card Hover */
+.vu-card:hover {
+    border-color: transparent;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.vu-card:hover::before {
+    opacity: 1;
+    filter: blur(10px);
+}
+
+.vu-card:hover .vu-card-icon {
+    background: var(--vu-gradient);
+    color: #fff;
+    border-color: transparent;
+    box-shadow: 0 10px 20px rgba(236, 72, 153, 0.3);
+}
+
+/* Ensure inner background covers the glow slightly on hover to create border effect */
+.vu-card:hover .vu-card-inner {
+    background: rgba(24, 24, 27, 0.95);
+}
+
+/* Footer */
+.vu-footer {
+    padding: 4rem 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    margin-top: 50px;
+}
+
+.vu-footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.vu-footer-logo {
+    font-family: var(--vu-font-head);
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.vu-footer-socials {
+    display: flex;
+    gap: 15px;
+}
+
+.vu-footer-socials i {
+    width: 40px;
+    height: 40px;
+    background: var(--vu-surface);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: var(--vu-text);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.vu-footer-socials i:hover {
+    background: var(--vu-white);
+    color: var(--vu-bg);
+}
+
+.vu-footer-copy {
+    font-size: 0.8rem;
+    color: var(--vu-text-dim);
+}
+
+@media (max-width: 900px) {
+    .vu-hero-inner {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+        text-align: center;
+    }
+
+    .vu-hero-desc {
+        margin: 0 auto;
+    }
+
+    .vu-hero-visual {
+        order: -1;
+    }
+}
+
+@media (max-width: 600px) {
+    .vu-nav {
+        padding: 1.2rem 2rem;
+    }
+
+    .vu-nav.scrolled {
+        padding: 1rem 2rem;
+    }
+
+    .vu-nav-tags {
+        display: none;
+    }
+
+    .vu-hero-title {
+        font-size: 3rem;
+    }
+}

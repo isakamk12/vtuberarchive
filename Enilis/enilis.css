@@ -1,0 +1,509 @@
+/* =====================================================
+   ENILIS — Agency Archive CSS
+   Theme: Multi-Prism Nexus
+   Colors: Prism White, Brave Magenta, Ethereal Violet
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700;900&family=Cinzel:wght@700&display=swap');
+
+:root {
+    --e-bg: #FFFFFF;
+    --e-surface: #F8F9FA;
+    --e-accent: #E91E63;
+    /* Brave Magenta */
+    --e-violet: #7C4DFF;
+    --e-blue: #03A9F4;
+    --e-text: #2C3E50;
+    --e-text-muted: #7F8C8D;
+    --e-glass: rgba(255, 255, 255, 0.8);
+
+    --font-heading: 'Montserrat', 'Noto Sans JP', sans-serif;
+    --font-body: 'Noto Sans JP', sans-serif;
+    --font-fantasy: 'Cinzel', serif;
+}
+
+/* Reset & Base */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--e-bg);
+    color: var(--e-text);
+    font-family: var(--font-body);
+    line-height: 1.8;
+    overflow-x: hidden;
+}
+
+/* Background Shards */
+.enilis-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    background: linear-gradient(135deg, #fff 0%, #f0f4f8 100%);
+}
+
+.prism-shard {
+    position: absolute;
+    filter: blur(60px);
+    opacity: 0.15;
+    z-index: 1;
+}
+
+.shard-1 {
+    top: -10%;
+    left: -10%;
+    width: 50%;
+    height: 50%;
+    background: var(--e-accent);
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    animation: morph 12s infinite alternate;
+}
+
+.shard-2 {
+    bottom: -10%;
+    right: -10%;
+    width: 50%;
+    height: 50%;
+    background: var(--e-blue);
+    border-radius: 60% 40% 30% 70% / 50% 60% 40% 60%;
+    animation: morph 15s infinite alternate-reverse;
+}
+
+.shard-3 {
+    top: 40%;
+    left: 30%;
+    width: 30%;
+    height: 30%;
+    background: var(--e-violet);
+    opacity: 0.1;
+    animation: float 20s infinite linear;
+}
+
+@keyframes morph {
+    0% {
+        border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    }
+
+    100% {
+        border-radius: 60% 40% 30% 70% / 50% 60% 40% 60%;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(100px, -50px) rotate(360deg);
+    }
+}
+
+/* Navigation */
+.enilis-nav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: var(--e-glass);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02);
+}
+
+.enilis-nav-back {
+    color: var(--e-text-muted);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s;
+}
+
+.enilis-nav-back:hover {
+    color: var(--e-accent);
+}
+
+.enilis-nav-logo {
+    font-family: var(--font-heading);
+    font-weight: 900;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    color: var(--e-text);
+}
+
+.enilis-nav-links a {
+    text-decoration: none;
+    color: var(--e-text);
+    font-weight: 700;
+    font-size: 0.8rem;
+    margin-left: 2rem;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.enilis-nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--e-accent);
+    transition: width 0.3s;
+}
+
+.enilis-nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Hero */
+.enilis-hero {
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 10%;
+    position: relative;
+}
+
+.enilis-hero-content {
+    max-width: 900px;
+}
+
+.enilis-hero-label {
+    font-weight: 900;
+    font-size: 0.85rem;
+    color: var(--e-accent);
+    letter-spacing: 5px;
+    margin-bottom: 1.5rem;
+}
+
+.enilis-main-title {
+    font-family: var(--font-heading);
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 900;
+    line-height: 0.9;
+    margin-bottom: 2rem;
+    color: #1a1a1a;
+}
+
+.text-accent {
+    -webkit-text-stroke: 1px #1a1a1a;
+    color: transparent;
+}
+
+.enilis-hero-desc {
+    font-size: 1.15rem;
+    color: var(--e-text-muted);
+    margin: 0 auto 3rem;
+    max-width: 700px;
+}
+
+.enilis-hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.enilis-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-num {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #1a1a1a;
+    border-bottom: 4px solid var(--e-accent);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--e-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Main Content */
+.enilis-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 5%;
+}
+
+.section-group {
+    margin-bottom: 8rem;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.section-title i {
+    color: var(--e-accent);
+    font-size: 0.8em;
+}
+
+.section-subtitle {
+    font-weight: 700;
+    color: var(--e-text-muted);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+}
+
+/* Uniraid! */
+.uniraid-intro {
+    text-align: center;
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    color: var(--e-text-muted);
+}
+
+.guild-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.guild-card {
+    background: #fff;
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    text-align: center;
+}
+
+.guild-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.06);
+}
+
+.guild-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--e-surface);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 1.8rem;
+    color: var(--e-accent);
+    transition: background 0.3s, color 0.3s;
+}
+
+.guild-card:hover .guild-icon {
+    background: var(--e-accent);
+    color: #fff;
+}
+
+.guild-name {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+.guild-desc {
+    color: var(--e-text-muted);
+    font-size: 0.95rem;
+}
+
+/* VLiver Section */
+.vliver-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.tab-btn {
+    padding: 12px 30px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+.tab-btn.active {
+    background: var(--e-accent);
+    color: #fff;
+    border-color: var(--e-accent);
+    box-shadow: 0 10px 20px rgba(233, 30, 99, 0.2);
+}
+
+.roster-panel {
+    display: none;
+    background: #fff;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.04);
+}
+
+.roster-panel.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.label-desc {
+    font-weight: 700;
+    color: var(--e-accent);
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding-bottom: 1rem;
+}
+
+.talent-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.talent-list span {
+    padding: 8px 16px;
+    background: var(--e-surface);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--e-text);
+    transition: all 0.2s;
+}
+
+.talent-list span:hover {
+    background: #eee;
+    transform: scale(1.05);
+}
+
+/* Corporate Timeline */
+.timeline {
+    border-left: 2px solid var(--e-accent);
+    padding-left: 2rem;
+    margin-top: 3rem;
+}
+
+.timeline-item {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: calc(-2rem - 6px);
+    top: 10px;
+    width: 10px;
+    height: 10px;
+    background: var(--e-accent);
+    border-radius: 50%;
+}
+
+.timeline-item .time {
+    font-weight: 900;
+    color: var(--e-accent);
+    font-size: 1.1rem;
+}
+
+.timeline-item .event {
+    color: var(--e-text-muted);
+}
+
+/* Footer */
+.enilis-footer {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 5rem 5%;
+    text-align: center;
+}
+
+.footer-logo {
+    font-family: var(--font-heading);
+    font-weight: 900;
+    font-size: 2rem;
+    letter-spacing: 5px;
+    margin-bottom: 1rem;
+}
+
+.footer-logo .accent {
+    color: var(--e-accent);
+}
+
+.enilis-footer p {
+    font-size: 0.85rem;
+    opacity: 0.5;
+}
+
+/* Reveal Animations */
+.enilis-reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.enilis-reveal.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .enilis-hero-stats {
+        gap: 1.5rem;
+    }
+
+    .stat-num {
+        font-size: 1.8rem;
+    }
+
+    .enilis-main-title {
+        font-size: 4rem;
+    }
+}

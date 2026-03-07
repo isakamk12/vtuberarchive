@@ -1,0 +1,561 @@
+/* =====================================================
+   Mythic Talent — Agency Archive CSS
+   Theme: Professional Management, E-sports, Premium
+   Colors: Mythic Gold, Executive Navy, Pure White
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Montserrat:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
+
+:root {
+    --my-bg: #0A1128;
+    /* Executive Navy / Deep Blue */
+    --my-surface: #141D38;
+    /* Slightly lighter navy */
+    --my-surface-hover: #1E2B50;
+    --my-gold: #D4AF37;
+    /* Mythic Gold */
+    --my-gold-light: #F3E5AB;
+    --my-white: #FFFFFF;
+    --my-text: #E2E8F0;
+    --my-text-dim: #94A3B8;
+
+    --my-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    --my-glow-gold: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--my-bg);
+    color: var(--my-text);
+    font-family: 'Montserrat', 'Noto Sans JP', sans-serif;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+body::selection {
+    background: var(--my-gold);
+    color: #000;
+}
+
+/* Backgrounds */
+.my-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.my-bg-gradient {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.08) 0%, transparent 60%);
+}
+
+.my-bg-pattern {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+/* Sparks/Stars Effect */
+.my-sparks {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    opacity: 0.5;
+}
+
+.my-spark {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: var(--my-gold);
+    border-radius: 50%;
+    box-shadow: var(--my-glow-gold);
+    animation: floatUp linear infinite;
+    opacity: 0;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(100vh) scale(0);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        transform: translateY(-50px) scale(0);
+        opacity: 0;
+    }
+}
+
+/* NAV */
+.my-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 3rem;
+    background: rgba(10, 17, 40, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    transition: all 0.3s;
+}
+
+.my-nav.scrolled {
+    padding: 0.8rem 3rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    background: rgba(10, 17, 40, 0.98);
+}
+
+.my-nav-back {
+    color: var(--my-gold-light);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s;
+    letter-spacing: 1px;
+}
+
+.my-nav-back:hover {
+    color: var(--my-gold);
+}
+
+.my-nav-logo {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--my-gold);
+    letter-spacing: 3px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.my-logo-icon {
+    font-size: 1.4rem;
+}
+
+.my-text-light {
+    color: var(--my-white);
+}
+
+.my-nav-tag {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--my-gold-light);
+    border: 1px solid var(--my-gold);
+    padding: 4px 12px;
+    letter-spacing: 2px;
+    border-radius: 2px;
+}
+
+/* HERO */
+.my-hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 2rem 4rem;
+    position: relative;
+    text-align: center;
+}
+
+.my-hero-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.my-eyebrow {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--my-gold);
+    letter-spacing: 4px;
+    margin-bottom: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.my-eyebrow::before,
+.my-eyebrow::after {
+    content: '';
+    width: 40px;
+    height: 1px;
+    background: var(--my-gold);
+    opacity: 0.5;
+}
+
+.my-hero-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(4rem, 10vw, 7rem);
+    font-weight: 700;
+    color: var(--my-white);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    letter-spacing: 8px;
+    text-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.my-hero-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    font-weight: 500;
+    color: var(--my-gold);
+    margin-bottom: 3rem;
+    letter-spacing: 3px;
+}
+
+.my-hero-concept {
+    background: rgba(20, 29, 56, 0.6);
+    backdrop-filter: blur(5px);
+    padding: 2.5rem;
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    border-radius: 4px;
+    box-shadow: var(--my-shadow);
+}
+
+.my-hero-concept p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #CBD5E1;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.my-hero-concept p:last-child {
+    margin-bottom: 0;
+}
+
+/* SERVICES STRIP */
+.my-services {
+    background: var(--my-surface);
+    border-top: 1px solid rgba(212, 175, 55, 0.1);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+    padding: 3rem 0;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.my-service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.my-service-item {
+    text-align: center;
+    padding: 1.5rem;
+    border: 1px dashed rgba(255, 255, 255, 0.05);
+    transition: all 0.3s;
+    border-radius: 4px;
+}
+
+.my-service-item:hover {
+    background: rgba(212, 175, 55, 0.05);
+    border-color: rgba(212, 175, 55, 0.3);
+    transform: translateY(-5px);
+}
+
+.my-service-item i {
+    font-size: 2rem;
+    color: var(--my-gold);
+    margin-bottom: 1rem;
+}
+
+.my-service-item h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--my-white);
+    margin-bottom: 0.5rem;
+}
+
+.my-service-item p {
+    font-size: 0.85rem;
+    color: var(--my-text-dim);
+}
+
+/* ROSTER SECTION */
+.my-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 4rem 2rem 100px;
+    position: relative;
+    z-index: 2;
+}
+
+.my-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.my-section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.my-section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.my-section-title {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--my-white);
+    letter-spacing: 4px;
+    margin-bottom: 0.5rem;
+}
+
+.my-section-desc {
+    font-size: 1rem;
+    color: var(--my-gold-light);
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.my-divider {
+    height: 1px;
+    width: 100px;
+    background: var(--my-gold);
+    margin: 0 auto;
+    opacity: 0.5;
+}
+
+/* Filter & Search Dashboard */
+.my-filter-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    background: var(--my-surface);
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.my-search-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    min-width: 250px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    transition: border-color 0.3s;
+}
+
+.my-search-box:focus-within {
+    border-color: var(--my-gold);
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.1);
+}
+
+.my-search-box i {
+    color: var(--my-gold);
+}
+
+.my-search-box input {
+    background: transparent;
+    border: none;
+    color: var(--my-white);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    width: 100%;
+    outline: none;
+}
+
+.my-search-box input::placeholder {
+    color: #64748B;
+}
+
+.my-talent-count {
+    font-family: 'Cinzel', serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--my-text-dim);
+    letter-spacing: 1px;
+}
+
+.my-talent-count span {
+    color: var(--my-gold);
+    font-size: 1.1rem;
+}
+
+/* MASSIVE GRID FOR 40+ CARDS */
+/* We make these smaller and sleeker to accommodate many */
+.my-roster-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.my-talent-card {
+    background: var(--my-surface);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    border-radius: 4px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Left subtle gold accent */
+.my-talent-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--my-gold);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.my-talent-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--my-white);
+    margin-bottom: 0.5rem;
+    transition: color 0.3s;
+    word-break: break-word;
+    line-height: 1.2;
+}
+
+.my-talent-tags {
+    font-size: 0.75rem;
+    color: var(--my-text-dim);
+    display: block;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 0.5rem;
+    margin-top: auto;
+}
+
+/* HOVER */
+.my-talent-card:hover {
+    transform: translateY(-4px);
+    background: var(--my-surface-hover);
+    border-color: rgba(212, 175, 55, 0.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.my-talent-card:hover::before {
+    opacity: 1;
+}
+
+.my-talent-card:hover .my-talent-name {
+    color: var(--my-gold);
+}
+
+.my-talent-card:hover .my-talent-tags {
+    color: #CBD5E1;
+}
+
+.my-no-results {
+    text-align: center;
+    padding: 4rem;
+    color: var(--my-text-dim);
+    display: none;
+    font-size: 1.1rem;
+    background: var(--my-surface);
+    border-radius: 4px;
+    border: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+/* FOOTER */
+.my-footer {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: #050914;
+    border-top: 1px solid rgba(212, 175, 55, 0.1);
+    position: relative;
+    z-index: 2;
+    margin-top: 50px;
+}
+
+.my-footer-logo {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--my-gold);
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+}
+
+.my-footer-company {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    color: var(--my-gold-light);
+    letter-spacing: 3px;
+    margin-bottom: 2rem;
+}
+
+.my-footer p {
+    font-size: 0.75rem;
+    color: #475569;
+}
+
+@media (max-width: 900px) {
+    .my-hero-title {
+        font-size: 3.5rem;
+    }
+
+    .my-filter-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .my-search-box {
+        width: 100%;
+    }
+
+    .my-talent-count {
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .my-nav-tag {
+        display: none;
+    }
+
+    .my-roster-grid {
+        grid-template-columns: 1fr;
+    }
+}

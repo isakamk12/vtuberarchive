@@ -1,0 +1,484 @@
+/* =====================================================
+   VBOX (ぶいぼっくす) — Agency Archive CSS
+   Theme: Adventure, Journey, Map, Parchment
+   Colors: Earthy Brown, Forest Green, Antique Gold
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Shippori+Mincho:wght@500;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap');
+
+:root {
+    --vb-brown: #4a3b32;
+    /* Deep Earth Brown */
+    --vb-brown-light: #7b6352;
+    --vb-green: #2d5a27;
+    /* Forest Green */
+    --vb-gold: #c5a059;
+    /* Antique Gold */
+    --vb-parchment: #f4eaec;
+    /* Light base */
+    --vb-paper: #eae0cd;
+    /* Slightly darker parchment */
+    --vb-text: #3e3229;
+    --vb-shadow: 0 10px 30px rgba(74, 59, 50, 0.15);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--vb-paper);
+    color: var(--vb-text);
+    font-family: 'Shippori Mincho', 'Noto Sans JP', serif;
+    overflow-x: hidden;
+    line-height: 1.8;
+}
+
+/* Backgrounds */
+.vb-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+    background-color: var(--vb-parchment);
+}
+
+.vb-bg-map {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(197, 160, 89, 0.1) 2px, transparent 2px), radial-gradient(rgba(197, 160, 89, 0.1) 2px, transparent 2px);
+    background-size: 60px 60px;
+    background-position: 0 0, 30px 30px;
+    opacity: 0.8;
+}
+
+.vb-bg-map::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M10,90 L90,10" stroke="%23c5a059" stroke-width="0.5" stroke-dasharray="2,4" fill="none"/></svg>') repeat;
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.vb-bg-vignette {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, transparent 40%, rgba(74, 59, 50, 0.15) 100%);
+    mix-blend-mode: multiply;
+}
+
+/* NAV */
+.vb-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background: rgba(244, 234, 236, 0.9);
+    backdrop-filter: blur(8px);
+    border-bottom: 2px solid var(--vb-gold);
+    box-shadow: 0 2px 10px rgba(74, 59, 50, 0.1);
+}
+
+.vb-nav-back {
+    color: var(--vb-brown);
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s;
+}
+
+.vb-nav-back:hover {
+    color: var(--vb-gold);
+}
+
+.vb-nav-logo {
+    font-family: 'Cinzel', serif;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--vb-brown);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.vb-logo-icon {
+    color: var(--vb-gold);
+}
+
+.vb-nav-logo span {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--vb-brown-light);
+}
+
+.vb-nav-tag {
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    color: var(--vb-green);
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    border: 1px solid var(--vb-green);
+    padding: 4px 12px;
+    border-radius: 4px;
+}
+
+/* HERO */
+.vb-hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 2rem 4rem;
+    position: relative;
+    text-align: center;
+}
+
+.vb-hero-bg-text {
+    position: absolute;
+    font-family: 'Cinzel', serif;
+    font-size: clamp(6rem, 20vw, 15rem);
+    font-weight: 800;
+    color: rgba(197, 160, 89, 0.1);
+    pointer-events: none;
+    user-select: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.vb-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"><rect width="10" height="10" fill="%23f4eaec" fill-opacity="0.95"/></svg>');
+    padding: 4rem;
+    border: 2px solid var(--vb-gold);
+    outline: 1px solid var(--vb-gold);
+    outline-offset: -8px;
+    box-shadow: 10px 10px 20px rgba(74, 59, 50, 0.2);
+    position: relative;
+}
+
+.vb-hero-content::before,
+.vb-hero-content::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--vb-gold);
+}
+
+.vb-hero-content::before {
+    top: -10px;
+    left: -10px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.vb-hero-content::after {
+    bottom: -10px;
+    right: -10px;
+    border-left: none;
+    border-top: none;
+}
+
+.vb-eyebrow {
+    font-family: 'Cinzel', serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--vb-green);
+    letter-spacing: 0.2em;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.vb-hero-name {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    font-weight: 800;
+    color: var(--vb-brown);
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 0 var(--vb-gold);
+    letter-spacing: 0.05em;
+}
+
+.vb-hero-tagline {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--vb-brown-light);
+    margin-bottom: 2.5rem;
+    letter-spacing: 0.05em;
+}
+
+.vb-hero-concept {
+    font-size: 1rem;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 500;
+    color: var(--vb-text);
+    max-width: 600px;
+    margin-bottom: 3rem;
+    text-align: justify;
+    text-align-last: center;
+    line-height: 2;
+}
+
+.vb-hero-stats {
+    display: flex;
+    gap: 4rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-top: 1px solid var(--vb-gold);
+    padding-top: 2rem;
+    width: 80%;
+}
+
+.vb-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vb-stat-value {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--vb-green);
+    line-height: 1;
+}
+
+.vb-stat-icon {
+    font-size: 2rem;
+    color: var(--vb-green);
+}
+
+.vb-stat-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--vb-brown-light);
+    letter-spacing: 0.15em;
+    margin-top: 8px;
+}
+
+/* SECTIONS */
+.vb-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 2rem 100px;
+}
+
+.vb-section {
+    margin-bottom: 6rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.vb-section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.vb-section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4rem;
+    text-align: center;
+    position: relative;
+}
+
+.vb-section-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--vb-brown);
+    margin-bottom: 5px;
+}
+
+.vb-section-title-sub {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--vb-gold);
+    letter-spacing: 0.2em;
+}
+
+.vb-divider {
+    width: 100px;
+    height: 1px;
+    background: var(--vb-gold);
+    margin-top: 1.5rem;
+    position: relative;
+}
+
+.vb-divider::before {
+    content: '✧';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--vb-brown-light);
+    background: var(--vb-paper);
+    padding: 0 10px;
+    font-size: 0.8rem;
+}
+
+/* GRID & CARDS */
+.vb-member-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 3rem;
+}
+
+.vb-member-card {
+    position: relative;
+    background: var(--vb-parchment);
+    padding: 1.5rem;
+    box-shadow: var(--vb-shadow);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+.vb-card-frame {
+    position: absolute;
+    inset: 10px;
+    border: 1px solid var(--vb-gold);
+    opacity: 0.6;
+    transition: border-width 0.3s;
+    pointer-events: none;
+}
+
+.vb-card-inner {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+    width: 100%;
+    border: 1px dashed var(--vb-brown-light);
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.vb-member-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: var(--vb-brown);
+    color: var(--vb-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5), 0 5px 15px rgba(74, 59, 50, 0.2);
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.vb-member-name {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--vb-brown);
+    text-decoration: none;
+    margin-bottom: 6px;
+    transition: color 0.3s;
+}
+
+.vb-member-read {
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--vb-green);
+    letter-spacing: 0.05em;
+}
+
+.vb-member-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(74, 59, 50, 0.3);
+}
+
+.vb-member-card:hover .vb-card-frame {
+    border-width: 2px;
+    opacity: 1;
+}
+
+.vb-member-card:hover .vb-member-icon {
+    transform: rotate(15deg) scale(1.1);
+    background: var(--vb-green);
+}
+
+.vb-member-card:hover .vb-member-name {
+    color: var(--vb-gold);
+}
+
+/* FOOTER */
+.vb-footer {
+    border-top: 1px solid var(--vb-gold);
+    padding: 4rem 2rem;
+    text-align: center;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"><rect width="10" height="10" fill="%23f4eaec" fill-opacity="0.9"/></svg>');
+    position: relative;
+}
+
+.vb-footer-logo {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--vb-brown);
+    margin-bottom: 1rem;
+}
+
+.vb-footer-logo span {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1rem;
+    color: var(--vb-brown-light);
+}
+
+.vb-footer p {
+    font-size: 0.8rem;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 500;
+    color: #888;
+}
+
+@media (max-width: 768px) {
+    .vb-hero-content {
+        padding: 3rem 1.5rem;
+        width: 90%;
+    }
+
+    .vb-nav-tag {
+        display: none;
+    }
+
+    .vb-hero-stats {
+        gap: 2rem;
+        width: 100%;
+    }
+}

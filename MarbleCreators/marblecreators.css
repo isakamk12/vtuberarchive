@@ -1,0 +1,510 @@
+/* =====================================================
+   MARBLE CREATORS — Agency Archive CSS
+   Theme: Glassmorphism, Animated Gradients, Fluid Shapes
+   Colors: Vibrant mix of Pink, Blue, Purple, Orange
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap');
+
+:root {
+    --mc-pink: #FF5E7E;
+    --mc-blue: #00BFFF;
+    --mc-purple: #9D4EDD;
+    --mc-orange: #FFA500;
+    --mc-bg: #f8fbff;
+    --mc-text: #2c3e50;
+    --mc-glass-bg: rgba(255, 255, 255, 0.7);
+    --mc-glass-border: rgba(255, 255, 255, 0.5);
+    --mc-glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--mc-bg);
+    color: var(--mc-text);
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    overflow-x: hidden;
+    line-height: 1.7;
+}
+
+/* Fluid Animated Background (Marble Effect) */
+.mc-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    background: #fff;
+}
+
+.mc-blob {
+    position: absolute;
+    filter: blur(90px);
+    opacity: 0.6;
+    animation: floatBlob 20s infinite alternate ease-in-out;
+    border-radius: 50%;
+}
+
+.mc-blob-1 {
+    top: -10%;
+    left: -10%;
+    width: 50vw;
+    height: 50vw;
+    background: var(--mc-pink);
+}
+
+.mc-blob-2 {
+    bottom: -10%;
+    right: -10%;
+    width: 60vw;
+    height: 60vw;
+    background: var(--mc-blue);
+    animation-delay: -5s;
+}
+
+.mc-blob-3 {
+    top: 40%;
+    left: 60%;
+    width: 40vw;
+    height: 40vw;
+    background: var(--mc-purple);
+    animation-delay: -10s;
+}
+
+.mc-blob-4 {
+    bottom: 20%;
+    left: 10%;
+    width: 45vw;
+    height: 45vw;
+    background: var(--mc-orange);
+    animation-delay: -15s;
+}
+
+.mc-bg-glass {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(40px);
+}
+
+/* Softens the blobs */
+
+@keyframes floatBlob {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    33% {
+        transform: translate(10vw, -10vh) scale(1.1);
+    }
+
+    66% {
+        transform: translate(-5vw, 15vh) scale(0.9);
+    }
+
+    100% {
+        transform: translate(-10vw, -5vh) scale(1.2);
+    }
+}
+
+/* NAV - Glassmorphism */
+.mc-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 2.5rem;
+    background: var(--mc-glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--mc-glass-border);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+}
+
+.mc-nav-back {
+    color: var(--mc-text);
+    text-decoration: none;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s;
+}
+
+.mc-nav-back:hover {
+    color: var(--mc-pink);
+}
+
+.mc-nav-logo {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: var(--mc-text);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    letter-spacing: -0.5px;
+}
+
+/* CSS Marble Icon */
+.mc-logo-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--mc-pink), var(--mc-blue), var(--mc-purple), var(--mc-orange));
+    background-size: 200% 200%;
+    animation: gradientShift 5s ease infinite;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.mc-nav-tag {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.75rem;
+    color: #fff;
+    background: linear-gradient(90deg, var(--mc-pink), var(--mc-purple));
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    padding: 6px 16px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(157, 78, 221, 0.3);
+}
+
+/* HERO */
+.mc-hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 2rem 4rem;
+    position: relative;
+    text-align: center;
+}
+
+.mc-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--mc-glass-bg);
+    padding: 4rem;
+    border-radius: 30px;
+    border: 1px solid var(--mc-glass-border);
+    box-shadow: var(--mc-glass-shadow);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.mc-eyebrow {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 900;
+    color: var(--mc-blue);
+    letter-spacing: 0.15em;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0, 191, 255, 0.1);
+    padding: 6px 16px;
+    border-radius: 20px;
+}
+
+.mc-hero-name {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(4rem, 10vw, 6rem);
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -2px;
+    background: linear-gradient(135deg, var(--mc-pink), var(--mc-purple), var(--mc-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.1));
+}
+
+.mc-hero-tagline {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--mc-text);
+    margin-bottom: 2.5rem;
+}
+
+.mc-hero-concept {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #555;
+    max-width: 650px;
+    margin-bottom: 4rem;
+    text-align: justify;
+    text-align-last: center;
+    line-height: 2;
+}
+
+.mc-hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    padding-top: 3rem;
+}
+
+.mc-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mc-stat-value {
+    font-family: 'Outfit', sans-serif;
+    font-size: 3rem;
+    font-weight: 300;
+    color: var(--mc-text);
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.mc-stat-value i {
+    color: var(--mc-pink);
+    font-size: 2.5rem;
+}
+
+.mc-stat-label {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 900;
+    color: #888;
+    letter-spacing: 0.15em;
+}
+
+/* SECTIONS */
+.mc-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 2rem 100px;
+}
+
+.mc-section {
+    margin-bottom: 6rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.mc-section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mc-section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.mc-section-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--mc-text);
+    margin-bottom: 5px;
+    letter-spacing: -1px;
+}
+
+.mc-section-title-sub {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--mc-purple);
+    letter-spacing: 0.3em;
+}
+
+/* GRID & CARDS - Glassmorphism */
+.mc-member-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 3rem;
+    justify-content: center;
+}
+
+.mc-member-card {
+    background: var(--mc-glass-bg);
+    border: 1px solid var(--mc-glass-border);
+    border-radius: 24px;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    box-shadow: var(--mc-glass-shadow);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    overflow: hidden;
+    display: block;
+}
+
+.mc-card-inner {
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    height: 100%;
+}
+
+.mc-member-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.4s, box-shadow 0.4s;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.mc-member-name {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: var(--mc-text);
+    text-decoration: none;
+    margin-bottom: 4px;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.mc-member-name span {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #888;
+}
+
+.mc-member-read {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #999;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.mc-member-desc {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #666;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* HOVER EFFECTS */
+.mc-member-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(31, 38, 135, 0.2);
+    background: rgba(255, 255, 255, 0.85);
+}
+
+.mc-member-card:hover .mc-member-icon {
+    transform: scale(1.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.mc-member-card:hover .mc-member-name {
+    background: linear-gradient(90deg, var(--mc-pink), var(--mc-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* FOOTER */
+.mc-footer {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid var(--mc-glass-border);
+    position: relative;
+}
+
+.mc-footer-logo {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--mc-text);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.mc-footer-company {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--mc-blue);
+    letter-spacing: 0.2em;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.mc-footer p {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #888;
+}
+
+@media (max-width: 768px) {
+    .mc-hero-content {
+        padding: 3rem 1.5rem;
+    }
+
+    .mc-nav-tag {
+        display: none;
+    }
+
+    .mc-hero-stats {
+        gap: 2rem;
+    }
+
+    .mc-blob {
+        filter: blur(60px);
+    }
+}

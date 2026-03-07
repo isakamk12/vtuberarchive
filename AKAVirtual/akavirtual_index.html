@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AKA Virtual | VTuber Archive</title>
-    <meta name="description" content="AKA Virtualの非公式ファンサイト。テクノロジー企業兼VTuber事務所の所属タレント・概要をまとめたアーカイブ。">
+    <meta name="description"
+        content="Global VTuber Agency 'AKA Virtual' unofficial fan archive. Featuring multilingual talents like Akemi Nekomachi, Juliana Shafira, and more.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Inter:wght@400;600;800;900&family=Noto+Sans+JP:wght@400;700;900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Jura:wght@400;500;600;700&family=Rajdhani:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="akavirtual.css">
@@ -18,226 +19,198 @@
 <body>
 
     <div class="ak-bg">
-        <!-- Tech grid and lines in CSS -->
+        <canvas id="ak-hex-canvas"></canvas>
+        <div class="ak-bg-overlay"></div>
     </div>
 
     <nav class="ak-nav">
         <a href="../index.html" class="ak-nav-back">
-            <i class="fa-solid fa-chevron-left"></i> [ESC] return
+            <i class="fa-solid fa-angle-left"></i> SYSTEM.RETURN()
         </a>
-        <div class="ak-nav-logo">AKA_<span>VIRTUAL</span></div>
-        <div class="ak-nav-tag">Tech & VTuber Agency</div>
+        <div class="ak-nav-logo">
+            AKA <span class="ak-text-cyan">VIRTUAL</span>
+        </div>
+        <div class="ak-nav-lang">
+            <span class="ak-lang-chip active">EN</span>
+            <span class="ak-lang-chip">ID</span>
+            <span class="ak-lang-chip">JP</span>
+        </div>
     </nav>
 
     <!-- HERO -->
     <section class="ak-hero">
-        <div class="ak-hero-bg-text">&lt;/AKA&gt;</div>
-        <div class="ak-hero-content">
-            <div class="ak-eyebrow">// VIRTUAL ENTERTAINMENT AGENCY</div>
-            <h1 class="ak-hero-name">AKA_<span>VIRTUAL</span></h1>
-            <p class="ak-hero-tagline">“テクノロジーと1mmのひらめきで新しいストーリーを描き続ける”</p>
-            <div class="ak-hero-concept">
-                日本のコンテンツやキャラクターをテクノロジーの力で世界中に展開し、世界中の人々が夢中になれる「新しい居場所の創造」を目指すテクノロジーカンパニー兼VTuberプロダクション。英語やインドネシア語など多言語で配信を行うグローバルなタレントが多数所属しています。
-            </div>
-            <div class="ak-hero-stats">
-                <div class="ak-stat">
-                    <div class="ak-stat-value">27</div>
-                    <div class="ak-stat-label">TALENTS</div>
+        <div class="ak-hero-inner">
+            <div class="ak-hero-content">
+                <div class="ak-eyebrow">
+                    <span class="ak-glitch" data-text="MISSION: NEW STORIES">MISSION: NEW STORIES</span>
                 </div>
-                <div class="ak-stat">
-                    <div class="ak-stat-value">GLOBAL</div>
-                    <div class="ak-stat-label">REACH</div>
+                <h1 class="ak-hero-title">
+                    <span class="ak-text-red">AKA</span>
+                    <br>VIRTUAL
+                </h1>
+                <p class="ak-hero-tagline">Technology + 1mm of Inspiration.</p>
+
+                <div class="ak-hero-concept">
+                    <div class="ak-concept-line"></div>
+                    <p>「テクノロジーと1mmのひらめきで新しいストーリーを描き続ける」をミッションに掲げ、日本のコンテンツやキャラクターを世界中に展開している企業・エージェント。</p>
+                    <p>所属タレントの多くが英語（EN）とインドネシア語（ID）の両方を話すマルチリンガルであり、インドネシア語圏を中心にグローバルなファンに向けて配信を行っています。</p>
+
+                    <div class="ak-tech-stats">
+                        <div class="ak-stat">
+                            <span class="ak-stat-value">MULTI</span>
+                            <span class="ak-stat-label">Language Support</span>
+                        </div>
+                        <div class="ak-stat">
+                            <span class="ak-stat-value">GLOBAL</span>
+                            <span class="ak-stat-label">Audience Reach</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ak-hero-visual">
+                <div class="ak-holo-globe">
+                    <div class="ak-globe-ring ak-ring-1"></div>
+                    <div class="ak-globe-ring ak-ring-2"></div>
+                    <div class="ak-globe-ring ak-ring-3"></div>
+                    <div class="ak-globe-core"><i class="fa-solid fa-earth-asia"></i></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- INFO -->
+    <!-- ROSTER CONTAINER -->
     <div class="ak-container">
-        <section class="ak-section ak-reveal">
-            <div class="ak-section-header">
-                <span class="ak-section-num">0x01</span>
-                <div>
-                    <h2 class="ak-section-title">企業情報・実績</h2>
-                    <span class="ak-section-title-sub">COMPANY PROFILE</span>
-                </div>
-                <div class="ak-divider"></div>
-            </div>
 
-            <div class="ak-info-grid">
-                <div class="ak-info-card">
-                    <h3><i class="fa-solid fa-microchip"></i> クリエイティブ制作事業</h3>
-                    <p>バーチャルコンテンツの企画からSNSプロモーションまでを一気通貫でサポート。VShojoのHD-ARコンテンツや、SEGAの番組・SNS運用など、最新技術を用いたエンタメ開発を得意とします。
-                    </p>
+        <div class="ak-section-header">
+            <h2 class="ak-section-title">DATABASE // <span class="ak-text-cyan">TALENT ROSTER</span></h2>
+            <div class="ak-divider"></div>
+        </div>
+
+        <!-- Featured Talents -->
+        <section class="ak-section ak-reveal">
+            <h3 class="ak-subsection-title"><i class="fa-solid fa-microchip"></i> FEATURED TALENTS</h3>
+            <div class="ak-member-grid ak-featured-grid">
+
+                <!-- Akemi Nekomachi -->
+                <div class="ak-member-card">
+                    <div class="ak-card-scanline"></div>
+                    <div class="ak-card-inner">
+                        <div class="ak-card-tech-corner"></div>
+                        <div class="ak-member-lang"><span class="ak-tag">EN</span><span class="ak-tag">ID</span><span
+                                class="ak-tag">JV</span></div>
+                        <div class="ak-member-icon"><i class="fa-solid fa-cat"></i></div>
+                        <div class="ak-member-info">
+                            <a href="characters/akemi.html" class="ak-member-name">Akemi Nekomachi</a>
+                            <div class="ak-member-read">アケミ ネコマチ</div>
+                            <div class="ak-member-desc">オレンジ猫VTuber。<br>Apex Legendsのマスターランク。ジャワ語も操る。</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="ak-info-card">
-                    <h3><i class="fa-solid fa-earth-americas"></i> グローバルなVTuber展開</h3>
-                    <p>自身もVTuber事務所として活動。英語（EN）、インドネシア語（ID）、日本語（JP）など、多言語で配信を行うグローバルタレントを擁し、世界規模でのファンベースを構築しています。</p>
+
+                <!-- Airi Cordelia -->
+                <div class="ak-member-card">
+                    <div class="ak-card-scanline"></div>
+                    <div class="ak-card-inner">
+                        <div class="ak-card-tech-corner"></div>
+                        <div class="ak-member-lang"><span class="ak-tag">EN</span><span class="ak-tag">ID</span></div>
+                        <div class="ak-member-icon"><i class="fa-solid fa-fish-fins"></i></div>
+                        <div class="ak-member-info">
+                            <a href="characters/airi.html" class="ak-member-name">Airi Cordelia</a>
+                            <div class="ak-member-read">アイリ コーデリア</div>
+                            <div class="ak-member-desc">半分人間、半分ベタ（熱帯魚）の<br>ハイブリッドVTuber。</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="ak-info-card">
-                    <h3><i class="fa-solid fa-robot"></i> AI技術・イベント展示</h3>
-                    <p>大阪・関西万博での「伊達あやの」AI多言語体験（ホリプロデジタルエンターテインメント共同）や、TGS2025でのAI音声技術を用いた展示など、次世代のキャラクター体験を推進しています。</p>
+
+                <!-- Gingitsune Gehenna -->
+                <div class="ak-member-card">
+                    <div class="ak-card-scanline"></div>
+                    <div class="ak-card-inner">
+                        <div class="ak-card-tech-corner"></div>
+                        <div class="ak-member-lang"><span class="ak-tag">EN</span><span class="ak-tag">ID</span></div>
+                        <div class="ak-member-icon"><i class="fa-brands fa-firefox-browser"></i></div>
+                        <!-- Fox proxy -->
+                        <div class="ak-member-info">
+                            <a href="characters/gehenna.html" class="ak-member-name">Gingitsune Gehenna</a>
+                            <div class="ak-member-read">ギンギツネ ゲヘナ</div>
+                            <div class="ak-member-desc">ホストとして働く人間とキツネの<br>ハイブリッド。</div>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Juliana Shafira -->
+                <div class="ak-member-card">
+                    <div class="ak-card-scanline"></div>
+                    <div class="ak-card-inner">
+                        <div class="ak-card-tech-corner"></div>
+                        <div class="ak-member-lang"><span class="ak-tag">EN</span><span class="ak-tag">ID</span><span
+                                class="ak-tag">JV</span></div>
+                        <div class="ak-member-icon"><i class="fa-solid fa-user-astronaut"></i></div>
+                        <div class="ak-member-info">
+                            <a href="characters/juliana.html" class="ak-member-name">Juliana Shafira</a>
+                            <div class="ak-member-read">ジュリアナ シャフィラ</div>
+                            <div class="ak-member-desc">英語、インドネシア語、ジャワ語を話す<br>バーチャルヒューマン。</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mikazuki Arion -->
+                <div class="ak-member-card">
+                    <div class="ak-card-scanline"></div>
+                    <div class="ak-card-inner">
+                        <div class="ak-card-tech-corner"></div>
+                        <div class="ak-member-lang"><span class="ak-tag">EN</span><span class="ak-tag">ID</span></div>
+                        <div class="ak-member-icon"><i class="fa-solid fa-moon"></i></div>
+                        <div class="ak-member-info">
+                            <a href="characters/mikazuki.html" class="ak-member-name">Mikazuki Arion</a>
+                            <div class="ak-member-read">ミカヅキ アリオン</div>
+                            <div class="ak-member-desc">総理大臣であり原初の悪魔。<br>ASMRやRPを中心に活動。</div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
-        <!-- ROSTER -->
+        <!-- Extended Roster list for the many others -->
         <section class="ak-section ak-reveal">
-            <div class="ak-section-header">
-                <span class="ak-section-num">0x02</span>
-                <div>
-                    <h2 class="ak-section-title">所属タレント</h2>
-                    <span class="ak-section-title-sub">TALENT ROSTER</span>
-                </div>
-                <div class="ak-divider"></div>
+            <h3 class="ak-subsection-title"><i class="fa-solid fa-folder-tree"></i> EXPANDED NETWORK [ID/EN Focus]</h3>
+
+            <div class="ak-roster-list">
+                <a href="characters/alona.html" class="ak-roster-item">Alona Driad</a>
+                <a href="characters/amarynn.html" class="ak-roster-item">Amarynn</a>
+                <a href="characters/ave.html" class="ak-roster-item">Ave Kanehoshii</a>
+                <a href="characters/caerula.html" class="ak-roster-item">Caerula Aki</a>
+                <a href="characters/frederett.html" class="ak-roster-item">Frederett</a>
+                <a href="characters/gema.html" class="ak-roster-item">Gema Gathika</a>
+                <a href="characters/harris.html" class="ak-roster-item">Harris Caine</a>
+                <a href="characters/lala.html" class="ak-roster-item">Lala Alberich</a>
+                <a href="characters/lilian.html" class="ak-roster-item">Lilian Grimmxandra</a>
+                <a href="characters/mai.html" class="ak-roster-item">Mai</a>
+                <a href="characters/miu.html" class="ak-roster-item">Miu</a>
+                <a href="characters/amaya.html" class="ak-roster-item">Amaya Miyu</a>
+                <a href="characters/rea.html" class="ak-roster-item">Reinanda Rea</a>
+                <a href="characters/selia.html" class="ak-roster-item">Selia Aisnith</a>
+                <a href="characters/souta.html" class="ak-roster-item">Souta</a>
+                <a href="characters/velary.html" class="ak-roster-item">Velary Lusticia</a>
             </div>
-
-            <div class="ak-member-grid">
-                <!-- Group 1 -->
-                <div class="ak-member-card">
-                    <a href="characters/airi.html" class="ak-member-name">Airi Cordelia</a>
-                    <div class="ak-member-langs">EN / ID</div>
-                </div>
-                <div class="ak-member-card">
-                    <a href="characters/akemi.html" class="ak-member-name">Akemi Nekomachi</a>
-                    <div class="ak-member-langs">EN / ID</div>
-                    <p class="ak-member-ep">丸亀製麺インドネシアとのタイアップ実績あり。</p>
-                </div>
-                <div class="ak-member-card">
-                    <a href="characters/alona.html" class="ak-member-name">Alona Driad</a>
-                    <div class="ak-member-langs">EN / ID</div>
-                </div>
-                <div class="ak-member-card">
-                    <a href="characters/amarynn.html" class="ak-member-name">Amarynn</a>
-                    <div class="ak-member-langs">EN / ID</div>
-                </div>
-                <div class="ak-member-card">
-                    <a href="characters/ave.html" class="ak-member-name">Ave Kanehoshii</a>
-                    <div class="ak-member-langs">EN / ID</div>
-                </div>
-
-                <!-- Group 2 -->
-                <div class="ak-member-card">
-                    <a href="characters/caerula.html" class="ak-member-name">Caerula Aki</a>
-                    <div class="ak-member-langs">EN / ID</div>
-                </div>
-                <div class="ak-member-card">
-                    <a href="characters/frederett.html" class="ak-member-name">Frederett</a>
-                    <div class="ak-member-langs">EN / ID</div>
-                </div>
-                <div class="ak-member-card">
-                    <a href="characters/gema.html" class="ak-member-name">Gema Gathika</a>
-                    <div class="ak-member-langs">EN / ID</div>
-                </div>
-                <div class="ak-member-card">
-                    <a href="characters/gingitsune.html" class="ak-member-name">Gingitsune Gehenna</a>
-                    <div class="ak-member-langs">EN / ID</div>
-                </div>
-                <div class="ak-member-card">
-                    <a href="characters/harris.html" class="ak-member-name">Harris Caine</a>
-                    <div class="ak-member-langs">EN / ID</div>
-                </div>
-
-                <!-- Group 3 -->
-                <div class="ak-member-card">
-                    <a href="characters/juliana.html" class="ak-member-name">Juliana Shafira</a>
-                    <div class="ak-member-langs">EN / ID / Javanese</div>
-                </div>
-                <div class="ak-member-card">
-                    <a href="characters/kichi.html" class="ak-member-name">Kichi</a>
-                    <div class="ak-member-langs">EN / JP</div>
-                </div>
-                <div class="ak-member-card">
-                    <a href="characters/lala.html" class="ak-member-name">Lala Alberich</a>
-                    <div class="ak-member-langs">EN / ID</div>
-                </div>
-                <div class="ak-member-card">
-                    <a href="characters/lilian.html" class="ak-member-name">Lilian Grimmxandra</a>
-                    <div class="ak-member-langs">EN / ID</div>
-                </div>
-                <div class="ak-member-card">
-                    <a href="characters/mai.html" class="ak-member-name">Mai</a>
-                    <div class="ak-member-langs">EN / ID / JP</div>
-                </div>
-
-                <!-- Group 4 -->
-                <div class="ak-member-card">
-                    <a href="characters/mikazuki.html" class="ak-member-name">Mikazuki Arion</a>
-                    <div class="ak-member-langs">ID</div>
-                </div>
-                <div class="ak-member-card">
-                    <a href="characters/miu.html" class="ak-member-name">Miu</a>
-                    <div class="ak-member-langs">EN / ID</div>
-                </div>
-                <div class="ak-member-card">
-                    <a href="characters/miya.html" class="ak-member-name">Miya</a>
-                    <div class="ak-member-langs">EN / JP / Tagalog</div>
-                </div>
-                <div class="ak-member-card">
-                    <a href="characters/amaya.html" class="ak-member-name">Amaya Miyu</a>
-                    <div class="ak-member-langs">ZH / EN / ID</div>
-                </div>
-                <div class="ak-member-card">
-                    <a href="characters/reinanda.html" class="ak-member-name">Reinanda Rea</a>
-                    <div class="ak-member-langs">ID</div>
-                </div>
-
-                <!-- Group 5 -->
-                <div class="ak-member-card">
-                    <a href="characters/reika.html" class="ak-member-name">Reika</a>
-                    <div class="ak-member-langs">EN / JP</div>
-                </div>
-                <div class="ak-member-card">
-                    <a href="characters/selia.html" class="ak-member-name">Selia Aisnith</a>
-                    <div class="ak-member-langs">EN / ID</div>
-                </div>
-                <div class="ak-member-card">
-                    <a href="characters/shione.html" class="ak-member-name">Shione</a>
-                    <div class="ak-member-langs">JP / EN</div>
-                </div>
-                <div class="ak-member-card">
-                    <a href="characters/souta.html" class="ak-member-name">Souta</a>
-                    <div class="ak-member-langs">ID</div>
-                </div>
-                <div class="ak-member-card">
-                    <a href="characters/tekitou.html" class="ak-member-name">Tekitou</a>
-                    <div class="ak-member-langs">EN / JP</div>
-                </div>
-
-                <!-- Group 6 -->
-                <div class="ak-member-card">
-                    <a href="characters/velary.html" class="ak-member-name">Velary Lusticia</a>
-                    <div class="ak-member-langs">EN / ID</div>
-                </div>
-                <div class="ak-member-card">
-                    <a href="characters/starr.html" class="ak-member-name">Starr</a>
-                    <div class="ak-member-langs">EN</div>
-                </div>
+            <div class="ak-tech-note">
+                > OVER 20+ TALENTS REGISTERED IN THE DATABASE. FILTERING BY PRIMARY INDONESIAN (ID) REACH.
             </div>
-
         </section>
+
     </div>
 
     <footer class="ak-footer">
-        <div class="ak-footer-logo">AKA_<span>VIRTUAL</span></div>
+        <div class="ak-footer-logo">
+            AKA <span class="ak-text-cyan">VIRTUAL</span>
+        </div>
+        <div class="ak-footer-company">SYS.ADMIN // NEW STORIES DEPLOYMENT</div>
         <p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with AKA Virtual.</p>
     </footer>
 
     <script src="akavirtual_script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const reveals = document.querySelectorAll('.ak-reveal');
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry, i) => {
-                    if (entry.isIntersecting) {
-                        setTimeout(() => entry.target.classList.add('active'), i * 100);
-                    }
-                });
-            }, { threshold: 0.08, rootMargin: '0px 0px -50px 0px' });
-            reveals.forEach(el => observer.observe(el));
-        });
-    </script>
-
 </body>
 
 </html>

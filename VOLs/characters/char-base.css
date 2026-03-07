@@ -1,0 +1,201 @@
+/* =====================================================
+   VOLs — Character Page Base CSS
+   Theme: Next-Gen eSports Cyber
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
+
+:root {
+    --cv-bg: #060913;
+    --cv-surface: #0A1128;
+    --cv-text: #F8FAFC;
+    /* Default Character Override (Cyan) */
+    --char-main: #00F2FE;
+    --char-rgb: 0, 242, 254;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--cv-bg);
+    color: var(--cv-text);
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+body::selection {
+    background: var(--char-main);
+    color: #000;
+}
+
+/* Hexagon/Cyber bg */
+.char-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: radial-gradient(circle at 100% 0%, rgba(var(--char-rgb), 0.1) 0%, transparent 50%);
+}
+
+.char-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(var(--char-rgb), 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(var(--char-rgb), 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+.char-back {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--cv-text);
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    background: rgba(10, 17, 40, 0.8);
+    border: 1px solid rgba(var(--char-rgb), 0.3);
+    clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+    backdrop-filter: blur(5px);
+    z-index: 100;
+    transition: all 0.3s;
+    letter-spacing: 1px;
+}
+
+.char-back:hover {
+    background: rgba(var(--char-rgb), 0.2);
+    border-color: var(--char-main);
+    text-shadow: 0 0 10px var(--char-main);
+}
+
+.char-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 40vh;
+    padding: 120px 2rem 4rem;
+    text-align: center;
+    position: relative;
+}
+
+.char-name {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    line-height: 1.1;
+    letter-spacing: 3px;
+    text-shadow: 0 0 20px rgba(var(--char-rgb), 0.5);
+}
+
+.char-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--cv-bg);
+    background: var(--char-main);
+    margin: 4px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    clip-path: polygon(5px 0, 100% 0, 100% calc(100% - 5px), calc(100% - 5px) 100%, 0 100%, 0 5px);
+}
+
+.char-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 2rem 100px;
+    position: relative;
+}
+
+.char-section {
+    margin-bottom: 3rem;
+    background: rgba(10, 17, 40, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 3rem;
+    relative;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-left: 3px solid var(--char-main);
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%);
+}
+
+.char-section h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-transform: uppercase;
+}
+
+.char-section h2::before {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: var(--char-main);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.char-section p,
+.char-section li {
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: #94A3B8;
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+}
+
+.char-section ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.char-section ul li {
+    position: relative;
+    padding-left: 20px;
+}
+
+.char-section ul li::before {
+    content: '>';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--char-main);
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+}
+
+.char-footer {
+    padding: 4rem 2rem;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 500;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: #475569;
+    border-top: 1px dotted rgba(255, 255, 255, 0.1);
+}

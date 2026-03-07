@@ -1,0 +1,775 @@
+/* =====================================================
+   MUGEN LIVE — Agency Archive CSS
+   Theme: Modern Bilibili Streaming, Cyber-Neon, Glassmorphism
+   Colors: Bili Pink, Bili Blue, Deep Space (Dark Mode)
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
+
+:root {
+    --mu-pink: #FF6699;
+    /* Bilibili Pink */
+    --mu-blue: #00A1D6;
+    /* Bilibili Blue */
+    --mu-bg: #0F131A;
+    /* Deep Space UI */
+    --mu-surface: rgba(26, 30, 41, 0.6);
+    /* Glass Surface */
+    --mu-surface-solid: #1A1E29;
+    --mu-white: #FFFFFF;
+    --mu-text: #E5E7EB;
+    --mu-text-dim: #9CA3AF;
+
+    --mu-glow-pink: 0 0 20px rgba(255, 102, 153, 0.4);
+    --mu-glow-blue: 0 0 20px rgba(0, 161, 214, 0.4);
+    --mu-gradient: linear-gradient(135deg, var(--mu-pink) 0%, var(--mu-blue) 100%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--mu-bg);
+    color: var(--mu-text);
+    font-family: 'Nunito', 'Noto Sans JP', sans-serif;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+body::selection {
+    background: var(--mu-pink);
+    color: #fff;
+}
+
+/* Utilities */
+.mu-text-pink {
+    color: var(--mu-pink);
+    text-shadow: var(--mu-glow-pink);
+}
+
+.mu-text-blue {
+    color: var(--mu-blue);
+    text-shadow: var(--mu-glow-blue);
+}
+
+/* Background with glass & blobs */
+.mu-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.mu-bg-glass {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 19, 26, 0.7);
+    backdrop-filter: blur(80px);
+    -webkit-backdrop-filter: blur(80px);
+}
+
+.mu-bg-blobs {
+    position: absolute;
+    inset: 0;
+    filter: blur(60px);
+    opacity: 0.6;
+}
+
+.mu-blob {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: floatBlob 20s infinite alternate cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mu-blob-pink {
+    width: 50vw;
+    height: 50vw;
+    background: var(--mu-pink);
+    top: -10vw;
+    left: -10vw;
+}
+
+.mu-blob-blue {
+    width: 40vw;
+    height: 40vw;
+    background: var(--mu-blue);
+    bottom: -10vw;
+    right: -10vw;
+    animation-delay: -5s;
+}
+
+.mu-blob-purple {
+    width: 30vw;
+    height: 30vw;
+    background: #9D00FF;
+    top: 40%;
+    left: 30%;
+    animation-duration: 25s;
+}
+
+@keyframes floatBlob {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    100% {
+        transform: translate(10vw, 15vh) scale(1.2);
+    }
+}
+
+/* Danmaku (Comments flying in bg) */
+.mu-danmaku-container {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    overflow: hidden;
+    z-index: 1;
+    opacity: 0.15;
+    pointer-events: none;
+}
+
+.mu-danmaku-item {
+    position: absolute;
+    white-space: nowrap;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 2px 2px 0 #000;
+    left: 100%;
+}
+
+@keyframes flyDanmaku {
+    to {
+        left: -100%;
+    }
+}
+
+/* NAV */
+.mu-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 3rem;
+    background: rgba(15, 19, 26, 0.5);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s;
+}
+
+.mu-nav.scrolled {
+    padding: 0.8rem 3rem;
+    background: rgba(15, 19, 26, 0.85);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.mu-nav-back {
+    color: var(--mu-text);
+    text-decoration: none;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s;
+}
+
+.mu-nav-back:hover {
+    color: var(--mu-pink);
+    text-shadow: var(--mu-glow-pink);
+}
+
+.mu-nav-logo {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.mu-nav-tags {
+    display: flex;
+    gap: 10px;
+}
+
+.mu-tag {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--mu-text-dim);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* HERO */
+.mu-hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 2rem 4rem;
+    position: relative;
+}
+
+.mu-hero-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 1100px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.mu-live-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 102, 153, 0.1);
+    border: 1px solid var(--mu-pink);
+    color: var(--mu-pink);
+    font-family: 'Fredoka', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 30px;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+    box-shadow: var(--mu-glow-pink);
+}
+
+.mu-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--mu-pink);
+    border-radius: 50%;
+    animation: pulseLive 1.5s infinite;
+}
+
+@keyframes pulseLive {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.4;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.mu-hero-title {
+    font-family: 'Fredoka', sans-serif;
+    font-size: clamp(4.5rem, 8vw, 7rem);
+    font-weight: 700;
+    line-height: 0.9;
+    margin-bottom: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.mu-title-mugen {
+    background: var(--mu-gradient);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0 5px 15px rgba(255, 102, 153, 0.3);
+}
+
+.mu-title-live {
+    color: #fff;
+    padding-left: 2rem;
+}
+
+.mu-hero-tagline {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--mu-blue);
+    margin-bottom: 2.5rem;
+    margin-top: 1rem;
+}
+
+.mu-hero-concept {
+    background: var(--mu-surface);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.mu-hero-concept p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #D1D5DB;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.mu-hero-concept p:last-child {
+    margin-bottom: 0;
+}
+
+/* Visual Stream Window */
+.mu-hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mu-stream-window {
+    width: 100%;
+    max-width: 450px;
+    background: var(--mu-surface-solid);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.1);
+    transform: perspective(1000px) rotateY(-10deg) rotateX(5deg);
+    transition: transform 0.5s;
+}
+
+.mu-stream-window:hover {
+    transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
+}
+
+.mu-window-header {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 12px 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.mu-win-dots {
+    display: flex;
+    gap: 6px;
+}
+
+.mu-win-dots i {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.mu-win-dots i:nth-child(1) {
+    background: #FF5F56;
+}
+
+.mu-win-dots i:nth-child(2) {
+    background: #FFBD2E;
+}
+
+.mu-win-dots i:nth-child(3) {
+    background: #27C93F;
+}
+
+.mu-win-title {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 0.8rem;
+    color: #888;
+    letter-spacing: 1px;
+}
+
+.mu-window-body {
+    height: 250px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at center, rgba(255, 102, 153, 0.1) 0%, transparent 70%);
+}
+
+.mu-play-btn {
+    width: 60px;
+    height: 60px;
+    background: var(--mu-gradient);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #fff;
+    box-shadow: var(--mu-glow-pink);
+    z-index: 2;
+    cursor: pointer;
+    animation: pulsePlay 2s infinite;
+}
+
+.mu-play-btn i {
+    margin-left: 4px;
+}
+
+@keyframes pulsePlay {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 102, 153, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 20px rgba(255, 102, 153, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 102, 153, 0);
+    }
+}
+
+.mu-sound-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 4px;
+    padding: 0 20px;
+    opacity: 0.5;
+}
+
+.mu-sound-wave i {
+    width: 100%;
+    max-width: 40px;
+    background: var(--mu-blue);
+    border-radius: 2px 2px 0 0;
+    animation: soundWave 1.5s infinite ease-in-out alternate;
+}
+
+.mu-sound-wave i:nth-child(even) {
+    background: var(--mu-pink);
+}
+
+.mu-sound-wave i:nth-child(1) {
+    height: 20%;
+    animation-delay: 0.1s;
+}
+
+.mu-sound-wave i:nth-child(2) {
+    height: 60%;
+    animation-delay: 0.3s;
+}
+
+.mu-sound-wave i:nth-child(3) {
+    height: 90%;
+    animation-delay: 0.5s;
+}
+
+.mu-sound-wave i:nth-child(4) {
+    height: 40%;
+    animation-delay: 0.2s;
+}
+
+.mu-sound-wave i:nth-child(5) {
+    height: 80%;
+    animation-delay: 0.4s;
+}
+
+.mu-sound-wave i:nth-child(6) {
+    height: 30%;
+    animation-delay: 0.6s;
+}
+
+.mu-sound-wave i:nth-child(7) {
+    height: 70%;
+    animation-delay: 0.1s;
+}
+
+@keyframes soundWave {
+    0% {
+        transform: scaleY(0.2);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+/* SECTIONS */
+.mu-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 2rem 100px;
+    position: relative;
+    z-index: 2;
+}
+
+.mu-section {
+    margin-bottom: 5rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.mu-section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mu-section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.mu-section-title {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.mu-section-title i {
+    color: var(--mu-pink);
+}
+
+.mu-section-desc {
+    font-size: 1.05rem;
+    color: var(--mu-text-dim);
+}
+
+.mu-gen-wrapper {
+    display: flex;
+    gap: 3rem;
+}
+
+.mu-flex-1 {
+    flex: 1;
+    margin-bottom: 3rem;
+}
+
+/* GRID & CARDS */
+.mu-member-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+}
+
+.mu-grid-small {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.mu-member-card {
+    background: var(--mu-surface);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+/* Top glow strip */
+.mu-member-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--mu-gradient);
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+.mu-card-inner {
+    padding: 2.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.mu-member-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    transition: all 0.4s;
+    position: relative;
+    z-index: 2;
+}
+
+.mu-icon-esports {
+    border-color: var(--mu-blue);
+    color: var(--mu-blue);
+}
+
+.mu-member-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.mu-member-name {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 5px;
+    transition: color 0.3s;
+}
+
+.mu-member-kanji {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--mu-text-dim);
+}
+
+.mu-member-note {
+    font-size: 0.75rem;
+    color: var(--mu-pink);
+    margin-top: 8px;
+    background: rgba(255, 102, 153, 0.1);
+    padding: 2px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mu-card-mini .mu-member-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+}
+
+.mu-card-mini .mu-member-name {
+    font-size: 1.2rem;
+}
+
+.mu-grad-note {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #6B7280;
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+/* HOVER EFFECTS */
+.mu-member-card:hover {
+    transform: translateY(-8px);
+    background: rgba(26, 30, 41, 0.8);
+    border-color: rgba(0, 161, 214, 0.3);
+    box-shadow: 0 15px 40px rgba(0, 161, 214, 0.15);
+}
+
+.mu-member-card:hover::before {
+    opacity: 1;
+}
+
+.mu-member-card:hover .mu-member-icon {
+    transform: scale(1.1);
+    background: var(--mu-gradient);
+    border-color: transparent;
+    box-shadow: var(--mu-glow-pink);
+    color: #fff;
+}
+
+.mu-member-card:hover .mu-icon-esports {
+    box-shadow: var(--mu-glow-blue);
+}
+
+.mu-member-card:hover .mu-member-name {
+    color: var(--mu-blue);
+}
+
+/* FOOTER */
+.mu-footer {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: #0A0D12;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    z-index: 2;
+}
+
+.mu-footer-logo {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.mu-footer-company {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--mu-text-dim);
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+}
+
+.mu-footer p {
+    font-size: 0.8rem;
+    color: #6B7280;
+}
+
+@media (max-width: 900px) {
+    .mu-hero-inner {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .mu-hero-visual {
+        order: -1;
+    }
+
+    .mu-title-live {
+        padding-left: 0;
+    }
+
+    .mu-gen-wrapper {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .mu-nav-tags {
+        display: none;
+    }
+
+    .mu-hero-title {
+        font-size: 3.5rem;
+    }
+}

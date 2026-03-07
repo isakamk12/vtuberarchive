@@ -1,0 +1,200 @@
+/* =====================================================
+   3AM — Character Page Base CSS
+   Brand color: Toxic Green, Midnight Purple, Deep Black
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Rubik+Glitch&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --c-main: #39FF14;
+    /* Toxic Green */
+    --c-sub: #8A2BE2;
+    /* Midnight Purple */
+    --c-bg: #060608;
+    --c-surface: #121216;
+    --c-text: #E5E7EB;
+    /* Override per character: */
+    --char-color: #39FF14;
+    --char-rgb: 57, 255, 20;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--c-bg);
+    color: var(--c-text);
+    font-family: 'Space Mono', monospace;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.char-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-image: repeating-linear-gradient(45deg, #060608 25%, transparent 25%, transparent 75%, #060608 75%, #060608), repeating-linear-gradient(45deg, #060608 25%, #08080a 25%, #08080a 75%, #060608 75%, #060608);
+    background-position: 0 0, 10px 10px;
+    background-size: 20px 20px;
+    opacity: 0.5;
+}
+
+.char-back {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--char-color);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 8px 16px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid var(--char-color);
+    border-radius: 0;
+    transition: all 0.2s;
+    z-index: 100;
+    text-transform: uppercase;
+    box-shadow: 4px 4px 0 rgba(var(--char-rgb), 0.3);
+}
+
+.char-back:hover {
+    background: var(--char-color);
+    color: #000;
+    box-shadow: 0 0 0 transparent;
+    transform: translate(4px, 4px);
+}
+
+.char-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    padding: 120px 2rem 4rem;
+    text-align: center;
+    position: relative;
+    border-bottom: 2px dashed rgba(var(--char-rgb), 0.5);
+}
+
+.char-name {
+    font-family: 'Creepster', system-ui;
+    font-size: clamp(3rem, 10vw, 6rem);
+    color: #fff;
+    margin-bottom: 0.5rem;
+    line-height: 1.1;
+    letter-spacing: 5px;
+    text-shadow: 4px 4px 0 var(--char-color), -2px -2px 0 var(--c-sub);
+}
+
+.char-read {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #fff;
+    background: var(--c-sub);
+    padding: 4px 12px;
+    transform: rotate(-2deg);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    border: 1px solid #fff;
+    box-shadow: 5px 5px 0 var(--char-color);
+}
+
+.char-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    background: transparent;
+    border: 1px dotted var(--char-color);
+    color: var(--char-color);
+    font-size: 0.9rem;
+    margin: 4px;
+}
+
+.char-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem 2rem 100px;
+    position: relative;
+}
+
+.char-section {
+    margin-bottom: 4rem;
+    background: var(--c-surface);
+    padding: 3rem;
+    position: relative;
+    border: 1px solid #333;
+    box-shadow: 8px 8px 0 rgba(var(--char-rgb), 0.2);
+}
+
+/* Duct tape on sections */
+.char-section::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: -20px;
+    width: 80px;
+    height: 25px;
+    background: rgba(255, 255, 255, 0.15);
+    transform: rotate(15deg);
+    backdrop-filter: blur(2px);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.char-section h2 {
+    font-family: 'Rubik Glitch', system-ui;
+    font-size: 2rem;
+    color: var(--char-color);
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-bottom: 1px dashed #444;
+    padding-bottom: 10px;
+}
+
+.char-section p,
+.char-section li {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #ccc;
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+}
+
+.char-section ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.char-section ul li {
+    position: relative;
+    padding-left: 20px;
+}
+
+.char-section ul li::before {
+    content: '×';
+    position: absolute;
+    left: 0;
+    color: var(--char-color);
+    font-weight: 700;
+}
+
+.char-footer {
+    padding: 4rem 2rem;
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: #555;
+    border-top: 2px dashed #222;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}

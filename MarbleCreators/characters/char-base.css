@@ -1,0 +1,206 @@
+/* =====================================================
+   MARBLE CREATORS — Character Page Base CSS
+   Brand color: Glassmorphic Marble
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap');
+
+:root {
+    --c-bg: #f8fbff;
+    --c-text: #2c3e50;
+    --c-glass-bg: rgba(255, 255, 255, 0.7);
+    --c-glass-border: rgba(255, 255, 255, 0.5);
+    /* Override per character: */
+    --char-color: #FF5E7E;
+    --char-rgb: 255, 94, 126;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--c-bg);
+    color: var(--c-text);
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    line-height: 1.8;
+    overflow-x: hidden;
+}
+
+/* The character backdrop will use their specific color for a gentle glowing blob effect */
+.char-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: #fff;
+}
+
+.char-color-blob {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80vw;
+    height: 80vw;
+    background: radial-gradient(circle, rgba(var(--char-rgb), 0.3) 0%, transparent 70%);
+    filter: blur(60px);
+    z-index: 0;
+}
+
+.char-bg-glass {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(40px);
+    z-index: 1;
+}
+
+.char-back {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--c-text);
+    text-decoration: none;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background: var(--c-glass-bg);
+    border: 1px solid var(--c-glass-border);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s;
+    z-index: 100;
+}
+
+.char-back:hover {
+    background: var(--char-color);
+    color: #fff;
+    box-shadow: 0 8px 25px rgba(var(--char-rgb), 0.4);
+    border-color: transparent;
+}
+
+.char-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    padding: 120px 2rem 4rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 2;
+}
+
+.char-name {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 900;
+    color: var(--c-text);
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.char-read {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--char-color);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.char-tag {
+    display: inline-block;
+    padding: 6px 20px;
+    background: rgba(var(--char-rgb), 0.1);
+    color: var(--char-color);
+    font-size: 0.9rem;
+    font-weight: 700;
+    border-radius: 30px;
+    letter-spacing: 0.05em;
+    margin: 4px;
+    border: 1px solid rgba(var(--char-rgb), 0.2);
+}
+
+.char-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem 2rem 100px;
+    position: relative;
+    z-index: 2;
+}
+
+.char-section {
+    margin-bottom: 4rem;
+    background: var(--c-glass-bg);
+    border-radius: 24px;
+    padding: 3rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    border: 1px solid var(--c-glass-border);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.char-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background: var(--char-color);
+}
+
+.char-section h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--c-text);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.char-section p,
+.char-section li {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #555;
+    line-height: 2;
+    margin-bottom: 1.2rem;
+}
+
+.char-section ul {
+    padding-left: 1.5rem;
+    color: var(--char-color);
+}
+
+.char-section ul li span {
+    color: #555;
+}
+
+.char-footer {
+    padding: 4rem 2rem;
+    text-align: center;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: #aaa;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 2;
+}

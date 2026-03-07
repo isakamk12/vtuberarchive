@@ -1,0 +1,819 @@
+/* =====================================================
+   VOLs — Agency Archive CSS
+   Theme: Next-Gen eSports / Cyber SEA
+   Colors: Deep Navy, Electric Cyan, Neon Green
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
+
+:root {
+    --v-bg: #060913;
+    /* Very Dark Navy */
+    --v-surface: #0A1128;
+    /* Deep Navy */
+    --v-surface-alt: #162040;
+    --v-cyan: #00F2FE;
+    --v-green: #4FACFE;
+    /* Actually a slightly blue-green for electric sea vibe */
+    --v-white: #F8FAFC;
+    --v-text: #94A3B8;
+    --v-alert: #EF4444;
+    /* Terminated red */
+    --v-graduated: #64748B;
+    /* Slate gray */
+
+    --v-gradient: linear-gradient(135deg, var(--v-cyan) 0%, var(--v-green) 100%);
+
+    --font-heading: 'Orbitron', sans-serif;
+    --font-body: 'Noto Sans JP', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--v-bg);
+    color: var(--v-text);
+    font-family: var(--font-body);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+body::selection {
+    background: var(--v-cyan);
+    color: #000;
+}
+
+/* Cyber Background */
+.vols-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+    background: radial-gradient(circle at 100% 0%, #0A1128 0%, #060913 100%);
+}
+
+.vols-grid {
+    position: absolute;
+    inset: -50%;
+    background-image:
+        linear-gradient(rgba(0, 242, 254, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 242, 254, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    transform: perspective(1000px) rotateX(60deg) translateY(-100px) translateZ(-200px);
+    animation: moveGrid 20s linear infinite;
+}
+
+@keyframes moveGrid {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 0 50px;
+    }
+}
+
+.vols-scanlines {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1));
+    background-size: 100% 4px;
+    z-index: 2;
+    opacity: 0.6;
+}
+
+/* Utils */
+.vols-text-gradient {
+    background: var(--v-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.vols-icon-accent {
+    color: var(--v-cyan);
+}
+
+/* Glitch Text Effect */
+.vols-glitch-text {
+    position: relative;
+    color: var(--v-white);
+    font-weight: 700;
+    display: inline-block;
+}
+
+.vols-glitch-text::before,
+.vols-glitch-text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+}
+
+.vols-glitch-text::before {
+    color: var(--v-cyan);
+    z-index: -1;
+    animation: glitch-anim-1 2s infinite linear alternate-reverse;
+}
+
+.vols-glitch-text::after {
+    color: var(--v-alert);
+    z-index: -2;
+    animation: glitch-anim-2 3s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim-1 {
+    0% {
+        clip-path: inset(20% 0 80% 0);
+        transform: translate(-2px, 1px);
+    }
+
+    20% {
+        clip-path: inset(60% 0 10% 0);
+        transform: translate(2px, -1px);
+    }
+
+    40% {
+        clip-path: inset(40% 0 50% 0);
+        transform: translate(-2px, 2px);
+    }
+
+    60% {
+        clip-path: inset(80% 0 5% 0);
+        transform: translate(2px, -2px);
+    }
+
+    80% {
+        clip-path: inset(10% 0 70% 0);
+        transform: translate(-1px, 1px);
+    }
+
+    100% {
+        clip-path: inset(30% 0 50% 0);
+        transform: translate(1px, -1px);
+    }
+}
+
+@keyframes glitch-anim-2 {
+    0% {
+        clip-path: inset(10% 0 60% 0);
+        transform: translate(2px, -1px);
+    }
+
+    20% {
+        clip-path: inset(30% 0 20% 0);
+        transform: translate(-2px, 1px);
+    }
+
+    40% {
+        clip-path: inset(70% 0 10% 0);
+        transform: translate(2px, 2px);
+    }
+
+    60% {
+        clip-path: inset(20% 0 50% 0);
+        transform: translate(-2px, -2px);
+    }
+
+    80% {
+        clip-path: inset(50% 0 30% 0);
+        transform: translate(1px, 1px);
+    }
+
+    100% {
+        clip-path: inset(5% 0 80% 0);
+        transform: translate(-1px, -1px);
+    }
+}
+
+/* Navigation */
+.vols-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.vols-nav.scrolled {
+    background: rgba(6, 9, 19, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 1rem 4rem;
+    border-bottom: 1px solid rgba(0, 242, 254, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 242, 254, 0.1);
+}
+
+.vols-nav-back {
+    color: var(--v-text);
+    text-decoration: none;
+    font-family: var(--font-heading);
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s;
+}
+
+.vols-nav-back:hover {
+    color: var(--v-cyan);
+    text-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
+}
+
+.vols-nav-logo {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: 4px;
+}
+
+.vols-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background: var(--v-surface-alt);
+    color: var(--v-text);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+}
+
+.vols-badge.highlight {
+    background: rgba(0, 242, 254, 0.15);
+    color: var(--v-cyan);
+    border-color: rgba(0, 242, 254, 0.4);
+    box-shadow: inset 0 0 10px rgba(0, 242, 254, 0.2);
+}
+
+/* Hero Section */
+.vols-hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 120px 4rem 4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.vols-hero-inner {
+    max-width: 1300px;
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    z-index: 2;
+}
+
+.vols-subtitle {
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 1.5rem;
+    color: var(--v-text);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.vols-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    color: var(--v-white);
+}
+
+.vols-desc {
+    font-size: 1.05rem;
+    color: var(--v-text);
+    margin-bottom: 2.5rem;
+    max-width: 550px;
+    border-left: 2px solid var(--v-cyan);
+    padding-left: 1rem;
+    background: linear-gradient(90deg, rgba(0, 242, 254, 0.05) 0%, transparent 100%);
+}
+
+/* Stats Bar */
+.vols-stat-bar {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.vols-stat {
+    display: flex;
+    flex-direction: column;
+}
+
+.vols-stat-val {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--v-white);
+    text-shadow: 0 0 10px rgba(0, 242, 254, 0.4);
+}
+
+.vols-stat-lbl {
+    font-size: 0.75rem;
+    color: var(--v-text);
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Cyber Hexagon Visual */
+.vols-hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+.vols-hexagon-wrapper {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vols-hexagon {
+    position: absolute;
+    inset: 0;
+    border: 2px solid var(--v-cyan);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    animation: pulseHex 4s infinite linear alternate;
+}
+
+.hex-1 {
+    transform: scale(1);
+    border-color: rgba(0, 242, 254, 0.5);
+}
+
+.hex-2 {
+    transform: scale(0.8) rotate(15deg);
+    border-color: rgba(79, 172, 254, 0.8);
+    animation-duration: 5s;
+    animation-direction: alternate-reverse;
+}
+
+.hex-3 {
+    transform: scale(0.6) rotate(-15deg);
+    border-color: rgba(0, 242, 254, 1);
+    box-shadow: 0 0 30px rgba(0, 242, 254, 0.3) inset;
+}
+
+@keyframes pulseHex {
+    0% {
+        transform: scale(var(--s, 1)) rotate(var(--r, 0deg));
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(calc(var(--s, 1) * 1.05)) rotate(calc(var(--r, 0deg) + 5deg));
+        opacity: 1;
+    }
+}
+
+.vols-cyber-core {
+    font-size: 3rem;
+    color: var(--v-white);
+    z-index: 10;
+    text-shadow: 0 0 20px var(--v-cyan);
+    animation: floatCore 3s ease-in-out infinite;
+}
+
+@keyframes floatCore {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Scroll Indication */
+.vols-scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--v-text);
+}
+
+.vols-scroll-indicator i {
+    font-size: 1.2rem;
+    color: var(--v-cyan);
+    animation: bounceDown 2s infinite;
+}
+
+@keyframes bounceDown {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+    }
+
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Roster Section */
+.vols-main {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 4rem 2rem 100px;
+    position: relative;
+    z-index: 2;
+}
+
+.vols-section-header {
+    text-align: left;
+    margin-bottom: 3rem;
+}
+
+.vols-section-tag {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    color: var(--v-green);
+    letter-spacing: 4px;
+    margin-bottom: 0.5rem;
+}
+
+.vols-section-title {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--v-white);
+    letter-spacing: 2px;
+}
+
+.vols-divider {
+    width: 100px;
+    height: 3px;
+    background: var(--v-gradient);
+    margin-top: 1rem;
+    box-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
+}
+
+.vols-gen-title {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    color: var(--v-white);
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+    border-left: 3px solid var(--v-surface-alt);
+    letter-spacing: 2px;
+}
+
+/* Grid */
+.vols-roster-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Card Design */
+.vols-card {
+    background: var(--v-surface);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    clip-path: polygon(20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px);
+}
+
+.vols-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 242, 254, 0.1) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 0;
+}
+
+.vols-card-inner {
+    padding: 2.5rem 2rem;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Sci-fi Corners */
+.vols-card-corner {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.vols-card.active .top-left {
+    top: 10px;
+    left: 10px;
+    border-top-color: var(--v-cyan);
+    border-left-color: var(--v-cyan);
+}
+
+.vols-card.active .bottom-right {
+    bottom: 10px;
+    right: 10px;
+    border-bottom-color: var(--v-cyan);
+    border-right-color: var(--v-cyan);
+}
+
+.vols-pfp-box {
+    width: 50px;
+    height: 50px;
+    background: var(--v-surface-alt);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: var(--v-text);
+    margin-bottom: 1.5rem;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    transition: all 0.4s ease;
+}
+
+.vols-card.active .vols-pfp-box {
+    color: var(--v-cyan);
+    box-shadow: inset 0 0 10px rgba(0, 242, 254, 0.2);
+}
+
+.vols-card-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--v-white);
+    margin-bottom: 0.25rem;
+    transition: color 0.3s;
+}
+
+.vols-card-sub {
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    color: var(--v-text);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.vols-status {
+    font-family: var(--font-heading);
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 2px;
+    letter-spacing: 1px;
+}
+
+.status-active {
+    background: rgba(0, 242, 254, 0.15);
+    color: var(--v-cyan);
+    border: 1px solid rgba(0, 242, 254, 0.3);
+}
+
+.status-term {
+    background: rgba(239, 68, 68, 0.15);
+    color: var(--v-alert);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.status-grad {
+    background: rgba(100, 116, 139, 0.15);
+    color: var(--v-graduated);
+    border: 1px solid rgba(100, 116, 139, 0.3);
+}
+
+/* Graduated Styling */
+.vols-card.graduated {
+    filter: grayscale(1);
+    opacity: 0.7;
+}
+
+.vols-card.graduated:hover {
+    filter: grayscale(0.5);
+    opacity: 1;
+}
+
+.vols-card.graduated .vols-card-corner {
+    border-color: var(--v-graduated) !important;
+}
+
+/* Active Hover */
+.vols-card.active:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 242, 254, 0.1);
+    border-color: rgba(0, 242, 254, 0.3);
+}
+
+.vols-card.active:hover::before {
+    opacity: 1;
+}
+
+.vols-card.active:hover .vols-pfp-box {
+    background: var(--v-cyan);
+    color: #000;
+    box-shadow: 0 0 20px rgba(0, 242, 254, 0.6);
+}
+
+.vols-card.active:hover .top-left {
+    top: 5px;
+    left: 5px;
+}
+
+.vols-card.active:hover .bottom-right {
+    bottom: 5px;
+    right: 5px;
+}
+
+/* Focus Section */
+.vols-focus {
+    position: relative;
+    margin: 4rem auto 0;
+    max-width: 1000px;
+    padding: 4rem;
+    background: linear-gradient(180deg, rgba(10, 17, 40, 0) 0%, rgba(10, 17, 40, 0.8) 50%, rgba(10, 17, 40, 0) 100%);
+    border-left: 1px solid var(--v-cyan);
+}
+
+.vols-focus-inner {
+    position: relative;
+    z-index: 2;
+}
+
+.vols-focus-title {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--v-white);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.vols-focus-desc {
+    color: var(--v-text);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* Footer */
+.vols-footer {
+    padding: 3rem 2rem;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    margin-top: 4rem;
+    background: rgba(6, 9, 19, 0.8);
+}
+
+.vols-footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.vols-footer-logo {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: var(--v-text);
+}
+
+.vols-footer-copy {
+    font-size: 0.8rem;
+    color: #475569;
+}
+
+/* Reveal Animations */
+.vols-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.vols-reveal.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .vols-hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 3rem;
+    }
+
+    .vols-subtitle {
+        justify-content: center;
+    }
+
+    .vols-desc {
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0;
+        border-left: none;
+        background: none;
+    }
+
+    .vols-stat-bar {
+        justify-content: center;
+    }
+
+    .vols-scroll-indicator {
+        display: none;
+    }
+
+    .vols-hero-visual {
+        order: -1;
+    }
+
+    .vols-focus {
+        padding: 3rem 2rem;
+        border-left: none;
+        border-top: 1px solid var(--v-cyan);
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .vols-nav {
+        padding: 1.2rem 2rem;
+    }
+
+    .vols-nav.scrolled {
+        padding: 1rem 2rem;
+    }
+
+    .vols-nav-tags {
+        display: none;
+    }
+
+    .vols-hero {
+        padding: 100px 2rem 3rem;
+    }
+
+    .vols-title {
+        font-size: 2rem;
+    }
+}

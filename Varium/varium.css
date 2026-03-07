@@ -1,0 +1,494 @@
+/* =====================================================
+   Varium (ぶいありうむっ！) — Agency Archive CSS
+   Theme: CUTE × DREAM, Pastel, Floaty
+   Colors: Pastel Pink, Light Blue, White
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=M+PLUS+Rounded+1c:wght@400;700;800;900&display=swap');
+
+:root {
+    --va-brand: #ffb6c1;
+    /* Pastel Pink */
+    --va-brand-alt: #a2d2ff;
+    /* Dreamy Blue */
+    --va-text: #4a4a4a;
+    --va-bg-grad: linear-gradient(135deg, #fff0f5 0%, #e6f2ff 100%);
+    --va-glass: rgba(255, 255, 255, 0.7);
+    --va-border: rgba(255, 182, 193, 0.3);
+    --va-shadow: 0 8px 32px rgba(255, 182, 193, 0.15);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--va-bg-grad);
+    color: var(--va-text);
+    font-family: 'M PLUS Rounded 1c', 'Noto Sans JP', sans-serif;
+    overflow-x: hidden;
+    line-height: 1.8;
+}
+
+/* BG Elements */
+.va-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.va-bg-shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.6;
+    animation: float 15s ease-in-out infinite alternate;
+}
+
+.va-shape-1 {
+    width: 40vw;
+    height: 40vw;
+    background: var(--va-brand);
+    top: -10vw;
+    left: -10vw;
+    animation-duration: 20s;
+}
+
+.va-shape-2 {
+    width: 35vw;
+    height: 35vw;
+    background: var(--va-brand-alt);
+    bottom: -5vw;
+    right: -5vw;
+    animation-delay: -5s;
+}
+
+.va-shape-3 {
+    width: 25vw;
+    height: 25vw;
+    background: #fffacd;
+    /* Lemon Chiffon */
+    top: 40%;
+    left: 60%;
+    animation-duration: 18s;
+    animation-delay: -10s;
+}
+
+.va-bg-particles {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255, 182, 193, 0.4) 1px, transparent 1px);
+    background-size: 30px 30px;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    100% {
+        transform: translate(30px, -40px) scale(1.1);
+    }
+}
+
+/* NAV */
+.va-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.va-nav-back {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--va-text);
+    text-decoration: none;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    transition: color 0.2s;
+    padding: 6px 14px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.03);
+}
+
+.va-nav-back:hover {
+    color: var(--va-brand);
+    background: rgba(255, 182, 193, 0.1);
+}
+
+.va-nav-logo {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 700;
+    color: #ff6b8b;
+    font-size: 1.3rem;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.va-nav-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid var(--va-brand);
+}
+
+.va-nav-logo span {
+    color: #888;
+    font-size: 0.85rem;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: 700;
+}
+
+.va-nav-tag {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 0.75rem;
+    color: #888;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    background: #fff;
+    padding: 4px 12px;
+    border-radius: 12px;
+    border: 1px solid var(--va-border);
+}
+
+/* HERO */
+.va-hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 2rem 4rem;
+    position: relative;
+    text-align: center;
+}
+
+.va-hero-bg-text {
+    position: absolute;
+    font-family: 'Fredoka', sans-serif;
+    font-size: clamp(6rem, 20vw, 15rem);
+    font-weight: 700;
+    color: rgba(255, 182, 193, 0.15);
+    pointer-events: none;
+    user-select: none;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.va-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--va-glass);
+    padding: 4rem;
+    border-radius: 40px;
+    box-shadow: var(--va-shadow);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+}
+
+.va-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: #ff6b8b;
+    margin-bottom: 1rem;
+    background: #fff;
+    padding: 8px 20px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(255, 107, 139, 0.1);
+}
+
+.va-hero-name {
+    font-family: 'Fredoka', sans-serif;
+    font-size: clamp(3.5rem, 8vw, 5.5rem);
+    font-weight: 700;
+    color: #ff6b8b;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 0 #fff, 4px 4px 0 rgba(255, 182, 193, 0.3);
+}
+
+.va-hero-tagline {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--va-brand-alt);
+    margin-bottom: 2rem;
+    letter-spacing: 0.05em;
+    text-shadow: 1px 1px 0 #fff;
+}
+
+.va-hero-concept {
+    font-size: 1rem;
+    color: var(--va-text);
+    max-width: 600px;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.va-hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 1.5rem 3rem;
+    border-radius: 24px;
+}
+
+.va-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.va-stat-value {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--va-brand-alt);
+    line-height: 1;
+}
+
+.va-stat-icon {
+    font-size: 1.8rem;
+    color: var(--va-brand);
+}
+
+.va-stat-label {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #888;
+    letter-spacing: 0.1em;
+    margin-top: 8px;
+}
+
+/* CONTAINER & SECTIONS */
+.va-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 2rem 100px;
+}
+
+.va-section {
+    margin-bottom: 6rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.va-section.active {
+    opacity: 1;
+    transform: none;
+}
+
+.va-section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3.5rem;
+    text-align: center;
+}
+
+.va-section-title {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #ff6b8b;
+}
+
+.va-section-title-sub {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 0.85rem;
+    color: var(--va-brand-alt);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    margin-top: 4px;
+    display: inline-block;
+    background: #fff;
+    padding: 4px 16px;
+    border-radius: 20px;
+}
+
+.va-divider {
+    width: 100px;
+    height: 6px;
+    background: linear-gradient(90deg, var(--va-brand), var(--va-brand-alt));
+    border-radius: 3px;
+    margin-top: 1.5rem;
+}
+
+/* MEMBER GRID */
+.va-member-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+}
+
+.va-alumni-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.va-member-card {
+    background: var(--va-glass);
+    border-radius: 24px;
+    padding: 1rem;
+    box-shadow: var(--va-shadow);
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s;
+    border: 2px solid transparent;
+    cursor: pointer;
+    text-align: center;
+}
+
+.va-member-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(255, 182, 193, 0.25);
+    border-color: #fff;
+}
+
+.va-card-inner {
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.va-member-icon {
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--va-brand);
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.va-member-name {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--va-text);
+    text-decoration: none;
+    line-height: 1.3;
+    transition: color 0.2s;
+}
+
+.va-member-card:hover .va-member-name {
+    color: #ff6b8b;
+}
+
+.va-member-read {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 0.75rem;
+    color: var(--va-brand-alt);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin-top: 8px;
+}
+
+/* Alumni muted styles */
+.va-member-card.muted {
+    opacity: 0.8;
+    filter: grayscale(40%);
+}
+
+.va-member-card.muted:hover {
+    opacity: 1;
+    filter: grayscale(0);
+}
+
+.va-member-card.muted .va-card-inner {
+    background: rgba(240, 240, 240, 0.6);
+}
+
+.va-member-card.muted .va-member-name {
+    font-size: 1.1rem;
+    color: #777;
+}
+
+/* FOOTER */
+.va-footer {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid #fff;
+    padding: 4rem 2rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.va-footer-logo {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ff6b8b;
+    margin-bottom: 0.5rem;
+}
+
+.va-footer-logo span {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 1.1rem;
+    color: #888;
+}
+
+.va-footer-concept {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--va-brand-alt);
+    letter-spacing: 0.2em;
+    margin-bottom: 2rem;
+}
+
+.va-footer p {
+    font-size: 0.8rem;
+    color: #999;
+}
+
+@media (max-width: 768px) {
+    .va-hero-content {
+        padding: 3rem 1.5rem;
+    }
+
+    .va-nav-tag {
+        display: none;
+    }
+
+    .va-hero-stats {
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+}

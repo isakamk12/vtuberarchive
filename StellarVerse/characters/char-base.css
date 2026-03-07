@@ -1,0 +1,219 @@
+/* =====================================================
+   Stellar Verse Productions (SVP) — Character Page Base CSS
+   Brand color: Supernova Pink, Cosmic Purple
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Exo+2:ital,wght@0,300;0,400;0,600;0,800;1,400&family=Noto+Sans+JP:wght@400;700&display=swap');
+
+:root {
+    --c-main: #EC4899;
+    /* Pink */
+    --c-sub: #7C3AED;
+    /* Purple */
+    --c-bg: #050505;
+    --c-surface: #0F0B1A;
+    --c-text: #F8FAFC;
+    /* Override per character: */
+    --char-color: #EC4899;
+    --char-rgb: 236, 72, 153;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--c-bg);
+    color: var(--c-text);
+    font-family: 'Exo 2', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+body::selection {
+    background: var(--char-color);
+    color: #fff;
+}
+
+/* Sci-fi vignette background */
+.char-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: radial-gradient(ellipse at top center, rgba(var(--char-rgb), 0.2), transparent 70%), linear-gradient(180deg, #050505 0%, #0F0B1A 100%);
+    pointer-events: none;
+}
+
+/* Grid overlay */
+.char-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    opacity: 0.5;
+    filter: blur(1px);
+    transform: perspective(500px) rotateX(60deg);
+    transform-origin: top;
+}
+
+.char-back {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--c-text);
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    background: rgba(5, 5, 5, 0.8);
+    border: 1px solid rgba(var(--char-rgb), 0.4);
+    border-radius: 2px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s;
+    z-index: 100;
+    box-shadow: 0 0 10px rgba(var(--char-rgb), 0.2);
+}
+
+.char-back:hover {
+    color: #fff;
+    background: rgba(var(--char-rgb), 0.3);
+    border-color: var(--char-color);
+    box-shadow: 0 0 20px rgba(var(--char-rgb), 0.5), inset 0 0 10px rgba(var(--char-rgb), 0.3);
+}
+
+.char-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    padding: 120px 2rem 4rem;
+    text-align: center;
+    position: relative;
+}
+
+.char-name {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    line-height: 1.1;
+    letter-spacing: 2px;
+    text-shadow: 0 0 20px rgba(var(--char-rgb), 0.6);
+    transform: skewX(-5deg);
+}
+
+.char-read {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--char-color);
+    letter-spacing: 4px;
+    margin-bottom: 2rem;
+}
+
+.char-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    background: rgba(var(--char-rgb), 0.1);
+    border-left: 3px solid var(--char-color);
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin: 4px;
+    letter-spacing: 2px;
+}
+
+.char-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 2rem 100px;
+    position: relative;
+}
+
+.char-section {
+    margin-bottom: 3rem;
+    background: rgba(15, 11, 26, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 3rem;
+    position: relative;
+    border-radius: 4px;
+    border: 1px solid rgba(var(--char-rgb), 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.char-section::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 40%;
+    height: 2px;
+    background: var(--char-color);
+    box-shadow: 0 0 10px var(--char-color);
+}
+
+.char-section h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(var(--char-rgb), 0.4);
+}
+
+.char-section p,
+.char-section li {
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: #E2E8F0;
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+}
+
+.char-section ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.char-section ul li {
+    position: relative;
+    padding-left: 20px;
+}
+
+.char-section ul li::before {
+    content: '>';
+    position: absolute;
+    left: 0;
+    color: var(--char-color);
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    font-size: 0.9rem;
+}
+
+.char-footer {
+    padding: 4rem 2rem;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: #475569;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}

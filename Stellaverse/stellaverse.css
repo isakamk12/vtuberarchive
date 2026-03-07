@@ -1,0 +1,633 @@
+/* =====================================================
+   Stellaverse Production — Agency Archive CSS
+   Theme: Night Sky, Elegant Constellations, Connections
+   Colors: Midnight Violet, Starlight Silver, Constellation Gold
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Noto+Serif+JP:wght@300;400;500;700&display=swap');
+
+:root {
+    --sv-bg-dark: #0B0A1A;
+    /* Deep Night Sky */
+    --sv-bg-light: #1A183A;
+    --sv-gold: #FDE047;
+    /* Yellow Star Gold */
+    --sv-gold-dim: #D4AF37;
+    --sv-silver: #E2E8F0;
+    --sv-text: #F1F5F9;
+    --sv-text-dim: #94A3B8;
+
+    --sv-glow-gold: 0 0 20px rgba(253, 224, 71, 0.4);
+    --sv-font-en: 'Cormorant Garamond', serif;
+    --sv-font-jp: 'Noto Serif JP', serif;
+    --sv-font-sans: 'Montserrat', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--sv-bg-dark);
+    color: var(--sv-text);
+    font-family: var(--sv-font-sans);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+body::selection {
+    background: var(--sv-bg-light);
+    color: var(--sv-gold);
+}
+
+/* Interactive Canvas Background */
+.sv-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: linear-gradient(180deg, #090815 0%, #171533 100%);
+}
+
+#sv-constellation {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.sv-bg-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% -20%, rgba(26, 24, 58, 0.8) 0%, transparent 70%);
+}
+
+/* Navigation */
+.sv-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 4rem;
+    transition: padding 0.4s ease, background 0.4s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.sv-nav.scrolled {
+    padding: 1rem 4rem;
+    background: rgba(11, 10, 26, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(253, 224, 71, 0.1);
+}
+
+.sv-nav-back {
+    color: var(--sv-text-dim);
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s;
+}
+
+.sv-nav-back:hover {
+    color: var(--sv-gold);
+}
+
+.sv-nav-logo {
+    font-family: var(--sv-font-en);
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--sv-text);
+}
+
+.sv-logo-star {
+    color: var(--sv-gold);
+    font-size: 1rem;
+    animation: twinkle 3s infinite alternate;
+}
+
+.sv-nav-lang {
+    font-family: var(--sv-font-en);
+    font-size: 0.9rem;
+    color: var(--sv-gold-dim);
+    letter-spacing: 2px;
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 0.3;
+        transform: scale(0.8) rotate(0deg);
+        text-shadow: none;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(180deg);
+        text-shadow: var(--sv-glow-gold);
+    }
+}
+
+/* Hero Section */
+.sv-hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 2rem 4rem;
+    position: relative;
+}
+
+.sv-hero-inner {
+    max-width: 1200px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    z-index: 2;
+    position: relative;
+}
+
+.sv-hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sv-hero-subtitle {
+    font-family: var(--sv-font-en);
+    font-size: 1.2rem;
+    color: var(--sv-gold);
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.sv-hero-subtitle::before {
+    content: '';
+    width: 40px;
+    height: 1px;
+    background: var(--sv-gold);
+    opacity: 0.5;
+}
+
+.sv-hero-title {
+    font-family: var(--sv-font-jp);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 300;
+    line-height: 1.3;
+    margin-bottom: 2rem;
+    color: #fff;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.sv-hero-desc {
+    border-left: 1px solid rgba(253, 224, 71, 0.3);
+    padding-left: 1.5rem;
+}
+
+.sv-hero-desc p {
+    font-size: 1.05rem;
+    color: var(--sv-silver);
+    font-weight: 300;
+    line-height: 2;
+    margin-bottom: 1rem;
+}
+
+.sv-hero-desc p:last-child {
+    margin-bottom: 0;
+}
+
+/* Astrolabe / Star Map Visual */
+.sv-hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+.sv-astrolabe {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sv-ring {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(253, 224, 71, 0.15);
+    box-sizing: border-box;
+}
+
+.sv-ring-1 {
+    width: 100%;
+    height: 100%;
+    animation: spinAstro 40s linear infinite;
+    border-left: 1px solid rgba(253, 224, 71, 0.5);
+    border-right: 1px solid rgba(253, 224, 71, 0.5);
+}
+
+.sv-ring-2 {
+    width: 80%;
+    height: 80%;
+    animation: spinAstro 30s linear infinite reverse;
+    border-top: 1px dashed rgba(253, 224, 71, 0.4);
+    border-bottom: 1px dashed rgba(253, 224, 71, 0.4);
+}
+
+.sv-ring-3 {
+    width: 55%;
+    height: 55%;
+    animation: spinAstro 20s linear infinite;
+    border: 1px dotted rgba(253, 224, 71, 0.6);
+}
+
+.sv-star-center {
+    font-size: 2.5rem;
+    color: var(--sv-gold);
+    text-shadow: var(--sv-glow-gold);
+    animation: pulseStar 4s infinite alternate;
+}
+
+@keyframes spinAstro {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulseStar {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: scale(1.1);
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(253, 224, 71, 0.8);
+    }
+}
+
+.sv-scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: var(--sv-text-dim);
+    font-family: var(--sv-font-en);
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+.sv-scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, var(--sv-gold), transparent);
+    animation: scrollPulse 2s infinite;
+}
+
+@keyframes scrollPulse {
+    0% {
+        transform: scaleY(0);
+        transform-origin: top;
+        opacity: 1;
+    }
+
+    50% {
+        transform: scaleY(1);
+        transform-origin: top;
+        opacity: 1;
+    }
+
+    51% {
+        transform: scaleY(1);
+        transform-origin: bottom;
+        opacity: 1;
+    }
+
+    100% {
+        transform: scaleY(0);
+        transform-origin: bottom;
+        opacity: 0;
+    }
+}
+
+/* Roster Section */
+.sv-main-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem 2rem 100px;
+    position: relative;
+    z-index: 2;
+}
+
+.sv-reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.sv-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.sv-section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.sv-section-title {
+    font-family: var(--sv-font-en);
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--sv-gold);
+    letter-spacing: 4px;
+    margin-bottom: 0.5rem;
+}
+
+.sv-section-sub {
+    font-family: var(--sv-font-jp);
+    font-size: 1rem;
+    color: var(--sv-text-dim);
+    letter-spacing: 2px;
+}
+
+/* Grid & Cards */
+.sv-roster-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+}
+
+.sv-card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.sv-card-bg {
+    position: absolute;
+    inset: 0;
+    background: rgba(26, 24, 58, 0.4);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.5s ease;
+    z-index: 1;
+}
+
+/* Decorative star lines */
+.sv-card::before,
+.sv-card::after {
+    content: '';
+    position: absolute;
+    background: var(--sv-gold);
+    opacity: 0;
+    transition: all 0.5s ease;
+    z-index: 3;
+}
+
+.sv-card::before {
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 1px;
+}
+
+.sv-card::after {
+    bottom: 0;
+    right: 0;
+    width: 1px;
+    height: 30px;
+}
+
+.sv-card-inner {
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.sv-card-horizontal {
+    flex-direction: row;
+    text-align: left;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.sv-card-icon {
+    font-size: 2rem;
+    color: var(--sv-silver);
+    margin-bottom: 1.5rem;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 50%;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.05);
+    transition: all 0.5s ease;
+}
+
+.sv-card-horizontal .sv-card-icon {
+    margin-bottom: 0;
+    flex-shrink: 0;
+}
+
+.sv-card-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.sv-card-role {
+    font-family: var(--sv-font-en);
+    font-size: 0.8rem;
+    color: var(--sv-gold-dim);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+}
+
+.sv-card-name {
+    font-family: var(--sv-font-jp);
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 0.2rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.sv-card-en {
+    font-family: var(--sv-font-en);
+    font-size: 0.9rem;
+    color: var(--sv-text-dim);
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.sv-card-desc {
+    font-size: 0.95rem;
+    font-weight: 300;
+    color: var(--sv-silver);
+    line-height: 1.8;
+}
+
+/* HOVER EFFECTS */
+.sv-card:hover {
+    transform: translateY(-10px);
+}
+
+.sv-card:hover .sv-card-bg {
+    background: rgba(26, 24, 58, 0.8);
+    border-color: rgba(253, 224, 71, 0.3);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.sv-card:hover::before,
+.sv-card:hover::after {
+    opacity: 1;
+}
+
+.sv-card:hover .sv-card-icon {
+    color: var(--sv-gold);
+    box-shadow: inset 0 0 30px rgba(253, 224, 71, 0.1), 0 0 0 1px var(--sv-gold);
+    transform: scale(1.1);
+}
+
+.sv-card:hover .sv-card-name {
+    color: var(--sv-gold);
+    text-shadow: var(--sv-glow-gold);
+}
+
+/* Footer */
+.sv-footer {
+    border-top: 1px solid rgba(253, 224, 71, 0.1);
+    padding: 4rem 2rem 2rem;
+    position: relative;
+    z-index: 2;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.sv-footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.sv-footer-logo {
+    font-family: var(--sv-font-en);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--sv-text);
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+}
+
+.sv-footer-logo i {
+    color: var(--sv-gold);
+}
+
+.sv-footer-tagline {
+    font-family: var(--sv-font-sans);
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--sv-text-dim);
+}
+
+.sv-footer-bottom {
+    font-family: var(--sv-font-sans);
+    font-size: 0.8rem;
+    color: #64748B;
+}
+
+@media (max-width: 900px) {
+    .sv-hero-inner {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .sv-hero-subtitle {
+        justify-content: center;
+    }
+
+    .sv-hero-subtitle::before {
+        display: none;
+    }
+
+    .sv-hero-desc {
+        border-left: none;
+        padding-left: 0;
+        border-top: 1px solid rgba(253, 224, 71, 0.3);
+        padding-top: 1.5rem;
+    }
+
+    .sv-card-horizontal {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .sv-card-horizontal .sv-card-icon {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .sv-nav {
+        padding: 1.2rem 2rem;
+    }
+
+    .sv-nav.scrolled {
+        padding: 1rem 2rem;
+    }
+
+    .sv-nav-lang {
+        display: none;
+    }
+
+    .sv-hero-title {
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,241 @@
+/* =====================================================
+   Astraline — Character Page Base CSS
+   Brand color: Story Gold, Ink Black
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Noto+Serif+JP:wght@400;600;900&display=swap');
+
+:root {
+    --c-main: #C8A25D;
+    /* Story Gold */
+    --c-sub: #0F1115;
+    /* Ink Black */
+    --c-bg: #F4F1EA;
+    --c-surface: #FFFFFF;
+    --c-text: #2C303A;
+    /* Override per character: */
+    --char-color: #0F1115;
+    --char-rgb: 15, 17, 21;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--c-bg);
+    color: var(--c-text);
+    font-family: 'Noto Serif JP', serif;
+    line-height: 1.8;
+    overflow-x: hidden;
+}
+
+/* Subtle paper texture */
+.char-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noise"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noise)" opacity="0.04"/%3E%3C/svg%3E');
+    opacity: 0.8;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+}
+
+.char-back {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--c-sub);
+    text-decoration: none;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s;
+    z-index: 100;
+    letter-spacing: 0.1em;
+}
+
+.char-back:hover {
+    color: var(--c-main);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.char-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    padding: 120px 2rem 4rem;
+    text-align: center;
+    position: relative;
+}
+
+.char-hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 1px;
+    background: var(--char-color);
+}
+
+.char-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 8vw, 5rem);
+    font-weight: 700;
+    font-style: italic;
+    color: var(--char-color);
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.8);
+}
+
+.char-read {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #777;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.char-tag {
+    display: inline-block;
+    padding: 6px 20px;
+    background: transparent;
+    border: 1px solid var(--char-color);
+    color: var(--char-color);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin: 4px;
+    border-radius: 20px;
+}
+
+.char-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem 2rem 100px;
+}
+
+.char-section {
+    margin-bottom: 4rem;
+    background: var(--c-surface);
+    padding: 3.5rem;
+    position: relative;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    border-radius: 4px;
+}
+
+/* Storybook corner flourish */
+.char-section::before,
+.char-section::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--char-color);
+    opacity: 0.3;
+}
+
+.char-section::before {
+    top: 15px;
+    left: 15px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.char-section::after {
+    bottom: 15px;
+    right: 15px;
+    border-left: none;
+    border-top: none;
+}
+
+.char-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--char-color);
+    margin-bottom: 1.8rem;
+    text-align: center;
+    position: relative;
+}
+
+.char-section h2::after {
+    content: '✤';
+    display: block;
+    font-size: 1rem;
+    color: var(--c-main);
+    margin-top: 10px;
+}
+
+.char-section p,
+.char-section li {
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: #555;
+    line-height: 2.2;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.char-section p:first-of-type::first-letter {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    float: left;
+    margin: 0.15em 0.15em 0 0;
+    line-height: 0.8;
+    color: var(--char-color);
+}
+
+/* Drop cap */
+
+.char-section ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.char-section ul li {
+    position: relative;
+    padding-left: 30px;
+}
+
+.char-section ul li::before {
+    content: '❧';
+    position: absolute;
+    left: 0;
+    color: var(--c-main);
+    font-family: serif;
+}
+
+.char-footer {
+    padding: 4rem 2rem;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #888;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}

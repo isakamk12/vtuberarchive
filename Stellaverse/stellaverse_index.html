@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stellaverse Production | VTuber Archive</title>
+    <meta name="description" content="「バーチャルとリアルを繋ぎ、国や言語を飛び越えた次世代のありかたの創造」を目指すStellaverse Productionの非公式ファンサイト。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Noto+Serif+JP:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="stellaverse.css">
+</head>
+
+<body>
+
+    <!-- Interactive Constellation Background -->
+    <div class="sv-bg">
+        <canvas id="sv-constellation"></canvas>
+        <div class="sv-bg-glow"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="sv-nav">
+        <a href="../index.html" class="sv-nav-back">
+            <i class="fa-solid fa-arrow-left-long"></i> Directory
+        </a>
+        <div class="sv-nav-logo">
+            Stellaverse <span class="sv-logo-star"><i class="fa-solid fa-star"></i></span> Production
+        </div>
+        <div class="sv-nav-lang">JP / EN</div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="sv-hero">
+        <div class="sv-hero-inner">
+            <div class="sv-hero-content">
+                <div class="sv-hero-subtitle">Connect the world</div>
+                <h1 class="sv-hero-title">君が、「世界」とつながる。</h1>
+                <div class="sv-hero-desc">
+                    <p>バーチャルとリアルを繋ぎ、国や言語を飛び越えた次世代のありかたの創造を目指すプロダクション。</p>
+                    <p>見上げる夜空の星々が線で結ばれ星座となるように、クリエイターと世界中のリスナーを繋ぐ場所。</p>
+                </div>
+            </div>
+
+            <div class="sv-hero-visual">
+                <div class="sv-astrolabe">
+                    <div class="sv-ring sv-ring-1"></div>
+                    <div class="sv-ring sv-ring-2"></div>
+                    <div class="sv-ring sv-ring-3"></div>
+                    <div class="sv-star-center"><i class="fa-solid fa-star-of-life"></i></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sv-scroll-indicator">
+            <span>Discover</span>
+            <div class="sv-scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Talent Roster -->
+    <div class="sv-main-container">
+        <div class="sv-section-header sv-reveal">
+            <h2 class="sv-section-title">THE CONSTELLATION</h2>
+            <p class="sv-section-sub">夜空を彩るタレントたち</p>
+        </div>
+
+        <div class="sv-roster-grid">
+
+            <!-- Rui Hazuki -->
+            <div class="sv-card sv-reveal">
+                <div class="sv-card-bg"></div>
+                <div class="sv-card-inner">
+                    <div class="sv-card-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <div class="sv-card-info">
+                        <div class="sv-card-role">Magician</div>
+                        <a href="characters/rui.html" class="sv-card-name">彗月るい</a>
+                        <div class="sv-card-en">Rui Hazuki</div>
+                        <p class="sv-card-desc">ゲームが大好きな新米魔法使い。魔法の杖とともに、今日もリスナーと新しい世界へ繋がる旅に出る。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lewo Kogami -->
+            <div class="sv-card sv-reveal">
+                <div class="sv-card-bg"></div>
+                <div class="sv-card-inner">
+                    <div class="sv-card-icon"><i class="fa-solid fa-microphone-lines"></i></div>
+                    <div class="sv-card-info">
+                        <div class="sv-card-role">Artist / Singer</div>
+                        <a href="characters/lewo.html" class="sv-card-name">狐守れを</a>
+                        <div class="sv-card-en">Lewo Kogami</div>
+                        <p class="sv-card-desc">歌声を電波に乗せ、銀河一のアーティストになるためバーチャル世界で活動中。彼女の歌は時空を超える。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Calame Uyamuya -->
+            <div class="sv-card sv-reveal">
+                <div class="sv-card-bg"></div>
+                <div class="sv-card-inner">
+                    <div class="sv-card-icon"><i class="fa-solid fa-cake-candles"></i></div>
+                    <div class="sv-card-info">
+                        <div class="sv-card-role">Bride Doll</div>
+                        <a href="characters/calame.html" class="sv-card-name">愛耶夢耶からめ</a>
+                        <div class="sv-card-en">Calame Uyamuya</div>
+                        <p class="sv-card-desc">食べ物とフリルとポエムが大好きな花嫁人形。甘く可憐な言葉が、夜空に星屑のように降り注ぐ。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Elsa Mitome -->
+            <div class="sv-card sv-reveal" style="grid-column: 1 / -1; max-width: 600px; margin: 0 auto;">
+                <div class="sv-card-bg"></div>
+                <div class="sv-card-inner sv-card-horizontal">
+                    <div class="sv-card-icon"><i class="fa-solid fa-crow"></i></div>
+                    <div class="sv-card-info">
+                        <div class="sv-card-role">Magpie Human / JP & EN</div>
+                        <a href="characters/elsa.html" class="sv-card-name">三留エルサ</a>
+                        <div class="sv-card-en">Elsa Mitome</div>
+                        <p class="sv-card-desc">
+                            昔はマグパイ（カササギ）という鳥だったが、気がついたら人間になっていた。日本語（JP）と英語（EN）を操り、国境を飛び越えて世界と繋ぐ架け橋となる。</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="sv-footer">
+        <div class="sv-footer-content">
+            <div class="sv-footer-logo">
+                <i class="fa-solid fa-star"></i> Stellaverse
+            </div>
+            <div class="sv-footer-tagline">Connecting the world, beyond languages and borders.</div>
+        </div>
+        <div class="sv-footer-bottom">
+            <p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with Stellaverse Production.</p>
+        </div>
+    </footer>
+
+    <script src="stellaverse_script.js"></script>
+</body>
+
+</html>

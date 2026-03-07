@@ -1,0 +1,471 @@
+/* =====================================================
+   VOMS Project — Agency Archive CSS
+   Theme: Pop Art, Monsters, Thick Borders, GYARI Style
+   Colors: VOMS Yellow, Monster Black, White
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=M+PLUS+Rounded+1c:wght@700;800;900&family=Noto+Sans+JP:wght@700;900&display=swap');
+
+:root {
+    --vm-yellow: #FFD500;
+    --vm-black: #1A1A1A;
+    --vm-white: #FFFFFF;
+    --vm-border: 4px solid var(--vm-black);
+    --vm-shadow: 6px 6px 0 var(--vm-black);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--vm-yellow);
+    color: var(--vm-black);
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+body::selection {
+    background: var(--vm-black);
+    color: var(--vm-yellow);
+}
+
+/* Backgrounds */
+.vm-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.vm-bg-pattern {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(var(--vm-black) 10%, transparent 10%);
+    background-size: 20px 20px;
+    opacity: 0.1;
+}
+
+/* NAV */
+.vm-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background: var(--vm-white);
+    border-bottom: var(--vm-border);
+    box-shadow: 0 4px 0 var(--vm-black);
+}
+
+.vm-nav-back {
+    color: var(--vm-black);
+    text-decoration: none;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.2s;
+    background: var(--vm-yellow);
+    padding: 4px 16px;
+    border: 2px solid var(--vm-black);
+    border-radius: 20px;
+    box-shadow: 2px 2px 0 var(--vm-black);
+}
+
+.vm-nav-back:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 4px 4px 0 var(--vm-black);
+}
+
+.vm-nav-logo {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--vm-black);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.vm-logo-icon {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.vm-nav-tag {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 0.9rem;
+    color: var(--vm-white);
+    background: var(--vm-black);
+    font-weight: 700;
+    padding: 6px 16px;
+    border-radius: 8px;
+    transform: rotate(3deg);
+}
+
+/* HERO */
+.vm-hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 2rem 4rem;
+    position: relative;
+}
+
+.vm-hero-wrapper {
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vm-hero-bg-blob {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 120%;
+    background: var(--vm-white);
+    border: var(--vm-border);
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    z-index: 0;
+    box-shadow: 15px 15px 0 var(--vm-black);
+    animation: morph 8s ease-in-out infinite alternate;
+}
+
+@keyframes morph {
+    0% {
+        border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    }
+
+    100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+}
+
+.vm-hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.vm-eyebrow {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--vm-white);
+    background: var(--vm-black);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 20px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 0 var(--vm-yellow);
+    transform: rotate(-2deg);
+    margin-bottom: 1.5rem;
+    border: var(--vm-border);
+}
+
+.vm-hero-name {
+    font-family: 'Fredoka', sans-serif;
+    font-size: clamp(6rem, 15vw, 10rem);
+    font-weight: 700;
+    color: var(--vm-yellow);
+    line-height: 0.9;
+    text-shadow: -4px -4px 0 var(--vm-black), 4px -4px 0 var(--vm-black), -4px 4px 0 var(--vm-black), 4px 4px 0 var(--vm-black), 10px 10px 0 var(--vm-black);
+    margin-bottom: 0;
+}
+
+.vm-hero-subname {
+    font-family: 'Fredoka', sans-serif;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 700;
+    color: var(--vm-white);
+    line-height: 1;
+    text-shadow: -3px -3px 0 var(--vm-black), 3px -3px 0 var(--vm-black), -3px 3px 0 var(--vm-black), 3px 3px 0 var(--vm-black), 6px 6px 0 var(--vm-black);
+    margin-bottom: 2rem;
+    transform: translateY(-10px);
+}
+
+.vm-hero-concept-box {
+    background: var(--vm-yellow);
+    border: var(--vm-border);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: var(--vm-shadow);
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    transform: rotate(1deg);
+}
+
+.vm-tagline {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--vm-black);
+    margin-bottom: 1rem;
+    border-bottom: 4px dashed var(--vm-black);
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.vm-desc {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--vm-black);
+    text-align: left;
+    line-height: 1.8;
+}
+
+/* SECTIONS */
+.vm-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 2rem 100px;
+}
+
+.vm-section {
+    margin-bottom: 5rem;
+    background: var(--vm-white);
+    border: var(--vm-border);
+    border-radius: 30px;
+    padding: 4rem 3rem;
+    box-shadow: 12px 12px 0 var(--vm-black);
+}
+
+.vm-section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.vm-section-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--vm-black);
+    display: inline-flex;
+    align-items: baseline;
+    gap: 15px;
+    position: relative;
+}
+
+.vm-section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: var(--vm-yellow);
+    border: 2px solid var(--vm-black);
+    border-radius: 4px;
+}
+
+.vm-section-title span {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* GRID & CARDS */
+.vm-member-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+}
+
+.vm-member-card {
+    background: var(--vm-yellow);
+    border: var(--vm-border);
+    border-radius: 24px;
+    position: relative;
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    box-shadow: var(--vm-shadow);
+    display: block;
+    overflow: hidden;
+}
+
+/* The monster teeth design for cards */
+.vm-card-teeth {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background-image: linear-gradient(135deg, var(--vm-black) 25%, transparent 25%), linear-gradient(225deg, var(--vm-black) 25%, transparent 25%);
+    background-size: 30px 30px;
+    background-position: left top;
+    z-index: 5;
+}
+
+.vm-card-inner {
+    padding: 3rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.vm-member-icon {
+    width: 90px;
+    height: 90px;
+    background: var(--vm-white);
+    border: var(--vm-border);
+    border-radius: 50%;
+    color: var(--vm-black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 4px 4px 0 var(--vm-black);
+    transition: transform 0.3s;
+}
+
+.vm-member-name {
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: var(--vm-black);
+    text-decoration: none;
+    margin-bottom: 8px;
+}
+
+.vm-member-read {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--vm-black);
+    background: var(--vm-white);
+    padding: 4px 12px;
+    border: 2px solid var(--vm-black);
+    border-radius: 12px;
+    transform: rotate(-3deg);
+}
+
+/* HOVER EFFECTS */
+.vm-member-card:hover {
+    transform: translate(-4px, -4px) scale(1.02);
+    box-shadow: 10px 10px 0 var(--vm-black);
+}
+
+.vm-member-card:hover .vm-member-icon {
+    transform: scale(1.1) rotate(10deg);
+}
+
+/* ALUMNI SECTION */
+.vm-alumni-section {
+    background: #E0E0E0;
+    border-style: dashed;
+}
+
+.vm-alumni-card {
+    background: #F5F5F5;
+    filter: grayscale(100%);
+}
+
+.vm-alumni-card:hover {
+    filter: grayscale(0%);
+}
+
+.vm-grid-small {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.vm-grid-small .vm-member-icon {
+    width: 70px;
+    height: 70px;
+    font-size: 2rem;
+}
+
+.vm-grid-small .vm-member-name {
+    font-size: 1.3rem;
+}
+
+/* FOOTER */
+.vm-footer {
+    background: var(--vm-black);
+    color: var(--vm-white);
+    padding: 3rem 2rem;
+    text-align: center;
+    margin-top: 2rem;
+    border-top: 8px solid var(--vm-yellow);
+}
+
+.vm-footer-inner {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.vm-footer-logo {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--vm-yellow);
+}
+
+.vm-footer p {
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .vm-hero-wrapper {
+        width: 100%;
+    }
+
+    .vm-hero-bg-blob {
+        border-radius: 30px;
+        animation: none;
+        height: 100%;
+        width: 100%;
+    }
+
+    .vm-hero-name {
+        font-size: 4rem;
+    }
+
+    .vm-hero-subname {
+        font-size: 2rem;
+    }
+
+    .vm-hero-concept-box {
+        padding: 1.5rem;
+    }
+
+    .vm-nav-tag {
+        display: none;
+    }
+
+    .vm-section {
+        padding: 3rem 1.5rem;
+    }
+}

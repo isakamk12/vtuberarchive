@@ -1,0 +1,202 @@
+/* =====================================================
+   V&U (Virtual & Universe) — Character Page Base CSS
+   Brand color: Cosmic Blue, Neon Pink
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;700&display=swap');
+
+:root {
+    --c-main: #3B82F6;
+    /* Blue */
+    --c-sub: #EC4899;
+    /* Pink */
+    --c-bg: #09090B;
+    --c-surface: #18181B;
+    --c-text: #F4F4F5;
+    /* Override per character: */
+    --char-color: #3B82F6;
+    --char-rgb: 59, 130, 246;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--c-bg);
+    color: var(--c-text);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+body::selection {
+    background: var(--char-color);
+    color: #fff;
+}
+
+/* Clean blurred background */
+.char-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: radial-gradient(circle at 50% 30%, rgba(var(--char-rgb), 0.1) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.char-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.5;
+}
+
+.char-back {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--c-text);
+    text-decoration: none;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 12px 24px;
+    background: rgba(24, 24, 27, 0.8);
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s;
+    z-index: 100;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.char-back:hover {
+    color: #fff;
+    background: var(--char-color);
+    border-color: transparent;
+}
+
+.char-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    padding: 120px 2rem 4rem;
+    text-align: center;
+    position: relative;
+}
+
+.char-name {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(3.5rem, 6vw, 5.5rem);
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    text-shadow: 0 10px 30px rgba(var(--char-rgb), 0.4);
+}
+
+.char-tag {
+    display: inline-block;
+    padding: 6px 16px;
+    background: rgba(var(--char-rgb), 0.15);
+    color: var(--char-color);
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin: 4px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+}
+
+.char-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 2rem 100px;
+    position: relative;
+}
+
+.char-section {
+    margin-bottom: 3rem;
+    background: rgba(24, 24, 27, 0.6);
+    backdrop-filter: blur(12px);
+    padding: 3rem;
+    position: relative;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Neon top border line */
+.char-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 3rem;
+    right: 3rem;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--char-color), transparent);
+    opacity: 0.5;
+}
+
+.char-section h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.char-section p,
+.char-section li {
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: #A1A1AA;
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+}
+
+.char-section ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.char-section ul li {
+    position: relative;
+    padding-left: 24px;
+}
+
+.char-section ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 8px;
+    height: 8px;
+    background: var(--char-color);
+    border-radius: 50%;
+    opacity: 0.8;
+}
+
+.char-footer {
+    padding: 4rem 2rem;
+    text-align: center;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #52525B;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ぶいわんプロダクション (VOne) | VTuber Archive</title>
+    <meta name="description" content="株式会社ワンコネクトが運営する法人VTuber事務所「ぶいわんプロダクション」の非公式ファンサイト。所属タレントをご紹介。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="vone.css">
+</head>
+
+<body>
+
+    <div class="vo-bg">
+        <div class="vo-bg-circles"></div>
+        <div class="vo-bg-fade"></div>
+    </div>
+
+    <nav class="vo-nav">
+        <a href="../index.html" class="vo-nav-back">
+            <i class="fa-solid fa-angle-left"></i> BACK TO HUB
+        </a>
+        <div class="vo-nav-logo">
+            <span class="vo-logo-icon">V1</span>
+            ぶいわんプロダクション <span>(VOne)</span>
+        </div>
+        <div class="vo-nav-tag">ONECONNECT INC.</div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="vo-hero">
+        <div class="vo-hero-bg-text">ONLY 1</div>
+        <div class="vo-hero-content">
+            <div class="vo-eyebrow">
+                <i class="fa-solid fa-rocket"></i> BE THE ONLY ONE
+            </div>
+            <h1 class="vo-hero-name">ぶいわんプロダクション</h1>
+            <p class="vo-hero-tagline">“自分らしさを発信し、日本中を元気に”</p>
+            <div class="vo-hero-concept">
+                株式会社ワンコネクトが運営する、法人運営のVTuber事務所です。<br><br>
+                「誰かと比べることなく、自分だけの個性を大切に育てながら“オンリーワン”として輝けるように」——法人ならではの安定した基盤と豊富なノウハウを活かし、タレント一人ひとりの個性を最大限に引き出します。私たちと一緒に、新しいエンターテインメントの形を創り上げましょう。
+            </div>
+            <div class="vo-hero-stats">
+                <div class="vo-stat">
+                    <div class="vo-stat-value">1</div>
+                    <div class="vo-stat-label">TALENT</div>
+                </div>
+                <div class="vo-stat">
+                    <div class="vo-stat-value"><i class="fa-solid fa-building-user"></i></div>
+                    <div class="vo-stat-label">CORPORATE BACKING</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROSTER -->
+    <div class="vo-container">
+        <section class="vo-section vo-reveal">
+            <div class="vo-section-header">
+                <div>
+                    <h2 class="vo-section-title">所属タレント</h2>
+                    <span class="vo-section-title-sub">Our Talents</span>
+                </div>
+                <div class="vo-divider"></div>
+            </div>
+
+            <!-- Single Member Spotlight -->
+            <div class="vo-member-spotlight">
+                <div class="vo-member-card spotlight">
+                    <div class="vo-card-bg"></div>
+                    <div class="vo-card-inner">
+                        <div class="vo-member-icon"><i class="fa-solid fa-star"></i></div>
+                        <div class="vo-member-info">
+                            <a href="characters/hibiki.html" class="vo-member-name">甘井 ひびき</a>
+                            <div class="vo-member-read">Amai Hibiki</div>
+                            <p class="vo-member-desc">「オンリーワン」の輝きを届ける、ぶいわんプロダクションの期待のタレント。</p>
+                        </div>
+                        <a href="characters/hibiki.html" class="vo-member-btn">VIEW PROFILE <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Future Members Placeholder -->
+            <div class="vo-future">
+                <div class="vo-future-icon"><i class="fa-solid fa-users-viewfinder"></i></div>
+                <h3 class="vo-future-title">NEW TALENTS COMING SOON</h3>
+                <p class="vo-future-desc">オーディションを通じて、新たな「オンリーワン」な才能をお待ちしています。</p>
+            </div>
+        </section>
+    </div>
+
+    <footer class="vo-footer">
+        <div class="vo-footer-logo">
+            <span class="vo-logo-icon-small">V1</span> ぶいわんプロダクション <span>(VOne)</span>
+        </div>
+        <div class="vo-footer-company">Operated by OneConnect Inc.</div>
+        <p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with OneConnect.</p>
+    </footer>
+
+    <script src="vone_script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.vo-reveal, .vo-future');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, i) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => entry.target.classList.add('active'), i * 150);
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

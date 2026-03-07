@@ -1,0 +1,214 @@
+/* =====================================================
+   Star Facet Production — Character Page Base CSS
+   Brand color: Spotlight Yellow, Virtual Cyan
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
+
+:root {
+    --c-main: #FDE047;
+    /* Yellow */
+    --c-sub: #22D3EE;
+    /* Cyan */
+    --c-bg: #0B0914;
+    /* Deep Indigo */
+    --c-surface: #151125;
+    --c-text: #F8FAFC;
+    /* Override per character: */
+    --char-color: #FDE047;
+    --char-rgb: 253, 224, 71;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--c-bg);
+    color: var(--c-text);
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+body::selection {
+    background: var(--char-color);
+    color: #000;
+}
+
+/* Spotlight blurred background */
+.char-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: radial-gradient(circle at 50% 0%, rgba(var(--char-rgb), 0.15) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.char-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 100% 4px;
+    opacity: 0.3;
+}
+
+/* Scanline effect */
+
+.char-back {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--c-text);
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 12px 24px;
+    background: rgba(21, 17, 37, 0.8);
+    border-radius: 4px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s;
+    z-index: 100;
+    border: 1px solid rgba(var(--char-rgb), 0.2);
+}
+
+.char-back:hover {
+    color: #000;
+    background: var(--char-color);
+    border-color: transparent;
+    box-shadow: 0 5px 15px rgba(var(--char-rgb), 0.4);
+}
+
+.char-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 40vh;
+    padding: 120px 2rem 4rem;
+    text-align: center;
+    position: relative;
+}
+
+.char-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    line-height: 1.1;
+    letter-spacing: 2px;
+}
+
+.char-tag {
+    display: inline-block;
+    padding: 6px 12px;
+    border-bottom: 2px solid var(--char-color);
+    color: var(--char-color);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin: 4px 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.char-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 2rem 100px;
+    position: relative;
+}
+
+.char-section {
+    margin-bottom: 3rem;
+    background: rgba(21, 17, 37, 0.7);
+    backdrop-filter: blur(12px);
+    padding: 3rem;
+    position: relative;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.char-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--char-color);
+    border-radius: 4px 0 0 4px;
+}
+
+.char-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.char-section h2::before {
+    content: '\f3a5';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    color: var(--char-color);
+    font-size: 1.2rem;
+}
+
+.char-section p,
+.char-section li {
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: #CBD5E1;
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+}
+
+.char-section ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.char-section ul li {
+    position: relative;
+    padding-left: 24px;
+}
+
+.char-section ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 12px;
+    width: 6px;
+    height: 6px;
+    background: var(--char-color);
+    transform: rotate(45deg);
+    opacity: 0.8;
+}
+
+.char-footer {
+    padding: 4rem 2rem;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #475569;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}

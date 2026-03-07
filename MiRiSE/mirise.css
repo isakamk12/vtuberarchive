@@ -1,0 +1,533 @@
+/* =====================================================
+   Mi→RiSE — Agency Archive CSS
+   Theme: Future, Rise, Neon Tech, Music
+   Colors: Deep Future Blue, Cyan, Neon Pink
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,900&family=Noto+Sans+JP:wght@400;700;900&display=swap');
+
+:root {
+    --mr-bg: #090B14;
+    /* Deep Space Blue */
+    --mr-surface: #12182B;
+    --mr-cyan: #00F0FF;
+    /* Future Rise Cyan */
+    --mr-pink: #FF007F;
+    /* Neon Brand Pink */
+    --mr-purple: #7000FF;
+    --mr-text: #E2E8F0;
+    --mr-text-dim: #94A3B8;
+    --mr-glow-cyan: 0 0 20px rgba(0, 240, 255, 0.4);
+    --mr-glow-pink: 0 0 20px rgba(255, 0, 127, 0.4);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--mr-bg);
+    color: var(--mr-text);
+    font-family: 'Noto Sans JP', sans-serif;
+    overflow-x: hidden;
+    line-height: 1.7;
+}
+
+/* Dynamic Backgrounds */
+.mr-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.mr-bg-gradient {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 100%, rgba(112, 0, 255, 0.15) 0%, transparent 60%);
+}
+
+.mr-bg-grid {
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    transform: perspective(1000px) rotateX(60deg) translateY(-100px);
+    transform-origin: top center;
+    height: 150%;
+    opacity: 0.6;
+}
+
+/* Particles will be managed by JS, but this is the container */
+.mr-bg-particles {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.mr-particle {
+    position: absolute;
+    background: var(--mr-cyan);
+    border-radius: 50%;
+    width: 2px;
+    height: 15px;
+    opacity: 0;
+    animation: riseUp linear infinite;
+    box-shadow: 0 0 10px var(--mr-cyan);
+}
+
+@keyframes riseUp {
+    0% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.6;
+    }
+
+    90% {
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: translateY(-20vh);
+        opacity: 0;
+    }
+}
+
+/* NAV */
+.mr-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 2.5rem;
+    background: rgba(9, 11, 20, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 240, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.mr-nav-back {
+    color: var(--mr-text);
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.mr-nav-back:hover {
+    color: var(--mr-cyan);
+    text-shadow: var(--mr-glow-cyan);
+}
+
+.mr-nav-logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    letter-spacing: 0.05em;
+    font-style: italic;
+}
+
+.mr-logo-highlight {
+    color: var(--mr-cyan);
+    text-shadow: var(--mr-glow-cyan);
+}
+
+.mr-nav-tag {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    color: var(--mr-cyan);
+    border: 1px solid var(--mr-cyan);
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    padding: 4px 16px;
+    border-radius: 4px;
+    background: rgba(0, 240, 255, 0.05);
+}
+
+/* HERO */
+.mr-hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 2rem 4rem;
+    position: relative;
+}
+
+.mr-hero-bg-text {
+    position: absolute;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(6rem, 25vw, 18rem);
+    font-weight: 900;
+    font-style: italic;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.03);
+    pointer-events: none;
+    user-select: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    letter-spacing: -0.05em;
+    white-space: nowrap;
+}
+
+.mr-hero-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    width: 100%;
+}
+
+.mr-hero-content {
+    background: linear-gradient(135deg, rgba(18, 24, 43, 0.8) 0%, rgba(9, 11, 20, 0.9) 100%);
+    padding: 4rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(0, 240, 255, 0.1);
+    backdrop-filter: blur(20px);
+    position: relative;
+    overflow: hidden;
+}
+
+.mr-hero-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--mr-cyan), var(--mr-pink));
+}
+
+.mr-eyebrow {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--mr-pink);
+    letter-spacing: 0.3em;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-shadow: var(--mr-glow-pink);
+}
+
+.mr-hero-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(3.5rem, 8vw, 6rem);
+    font-weight: 900;
+    font-style: italic;
+    color: #fff;
+    line-height: 1;
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+}
+
+.mr-hero-tagline {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--mr-cyan);
+    margin-bottom: 2.5rem;
+    text-shadow: var(--mr-glow-cyan);
+    letter-spacing: 0.05em;
+}
+
+.mr-hero-concept p {
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: var(--mr-text-dim);
+    margin-bottom: 1.5rem;
+    text-align: justify;
+    line-height: 2;
+}
+
+.mr-hero-concept p:last-child {
+    margin-bottom: 0;
+}
+
+/* SECTIONS */
+.mr-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 2rem 100px;
+    position: relative;
+    z-index: 2;
+}
+
+.mr-section {
+    margin-bottom: 6rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.mr-section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mr-section-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.mr-section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    font-style: italic;
+    color: #fff;
+    margin-bottom: 4px;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.mr-section-title-sub {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--mr-text-dim);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+}
+
+.mr-divider {
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(90deg, var(--mr-cyan), transparent);
+    position: relative;
+}
+
+.mr-divider-alt {
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(90deg, var(--mr-pink), transparent);
+    position: relative;
+}
+
+/* GRID & CARDS */
+.mr-member-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2.5rem;
+}
+
+.mr-member-card {
+    background: var(--mr-surface);
+    border-radius: 16px;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    display: block;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.mr-card-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 100%, rgba(0, 240, 255, 0.15) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.4s;
+    z-index: 0;
+}
+
+.mr-card-inner {
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.mr-member-icon {
+    width: 80px;
+    height: 80px;
+    background: #090B14;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 240, 255, 0.3);
+    color: var(--mr-cyan);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.4s;
+    box-shadow: inset 0 0 15px rgba(0, 240, 255, 0.1);
+}
+
+.mr-member-name {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 8px;
+    transition: color 0.3s;
+    letter-spacing: 0.05em;
+}
+
+.mr-member-read {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--mr-text-dim);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+/* Music specific styles */
+.mr-grid-music .mr-member-card {
+    border-color: rgba(255, 0, 127, 0.1);
+}
+
+.mr-grid-music .mr-card-glow {
+    background: radial-gradient(circle at 50% 100%, rgba(255, 0, 127, 0.15) 0%, transparent 60%);
+}
+
+.mr-grid-music .mr-member-icon {
+    border-color: rgba(255, 0, 127, 0.3);
+    color: var(--mr-pink);
+    box-shadow: inset 0 0 15px rgba(255, 0, 127, 0.1);
+}
+
+.mr-music-tag {
+    margin-top: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #fff;
+    background: var(--mr-pink);
+    padding: 4px 12px;
+    border-radius: 20px;
+    letter-spacing: 0.1em;
+    display: inline-block;
+    box-shadow: var(--mr-glow-pink);
+}
+
+/* HOVER EFFECTS */
+.mr-member-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+    border-color: rgba(0, 240, 255, 0.3);
+}
+
+.mr-member-card:hover .mr-card-glow {
+    opacity: 1;
+}
+
+.mr-member-card:hover .mr-member-icon {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 240, 255, 0.2), inset 0 0 20px rgba(0, 240, 255, 0.3);
+    border-color: var(--mr-cyan);
+    color: #fff;
+    text-shadow: var(--mr-glow-cyan);
+}
+
+.mr-member-card:hover .mr-member-name {
+    color: var(--mr-cyan);
+    text-shadow: var(--mr-glow-cyan);
+}
+
+.mr-grid-music .mr-member-card:hover {
+    border-color: rgba(255, 0, 127, 0.3);
+}
+
+.mr-grid-music .mr-member-card:hover .mr-member-icon {
+    box-shadow: 0 10px 20px rgba(255, 0, 127, 0.2), inset 0 0 20px rgba(255, 0, 127, 0.3);
+    border-color: var(--mr-pink);
+    text-shadow: var(--mr-glow-pink);
+}
+
+.mr-grid-music .mr-member-card:hover .mr-member-name {
+    color: var(--mr-pink);
+    text-shadow: var(--mr-glow-pink);
+}
+
+/* FOOTER */
+.mr-footer {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: #05070D;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    z-index: 2;
+}
+
+.mr-footer-logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    font-style: italic;
+    color: #fff;
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
+}
+
+.mr-footer-company {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--mr-text-dim);
+    letter-spacing: 0.3em;
+    margin-bottom: 2rem;
+}
+
+.mr-footer p {
+    font-size: 0.8rem;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .mr-hero-content {
+        padding: 3rem 1.5rem;
+    }
+
+    .mr-hero-name {
+        font-size: 3.5rem;
+    }
+
+    .mr-nav-tag {
+        display: none;
+    }
+
+    .mr-section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .mr-divider,
+    .mr-divider-alt {
+        width: 100%;
+        height: 2px;
+    }
+}

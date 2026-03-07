@@ -1,0 +1,600 @@
+/* =====================================================
+   Stellar Verse Productions (SVP) — Agency Archive CSS
+   Theme: Cosmic Idols, Space-Time Sci-Fi, Supernova
+   Colors: Cosmic Purple, Supernova Pink, Void Black
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Exo+2:ital,wght@0,300;0,400;0,600;0,800;1,400&family=Noto+Sans+JP:wght@400;700&display=swap');
+
+:root {
+    --vp-purple: #7C3AED;
+    /* Cosmic Purple */
+    --vp-pink: #EC4899;
+    /* Supernova Pink */
+    --vp-blue: #3B82F6;
+    --vp-bg: #050505;
+    /* Void Black */
+    --vp-surface: #0F0B1A;
+    --vp-text: #F8FAFC;
+    --vp-text-dim: #94A3B8;
+
+    --vp-glow-pink: 0 0 20px rgba(236, 72, 153, 0.6);
+    --vp-glow-purple: 0 0 20px rgba(124, 58, 237, 0.6);
+
+    --vp-font-head: 'Orbitron', sans-serif;
+    --vp-font-body: 'Exo 2', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--vp-bg);
+    color: var(--vp-text);
+    font-family: var(--vp-font-body);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+body::selection {
+    background: var(--vp-pink);
+    color: #fff;
+}
+
+/* Utilities */
+.svp-text-pink {
+    color: var(--vp-pink);
+    text-shadow: var(--vp-glow-pink);
+}
+
+.svp-text-purple {
+    color: var(--vp-purple);
+    text-shadow: var(--vp-glow-purple);
+}
+
+/* Warp Speed Background */
+.svp-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+
+#svp-warp-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+}
+
+.svp-vignette {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, transparent 0%, #050505 100%);
+}
+
+/* Navigation */
+.svp-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 3rem;
+    background: rgba(5, 5, 5, 0.6);
+    backdrop-filter: blur(5px);
+    border-bottom: 2px solid rgba(124, 58, 237, 0.3);
+    transition: all 0.3s;
+}
+
+.svp-nav.scrolled {
+    padding: 1rem 3rem;
+    background: rgba(5, 5, 5, 0.95);
+    border-bottom-color: var(--vp-pink);
+}
+
+.svp-nav-back {
+    color: var(--vp-text-dim);
+    text-decoration: none;
+    font-family: var(--vp-font-head);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transition: color 0.3s;
+}
+
+.svp-nav-back:hover {
+    color: var(--vp-pink);
+    text-shadow: var(--vp-glow-pink);
+}
+
+.svp-nav-logo {
+    font-family: var(--vp-font-head);
+    font-size: 1.8rem;
+    font-weight: 900;
+    letter-spacing: 4px;
+}
+
+.svp-nav-status {
+    font-family: var(--vp-font-head);
+    font-size: 0.7rem;
+    color: var(--vp-pink);
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid rgba(236, 72, 153, 0.3);
+    padding: 5px 10px;
+    border-radius: 2px;
+    background: rgba(236, 72, 153, 0.05);
+}
+
+.svp-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--vp-pink);
+    border-radius: 50%;
+    box-shadow: var(--vp-glow-pink);
+    animation: svpBlink 1s infinite;
+}
+
+@keyframes svpBlink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.2;
+    }
+}
+
+/* Hero Section */
+.svp-hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 2rem 4rem;
+    position: relative;
+}
+
+.svp-hero-inner {
+    max-width: 1200px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.svp-hero-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.svp-cyber-tag {
+    font-family: var(--vp-font-head);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--vp-blue);
+    letter-spacing: 4px;
+    margin-bottom: 1rem;
+    border-left: 3px solid var(--vp-blue);
+    padding-left: 10px;
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+.svp-hero-title {
+    font-family: var(--vp-font-head);
+    font-size: clamp(3.5rem, 6vw, 5rem);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #fff 0%, var(--vp-pink) 50%, var(--vp-purple) 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 30px rgba(124, 58, 237, 0.4);
+    transform: skewX(-5deg);
+}
+
+.svp-hero-tagline {
+    font-family: var(--vp-font-body);
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--vp-text);
+    margin-bottom: 2.5rem;
+}
+
+.svp-hero-concept {
+    background: rgba(15, 11, 26, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-left: 4px solid var(--vp-pink);
+    border-right: 1px solid rgba(236, 72, 153, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Concept scanline */
+.svp-hero-concept::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgba(236, 72, 153, 0.5);
+    animation: scanline 4s linear infinite;
+}
+
+@keyframes scanline {
+    0% {
+        top: -10px;
+    }
+
+    100% {
+        top: 110%;
+    }
+}
+
+.svp-hero-concept p {
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: #CBD5E1;
+    margin-bottom: 1rem;
+}
+
+.svp-hero-concept p:last-child {
+    margin-bottom: 0;
+}
+
+/* Portal Visual */
+.svp-hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.svp-portal {
+    width: 350px;
+    height: 350px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: perspective(800px) rotateX(20deg);
+}
+
+.svp-portal-ring {
+    position: absolute;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.svp-portal-ring:nth-of-type(1) {
+    width: 100%;
+    height: 100%;
+    border: 4px solid rgba(236, 72, 153, 0.8);
+    box-shadow: 0 0 30px rgba(236, 72, 153, 0.5), inset 0 0 30px rgba(236, 72, 153, 0.5);
+    animation: spinPortal 10s linear infinite;
+}
+
+.svp-portal-ring:nth-of-type(2) {
+    width: 80%;
+    height: 80%;
+    border: 2px dashed rgba(124, 58, 237, 1);
+    box-shadow: 0 0 20px rgba(124, 58, 237, 0.8);
+    animation: spinPortal 7s linear infinite reverse;
+}
+
+.svp-portal-ring:nth-of-type(3) {
+    width: 60%;
+    height: 60%;
+    border: 6px dotted rgba(59, 130, 246, 0.8);
+    animation: spinPortal 15s linear infinite;
+}
+
+.svp-portal-core {
+    font-size: 4rem;
+    color: #fff;
+    text-shadow: var(--vp-glow-pink), var(--vp-glow-purple);
+    animation: pulseCore 2s infinite alternate;
+}
+
+@keyframes spinPortal {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulseCore {
+    0% {
+        transform: scale(0.8);
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        transform: scale(1.2);
+        filter: hue-rotate(30deg);
+    }
+}
+
+/* Roster Section */
+.svp-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem 100px;
+    position: relative;
+    z-index: 2;
+}
+
+.svp-reveal {
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+    transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.svp-reveal.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.svp-section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.svp-cyber-subtitle {
+    font-family: var(--vp-font-head);
+    font-size: 1rem;
+    color: var(--vp-blue);
+    letter-spacing: 5px;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.6);
+}
+
+.svp-section-title {
+    font-family: var(--vp-font-head);
+    font-size: 3rem;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: 6px;
+    margin-bottom: 1rem;
+    text-shadow: var(--vp-glow-purple);
+}
+
+.svp-section-desc {
+    font-size: 1.1rem;
+    color: var(--vp-text-dim);
+}
+
+.svp-header-line {
+    width: 150px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--vp-pink), transparent);
+    margin: 2rem auto 0;
+    box-shadow: var(--vp-glow-pink);
+}
+
+/* Grid & Cards */
+.svp-roster-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2.5rem;
+    justify-content: center;
+}
+
+.svp-card {
+    background: var(--vp-surface);
+    position: relative;
+    border-radius: 4px;
+    border: 1px solid rgba(124, 58, 237, 0.3);
+    cursor: pointer;
+    transition: all 0.4s ease;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.svp-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(236, 72, 153, 0.1) 0%, transparent 100%);
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.svp-card-glitch {
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(45deg, var(--vp-pink), var(--vp-purple), var(--vp-blue));
+    z-index: -1;
+    opacity: 0;
+    border-radius: 5px;
+    transition: opacity 0.4s;
+    filter: blur(8px);
+}
+
+.svp-card-inner {
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    transform: translateZ(30px);
+}
+
+.svp-member-icon {
+    width: 80px;
+    height: 80px;
+    font-size: 2.5rem;
+    color: #fff;
+    background: rgba(5, 5, 5, 0.8);
+    border: 2px solid var(--vp-purple);
+    box-shadow: inset 0 0 20px rgba(124, 58, 237, 0.5), 0 0 20px rgba(124, 58, 237, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    transition: all 0.5s ease;
+    position: relative;
+}
+
+/* Orbital ring on icon */
+.svp-member-icon::before {
+    content: '';
+    position: absolute;
+    width: calc(100% + 16px);
+    height: calc(100% + 16px);
+    border: 1px dashed var(--vp-pink);
+    border-radius: 50%;
+    animation: spinPortal 10s linear infinite;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.svp-member-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.svp-member-name {
+    font-family: var(--vp-font-head);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.svp-member-kana {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.9rem;
+    color: var(--vp-text-dim);
+}
+
+/* HOVER EFFECTS */
+.svp-card:hover {
+    transform: translateY(-10px) rotateX(5deg) rotateY(-5deg);
+    border-color: transparent;
+}
+
+.svp-card:hover .svp-card-glitch {
+    opacity: 1;
+    animation: glitchBg 0.3s linear infinite alternate;
+}
+
+@keyframes glitchBg {
+    0% {
+        filter: blur(8px) hue-rotate(0deg);
+    }
+
+    100% {
+        filter: blur(12px) hue-rotate(45deg);
+    }
+}
+
+.svp-card:hover .svp-member-icon {
+    border-color: var(--vp-pink);
+    box-shadow: inset 0 0 30px rgba(236, 72, 153, 0.8), 0 0 30px rgba(236, 72, 153, 0.5);
+    transform: translateZ(20px) scale(1.1);
+    color: var(--vp-pink);
+}
+
+.svp-card:hover .svp-member-icon::before {
+    opacity: 1;
+}
+
+.svp-card:hover .svp-member-name {
+    color: var(--vp-pink);
+    text-shadow: var(--vp-glow-pink);
+    transform: translateZ(10px);
+}
+
+/* Footer */
+.svp-footer {
+    padding: 4rem 2rem;
+    text-align: center;
+    border-top: 1px solid rgba(236, 72, 153, 0.2);
+    background: #020202;
+    position: relative;
+    z-index: 2;
+    margin-top: 50px;
+}
+
+.svp-footer-logo {
+    font-family: var(--vp-font-head);
+    font-size: 1.8rem;
+    font-weight: 900;
+    letter-spacing: 4px;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.svp-footer-motto {
+    font-family: var(--vp-font-head);
+    font-size: 0.9rem;
+    color: var(--vp-text-dim);
+    letter-spacing: 6px;
+    margin-bottom: 3rem;
+    text-shadow: 0 0 10px rgba(124, 58, 237, 0.5);
+}
+
+.svp-footer-copy {
+    font-size: 0.8rem;
+    color: #475569;
+}
+
+@media (max-width: 900px) {
+    .svp-hero-inner {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+        text-align: center;
+    }
+
+    .svp-hero-title {
+        transform: none;
+    }
+
+    .svp-hero-concept {
+        text-align: left;
+    }
+
+    .svp-hero-visual {
+        order: -1;
+    }
+}
+
+@media (max-width: 600px) {
+    .svp-nav-status {
+        display: none;
+    }
+
+    .svp-hero-title {
+        font-size: 3rem;
+    }
+}

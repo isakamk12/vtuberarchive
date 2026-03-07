@@ -1,0 +1,220 @@
+/* =====================================================
+   Densetsu.EXE — Character Page Base CSS
+   Brand color: Electric Cyan, Cyber Pink
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Noto+Sans+JP:wght@400;700;900&display=swap');
+
+:root {
+    --c-main: #00F0FF;
+    /* Cyan */
+    --c-sub: #FF007F;
+    /* Pink */
+    --c-bg: #050A0F;
+    --c-surface: #0B131D;
+    --c-text: #E0F2FE;
+    /* Override per character: */
+    --char-color: #00F0FF;
+    --char-rgb: 0, 240, 255;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--c-bg);
+    color: var(--c-text);
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Grid background for characters */
+.char-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-image: linear-gradient(rgba(var(--char-rgb), 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(var(--char-rgb), 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.char-back {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--char-color);
+    text-decoration: none;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1rem;
+    padding: 8px 16px;
+    background: rgba(5, 10, 15, 0.9);
+    border: 1px solid rgba(var(--char-rgb), 0.4);
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.2s;
+    z-index: 100;
+    text-transform: uppercase;
+}
+
+.char-back::before {
+    content: '<';
+    color: #fff;
+}
+
+.char-back:hover {
+    background: rgba(var(--char-rgb), 0.1);
+    color: #fff;
+    box-shadow: 0 0 15px rgba(var(--char-rgb), 0.5);
+    border-color: var(--char-color);
+}
+
+.char-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    padding: 120px 2rem 4rem;
+    text-align: center;
+    position: relative;
+    background: radial-gradient(circle at 50% 100%, rgba(var(--char-rgb), 0.15) 0%, transparent 60%);
+    border-bottom: 2px solid rgba(var(--char-rgb), 0.3);
+}
+
+.char-name {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(3rem, 8vw, 5rem);
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    line-height: 1.1;
+    letter-spacing: 2px;
+    text-shadow: 0 0 20px rgba(var(--char-rgb), 0.6);
+}
+
+.char-read {
+    font-size: 1rem;
+    color: #94A3B8;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.char-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    background: rgba(var(--char-rgb), 0.1);
+    border: 1px solid var(--char-color);
+    color: var(--char-color);
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.85rem;
+    margin: 4px;
+    box-shadow: 0 0 10px rgba(var(--char-rgb), 0.2);
+}
+
+.char-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem 2rem 100px;
+    position: relative;
+}
+
+.char-section {
+    margin-bottom: 4rem;
+    background: rgba(11, 19, 29, 0.8);
+    padding: 3rem;
+    position: relative;
+    border: 1px solid rgba(var(--char-rgb), 0.3);
+    backdrop-filter: blur(5px);
+}
+
+/* Terminal aesthetic accents on sections */
+.char-section::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 20px;
+    height: 20px;
+    border-top: 2px solid var(--char-color);
+    border-left: 2px solid var(--char-color);
+}
+
+.char-section::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    width: 20px;
+    height: 20px;
+    border-bottom: 2px solid var(--char-color);
+    border-right: 2px solid var(--char-color);
+}
+
+.char-section h2 {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+    text-shadow: 0 0 10px rgba(var(--char-rgb), 0.5);
+}
+
+.char-section h2::before {
+    content: '>';
+    color: var(--char-color);
+    font-weight: bold;
+}
+
+.char-section p,
+.char-section li {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #CBD5E1;
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+}
+
+.char-section ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.char-section ul li {
+    position: relative;
+    padding-left: 20px;
+}
+
+.char-section ul li::before {
+    content: '-';
+    position: absolute;
+    left: 0;
+    color: var(--char-color);
+}
+
+.char-footer {
+    padding: 4rem 2rem;
+    text-align: center;
+    font-family: 'Share Tech Mono', monospace;
+    font-weight: 400;
+    font-size: 0.85rem;
+    color: #475569;
+    border-top: 1px solid #1E293B;
+    letter-spacing: 1px;
+}
