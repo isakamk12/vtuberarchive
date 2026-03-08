@@ -37,8 +37,17 @@ function setMode(mode) {
     });
 
     // Update Content with Animation
-    const hero = document.getElementById('hero-desc');
-    hero.style.opacity = 0;
+    const hero = document.querySelector('.hero');
+    const stats = document.querySelector('.stats-bar');
+    const grid = document.querySelector('.main-grid');
+
+    [hero, stats, grid].forEach(el => {
+        if (el) {
+            el.style.opacity = 0;
+            el.style.transform = 'translateY(10px)';
+            el.style.transition = 'all 0.4s cubic-bezier(0.23, 1, 0.32, 1)';
+        }
+    });
 
     setTimeout(() => {
         document.getElementById('main-name').innerText = data.name;
@@ -49,8 +58,8 @@ function setMode(mode) {
 
         // Episodes
         const epContainer = document.getElementById('episode-content');
-        epContainer.innerHTML = data.episodes.map(ep => `
-            <div class="episode-card">
+        epContainer.innerHTML = data.episodes.map((ep, i) => `
+            <div class="episode-card cp-reveal active" style="transition-delay: ${i * 0.1}s">
                 <span class="ep-tag">#${ep.tag}</span>
                 <strong>${ep.title}</strong>
                 <p>${ep.text}</p>
@@ -61,11 +70,28 @@ function setMode(mode) {
         const color = mode === 'tamaki' ? 'var(--color-tamaki)' : 'var(--color-norio)';
         document.getElementById('back-link').style.color = color;
 
-        hero.style.opacity = 1;
-    }, 200);
+        [hero, stats, grid].forEach(el => {
+            if (el) {
+                el.style.opacity = 1;
+                el.style.transform = 'translateY(0)';
+            }
+        });
+    }, 300);
 }
 
 // Stats counter animation (simple)
 document.addEventListener('DOMContentLoaded', () => {
     console.log("TAMAKI & NORIO DUAL ARCHIVE INITIALIZED.");
+
+    // Initialize interaction observer for reveals
+    const options = { threshold: 0.05, rootMargin: '0px 0px -50px 0px' };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, options);
+
+    document.querySelectorAll('.cp-reveal, .cp-panel-reveal').forEach(el => observer.observe(el));
 });

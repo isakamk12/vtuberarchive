@@ -1,0 +1,234 @@
+:root {
+    --bg-color: #12140e;
+    --primary: #f2f9c3;
+    /* Light Yellow/Lime */
+    --accent: #d4e157;
+    --text: #ffffff;
+    --text-dim: #b8c19a;
+    --glass: rgba(242, 249, 195, 0.05);
+    --border: rgba(242, 249, 195, 0.15);
+    --glow: rgba(242, 249, 195, 0.4);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text);
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* Background FX */
+.background-effects {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: radial-gradient(circle at 10% 10%, #1c2014 0%, #12140e 100%);
+}
+
+.sunny-filter {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(242, 249, 195, 0.03) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+/* Nav */
+.nav-bar {
+    padding: 1.5rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    background: rgba(18, 20, 14, 0.9);
+    backdrop-filter: blur(8px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.back-link {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.back-link:hover {
+    color: var(--primary);
+}
+
+.nav-extra {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.75rem;
+    color: var(--primary);
+    letter-spacing: 2px;
+}
+
+/* Header */
+.character-header {
+    height: 55vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    border-bottom: 2px solid var(--primary);
+}
+
+.jp-name {
+    display: block;
+    font-size: 1.3rem;
+    letter-spacing: 12px;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.en-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 0 0 30px var(--glow);
+}
+
+.status-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 6px 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 20px;
+    margin-top: 2rem;
+    letter-spacing: 2px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Content */
+.content-wrapper {
+    max-width: 1000px;
+    margin: 4rem auto;
+    padding: 0 5%;
+}
+
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 5px;
+    color: var(--primary);
+    margin-bottom: 3rem;
+}
+
+/* Profile Grid */
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 6rem;
+}
+
+.profile-item {
+    background: var(--glass);
+    padding: 2rem;
+    border: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--primary);
+}
+
+.label {
+    display: block;
+    font-size: 0.65rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+}
+
+.value {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+/* Description */
+.description-box {
+    padding: 3rem;
+    border: 1px solid var(--border);
+    margin-bottom: 6rem;
+    position: relative;
+}
+
+.description-box::before {
+    content: 'FLUFFY';
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 3rem;
+    opacity: 0.03;
+}
+
+/* Lore */
+.lore-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.lore-card {
+    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border);
+}
+
+.lore-card h3 {
+    font-size: 1.15rem;
+    color: var(--primary);
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 1s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.footer {
+    padding: 6rem;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+    opacity: 0.2;
+}

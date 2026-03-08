@@ -1,0 +1,249 @@
+:root {
+    --bg-color: #0f0a12;
+    --primary: #f8c291;
+    /* Apricot/Tea Peach */
+    --accent: #e55039;
+    /* Card Red */
+    --text: #ffffff;
+    --text-dim: #d2dae2;
+    --glass: rgba(248, 194, 145, 0.05);
+    --border: rgba(248, 194, 145, 0.2);
+    --glow: rgba(229, 80, 57, 0.4);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text);
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.8;
+    overflow-x: hidden;
+}
+
+/* Background FX */
+.background-effects {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: radial-gradient(circle at center, #1e1526 0%, #0f0a12 100%);
+}
+
+.wonder-mist {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 10% 10%, rgba(248, 194, 145, 0.08) 0%, transparent 60%);
+    filter: blur(50px);
+}
+
+/* Nav */
+.nav-bar {
+    padding: 1.5rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--border);
+    background: rgba(15, 10, 18, 0.95);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.back-link {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.back-link:hover {
+    color: var(--primary);
+    text-shadow: 0 0 10px var(--glow);
+}
+
+/* Header */
+.character-header {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.jp-name {
+    display: block;
+    font-size: 1.2rem;
+    letter-spacing: 15px;
+    color: var(--primary);
+    margin-bottom: 0.8rem;
+}
+
+.en-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4.5rem;
+    font-weight: 900;
+    letter-spacing: 8px;
+    background: linear-gradient(to bottom, #fff, var(--primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 5px 25px rgba(248, 194, 145, 0.3);
+}
+
+.catchphrase {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    color: var(--text-dim);
+    letter-spacing: 3px;
+    font-style: italic;
+}
+
+/* Content */
+.content-wrapper {
+    max-width: 1000px;
+    margin: 4rem auto;
+    padding: 0 5%;
+}
+
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 6px;
+    color: var(--primary);
+    margin-bottom: 3rem;
+    position: relative;
+    padding-left: 20px;
+}
+
+.section-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    background: var(--primary);
+}
+
+/* Profile Grid */
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 6rem;
+}
+
+.profile-item {
+    background: var(--glass);
+    padding: 2.2rem;
+    border: 1px solid var(--border);
+    transition: 0.4s;
+}
+
+.profile-item:hover {
+    background: rgba(248, 194, 145, 0.1);
+    transform: translateY(-5px) rotate(1deg);
+}
+
+.label {
+    display: block;
+    font-size: 0.65rem;
+    color: var(--primary);
+    letter-spacing: 2px;
+    margin-bottom: 0.8rem;
+}
+
+.value {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+/* Description */
+.description-box {
+    background: rgba(255, 255, 255, 0.015);
+    padding: 3.5rem;
+    border-radius: 4px;
+    margin-bottom: 6rem;
+    line-height: 2.1;
+    position: relative;
+}
+
+.description-box::after {
+    content: 'TEA PARTY';
+    position: absolute;
+    bottom: 5px;
+    right: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    opacity: 0.02;
+}
+
+/* Lore Grid */
+.lore-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.lore-card {
+    padding: 2.5rem;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--border);
+    transition: 0.3s;
+}
+
+.lore-card:hover {
+    border-color: var(--primary);
+}
+
+.lore-card h3 {
+    font-size: 1.15rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.lore-card p {
+    font-size: 0.95rem;
+    color: var(--text-dim);
+}
+
+/* Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.footer {
+    padding: 6rem;
+    text-align: center;
+    opacity: 0.2;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 5px;
+}
+
+@media (max-width: 768px) {
+    .en-name {
+        font-size: 3rem;
+    }
+}

@@ -408,12 +408,46 @@ body {
 .cp-reveal {
     opacity: 0;
     transform: translateY(28px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transition: opacity 0.8s cubic-bezier(0.23, 1, 0.32, 1), transform 0.8s cubic-bezier(0.23, 1, 0.32, 1), clip-path 1.2s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
-.cp-reveal.active {
+.cp-reveal.active,
+.no-js .cp-reveal {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Manga Decor for Character Pages */
+.cp-panel-reveal {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+.cp-panel-reveal.active,
+.no-js .cp-panel-reveal {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.cp-card {
+    transition: border-color 0.3s, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s;
+}
+
+.cp-card:hover {
+    border-color: var(--char-color);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 20px var(--char-glow);
+}
+
+/* Staggered Delay */
+.delay-1 {
+    transition-delay: 0.1s;
+}
+
+.delay-2 {
+    transition-delay: 0.2s;
+}
+
+.delay-3 {
+    transition-delay: 0.3s;
 }
 
 /* RESPONSIVE */

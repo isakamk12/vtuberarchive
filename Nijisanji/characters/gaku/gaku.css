@@ -1,0 +1,229 @@
+:root {
+    --bg-color: #0d0f14;
+    --primary: #c0c4cc;
+    /* Silver/Steel */
+    --accent: #ffa726;
+    /* Orange (Fox) */
+    --text: #eceff1;
+    --text-dim: #90a4ae;
+    --glass: rgba(192, 196, 204, 0.05);
+    --border: rgba(192, 196, 204, 0.2);
+    --glow: rgba(255, 167, 38, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text);
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.8;
+    overflow-x: hidden;
+}
+
+/* Background FX */
+.background-effects {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: radial-gradient(circle at center, #1a1e26 0%, #0d0f14 100%);
+}
+
+.morning-sun {
+    position: absolute;
+    top: -20%;
+    right: -10%;
+    width: 60%;
+    height: 60%;
+    background: radial-gradient(circle, rgba(255, 167, 38, 0.08) 0%, transparent 70%);
+    filter: blur(50px);
+}
+
+/* Nav */
+.nav-bar {
+    padding: 1.5rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--border);
+    background: rgba(13, 15, 20, 0.95);
+    backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.back-link {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.back-link:hover {
+    color: var(--accent);
+    text-shadow: 0 0 10px var(--glow);
+}
+
+/* Header */
+.character-header {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.jp-name {
+    display: block;
+    font-size: 1.3rem;
+    letter-spacing: 12px;
+    color: var(--accent);
+    margin-bottom: 0.8rem;
+}
+
+.en-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 5rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    background: linear-gradient(to bottom, #ffffff, var(--primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.catchphrase {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    color: var(--text-dim);
+    letter-spacing: 4px;
+}
+
+/* Content */
+.content-wrapper {
+    max-width: 1000px;
+    margin: 5rem auto;
+    padding: 0 5%;
+}
+
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 6px;
+    color: var(--accent);
+    margin-bottom: 3.5rem;
+    border-left: 5px solid var(--accent);
+    padding-left: 20px;
+}
+
+/* Profile Grid */
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 7rem;
+}
+
+.profile-item {
+    background: var(--glass);
+    padding: 2.2rem;
+    border: 1px solid var(--border);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.profile-item:hover {
+    border-color: var(--accent);
+    transform: translateY(-5px);
+}
+
+.label {
+    display: block;
+    font-size: 0.7rem;
+    color: var(--accent);
+    letter-spacing: 2px;
+    margin-bottom: 0.8rem;
+}
+
+.value {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+/* Description */
+.description-box {
+    background: rgba(255, 167, 38, 0.02);
+    padding: 3.5rem;
+    border: 1px dashed var(--border);
+    margin-bottom: 7rem;
+    line-height: 2.2;
+}
+
+.description-box p {
+    font-size: 1.15rem;
+    color: var(--text-dim);
+}
+
+/* Lore Grid */
+.lore-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.lore-card {
+    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.01);
+    border-bottom: 2px solid var(--accent);
+}
+
+.lore-card h3 {
+    font-size: 1.2rem;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.lore-card p {
+    font-size: 1rem;
+    color: var(--text-dim);
+}
+
+/* Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 1s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.footer {
+    padding: 7rem;
+    text-align: center;
+    opacity: 0.2;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 5px;
+}
+
+@media (max-width: 768px) {
+    .en-name {
+        font-size: 3.5rem;
+    }
+}

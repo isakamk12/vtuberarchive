@@ -1,0 +1,260 @@
+:root {
+    --bg-color: #fcfaf2;
+    /* Soft Cream / Ivory */
+    --primary: #d4af37;
+    /* Metallic Gold */
+    --accent: #8e8279;
+    /* Warm Earthy Taupe */
+    --text: #4a4a4a;
+    --text-dim: #7d7d7d;
+    --glass: rgba(255, 255, 255, 0.8);
+    --border: rgba(212, 175, 55, 0.2);
+    --glow: rgba(212, 175, 55, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text);
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 2;
+    overflow-x: hidden;
+}
+
+/* Background FX */
+.background-effects {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: radial-gradient(circle at center, #ffffff 0%, var(--bg-color) 100%);
+}
+
+.divine-light {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 40vh;
+    background: linear-gradient(to bottom, rgba(212, 175, 55, 0.05), transparent);
+    pointer-events: none;
+}
+
+.floating-feathers {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    background-image: radial-gradient(var(--primary) 1px, transparent 1px);
+    background-size: 80px 80px;
+}
+
+/* Nav */
+.nav-bar {
+    padding: 1.5rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--glass);
+    border-bottom: 2px solid var(--border);
+    backdrop-filter: blur(8px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.back-link {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-family: 'Cinzel', serif;
+}
+
+.back-link:hover {
+    text-shadow: 0 0 10px var(--glow);
+    color: var(--text);
+}
+
+/* Header */
+.character-header {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.jp-name {
+    display: block;
+    font-size: 1.5rem;
+    letter-spacing: 12px;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+.en-name {
+    font-family: 'Cinzel', serif;
+    font-size: 5rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: var(--text);
+    position: relative;
+}
+
+.en-name::after {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 1px;
+    background: var(--primary);
+    margin: 15px auto;
+}
+
+.catchphrase {
+    margin-top: 2rem;
+    font-family: 'Delius', cursive;
+    font-size: 1.15rem;
+    color: var(--accent);
+    font-style: italic;
+}
+
+/* Content */
+.content-wrapper {
+    max-width: 900px;
+    margin: 6rem auto;
+    padding: 0 5%;
+}
+
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 6px;
+    color: var(--primary);
+    margin-bottom: 4rem;
+    text-align: center;
+    position: relative;
+}
+
+/* Profile Grid */
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 8rem;
+}
+
+.profile-item {
+    background: white;
+    padding: 2.5rem;
+    border: 1px solid var(--border);
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    transition: 0.5s;
+}
+
+.profile-item:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary);
+}
+
+.label {
+    display: block;
+    font-size: 0.7rem;
+    color: var(--primary);
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.value {
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: var(--text);
+}
+
+/* Description */
+.description-box {
+    background: white;
+    padding: 4.5rem;
+    border-radius: 2px;
+    margin-bottom: 8rem;
+    line-height: 2.3;
+    border-top: 5px solid var(--primary);
+    box-shadow: 0 20px 60px rgba(212, 175, 55, 0.05);
+}
+
+.description-box p {
+    font-size: 1.2rem;
+    color: var(--text-dim);
+    text-align: justify;
+}
+
+/* Lore Grid */
+.lore-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+.lore-card {
+    padding: 3.5rem;
+    background: rgba(255, 255, 255, 0.6);
+    border-left: 2px solid var(--primary);
+}
+
+.lore-card h3 {
+    font-size: 1.3rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: 'Cinzel', serif;
+}
+
+.lore-card p {
+    font-size: 1.05rem;
+    color: var(--text-dim);
+}
+
+/* Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.footer {
+    padding: 10rem;
+    text-align: center;
+    opacity: 0.3;
+    font-family: 'Cinzel', serif;
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+    color: var(--primary);
+}
+
+@media (max-width: 768px) {
+    .en-name {
+        font-size: 3rem;
+    }
+
+    .description-box {
+        padding: 2.5rem;
+    }
+}

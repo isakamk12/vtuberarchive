@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="no-js">
 
 <head>
     <meta charset="UTF-8">
@@ -18,6 +18,7 @@
 <body>
 
     <div class="nr-bg"></div>
+    <div id="nr-speed-lines" class="nr-speed-bg"></div>
 
     <nav class="nr-nav">
         <a href="../index.html" class="nr-nav-back">
@@ -28,7 +29,7 @@
     </nav>
 
     <!-- HERO -->
-    <section class="nr-hero">
+    <section class="nr-hero nr-reveal">
         <div class="nr-hero-bg-text">NP</div>
         <div class="nr-hero-content">
             <div class="nr-eyebrow">Virtual YouTuber Production</div>
@@ -95,32 +96,31 @@
             <!-- 代表 -->
             <h3 class="nr-group-title">👑 代表・運営</h3>
             <div class="nr-member-grid">
-                <a href="characters/norio.html" class="nr-member-card">
+                <a href="characters/norio.html" class="nr-member-card delay-1">
                     <div class="nr-member-name">佃煮のりお / 犬山たまき</div>
                     <div class="nr-member-read">Tsukudani Norio / Inuyama Tamaki</div>
                     <p class="nr-member-ep">のりプロ社長。漫画家・VTuberとして自らも活動中。毎月タレントのやらかしを暴露する監視役。</p>
                 </a>
-                <div class="nr-member-card">
+                <div class="nr-member-card delay-2">
                     <span class="nr-member-name">玉姫</span>
                     <div class="nr-member-read">Tamahime</div>
                     <p class="nr-member-ep">運営メンバー。</p>
-                    </a>
                 </div>
 
                 <!-- 先輩組 -->
                 <h3 class="nr-group-title">🎮 先輩組</h3>
                 <div class="nr-member-grid">
-                    <a href="characters/takuma.html" class="nr-member-card">
+                    <a href="characters/takuma.html" class="nr-member-card delay-1">
                         <div class="nr-member-name">熊谷タクマ</div>
                         <div class="nr-member-read">Kumagai Takuma</div>
                         <p class="nr-member-ep">パチンコ・スロットを愛するガチ勢。VTuberなのにパチンコ店来店イベントを開催する前代未聞の男。</p>
                     </a>
-                    <a href="characters/iroha.html" class="nr-member-card">
+                    <a href="characters/iroha.html" class="nr-member-card delay-2">
                         <div class="nr-member-name">稲荷いろは</div>
                         <div class="nr-member-read">Inari Iroha</div>
                         <p class="nr-member-ep">元気な声の持ち主だが致命的なポンコツ。「おいしいお菓子の中」誤送信や0秒叫び即死伝説で知られる。</p>
                     </a>
-                    <a href="characters/regul.html" class="nr-member-card">
+                    <a href="characters/regul.html" class="nr-member-card delay-3">
                         <div class="nr-member-name">レグルシュ・ライオンハート</div>
                         <div class="nr-member-read">Regulshu Lionheart</div>
                         <p class="nr-member-ep">やらかしMVP常連。初配信で自ら音痴を宣言し、泥酔放送事故や他人の配信への寝起き乱入など伝説多数。</p>
@@ -205,21 +205,8 @@
         <p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with のりプロ or 佃煮のりお.</p>
     </footer>
 
+    <script>document.documentElement.classList.remove('no-js');</script>
     <script src="noripro_script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const reveals = document.querySelectorAll('.nr-reveal');
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry, i) => {
-                    if (entry.isIntersecting) {
-                        setTimeout(() => entry.target.classList.add('active'), i * 100);
-                    }
-                });
-            }, { threshold: 0.08, rootMargin: '0px 0px -50px 0px' });
-            reveals.forEach(el => observer.observe(el));
-        });
-    </script>
-
 </body>
 
 </html>

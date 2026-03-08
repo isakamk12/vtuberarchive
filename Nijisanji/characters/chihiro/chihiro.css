@@ -1,0 +1,234 @@
+:root {
+    --bg-color: #0b0e14;
+    --primary: #5ac8fa;
+    --accent: #ff9500;
+    --text: #ffffff;
+    --text-dim: #a1a1aa;
+    --glass: rgba(90, 200, 250, 0.05);
+    --border: rgba(90, 200, 250, 0.15);
+    --glow: rgba(90, 200, 250, 0.4);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text);
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Background FX */
+.background-effects {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: radial-gradient(circle at 10% 10%, #161b22 0%, #0b0e14 100%);
+}
+
+.scanlines {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%);
+    background-size: 100% 4px;
+    pointer-events: none;
+    opacity: 0.3;
+}
+
+/* Nav */
+.nav-bar {
+    padding: 1.5rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    background: rgba(11, 14, 20, 0.9);
+    backdrop-filter: blur(8px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.back-link {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.back-link:hover {
+    color: var(--primary);
+}
+
+.nav-extra {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.75rem;
+    color: var(--primary);
+    letter-spacing: 2px;
+}
+
+/* Header */
+.character-header {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-bottom: 2px solid var(--primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.character-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(90, 200, 250, 0.05));
+}
+
+.jp-name {
+    display: block;
+    font-size: 1.5rem;
+    letter-spacing: 8px;
+    margin-bottom: 1rem;
+}
+
+.en-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4.5rem;
+    font-weight: 700;
+    letter-spacing: -2px;
+    text-shadow: 0 0 30px var(--glow);
+}
+
+.status-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 4px 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    border-radius: 20px;
+    margin-top: 1.5rem;
+    letter-spacing: 2px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Content */
+.content-wrapper {
+    max-width: 900px;
+    margin: 4rem auto;
+    padding: 0 5%;
+}
+
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 4px;
+    margin-bottom: 2rem;
+    color: var(--primary);
+    border-left: 4px solid var(--primary);
+    padding-left: 1rem;
+}
+
+/* Profile Grid */
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 5rem;
+}
+
+.profile-item {
+    background: var(--glass);
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    text-align: center;
+}
+
+.label {
+    display: block;
+    font-size: 0.65rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.value {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+/* Description */
+.description-box {
+    margin-bottom: 5rem;
+}
+
+.description-box p {
+    font-size: 1.1rem;
+    color: var(--text-dim);
+    line-height: 1.8;
+}
+
+/* Lore */
+.lore-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.lore-card {
+    padding: 2rem;
+    border: 1px solid var(--border);
+    position: relative;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.lore-card h3 {
+    font-size: 1.1rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.lore-card p {
+    font-size: 0.95rem;
+    color: var(--text-dim);
+}
+
+/* Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.footer {
+    text-align: center;
+    padding: 5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    opacity: 0.3;
+}

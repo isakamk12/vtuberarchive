@@ -1,0 +1,256 @@
+:root {
+    --bg-color: #0a0c0b;
+    --primary: #8d1c1c;
+    /* Blood Red / Dark Occult */
+    --accent: #2e4d2a;
+    /* Moss Green from Forest */
+    --text: #e0e0e0;
+    --text-dim: #a0a090;
+    --glass: rgba(141, 28, 28, 0.05);
+    --border: rgba(141, 28, 28, 0.3);
+    --glow: rgba(141, 28, 28, 0.5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text);
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.8;
+    overflow-x: hidden;
+}
+
+/* Background FX */
+.background-effects {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: radial-gradient(circle at center, #1a1a15 0%, #0a0c0b 100%);
+}
+
+.haunted-mist {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 120%, rgba(141, 28, 28, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+    animation: mistPulse 8s infinite alternate;
+}
+
+@keyframes mistPulse {
+    from {
+        opacity: 0.5;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0.8;
+        transform: translateY(-20px);
+    }
+}
+
+/* Nav */
+.nav-bar {
+    padding: 1.5rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--border);
+    background: rgba(10, 12, 11, 0.95);
+    backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.back-link {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.back-link:hover {
+    color: var(--primary);
+    text-shadow: 0 0 10px var(--glow);
+}
+
+/* Header */
+.character-header {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.jp-name {
+    display: block;
+    font-size: 1.4rem;
+    letter-spacing: 15px;
+    color: var(--primary);
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+}
+
+.en-name {
+    font-family: 'Creepster', cursive;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 5px;
+    color: var(--primary);
+    text-shadow: 0 0 40px var(--glow), 0 0 10px rgba(0, 0, 0, 1);
+}
+
+.catchphrase {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    color: var(--text-dim);
+    letter-spacing: 3px;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Content */
+.content-wrapper {
+    max-width: 1000px;
+    margin: 5rem auto;
+    padding: 0 5%;
+}
+
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 8px;
+    color: var(--accent);
+    margin-bottom: 4rem;
+    text-align: center;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 1px;
+    background: var(--primary);
+    margin: 15px auto;
+}
+
+/* Profile Grid */
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-bottom: 7rem;
+}
+
+.profile-item {
+    background: rgba(141, 28, 28, 0.03);
+    padding: 2.5rem;
+    border: 1px solid var(--border);
+    text-align: center;
+    transition: 0.5s;
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-item:hover {
+    background: rgba(141, 28, 28, 0.08);
+    border-color: var(--primary);
+    transform: scale(1.05);
+}
+
+.label {
+    display: block;
+    font-size: 0.65rem;
+    color: var(--primary);
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.value {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+/* Description */
+.description-box {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 4rem;
+    border-left: 2px solid var(--primary);
+    border-right: 2px solid var(--primary);
+    margin-bottom: 7rem;
+    line-height: 2.3;
+    position: relative;
+}
+
+.description-box p {
+    font-size: 1.2rem;
+    color: var(--text-dim);
+    text-align: justify;
+}
+
+/* Lore Grid */
+.lore-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+}
+
+.lore-card {
+    padding: 3rem;
+    background: linear-gradient(to bottom, rgba(20, 20, 20, 0.8), transparent);
+    border: 1px solid rgba(141, 28, 28, 0.1);
+}
+
+.lore-card h3 {
+    font-size: 1.3rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.lore-card p {
+    font-size: 1rem;
+    color: var(--text-dim);
+}
+
+/* Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.footer {
+    padding: 8rem;
+    text-align: center;
+    opacity: 0.2;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 6px;
+}
+
+@media (max-width: 768px) {
+    .en-name {
+        font-size: 3.5rem;
+    }
+}

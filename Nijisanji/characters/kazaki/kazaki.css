@@ -1,0 +1,233 @@
+:root {
+    --bg-color: #0d120a;
+    --primary: #c8f39a;
+    /* Lime Green */
+    --accent: #9edb5f;
+    --text: #ffffff;
+    --text-dim: #b8c7a8;
+    --glass: rgba(200, 243, 154, 0.05);
+    --border: rgba(200, 243, 154, 0.2);
+    --glow: rgba(200, 243, 154, 0.4);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text);
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.8;
+    overflow-x: hidden;
+}
+
+/* Background FX */
+.background-effects {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: radial-gradient(circle at center, #1a2315 0%, #0d120a 100%);
+}
+
+.forest-glow {
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    top: -10%;
+    left: -10%;
+    background: radial-gradient(circle, rgba(200, 243, 154, 0.08) 0%, transparent 70%);
+    filter: blur(80px);
+}
+
+/* Nav */
+.nav-bar {
+    padding: 1.5rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--border);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.back-link {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.back-link:hover {
+    color: var(--primary);
+    text-shadow: 0 0 10px var(--glow);
+}
+
+/* Header */
+.character-header {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.jp-name {
+    display: block;
+    font-size: 1.2rem;
+    letter-spacing: 12px;
+    color: var(--primary);
+    margin-bottom: 0.8rem;
+}
+
+.en-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 5rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-shadow: 0 0 30px var(--glow);
+    background: linear-gradient(to bottom, #fff, var(--primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.catchphrase {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    color: var(--text-dim);
+    letter-spacing: 3px;
+    font-style: italic;
+}
+
+/* Content */
+.content-wrapper {
+    max-width: 1000px;
+    margin: 5rem auto;
+    padding: 0 5%;
+}
+
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.35rem;
+    letter-spacing: 8px;
+    color: var(--primary);
+    margin-bottom: 3.5rem;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.section-title::after {
+    content: '';
+    height: 1px;
+    flex: 1;
+    background: linear-gradient(to right, var(--border), transparent);
+}
+
+/* Profile Grid */
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 7rem;
+}
+
+.profile-item {
+    background: var(--glass);
+    padding: 2.2rem;
+    border: 1px solid var(--border);
+    transition: 0.4s;
+}
+
+.profile-item:hover {
+    border-color: var(--primary);
+    background: rgba(200, 243, 154, 0.1);
+    transform: translateY(-5px);
+}
+
+.label {
+    display: block;
+    font-size: 0.65rem;
+    color: var(--primary);
+    margin-bottom: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.value {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+/* Description */
+.description-box {
+    background: rgba(255, 255, 255, 0.01);
+    padding: 3.5rem;
+    border-radius: 8px;
+    margin-bottom: 7rem;
+    line-height: 2.2;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.description-box p {
+    font-size: 1.15rem;
+    color: var(--text-dim);
+}
+
+/* Lore Grid */
+.lore-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.lore-card {
+    padding: 2.5rem;
+    border: 1px solid var(--border);
+    background: linear-gradient(135deg, transparent, rgba(200, 243, 154, 0.03));
+}
+
+.lore-card h3 {
+    font-size: 1.25rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 1s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.footer {
+    padding: 0 0 10vh 0;
+    text-align: center;
+    opacity: 0.2;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 5px;
+}
+
+@media (max-width: 768px) {
+    .en-name {
+        font-size: 3rem;
+    }
+}

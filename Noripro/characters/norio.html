@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="no-js">
 
 <head>
     <meta charset="UTF-8">
@@ -20,7 +20,7 @@
 
     <div class="container">
         <!-- Hero -->
-        <section class="hero">
+        <section class="hero cp-panel-reveal">
             <div class="hero-visual">
                 <div class="avatar-circle">
                     <i id="hero-icon" class="fa-solid fa-dog"></i>
@@ -37,7 +37,7 @@
         </section>
 
         <!-- Stats -->
-        <div class="stats-bar">
+        <div class="stats-bar cp-reveal">
             <div class="stat-item">
                 <span class="stat-val">1,000,000</span>
                 <span class="stat-label">SUBSCRIBERS</span>
@@ -52,7 +52,7 @@
             </div>
         </div>
 
-        <div class="main-grid">
+        <div class="main-grid cp-reveal">
             <div class="content-left">
                 <!-- Biography -->
                 <div class="panel">
@@ -129,6 +129,7 @@
         </footer>
     </div>
 
+    <script>document.documentElement.classList.remove('no-js');</script>
     <script src="norio_script.js"></script>
 </body>
 
