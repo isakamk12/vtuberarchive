@@ -1,0 +1,300 @@
+:root {
+    --riki-purple: #D598DD;
+    --riki-blue: #5bc0de;
+    --riki-black: #1a1a1b;
+    --riki-red: #e74c3c;
+    --kiriko-gold: #f1c40f;
+    --kiriko-magenta: #ff00ff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--riki-black);
+    color: #f5f5f5;
+    font-family: 'Kosugi Maru', sans-serif;
+    overflow-x: hidden;
+    transition: all 1s ease-in-out;
+}
+
+.background-effects {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.circus-pattern {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image:
+        radial-gradient(circle at 0% 0%, rgba(213, 152, 221, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 100% 100%, rgba(91, 192, 222, 0.05) 0%, transparent 50%);
+}
+
+.radio-waves {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(255, 255, 255, 0.01) 40px, rgba(255, 255, 255, 0.01) 80px);
+}
+
+/* Nav */
+.nav-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 3px solid var(--riki-purple);
+    z-index: 100;
+    box-sizing: border-box;
+}
+
+.back-link {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+}
+
+.nav-extra {
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 3px;
+    color: var(--riki-purple);
+}
+
+/* Header */
+.character-header {
+    margin-top: 100px;
+    padding: 150px 40px;
+    text-align: center;
+    position: relative;
+    border-bottom: 10px double var(--riki-purple);
+    background: linear-gradient(135deg, rgba(213, 152, 221, 0.1), rgba(91, 192, 222, 0.1));
+}
+
+.jp-name {
+    display: block;
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--riki-purple);
+}
+
+.en-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 6rem;
+    margin: 0;
+    line-height: 0.85;
+    font-style: italic;
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 2px #fff;
+    text-shadow: 10px 10px 0 var(--riki-purple);
+}
+
+.catchphrase {
+    margin-top: 50px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--riki-blue);
+}
+
+#transform-btn {
+    margin-top: 30px;
+    background: transparent;
+    border: 2px solid var(--riki-purple);
+    color: var(--riki-purple);
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#transform-btn:hover {
+    background: var(--riki-purple);
+    color: #fff;
+    box-shadow: 0 0 30px var(--riki-purple);
+}
+
+/* Content */
+.content-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 80px 40px;
+}
+
+.section-title {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3.5rem;
+    margin-bottom: 50px;
+    text-align: center;
+    letter-spacing: 10px;
+    color: var(--riki-purple);
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 120px;
+}
+
+.profile-item {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(213, 152, 221, 0.2);
+    padding: 30px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.profile-item:hover {
+    background: rgba(213, 152, 221, 0.05);
+    border-color: var(--riki-purple);
+}
+
+.label {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--riki-blue);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.value {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+/* Description */
+.description-box {
+    background: #000;
+    padding: 60px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    line-height: 2.2;
+    border: 1px solid var(--riki-purple);
+    box-shadow: 0 0 50px rgba(213, 152, 221, 0.1);
+    margin-bottom: 120px;
+}
+
+/* Lore */
+.lore-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+.lore-card {
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 30px;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.lore-card:hover {
+    background: rgba(213, 152, 221, 0.05);
+    border-color: var(--riki-purple);
+}
+
+.lore-card i {
+    font-size: 3rem;
+    color: var(--riki-purple);
+    text-align: center;
+}
+
+.lore-card h3 {
+    margin: 0 0 15px 0;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+.lore-card p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #ccc;
+}
+
+/* Kiriko Mode */
+body.kiriko-mode {
+    background-color: #2a0a2a;
+    color: #fff;
+}
+
+body.kiriko-mode .nav-bar {
+    border-bottom-color: var(--kiriko-gold);
+}
+
+body.kiriko-mode .en-name {
+    -webkit-text-stroke-color: var(--kiriko-gold);
+    text-shadow: 10px 10px 0 var(--kiriko-magenta);
+}
+
+body.kiriko-mode .section-title {
+    color: var(--kiriko-gold);
+}
+
+body.kiriko-mode .profile-item {
+    border-color: var(--kiriko-gold);
+}
+
+body.kiriko-mode .catchphrase {
+    color: var(--kiriko-gold);
+}
+
+/* Footer */
+.footer {
+    padding: 100px 40px;
+    text-align: center;
+    border-top: 1px solid rgba(213, 152, 221, 0.2);
+}
+
+.footer p {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1rem;
+    letter-spacing: 5px;
+    opacity: 0.3;
+}
+
+/* Reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .en-name {
+        font-size: 3rem;
+    }
+
+    .lore-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
