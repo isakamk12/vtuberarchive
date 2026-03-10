@@ -1,0 +1,152 @@
+/* Fura Kanato Theme */
+:root {
+    --kanato-bg: #2d1616;
+    --kanato-wine: #722f37;
+    --kanato-gold: #c5a059;
+    --kanato-pasta: #f3e5ab;
+    --kanato-white: #ffffff;
+    --kanato-dark: #1a0a0a;
+}
+
+.kanato-theme {
+    background: var(--kanato-bg);
+    color: var(--kanato-white);
+}
+
+.kanato-theme .en-name {
+    color: var(--kanato-wine);
+    text-shadow: 2px 2px 0px var(--kanato-gold);
+    font-family: 'Zen Old Mincho', serif;
+    font-weight: 900;
+}
+
+.kanato-theme .section-title {
+    color: var(--kanato-gold);
+    font-family: 'Zen Old Mincho', serif;
+}
+
+.kanato-theme .section-title::after {
+    background: linear-gradient(90deg, var(--kanato-wine), var(--kanato-gold), transparent);
+}
+
+.pasta-drip-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.pasta-drop {
+    position: absolute;
+    width: 2px;
+    height: 30px;
+    background: var(--kanato-pasta);
+    opacity: 0.3;
+    animation: pasta-fall 5s infinite linear;
+}
+
+@keyframes pasta-fall {
+    0% {
+        transform: translateY(-100px);
+    }
+
+    100% {
+        transform: translateY(110vh);
+    }
+}
+
+.wine-glass-float {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    font-size: 3rem;
+    color: var(--kanato-wine);
+    opacity: 0.5;
+    z-index: 10;
+}
+
+.diner-pattern {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(var(--kanato-dark) 20%, transparent 20%);
+    background-size: 30px 30px;
+    opacity: 0.3;
+    z-index: -2;
+}
+
+.personality-toggle {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.personality-toggle button {
+    padding: 8px 20px;
+    border: 2px solid var(--kanato-gold);
+    background: transparent;
+    color: var(--kanato-gold);
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.personality-toggle button.active {
+    background: var(--kanato-gold);
+    color: var(--kanato-dark);
+}
+
+#toggle-ikiri.active {
+    background: #ff00ff;
+    border-color: #ff00ff;
+    color: white;
+    box-shadow: 0 0 15px #ff00ff;
+}
+
+.kanato-theme .profile-item {
+    background: rgba(114, 47, 55, 0.2);
+    border: 1px solid var(--kanato-gold);
+    border-radius: 8px;
+}
+
+.kanato-theme .description-box {
+    background: rgba(26, 10, 10, 0.8);
+    border: 1px solid var(--kanato-gold);
+    position: relative;
+}
+
+.kanato-theme .lore-card {
+    background: rgba(114, 47, 55, 0.1);
+    border: 1px solid var(--kanato-wine);
+}
+
+.kanato-theme .lore-card h3 {
+    color: var(--kanato-gold);
+}
+
+/* Ikiri Mode Styles */
+.ikiri-mode {
+    animation: vibrate 0.1s infinite;
+}
+
+@keyframes vibrate {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(1px, 1px);
+    }
+
+    100% {
+        transform: translate(-1px, -1px);
+    }
+}

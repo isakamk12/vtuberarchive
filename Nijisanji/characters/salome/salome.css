@@ -1,0 +1,218 @@
+/* Hyakumantenbara Salome Theme */
+:root {
+    --salome-bg: #2d0015;
+    --salome-purple: #800080;
+    --salome-rose: #ff4791;
+    --salome-gold: #ffd700;
+    --salome-white: #fff0f5;
+    --salome-dark: #1a000a;
+}
+
+.salome-theme {
+    background: var(--salome-bg);
+    color: var(--salome-white);
+    overflow-x: hidden;
+}
+
+.salome-theme .en-name {
+    color: var(--salome-rose);
+    text-shadow: 2px 2px 0px var(--salome-gold), 0 0 20px var(--salome-rose);
+    font-family: 'Zen Old Mincho', serif;
+    font-weight: 900;
+}
+
+.salome-theme .section-title {
+    color: var(--salome-rose);
+    font-family: 'Zen Old Mincho', serif;
+    text-align: center;
+}
+
+.salome-theme .section-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, transparent, var(--salome-rose), var(--salome-gold), var(--salome-rose), transparent);
+}
+
+.rose-particle-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.rose-petal {
+    position: absolute;
+    color: var(--salome-rose);
+    font-size: 1.5rem;
+    opacity: 0.4;
+    animation: petal-fall 10s infinite linear;
+}
+
+@keyframes petal-fall {
+    0% {
+        transform: translateY(-100px) rotate(0) translateX(0);
+    }
+
+    25% {
+        transform: translateY(25vh) rotate(90deg) translateX(50px);
+    }
+
+    50% {
+        transform: translateY(50vh) rotate(180deg) translateX(-50px);
+    }
+
+    75% {
+        transform: translateY(75vh) rotate(270deg) translateX(50px);
+    }
+
+    100% {
+        transform: translateY(110vh) rotate(360deg) translateX(0);
+    }
+}
+
+.scorpion-stencil {
+    position: fixed;
+    bottom: -50px;
+    right: -50px;
+    font-size: 30vw;
+    color: var(--salome-purple);
+    opacity: 0.1;
+    transform: rotate(-15deg);
+    z-index: -2;
+}
+
+.ringlet-pattern {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: repeating-linear-gradient(45deg, rgba(128, 0, 128, 0.05) 0px, rgba(128, 0, 128, 0.05) 2px, transparent 2px, transparent 40px);
+    z-index: -3;
+}
+
+.ojosama-badge {
+    display: inline-block;
+    background: linear-gradient(45deg, var(--salome-purple), var(--salome-rose));
+    color: white;
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-weight: 900;
+    border: 2px solid var(--salome-gold);
+    box-shadow: 0 0 20px var(--salome-rose);
+    margin-top: 20px;
+    animation: float 3s infinite ease-in-out;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.salome-theme .profile-item {
+    background: rgba(128, 0, 128, 0.2);
+    border: 2px solid var(--salome-rose);
+    border-radius: 15px;
+    transition: all 0.3s;
+}
+
+.salome-theme .profile-item:hover {
+    background: var(--salome-purple);
+    box-shadow: 0 0 20px var(--salome-rose);
+    transform: scale(1.05);
+}
+
+.salome-theme .description-box {
+    background: linear-gradient(rgba(26, 0, 10, 0.9), rgba(128, 0, 128, 0.3));
+    border: 1px solid var(--salome-rose);
+    border-radius: 30px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.salome-theme .lore-card {
+    background: var(--salome-dark);
+    border: 1px solid #444;
+    position: relative;
+    overflow: hidden;
+}
+
+.salome-theme .lore-card::before {
+    content: '💯';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 3rem;
+    opacity: 0.1;
+}
+
+/* Modal for Gastroscopy */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    background-color: #111;
+    margin: 5% auto;
+    padding: 20px;
+    border: 5px solid var(--salome-rose);
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.xray-frame {
+    border: 2px solid #555;
+    padding: 20px;
+    background: #000;
+}
+
+.gastroscopy-image {
+    width: 100%;
+    height: 300px;
+    background: url('https://cdn.pixabay.com/photo/2016/03/31/15/43/human-1293155_960_720.png') no-repeat center;
+    /* Schematic placeholder */
+    background-size: contain;
+    filter: sepia(1) saturate(5) hue-rotate(280deg);
+    /* Make it look purple-ish and weird */
+    margin-bottom: 20px;
+}
+
+.xray-text {
+    font-family: monospace;
+    color: #0f0;
+}
+
+.ojosama-btn {
+    background: var(--salome-rose);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: 900;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 0 20px var(--salome-rose);
+    transition: transform 0.2s;
+}
+
+.ojosama-btn:hover {
+    transform: scale(1.1);
+}

@@ -1,0 +1,189 @@
+/* Igarashi Rika Theme */
+:root {
+    --rika-bg: #fffbf0;
+    --rika-orange: #FF8C3C;
+    --rika-gold: #FFD200;
+    --rika-white: #ffffff;
+    --rika-green: #228b22;
+    --rika-text: #4d4d4d;
+}
+
+.rika-theme {
+    background: var(--rika-bg);
+    color: var(--rika-text);
+}
+
+.rika-theme .en-name {
+    color: var(--rika-orange);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 5rem;
+    letter-spacing: 0.4rem;
+    text-shadow: 3px 3px 0px var(--rika-gold);
+}
+
+.rika-theme .section-title {
+    color: var(--rika-orange);
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.1rem;
+}
+
+.rika-theme .section-title::after {
+    background: linear-gradient(90deg, var(--rika-orange), var(--rika-gold), transparent);
+}
+
+.baseball-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.baseball {
+    position: absolute;
+    font-size: 1.5rem;
+    opacity: 0.1;
+    animation: fly-out 5s infinite ease-in;
+}
+
+@keyframes fly-out {
+    0% {
+        transform: scale(0) rotate(0);
+        opacity: 0;
+        top: 50%;
+        left: 50%;
+    }
+
+    10% {
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(3) rotate(360deg);
+        opacity: 0;
+        top: var(--target-y);
+        left: var(--target-x);
+    }
+}
+
+.stadium-silhouette {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(transparent, rgba(34, 139, 34, 0.1));
+    z-index: -2;
+}
+
+.beer-foam-drip {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.5) 20%, transparent 20%);
+    background-size: 100px 100px;
+    opacity: 0.05;
+    z-index: -3;
+}
+
+.swing-btn {
+    margin-top: 20px;
+    padding: 10px 30px;
+    background: var(--rika-orange);
+    color: white;
+    border: 3px solid var(--rika-gold);
+    border-radius: 0;
+    font-weight: 900;
+    cursor: pointer;
+    box-shadow: 5px 5px 0px var(--rika-gold);
+    transition: all 0.2s;
+}
+
+.swing-btn:active {
+    transform: translate(3px, 3px);
+    box-shadow: 2px 2px 0px var(--rika-gold);
+}
+
+.rika-theme .profile-item {
+    background: white;
+    border: 2px solid var(--rika-orange);
+    border-radius: 10px;
+}
+
+.rika-theme .description-box {
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px dashed var(--rika-orange);
+    border-radius: 20px;
+}
+
+.rika-theme .lore-card {
+    background: white;
+    border: none;
+    box-shadow: 0 10px 0px var(--rika-gold);
+}
+
+.rika-theme .lore-card h3 {
+    color: var(--rika-orange);
+}
+
+.confetti-layer {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 100;
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    animation: confetti-fall 3s linear forwards;
+}
+
+@keyframes confetti-fall {
+    0% {
+        transform: translateY(-10px) rotate(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Stadium Roar effect */
+.roar-active {
+    animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    10% {
+        transform: translate(-1px, -1px);
+    }
+
+    20% {
+        transform: translate(1px, 1px);
+    }
+
+    30% {
+        transform: translate(-1px, 1px);
+    }
+
+    40% {
+        transform: translate(1px, -1px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}

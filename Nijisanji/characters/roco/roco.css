@@ -1,0 +1,178 @@
+/* Kaburaki Roco Theme */
+:root {
+    --roco-bg: #fffcf0;
+    --roco-orange: #f39800;
+    --roco-yellow: #ffdc00;
+    --roco-green: #3eb370;
+    --roco-dark: #444444;
+    --roco-text: #555555;
+}
+
+.roco-theme {
+    background: var(--roco-bg);
+    color: var(--roco-text);
+}
+
+.roco-theme .en-name {
+    color: var(--roco-orange);
+    font-family: 'Potta One', cursive;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    text-shadow: 2px 2px 0px var(--roco-yellow), 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.roco-theme .section-title {
+    color: var(--roco-green);
+    font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+.roco-theme .section-title::after {
+    background: linear-gradient(90deg, var(--roco-orange), var(--roco-yellow), transparent);
+}
+
+.park-sky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top right, rgba(243, 152, 0, 0.05), transparent);
+    z-index: -3;
+}
+
+.rollercoaster-track-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        radial-gradient(ellipse 200% 100% at 50% -50%, transparent 45%, rgba(243, 152, 0, 0.1) 46%, rgba(243, 152, 0, 0.1) 48%, transparent 49%);
+    z-index: -2;
+    pointer-events: none;
+}
+
+.pizza-layer {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.pizza-icon {
+    position: absolute;
+    font-size: 1.5rem;
+    opacity: 0.1;
+    animation: pizza-fall 10s infinite linear;
+}
+
+@keyframes pizza-fall {
+    0% {
+        transform: translateY(-10vh) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+    }
+}
+
+.youkai-shadow-layer {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -4;
+}
+
+.mode-btn {
+    margin-top: 20px;
+    padding: 10px 35px;
+    background: var(--roco-green);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-weight: 900;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(62, 179, 112, 0.3);
+    transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+.mode-btn:hover {
+    transform: scale(1.1) rotate(2deg);
+    background: var(--roco-orange);
+}
+
+.roco-theme .profile-item {
+    background: white;
+    border: 2px solid var(--roco-yellow);
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.roco-theme .profile-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: var(--roco-orange);
+}
+
+.roco-theme .description-box {
+    background: rgba(255, 255, 255, 0.8);
+    border: 3px dashed var(--roco-orange);
+    border-radius: 15px;
+}
+
+.roco-theme .lore-card {
+    background: white;
+    border: 1px solid #eee;
+    transition: transform 0.3s;
+}
+
+.roco-theme .lore-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--roco-orange);
+}
+
+/* Delusion Mode */
+.delusion-bubble {
+    position: fixed;
+    background: white;
+    border: 2px solid var(--roco-orange);
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--roco-orange);
+    z-index: 1000;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(243, 152, 0, 0.2);
+}
+
+.delusion-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 20px;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border: 2px solid var(--roco-orange);
+    border-radius: 50%;
+}
+
+.youkai-mode {
+    filter: sepia(0.5) contrast(1.2);
+}
+
+.youkai-mode .en-name {
+    color: var(--roco-dark);
+}

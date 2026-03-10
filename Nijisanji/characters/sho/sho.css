@@ -1,0 +1,221 @@
+/* Hoshirube Sho Theme */
+:root {
+    --sho-bg: #0b071a;
+    --sho-purple: #A58CDC;
+    --sho-deep-purple: #4b3d7b;
+    --sho-gold: #FFD700;
+    --sho-text: #e0e0e0;
+    --sho-shadow: rgba(165, 140, 220, 0.3);
+}
+
+.sho-theme {
+    background: var(--sho-bg);
+    color: var(--sho-text);
+    overflow-x: hidden;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.sho-theme .jp-name {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.5rem;
+    color: var(--sho-purple);
+    text-shadow: 0 0 10px var(--sho-purple);
+}
+
+.sho-theme .en-name {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    text-shadow: 3px 3px 0px var(--sho-deep-purple);
+}
+
+.sho-theme .section-title {
+    color: var(--sho-purple);
+    font-family: 'Cinzel', serif;
+    border-bottom: 2px solid var(--sho-purple);
+}
+
+.sho-theme .section-title::after {
+    display: none;
+}
+
+.galaxy-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 70% 20%, rgba(165, 140, 220, 0.1), transparent 50%),
+        radial-gradient(circle at 20% 80%, rgba(75, 61, 123, 0.1), transparent 50%);
+    z-index: -3;
+}
+
+.constellation-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -2;
+}
+
+.star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.5;
+    animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+    from {
+        opacity: 0.2;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 0.8;
+        transform: scale(1.2);
+    }
+}
+
+.tentacle-silhouette-layer {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.05;
+}
+
+.tentacle {
+    position: absolute;
+    font-size: 15rem;
+    color: var(--sho-purple);
+    filter: blur(20px);
+}
+
+.mode-btn {
+    margin-top: 20px;
+    padding: 10px 40px;
+    background: transparent;
+    border: 1px solid var(--sho-purple);
+    color: var(--sho-purple);
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.2rem;
+    cursor: pointer;
+    transition: all 0.4s;
+    position: relative;
+    overflow: hidden;
+}
+
+.mode-btn:hover {
+    background: var(--sho-purple);
+    color: var(--sho-bg);
+    box-shadow: 0 0 20px var(--sho-purple);
+}
+
+.sho-theme .profile-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(165, 140, 220, 0.2);
+    position: relative;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.sho-theme .profile-item:hover {
+    border-color: var(--sho-purple);
+    transform: translateY(-2px);
+}
+
+.sho-theme .description-box {
+    background: rgba(11, 7, 26, 0.8);
+    border: 1px solid var(--sho-deep-purple);
+    border-radius: 0;
+    position: relative;
+}
+
+.sho-theme .description-box::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 20px;
+    height: 20px;
+    border-top: 2px solid var(--sho-purple);
+    border-left: 2px solid var(--sho-purple);
+}
+
+.sho-theme .lore-card {
+    background: rgba(255, 255, 255, 0.02);
+    border-left: 3px solid var(--sho-deep-purple);
+}
+
+.sho-theme .lore-card h3 {
+    color: var(--sho-purple);
+}
+
+/* Appraisal Tags Effect */
+.appraisal-mode .profile-item::after {
+    content: attr(data-appraisal);
+    position: absolute;
+    bottom: -15px;
+    right: 10px;
+    background: var(--sho-gold);
+    color: black;
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    font-weight: 900;
+    transform: rotate(2deg);
+    z-index: 10;
+    box-shadow: 3px 3px 0px black;
+}
+
+.appraisal-mode .value {
+    filter: blur(2px);
+    transition: filter 0.3s;
+}
+
+.appraisal-mode .profile-item:hover .value {
+    filter: blur(0);
+}
+
+/* Transformation Effect */
+.transform-active .tentacle-silhouette-layer {
+    opacity: 0.2;
+    animation: pulse-aura 2s infinite alternate;
+}
+
+@keyframes pulse-aura {
+    from {
+        filter: blur(20px);
+    }
+
+    to {
+        filter: blur(40px) brightness(1.5);
+    }
+}
+
+.sho-theme .en-name:hover {
+    animation: cosmic-wave 0.5s infinite;
+}
+
+@keyframes cosmic-wave {
+    0% {
+        transform: skew(0deg);
+    }
+
+    25% {
+        transform: skew(2deg);
+        color: var(--sho-purple);
+    }
+
+    75% {
+        transform: skew(-2deg);
+        color: var(--sho-gold);
+    }
+
+    100% {
+        transform: skew(0deg);
+    }
+}

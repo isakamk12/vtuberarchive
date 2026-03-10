@@ -1,0 +1,77 @@
+/* Ibrahim Theme */
+:root {
+    --ibrahim-bg: #0d121b;
+    --ibrahim-azure: #4ca1ff;
+    --ibrahim-gold: #ffd700;
+    --ibrahim-silver: #c0c0c0;
+    --ibrahim-glow: rgba(76, 161, 255, 0.2);
+}
+
+.ibrahim-theme {
+    background: var(--ibrahim-bg);
+}
+
+.ibrahim-theme .en-name {
+    color: var(--ibrahim-silver);
+    text-shadow: 0 0 20px var(--ibrahim-glow);
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.5rem;
+}
+
+.ibrahim-theme .section-title {
+    color: var(--ibrahim-azure);
+}
+
+.sand-storm-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 70% 30%, rgba(255, 215, 0, 0.05) 0%, transparent 50%);
+    z-index: -1;
+}
+
+.voxel-particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.voxel {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: var(--ibrahim-azure);
+    opacity: 0.3;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    pointer-events: none;
+}
+
+.shimmer-effect {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, transparent 40%, rgba(255, 255, 255, 0.1) 50%, transparent 60%);
+    background-size: 200% 200%;
+    animation: shimmer 5s infinite;
+    pointer-events: none;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+.ibrahim-theme .profile-item {
+    border-left: 4px solid var(--ibrahim-azure);
+}
+
+.ibrahim-theme .lore-card h3 {
+    color: var(--ibrahim-gold);
+}

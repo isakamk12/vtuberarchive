@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宇佐美リト | NIJISANJI ARCHIVE</title>
+    <link rel="stylesheet" href="../char-base-v2.css">
+    <link rel="stylesheet" href="rito.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Noto+Sans+JP:wght@700;900&family=Montserrat:wght@700;900&family=Zen+Maru+Gothic:wght@700;900&family=Oswald:wght@700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="rito-theme">
+    <div class="background-effects">
+        <div class="gym-grid"></div>
+        <div class="lightning-layer" id="lightning-container"></div>
+        <div class="volume-meters">
+            <div class="meter-bar" style="--height: 40%"></div>
+            <div class="meter-bar" style="--height: 70%"></div>
+            <div class="meter-bar" style="--height: 95%"></div>
+            <div class="meter-bar" style="--height: 60%"></div>
+        </div>
+        <div class="giraffe-shadow">🦒</div>
+        <div class="musical-spotlights" id="spotlight-container"></div>
+    </div>
+
+    <nav class="nav-bar">
+        <a href="../../nijisanji_index.html" class="back-link"><i class="fa-solid fa-chevron-left"></i> BACK TO
+            DATABASE</a>
+        <div class="nav-extra">NIJISANJI / Oriens</div>
+    </nav>
+
+    <header class="character-header" id="main-header">
+        <div class="header-inner">
+            <span class="jp-name">宇佐美 リト</span>
+            <h1 class="en-name">RITO USAMI</h1>
+            <div class="catchphrase">「はい！大きな声で、こんにちはー！宇佐美リトですッ！」</div>
+            <div class="volume-btn" id="roar-btn">MAX VOLUME ROAR</div>
+            <div class="mode-toggle" id="musical-mode">MUSICAL_MODE: OFF</div>
+        </div>
+    </header>
+
+    <main class="content-wrapper">
+        <section class="profile-section reveal">
+            <h2 class="section-title"><i class="fa-solid fa-dumbbell"></i> LOUD HERO DOSSIER</h2>
+            <div class="profile-grid">
+                <div class="profile-item">
+                    <span class="label">Occupation</span>
+                    <span class="value">ジムトレーナー / ヒーロー</span>
+                </div>
+                <div class="profile-item">
+                    <span class="label">Birthday</span>
+                    <span class="value">8月17日</span>
+                </div>
+                <div class="profile-item">
+                    <span class="label">Age</span>
+                    <span class="value">21歳 (?)</span>
+                </div>
+                <div class="profile-item">
+                    <span class="label">Height</span>
+                    <span class="value">181cm</span>
+                </div>
+                <div class="profile-item">
+                    <span class="label">Species</span>
+                    <span class="value">人間 <span class="tiny-text">(相棒：キリンちゃん 🦒)</span></span>
+                </div>
+                <div class="profile-item">
+                    <span class="label">Hobby</span>
+                    <span class="value">筋トレ、ミュージカル鑑賞、カフェイン</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="description-section reveal">
+            <h2 class="section-title">INTRODUCTION</h2>
+            <div class="description-box">
+                <p>圧倒的な声量と底抜けの明るさを持つ、ジムトレーナー兼ヒーロー。胸元のキリンの相棒「キリンちゃん」に触れることで変身能力を得ます。初配信での「開幕音割れ」は既に伝説。その声の大きさはオフラインイベントでも遺憾なく発揮され、別の階にいても位置がバレるほど。しかし、ホラーゲームで本気で恐怖すると全く声が出なくなるという、意外な「静寂」の弱点も持ち合わせています。ミュージカルへの深い愛と、ザンギエフを愛用するストリートファイター6での熱いコーチングも魅力です。
+                </p>
+            </div>
+        </section>
+
+        <section class="lore-section reveal">
+            <h2 class="section-title">STRENGTH LOGS</h2>
+            <div class="lore-grid">
+                <div class="lore-card">
+                    <h3><i class="fa-solid fa-volume-high"></i> 音割れの開幕</h3>
+                    <p>初配信の冒頭から最大音量で挨拶し、リスナーの鼓膜とマイクの限界を突破。スタッフからリアルタイムで音量調整の連絡が入った。
+                    </p>
+                </div>
+                <div class="lore-card">
+                    <h3><i class="fa-solid fa-theater-masks"></i> ミュージカル歌唱</h3>
+                    <p>『レ・ミゼラブル』などのミュージカルを愛好。その影響を受けた力強く情熱的な歌声は、同期からも「テクニックが凄まじい」と絶賛される。
+                    </p>
+                </div>
+                <div class="lore-card">
+                    <h3><i class="fa-solid fa-mug-hot"></i> 塩コーヒー事件</h3>
+                    <p>収益化記念配信にて、砂糖と間違えて塩を購入。本気で「しょっぱい……」と困惑するドジっ子属性も全開。自称「字は綺麗」だが0点の過去あり。</p>
+                </div>
+                <div class="lore-card">
+                    <h3><i class="fa-solid fa-bolt"></i> ザンギエフの師匠</h3>
+                    <p>スト6ではザンギエフを極める。先輩ライバー長尾景を大会全勝へと導いたポジティブなコーチングは、まさに「導くヒーロー」そのもの。
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 VT_ARCHIVE // USAMI_RITO_LOUD_HERO.gym</p>
+    </footer>
+
+    <script src="rito.js"></script>
+</body>
+
+</html>

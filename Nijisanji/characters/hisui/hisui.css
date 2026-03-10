@@ -1,0 +1,117 @@
+/* Kitakoji Hisui Theme */
+:root {
+    --hisui-bg: #0d1a15;
+    --hisui-main: #38B48B;
+    --hisui-main-glow: rgba(56, 180, 139, 0.3);
+    --agent-shadow: #1a1a1a;
+}
+
+.hisui-theme {
+    background: var(--hisui-bg);
+}
+
+.hisui-theme .en-name {
+    color: var(--hisui-main);
+    text-shadow: 0 0 20px var(--hisui-main-glow);
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.3rem;
+}
+
+.hisui-theme .section-title {
+    color: var(--hisui-main);
+}
+
+.matrix-data-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(56, 180, 139, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(56, 180, 139, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+.shark-particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.shark-fin {
+    position: absolute;
+    color: var(--hisui-main);
+    opacity: 0.2;
+    font-size: 20px;
+    pointer-events: none;
+    animation: swim 10s linear infinite;
+}
+
+@keyframes swim {
+    0% {
+        transform: translateX(-100px) rotate(10deg);
+    }
+
+    50% {
+        transform: translateX(calc(50vw)) rotate(-10deg);
+    }
+
+    100% {
+        transform: translateX(calc(100vw + 100px)) rotate(10deg);
+    }
+}
+
+.agent-glitch {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent, rgba(56, 180, 139, 0.1), transparent);
+    z-index: -1;
+    animation: glitch 1s infinite;
+}
+
+@keyframes glitch {
+    0% {
+        clip-path: inset(10% 0 80% 0);
+    }
+
+    20% {
+        clip-path: inset(60% 0 10% 0);
+    }
+
+    40% {
+        clip-path: inset(20% 0 40% 0);
+    }
+
+    60% {
+        clip-path: inset(80% 0 10% 0);
+    }
+
+    80% {
+        clip-path: inset(10% 0 70% 0);
+    }
+
+    100% {
+        clip-path: inset(50% 0 30% 0);
+    }
+}
+
+.hisui-theme .profile-item {
+    border: 1px solid var(--hisui-main);
+    box-shadow: inset 0 0 10px var(--hisui-main-glow);
+}
+
+.hisui-theme .description-box {
+    border-right: 5px solid var(--hisui-main);
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hisui-theme .lore-card:hover {
+    border-color: var(--hisui-main);
+    background: rgba(56, 180, 139, 0.05);
+}

@@ -1,0 +1,175 @@
+/* Koyanagi Rou Theme */
+:root {
+    --rou-bg: #0a0a1a;
+    --rou-purple: #5A5FAA;
+    --rou-dark-purple: #2d2d53;
+    --rou-blood: #ff4d4d;
+    --rou-text: #c0c0d8;
+    --rou-aura: rgba(90, 95, 170, 0.3);
+}
+
+.rou-theme {
+    background: var(--rou-bg);
+    color: var(--rou-text);
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.rou-theme .jp-name {
+    font-family: 'Shippori Mincho', serif;
+    letter-spacing: 0.3rem;
+    color: white;
+}
+
+.rou-theme .en-name {
+    color: var(--rou-purple);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    text-shadow: 2px 2px 10px var(--rou-aura);
+    letter-spacing: 0.1rem;
+}
+
+.rou-theme .section-title {
+    color: var(--rou-purple);
+    font-family: 'Shippori Mincho', serif;
+    border-left: 5px solid var(--rou-purple);
+    padding-left: 15px;
+}
+
+.rou-theme .section-title::after {
+    display: none;
+}
+
+.midnight-gradient {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 10% 10%, rgba(90, 95, 170, 0.15), transparent 60%);
+    z-index: -3;
+}
+
+.wireframe-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -2;
+    opacity: 0.2;
+}
+
+.wolf-shadow {
+    position: fixed;
+    left: 2%;
+    bottom: 2%;
+    font-size: 20rem;
+    opacity: 0.05;
+    z-index: -4;
+    transform: rotate(15deg);
+}
+
+.fever-btn {
+    margin-top: 20px;
+    padding: 10px 35px;
+    background: transparent;
+    border: 1px solid var(--rou-purple);
+    color: var(--rou-purple);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 0;
+    transition: all 0.3s;
+    text-transform: uppercase;
+}
+
+.fever-btn:hover {
+    background: var(--rou-purple);
+    color: white;
+    letter-spacing: 0.2rem;
+}
+
+.rou-theme .profile-item {
+    background: rgba(45, 45, 83, 0.3);
+    border: 1px solid rgba(90, 95, 170, 0.3);
+    border-bottom: 3px solid var(--rou-purple);
+}
+
+.rou-theme .description-box {
+    background: rgba(10, 10, 26, 0.9);
+    border: 1px solid var(--rou-dark-purple);
+    border-top: 10px solid var(--rou-purple);
+}
+
+.rou-theme .lore-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--rou-dark-purple);
+    position: relative;
+    overflow: hidden;
+}
+
+.rou-theme .lore-card::after {
+    content: 'ROULF';
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    font-size: 3rem;
+    font-weight: 900;
+    opacity: 0.03;
+    pointer-events: none;
+}
+
+/* Fever Mode */
+.fever-active .background-effects {
+    filter: invert(1) hue-rotate(180deg) brightness(1.5);
+}
+
+.fever-active .en-name {
+    animation: glitch-text 0.1s infinite;
+}
+
+@keyframes glitch-text {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(2px, -2px);
+        text-shadow: -2px 0 red, 2px 0 blue;
+    }
+
+    100% {
+        transform: translate(-2px, 2px);
+    }
+}
+
+.ghost-particle {
+    position: fixed;
+    font-size: 2rem;
+    pointer-events: none;
+    z-index: 50;
+    opacity: 0.2;
+}
+
+/* Shadow Strike Effect */
+.strike-line {
+    position: fixed;
+    background: white;
+    height: 1px;
+    z-index: 1000;
+    pointer-events: none;
+    animation: slash-fade 0.3s forwards;
+}
+
+@keyframes slash-fade {
+    from {
+        opacity: 1;
+        width: 0;
+    }
+
+    to {
+        opacity: 0;
+        width: 100vw;
+    }
+}

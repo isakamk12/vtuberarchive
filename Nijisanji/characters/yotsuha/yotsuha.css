@@ -1,0 +1,147 @@
+/* Umise Yotsuha Theme */
+:root {
+    --yotsuha-bg: #fffdf0;
+    --yotsuha-yellow: #FFE632;
+    --yotsuha-green: #38B48B;
+    --yotsuha-dark: #4a4a4a;
+    --yotsuha-white: #ffffff;
+    --yotsuha-shadow: rgba(255, 230, 50, 0.3);
+}
+
+.yotsuha-theme {
+    background: var(--yotsuha-bg);
+    color: var(--yotsuha-dark);
+}
+
+.yotsuha-theme .en-name {
+    color: var(--yotsuha-yellow);
+    text-shadow: 2px 2px 0px var(--yotsuha-dark);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+}
+
+.yotsuha-theme .section-title {
+    color: var(--yotsuha-green);
+    font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+.yotsuha-theme .section-title::after {
+    background: linear-gradient(90deg, var(--yotsuha-yellow), var(--yotsuha-green), transparent);
+}
+
+.clover-particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.clover-particle {
+    position: absolute;
+    color: var(--yotsuha-green);
+    font-size: 20px;
+    opacity: 0.2;
+    animation: clover-fall 10s infinite linear;
+}
+
+@keyframes clover-fall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+    }
+}
+
+.floating-shrimp-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.mahjong-record {
+    background: var(--yotsuha-dark);
+    color: var(--yotsuha-yellow);
+    padding: 5px 20px;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.score {
+    font-size: 1.2rem;
+    color: #ff5555;
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+.yotsuha-theme .profile-item {
+    background: white;
+    border: 2px solid var(--yotsuha-yellow);
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.yotsuha-theme .profile-item:hover {
+    transform: translateY(-5px) scale(1.05);
+    background: var(--yotsuha-yellow);
+    color: var(--yotsuha-dark);
+}
+
+.yotsuha-theme .description-box {
+    background: white;
+    border: 3px solid var(--yotsuha-green);
+    box-shadow: 10px 10px 0px var(--yotsuha-yellow);
+    border-radius: 20px;
+}
+
+.yotsuha-theme .lore-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.yotsuha-theme .lore-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--yotsuha-yellow);
+}
+
+.yotsuha-theme .lore-card h3 {
+    color: var(--yotsuha-green);
+}
+
+.shrimp-float {
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0.1;
+    animation: shrimp-move 15s infinite ease-in-out;
+}
+
+@keyframes shrimp-move {
+
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0);
+    }
+
+    33% {
+        transform: translate(100px, 50px) rotate(20deg);
+    }
+
+    66% {
+        transform: translate(-50px, 150px) rotate(-10deg);
+    }
+}

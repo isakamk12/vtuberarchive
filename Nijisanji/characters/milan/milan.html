@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ミラン・ケストレル | NIJISANJI ARCHIVE</title>
+    <link rel="stylesheet" href="../char-base-v2.css">
+    <link rel="stylesheet" href="milan.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Noto+Sans+JP:wght@700;900&family=Montserrat:wght@700;900&family=Zen+Maru+Gothic:wght@700;900&family=Cinzel:wght@700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="milan-theme">
+    <div class="background-effects">
+        <div class="void-bg"></div>
+        <div class="vacuum-glow"></div>
+        <div class="hourglass-layer" id="hourglass-container"></div>
+        <div class="butterfly-shadows" id="butterfly-container"></div>
+        <div class="audio-tuning-overlay" id="tuning-fx"></div>
+    </div>
+
+    <nav class="nav-bar">
+        <a href="../../nijisanji_index.html" class="back-link"><i class="fa-solid fa-chevron-left"></i> BACK TO
+            DATABASE</a>
+        <div class="nav-extra">NIJISANJI / みたらし団</div>
+    </nav>
+
+    <header class="character-header" id="main-header">
+        <div class="header-inner">
+            <span class="jp-name">ミラン・ケストレル</span>
+            <h1 class="en-name">MILAN KESTREL</h1>
+            <div class="catchphrase">「決して怪しい者ではございません。一介の魔道士、ミランです」</div>
+            <div class="tuning-panel">
+                <label>AUDIO_RESOLUTION</label>
+                <input type="range" min="0" max="100" value="100" id="audio-slider">
+            </div>
+            <div class="ctrl-btns">
+                <button class="m-btn" id="chrono-btn">CHRONOSTASIS ⏳</button>
+                <button class="m-btn" id="villain-btn">VILLAIN_MODE</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="content-wrapper">
+        <section class="profile-section reveal">
+            <h2 class="section-title"><i class="fa-solid fa-wand-sparkles"></i> TIME MAGE DOSSIER</h2>
+            <div class="profile-grid">
+                <div class="profile-item">
+                    <span class="label">Occupation</span>
+                    <span class="value">時魔道士 / 工房主</span>
+                </div>
+                <div class="profile-item">
+                    <span class="label">Birthday</span>
+                    <span class="value">6月13日</span>
+                </div>
+                <div class="profile-item">
+                    <span class="label">Age</span>
+                    <span class="value">不詳 <span class="tiny-text">(秘密)</span></span>
+                </div>
+                <div class="profile-item">
+                    <span class="label">Height</span>
+                    <span class="value">179cm</span>
+                </div>
+                <div class="profile-item">
+                    <span class="label">Mascot</span>
+                    <span class="value">魔法の蝶 (🦋)</span>
+                </div>
+                <div class="profile-item">
+                    <span class="label">Skill</span>
+                    <span class="value">音響機材、料理 (ペペロンチーノ)、アニメ、爆破</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="description-section reveal">
+            <h2 class="section-title">INTRODUCTION</h2>
+            <div class="description-box">
+                <p>怪しげな工房で魔術の研究に耽る、胡散臭くも優雅な時魔道士。一日中引きこもる出不精ですが、にじさんじ屈指の音響機材マニアとして知られ、真空管や古い録音機器を収集する「音質向上委員会」の重鎮です。丁寧な口調とは裏腹に、1kgのフライドポテトを完食する大食漢であり、自作PCやガジェットへの探求心も凄まじい。GTAなどのロールプレイでは、秩序を顧みない「ヴィラン・ケストレル」としての愉快犯的側面を覗かせることもあります。
+                </p>
+            </div>
+        </section>
+
+        <section class="lore-section reveal">
+            <h2 class="section-title">MAGICAL LOGS</h2>
+            <div class="lore-grid">
+                <div class="lore-card">
+                    <h3><i class="fa-solid fa-sliders"></i> 音質への異常な執着</h3>
+                    <p>他ライバーのPC・機材トラブルを解決する相談役。自身の配信環境も常に最先端（あるいは最古・最高）の機材で固め、音の解像度に命を懸ける。</p>
+                </div>
+                <div class="lore-card">
+                    <h3><i class="fa-solid fa-bomb"></i> ヴィランの愉悦</h3>
+                    <p>GTAイベントにて爆弾魔として暗躍、警察ヘリを掠奪。正義の組織に関わりつつも、混沌を愛する立ち振る舞いは「明確にヴィラン」と恐れられた。</p>
+                </div>
+                <div class="lore-card">
+                    <h3><i class="fa-solid fa-bug"></i> 「虹」は虫偏</h3>
+                    <p>「漢字で書ける生き物」というお題に、自信満々と「虹」と回答。同期に犬がいてもお構いなし。彼の常識は時空を越えて少々ズレているらしい。</p>
+                </div>
+                <div class="lore-card">
+                    <h3><i class="fa-solid fa-ghost"></i> 雑ミラン旋風</h3>
+                    <p>先輩による「電柱を倒すたびに音質を気にするミラン」のモノマネが大流行。本人の「怪しいが丁寧」なキャラが絶好のイジりネタとして定着した。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 VT_ARCHIVE // MILAN_KESTREL_TIME_MAGE.vlt</p>
+    </footer>
+
+    <script src="milan.js"></script>
+</body>
+
+</html>

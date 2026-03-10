@@ -1,0 +1,222 @@
+:root {
+    --ayane-white: #ffffff;
+    --ayane-yellow: #fef08a;
+    --ayane-mayo: #fffde7;
+    --ayane-dark: #1c1917;
+    --ayane-paint: #ef4444;
+}
+
+body.ayane-theme {
+    background-color: var(--ayane-white);
+    color: var(--ayane-dark);
+    font-family: 'Sawarabi Mincho', serif;
+    margin: 0;
+    overflow-x: hidden;
+    cursor: none;
+}
+
+#art-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+header {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+.back-link {
+    color: var(--ayane-dark);
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.mayo-indicator {
+    background: var(--ayane-yellow);
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    border: 2px solid #222;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.club-badge {
+    display: inline-block;
+    background: var(--ayane-dark);
+    color: white;
+    padding: 0.2rem 1rem;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.char-name {
+    font-size: 4rem;
+    margin: 0;
+}
+
+.en-name {
+    display: block;
+    font-size: 1.2rem;
+    opacity: 0.5;
+    letter-spacing: 5px;
+}
+
+.catchphrase {
+    background: var(--ayane-mayo);
+    padding: 2rem;
+    border: 2px dashed #999;
+    font-size: 1.3rem;
+    margin: 3rem 0;
+}
+
+.character-visual {
+    text-align: center;
+    position: relative;
+    padding: 2rem 0;
+}
+
+.main-img {
+    height: 550px;
+}
+
+.mayo-bottle {
+    position: absolute;
+    bottom: 10%;
+    right: 20%;
+    font-size: 4rem;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+.mayo-bottle:active {
+    transform: scale(0.8) rotate(-20deg);
+}
+
+.air-hockey-arena {
+    background: #222;
+    color: white;
+    padding: 4rem;
+    border-radius: 20px;
+    text-align: center;
+    margin: 4rem 0;
+}
+
+.arena-box {
+    width: 100%;
+    height: 300px;
+    border: 5px solid cyan;
+    position: relative;
+    margin: 2rem 0;
+    overflow: hidden;
+    background: radial-gradient(circle, #333 10%, transparent 11%);
+    background-size: 20px 20px;
+}
+
+.paddle {
+    width: 60px;
+    height: 10px;
+    position: absolute;
+    border-radius: 5px;
+}
+
+.paddle.player {
+    background: #ef4444;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.paddle.ai {
+    background: #3b82f6;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.puck {
+    width: 14px;
+    height: 14px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    box-shadow: 0 0 10px white;
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.canvas-card {
+    background: var(--ayane-white);
+    padding: 3rem;
+    border: 1px solid #ddd;
+    box-shadow: 10px 10px 0 #eee;
+}
+
+.failed-dish {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #f5f5f5;
+    border-radius: 4px;
+    font-style: italic;
+}
+
+.lore-section {
+    margin-top: 6rem;
+    padding: 4rem;
+    background: #fafafa;
+    border-top: 5px solid var(--ayane-dark);
+}
+
+.brush-cursor {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    font-size: 2rem;
+    transform: translate(-10px, -30px);
+}
+
+.paint-splat {
+    position: fixed;
+    pointer-events: none;
+    width: 50px;
+    height: 50px;
+    background: var(--ayane-paint);
+    border-radius: 50%;
+    filter: blur(5px);
+    opacity: 0.6;
+    animation: fadeSplat 1s forwards;
+}
+
+@keyframes fadeSplat {
+    to {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
+#start-hockey {
+    background: cyan;
+    border: none;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    cursor: pointer;
+}

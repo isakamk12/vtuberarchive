@@ -1,0 +1,168 @@
+/* Kuramochi Meruto Theme */
+:root {
+    --meruto-bg: #fff5f8;
+    --meruto-pink: #EB4682;
+    --meruto-hot-pink: #ff1493;
+    --meruto-light: #ffd1dc;
+    --meruto-dark: #4a1529;
+    --meruto-text: #5d4a52;
+}
+
+.meruto-theme {
+    background: var(--meruto-bg);
+    color: var(--meruto-text);
+}
+
+.meruto-theme .en-name {
+    color: var(--meruto-pink);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    text-shadow: 4px 4px 0px white, 6px 6px 0px var(--meruto-light);
+    filter: drop-shadow(0 0 10px rgba(235, 70, 130, 0.2));
+}
+
+.meruto-theme .section-title {
+    color: var(--meruto-pink);
+    font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+.meruto-theme .section-title::after {
+    background: linear-gradient(90deg, var(--meruto-pink), transparent);
+}
+
+.pink-glow-layer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle, rgba(235, 70, 130, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+.floating-rune {
+    position: fixed;
+    right: 5%;
+    bottom: 10%;
+    font-size: 8rem;
+    opacity: 0.1;
+    z-index: -2;
+    animation: rune-float 10s infinite ease-in-out;
+}
+
+@keyframes rune-float {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(-10deg);
+    }
+
+    50% {
+        transform: translateY(-30px) rotate(10deg);
+    }
+}
+
+.tile-bg-pattern {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        linear-gradient(rgba(235, 70, 130, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(235, 70, 130, 0.02) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: -3;
+}
+
+.break-btn {
+    margin-top: 20px;
+    padding: 15px 45px;
+    background: white;
+    border: 4px solid var(--meruto-pink);
+    color: var(--meruto-pink);
+    font-weight: 900;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 8px 8px 0px var(--meruto-pink);
+    transition: all 0.1s;
+    font-size: 1.2rem;
+}
+
+.break-btn:active {
+    transform: translate(4px, 4px);
+    box-shadow: 4px 4px 0px var(--meruto-pink);
+}
+
+.meruto-theme .profile-item {
+    background: white;
+    border: 2px solid var(--meruto-pink);
+    border-radius: 20px;
+    transition: transform 0.3s;
+}
+
+.meruto-theme .profile-item:hover {
+    transform: scale(1.02);
+}
+
+.meruto-theme .description-box {
+    background: rgba(255, 255, 255, 0.8);
+    border: 3px solid var(--meruto-light);
+    border-radius: 30px;
+}
+
+.meruto-theme .lore-card {
+    background: white;
+    border: 1px solid #fee;
+    box-shadow: 0 5px 15px rgba(235, 70, 130, 0.05);
+}
+
+.meruto-theme .lore-card h3 {
+    color: var(--meruto-pink);
+}
+
+/* Tile Break Effect */
+.tile-impact {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.tile-shard {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #ccc;
+    border: 2px solid #999;
+    z-index: 999;
+    pointer-events: none;
+}
+
+.heart-particle {
+    position: fixed;
+    color: var(--meruto-pink);
+    pointer-events: none;
+    z-index: 50;
+    animation: heart-fall 1s forwards;
+}
+
+@keyframes heart-fall {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(50px) scale(0);
+        opacity: 0;
+    }
+}

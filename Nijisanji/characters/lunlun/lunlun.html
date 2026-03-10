@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ルンルン (Lunlun) - Nijisanji Archive</title>
+    <link rel="stylesheet" href="../../nijisanji_style.css">
+    <link rel="stylesheet" href="lunlun.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Zen+Maru+Gothic:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="lunlun-theme">
+    <div class="flame-particles" id="particles"></div>
+    <div class="sky-bg"></div>
+
+    <header>
+        <nav>
+            <a href="../../nijisanji_index.html" class="back-link">← ARCHIVE</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="char-name">ルンルン <span class="en-name">Lunlun</span></h1>
+                <p class="catchphrase">「あやかきの猛獣ルンルンです！もしよろしければるんちょまと呼んでください！」</p>
+                <div class="status-tags">
+                    <span>いずれ菖蒲か杜若</span>
+                    <span>謎のいきもの</span>
+                    <span>猛獣 (自称)</span>
+                </div>
+            </div>
+            <div class="character-visual" id="lunlun-visual">
+                <div class="flame-tail"></div>
+                <img src="../../assets/lunlun_full.png" alt="Lunlun Full Visual" class="main-img">
+            </div>
+        </section>
+
+        <section class="detective-case" id="case-file">
+            <h2>DETECTIVE CHOMA</h2>
+            <p>証拠を整理し、名探偵として真実を看破せよ！</p>
+            <div class="case-grid">
+                <div class="evidence" data-fact="壁の設計ミス">🧱 Wall Error</div>
+                <div class="evidence" data-fact="お人間さんのアリバイ">👥 Alibi</div>
+                <div class="evidence" data-fact="8番ののぼり旗">🚩 Station Sign</div>
+                <div class="evidence" data-fact="プレッツェルの破片">🥨 Pretzel</div>
+            </div>
+            <div id="deduction-msg" class="deduction-text">証拠をクリックしてください...</div>
+        </section>
+
+        <section class="profile-grid">
+            <div class="pastel-card info">
+                <h2>SPECIMEN DATA</h2>
+                <ul>
+                    <li><strong>誕生日:</strong> 10月8日 (拾われた日)</li>
+                    <li><strong>体重:</strong> 800g (浮遊時) / 2kg</li>
+                    <li><strong>一人称:</strong> ちょま、己</li>
+                    <li><strong>趣味:</strong> おえかき、作詞、読書</li>
+                    <li><strong>好物:</strong> 丼もの、ギャル、プレッツェル</li>
+                </ul>
+            </div>
+            <div class="pastel-card notes">
+                <h2>RESEARCH NOTES</h2>
+                <p>空から落ちてきた記憶喪失の生命体。常に丁寧な敬語を使い、リスナーを「お人間さん」と呼ぶ。泣くと頭部の炎が激しく燃える。</p>
+            </div>
+        </section>
+
+        <section class="rap-visualizer">
+            <h2>MORE AND MORE</h2>
+            <p>ルンルン特製ラップ！ (Hover to bounce)</p>
+            <div class="lyric-bounce" id="rap-v">
+                <span>R</span><span>U</span><span>N</span><span>L</span><span>U</span><span>N</span><span>!</span>
+            </div>
+        </section>
+
+        <section class="lore-section">
+            <h2>LORE</h2>
+            <p>ホラーゲーム『8番のりば』で大号泣し注目を集めた、あやかきのマスコット的存在。高い言語化能力と推理力を持ち、マイクラの大会や人狼ゲームでファインプレーを連発する。2024年流行語「ちょまが前に行っちゃう」の生みの親。
+            </p>
+        </section>
+    </main>
+
+    <div class="float-status" id="float-counter">
+        SPEED: 1 km/h (頑張り中)
+    </div>
+
+    <script src="lunlun.js"></script>
+</body>
+
+</html>

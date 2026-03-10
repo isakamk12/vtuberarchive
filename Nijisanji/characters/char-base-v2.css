@@ -1,0 +1,219 @@
+/* Character Base Template */
+:root {
+    --bg-dark: #0f1218;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.7);
+    --nagao-main: #34c7b8; /* Teal */
+    --nagao-accent: #ffffff;
+    --ibrahim-main: #90d5ff; /* Light Blue */
+    --ibrahim-accent: #c0c0c0; /* Silver */
+    --furen-main: #ec1d2f; /* Red */
+    --furen-accent: #ffcc00; /* Gold */
+    --transition-standard: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg-dark);
+    color: var(--text-primary);
+    font-family: 'Montserrat', 'Kosugi Maru', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.background-effects {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.nav-bar {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+}
+
+.back-link {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 0.7;
+    transition: var(--transition-standard);
+}
+
+.back-link:hover {
+    opacity: 1;
+    transform: translateX(-5px);
+}
+
+.character-header {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.header-inner {
+    z-index: 2;
+}
+
+.jp-name {
+    font-size: 1.2rem;
+    letter-spacing: 0.5rem;
+    display: block;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
+
+.en-name {
+    font-size: 5rem;
+    font-weight: 900;
+    letter-spacing: -2px;
+    line-height: 1;
+}
+
+.catchphrase {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    opacity: 0.9;
+    font-style: italic;
+}
+
+.content-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border-color);
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.profile-item {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+}
+
+.profile-item .label {
+    display: block;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    opacity: 0.6;
+}
+
+.profile-item .value {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.description-box {
+    background: var(--card-bg);
+    padding: 3rem;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.lore-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.lore-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid var(--border-color);
+    transition: var(--transition-standard);
+}
+
+.lore-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.lore-card h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.lore-card p {
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+
+.footer {
+    padding: 4rem 2rem;
+    text-align: center;
+    opacity: 0.3;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .en-name { font-size: 3rem; }
+    .lore-grid { grid-template-columns: 1fr; }
+    .nav-bar { padding: 1rem; }
+}

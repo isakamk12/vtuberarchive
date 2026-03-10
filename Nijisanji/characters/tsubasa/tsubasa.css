@@ -1,0 +1,218 @@
+:root {
+    --tsubasa-navy: #0a1128;
+    --tsubasa-silver: #c0c0c0;
+    --tsubasa-white: #f0f0f0;
+    --tsubasa-accent: #1e3a8a;
+}
+
+body.tsubasa-theme {
+    background-color: var(--tsubasa-navy);
+    color: var(--tsubasa-white);
+    font-family: 'Zen Old Mincho', serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.moon-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 70% 20%, #fffae6 0%, #0a1128 50%);
+    z-index: -1;
+    opacity: 0.6;
+}
+
+.moon-background::after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: #fffae6;
+    border-radius: 50%;
+    top: 10%;
+    right: 15%;
+    box-shadow: 0 0 50px rgba(255, 250, 230, 0.4);
+}
+
+header {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back-link {
+    color: var(--tsubasa-silver);
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.moon-land-owner {
+    font-family: 'Metamorphous', cursive;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--tsubasa-silver);
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.romantic-badge {
+    background: var(--tsubasa-silver);
+    color: var(--tsubasa-navy);
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.char-name {
+    font-size: 4rem;
+    margin: 0;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.en-name {
+    display: block;
+    font-size: 1.2rem;
+    color: var(--tsubasa-silver);
+    opacity: 0.7;
+    letter-spacing: 4px;
+}
+
+.catchphrase {
+    font-size: 1.5rem;
+    margin: 3rem 0;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.status-tags span {
+    background: var(--tsubasa-accent);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.character-visual {
+    text-align: center;
+    position: relative;
+    padding: 5rem 0;
+}
+
+.main-img {
+    height: 600px;
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.2));
+    cursor: crosshair;
+}
+
+.mode-toggle {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    margin: 2rem 0;
+    cursor: pointer;
+}
+
+.toggle-track {
+    width: 60px;
+    height: 30px;
+    background: var(--tsubasa-silver);
+    border-radius: 15px;
+    position: relative;
+    transition: background 0.3s;
+}
+
+.toggle-thumb {
+    width: 24px;
+    height: 24px;
+    background: var(--tsubasa-navy);
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    transition: left 0.3s;
+}
+
+.tsubasa-theme.horror-mode .toggle-track {
+    background: #7f1d1d;
+}
+
+.tsubasa-theme.horror-mode .toggle-thumb {
+    left: 33px;
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 5rem;
+}
+
+.moon-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mh-icons {
+    font-size: 2rem;
+    margin-top: 1rem;
+    letter-spacing: 15px;
+}
+
+.episode-box {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-left: 4px solid var(--tsubasa-silver);
+}
+
+.lore-section {
+    margin-top: 6rem;
+    padding: 4rem;
+    background: rgba(0, 0, 0, 0.5);
+    border-top: 1px solid var(--tsubasa-silver);
+}
+
+.slash-effect {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.slash-line {
+    position: absolute;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px white;
+    transform: rotate(-45deg);
+    animation: slashGo 0.3s forwards;
+}
+
+@keyframes slashGo {
+    0% {
+        width: 0;
+        opacity: 1;
+    }
+
+    100% {
+        width: 1000px;
+        opacity: 0;
+    }
+}

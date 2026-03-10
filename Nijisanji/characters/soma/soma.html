@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>酒寄颯馬 (Sakayori Soma) - Nijisanji Archive</title>
+    <link rel="stylesheet" href="../../nijisanji_style.css">
+    <link rel="stylesheet" href="soma.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Shippori+Mincho&family=Zen+Old+Mincho:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="soma-theme">
+    <div class="fudo-background" id="bg-scroll"></div>
+    <div class="sniper-scope" id="scope"></div>
+
+    <header>
+        <nav>
+            <a href="../../nijisanji_index.html" class="back-link">← ARCHIVE</a>
+            <div class="concentration-bar">
+                <div class="bar-fill" id="focus-bar"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="char-name">酒寄颯馬 <span class="en-name">Sakayori Soma</span></h1>
+                <p class="catchphrase">「Specialeの店員、酒寄颯馬です。…一旦、休憩で。」</p>
+                <div class="status-tags">
+                    <span>Speciale (すぺしゃーれ)</span>
+                    <span>ソムリエ見習い</span>
+                    <span>不動の歌唱</span>
+                </div>
+            </div>
+            <div class="character-visual" id="fudo-visual">
+                <img src="../../assets/soma_full.png" alt="Sakayori Soma Full Visual" class="main-img">
+            </div>
+        </section>
+
+        <section class="profile-grid">
+            <div class="wine-card info">
+                <h2>SOMMELIER NOTES</h2>
+                <ul>
+                    <li><strong>誕生日:</strong> 12月21日</li>
+                    <li><strong>身長:</strong> 174cm</li>
+                    <li><strong>特技:</strong> FPS、LoL</li>
+                    <li><strong>趣味:</strong> サウナ、足つぼ</li>
+                    <li><strong>座右の銘:</strong> 人生は選択の総和</li>
+                </ul>
+            </div>
+            <div class="wine-card taste">
+                <h2>Tasting Profile</h2>
+                <div class="scent-area" id="scent-box">
+                    <div class="scent-item" data-note="甘い醤油の香り">🍱</div>
+                    <div class="scent-item" data-note="高級ワインの余韻">🍷</div>
+                    <div class="scent-item" data-note="サウナの熱気">🧖</div>
+                    <div class="scent-item" data-note="深夜のFPS">🔫</div>
+                </div>
+                <div id="scent-result" class="scent-result">Find the aroma...</div>
+            </div>
+        </section>
+
+        <section class="harmonica-performance">
+            <h2>HARMONICA BLOW</h2>
+            <p>マウスを重ねて Virtual to LIVE を奏でよう</p>
+            <div class="harmonica-ui" id="harmonica">
+                <div class="hole"></div>
+                <div class="hole"></div>
+                <div class="hole"></div>
+                <div class="hole"></div>
+                <div class="hole"></div>
+                <div class="hole"></div>
+            </div>
+        </section>
+
+        <section class="lore-section">
+            <h2>LORE</h2>
+            <p>ソムリエの父を持つ見習い。10歳からFPSに触れ、VALORANTやLoLで高い実力を誇る。歌謡祭での「不動」のパフォーマンスが話題を呼び、独特な文字やイントネーションも魅力の一つ。</p>
+        </section>
+    </main>
+
+    <div class="fudo-status" id="fudo-msg">
+        STATUS: IMMOVABLE (不動)
+    </div>
+
+    <script src="soma.js"></script>
+</body>
+
+</html>

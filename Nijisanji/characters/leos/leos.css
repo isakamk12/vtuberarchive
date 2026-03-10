@@ -1,0 +1,133 @@
+/* Leos Vincent Theme */
+:root {
+    --leos-bg: #f8f9fa;
+    --leos-blue: #007bff;
+    --leos-dark-blue: #002d5a;
+    --leos-white: #ffffff;
+    --leos-text: #333333;
+    --leos-hazard: #ffc107;
+}
+
+.leos-theme {
+    background: var(--leos-bg);
+    color: var(--leos-text);
+}
+
+.leos-theme .en-name {
+    color: var(--leos-blue);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+.leos-theme .section-title {
+    color: var(--leos-blue);
+    border-left: 10px solid var(--leos-dark-blue);
+    padding-left: 15px;
+}
+
+.leos-theme .section-title::after {
+    display: none;
+}
+
+.hazard-stripe-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(45deg,
+            rgba(255, 193, 7, 0.05),
+            rgba(255, 193, 7, 0.05) 10px,
+            transparent 10px,
+            transparent 20px);
+    z-index: -1;
+}
+
+.chemical-bubbles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.bubble {
+    position: absolute;
+    background: rgba(0, 123, 255, 0.2);
+    border: 1px solid rgba(0, 123, 255, 0.4);
+    border-radius: 50%;
+    animation: bubble-rise 10s infinite linear;
+}
+
+@keyframes bubble-rise {
+    0% {
+        transform: translateY(100vh) scale(1);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translateY(-10vh) scale(1.5);
+        opacity: 0;
+    }
+}
+
+.mameneko-floor {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: rgba(0, 45, 90, 0.02);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    pointer-events: none;
+}
+
+.mameneko-icon {
+    font-size: 2rem;
+    opacity: 0.3;
+    animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.iq-display {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--leos-dark-blue);
+    color: var(--leos-white);
+    padding: 10px 30px;
+    border-radius: 50px;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.5);
+}
+
+.leos-theme .profile-item {
+    background: white;
+    box-shadow: 5px 5px 0px var(--leos-blue);
+    border: 1px solid var(--leos-blue);
+}
+
+.leos-theme .description-box {
+    background: white;
+    border: 2px dashed var(--leos-blue);
+    border-radius: 10px;
+}
+
+.leos-theme .lore-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-top: 5px solid var(--leos-blue);
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>綺沙良 (Kisara) - Nijisanji Archive</title>
+    <link rel="stylesheet" href="../../nijisanji_style.css">
+    <link rel="stylesheet" href="kisara.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="kisara-theme">
+    <div class="jazzy-smoke" id="smoke-container"></div>
+    <div class="bagua-overlay"></div>
+
+    <header>
+        <nav>
+            <a href="../../nijisanji_index.html" class="back-link">← ARCHIVE</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="char-name">綺沙良 <span class="en-name">Kisara</span></h1>
+                <p class="catchphrase">「今を楽しく！ 風水師の綺沙良よ。」</p>
+                <div class="status-tags">
+                    <span>いずれ菖蒲か杜若 (あやかき)</span>
+                    <span>風水師</span>
+                    <span>九州出身</span>
+                </div>
+            </div>
+            <div class="character-visual">
+                <div class="visual-placeholder">
+                    <img src="../../assets/kisara_full.png" alt="Kisara Full Visual" class="main-img">
+                    <div class="hand-silhouettes"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="profile-grid">
+            <div class="profile-card info">
+                <h2>PROFILE</h2>
+                <ul>
+                    <li><strong>誕生日:</strong> 5月29日 (双子座)</li>
+                    <li><strong>身長:</strong> 160cm (靴込 167.5cm)</li>
+                    <li><strong>出身:</strong> バーチャル九州</li>
+                    <li><strong>好きなもの:</strong> ハイボール、日本酒、手(フェチ)</li>
+                    <li><strong>特技:</strong> デザイン、声真似、占術</li>
+                </ul>
+            </div>
+            <div class="profile-card creativity">
+                <h2>CREATIVE SENSE</h2>
+                <p>あやかき同期のサムネイルやヘッダーを自ら制作。イラスト、漫画、作詞、台本制作までこなす多才なクリエイター。</p>
+            </div>
+        </section>
+
+        <section class="feng-shui-reading" id="feng-shui">
+            <h2>FENG SHUI READING</h2>
+            <div class="reading-grid">
+                <div class="reading-slot" data-topic="lucky-item">
+                    <div class="slot-icon">🪞</div>
+                    <p class="slot-label">LUCKY ITEM</p>
+                </div>
+                <div class="reading-slot" data-topic="direction">
+                    <div class="slot-icon">🧭</div>
+                    <p class="slot-label">FORTUNE</p>
+                </div>
+                <div class="reading-slot" data-topic="color">
+                    <div class="slot-icon">🥃</div>
+                    <p class="slot-label">SPIRIT</p>
+                </div>
+            </div>
+            <div id="reading-result" class="reading-result">
+                方位盤をタップして運勢を読み解く...
+            </div>
+        </section>
+
+        <section class="voice-mimicry">
+            <h2>VOICE ARCHIVE</h2>
+            <div class="mimicry-icons">
+                <div class="voice-btn" data-voice="fujiko">💋</div>
+                <div class="voice-btn" data-voice="kinopio">🍄</div>
+                <div class="voice-btn" data-voice="nyarth">😺</div>
+            </div>
+            <p class="voice-note">※セルフボイスチェンジャー(声真似)の落差に注意</p>
+        </section>
+
+        <section class="lore-section">
+            <h2>LORE</h2>
+            <p>一族の掟により苗字と年齢は秘密。蘭阜の街に住まう謎多き風水師。普段は落ち着いた低音ハスキーボイスだが、同期といる時はふにゃふにゃになるお姉さん。</p>
+            <div class="martini-flair"></div>
+        </section>
+    </main>
+
+    <div class="creative-script-overlay" id="script-overlay">
+        <canvas id="script-canvas"></canvas>
+    </div>
+
+    <script src="kisara.js"></script>
+</body>
+
+</html>

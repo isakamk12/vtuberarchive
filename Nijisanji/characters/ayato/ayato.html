@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一橋綾人 (Hitotsubashi Ayato) - Nijisanji Archive</title>
+    <link rel="stylesheet" href="../../nijisanji_style.css">
+    <link rel="stylesheet" href="ayato.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Shippori+Mincho&family=Zen+Old+Mincho:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="ayato-theme">
+    <div class="book-library-bg"></div>
+    <div class="fumu-fumu-bubble" id="tooltip">ふむふむ…</div>
+
+    <header>
+        <nav>
+            <a href="../../nijisanji_index.html" class="back-link">← ARCHIVE</a>
+            <div class="sanity-status">SANITY: <span id="san-val">100</span> / 100</div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="medical-badge">Elite Psychiatrist</div>
+                <h1 class="char-name">一橋綾人 <span class="en-name">Hitotsubashi Ayato</span></h1>
+                <p class="catchphrase">「今、皆さんの前に一人の男が立っています。一橋綾人です。」</p>
+                <div class="status-tags">
+                    <span>えりぶり</span>
+                    <span>二三四総合病院</span>
+                    <span>TRPG GM</span>
+                </div>
+            </div>
+            <div class="character-visual">
+                <img src="../../assets/ayato_full.png" alt="Hitotsubashi Ayato Full Visual" class="main-img">
+            </div>
+        </section>
+
+        <section class="noodle-lab">
+            <h2>CUSTOM NOODLE MACHINE 「ADLAS」</h2>
+            <p>製麺しながら雑談。ハンドルを回して麺を作ろう！</p>
+            <div class="machine-ui">
+                <div class="crank-handle" id="crank">⚙️</div>
+                <div class="noodle-output" id="noodles"></div>
+            </div>
+            <p class="noodle-count">Current Noodles: <span id="n-count">0</span>g</p>
+        </section>
+
+        <section class="profile-grid">
+            <div class="medical-card info">
+                <h2>PATIENT FILE</h2>
+                <ul>
+                    <li><strong>誕生日:</strong> 12月8日</li>
+                    <li><strong>年齢:</strong> 不詳 (自称6000歳)</li>
+                    <li><strong>身長:</strong> 182cm</li>
+                    <li><strong>利き手:</strong> クロスドミナンス</li>
+                    <li><strong>趣味:</strong> 読書、製麺、TRPG、登山</li>
+                </ul>
+            </div>
+            <div class="medical-card diagnostic">
+                <h2>AYATO-NISM ANALYSIS</h2>
+                <div class="analysis-grid">
+                    <div class="ana-item" data-diag="「分析癖がありますねぇ…ふむふむ。」">実験至上主義</div>
+                    <div class="ana-item" data-diag="「3日連続で風呂の栓を抜き忘れるのは…ふむふむ。」">だらしない一面</div>
+                    <div class="ana-item" data-diag="「カワサキ少佐…添加物いっぱいの戦争を！…ふむふむ。」">狂気のモノマネ</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="trpg-section">
+            <h2>SANITY CHECK (1D100)</h2>
+            <p>ダイスを振って、正気度を保てるか？</p>
+            <div class="dice-box">
+                <div class="dice" id="roll-btn">🎲</div>
+                <div id="roll-result" class="roll-text">ROLL!</div>
+            </div>
+        </section>
+
+        <section class="lore-section">
+            <h2>LORE</h2>
+            <p>スーパーエリート精神科医。低音ボイスと穏やかな語彙でリスナーの精神をケアする。一方で、TRPGのGMとして10本以上のシナリオを生み出し、製麺機で自家製麺を作るなど、異常なまでのこだわりを持つオタク。モノマネのクオリティも高く、周囲を惑わせることもしばしば。
+            </p>
+        </section>
+    </main>
+
+    <div class="footer-msg">今夜も穏やかに、眠れますように。</div>
+
+    <script src="ayato.js"></script>
+</body>
+
+</html>

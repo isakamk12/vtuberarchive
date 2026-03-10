@@ -1,0 +1,185 @@
+/* Saiki Ittetsu Theme */
+:root {
+    --ittetsu-bg: #1a0b14;
+    --ittetsu-purple: #8C4664;
+    --ittetsu-crimson: #a31d3d;
+    --ittetsu-gold: #FFD200;
+    --ittetsu-text: #f0f0f0;
+    --ittetsu-terminal: #00ff41;
+}
+
+.ittetsu-theme {
+    background: var(--ittetsu-bg);
+    color: var(--ittetsu-text);
+    font-family: 'DotGothic16', sans-serif;
+}
+
+.ittetsu-theme .en-name {
+    color: var(--ittetsu-gold);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2.5rem;
+    letter-spacing: -2px;
+    text-shadow: 4px 4px 0px var(--ittetsu-purple);
+}
+
+.ittetsu-theme .section-title {
+    color: var(--ittetsu-purple);
+    font-family: 'Montserrat', sans-serif;
+    border-left: 5px solid var(--ittetsu-gold);
+    padding-left: 15px;
+}
+
+.ittetsu-theme .section-title::after {
+    display: none;
+}
+
+.flash-loading {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    font-family: 'Press Start 2P', cursive;
+    color: var(--ittetsu-gold);
+    font-size: 0.8rem;
+    animation: blink 0.5s infinite;
+    z-index: 100;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.scroll-text-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.scrolling-msg {
+    position: absolute;
+    color: var(--ittetsu-purple);
+    opacity: 0.1;
+    font-size: 1.2rem;
+    white-space: nowrap;
+}
+
+.wireframe-grid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        linear-gradient(rgba(140, 70, 100, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(140, 70, 100, 0.1) 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: -2;
+    transform: perspective(500px) rotateX(60deg);
+    transform-origin: top;
+}
+
+.cable-lines {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(90deg, transparent, transparent 19%, rgba(255, 210, 0, 0.05) 20%);
+    z-index: -1;
+}
+
+.jingi-btn {
+    margin-top: 20px;
+    padding: 10px 40px;
+    background: transparent;
+    border: 3px double var(--ittetsu-gold);
+    color: var(--ittetsu-gold);
+    font-family: 'DotGothic16', sans-serif;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.jingi-btn:hover {
+    background: var(--ittetsu-gold);
+    color: var(--ittetsu-bg);
+}
+
+.ittetsu-theme .profile-item {
+    background: rgba(26, 11, 20, 0.8);
+    border: 1px solid var(--ittetsu-purple);
+    position: relative;
+    clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
+}
+
+.ittetsu-theme .description-box {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--ittetsu-gold);
+    color: var(--ittetsu-text);
+    position: relative;
+}
+
+.ittetsu-theme .description-box::after {
+    content: '>> VIEW_SOURCE';
+    position: absolute;
+    bottom: -10px;
+    right: 10px;
+    background: var(--ittetsu-purple);
+    font-size: 0.6rem;
+    padding: 2px 5px;
+}
+
+.ittetsu-theme .lore-card {
+    background: #250e1b;
+    border: 1px dashed var(--ittetsu-purple);
+}
+
+.ittetsu-theme .lore-card h3 {
+    color: var(--ittetsu-gold);
+}
+
+/* Jingi Mode Overlay */
+.jingi-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(140, 70, 100, 0.8);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 5rem;
+    font-weight: 900;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.jingi-text {
+    transform: scale(5);
+    transition: transform 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+.active-jingi .jingi-overlay {
+    opacity: 1;
+}
+
+.active-jingi .jingi-text {
+    transform: scale(1);
+}

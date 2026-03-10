@@ -1,0 +1,248 @@
+/* Usami Rito Theme */
+:root {
+    --rito-bg: #fffbf0;
+    --rito-yellow: #FAC31E;
+    --rito-dark-yellow: #e5b31b;
+    --rito-gray: #4a4a4a;
+    --rito-light-gray: #f0f0f0;
+    --rito-text: #333333;
+    --rito-glow: rgba(250, 195, 30, 0.4);
+}
+
+.rito-theme {
+    background: var(--rito-bg);
+    color: var(--rito-text);
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.rito-theme .en-name {
+    color: var(--rito-gray);
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    text-shadow: 2px 2px 0px var(--rito-yellow);
+    letter-spacing: 0.1rem;
+}
+
+.rito-theme .section-title {
+    color: var(--rito-gray);
+    border-left: 10px solid var(--rito-yellow);
+    padding-left: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.rito-theme .section-title::after {
+    display: none;
+}
+
+.gym-grid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+    background-size: 60px 60px;
+    z-index: -3;
+}
+
+.volume-meters {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding: 0 5%;
+    pointer-events: none;
+    z-index: -2;
+    opacity: 0.3;
+}
+
+.meter-bar {
+    width: 20px;
+    background: var(--rito-yellow);
+    height: var(--height);
+    transition: height 0.1s;
+}
+
+.lightning-layer {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.bolt {
+    position: absolute;
+    color: var(--rito-yellow);
+    font-size: 3rem;
+    opacity: 0.1;
+    animation: bolt-flicker 2s infinite;
+}
+
+@keyframes bolt-flicker {
+
+    0%,
+    100% {
+        opacity: 0.05;
+    }
+
+    50% {
+        opacity: 0.2;
+        transform: scale(1.1);
+    }
+}
+
+.giraffe-shadow {
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+    font-size: 15rem;
+    opacity: 0.03;
+    z-index: -4;
+    transform: rotate(-10deg);
+}
+
+.volume-btn {
+    margin-top: 20px;
+    padding: 12px 35px;
+    background: var(--rito-gray);
+    color: var(--rito-yellow);
+    border: none;
+    font-weight: 900;
+    cursor: pointer;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 0.1rem;
+    transition: all 0.2s;
+}
+
+.volume-btn:hover {
+    background: var(--rito-yellow);
+    color: var(--rito-gray);
+    box-shadow: 0 0 20px var(--rito-yellow);
+}
+
+.mode-toggle {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: var(--rito-gray);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.rito-theme .profile-item {
+    background: white;
+    border: 3px solid var(--rito-light-gray);
+    border-right: 8px solid var(--rito-yellow);
+}
+
+.rito-theme .description-box {
+    background: rgba(255, 255, 255, 0.7);
+    border: 2px solid var(--rito-gray);
+    box-shadow: 10px 10px 0 var(--rito-yellow);
+}
+
+.rito-theme .lore-card {
+    background: white;
+    border: 1px solid var(--rito-light-gray);
+    position: relative;
+    overflow: hidden;
+}
+
+.rito-theme .lore-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--rito-yellow);
+}
+
+/* Roar Effect */
+.roar-ripple {
+    position: fixed;
+    border: 5px solid var(--rito-yellow);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1000;
+    animation: ripple-out 0.6s ease-out forwards;
+}
+
+@keyframes ripple-out {
+    from {
+        width: 0;
+        height: 0;
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    to {
+        width: 100vw;
+        height: 100vw;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.roar-text {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20rem;
+    font-weight: 900;
+    color: var(--rito-yellow);
+    z-index: 1001;
+    pointer-events: none;
+    opacity: 0.2;
+    animation: text-pop 0.6s forwards;
+}
+
+@keyframes text-pop {
+    0% {
+        transform: translate(-50%, -50%) scale(0.5);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(2);
+        opacity: 0;
+    }
+}
+
+/* Musical Mode */
+.musical-active .character-header {
+    background: radial-gradient(circle, #333 0%, #000 100%);
+}
+
+.spotlight {
+    position: fixed;
+    top: -100px;
+    width: 200px;
+    height: 200vh;
+    background: linear-gradient(rgba(255, 255, 255, 0.2), transparent);
+    z-index: 50;
+    pointer-events: none;
+    transform-origin: top center;
+    animation: spot-swing 4s infinite alternate ease-in-out;
+}
+
+@keyframes spot-swing {
+    from {
+        transform: rotate(-20deg);
+    }
+
+    to {
+        transform: rotate(20deg);
+    }
+}

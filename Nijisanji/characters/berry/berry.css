@@ -1,0 +1,224 @@
+:root {
+    --berry-pink: #FF85A1;
+    --berry-butter: #FFF3B0;
+    --berry-cream: #FFF9E3;
+    --berry-dark: #A51C30;
+}
+
+body.berry-theme {
+    background-color: var(--berry-cream);
+    background-image: radial-gradient(var(--berry-butter) 2px, transparent 2px);
+    background-size: 30px 30px;
+    color: var(--berry-dark);
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    cursor: crosshair;
+}
+
+.butter-drips {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.batapi-san-fairy {
+    position: fixed;
+    font-size: 2rem;
+    pointer-events: none;
+    z-index: 100;
+    filter: drop-shadow(0 0 10px rgba(255, 243, 176, 0.8));
+}
+
+header {
+    padding: 2rem;
+}
+
+.back-link {
+    color: var(--berry-pink);
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Fredoka One', cursive;
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.char-name {
+    font-family: 'Fredoka One', cursive;
+    font-size: 5rem;
+    color: var(--berry-pink);
+    -webkit-text-stroke: 2px white;
+    text-shadow: 5px 5px 0 var(--berry-butter);
+}
+
+.en-name {
+    display: block;
+    font-size: 1.5rem;
+    color: var(--berry-dark);
+}
+
+.catchphrase {
+    font-size: 1.6rem;
+    background: var(--berry-pink);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 20px 20px 20px 0;
+    display: inline-block;
+    margin: 2rem 0;
+    box-shadow: 5px 5px 0 var(--berry-butter);
+}
+
+.status-tags span {
+    background: white;
+    color: var(--berry-pink);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: 2px solid var(--berry-pink);
+    margin-right: 0.8rem;
+    font-weight: bold;
+}
+
+.character-visual {
+    position: relative;
+    text-align: center;
+    margin: 4rem 0;
+}
+
+.main-img {
+    max-width: 600px;
+    filter: drop-shadow(0 0 30px rgba(255, 133, 161, 0.3));
+}
+
+.aim-reticle {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 2px solid var(--berry-pink);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.aim-reticle::before,
+.aim-reticle::after {
+    content: '';
+    position: absolute;
+    background: var(--berry-pink);
+}
+
+.aim-reticle::before {
+    width: 100%;
+    height: 2px;
+    top: 50%;
+    left: 0;
+}
+
+.aim-reticle::after {
+    width: 2px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+}
+
+.butter-churner {
+    background: white;
+    padding: 3rem;
+    border-radius: 30px;
+    text-align: center;
+    margin: 4rem 0;
+    border: 4px dashed var(--berry-butter);
+}
+
+.churn-visual {
+    font-size: 5rem;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.churn-bottle {
+    transition: transform 0.1s;
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.cake-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0 10px 0 var(--berry-butter);
+}
+
+.cake-card::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 20px;
+    background: var(--berry-pink);
+    border-radius: 10px;
+}
+
+.fps-shooter {
+    margin-top: 6rem;
+    text-align: center;
+}
+
+.target-range {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 3rem 0;
+    height: 100px;
+}
+
+.target {
+    font-size: 3rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.target:hover {
+    transform: scale(1.5);
+}
+
+.score-display {
+    font-family: 'Fredoka One', cursive;
+    font-size: 3rem;
+    color: var(--berry-dark);
+}
+
+.butter-timer {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--berry-butter);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    font-weight: bold;
+    border: 2px solid var(--berry-pink);
+    z-index: 1000;
+}

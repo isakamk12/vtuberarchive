@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>早乙女ベリー (Saotome Berry) - Nijisanji Archive</title>
+    <link rel="stylesheet" href="../../nijisanji_style.css">
+    <link rel="stylesheet" href="berry.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=M+PLUS+Rounded+1c:wght@700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="berry-theme">
+    <div class="butter-drips" id="drip-container"></div>
+    <div class="batapi-san-fairy" id="batapi">🧈✨</div>
+
+    <header>
+        <nav>
+            <a href="../../nijisanji_index.html" class="back-link">← ARCHIVE</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="char-name">早乙女ベリー <span class="en-name">Saotome Berry</span></h1>
+                <p class="catchphrase">「よいしょ！Specialeの早乙女ベリーだよ！」</p>
+                <div class="status-tags">
+                    <span>Speciale (すぺしゃーれ)</span>
+                    <span>パティシエ学生</span>
+                    <span>バター90分事件</span>
+                </div>
+            </div>
+            <div class="character-visual">
+                <div class="aim-reticle"></div>
+                <img src="../../assets/berry_full.png" alt="Saotome Berry Full Visual" class="main-img">
+            </div>
+        </section>
+
+        <section class="butter-churner" id="churner">
+            <h2>BUTTER ALCHEMIST</h2>
+            <p>マウスを激しく振ってバターを錬成せよ！</p>
+            <div class="churn-visual">
+                <div class="churn-bottle" id="bottle">🥛</div>
+                <div class="butter-result" id="butter-text"></div>
+            </div>
+            <p class="churn-label">90秒ならぬ90分溶かさないでね！</p>
+        </section>
+
+        <section class="profile-grid">
+            <div class="cake-card info">
+                <h2>MENU</h2>
+                <ul>
+                    <li><strong>誕生日:</strong> 3月29日</li>
+                    <li><strong>年齢:</strong> 20歳</li>
+                    <li><strong>職業:</strong> パティシエ専門学生</li>
+                    <li><strong>好物:</strong> すあま、甘いもの全般</li>
+                    <li><strong>弱点:</strong> ベリー系果実 (食感)</li>
+                </ul>
+            </div>
+            <div class="cake-card duality">
+                <h2>DUALITY</h2>
+                <p>可愛らしいビジュアルとは裏腹に、歌唱時は力強くパワフル。ホラーが大好きだが、叫び声は絶叫級。</p>
+            </div>
+        </section>
+
+        <section class="fps-shooter">
+            <h2>DEUI-PRE CHAMPION</h2>
+            <p>デュエプレにじさんじ杯優勝の腕前をお見舞い！</p>
+            <div class="target-range">
+                <div class="target" data-points="10">🍰</div>
+                <div class="target" data-points="20">🧁</div>
+                <div class="target" data-points="50">🍓</div>
+            </div>
+            <div class="score-display">SCORE: <span id="aim-score">0</span></div>
+        </section>
+
+        <section class="lore-section">
+            <h2>LORE</h2>
+            <p>カフェレストラン「Speciale」のアルバイター。自分の欲求に素直な脊髄トークの持ち主。ベリー系が食べられないベリーさんとして、同期や先輩から親しまれている。</p>
+        </section>
+    </main>
+
+    <div class="butter-timer" id="melt-timer">
+        90:00:00
+    </div>
+
+    <script src="berry.js"></script>
+</body>
+
+</html>

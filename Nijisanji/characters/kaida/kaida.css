@@ -1,0 +1,140 @@
+/* Kaida Haru Theme */
+:root {
+    --kaida-bg: #e0faff;
+    --kaida-cyan: #4DD7E3;
+    --kaida-yellow: #fff34d;
+    --kaida-white: #ffffff;
+    --kaida-text: #2d3b3d;
+}
+
+.kaida-theme {
+    background: var(--kaida-bg);
+    color: var(--kaida-text);
+}
+
+.kaida-theme .en-name {
+    color: var(--kaida-cyan);
+    text-shadow: 2px 2px 0px var(--kaida-yellow);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+}
+
+.kaida-theme .jp-name {
+    color: var(--kaida-text);
+    opacity: 0.6;
+}
+
+.kaida-theme .section-title {
+    color: var(--kaida-cyan);
+}
+
+.kaida-theme .section-title::after {
+    background: linear-gradient(90deg, var(--kaida-cyan), var(--kaida-yellow), transparent);
+}
+
+.sunbeam-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% -20%, var(--kaida-yellow) 0%, transparent 50%);
+    opacity: 0.2;
+    z-index: -1;
+}
+
+.blueprint-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(var(--kaida-cyan) 1px, transparent 1px),
+        linear-gradient(90deg, var(--kaida-cyan) 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.05;
+    z-index: -1;
+}
+
+.sun-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, var(--kaida-yellow) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    animation: sun-pulse 4s infinite;
+}
+
+@keyframes sun-pulse {
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.3;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0.6;
+    }
+}
+
+.kaida-theme .profile-item {
+    background: var(--kaida-white);
+    border: 2px solid var(--kaida-cyan);
+    border-radius: 10px;
+}
+
+.kaida-theme .description-box {
+    background: rgba(255, 255, 255, 0.7);
+    border-left: 10px solid var(--kaida-yellow);
+}
+
+.kaida-theme .lore-card {
+    background: white;
+    box-shadow: 5px 5px 0px var(--kaida-cyan);
+}
+
+.kaida-theme .lore-card:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 10px 10px 0px var(--kaida-yellow);
+}
+
+.tomato-warning {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #ff4d4d;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    display: none;
+    z-index: 100;
+    animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(5px);
+    }
+
+    50% {
+        transform: translateX(-5px);
+    }
+
+    75% {
+        transform: translateX(5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}

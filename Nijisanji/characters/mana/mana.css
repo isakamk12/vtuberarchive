@@ -1,0 +1,224 @@
+/* Hibachi Mana Theme */
+:root {
+    --mana-bg: #eaf8ff;
+    --mana-blue: #64C8F0;
+    --mana-dark-blue: #3296c8;
+    --mana-yellow: #ffecb3;
+    --mana-text: #445566;
+    --mana-white: #ffffff;
+}
+
+.mana-theme {
+    background: var(--mana-bg);
+    color: var(--mana-text);
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.mana-theme .en-name {
+    color: var(--mana-blue);
+    font-family: 'Dela Gothic One', cursive;
+    text-shadow: 3px 3px 0px white, 5px 5px 0px var(--mana-yellow);
+    letter-spacing: 0.1rem;
+}
+
+.mana-theme .section-title {
+    color: var(--mana-dark-blue);
+    font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+.mana-theme .section-title::after {
+    background: linear-gradient(90deg, var(--mana-blue), transparent);
+}
+
+.sky-gradient {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(100, 200, 240, 0.1) 0%, transparent 100%);
+    z-index: -3;
+}
+
+.bee-layer {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -2;
+}
+
+.bee-particle {
+    position: absolute;
+    font-size: 1.5rem;
+    opacity: 0.2;
+    animation: bee-buzz 5s infinite ease-in-out;
+}
+
+@keyframes bee-buzz {
+
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(20px, -20px) rotate(10deg);
+    }
+
+    50% {
+        transform: translate(-20px, 10px) rotate(-10deg);
+    }
+
+    75% {
+        transform: translate(10px, 20px) rotate(5deg);
+    }
+}
+
+.logo-sketch-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -4;
+    background-image: radial-gradient(var(--mana-blue) 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.1;
+}
+
+.ic-card {
+    margin-top: 20px;
+    width: 200px;
+    height: 120px;
+    background: var(--mana-white);
+    border: 3px solid var(--mana-blue);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(100, 200, 240, 0.3);
+    transition: all 0.3s;
+    overflow: hidden;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    color: var(--mana-blue);
+    text-align: center;
+}
+
+.ic-card:hover {
+    transform: translateY(-5px) rotate(-2deg);
+    box-shadow: 0 10px 25px rgba(100, 200, 240, 0.5);
+}
+
+.ic-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(100, 200, 240, 0.2), transparent);
+    transition: 0.5s;
+}
+
+.ic-card:hover::before {
+    left: 100%;
+}
+
+.dajare-btn {
+    margin-top: 15px;
+    padding: 8px 25px;
+    background: var(--mana-blue);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.mana-theme .profile-item {
+    background: white;
+    border: 2px solid var(--mana-blue);
+    border-radius: 15px;
+}
+
+.mana-theme .description-box {
+    background: rgba(255, 255, 255, 0.9);
+    border-left: 10px solid var(--mana-blue);
+    box-shadow: 5px 5px 0 var(--mana-yellow);
+}
+
+.mana-theme .lore-card {
+    background: white;
+    border: 1px dashed var(--mana-blue);
+}
+
+/* Dajare Attack Effects */
+.dajare-stream {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 100;
+}
+
+.pun-text {
+    position: absolute;
+    white-space: nowrap;
+    font-weight: 900;
+    color: var(--mana-dark-blue);
+    font-size: 1.2rem;
+    animation: pun-slide 3s linear forwards;
+}
+
+@keyframes pun-slide {
+    from {
+        left: -100%;
+    }
+
+    to {
+        left: 100%;
+    }
+}
+
+.frost-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(200, 240, 255, 0.3);
+    backdrop-filter: blur(0px);
+    pointer-events: none;
+    z-index: 99;
+    opacity: 0;
+    transition: opacity 0.5s, backdrop-filter 0.5s;
+}
+
+.frozen .frost-overlay {
+    opacity: 1;
+    backdrop-filter: blur(5px);
+}
+
+.frozen .content-wrapper {
+    filter: grayscale(0.5) contrast(1.2);
+}
+
+/* Hen-shin effect */
+.hen-shin-flash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+}

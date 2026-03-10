@@ -1,0 +1,220 @@
+:root {
+    --mikaru-yellow: #FFE673;
+    --mikaru-blue: #9ADBEB;
+    --mikaru-dark: #4a3c2b;
+    --mikaru-white: #fffdf5;
+}
+
+body.mikaru-theme {
+    background-color: var(--mikaru-white);
+    color: var(--mikaru-dark);
+    font-family: 'Zen Maru Gothic', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.messy-room-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 70% 30%, rgba(255, 230, 115, 0.1) 0%, transparent 60%);
+    z-index: -1;
+}
+
+header {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back-link {
+    color: var(--mikaru-blue);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.endurance-clock {
+    font-family: 'monospace';
+    background: var(--mikaru-dark);
+    color: var(--mikaru-yellow);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.char-name {
+    font-family: 'Kiwi Maru', serif;
+    font-size: 4rem;
+    color: var(--mikaru-yellow);
+    text-shadow: 2px 2px 0px var(--mikaru-blue);
+}
+
+.en-name {
+    display: block;
+    font-size: 1.2rem;
+    color: var(--mikaru-dark);
+    opacity: 0.6;
+    letter-spacing: 2px;
+}
+
+.catchphrase {
+    background: rgba(154, 219, 235, 0.1);
+    padding: 2rem;
+    border-radius: 20px;
+    font-size: 1.3rem;
+    margin: 3rem 0;
+    border-left: 8px solid var(--mikaru-yellow);
+}
+
+.status-tags span {
+    background: white;
+    border: 1px solid var(--mikaru-blue);
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.character-visual {
+    text-align: center;
+    position: relative;
+    padding: 4rem 0;
+}
+
+.main-img {
+    height: 500px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.snail-shell {
+    position: absolute;
+    top: 10%;
+    right: 30%;
+    width: 100px;
+    height: 100px;
+    background: repeating-concentric-gradient(circle, var(--mikaru-yellow) 0, var(--mikaru-yellow) 10px, var(--mikaru-blue) 10px, var(--mikaru-blue) 20px);
+    border-radius: 50%;
+    opacity: 0.2;
+    z-index: -1;
+    animation: rotateShell 30s linear infinite;
+}
+
+@keyframes rotateShell {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.sock-memory {
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    border: 2px dashed #ddd;
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.sock-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    max-width: 500px;
+    margin: 2rem auto;
+}
+
+.sock-card {
+    aspect-ratio: 1;
+    background: #f8f8f8;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+    user-select: none;
+}
+
+.sock-card.hidden {
+    background: var(--mikaru-blue);
+    color: transparent;
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 5rem;
+}
+
+.snail-card {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+.instrument-box {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.instrument {
+    padding: 1rem 2.5rem;
+    background: white;
+    border: 2px solid var(--mikaru-yellow);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.instrument:hover {
+    background: var(--mikaru-yellow);
+    transform: translateY(-5px);
+}
+
+.gokigen-status {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--mikaru-yellow);
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.snail-trail-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 50;
+}
+
+.trail-particle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgba(154, 219, 235, 0.3);
+    border-radius: 50%;
+    filter: blur(5px);
+    opacity: 0.5;
+}

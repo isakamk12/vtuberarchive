@@ -1,0 +1,152 @@
+/* Shishido Akari Theme */
+:root {
+    --akari-bg: #fffdeb;
+    --akari-yellow: #FFD728;
+    --akari-gold: #ffc20e;
+    --akari-dark: #333333;
+    --akari-text: #4d4d4d;
+    --akari-star: rgba(255, 215, 40, 0.4);
+}
+
+.akari-theme {
+    background: var(--akari-bg);
+    color: var(--akari-text);
+    overflow-x: hidden;
+}
+
+.akari-theme .en-name {
+    color: var(--akari-yellow);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    text-shadow: 2px 2px 0px white, 4px 4px 0px var(--akari-gold);
+}
+
+.akari-theme .section-title {
+    color: var(--akari-gold);
+    font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+.akari-theme .section-title::after {
+    background: linear-gradient(90deg, var(--akari-yellow), transparent);
+}
+
+.star-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.star {
+    position: absolute;
+    color: var(--akari-yellow);
+    opacity: 0.2;
+    animation: pulse 3s infinite ease-in-out;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1) rotate(0);
+        opacity: 0.1;
+    }
+
+    50% {
+        transform: scale(1.5) rotate(45deg);
+        opacity: 0.3;
+    }
+}
+
+.cat-paw-layer {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -2;
+}
+
+.stamina-ticker {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: var(--akari-yellow);
+    color: var(--akari-dark);
+    font-family: monospace;
+    font-size: 0.8rem;
+    padding: 2px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.gao-btn {
+    margin-top: 20px;
+    padding: 12px 35px;
+    background: white;
+    border: 3px solid var(--akari-yellow);
+    color: var(--akari-yellow);
+    font-weight: 900;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(255, 215, 40, 0.3);
+    transition: all 0.2s;
+}
+
+.gao-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    background: var(--akari-yellow);
+    color: white;
+}
+
+.akari-theme .profile-item {
+    background: white;
+    border: 2px solid var(--akari-yellow);
+    border-radius: 15px;
+    box-shadow: 5px 5px 0px var(--akari-yellow);
+}
+
+.akari-theme .description-box {
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px dashed var(--akari-gold);
+    border-radius: 25px;
+}
+
+.akari-theme .lore-card {
+    background: white;
+    border: 1px solid #eee;
+    border-top: 5px solid var(--akari-yellow);
+}
+
+/* Screaming effect */
+.screaming-mode {
+    animation: jitter 0.1s infinite;
+}
+
+@keyframes jitter {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-2px, 2px);
+    }
+
+    100% {
+        transform: translate(2px, -2px);
+    }
+}
+
+.scream-text {
+    position: fixed;
+    font-size: 8rem;
+    font-weight: 900;
+    color: var(--akari-yellow);
+    opacity: 0.3;
+    z-index: 100;
+    pointer-events: none;
+    font-family: 'Montserrat', sans-serif;
+}

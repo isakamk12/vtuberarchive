@@ -1,0 +1,294 @@
+:root {
+    --mone-pink: #FFC6E2;
+    --mone-purple: #DECDFC;
+    --mone-dark: #2d2d3a;
+    --mone-smoke: rgba(222, 205, 252, 0.2);
+}
+
+body.mone-theme {
+    background-color: var(--mone-dark);
+    background-image: radial-gradient(circle at 20% 30%, #3a3245 0%, #2d2d3a 100%);
+    color: #fefefe;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.incense-smoke {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.tanuki-shadow {
+    position: fixed;
+    bottom: -50px;
+    right: -50px;
+    width: 300px;
+    height: 300px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50 80 Q70 80 80 60 Q90 40 70 20 Q50 0 30 20 Q10 40 20 60 Q30 80 50 80" fill="rgba(0,0,0,0.1)"/></svg>');
+    background-size: contain;
+    opacity: 0.3;
+    z-index: 0;
+    filter: blur(10px);
+}
+
+header {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+.back-link {
+    color: var(--mone-pink);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.poya-tanu-toggle {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.toggle-switch {
+    width: 50px;
+    height: 24px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    position: relative;
+    border: 1px solid var(--mone-pink);
+}
+
+.toggle-switch::after {
+    content: '🍃';
+    position: absolute;
+    left: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.poya-tanu-toggle.active .toggle-switch::after {
+    left: 26px;
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+    position: relative;
+    z-index: 5;
+}
+
+.char-name {
+    font-size: 4rem;
+    color: var(--mone-pink);
+    text-shadow: 0 0 15px rgba(255, 198, 226, 0.5);
+}
+
+.en-name {
+    display: block;
+    font-size: 1.5rem;
+    color: var(--mone-purple);
+    letter-spacing: 4px;
+}
+
+.catchphrase {
+    font-style: italic;
+    font-size: 1.4rem;
+    margin: 2rem 0;
+    color: var(--mone-purple);
+}
+
+.status-tags span {
+    border: 1px solid var(--mone-purple);
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.character-visual {
+    flex: 1;
+    text-align: center;
+}
+
+.main-img {
+    max-width: 100%;
+    filter: drop-shadow(0 0 20px rgba(222, 205, 252, 0.3));
+}
+
+.tanuki-ears {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 50px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tanuki-ears::before,
+.tanuki-ears::after {
+    content: '👂';
+    font-size: 3rem;
+    position: absolute;
+}
+
+.tanuki-ears::before {
+    left: 0;
+    transform: rotate(-15deg);
+}
+
+.tanuki-ears::after {
+    right: 0;
+    transform: rotate(15deg);
+}
+
+body.tanu-mode .tanuki-ears {
+    opacity: 1;
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.profile-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(222, 205, 252, 0.1);
+}
+
+.curiosity-kitchen {
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.kitchen-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    margin: 3rem 0;
+}
+
+.ingredient-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 300px;
+}
+
+.ingredient {
+    background: var(--mone-purple);
+    color: var(--mone-dark);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: grab;
+    font-weight: bold;
+}
+
+.cooking-pot {
+    width: 200px;
+    height: 200px;
+    background: #444;
+    border-radius: 20px 20px 100px 100px;
+    border: 4px solid #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 10px 0 #333;
+}
+
+.pot-inner {
+    font-size: 0.8rem;
+    opacity: 0.5;
+}
+
+.cooking-animation {
+    animation: shakePot 0.5s infinite;
+}
+
+@keyframes shakePot {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(5deg);
+    }
+
+    75% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.endurance-clock {
+    margin-top: 6rem;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 4rem;
+    border-radius: 100px;
+}
+
+.clock-display {
+    font-size: 4rem;
+    font-family: 'Kosugi Maru', monospace;
+    color: var(--mone-pink);
+    letter-spacing: 5px;
+}
+
+.retro-controller {
+    font-size: 3rem;
+    margin-top: 2rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.world-straightness {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    background: rgba(255, 198, 226, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--mone-pink);
+    opacity: 0;
+    transition: opacity 0.5s;
+    pointer-events: none;
+}
+
+.world-straightness.visible {
+    opacity: 1;
+}

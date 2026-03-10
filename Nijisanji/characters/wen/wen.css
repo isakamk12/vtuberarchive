@@ -1,0 +1,204 @@
+/* Akagi Wen Theme */
+:root {
+    --wen-bg: #fffbf0;
+    --wen-orange: #FF8C3C;
+    --wen-gold: #FFD200;
+    --wen-whiskey: #d4a017;
+    --wen-dark: #333333;
+    --wen-text: #4d4d4d;
+}
+
+.wen-theme {
+    background: var(--wen-bg);
+    color: var(--wen-text);
+}
+
+.wen-theme .en-name {
+    color: var(--wen-orange);
+    font-family: 'Yuji Syuku', serif;
+    font-weight: 900;
+    letter-spacing: 0.2rem;
+    text-shadow: 3px 3px 0px white, 5px 5px 15px rgba(255, 140, 60, 0.4);
+}
+
+.wen-theme .section-title {
+    color: var(--wen-orange);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.wen-theme .section-title::after {
+    background: linear-gradient(90deg, var(--wen-orange), var(--wen-gold), transparent);
+}
+
+.karaage-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.karaage {
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0;
+    animation: karaage-float 6s infinite linear;
+}
+
+@keyframes karaage-float {
+    0% {
+        transform: translateY(110vh) rotate(0);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.2;
+    }
+
+    90% {
+        opacity: 0.2;
+    }
+
+    100% {
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.whiskey-drip-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -2;
+}
+
+.drip {
+    position: absolute;
+    width: 2px;
+    height: 50px;
+    background: linear-gradient(to bottom, transparent, var(--wen-whiskey));
+    animation: drip-fall 2s infinite linear;
+}
+
+@keyframes drip-fall {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+
+    100% {
+        transform: translateY(110vh);
+        opacity: 0;
+    }
+}
+
+.dino-silhouette {
+    position: fixed;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 15rem;
+    opacity: 0.05;
+    z-index: -3;
+    filter: grayscale(1);
+}
+
+.kp-btn {
+    margin-top: 20px;
+    padding: 12px 40px;
+    background: var(--wen-orange);
+    color: white;
+    border: none;
+    font-weight: 900;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 6px 6px 0px var(--wen-gold);
+    transition: all 0.2s;
+}
+
+.kp-btn:active {
+    transform: translate(3px, 3px);
+    box-shadow: 2px 2px 0px var(--wen-gold);
+}
+
+.wen-theme .profile-item {
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid var(--wen-orange);
+    border-radius: 10px;
+    box-shadow: 4px 4px 0px #eee;
+}
+
+.wen-theme .description-box {
+    background: rgba(255, 255, 255, 0.7);
+    border-left: 10px solid var(--wen-orange);
+    padding: 20px;
+    position: relative;
+    border-radius: 0 20px 20px 0;
+}
+
+.wen-theme .lore-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-bottom: 5px solid var(--wen-orange);
+}
+
+.wen-theme .lore-card h3 {
+    color: var(--wen-orange);
+}
+
+/* KP Interaction */
+.cheers-text {
+    position: fixed;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 4rem;
+    color: var(--wen-orange);
+    z-index: 1000;
+    pointer-events: none;
+    opacity: 0;
+    transform: scale(0.5);
+    text-shadow: 4px 4px 0px var(--wen-gold);
+}
+
+.kp-active .cheers-text {
+    animation: cheers-in 1s forwards;
+}
+
+@keyframes cheers-in {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+        transform: scale(1.2) rotate(-5deg);
+    }
+
+    80% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+}
+
+.mist-layer {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at bottom left, rgba(255, 210, 0, 0.05), transparent);
+    z-index: -4;
+}

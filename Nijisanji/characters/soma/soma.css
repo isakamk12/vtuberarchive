@@ -1,0 +1,208 @@
+:root {
+    --soma-plum: #BA6EA5;
+    --soma-cream: #E4DDD2;
+    --soma-dark: #1a151b;
+}
+
+body.soma-theme {
+    background-color: var(--soma-dark);
+    color: var(--soma-cream);
+    font-family: 'Shippori Mincho', serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.fudo-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(45deg, rgba(186, 110, 165, 0.05) 0, rgba(186, 110, 165, 0.05) 2px, transparent 0, transparent 50%);
+    background-size: 10px 10px;
+    z-index: -1;
+}
+
+.sniper-scope {
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    border: 1px solid var(--soma-plum);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 100;
+    box-shadow: 0 0 0 2000px rgba(0, 0, 0, 0.4);
+    display: none;
+}
+
+.sniper-scope::before,
+.sniper-scope::after {
+    content: '';
+    position: absolute;
+    background: var(--soma-plum);
+}
+
+.sniper-scope::before {
+    width: 100%;
+    height: 1px;
+    top: 50%;
+    left: 0;
+}
+
+.sniper-scope::after {
+    width: 1px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+}
+
+header {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.back-link {
+    color: var(--soma-plum);
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.concentration-bar {
+    width: 200px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.bar-fill {
+    height: 100%;
+    width: 100%;
+    background: var(--soma-plum);
+    transition: width 0.1s;
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+    position: relative;
+    z-index: 10;
+}
+
+.char-name {
+    font-size: 4rem;
+    color: var(--soma-plum);
+}
+
+.en-name {
+    display: block;
+    font-size: 1.2rem;
+    opacity: 0.7;
+    text-transform: uppercase;
+}
+
+.catchphrase {
+    font-size: 1.5rem;
+    color: var(--soma-cream);
+    border-left: 2px solid var(--soma-plum);
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+}
+
+.status-tags span {
+    border: 1px solid var(--soma-plum);
+    padding: 0.4rem 1.2rem;
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.character-visual {
+    text-align: center;
+    position: relative;
+    height: 700px;
+    overflow: hidden;
+}
+
+.main-img {
+    height: 100%;
+    filter: sepia(0.2) contrast(1.1);
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 5rem;
+}
+
+.wine-card {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 3rem;
+    border: 1px solid rgba(186, 110, 165, 0.2);
+    position: relative;
+}
+
+.scent-area {
+    display: flex;
+    justify-content: space-around;
+    font-size: 3rem;
+}
+
+.scent-item {
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.scent-item:hover {
+    transform: scale(1.3);
+}
+
+.scent-result {
+    margin-top: 2rem;
+    text-align: center;
+    font-style: italic;
+    color: var(--soma-plum);
+}
+
+.harmonica-performance {
+    margin-top: 6rem;
+    text-align: center;
+}
+
+.harmonica-ui {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    background: #555;
+    padding: 20px;
+    border-radius: 5px;
+    width: fit-content;
+    margin: 2rem auto;
+    border: 2px solid silver;
+}
+
+.hole {
+    width: 30px;
+    height: 30px;
+    background: #000;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.hole:hover {
+    background: var(--soma-plum);
+    box-shadow: 0 0 15px var(--soma-plum);
+}
+
+.fudo-status {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    padding: 0.5rem 1rem;
+    background: var(--soma-plum);
+    color: white;
+    font-weight: bold;
+}

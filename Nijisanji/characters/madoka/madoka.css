@@ -1,0 +1,209 @@
+:root {
+    --madoka-aqua: #AAD9F4;
+    --madoka-white: #ffffff;
+    --madoka-pink: #f472b6;
+    --madoka-dark: #1e293b;
+}
+
+body.madoka-theme {
+    background-color: var(--madoka-white);
+    color: var(--madoka-dark);
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    transition: filter 1s ease;
+}
+
+.steam-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 50;
+}
+
+.steam-particle {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.5rem;
+    animation: rise 3s linear forwards;
+}
+
+@keyframes rise {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-200px) scale(2);
+        opacity: 0;
+    }
+}
+
+header {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(170, 217, 244, 0.2);
+}
+
+.back-link {
+    color: var(--madoka-dark);
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.hydration-status {
+    background: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.gal-badge {
+    background: var(--madoka-pink);
+    color: white;
+    padding: 0.2rem 1rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.char-name {
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--madoka-dark);
+}
+
+.en-name {
+    display: block;
+    font-size: 1.2rem;
+    opacity: 0.4;
+    letter-spacing: 5px;
+}
+
+.catchphrase {
+    background: var(--madoka-aqua);
+    padding: 2rem;
+    border-radius: 20px 20px 20px 0;
+    font-size: 1.4rem;
+    margin: 2rem 0;
+    color: white;
+    font-weight: bold;
+}
+
+.character-visual {
+    text-align: center;
+    position: relative;
+    padding: 3rem 0;
+}
+
+.main-img {
+    height: 550px;
+}
+
+.water-bottle {
+    position: absolute;
+    bottom: 50px;
+    right: 20%;
+    font-size: 4rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.water-bottle:hover {
+    transform: scale(1.2);
+}
+
+.hiepita {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #e0f2fe;
+    color: #0369a1;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border: 1px solid #7dd3fc;
+    opacity: 0;
+    transition: opacity 0.5s;
+    pointer-events: none;
+}
+
+.upload-simulator {
+    background: #f1f5f9;
+    padding: 3rem;
+    border-radius: 20px;
+    margin: 4rem 0;
+    text-align: center;
+}
+
+.progress-container {
+    width: 100%;
+    height: 30px;
+    background: #e2e8f0;
+    border-radius: 15px;
+    margin: 2rem 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background: var(--madoka-aqua);
+    transition: width 0.1s;
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.aqua-card {
+    background: white;
+    padding: 3rem;
+    border-radius: 30px;
+    border: 3px solid var(--madoka-aqua);
+}
+
+.episode-box {
+    background: white;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(170, 217, 244, 0.2);
+}
+
+.lore-section {
+    margin-top: 6rem;
+    padding: 4rem;
+    background: var(--madoka-aqua);
+    color: white;
+    border-radius: 40px;
+}
+
+.water-drop-cursor {
+    position: fixed;
+    pointer-events: none;
+    z-index: 1000;
+    font-size: 1.5rem;
+}

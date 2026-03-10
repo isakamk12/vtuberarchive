@@ -1,0 +1,139 @@
+/* Nishizono Chigusa Theme */
+:root {
+    --chigusa-bg: #e6f7ff;
+    --chigusa-blue: #3A8FB7;
+    --chigusa-blue-soft: #84ccf0;
+    --chigusa-white: #ffffff;
+    --chigusa-text: #2c3e50;
+}
+
+.chigusa-theme {
+    background: var(--chigusa-bg);
+    color: var(--chigusa-text);
+}
+
+.chigusa-theme .en-name {
+    color: var(--chigusa-blue);
+    text-shadow: 1px 1px 0px white, 3px 3px 0px var(--chigusa-blue-soft);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+}
+
+.chigusa-theme .section-title {
+    color: var(--chigusa-blue);
+}
+
+.chigusa-theme .section-title::after {
+    background: linear-gradient(90deg, var(--chigusa-blue), transparent);
+}
+
+.water-ripple-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.ripple {
+    position: absolute;
+    border: 2px solid var(--chigusa-blue-soft);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: ripple-anim 2s ease-out forwards;
+}
+
+@keyframes ripple-anim {
+    0% {
+        transform: scale(0);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+.dolphin-particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.dolphin {
+    position: absolute;
+    font-size: 24px;
+    opacity: 0.2;
+    animation: swim-across 10s linear infinite;
+}
+
+@keyframes swim-across {
+    0% {
+        transform: translate(-100px, 100px) rotate(20deg);
+    }
+
+    50% {
+        transform: translate(50vw, -50px) rotate(-10deg);
+    }
+
+    100% {
+        transform: translate(100vw, 100px) rotate(20deg);
+    }
+}
+
+.crosshair-layer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--chigusa-blue);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    opacity: 0.1;
+    z-index: 100;
+}
+
+.crosshair-layer::before,
+.crosshair-layer::after {
+    content: '';
+    position: absolute;
+    background: var(--chigusa-blue);
+}
+
+.crosshair-layer::before {
+    width: 100%;
+    height: 2px;
+    top: 19px;
+    left: 0;
+}
+
+.crosshair-layer::after {
+    width: 2px;
+    height: 100%;
+    top: 0;
+    left: 19px;
+}
+
+.chigusa-theme .profile-item {
+    background: rgba(255, 255, 255, 0.8);
+    border-bottom: 3px solid var(--chigusa-blue-soft);
+}
+
+.chigusa-theme .description-box {
+    border: 2px solid var(--chigusa-blue);
+    border-radius: 20px;
+    background: white;
+}
+
+.chigusa-theme .lore-card {
+    background: white;
+    border-radius: 15px;
+    transition: transform 0.3s;
+}
+
+.chigusa-theme .lore-card:hover {
+    transform: translateY(-10px);
+}

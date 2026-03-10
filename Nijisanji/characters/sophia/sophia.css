@@ -1,0 +1,175 @@
+/* Sophia Valentine Theme */
+:root {
+    --sophia-bg: #f2f1f8;
+    --sophia-lavender: #C8C3DC;
+    --sophia-violet: #6a5da1;
+    --sophia-dark: #2d2a3e;
+    --sophia-text: #4e4a63;
+    --sophia-glow: rgba(200, 195, 220, 0.5);
+    --sophia-accent: #ff4d4d;
+    /* For Angry Mode */
+}
+
+.sophia-theme {
+    background: var(--sophia-bg);
+    color: var(--sophia-text);
+    font-family: 'Noto Sans JP', sans-serif;
+    transition: background 0.5s, color 0.5s;
+}
+
+.sophia-theme .en-name {
+    color: var(--sophia-violet);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    letter-spacing: 0.1rem;
+    position: relative;
+}
+
+.sophia-theme .section-title {
+    color: var(--sophia-violet);
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.2rem;
+}
+
+.sophia-theme .section-title::after {
+    background: linear-gradient(90deg, var(--sophia-lavender), transparent);
+}
+
+.cipher-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    color: var(--sophia-lavender);
+    opacity: 0.15;
+    overflow: hidden;
+}
+
+.circuit-lines {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        radial-gradient(circle at 10% 10%, var(--sophia-glow) 1px, transparent 1px),
+        radial-gradient(circle at 90% 90%, var(--sophia-glow) 1px, transparent 1px);
+    background-size: 100px 100px;
+    z-index: -2;
+    opacity: 0.4;
+}
+
+.mentsuyu-layer {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.mentsuyu-icon {
+    position: absolute;
+    font-size: 2.5rem;
+    opacity: 0.05;
+    filter: sepia(1) saturate(5);
+}
+
+.cipher-btn {
+    margin-top: 20px;
+    padding: 10px 30px;
+    background: transparent;
+    border: 2px solid var(--sophia-violet);
+    color: var(--sophia-violet);
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.cipher-btn:hover {
+    background: var(--sophia-violet);
+    color: white;
+    box-shadow: 0 0 15px var(--sophia-glow);
+}
+
+.sophia-theme .profile-item {
+    background: white;
+    border: 1px solid var(--sophia-lavender);
+    border-left: 5px solid var(--sophia-violet);
+    box-shadow: 8px 8px 0px var(--sophia-lavender);
+}
+
+.sophia-theme .description-box {
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid var(--sophia-lavender);
+    backdrop-filter: blur(5px);
+}
+
+.sophia-theme .lore-card {
+    background: white;
+    border: 1px solid #e1e0eb;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.sophia-theme .lore-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(106, 93, 161, 0.1);
+}
+
+/* Angry Mode (SF6 Mode) */
+.angry-mode {
+    --sophia-bg: #1a0a0a;
+    --sophia-violet: #ff4d4d;
+    --sophia-lavender: #4d1a1a;
+    --sophia-text: #ffcccc;
+    --sophia-glow: rgba(255, 77, 77, 0.3);
+}
+
+.angry-mode .background-effects {
+    filter: contrast(1.5) hue-rotate(-20deg);
+}
+
+.angry-mode .character-header .jp-name {
+    animation: jitter 0.1s infinite;
+}
+
+@keyframes jitter {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    33% {
+        transform: translate(1px, -1px);
+    }
+
+    66% {
+        transform: translate(-1px, 1px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.glitch-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.05) 0px, rgba(0, 0, 0, 0.05) 1px, transparent 1px, transparent 2px);
+    pointer-events: none;
+    z-index: 100;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.angry-mode .glitch-overlay {
+    opacity: 1;
+}

@@ -1,0 +1,224 @@
+:root {
+    --isumi-lavender: #E5E2F6;
+    --isumi-pink: #F7CFEA;
+    --isumi-purple: #B19CD9;
+    --isumi-dark: #4a4a6a;
+    --isumi-white: #ffffff;
+}
+
+body.isumi-theme {
+    background-color: var(--isumi-lavender);
+    color: var(--isumi-dark);
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    transition: background-color 1s;
+}
+
+.dream-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 50, 0);
+    pointer-events: none;
+    z-index: 100;
+    transition: background 2s;
+}
+
+header {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back-link {
+    color: var(--isumi-purple);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.makeup-toggle {
+    background: white;
+    color: var(--isumi-purple);
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    border: 2px solid var(--isumi-purple);
+    box-shadow: 0 4px 10px rgba(177, 156, 217, 0.3);
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.idol-badge {
+    background: var(--isumi-pink);
+    color: var(--isumi-dark);
+    padding: 0.3rem 1rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.char-name {
+    font-family: 'Kiwi Maru', serif;
+    font-size: 4rem;
+    color: var(--isumi-purple);
+    text-shadow: 2px 2px 0 white;
+}
+
+.en-name {
+    display: block;
+    font-size: 1.2rem;
+    color: var(--isumi-dark);
+    opacity: 0.5;
+    letter-spacing: 2px;
+}
+
+.catchphrase {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    font-size: 1.3rem;
+    margin: 3rem 0;
+    border: 2px solid var(--isumi-pink);
+    position: relative;
+}
+
+.status-tags span {
+    background: var(--isumi-white);
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    margin-right: 0.5rem;
+    border: 1px solid var(--isumi-pink);
+}
+
+.character-visual {
+    text-align: center;
+    position: relative;
+    padding: 5rem 0;
+}
+
+.main-img {
+    height: 550px;
+    transition: filter 0.3s;
+}
+
+.ghost-scare {
+    position: absolute;
+    top: 20%;
+    right: 30%;
+    font-size: 3rem;
+    opacity: 0;
+    pointer-events: none;
+    filter: blur(5px);
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.pastel-card {
+    background: white;
+    padding: 3rem;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.makeup-palette {
+    display: flex;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.color-dot {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #eee;
+}
+
+.consultation-room {
+    background: var(--isumi-pink);
+    color: white;
+    padding: 4rem;
+    border-radius: 30px;
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.chat-bubble {
+    background: white;
+    color: var(--isumi-dark);
+    padding: 1.5rem;
+    border-radius: 20px;
+    max-width: 500px;
+    margin: 2rem auto;
+    position: relative;
+}
+
+.chat-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    right: 30px;
+    border-width: 10px 10px 0;
+    border-style: solid;
+    border-color: white transparent;
+}
+
+.macaron-float {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    font-size: 3rem;
+    animation: bounce 2s infinite;
+    cursor: pointer;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+#sparkles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 50;
+}
+
+.sparkle {
+    position: absolute;
+    color: var(--isumi-pink);
+    font-size: 1.2rem;
+    animation: fall 3s linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}

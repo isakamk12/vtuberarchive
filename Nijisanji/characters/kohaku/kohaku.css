@@ -1,0 +1,124 @@
+/* Todo Kohaku Theme */
+:root {
+    --kohaku-bg: #1a1205;
+    --kohaku-gold: #FFD700;
+    --kohaku-amber: #ffbf00;
+    --kohaku-honey: rgba(255, 215, 0, 0.3);
+    --kohaku-white: #fffdf5;
+}
+
+.kohaku-theme {
+    background: var(--kohaku-bg);
+}
+
+.kohaku-theme .en-name {
+    color: var(--kohaku-gold);
+    text-shadow: 0 0 20px var(--kohaku-honey);
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.2rem;
+}
+
+.kohaku-theme .section-title {
+    color: var(--kohaku-amber);
+}
+
+.kohaku-theme .section-title::after {
+    background: linear-gradient(90deg, var(--kohaku-amber), transparent);
+}
+
+.honey-drip-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.honey-drip {
+    position: absolute;
+    top: -50px;
+    width: 20px;
+    height: 80px;
+    background: var(--kohaku-gold);
+    border-radius: 0 0 20px 20px;
+    opacity: 0.6;
+    animation: drip-swim 5s infinite ease-in;
+}
+
+@keyframes drip-swim {
+    0% {
+        transform: translateY(0);
+        height: 80px;
+    }
+
+    50% {
+        height: 120px;
+    }
+
+    100% {
+        transform: translateY(110vh);
+        height: 80px;
+    }
+}
+
+.gacha-sparkles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.sparkle-gold {
+    position: absolute;
+    color: var(--kohaku-gold);
+    text-shadow: 0 0 10px var(--kohaku-gold);
+    pointer-events: none;
+    animation: sparkle-anim 2s linear forwards;
+}
+
+@keyframes sparkle-anim {
+    0% {
+        transform: scale(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.5) rotate(180deg);
+        opacity: 0;
+    }
+}
+
+.honey-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, var(--kohaku-honey) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.kohaku-theme .profile-item {
+    border-left: 4px solid var(--kohaku-gold);
+    background: rgba(255, 215, 0, 0.05);
+}
+
+.kohaku-theme .description-box {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--kohaku-honey);
+}
+
+.kohaku-theme .lore-card {
+    border: 1px solid var(--kohaku-gold);
+}
+
+.kohaku-theme .lore-card h3 {
+    color: var(--kohaku-amber);
+}

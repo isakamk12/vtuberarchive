@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>白砂あやね (Shirasa Ayane) - Nijisanji Archive</title>
+    <link rel="stylesheet" href="../../nijisanji_style.css">
+    <link rel="stylesheet" href="ayane.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&family=Permanent+Marker&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="ayane-theme">
+    <canvas id="art-canvas"></canvas>
+
+    <header>
+        <nav>
+            <a href="../../nijisanji_index.html" class="back-link">← ARCHIVE</a>
+            <div class="mayo-indicator">MAYO LEVEL: <span id="mayo-count">0%</span></div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="club-badge">美術部部長 / 生徒会書記</div>
+                <h1 class="char-name">白砂あやね <span class="en-name">Shirasa Ayane</span></h1>
+                <p class="catchphrase">「お腹が空いたよー！やーねー。マヨネーズさえあれば世界は平和だよ。」</p>
+                <div class="status-tags">
+                    <span>17歳 (高2)</span>
+                    <span>極度のマヨラー</span>
+                    <span>負けず嫌い</span>
+                </div>
+            </div>
+            <div class="character-visual">
+                <img src="../../assets/ayane_full.png" alt="Shirasa Ayane Full Visual" class="main-img" id="ayane-img">
+                <div class="mayo-bottle" id="mayo-btn">🍼</div>
+            </div>
+        </section>
+
+        <section class="air-hockey-arena">
+            <h2>AIR HOCKEY BATTLE (耐久モード)</h2>
+            <p>11時間の死闘を再現！パドルを動かしてゴールを守れ！</p>
+            <div class="arena-box" id="arena">
+                <div class="paddle player" id="player-paddle"></div>
+                <div class="paddle ai" id="ai-paddle"></div>
+                <div class="puck" id="puck"></div>
+            </div>
+            <div class="arena-controls">
+                <button id="start-hockey">試合開始！</button>
+            </div>
+        </section>
+
+        <section class="profile-grid">
+            <div class="canvas-card info">
+                <h2>STUDENT DATA</h2>
+                <ul>
+                    <li><strong>誕生日:</strong> 4月9日</li>
+                    <li><strong>身長:</strong> 158cm</li>
+                    <li><strong>血液型:</strong> O型</li>
+                    <li><strong>学校:</strong> 私立 海月花学院</li>
+                    <li><strong>ファンネーム:</strong> 海月花学院美術部</li>
+                </ul>
+            </div>
+            <div class="canvas-card skills">
+                <h2>CREATOR'S PALETTE</h2>
+                <p>スマホと指だけでロゴや待機画面を自作する天才肌。でも料理は壊滅的（クイズ大会が開かれるほど）。</p>
+                <div class="failed-dish">🍳 失敗料理：炭化した何か</div>
+            </div>
+        </section>
+
+        <section class="lore-section">
+            <h2>LORE</h2>
+            <p>海月花学院の美術部部長と生徒会書記を兼任する優等生。真面目だが極度の負けず嫌いで、エアホッケーにハマると11時間以上やり続ける耐久力の持ち主。生粋のマヨラーで、学食のご飯にマヨネーズは必須。アイドルオタクとしても熱心で、ハロプロやプリパラを愛する。初手ミュートで1曲歌いきるなど、どこか抜けているギャップが魅力。
+            </p>
+        </section>
+    </main>
+
+    <div class="brush-cursor" id="cursor">🖌️</div>
+
+    <script src="ayane.js"></script>
+</body>
+
+</html>

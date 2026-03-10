@@ -1,0 +1,237 @@
+:root {
+    --trout-blue: #4a90e2;
+    --trout-silver: #c0c0c0;
+    --trout-dark: #121212;
+    --trout-text: #e0e0e0;
+}
+
+body.trout-theme {
+    background-color: var(--trout-dark);
+    color: var(--trout-text);
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.vinyl-bg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100vmax;
+    height: 100vmax;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, transparent 20%, rgba(255, 255, 255, 0.03) 21%, transparent 22%, rgba(255, 255, 255, 0.03) 23%, transparent 24%);
+    background-size: 100% 100%;
+    z-index: -1;
+    animation: rotateVinyl 20s linear infinite;
+}
+
+@keyframes rotateVinyl {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+header {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background: rgba(18, 18, 18, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+}
+
+.back-link {
+    color: var(--trout-blue);
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.ego-toggle {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px;
+    border: 1px solid var(--trout-blue);
+}
+
+.ego-toggle.active {
+    background: var(--trout-blue);
+    color: white;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.char-name {
+    font-family: 'Shippori Mincho B1', serif;
+    font-size: 5rem;
+    color: var(--trout-blue);
+    margin-bottom: 0.5rem;
+}
+
+.en-name {
+    display: block;
+    font-size: 1.5rem;
+    color: var(--trout-silver);
+    letter-spacing: 5px;
+}
+
+.catchphrase {
+    font-size: 1.4rem;
+    border-left: 4px solid var(--trout-blue);
+    padding-left: 2rem;
+    margin: 3rem 0;
+    font-style: italic;
+}
+
+.status-tags span {
+    background: rgba(74, 144, 226, 0.1);
+    border: 1px solid var(--trout-blue);
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    margin-right: 0.8rem;
+}
+
+.character-visual {
+    text-align: center;
+    margin: 5rem 0;
+    position: relative;
+}
+
+.main-img {
+    max-width: 100%;
+    filter: drop-shadow(0 0 30px rgba(74, 144, 226, 0.2));
+}
+
+.rap-lyrics-section {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 4rem;
+    border-radius: 20px;
+    border: 1px solid rgba(74, 144, 226, 0.2);
+    text-align: center;
+}
+
+.rap-container {
+    margin: 3rem 0;
+}
+
+.lyric-line {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 1rem 0;
+    transition: all 0.3s;
+    cursor: default;
+}
+
+.lyric-line:hover {
+    color: var(--trout-blue);
+    transform: scale(1.1);
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 5rem;
+}
+
+.chef-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 3rem;
+    border-radius: 12px;
+}
+
+.ojisan-generator {
+    margin-top: 6rem;
+    text-align: center;
+}
+
+.gen-box {
+    background: #f0f2f5;
+    color: #1c1e21;
+    padding: 3rem;
+    border-radius: 12px;
+    margin: 2rem auto;
+    max-width: 600px;
+}
+
+.ojisan-text {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    min-height: 100px;
+}
+
+#gen-btn {
+    background: #0084ff;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#gen-btn:hover {
+    background: #0073e6;
+}
+
+.hidden-tweets {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 50;
+}
+
+.floating-tweet {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1rem;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    transition: opacity 0.5s;
+    font-size: 0.9rem;
+    width: 200px;
+}
+
+body.ego-mode .floating-tweet {
+    opacity: 1;
+}
+
+.ego-search-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 200;
+    background: radial-gradient(circle at var(--mouse-x) var(--mouse-y), transparent 100px, rgba(0, 0, 0, 0.8) 150px);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+body.ego-mode .ego-search-overlay {
+    opacity: 1;
+}

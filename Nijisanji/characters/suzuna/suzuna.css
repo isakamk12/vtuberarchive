@@ -1,0 +1,208 @@
+:root {
+    --suzuna-green: #B9E089;
+    --suzuna-red: #EA6969;
+    --suzuna-white: #ffffff;
+    --suzuna-dark: #333;
+}
+
+body.suzuna-theme {
+    background-color: var(--suzuna-white);
+    color: var(--suzuna-dark);
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    transition: background-color 2s ease-in-out;
+}
+
+.suzuna-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background: linear-gradient(180deg, #ff9d6e 0%, #ffefba 50%, #74ebd5 100%);
+    opacity: 0.3;
+}
+
+header {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back-link {
+    color: var(--suzuna-red);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.clock-display {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-family: monospace;
+    background: rgba(185, 224, 137, 0.2);
+    padding: 1rem;
+    border-radius: 12px;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.char-name {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 4rem;
+    color: var(--suzuna-green);
+    -webkit-text-stroke: 1px var(--suzuna-dark);
+}
+
+.en-name {
+    display: block;
+    font-size: 1.2rem;
+    color: var(--suzuna-red);
+    opacity: 0.8;
+}
+
+.catchphrase {
+    background: #fff9e6;
+    padding: 2.5rem;
+    border-radius: 50% 50% 50% 10% / 10% 50% 50% 50%;
+    font-size: 1.3rem;
+    margin: 3rem 0;
+    border: 2px solid var(--suzuna-green);
+    position: relative;
+}
+
+.status-tags span {
+    background: var(--suzuna-green);
+    color: white;
+    padding: 0.5rem 1.2rem;
+    border-radius: 4px;
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.character-visual {
+    text-align: center;
+    position: relative;
+    padding: 3rem 0;
+}
+
+.main-img {
+    height: 600px;
+    filter: drop-shadow(0 0 20px rgba(185, 224, 137, 0.3));
+}
+
+.breakfast-blender {
+    background: #fdfdfd;
+    padding: 4rem;
+    border-radius: 30px;
+    border: 2px dashed #ddd;
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.blender-container {
+    font-size: 4rem;
+    cursor: pointer;
+    display: inline-block;
+    transition: transform 0.1s;
+}
+
+.blender-container.shaking {
+    animation: blendShake 0.1s infinite;
+}
+
+@keyframes blendShake {
+    0% {
+        transform: translate(2px, 2px);
+    }
+
+    50% {
+        transform: translate(-2px, -2px);
+    }
+
+    100% {
+        transform: translate(2px, -2px);
+    }
+}
+
+.smoothie-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--suzuna-green);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1000;
+    transition: opacity 0.3s;
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 5rem;
+}
+
+.veggie-card {
+    background: rgba(185, 224, 137, 0.05);
+    padding: 3rem;
+    border: 2px solid var(--suzuna-green);
+    border-radius: 20px;
+}
+
+.miner {
+    background: #444;
+    color: #eee;
+    border-color: #222;
+}
+
+.mine-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 60px);
+    gap: 10px;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.block {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.coal {
+    background: #333;
+}
+
+.stone {
+    background: #888;
+}
+
+.diamond {
+    background: #b9f2ff;
+}
+
+.bedrock {
+    background: #222;
+}
+
+.sunrise-ritual {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    padding: 0.5rem 1rem;
+    background: var(--suzuna-red);
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}

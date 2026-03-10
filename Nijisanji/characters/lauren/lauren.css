@@ -1,0 +1,156 @@
+/* Lauren Iroas Theme */
+:root {
+    --lauren-bg: #121212;
+    --lauren-blue: #00ccff;
+    --lauren-grey: #333333;
+    --lauren-caution: #ffcc00;
+    --lauren-white: #ffffff;
+    --lauren-glow: rgba(0, 204, 255, 0.3);
+}
+
+.lauren-theme {
+    background: var(--lauren-bg);
+}
+
+.lauren-theme .en-name {
+    color: var(--lauren-blue);
+    text-shadow: 0 0 10px var(--lauren-blue);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+.lauren-theme .section-title {
+    color: var(--lauren-blue);
+    position: relative;
+    padding-left: 20px;
+}
+
+.lauren-theme .section-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 5px;
+    background: var(--lauren-caution);
+}
+
+.lauren-theme .section-title::after {
+    background: linear-gradient(90deg, var(--lauren-blue), transparent);
+}
+
+.caution-tape-layer {
+    position: absolute;
+    top: 20px;
+    width: 200%;
+    height: 30px;
+    background: var(--lauren-caution);
+    color: black;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    transform: rotate(-5deg) translateX(-10%);
+    z-index: -1;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.caution-tape-layer::after {
+    content: " KEEP OUT // CAUTION // WANTED // EDEN_GUMI_SEC // ";
+    font-size: 1.2rem;
+    animation: tape-scroll 20s linear infinite;
+}
+
+@keyframes tape-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.bullet-impacts {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.bullet {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: radial-gradient(circle, #666 0%, transparent 80%);
+    border: 1px solid #444;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+.neon-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, var(--lauren-glow) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    animation: neon-flicker 2s infinite;
+}
+
+@keyframes neon-flicker {
+
+    0%,
+    100% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+}
+
+.lauren-theme .profile-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #333;
+    clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+}
+
+.lauren-theme .description-box {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--lauren-blue);
+    box-shadow: 0 0 15px rgba(0, 204, 255, 0.1);
+}
+
+.lauren-theme .lore-card {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    position: relative;
+    overflow: hidden;
+}
+
+.lauren-theme .lore-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background: var(--lauren-blue);
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+    opacity: 0.5;
+}
+
+.mouse-tracer {
+    position: fixed;
+    width: 4px;
+    height: 4px;
+    background: var(--lauren-blue);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1000;
+}

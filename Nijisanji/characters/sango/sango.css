@@ -1,0 +1,119 @@
+/* Suo Sango Theme */
+:root {
+    --sango-bg: #fff5f8;
+    --sango-pink: #ff69b4;
+    --sango-pink-soft: #ffb6c1;
+    --sango-heart: #ff1493;
+    --sango-text: #4a4a4a;
+}
+
+.sango-theme {
+    background: var(--sango-bg);
+    color: var(--sango-text);
+}
+
+.sango-theme .en-name {
+    color: var(--sango-pink);
+    text-shadow: 2px 2px 0px rgba(255, 105, 180, 0.2);
+    font-family: 'Zen Old Mincho', serif;
+}
+
+.sango-theme .jp-name {
+    color: var(--sango-pink-soft);
+}
+
+.sango-theme .section-title {
+    color: var(--sango-pink);
+}
+
+.sango-theme .back-link {
+    color: var(--sango-text);
+}
+
+.sango-theme .profile-item {
+    background: white;
+    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.1);
+}
+
+.sango-theme .description-box {
+    background: white;
+    border-radius: 40px;
+    border: 3px dashed var(--sango-pink-soft);
+}
+
+.heart-trail-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.flamingo-particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.flamingo {
+    position: absolute;
+    font-size: 30px;
+    opacity: 0.1;
+    animation: flamingo-dance 15s linear infinite;
+}
+
+@keyframes flamingo-dance {
+    0% {
+        transform: translateY(100vh) rotate(0deg) scale(1);
+    }
+
+    100% {
+        transform: translateY(-100px) rotate(360deg) scale(0.5);
+    }
+}
+
+.spotlight {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.4) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.sparkle-burst {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, var(--sango-pink-soft) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    animation: sango-pulse 3s infinite;
+}
+
+@keyframes sango-pulse {
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.8);
+        opacity: 0;
+    }
+}
+
+.sango-theme .lore-card {
+    background: white;
+    border-color: var(--sango-pink-soft);
+}
+
+.sango-theme .lore-card:hover {
+    border-color: var(--sango-pink);
+    transform: scale(1.05);
+}

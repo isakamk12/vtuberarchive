@@ -1,0 +1,182 @@
+/* Sakaki Ness Theme */
+:root {
+    --ness-bg: #0d1b2a;
+    --ness-mint: #41ead4;
+    --ness-navy: #1b263b;
+    --ness-white: #e0e1dd;
+    --ness-pachinko: #ff0055;
+    --ness-gold: #ffcc33;
+}
+
+.ness-theme {
+    background: var(--ness-bg);
+    color: var(--ness-white);
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.silk-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--ness-navy), #000);
+    z-index: -3;
+}
+
+.ness-theme .en-name {
+    color: var(--ness-mint);
+    font-family: 'Bodoni Moda', serif;
+    font-style: italic;
+    font-weight: 900;
+    text-shadow: 0 0 20px var(--ness-mint);
+    letter-spacing: 0.3rem;
+}
+
+.ness-theme .section-title {
+    color: var(--ness-mint);
+    border-bottom: 2px solid var(--ness-white);
+    font-family: 'Bodoni Moda', serif;
+    font-style: italic;
+}
+
+.ness-theme .section-title::after {
+    display: none;
+}
+
+.pachinko-neon {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -2;
+    background: radial-gradient(circle at 80% 20%, rgba(255, 0, 85, 0.05), transparent 50%),
+        radial-gradient(circle at 20% 80%, rgba(65, 234, 212, 0.05), transparent 50%);
+}
+
+.slot-overlay {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    gap: 10px;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border: 5px solid var(--ness-gold);
+    z-index: 2000;
+    box-shadow: 0 0 50px var(--ness-gold);
+}
+
+.slot-reel {
+    font-size: 5rem;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spin-active .slot-overlay {
+    display: flex;
+}
+
+.teaset-layer {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.teaset {
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0.1;
+    animation: tea-float 8s infinite alternate ease-in-out;
+}
+
+@keyframes tea-float {
+    from {
+        transform: translateY(0) rotate(0);
+    }
+
+    to {
+        transform: translateY(-20px) rotate(15deg);
+    }
+}
+
+.mun-mun-aura {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -2;
+    background: radial-gradient(circle, rgba(255, 0, 85, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.aura-active .mun-mun-aura {
+    opacity: 1;
+}
+
+.header-controls {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.mode-btn {
+    padding: 10px 25px;
+    background: transparent;
+    border: 2px solid var(--ness-mint);
+    color: var(--ness-mint);
+    font-weight: 900;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.mode-btn:hover {
+    background: var(--ness-mint);
+    color: var(--ness-bg);
+}
+
+.ness-theme .profile-item {
+    background: rgba(27, 38, 59, 0.5);
+    border: 1px solid rgba(65, 234, 212, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+.ness-theme .description-box {
+    background: rgba(13, 27, 42, 0.8);
+    border: 1px double var(--ness-mint);
+}
+
+.ness-theme .lore-card {
+    background: rgba(27, 38, 59, 0.3);
+    border: 1px solid rgba(65, 234, 212, 0.1);
+}
+
+.ness-theme .lore-card h3 {
+    color: var(--ness-mint);
+}
+
+/* Off Mode Stylings */
+.off-mode .character-header {
+    background: #000;
+}
+
+.off-mode .jp-name {
+    color: var(--ness-pachinko);
+}
+
+.off-mode .catchphrase {
+    font-style: normal;
+    color: #999;
+}

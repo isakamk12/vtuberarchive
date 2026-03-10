@@ -1,0 +1,213 @@
+/* Milan Kestrel Theme */
+:root {
+    --milan-bg: #050510;
+    --milan-purple: #9d50bb;
+    --milan-gold: #c1a25e;
+    --milan-dark: #201a30;
+    --milan-text: #dcd6f7;
+    --milan-glow: rgba(157, 80, 187, 0.4);
+}
+
+.milan-theme {
+    background: var(--milan-bg);
+    color: var(--milan-text);
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.milan-theme .en-name {
+    color: var(--milan-gold);
+    font-family: 'Cinzel', serif;
+    font-weight: 900;
+    text-shadow: 0 0 15px var(--milan-purple);
+    letter-spacing: 0.3rem;
+}
+
+.milan-theme .section-title {
+    color: var(--milan-purple);
+    font-family: 'Cinzel', serif;
+    border-bottom: 2px solid var(--milan-gold);
+    padding-bottom: 10px;
+}
+
+.milan-theme .section-title::after {
+    display: none;
+}
+
+.void-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 120%, var(--milan-dark), transparent);
+    z-index: -3;
+}
+
+.vacuum-glow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(193, 162, 94, 0.05) 0%, transparent 100%);
+    z-index: -2;
+    pointer-events: none;
+}
+
+.hourglass-layer,
+.butterfly-shadows {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.hourglass {
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0.2;
+    animation: hour-fall 5s infinite linear;
+}
+
+@keyframes hour-fall {
+    from {
+        transform: translateY(-10vh) rotate(0deg);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.2;
+    }
+
+    to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.butterfly {
+    position: absolute;
+    font-size: 1.5rem;
+    opacity: 0.1;
+    color: var(--milan-purple);
+    animation: flutter 4s infinite ease-in-out;
+}
+
+@keyframes flutter {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scaleX(1);
+    }
+
+    50% {
+        transform: translate(50px, -50px) scaleX(-1);
+    }
+}
+
+.tuning-panel {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    color: var(--milan-gold);
+}
+
+#audio-slider {
+    width: 200px;
+    accent-color: var(--milan-purple);
+}
+
+.ctrl-btns {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+    justify-content: center;
+}
+
+.m-btn {
+    padding: 8px 20px;
+    background: transparent;
+    border: 1px solid var(--milan-purple);
+    color: var(--milan-purple);
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.m-btn:hover {
+    background: var(--milan-purple);
+    color: white;
+    box-shadow: 0 0 15px var(--milan-glow);
+}
+
+.milan-theme .profile-item {
+    background: rgba(32, 26, 48, 0.5);
+    border: 1px solid rgba(157, 80, 187, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.milan-theme .profile-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: var(--milan-gold);
+}
+
+.milan-theme .description-box {
+    background: rgba(5, 5, 16, 0.8);
+    border: 1px solid var(--milan-purple);
+    border-radius: 0;
+}
+
+.milan-theme .lore-card {
+    background: rgba(32, 26, 48, 0.3);
+    border: 1px solid rgba(193, 162, 94, 0.2);
+}
+
+/* Chronostasis Effect */
+.stasis-active .hourglass,
+.stasis-active .butterfly {
+    animation-play-state: paused;
+}
+
+.stasis-active {
+    filter: sepia(0.5) contrast(1.2);
+}
+
+/* Villain Mode */
+.villain-active {
+    background: #1a0000;
+}
+
+.villain-active .en-name {
+    color: #ff0000;
+    text-shadow: 0 0 20px #ff0000;
+}
+
+.villain-active .section-title {
+    color: #ff0000;
+    border-color: #ff0000;
+}
+
+/* Audio Tuning FX */
+.audio-tuning-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1000;
+    backdrop-filter: blur(var(--blur, 0px));
+    mix-blend-mode: overlay;
+    background: radial-gradient(circle, transparent 0%, rgba(157, 80, 187, var(--noise, 0)) 100%);
+}

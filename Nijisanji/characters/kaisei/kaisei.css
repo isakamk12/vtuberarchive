@@ -1,0 +1,158 @@
+/* Kaisei Theme */
+:root {
+    --kaisei-bg: #f2f7f7;
+    --kaisei-teal: #1a6d7d;
+    --kaisei-brass: #b08d57;
+    --kaisei-dark-teal: #0c3d46;
+    --kaisei-text: #2c3e50;
+    --kaisei-kuma: #d2b48c;
+}
+
+.kaisei-theme {
+    background: var(--kaisei-bg);
+    color: var(--kaisei-text);
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.kaisei-theme .en-name {
+    color: var(--kaisei-teal);
+    font-family: 'Shippori Mincho', serif;
+    font-weight: 800;
+    text-shadow: 2px 2px 0px var(--kaisei-brass);
+    letter-spacing: 0.2rem;
+}
+
+.kaisei-theme .section-title {
+    color: var(--kaisei-dark-teal);
+    font-family: 'Shippori Mincho', serif;
+    border-bottom: 1px solid var(--kaisei-brass);
+}
+
+.kaisei-theme .section-title::after {
+    display: none;
+}
+
+.keyhole-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle at center, transparent 150px, rgba(0, 0, 0, 0.05) 150px);
+    z-index: -2;
+    pointer-events: none;
+    opacity: 0.3;
+}
+
+.dial-layer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 600px;
+    transform: translate(-50%, -50%);
+    border: 2px dashed var(--kaisei-brass);
+    border-radius: 50%;
+    z-index: -3;
+    opacity: 0.1;
+    animation: rotate-dial 60s infinite linear;
+}
+
+@keyframes rotate-dial {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.kuma-layer {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.teddy-bear {
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0.15;
+    animation: bear-float 10s infinite ease-in-out;
+}
+
+@keyframes bear-float {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0);
+    }
+
+    50% {
+        transform: translateY(-30px) rotate(10deg);
+    }
+}
+
+.mode-btn {
+    padding: 8px 25px;
+    background: white;
+    border: 1px solid var(--kaisei-teal);
+    color: var(--kaisei-teal);
+    font-weight: 800;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.mode-btn:hover {
+    background: var(--kaisei-teal);
+    color: white;
+}
+
+/* Pick Lock Effect */
+.lock-picking .content-wrapper section {
+    filter: blur(5px);
+    pointer-events: none;
+    transition: filter 0.3s;
+}
+
+.lock-picking .content-wrapper section.unlocked {
+    filter: blur(0);
+    pointer-events: auto;
+}
+
+/* Snake Mouse Tracer */
+.snake-trace {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background: var(--kaisei-teal);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 0.5;
+}
+
+.kaisei-theme .profile-item {
+    background: white;
+    border: 1px solid rgba(26, 109, 125, 0.1);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.kaisei-theme .description-box {
+    background: rgba(255, 255, 255, 0.8);
+    border-left: 8px solid var(--kaisei-teal);
+    border-right: 8px solid var(--kaisei-brass);
+}
+
+.kaisei-theme .lore-card {
+    background: white;
+    border: 1px solid var(--kaisei-brass);
+    transition: transform 0.3s;
+}
+
+.kaisei-theme .lore-card:hover {
+    transform: translateY(-5px);
+}

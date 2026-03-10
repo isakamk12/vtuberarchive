@@ -1,0 +1,132 @@
+/* Lain Paterson Theme */
+:root {
+    --lain-bg: #1a0505;
+    --lain-red: #F74848;
+    --lain-crimson: #a31d1d;
+    --lain-white: #fffafa;
+    --lain-glow: rgba(247, 72, 72, 0.4);
+}
+
+.lain-theme {
+    background: var(--lain-bg);
+    color: var(--lain-white);
+}
+
+.lain-theme .en-name {
+    color: var(--lain-red);
+    text-shadow: 0 0 20px var(--lain-glow);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+}
+
+.lain-theme .section-title {
+    color: var(--lain-red);
+}
+
+.lain-theme .section-title::after {
+    background: linear-gradient(90deg, var(--lain-red), transparent);
+}
+
+.crimson-heart-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.heart-particle {
+    position: absolute;
+    color: var(--lain-red);
+    font-size: 20px;
+    opacity: 0;
+    pointer-events: none;
+    animation: heart-float 4s linear forwards;
+}
+
+@keyframes heart-float {
+    0% {
+        transform: translateY(0) scale(0);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: translateY(-300px) scale(2);
+        opacity: 0;
+    }
+}
+
+.ammo-strips {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(90deg,
+            rgba(255, 255, 255, 0.02) 0px,
+            rgba(255, 255, 255, 0.02) 20px,
+            transparent 20px,
+            transparent 40px);
+    z-index: -2;
+}
+
+.ocean-splash-layer {
+    position: fixed;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(to top, rgba(247, 72, 72, 0.1), transparent);
+    z-index: -1;
+}
+
+.crimson-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, var(--lain-glow) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.lain-theme .profile-item {
+    background: rgba(247, 72, 72, 0.05);
+    border: 1px solid var(--lain-red);
+    border-radius: 8px;
+}
+
+.lain-theme .description-box {
+    background: rgba(0, 0, 0, 0.3);
+    border-right: 5px solid var(--lain-red);
+    padding-left: 20px;
+}
+
+.lain-theme .lore-card {
+    background: rgba(163, 29, 29, 0.1);
+    border: 1px solid var(--lain-crimson);
+}
+
+.lain-theme .lore-card:hover {
+    border-color: var(--lain-red);
+    box-shadow: 0 0 20px var(--lain-glow);
+}
+
+.god-slayer-badge {
+    position: fixed;
+    top: 100px;
+    right: -100px;
+    background: var(--lain-red);
+    color: white;
+    padding: 10px 40px;
+    transform: rotate(45deg);
+    font-weight: 900;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 0 0 20px gold;
+    z-index: 100;
+}

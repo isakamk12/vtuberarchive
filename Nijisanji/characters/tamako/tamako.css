@@ -1,0 +1,244 @@
+:root {
+    --tamako-yellow: #FFD264;
+    --tamako-orange: #E9674D;
+    --tamako-bg: #fffcf0;
+    --tamako-text: #5d4037;
+}
+
+body.tamako-theme {
+    background-color: var(--tamako-bg);
+    color: var(--tamako-text);
+    font-family: 'Zen Maru Gothic', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.sunny-particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.face-stamp-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 100;
+}
+
+header {
+    padding: 2rem;
+}
+
+.back-link {
+    color: var(--tamako-orange);
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid var(--tamako-yellow);
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    background: white;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.char-name {
+    font-family: 'Hachi Maru Pop', cursive;
+    font-size: 4rem;
+    color: var(--tamako-orange);
+    text-shadow: 3px 3px 0 var(--tamako-yellow);
+}
+
+.en-name {
+    display: block;
+    font-size: 1.5rem;
+    color: var(--tamako-text);
+    opacity: 0.6;
+}
+
+.catchphrase {
+    font-weight: bold;
+    font-size: 1.4rem;
+    background: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    border-left: 8px solid var(--tamako-yellow);
+    margin: 2rem 0;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.status-tags span {
+    background: var(--tamako-yellow);
+    color: var(--tamako-text);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.character-visual {
+    text-align: center;
+    position: relative;
+    margin: 3rem 0;
+}
+
+.main-img {
+    max-width: 500px;
+    filter: drop-shadow(0 0 20px rgba(233, 103, 77, 0.2));
+}
+
+.ao-glow {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, var(--tamako-yellow) 0%, transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.rhythm-game {
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin: 4rem 0;
+    border: 4px solid var(--tamako-yellow);
+}
+
+.blindfold-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s;
+}
+
+.blindfold-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.blindfold-text {
+    color: white;
+    font-size: 5rem;
+    font-family: 'Kosugi Maru', sans-serif;
+}
+
+.rhythm-line {
+    height: 4px;
+    background: #eee;
+    margin: 2rem 0;
+    position: relative;
+}
+
+.hit-zone {
+    position: absolute;
+    right: 50px;
+    top: -10px;
+    width: 40px;
+    height: 24px;
+    border: 2px solid var(--tamako-orange);
+    border-radius: 4px;
+}
+
+.omurice-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    border-bottom: 8px solid var(--tamako-yellow);
+    position: relative;
+}
+
+.omurice-card::after {
+    content: '🍳';
+    position: absolute;
+    top: -15px;
+    right: 15px;
+    font-size: 2rem;
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.guitar-solo {
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.guitar-strings {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: #444;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    margin: 2rem auto;
+}
+
+.string {
+    height: 2px;
+    background: #ccc;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+.string:hover {
+    transform: scaleY(3);
+    background: var(--tamako-yellow);
+}
+
+.legend-box {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    border-left: 10px solid var(--tamako-orange);
+}
+
+.hao-like-chick {
+    position: fixed;
+    font-size: 3rem;
+    pointer-events: none;
+    z-index: 200;
+}
+
+.face-stamp {
+    position: fixed;
+    font-size: 2.5rem;
+    font-family: 'Kosugi Maru', sans-serif;
+    color: var(--tamako-orange);
+    pointer-events: none;
+    z-index: 101;
+}

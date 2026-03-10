@@ -1,0 +1,192 @@
+/* Inami Rai Theme */
+:root {
+    --rai-bg: #121410;
+    --rai-green: #DCFF50;
+    --rai-dark-green: #9fb82b;
+    --rai-gray: #2a2d26;
+    --rai-light-gray: #dce0d9;
+    --rai-text: #e0e5db;
+    --rai-neon: rgba(220, 255, 80, 0.4);
+}
+
+.rai-theme {
+    background: var(--rai-bg);
+    color: var(--rai-text);
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.rai-theme .en-name {
+    color: var(--rai-green);
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    text-shadow: 0 0 10px var(--rai-green);
+    letter-spacing: 0.2rem;
+}
+
+.rai-theme .section-title {
+    color: var(--rai-green);
+    font-family: 'Orbitron', sans-serif;
+    border-bottom: 2px solid var(--rai-green);
+}
+
+.rai-theme .section-title::after {
+    display: none;
+}
+
+.circuit-grid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        linear-gradient(var(--rai-gray) 1px, transparent 1px),
+        linear-gradient(90deg, var(--rai-gray) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: -3;
+    opacity: 0.3;
+}
+
+.gear-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -2;
+    opacity: 0.1;
+}
+
+.gear {
+    position: absolute;
+    color: var(--rai-green);
+    font-size: 10rem;
+    animation: gear-spin 20s infinite linear;
+}
+
+@keyframes gear-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.audio-visualizer-bg {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 5px;
+    padding: 0 20px;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.1;
+}
+
+.viz-bar {
+    flex: 1;
+    background: var(--rai-green);
+    height: 0;
+    transition: height 0.1s;
+}
+
+.overclock-btn {
+    margin-top: 20px;
+    padding: 10px 40px;
+    background: transparent;
+    border: 2px solid var(--rai-green);
+    color: var(--rai-green);
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s;
+    box-shadow: 0 0 5px var(--rai-neon);
+}
+
+.overclock-btn:hover {
+    background: var(--rai-green);
+    color: var(--rai-bg);
+    box-shadow: 0 0 20px var(--rai-green);
+}
+
+.rai-theme .profile-item {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--rai-gray);
+    position: relative;
+    overflow: hidden;
+}
+
+.rai-theme .profile-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--rai-green);
+}
+
+.rai-theme .description-box {
+    background: rgba(18, 20, 16, 0.8);
+    border: 1px solid var(--rai-gray);
+    border-radius: 0;
+}
+
+.rai-theme .lore-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--rai-gray);
+    transition: border-color 0.3s;
+}
+
+.rai-theme .lore-card:hover {
+    border-color: var(--rai-green);
+}
+
+/* Overclock Mode */
+.overclock-active .en-name {
+    animation: text-pulse 1s infinite alternate;
+}
+
+@keyframes text-pulse {
+    from {
+        text-shadow: 0 0 10px var(--rai-green);
+    }
+
+    to {
+        text-shadow: 0 0 30px var(--rai-green), 0 0 50px white;
+    }
+}
+
+.overclock-active .gear {
+    animation-duration: 2s;
+}
+
+.overclock-active .viz-bar {
+    opacity: 0.4;
+}
+
+.light-particle {
+    position: fixed;
+    width: 2px;
+    height: 2px;
+    background: var(--rai-green);
+    pointer-events: none;
+    z-index: 50;
+    animation: particle-move 1s forwards;
+}
+
+@keyframes particle-move {
+    to {
+        transform: translate(var(--x), var(--y));
+        opacity: 0;
+    }
+}

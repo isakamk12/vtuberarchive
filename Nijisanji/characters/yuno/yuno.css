@@ -1,0 +1,209 @@
+:root {
+    --yuno-blue: #AAD9F4;
+    --yuno-yellow: #F8F482;
+    --yuno-dark: #2d3b4e;
+    --yuno-white: #ffffff;
+}
+
+body.yuno-theme {
+    background-color: var(--yuno-white);
+    color: var(--yuno-dark);
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    background-image: radial-gradient(var(--yuno-blue) 0.5px, transparent 0.5px);
+    background-size: 30px 30px;
+}
+
+header {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.back-link {
+    color: var(--yuno-blue);
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.hunger-meter {
+    font-weight: bold;
+    color: var(--yuno-dark);
+    background: var(--yuno-yellow);
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.char-name {
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 4rem;
+    color: var(--yuno-blue);
+    -webkit-text-stroke: 1px var(--yuno-dark);
+}
+
+.en-name {
+    display: block;
+    font-size: 1.2rem;
+    color: var(--yuno-dark);
+    opacity: 0.5;
+    letter-spacing: 2px;
+}
+
+.catchphrase {
+    background: var(--yuno-blue);
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    font-size: 1.4rem;
+    margin: 3rem 0;
+    font-weight: bold;
+}
+
+.character-visual {
+    text-align: center;
+    position: relative;
+    padding: 4rem 0;
+}
+
+.main-img {
+    height: 600px;
+}
+
+.penlight-box {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: -50px;
+}
+
+.penlight {
+    width: 20px;
+    height: 100px;
+    background: var(--color);
+    border-radius: 10px;
+    box-shadow: 0 0 20px var(--color);
+    animation: wave 2s ease-in-out infinite;
+    transform-origin: bottom center;
+}
+
+@keyframes wave {
+
+    0%,
+    100% {
+        transform: rotate(-15deg);
+    }
+
+    50% {
+        transform: rotate(15deg);
+    }
+}
+
+.wanko-soba-game {
+    text-align: center;
+    margin: 5rem 0;
+    background: #f8f8f8;
+    padding: 4rem;
+    border-radius: 20px;
+}
+
+.soba-bowl-btn {
+    display: inline-block;
+    background: #e74c3c;
+    color: white;
+    padding: 1rem 3rem;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 0 #c0392b;
+    transition: all 0.1s;
+}
+
+.soba-bowl-btn:active {
+    transform: translateY(5px);
+    box-shadow: 0 0 0;
+}
+
+.soba-stack-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    z-index: 500;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    padding: 20px;
+}
+
+.soba-bowl-visual {
+    width: 80px;
+    height: 40px;
+    background: #c0392b;
+    border-radius: 50% 50% 10px 10px;
+    margin: 2px;
+    position: relative;
+    border: 2px solid #222;
+}
+
+.soba-bowl-visual::after {
+    content: '麺';
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: #fff8dc;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 5rem;
+}
+
+.idol-card {
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    border: 1px solid #eee;
+}
+
+.text-glow {
+    text-shadow: 0 0 10px var(--yuno-blue);
+    font-weight: 900;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+.episode-box {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-left: 5px solid var(--yuno-yellow);
+    background: #fffdf5;
+}
+
+.lore-section {
+    margin-top: 6rem;
+    padding: 4rem;
+    background: var(--yuno-dark);
+    color: white;
+    border-radius: 20px;
+}

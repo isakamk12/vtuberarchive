@@ -1,0 +1,161 @@
+/* Amagase Muyu Theme */
+:root {
+    --muyu-bg: #f0f4ff;
+    --muyu-cloud: #ffffff;
+    --muyu-soft-blue: #a5d8ff;
+    --muyu-lavender: #d0bfff;
+    --muyu-text: #495057;
+    --muyu-glow: rgba(165, 216, 255, 0.5);
+}
+
+.muyu-theme {
+    background: linear-gradient(135deg, var(--muyu-bg), #e7f5ff);
+    color: var(--muyu-text);
+    transition: background 1s, color 1s;
+}
+
+.muyu-theme.dream-mode {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: #e0e0e0;
+}
+
+.muyu-theme .en-name {
+    color: var(--muyu-soft-blue);
+    text-shadow: 2px 2px 5px var(--muyu-lavender);
+    font-family: 'Zen Old Mincho', serif;
+    font-weight: 900;
+}
+
+.muyu-theme .section-title {
+    color: var(--muyu-soft-blue);
+    font-family: 'Zen Old Mincho', serif;
+}
+
+.muyu-theme .section-title::after {
+    background: linear-gradient(90deg, var(--muyu-soft-blue), var(--muyu-lavender), transparent);
+}
+
+.cloud-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.cloud {
+    position: absolute;
+    background: var(--muyu-cloud);
+    filter: blur(20px);
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: cloud-float 20s infinite linear;
+}
+
+@keyframes cloud-float {
+    0% {
+        transform: translateX(-200px);
+    }
+
+    100% {
+        transform: translateX(100vw);
+    }
+}
+
+.dream-mode .cloud {
+    background: var(--muyu-lavender);
+    opacity: 0.2;
+}
+
+.star-layer {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.dream-mode .star-layer {
+    opacity: 1;
+}
+
+.star {
+    position: absolute;
+    background: white;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px white;
+    animation: twinkle 3s infinite alternate;
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.dream-mode-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: white;
+    border: 2px solid var(--muyu-soft-blue);
+    color: var(--muyu-soft-blue);
+    border-radius: 30px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px var(--muyu-glow);
+}
+
+.dream-mode .dream-mode-btn {
+    background: transparent;
+    border-color: var(--muyu-lavender);
+    color: var(--muyu-lavender);
+    box-shadow: 0 0 20px var(--muyu-lavender);
+}
+
+.muyu-theme .profile-item {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    border: 1px solid var(--muyu-soft-blue);
+}
+
+.dream-mode .profile-item {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--muyu-lavender);
+    color: white;
+}
+
+.muyu-theme .description-box {
+    background: rgba(255, 255, 255, 0.5);
+    border: 2px dashed var(--muyu-soft-blue);
+    border-radius: 25px;
+}
+
+.dream-mode .description-box {
+    background: rgba(0, 0, 0, 0.2);
+    border-color: var(--muyu-lavender);
+}
+
+.muyu-theme .lore-card {
+    background: white;
+    box-shadow: 0 10px 20px var(--muyu-glow);
+    border: none;
+    border-radius: 15px;
+}
+
+.dream-mode .lore-card {
+    background: #16213e;
+    color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}

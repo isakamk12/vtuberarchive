@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蝸堂みかる (Kadou Mikaru) - Nijisanji Archive</title>
+    <link rel="stylesheet" href="../../nijisanji_style.css">
+    <link rel="stylesheet" href="mikaru.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500&family=Zen+Maru+Gothic:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="mikaru-theme">
+    <div class="snail-trail-container" id="trail"></div>
+    <div class="messy-room-bg"></div>
+
+    <header>
+        <nav>
+            <a href="../../nijisanji_index.html" class="back-link">← ARCHIVE</a>
+            <div class="endurance-clock" id="clock">777y 00:00:00</div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="char-name">蝸堂みかる <span class="en-name">Kadou Mikaru</span></h1>
+                <p class="catchphrase">「こんみかるん～。とってもごきげん 蝸堂みかる だよ～。」</p>
+                <div class="status-tags">
+                    <span>今宵、××と夢を見る。</span>
+                    <span>ごきげんカタツムリ</span>
+                    <span>耐久19時間</span>
+                </div>
+            </div>
+            <div class="character-visual" id="mikaru-visual">
+                <div class="snail-shell"></div>
+                <img src="../../assets/mikaru_full.png" alt="Kadou Mikaru Full Visual" class="main-img">
+            </div>
+        </section>
+
+        <section class="sock-memory">
+            <h2>Sock Concentration (靴下で神経衰弱)</h2>
+            <p>散らかった靴下のペアを合わせよう！</p>
+            <div class="sock-grid" id="sock-game">
+                <!-- Socks will be generated here -->
+            </div>
+            <p id="game-status">Find the pairs...</p>
+        </section>
+
+        <section class="profile-grid">
+            <div class="snail-card info">
+                <h2>SHELL DATA</h2>
+                <ul>
+                    <li><strong>年齢:</strong> 777歳</li>
+                    <li><strong>誕生日:</strong> 6月1日</li>
+                    <li><strong>身長:</strong> 153cm</li>
+                    <li><strong>性別:</strong> ボーイでもガールでもない</li>
+                    <li><strong>出身:</strong> バーチャル関西の山</li>
+                </ul>
+            </div>
+            <div class="snail-card messy">
+                <h2>ROOM STATUS</h2>
+                <p>整理整頓が苦手。洗い物が溜まるとサランラップでご飯を食べる。ゴミ袋が倒れる音は「猫」のせい（自称）。</p>
+            </div>
+        </section>
+
+        <section class="music-section">
+            <h2>MUSICAL SNAIL</h2>
+            <p>初配信でフルート三重奏とギター弾き語りを披露した多才なカタツムリ。</p>
+            <div class="instrument-box">
+                <div class="instrument" data-sound="flute">🪈 Flute</div>
+                <div class="instrument" data-sound="guitar">🎸 Guitar</div>
+            </div>
+            <div id="sound-msg">Select an instrument...</div>
+        </section>
+
+        <section class="lore-section">
+            <h2>LORE</h2>
+            <p>VTA出身のごきげんカタツムリ。穏やか担当を自称するが、徐々に変態担当になりつつある。集中力が非常に高く、19時間の耐久配信をこなす忍耐の持ち主。Switchのカラーを意図せずバラしてしまうなど、おっちょこちょいな一面も。
+            </p>
+        </section>
+    </main>
+
+    <div class="gokigen-status" id="gokigen-msg">
+        STATUS: GOKIGEN ♫
+    </div>
+
+    <script src="mikaru.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>梢桃音 (Kozue Mone) - Nijisanji Archive</title>
+    <link rel="stylesheet" href="../../nijisanji_style.css">
+    <link rel="stylesheet" href="mone.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Zen+Maru+Gothic:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="mone-theme">
+    <div class="incense-smoke" id="smoke-container"></div>
+    <div class="tanuki-shadow"></div>
+
+    <header>
+        <nav>
+            <a href="../../nijisanji_index.html" class="back-link">← ARCHIVE</a>
+            <div class="poya-tanu-toggle" id="tanu-toggle">
+                <span class="toggle-label">POYA-TANU MODE</span>
+                <div class="toggle-switch"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="char-name">梢桃音 <span class="en-name">Kozue Mone</span></h1>
+                <p class="catchphrase">「香屋の店主、梢桃音です。…散ッ！」</p>
+                <div class="status-tags">
+                    <span>いずれ菖蒲か杜若</span>
+                    <span>調香師</span>
+                    <span>自由人担当</span>
+                </div>
+            </div>
+            <div class="character-visual" id="shaking-visual">
+                <div class="visual-placeholder">
+                    <img src="../../assets/mone_full.png" alt="Kozue Mone Full Visual" class="main-img">
+                    <div class="tanuki-ears"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="profile-grid">
+            <div class="profile-card incense">
+                <h2>INCENSE SHOP</h2>
+                <ul>
+                    <li><strong>誕生日:</strong> 3月28日</li>
+                    <li><strong>年齢:</strong> 23歳 (歳を取らない)</li>
+                    <li><strong>職業:</strong> 香屋店主 (調香師)</li>
+                    <li><strong>好きなもの:</strong> 日本酒、餡子、ナタデココ</li>
+                    <li><strong>資格:</strong> アロマテラピー検定1級</li>
+                </ul>
+            </div>
+            <div class="profile-card poya">
+                <h2>POYA-TANU SPIRIT</h2>
+                <p>「ぽやぽやのたぬき」と呼ばれるほどのドジとうっかり。本人は反発するが、その無軌道な魅力にリスナーは翻弄される。</p>
+            </div>
+        </section>
+
+        <section class="curiosity-kitchen" id="kitchen">
+            <h2>CURIOSITY KITCHEN</h2>
+            <p>未知なる食材の組み合わせを実食探求。</p>
+            <div class="kitchen-area">
+                <div class="ingredient-box">
+                    <div class="ingredient" draggable="true" data-name="natto">納豆</div>
+                    <div class="ingredient" draggable="true" data-name="chocolate">チョコ</div>
+                    <div class="ingredient" draggable="true" data-name="kimchi">キムチ</div>
+                    <div class="ingredient" draggable="true" data-name="sugar">砂糖</div>
+                    <div class="ingredient" draggable="true" data-name="tapioca">タピオカ</div>
+                </div>
+                <div class="cooking-pot" id="pot">
+                    <div class="pot-inner">MIX HERE</div>
+                </div>
+            </div>
+            <div id="kitchen-result" class="kitchen-result"></div>
+        </section>
+
+        <section class="endurance-clock">
+            <div class="clock-display">
+                <span id="endurance-timer">00:00:00</span>
+            </div>
+            <p>「10時間を超えないと長時間配信した気分にならない」</p>
+            <div class="retro-controller">🎮</div>
+        </section>
+
+        <section class="lore-section">
+            <h2>LORE</h2>
+            <p>昼配信をメインに、幾千万の再挑戦を繰り返す努力型の自由人。読書家であり麗しお姉さんな側面を持つが、PCの電源を足の指で消すなどのポンコツ伝説も絶えない。</p>
+        </section>
+    </main>
+
+    <div class="world-straightness" id="straight-msg">
+        私のまっすぐが、世界のまっすぐじゃないみたいで。
+    </div>
+
+    <script src="mone.js"></script>
+</body>
+
+</html>
