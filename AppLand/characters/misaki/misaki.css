@@ -1,0 +1,6 @@
+:root {
+    --char-color: #ff8c00; /* Dark Orange / Kasira Orange */
+    --char-glow: rgba(255, 140, 0, 0.4);
+    --char-color-soft: rgba(255, 140, 0, 0.05);
+    --char-border: rgba(255, 140, 0, 0.2);
+}

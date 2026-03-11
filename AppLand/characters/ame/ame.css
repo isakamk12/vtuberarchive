@@ -1,0 +1,6 @@
+:root {
+    --char-color: #a020f0; /* Candy Purple */
+    --char-glow: rgba(160, 32, 240, 0.4);
+    --char-color-soft: rgba(160, 32, 240, 0.05);
+    --char-border: rgba(160, 32, 240, 0.2);
+}

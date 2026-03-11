@@ -1,0 +1,6 @@
+:root {
+    --char-color: #f8f8ff; /* Ghost White / Rainbow Base */
+    --char-glow: rgba(248, 248, 255, 0.4);
+    --char-color-soft: rgba(248, 248, 255, 0.05);
+    --char-border: rgba(248, 248, 255, 0.2);
+}

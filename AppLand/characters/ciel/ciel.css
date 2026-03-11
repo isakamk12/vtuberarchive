@@ -1,0 +1,6 @@
+:root {
+    --char-color: #f0f8ff; /* Alice Blue / Realistic Sister White */
+    --char-glow: rgba(240, 248, 255, 0.4);
+    --char-color-soft: rgba(240, 248, 255, 0.05);
+    --char-border: rgba(240, 248, 255, 0.2);
+}

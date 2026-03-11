@@ -1,0 +1,6 @@
+:root {
+    --char-color: #4b0082; /* Indigo / Vampire Bar Purple / Grape */
+    --char-glow: rgba(75, 0, 130, 0.4);
+    --char-color-soft: rgba(75, 0, 130, 0.05);
+    --char-border: rgba(75, 0, 130, 0.2);
+}

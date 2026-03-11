@@ -1,0 +1,6 @@
+:root {
+    --char-color: #c0c0c0; /* Silver / Gintoge Silver */
+    --char-glow: rgba(192, 192, 192, 0.4);
+    --char-color-soft: rgba(192, 192, 192, 0.05);
+    --char-border: rgba(192, 192, 192, 0.2);
+}

@@ -1,0 +1,6 @@
+:root {
+    --char-color: #ffb7c5; /* Sakura Pink / Ghost Lily / Suiren Pink */
+    --char-glow: rgba(255, 183, 197, 0.4);
+    --char-color-soft: rgba(255, 183, 197, 0.05);
+    --char-border: rgba(255, 183, 197, 0.2);
+}

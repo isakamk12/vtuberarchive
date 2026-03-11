@@ -1,0 +1,12 @@
+@import url('../char-base.css');
+
+:root {
+    --char-color: #fca311; /* Nijimasu Orange/Gold */
+    --char-glow: rgba(252, 163, 17, 0.5);
+    --char-color-soft: rgba(252, 163, 17, 0.15);
+    --char-border: rgba(252, 163, 17, 0.4);
+}
+
+.cp-hero-orb {
+    color: var(--char-color);
+}

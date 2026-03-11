@@ -1,0 +1,6 @@
+:root {
+    --char-color: #add8e6; /* Pastel Blue / Light Blue */
+    --char-glow: rgba(173, 216, 230, 0.4);
+    --char-color-soft: rgba(173, 216, 230, 0.05);
+    --char-border: rgba(173, 216, 230, 0.2);
+}

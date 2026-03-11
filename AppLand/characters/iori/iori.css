@@ -1,0 +1,6 @@
+:root {
+    --char-color: #d2b48c; /* Mushroom Beige */
+    --char-glow: rgba(210, 180, 140, 0.4);
+    --char-color-soft: rgba(210, 180, 140, 0.05);
+    --char-border: rgba(210, 180, 140, 0.2);
+}

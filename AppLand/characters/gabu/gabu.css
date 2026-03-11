@@ -1,0 +1,6 @@
+:root {
+    --char-color: #f5f5dc; /* Beige / Komainu Cream */
+    --char-glow: rgba(245, 245, 220, 0.4);
+    --char-color-soft: rgba(245, 245, 220, 0.05);
+    --char-border: rgba(245, 245, 220, 0.2);
+}

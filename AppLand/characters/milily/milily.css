@@ -1,0 +1,6 @@
+:root {
+    --char-color: #e0115f; /* Ruby / Cosmic Stars color */
+    --char-glow: rgba(224, 17, 95, 0.4);
+    --char-color-soft: rgba(224, 17, 95, 0.05);
+    --char-border: rgba(224, 17, 95, 0.2);
+}

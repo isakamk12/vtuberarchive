@@ -1,0 +1,6 @@
+:root {
+    --char-color: #4caf50; /* Nature Green */
+    --char-glow: rgba(76, 175, 80, 0.4);
+    --char-color-soft: rgba(76, 175, 80, 0.05);
+    --char-border: rgba(76, 175, 80, 0.2);
+}

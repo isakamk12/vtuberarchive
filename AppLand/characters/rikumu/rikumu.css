@@ -1,0 +1,6 @@
+:root {
+    --char-color: #2c3e50; /* Midnight Blue */
+    --char-glow: rgba(44, 62, 80, 0.4);
+    --char-color-soft: rgba(44, 62, 80, 0.05);
+    --char-border: rgba(44, 62, 80, 0.2);
+}

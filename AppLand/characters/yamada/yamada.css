@@ -1,0 +1,6 @@
+:root {
+    --char-color: #970b0e; /* Deep Red / Detective Red */
+    --char-glow: rgba(151, 11, 14, 0.4);
+    --char-color-soft: rgba(151, 11, 14, 0.05);
+    --char-border: rgba(151, 11, 14, 0.2);
+}

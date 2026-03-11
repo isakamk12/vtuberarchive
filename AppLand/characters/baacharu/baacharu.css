@@ -1,0 +1,6 @@
+:root {
+    --char-color: #8c734b; /* Brown / Horse-like color */
+    --char-glow: rgba(140, 115, 75, 0.4);
+    --char-color-soft: rgba(140, 115, 75, 0.05);
+    --char-border: rgba(140, 115, 75, 0.2);
+}

@@ -1,0 +1,6 @@
+:root {
+    --char-color: #ffa500; /* Dark Orange / Crow Orange / Gold */
+    --char-glow: rgba(255, 165, 0, 0.4);
+    --char-color-soft: rgba(255, 165, 0, 0.05);
+    --char-border: rgba(255, 165, 0, 0.2);
+}

@@ -1,0 +1,6 @@
+:root {
+    --char-color: #ffc0cb; /* Soft Pink / Creamy Sheep color */
+    --char-glow: rgba(255, 192, 203, 0.4);
+    --char-color-soft: rgba(255, 192, 203, 0.05);
+    --char-border: rgba(255, 192, 203, 0.2);
+}

@@ -203,6 +203,35 @@ body {
     margin-top: 0.3rem;
 }
 
+/* ─── DIVISIONS ─────────────────────────────────────────────── */
+.al-division-header {
+    border-bottom: 2px solid var(--al-accent-glow);
+    margin-bottom: 2.5rem;
+    padding-bottom: 0.8rem;
+    position: relative;
+}
+
+.al-division-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--al-white);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.al-group-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--al-accent);
+    margin: 3rem 0 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    letter-spacing: 1px;
+}
+
 /* ─── CONTAINER ──────────────────────────────────────────────── */
 .al-container {
     position: relative;
@@ -358,7 +387,18 @@ body {
     margin-bottom: 0.3rem;
     transition: color 0.25s;
 }
-a.al-member-name:hover { color: var(--al-accent); }
+
+/* Stretched link to make the entire CARD clickable */
+.al-member-name::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+}
+
+.al-member-card:hover .al-member-name {
+    color: var(--al-accent);
+}
 
 .al-member-read {
     font-size: 0.75rem;
@@ -404,6 +444,22 @@ a.al-member-name:hover { color: var(--al-accent); }
 .al-reveal.active {
     opacity: 1;
     transform: translateY(0);
+}
+
+.al-member-card.graduate {
+    border-color: rgba(255, 255, 255, 0.1);
+    opacity: 0.7;
+    filter: grayscale(0.5);
+}
+
+.al-member-card.graduate::before {
+    background: #666;
+}
+
+.al-member-card.graduate:hover {
+    opacity: 1;
+    filter: grayscale(0);
+    border-color: var(--al-accent-glow);
 }
 
 /* ─── RESPONSIVE ─────────────────────────────────────────────── */

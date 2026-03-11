@@ -1,0 +1,6 @@
+:root {
+    --char-color: #fffff0; /* Ivory / Smart Dog White */
+    --char-glow: rgba(255, 255, 240, 0.4);
+    --char-color-soft: rgba(255, 255, 240, 0.05);
+    --char-border: rgba(255, 255, 240, 0.2);
+}

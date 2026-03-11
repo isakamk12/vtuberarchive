@@ -1,0 +1,6 @@
+:root {
+    --char-color: #8b0000; /* Dark Red / Guren Red */
+    --char-glow: rgba(139, 0, 0, 0.4);
+    --char-color-soft: rgba(139, 0, 0, 0.05);
+    --char-border: rgba(139, 0, 0, 0.2);
+}

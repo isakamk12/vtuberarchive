@@ -1,0 +1,6 @@
+:root {
+    --char-color: #c70039; /* Demon King Red / Crimson */
+    --char-glow: rgba(199, 0, 57, 0.4);
+    --char-color-soft: rgba(199, 0, 57, 0.05);
+    --char-border: rgba(199, 0, 57, 0.2);
+}

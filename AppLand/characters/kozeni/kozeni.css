@@ -1,0 +1,6 @@
+:root {
+    --char-color: #ff8c00; /* Dark Orange / Yankee Orange / Money Gold */
+    --char-glow: rgba(255, 140, 0, 0.4);
+    --char-color-soft: rgba(255, 140, 0, 0.05);
+    --char-border: rgba(255, 140, 0, 0.2);
+}

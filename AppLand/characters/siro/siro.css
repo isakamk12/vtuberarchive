@@ -1,0 +1,6 @@
+:root {
+    --char-color: #00c8ff;
+    --char-glow: rgba(0, 200, 255, 0.4);
+    --char-color-soft: rgba(0, 200, 255, 0.05);
+    --char-border: rgba(0, 200, 255, 0.2);
+}

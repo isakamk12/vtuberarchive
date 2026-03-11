@@ -1,0 +1,6 @@
+:root {
+    --char-color: #fff0f5; /* Lavender Blush / Flower Pink / Chumi White */
+    --char-glow: rgba(255, 240, 245, 0.4);
+    --char-color-soft: rgba(255, 240, 245, 0.05);
+    --char-border: rgba(255, 240, 245, 0.2);
+}

@@ -1,0 +1,6 @@
+:root {
+    --char-color: #f7558b; /* Pink */
+    --char-glow: rgba(247, 85, 139, 0.4);
+    --char-color-soft: rgba(247, 85, 139, 0.05);
+    --char-border: rgba(247, 85, 139, 0.2);
+}

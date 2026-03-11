@@ -94,18 +94,18 @@
 
             <!-- Members -->
             <div class="uo-member-grid">
-                <div class="uo-member-card uo-color-aji">
-                    <a href="characters/maaji.html" class="uo-member-name">黄金マアジ</a>
+                <div class="uo-member-card uo-color-aji" onclick="window.location.href='characters/maaji/maaji.html'">
+                    <h3 class="uo-member-name">黄金マアジ</h3>
                     <div class="uo-member-read">Kogane Maaji</div>
                     <p class="uo-member-ep">「マアジ」をモチーフにしたキャラクター。元気いっぱいで親しみやすい性格。</p>
                 </div>
-                <div class="uo-member-card uo-color-madai">
-                    <a href="characters/madai.html" class="uo-member-name">紅波マダイ</a>
+                <div class="uo-member-card uo-color-madai" onclick="window.location.href='characters/madai/madai.html'">
+                    <h3 class="uo-member-name">紅波マダイ</h3>
                     <div class="uo-member-read">Kurenami Madai</div>
                     <p class="uo-member-ep">「マダイ」をモチーフにしたキャラクター。お祝い事にもぴったりな華やかな存在感。</p>
                 </div>
-                <div class="uo-member-card uo-color-nijimasu">
-                    <a href="characters/nijimasu.html" class="uo-member-name">桃川ニジマス</a>
+                <div class="uo-member-card uo-color-nijimasu" onclick="window.location.href='characters/nijimasu/nijimasu.html'">
+                    <h3 class="uo-member-name">桃川ニジマス</h3>
                     <div class="uo-member-read">Momokawa Nijimasu</div>
                     <p class="uo-member-ep">「ニジマス」をモチーフにしたキャラクター。淡水魚代表として川や湖の魅力をアピール。</p>
                 </div>
@@ -132,6 +132,11 @@
                 });
             }, { threshold: 0.08, rootMargin: '0px 0px -50px 0px' });
             reveals.forEach(el => observer.observe(el));
+
+            // Set cursor for clickable cards
+            document.querySelectorAll('.uo-member-card').forEach(card => {
+                card.style.cursor = 'pointer';
+            });
         });
     </script>
 

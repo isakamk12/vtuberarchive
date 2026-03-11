@@ -1,0 +1,6 @@
+:root {
+    --char-color: #4682b4; /* Steel Blue / Faded Royal / Creator Steel */
+    --char-glow: rgba(70, 130, 180, 0.4);
+    --char-color-soft: rgba(70, 130, 180, 0.05);
+    --char-border: rgba(70, 130, 180, 0.2);
+}
