@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeal Ginjoka (ジール・ギンジョウカ) - Nijisanji EN Archive</title>
+    <link rel="stylesheet" href="../../nijisanji_style.css">
+    <link rel="stylesheet" href="../char-base-v2.css">
+    <link rel="stylesheet" href="zeal.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="zeal-theme">
+    <div class="bar-background" id="bg-canvas">
+        <div class="neon-line"></div>
+        <div class="snake-scale" id="scales"></div>
+    </div>
+
+    <header>
+        <nav>
+            <a href="../../nijisanji_index.html" class="back-link">← ARCHIVE</a>
+            <div class="bar-status">OPEN: <span id="bar-val">YES</span></div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="unit-badge">BY THE BEAT</div>
+                <h1 class="char-name">Zeal Ginjoka <span class="jp-name">ジール・ギンジョウカ</span></h1>
+                <p class="catchphrase">「The best drink needs the best beat. Want a cocktail? 🍸🐍」</p>
+                <div class="status-tags">
+                    <span>Mysterious Bartender</span>
+                    <span>Music Creator</span>
+                    <span>Zerpents</span>
+                </div>
+            </div>
+            <div class="character-visual">
+                <div class="floating-shaker" id="shaker-icon">🧂</div>
+                <div class="visual-container">
+                    <img src="../../assets/zeal_full.png" alt="Zeal Ginjoka Full Visual" class="main-img" id="zeal-img">
+                </div>
+            </div>
+        </section>
+
+        <section class="profile-grid">
+            <div class="bar-card info reveal">
+                <h2>BARTENDER MENU</h2>
+                <ul>
+                    <li><strong>誕生日:</strong> 7月27日</li>
+                    <li><strong>身長:</strong> 183cm</li>
+                    <li><strong>職業:</strong> バーテンダー</li>
+                    <li><strong>特技:</strong> 作詞・作曲・ボーカル・MIX</li>
+                    <li><strong>好物:</strong> ラム、抹茶、激辛料理</li>
+                </ul>
+            </div>
+            <div class="bar-card traits reveal">
+                <h2>ZEALOUS BEAT</h2>
+                <p>最高の一杯とビートを作る謎多きバーテンダー。作詞からMIXまでこなす多才な音楽家であり、EP『ZEALOUS』もリリース。プロセカの腕前はにじさんじ内でも屈指の実力。丁寧なファンサービスとは対照的に、不憫な目に遭いやすい「愛すべき巨人」。</p>
+                <div class="mode-toggle-zone">
+                    <button id="trigger-zeepaw">ACTIVATE ZEEPAW MODE 👴</button>
+                    <p class="mode-desc">Status: <span id="zeepaw-label">MODERN</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="episodes-section">
+            <h2 class="section-title">真夜中の接客録 (ZEAL LOGS)</h2>
+            <div class="episode-grid">
+                <div class="episode-box reveal">
+                    <h3>レンチンコーヒー事件</h3>
+                    <p>作りすぎたコーヒーを冷蔵庫に入れ、飲む時にレンジで温める。「コーヒー愛」のFreoを震撼させた伝説の合理性。</p>
+                </div>
+                <div class="episode-box reveal">
+                    <h3>プロセカ個人戦無敗</h3>
+                    <p>にじさんじ大会にて初出場ながら無敗を記録。そのリズム感はプロを彷彿とさせる、まさにBY THE BEATのエース。</p>
+                </div>
+                <div class="episode-box reveal">
+                    <h3>看病のための疾走</h3>
+                    <p>日本滞在時にKaelixが体調を崩した際、買い出しに奔走。同期を常に想う、グループの精神的支柱にして「優しい巨人」。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="interaction-zone reveal">
+            <h2>MIDNIGHT MIXOLOGY</h2>
+            <p>ジールの特製カクテルをシェイク！最高の一杯を作り上げよう。</p>
+            <div class="mix-box" id="mix-area">
+                <div class="glass" id="cocktail">🍸</div>
+                <p id="pour-msg">Waiting for shaker...</p>
+            </div>
+        </section>
+
+        <section class="lore-section reveal">
+            <h2>LORE</h2>
+            <p>謎に包まれた過去を持つバーテンダー。現在は「BY THE BEAT」のメンバーとして、音楽とカクテルの融合を体現している。魚アレルギーやグルテン不耐症など健康面での制約を持ちながらも、激辛料理に挑むなどアグレッシブ。同期からは「おじいちゃん（Zeepaw）」と呼ばれいじられることもあるが、その包容力と音楽への情熱は本物。ピアノやヴァイオリンも嗜む、芸術家肌のバウンサー（用心棒）的な安心感を与える存在。</p>
+        </section>
+    </main>
+
+    <div class="prosekai-fx" id="rhythm-overlay">PERFECT! 💎</div>
+
+    <script src="zeal.js"></script>
+</body>
+
+</html>

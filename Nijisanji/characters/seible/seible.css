@@ -1,0 +1,122 @@
+:root {
+    --seible-primary: #0A44AA; /* Blue */
+    --seible-secondary: #000000;
+    --seible-accent: #FFFFFF;
+    --seible-bg: #030D1A;
+    --gem-cyan: #00FFFF;
+}
+
+.seible-theme {
+    background: var(--seible-bg);
+    color: var(--seible-accent);
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+/* Promoter Background */
+.promoter-background {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: -1;
+    background: radial-gradient(circle at top right, #0A44AA 0%, #000 100%);
+    overflow: hidden;
+}
+
+.spotlight-ani {
+    position: absolute;
+    top: 0; left: 0; width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.gem {
+    position: absolute;
+    font-size: 1.2rem;
+    pointer-events: none;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 10rem 10% 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.char-name {
+    font-size: 4.5rem;
+    font-family: 'Shrikhand', cursive;
+    color: var(--seible-primary);
+    text-shadow: 2px 2px #FFF, 4px 4px var(--gem-cyan);
+}
+
+.jp-name {
+    display: block;
+    font-size: 2rem;
+    color: var(--seible-accent);
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    text-shadow: none;
+}
+
+/* Maid Outfit Overlay */
+.maid-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    display: none;
+    z-index: 5;
+    pointer-events: none;
+    mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
+}
+
+/* Promoter Cards */
+.promoter-card {
+    background: rgba(10, 68, 170, 0.1);
+    border-right: 5px solid var(--seible-primary);
+    padding: 2.5rem;
+    backdrop-filter: blur(10px);
+}
+
+/* Interaction: Kansai Area */
+.kansai-box {
+    height: 150px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.talk-bubble {
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+/* Cry Overlay */
+.cry-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(10, 68, 170, 0.2);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: 900;
+    z-index: 2000;
+}
+
+/* Reveal */
+.reveal {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@media (max-width: 800px) {
+    .char-name { font-size: 2.5rem; }
+}

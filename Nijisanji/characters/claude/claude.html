@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude Clawmark (クロード クローマーク) - Nijisanji EN Archive</title>
+    <link rel="stylesheet" href="../../nijisanji_style.css">
+    <link rel="stylesheet" href="claude.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="claude-theme">
+    <div class="magick-background" id="bg-canvas">
+        <div class="gym-overlay" id="gym-fx"></div>
+        <div class="floating-lamps" id="lamps"></div>
+    </div>
+
+    <header>
+        <nav>
+            <a href="../../nijisanji_index.html" class="back-link">← ARCHIVE</a>
+            <div class="financial-status">LOAN: <span id="loan-val">0 (PAID!)</span></div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="unit-badge">TTT</div>
+                <h1 class="char-name">Claude Clawmark <span class="jp-name">クロード クローマーク</span></h1>
+                <p class="catchphrase">「Working as a cleric, practicing magick, and... going to the gym! 🧤❓」</p>
+                <div class="status-tags">
+                    <span>Cleric of Magick</span>
+                    <span>Fitness Expert</span>
+                    <span>Outclaws</span>
+                </div>
+            </div>
+            <div class="character-visual" id="claude-visual">
+                <div class="cleric-crest">
+                    <span class="magick-icon">🧤</span>
+                    <div class="magick-aura"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="profile-grid">
+            <div class="cleric-card info reveal">
+                <h2>CLERIC DOSSIER</h2>
+                <ul>
+                    <li><strong>誕生日:</strong> 1月22日</li>
+                    <li><strong>身長:</strong> 171cm</li>
+                    <li><strong>職業:</strong> 魔法研究中のクレリック</li>
+                    <li><strong>特技:</strong> FPS (VALOイモータル)、MIX技術</li>
+                    <li><strong>愛するもの:</strong> BLEACH、筋トレ、炭酸飲料</li>
+                </ul>
+            </div>
+            <div class="cleric-card traits reveal">
+                <h2>THE HEALTHY MAGICIAN</h2>
+                <p>低音の美声とエネルギッシュな笑い声が魅力。パーソナルトレーナーの資格を持つほどのフィットネス愛好家であり、堅実な金銭感覚を持つ努力家。独学で培った歌唱力とMIX技術はEN屈指。2025年に学生ローンを完済し、念願の日本移住を果たした「夢を叶えたオタク」。</p>
+                <div class="mode-toggle-zone">
+                    <button id="trigger-gym">GYM MODE ACTIVATE 💪</button>
+                    <p class="mode-desc">Status: <span id="claude-label">CHILLING</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="episodes-section">
+            <h2 class="section-title">聖職者の物語 (CLAUDE RECORDS)</h2>
+            <div class="episode-grid">
+                <div class="episode-box reveal">
+                    <h3>祝・ローン完済</h3>
+                    <p>節約を重ね2025年4月に学生ローンを完済。「学生ローンなんてクソくらえ」と書かれたケーキで祝った伝説の配信。</p>
+                </div>
+                <div class="episode-box reveal">
+                    <h3>くら寿司マグロ欠品事件</h3>
+                    <p>日本旅行時、マグロが好きすぎて食べ続けた結果、店舗の熟成漬けマグロを品切れにさせた。ヴォックスも驚愕の大食い。</p>
+                </div>
+                <div class="episode-box reveal">
+                    <h3>Friday in California</h3>
+                    <p>金曜になると欠かさずミームをリポストする。3Dお披露目でも完全再現した、彼を象徴するインターネット文化。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="interaction-zone reveal">
+            <h2>CLAMP'S LIGHT</h2>
+            <p>最初の給料で購入した「クランプくん（ランプ）」。クリックして魔法の光を灯そう。</p>
+            <div class="lamp-box" id="lamp-area">
+                <div class="main-lamp" id="clamp">💡</div>
+                <div class="magic-circle" id="circle"></div>
+            </div>
+        </section>
+
+        <section class="lore-section reveal">
+            <h2>LORE</h2>
+            <p>魔法の研究と訪問者の癒しを仕事とするクレリック。かつては金銭的に苦労し、自室の電球すら替えない生活を送っていたが、現在はOutclawsと共に光り輝く日々を歩んでいる。『BLEACH』を人生と語り、アニメから特撮まで網羅する筋金入りのオタク。FPSでは日本サーバーでもイモータルに到達する実力派。自身の努力で声のコンプレックスを克服し、現在はその美声を世界中に届けている。2025年、東京を拠点に新たな伝説を刻み始めた。</p>
+        </section>
+    </main>
+
+    <div class="cali-friday" id="friday-overlay">TODAY IS FRIDAY IN CALIFORNIA! 🕺</div>
+
+    <script src="claude.js"></script>
+</body>
+
+</html>

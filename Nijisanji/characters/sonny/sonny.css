@@ -1,0 +1,229 @@
+:root {
+    --sonny-primary: #FFF321; /* Bright Yellow */
+    --sonny-secondary: #000000;
+    --sonny-accent: #FFFFFF;
+    --sonny-bg: #050508;
+    --cyber-glow: rgba(255, 243, 33, 0.3);
+    --police-blue: #001a33;
+    --glass-ui: rgba(255, 255, 255, 0.02);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.sonny-theme {
+    background: var(--sonny-bg);
+    color: var(--sonny-accent);
+    font-family: 'Black Ops One', 'Zen Kaku Gothic New', sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Premium Background: Tactical Command */
+.police-background {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    z-index: -1;
+    background: linear-gradient(180deg, #050508 0%, #001a33 100%);
+}
+
+.police-lights {
+    position: absolute;
+    width: 100%; height: 100%;
+}
+
+.police-lights::before {
+    content: '';
+    position: absolute;
+    width: 100%; height: 100%;
+    background: repeating-linear-gradient(rgba(255, 243, 33, 0.03) 0 1px, transparent 1px 4px);
+    pointer-events: none;
+}
+
+/* Caution Tape: Dynamic UI */
+.caution-tape {
+    position: absolute;
+    top: 15%;
+    width: 300%;
+    background: var(--sonny-primary);
+    color: #000;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    transform: rotate(-2deg) translateX(-10%);
+    box-shadow: 0 0 30px var(--cyber-glow);
+    white-space: nowrap;
+    animation: scrollTape 30s linear infinite;
+    z-index: 10;
+}
+
+@keyframes scrollTape {
+    from { transform: rotate(-2deg) translateX(0%); }
+    to { transform: rotate(-2deg) translateX(-50%); }
+}
+
+/* Hero Section: Special Forces Presence */
+.hero-section {
+    min-height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5%;
+    gap: 6rem;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 650px;
+}
+
+.unit-badge {
+    color: var(--sonny-primary);
+    font-weight: 400;
+    letter-spacing: 15px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+    display: block;
+    border-bottom: 1px solid rgba(255, 243, 33, 0.3);
+}
+
+.char-name {
+    font-size: 7.5rem;
+    line-height: 0.85;
+    color: var(--sonny-primary);
+    text-shadow: 0 0 40px var(--cyber-glow);
+}
+
+.jp-name {
+    display: block;
+    font-size: 2.5rem;
+    color: #fff;
+    margin-top: 1.5rem;
+    font-weight: 400;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    letter-spacing: 12px;
+}
+
+.catchphrase {
+    margin-top: 4rem;
+    font-size: 1.6rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 5px solid var(--sonny-primary);
+    padding: 2.5rem;
+    line-height: 1.5;
+}
+
+.status-tags {
+    margin-top: 4rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.status-tags span {
+    background: var(--sonny-primary);
+    color: #000;
+    padding: 0.8rem 2.5rem;
+    font-size: 0.8rem;
+    font-weight: 900;
+    clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+}
+
+/* CSS-Based Officer Visual */
+.character-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vsf-crest {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.officer-icon {
+    font-size: 15rem;
+    z-index: 2;
+    filter: drop-shadow(0 0 60px var(--sonny-primary));
+    animation: tacticalFloat 5s ease-in-out infinite;
+}
+
+@keyframes tacticalFloat {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-30px) scale(1.05); }
+}
+
+.cyber-scan {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: var(--sonny-primary);
+    box-shadow: 0 0 20px var(--sonny-primary);
+    top: 50%;
+    animation: scanMove 3s linear infinite;
+}
+
+@keyframes scanMove {
+    0% { top: 0; opacity: 0; }
+    50% { opacity: 1; }
+    100% { top: 100%; opacity: 0; }
+}
+
+/* Content Layout */
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+    padding: 12rem 10% 8rem;
+}
+
+.police-card {
+    background: var(--glass-ui);
+    backdrop-filter: blur(40px);
+    border: 1px solid rgba(255, 243, 33, 0.1);
+    padding: 5rem;
+    position: relative;
+}
+
+.police-card h2 {
+    font-size: 2rem;
+    margin-bottom: 3.5rem;
+    color: var(--sonny-primary);
+    letter-spacing: 5px;
+}
+
+/* Interactions */
+.interaction-zone {
+    padding: 5rem 10%;
+}
+
+.voice-box {
+    height: 400px;
+    background: #000;
+    border: 1px solid var(--sonny-primary);
+}
+
+/* Reveal */
+.reveal {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@media (max-width: 1200px) {
+    .char-name { font-size: 5rem; }
+    .hero-section { flex-direction: column; text-align: center; }
+    .profile-grid { grid-template-columns: 1fr; }
+}

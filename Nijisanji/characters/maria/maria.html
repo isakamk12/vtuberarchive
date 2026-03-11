@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maria Marionette (マリア マリオネット) - Nijisanji EN Archive</title>
+    <link rel="stylesheet" href="../../nijisanji_style.css">
+    <link rel="stylesheet" href="maria.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="maria-theme">
+    <div class="doll-background" id="bg-canvas">
+        <div class="pink-mist"></div>
+        <div class="string-layer" id="strings"></div>
+    </div>
+
+    <header>
+        <nav>
+            <a href="../../nijisanji_index.html" class="back-link">← ARCHIVE</a>
+            <div class="doll-status">MARIA: <span id="doll-form">HUMAN</span></div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="unit-badge">ILUNA</div>
+                <h1 class="char-name">Maria Marionette <span class="jp-name">マリア マリオネット</span></h1>
+                <p class="catchphrase">「I like potato. Potato is very nice. I eat potato. ❤️🩹🐰」</p>
+                <div class="status-tags">
+                    <span>Evolved Doll</span>
+                    <span>ILUNA 1st Year</span>
+                    <span>Marippets</span>
+                </div>
+            </div>
+            <div class="character-visual" id="maria-visual">
+                <div class="doll-crest">
+                    <span class="doll-icon">🩰</span>
+                    <div class="string-ripple"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="profile-grid">
+            <div class="doll-card info reveal">
+                <h2>DOLL SPECIFICATIONS</h2>
+                <ul>
+                    <li><strong>誕生日:</strong> 12月7日 (人間として目覚めた日)</li>
+                    <li><strong>身長:</strong> 154cm</li>
+                    <li><strong>種族:</strong> 人形 (Evolved Ball-Jointed Doll)</li>
+                    <li><strong>言語:</strong> 英語、日本語、中国語 (Trilingual)</li>
+                    <li><strong>特技:</strong> 多彩な楽器演奏、ダンス、ローション耐久</li>
+                </ul>
+            </div>
+            <div class="doll-card traits reveal">
+                <h2>BALL-JOINTED HEART</h2>
+                <p>数百年の孤独を経て人間へと進化した人形。清楚な話し方と高い音楽性を持ち、楽器演奏や歌唱配信でファンを魅了する。自称「陰キャ」で緊張しがちだが、やるとなれば1日中漢字を書き続けるほどの並外れた集中力を発揮する。</p>
+                <div class="mode-toggle-zone">
+                    <button id="toggle-doll">REVERT TO DOLL FORM 🩹</button>
+                    <p class="mode-desc">Current State: <span id="state-label">EVOLVED</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="episodes-section">
+            <h2 class="section-title">人形の記憶 (DOLL MEMORIES)</h2>
+            <div class="episode-grid">
+                <div class="episode-box reveal">
+                    <h3>ポテト俳句</h3>
+                    <p>「I like potato, Potato is very nice, I eat potato」という伝説の5-7-5を詠み、自ら笑い転げた名シーン。</p>
+                </div>
+                <div class="episode-box reveal">
+                    <h3>ローションの守護者</h3>
+                    <p>3Dお披露目。プレッシャーの中、バレエで鍛えた体幹でローションの海を耐え抜き、企画の未来を守った。</p>
+                </div>
+                <div class="episode-box reveal">
+                    <h3>不屈の漢字練習</h3>
+                    <p>ひらがなとカタカナを覚えるため、丸1日ぶっ通しで書き続けた。その集中力は同期からも驚嘆される。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="interaction-zone reveal">
+            <h2>KNOT THE STRINGS</h2>
+            <p>マリアを操る（？）マリオネット・ストリングス。画面をクリックしてピンクの糸を繋げよう。</p>
+            <div class="string-box" id="string-area">
+                <div class="marippet" id="marippet">❤️</div>
+                <button id="generate-haiku">GENERATE POTATO HAIKU 🥔</button>
+            </div>
+            <p id="haiku-output">"Click to compose..."</p>
+        </section>
+
+        <section class="lore-section reveal">
+            <h2>LORE</h2>
+            <p>1890年代から存在する球体関節人形。鏡を見て「マリア」の名を思い、姉に提案された「マリオネット」を姓とした。元アイドルやメイドの経験があり、ステージでの凛とした姿は人形時代の孤独を感じさせない。2025年に日本へ移住。掃除や数学は苦手だが、クラリネットからトロンボーンまであらゆる楽器を弾きこなし、清楚な魔力を放ち続けている。</p>
+        </section>
+    </main>
+
+    <div class="kanji-flash" id="kanji-fx">漢</div>
+
+    <script src="maria.js"></script>
+</body>
+
+</html>

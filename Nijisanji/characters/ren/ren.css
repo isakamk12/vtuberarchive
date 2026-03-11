@@ -1,0 +1,221 @@
+:root {
+    --ren-primary: #429B76; /* Emerald Green */
+    --ren-secondary: #000000;
+    --ren-accent: #FFFFFF;
+    --ren-bg: #050d0a;
+    --alien-glow: rgba(66, 155, 118, 0.4);
+    --space-dust: rgba(255, 255, 255, 0.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.ren-theme {
+    background: var(--ren-bg);
+    color: var(--ren-accent);
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Premium Background: Intergalactic Void */
+.alien-background {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    z-index: -1;
+    background: radial-gradient(circle at 30% 70%, #0d2a1f 0%, #050d0a 100%);
+}
+
+.green-nebula {
+    position: absolute;
+    width: 80vw; height: 80vw;
+    background: radial-gradient(circle, var(--alien-glow) 0%, transparent 70%);
+    filter: blur(120px);
+    pointer-events: none;
+    top: -20%; right: -10%;
+    opacity: 0.6;
+}
+
+/* Hero Section: Cosmic Melodies */
+.hero-section {
+    min-height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5%;
+    gap: 6rem;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 700px;
+}
+
+.unit-badge {
+    color: var(--ren-primary);
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    letter-spacing: 20px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    border: 2px solid var(--ren-primary);
+}
+
+.char-name {
+    font-size: 7rem;
+    line-height: 0.9;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    color: var(--ren-primary);
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    text-shadow: 0 0 40px var(--alien-glow);
+}
+
+.jp-name {
+    display: block;
+    font-size: 2.5rem;
+    color: #fff;
+    margin-top: 1.5rem;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    letter-spacing: 12px;
+    opacity: 0.8;
+}
+
+.catchphrase {
+    margin-top: 4rem;
+    font-size: 1.6rem;
+    background: rgba(66, 155, 118, 0.05);
+    border-top: 1px solid var(--ren-primary);
+    border-bottom: 1px solid var(--ren-primary);
+    padding: 3rem;
+    line-height: 1.7;
+    clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+}
+
+.status-tags {
+    margin-top: 4rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.status-tags span {
+    background: var(--ren-primary);
+    color: #000;
+    font-weight: 900;
+    padding: 0.8rem 2.22rem;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* CSS-Based Alien Visual */
+.character-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alien-crest {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.music-icon {
+    font-size: 16rem;
+    z-index: 2;
+    filter: drop-shadow(0 0 50px var(--ren-primary));
+    animation: vibePulse 4s ease-in-out infinite;
+}
+
+@keyframes vibePulse {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(1.1) rotate(5deg); }
+}
+
+.nebula-wave {
+    position: absolute;
+    width: 140%;
+    height: 140%;
+    border: 1px solid var(--ren-primary);
+    border-radius: 50%;
+    opacity: 0.2;
+    animation: expandWave 6s linear infinite;
+}
+
+@keyframes expandWave {
+    from { transform: scale(0.5); opacity: 0.5; }
+    to { transform: scale(1.5); opacity: 0; }
+}
+
+/* Content Layout */
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6rem;
+    padding: 12rem 10% 8rem;
+}
+
+.alien-card {
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(50px);
+    border: 1px solid rgba(66, 155, 118, 0.2);
+    padding: 5rem;
+    position: relative;
+    transition: 0.4s;
+}
+
+.alien-card:hover {
+    background: rgba(66, 155, 118, 0.08);
+    transform: translateY(-10px);
+}
+
+.alien-card h2 {
+    font-size: 2rem;
+    margin-bottom: 3.5rem;
+    color: var(--ren-primary);
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 5px;
+}
+
+/* Interaction */
+.music-interaction {
+    padding: 8rem 10%;
+    text-align: center;
+}
+
+.instrument-box {
+    height: 400px;
+    background: #000;
+    border: 2px solid var(--ren-primary);
+    clip-path: polygon(0% 10%, 90% 0%, 100% 90%, 10% 100%);
+}
+
+/* Reveal */
+.reveal {
+    opacity: 0;
+    transform: scale(0.9) translateY(40px);
+    transition: 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+@media (max-width: 1200px) {
+    .char-name { font-size: 4rem; }
+    .hero-section { flex-direction: column; text-align: center; }
+    .profile-grid { grid-template-columns: 1fr; }
+}

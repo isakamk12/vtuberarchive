@@ -1,0 +1,136 @@
+:root {
+    --ver-primary: #800000; /* Deep Vermillion / Maroon */
+    --ver-secondary: #000000;
+    --ver-accent: #FFFFFF;
+    --ver-bg: #1A0D0D;
+    --gold-text: #E5C100;
+}
+
+.ver-theme {
+    background: var(--ver-bg);
+    color: var(--ver-accent);
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+/* Prophet Background */
+.prophet-background {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: -1;
+    background: radial-gradient(circle at top, #3D0000 0%, #000 100%);
+    overflow: hidden;
+}
+
+.tarot-pattern {
+    position: absolute;
+    width: 100%; height: 100%;
+    background-image: radial-gradient(var(--ver-primary) 1px, transparent 1px);
+    background-size: 50px 50px;
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.star {
+    position: absolute;
+    background: white;
+    width: 2px; height: 2px;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 10rem 10% 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.char-name {
+    font-size: 4.5rem;
+    font-family: 'Cinzel', serif;
+    color: var(--gold-text);
+    text-shadow: 3px 3px 0px var(--ver-primary);
+}
+
+.jp-name {
+    display: block;
+    font-size: 1.8rem;
+    color: var(--ver-accent);
+    margin-top: 1rem;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    text-shadow: none;
+}
+
+/* Prophet Cards */
+.prophet-card {
+    background: rgba(128, 0, 0, 0.1);
+    border: 2px solid var(--gold-text);
+    padding: 2.5rem;
+    position: relative;
+    backdrop-filter: blur(10px);
+}
+
+/* Interaction: Cabbage Game */
+.cabbage-game {
+    height: 300px;
+    background: rgba(0,0,0,0.5);
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.target-cabbage {
+    position: absolute;
+    font-size: 3rem;
+    cursor: pointer;
+    filter: sepia(0.5) hue-rotate(240deg); /* Make it purple cabage */
+    user-select: none;
+}
+
+.score-display {
+    position: absolute;
+    top: 10px; right: 20px;
+    font-family: 'Cinzel', serif;
+    color: var(--gold-text);
+}
+
+/* Card Overlay */
+.card-draw {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.drawn-card {
+    width: 200px;
+    height: 300px;
+    background: var(--gold-text);
+    border: 10px solid var(--ver-primary);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    color: var(--ver-primary);
+}
+
+/* Reveal */
+.reveal {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+@media (max-width: 800px) {
+    .char-name { font-size: 2.5rem; }
+}

@@ -1,0 +1,120 @@
+:root {
+    --doppio-primary: #FF00FF; /* Magenta */
+    --doppio-secondary: #000000;
+    --doppio-accent: #FFFFFF;
+    --doppio-bg: #0D0D1A;
+    --arcade-neon: #00FFFF;
+}
+
+.doppio-theme {
+    background: var(--doppio-bg);
+    color: var(--doppio-accent);
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+/* Arcade Background */
+.arcade-background {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: -1;
+    background: radial-gradient(circle at center, #1A1A3A 0%, #000 100%);
+    overflow: hidden;
+}
+
+.ball-pool {
+    position: absolute;
+    bottom: 0; width: 100%; height: 100px;
+    background: rgba(255, 0, 255, 0.1);
+}
+
+.ball {
+    position: absolute;
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 5;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 10rem 10% 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.char-name {
+    font-size: 4.5rem;
+    font-family: 'Press Start 2P', cursive;
+    color: var(--doppio-primary);
+    text-shadow: 4px 4px var(--arcade-neon);
+    line-height: 1.2;
+}
+
+.jp-name {
+    display: block;
+    font-size: 1.5rem;
+    color: var(--doppio-accent);
+    margin-top: 1rem;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    text-shadow: none;
+}
+
+/* Arcade Cards */
+.arcade-card {
+    background: rgba(0, 255, 255, 0.05);
+    border: 3px solid var(--doppio-primary);
+    box-shadow: 0 0 15px var(--doppio-primary);
+    padding: 2.5rem;
+    position: relative;
+    backdrop-filter: blur(10px);
+}
+
+/* Interaction: Pool */
+.pool-box {
+    height: 250px;
+    background: #000;
+    border: 2px dashed var(--arcade-neon);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.doppio-nugget {
+    font-size: 3rem;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Fall Effect */
+.fall-effect {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    color: var(--doppio-primary);
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    display: none;
+    z-index: 2000;
+}
+
+/* Reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.6s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 800px) {
+    .char-name { font-size: 2.5rem; }
+}

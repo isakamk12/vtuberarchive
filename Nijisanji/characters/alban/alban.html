@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alban Knox (アルバーン・ノックス) - Nijisanji EN Archive</title>
+    <link rel="stylesheet" href="../../nijisanji_style.css">
+    <link rel="stylesheet" href="alban.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="alban-theme">
+    <div class="thief-background" id="bg-canvas">
+        <div class="stealth-shadows" id="shadows"></div>
+        <div class="clock-gear">🕒</div>
+    </div>
+
+    <header>
+        <nav>
+            <a href="../../nijisanji_index.html" class="back-link">← ARCHIVE</a>
+            <div class="purity-status">PURITY SCORE: <span id="purity-score">27</span></div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="unit-badge">Noctyx</div>
+                <h1 class="char-name">Alban Knox <span class="jp-name">アルバーン・ノックス</span></h1>
+                <p class="catchphrase">「I'm a phantom thief! I'll steal your heart... if I can stop laughing!」</p>
+                <div class="status-tags">
+                    <span>Phantom Thief</span>
+                    <span>Konbini Manager</span>
+                    <span>Takaradachi</span>
+                </div>
+            </div>
+            <div class="character-visual" id="alban-visual">
+                <div class="thief-crest">
+                    <span class="cat-icon">🐱</span>
+                    <div class="stealth-ripple"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="profile-grid">
+            <div class="stealth-card info reveal">
+                <h2>THIEF LOG</h2>
+                <ul>
+                    <li><strong>誕生日:</strong> 5月26日</li>
+                    <li><strong>身長:</strong> 175cm</li>
+                    <li><strong>種族:</strong> 未来の怪盗 (Phantom Thief)</li>
+                    <li><strong>好物:</strong> ダークチョコ</li>
+                    <li><strong>苦手:</strong> レタス以外の野菜</li>
+                </ul>
+            </div>
+            <div class="stealth-card traits reveal">
+                <h2>STEALTH SKILLS</h2>
+                <p>未来からやってきた自由奔放な怪盗。感情表現が豊かでゲラな性格。怪盗のはずが「コンビニ店員」のような衣装から店長と呼ばれることも。努力家で日本語も堪能。</p>
+                <div class="uniform-zone">
+                    <button id="toggle-uniform">SWITCH TO KONBINI 🛒</button>
+                    <p class="uniform-desc">Current Duty: <span id="duty-label">STEALTH</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="episodes-section">
+            <h2 class="section-title">THIEF RECORD</h2>
+            <div class="episode-grid">
+                <div class="episode-box reveal">
+                    <h3>アルバーン最高！</h3>
+                    <p>同期のShuにグループ名を聞かれ冗談で教えた言葉。そのまま広まり、今やNoctyxを代表するミームに。</p>
+                </div>
+                <div class="episode-box reveal">
+                    <h3>Purity 27点</h3>
+                    <p>純粋度診断で衝撃の27点を記録。以降、危うい発言をするたびに「さすが27点」と突っ込まれるように。</p>
+                </div>
+                <div class="episode-box reveal">
+                    <h3>妊娠検査薬騒動</h3>
+                    <p>「Cat boyは妊娠できるか」を証明するため自ら検査薬を買いに行き、陰性を全力報告した伝説の配信。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="game-interaction reveal">
+            <h2>TREASURE HUNT</h2>
+            <p>怪盗アルバーンの「光り物」探し。画面に隠されたお宝をクリックで見つけ出せ！</p>
+            <div class="hunt-zone" id="hunt-area">
+                <div class="hidden-treasure" id="treasure">💎</div>
+                <p id="hunt-msg">Find the diamond!</p>
+            </div>
+        </section>
+
+        <section class="lore-section reveal">
+            <h2>LORE</h2>
+            <p>未来の怪盗だが、その足跡は決して捕らえられることはない。ホラーゲームが得意で、絶叫と演じ分けが魅力。最初は日本語が話せなかったが、1日4時間の猛勉強で今では日本語雑談をこなすレベルに。後輩想いの頼れるお兄さん的な存在。歌への苦手意識も地道な努力で克服し、「ドロボウネコブギ」などの名曲を世に放っている。</p>
+        </section>
+    </main>
+
+    <div class="cat-pop" id="meow">NYA!</div>
+
+    <script src="alban.js"></script>
+</body>
+
+</html>

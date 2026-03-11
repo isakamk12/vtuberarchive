@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vox Akuma (ヴォックス・アクマ) - Nijisanji EN Archive</title>
+    <link rel="stylesheet" href="../../nijisanji_style.css">
+    <link rel="stylesheet" href="vox.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="vox-theme">
+    <div class="demon-background" id="demon-bg">
+        <div class="ember-container" id="embers"></div>
+        <div class="oni-mask-bg">👹</div>
+    </div>
+
+    <header>
+        <nav>
+            <a href="../../nijisanji_index.html" class="back-link">← ARCHIVE</a>
+            <div class="demon-form">CURRENT FORM: <span id="form-label">VOX</span></div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="unit-badge">Luxiem</div>
+                <h1 class="char-name">Vox Akuma <span class="jp-name">ヴォックス・アクマ</span></h1>
+                <p class="catchphrase">「The Voice of the Demon, here to command your attention.」</p>
+                <div class="status-tags">
+                    <span>Strongest Oni (鬼)</span>
+                    <span>Lord of the Akuma Clan</span>
+                    <span>Kindred</span>
+                </div>
+            </div>
+            <div class="character-visual" id="vox-visual">
+                <div class="oni-crest">
+                    <span class="demon-icon">👹</span>
+                    <div class="ember-spiral"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="profile-grid">
+            <div class="oni-card info reveal">
+                <h2>CLAN SCROLL</h2>
+                <ul>
+                    <li><strong>年齢:</strong> 400歳以上 (戦国時代)</li>
+                    <li><strong>誕生日:</strong> 4月25日</li>
+                    <li><strong>身長:</strong> 178cm (解放時: 220cm)</li>
+                    <li><strong>特技:</strong> 朗読、ASMR</li>
+                    <li><strong>ファンマーク:</strong> 👹🧧</li>
+                </ul>
+            </div>
+            <div class="oni-card traits reveal">
+                <h2>DEMONIC VOICE</h2>
+                <p>過去からやってきた最強の鬼。艶のある低音ボイスと圧倒的な演技力を持ち、ASMRやロールプレイでファンを魅了する。誇り高いが仲間思いなマフィ……ではなく、鬼の首領。</p>
+                <div class="transform-zone">
+                    <button id="unbound-btn">UNBOUND FORM 👹</button>
+                    <button id="gorilla-btn">GORILLA MODE 🦍</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="episodes-section">
+            <h2 class="section-title">CLAN CHRONICLES</h2>
+            <div class="episode-grid">
+                <div class="episode-box reveal">
+                    <h3>最速100万人達成</h3>
+                    <p>デビューからわずか7ヶ月で100万人を突破。ENの勢いを象徴する最強の鬼としての存在感を見せつけた。</p>
+                </div>
+                <div class="episode-box reveal">
+                    <h3>Box(箱)のミーム</h3>
+                    <p>初ツイートで無言のまま「箱」の画像を投稿。以来、シリアスな鬼の首領でありながら「Box」として弄られ続けるネタに。</p>
+                </div>
+                <div class="episode-box reveal">
+                    <h3>The Demon Hungers</h3>
+                    <p>自ら監督・編集・プロデュースを務めたオリジナル映画を公開。戦国時代からのルーツを描く大作を世に送り出した。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="voice-interaction reveal">
+            <h2>VOICE OF THE DEMON</h2>
+            <p>ヴォックスの「声」の力を可視化。言葉を投げかけ、鬼の波動を感じよう。</p>
+            <div class="voice-vessel">
+                <div class="viz-circles" id="viz"></div>
+                <button id="voice-btn">HEAR THE VOICE 👹</button>
+            </div>
+            <p id="voice-msg">"Hello, my Kindred..."</p>
+        </section>
+
+        <section class="lore-section reveal">
+            <h2>LORE</h2>
+            <p>戦国時代から生き続ける最強の鬼。絶対的な自信と圧倒的なカリスマ性を備える一方、ホラーゲームで絶叫したり、酔っ払ってトイレで「伝説」を残したりと、人間味溢れるギャップも持ち合わせる。24時間チャリティー配信で多額の寄付を集めるなど、部下（Kindred）や社会への献身も忘れない。ASMRでの艶技はもはや魔術の域。</p>
+        </section>
+    </main>
+
+    <div class="red-flash" id="flash"></div>
+
+    <script src="vox.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enna Alouette (エナー・アールウェット) - Nijisanji EN Archive</title>
+    <link rel="stylesheet" href="../../nijisanji_style.css">
+    <link rel="stylesheet" href="enna.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="enna-theme">
+    <div class="heaven-background" id="heaven-bg">
+        <div class="feathers-container" id="feathers"></div>
+    </div>
+
+    <header>
+        <nav>
+            <a href="../../nijisanji_index.html" class="back-link">← ARCHIVE</a>
+            <div class="bird-mode">GREMLIN LEVEL: <span id="gremlin-val">0%</span></div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="unit-badge">Ethyria</div>
+                <h1 class="char-name">Enna Alouette <span class="jp-name">エナー・アールウェット</span></h1>
+                <p class="catchphrase">「A love song for the souls of the living. (And some salt for the rest.)」</p>
+                <div class="status-tags">
+                    <span>Bird Angel</span>
+                    <span>Songbird of Heaven</span>
+                    <span>Aloupeeps</span>
+                </div>
+            </div>
+            <div class="character-visual" id="enna-visual">
+                <div class="heaven-crest">
+                    <span class="bird-icon">🕊️</span>
+                    <div class="feather-orbit"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="profile-grid">
+            <div class="heavenly-card info reveal">
+                <h2>ANGELIC LOG</h2>
+                <ul>
+                    <li><strong>種族:</strong> Bird Angel (天界の青い鳥)</li>
+                    <li><strong>誕生日:</strong> 2月20日</li>
+                    <li><strong>身長:</strong> 150cm未満</li>
+                    <li><strong>言語:</strong> 英語、フランス語、中国語、日本語</li>
+                    <li><strong>苦手なもの:</strong> 鳥（特にキーウィ）</li>
+                </ul>
+            </div>
+            <div class="heavenly-card traits reveal">
+                <h2>DUAL NATURE</h2>
+                <p>天上の歌声を持つ絶世のディーヴァ。しかしその口からは「グレムリン」と称されるキレのある罵倒が飛び出す。自己評価が低く悲観的だが、愛に溢れた複雑な魂。</p>
+                <div class="gremlin-toggle-zone">
+                    <button id="unleash-gremlin">UNLEASH GREMLIN 😈</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="episodes-section">
+            <h2 class="section-title">BIRD TALES</h2>
+            <div class="episode-grid">
+                <div class="episode-box reveal">
+                    <h3>Finals Stenosis</h3>
+                    <p>先輩への挨拶を寝ぼけて「ファイナルズ・ステノーシス」と誤変換。伝説のミームとなり、今も語り継がれている。</p>
+                </div>
+                <div class="episode-box reveal">
+                    <h3>ひぐらしコンサート</h3>
+                    <p>大ファンの『ひぐらしのなく頃に』楽曲のみのコンサートを開催。1万人以上の同時接続を集める感動の夜となった。</p>
+                </div>
+                <div class="episode-box reveal">
+                    <h3>天城越えのコブシ</h3>
+                    <p>日本語学習の一環として『天城越え』を熱唱。その圧倒的な声量とコブシで日本のファンを驚かせた。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="song-interaction reveal">
+            <h2>HEAVENLY MELODY</h2>
+            <p>エナーの歌声を可視化。音符をクリックして美しいメロディ（あるいは罵倒？）を奏でよう。</p>
+            <div class="musical-box" id="music-area">
+                <div class="visualizer" id="viz"></div>
+                <button id="sing-btn">SING FOR US 🎤</button>
+            </div>
+        </section>
+
+        <section class="lore-section reveal">
+            <h2>LORE</h2>
+            <p>天に羽ばたく青い鳥。生ける者に愛のさえずりを届ける使命を持つが、現実では毒舌と自虐、そして深い慈愛が共存するグレムリン天使。アニメや心理学、犯罪ドキュメンタリーを好み、料理も得意。カナダ在住だが日本生まれであり、日本の公共施設や文化を愛している。MillieやEliraとはデビュー前からの親友であり、その絆は運命を超えて結ばれている。</p>
+        </section>
+    </main>
+
+    <div class="glitch-overlay" id="glitch"></div>
+
+    <script src="enna.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klara Charmwood (クララ チャームウッド) - Nijisanji EN Archive</title>
+    <link rel="stylesheet" href="../../nijisanji_style.css">
+    <link rel="stylesheet" href="klara.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="klara-theme">
+    <div class="mansion-background" id="bg-canvas">
+        <div class="mansion-fog"></div>
+        <div class="ghost-apparitions" id="spirits"></div>
+    </div>
+
+    <header>
+        <nav>
+            <a href="../../nijisanji_index.html" class="back-link">← ARCHIVE</a>
+            <div class="teapot-status">PAPANGOST: <span id="papa-val">III</span></div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="unit-badge">Denauth</div>
+                <h1 class="char-name">Klara Charmwood <span class="jp-name">クララ チャームウッド</span></h1>
+                <p class="catchphrase">「Maid of the mansion. Tea time? ...Hold the potatoes. 💐🫖」</p>
+                <div class="status-tags">
+                    <span>Mansion Maid</span>
+                    <span>Horror Enthusiast</span>
+                    <span>Kouchamas</span>
+                </div>
+            </div>
+            <div class="character-visual" id="klara-visual">
+                <div class="mansion-crest">
+                    <span class="maid-icon">🫖</span>
+                    <div class="ghost-wisp"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="profile-grid">
+            <div class="maid-card info reveal">
+                <h2>SERVICE RECORD</h2>
+                <ul>
+                    <li><strong>誕生日:</strong> 11月20日</li>
+                    <li><strong>身長:</strong> 157.5cm (元152cm)</li>
+                    <li><strong>職業:</strong> 幽霊屋敷の日雇いメイド</li>
+                    <li><strong>言語:</strong> 英語、日本語、中国語、タイ語</li>
+                    <li><strong>天敵:</strong> ポテト (虫の方がマシ)</li>
+                </ul>
+            </div>
+            <div class="maid-card traits reveal">
+                <h2>GENTLE EXORCIST?</h2>
+                <p>低音の穏やかな声が心地よいメイド。驚異的なホラー耐性を持ち、恐怖演出でも笑顔で笑ってしまう。方向音痴で「Lostwood」と呼ばれるが、料理やイラスト、楽器演奏など多彩な才能の持ち主。オタク語りになると早口になるギャップも魅力。</p>
+                <div class="mode-toggle-zone">
+                    <button id="trigger-scare">INVOKE GHOST 👻</button>
+                    <p class="mode-desc">Condition: <span id="klara-label">CALM</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="episodes-section">
+            <h2 class="section-title">屋敷の回想録 (KLARA STORIES)</h2>
+            <div class="episode-grid">
+                <div class="episode-box reveal">
+                    <h3>サソリ実食</h3>
+                    <p>芋が大嫌いで「芋より虫がマシ」と豪語。初配信で実際にサソリを食べ、リスナーの度肝を抜いた。</p>
+                </div>
+                <div class="episode-box reveal">
+                    <h3>にじSSS 結成</h3>
+                    <p>にじGTAでの縁。エリー（メイド）、ネス（執事）と共に超サーバント団を結成し、深い交流を続けている。</p>
+                </div>
+                <div class="episode-box reveal">
+                    <h3>ハッピーバースデー！</h3>
+                    <p>2025年へのカウントダウン。「ハッピーニューイヤー」と言うべきところで叫んだ見事なPONエピソード。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="interaction-zone reveal">
+            <h2>LOSTWOOD GPS</h2>
+            <p>クララの深刻な方向音痴を体感。ボタンを押すたびに目的地から遠ざかる（？）</p>
+            <div class="gps-box" id="gps-area">
+                <div class="klara-marker" id="marker">📍</div>
+                <div class="destination">HOUSE 🏠</div>
+            </div>
+        </section>
+
+        <section class="lore-section reveal">
+            <h2>LORE</h2>
+            <p>幽霊屋敷「天之尾羽張邸（Amanozako Manor）」で働く日雇いメイド。ティーポットの精霊「偉大なるぱぱんごすちゃま三世閣下」を相棒に持ち、屋敷の奇妙な住人たちとも良好な関係を築いている。独学で培った語学力と楽器演奏、そしてオタク知識は底知れない。ホラーゲームの絶叫を期待した視聴者の前で「ニコニコしながらプレイする」姿は、まさに屋敷に相応しい胆力の持ち主。ポテトへの憎しみと、サソリすら喰らうその覚悟は、Denauthの癒やし枠（？）としての地位を確立している。</p>
+        </section>
+    </main>
+
+    <div class="scorpion-overlay" id="scorpion-fx">SCORPION TASTE: PAINFUL BUT BETTER THAN POTATO! 🦂</div>
+
+    <script src="klara.js"></script>
+</body>
+
+</html>

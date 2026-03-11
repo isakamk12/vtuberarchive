@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Vermillion (ヴェール ヴァーミリオン) - Nijisanji EN Archive</title>
+    <link rel="stylesheet" href="../../nijisanji_style.css">
+    <link rel="stylesheet" href="../char-base-v2.css">
+    <link rel="stylesheet" href="ver.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="ver-theme">
+    <div class="prophet-background" id="bg-canvas">
+        <div class="tarot-pattern"></div>
+        <div class="shooting-stars" id="stars"></div>
+    </div>
+
+    <header>
+        <nav>
+            <a href="../../nijisanji_index.html" class="back-link">← ARCHIVE</a>
+            <div class="prediction-status">FATE: <span id="fate-val">I'LL BE FINE</span></div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="unit-badge">XSOLEIL</div>
+                <h1 class="char-name">Ver Vermillion <span class="jp-name">ヴェール ヴァーミリオン</span></h1>
+                <p class="catchphrase">「I see your soul. The future is written in the cards. ♦🐯」</p>
+                <div class="status-tags">
+                    <span>Soul Prophet</span>
+                    <span>XSOLEIL Board Chair</span>
+                    <span>Villions</span>
+                </div>
+            </div>
+            <div class="character-visual">
+                <div class="floating-cards" id="card-icon">🃏</div>
+                <div class="visual-container">
+                    <img src="../../assets/ver_full.png" alt="Ver Vermillion Full Visual" class="main-img" id="ver-img">
+                </div>
+            </div>
+        </section>
+
+        <section class="profile-grid">
+            <div class="prophet-card info reveal">
+                <h2>PROPHET LEDGER</h2>
+                <ul>
+                    <li><strong>誕生日:</strong> 8月25日</li>
+                    <li><strong>身長:</strong> 175cm (靴込み)</li>
+                    <li><strong>属性:</strong> 無限学科 XSOLEIL 生徒会長</li>
+                    <li><strong>言語:</strong> 英語、韓国語、スペイン語</li>
+                    <li><strong>苦手:</strong> 紫キャベツ、月曜の夜11時</li>
+                </ul>
+            </div>
+            <div class="prophet-card traits reveal">
+                <h2>CHAIRMAN'S CHARISMA</h2>
+                <p>生徒会長にして「霊魂のプロフェット」。謎めいたカリスマ性を放つが、その実体は少し不器用な「dork」な一面も。コーヒーの代わりに朝から甘いものを摂取するスイーツ男子。加賀美先輩との「兄弟（会長と社長）」の愛称でも親しまれる。</p>
+                <div class="mode-toggle-zone">
+                    <button id="trigger-read">SOUL READING ♦</button>
+                    <p class="mode-desc">Prophecy: <span id="prophecy-msg">CHOOSE A CARD</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="episodes-section">
+            <h2 class="section-title">魂の章 (VER CHRONICLES)</h2>
+            <div class="episode-grid">
+                <div class="episode-box reveal">
+                    <h3>名前の発音</h3>
+                    <p>「ヴァー」ではなく「ヴェア（v-air）」であるとデビュー時に強調。しかし同期のドッピオをはじめ、周囲からは度々間違えられネタにされている。</p>
+                </div>
+                <div class="episode-box reveal">
+                    <h3>幻のリ設定</h3>
+                    <p>企画段階ではヴァンパイア設定も検討されていた。しかし本人の流血への配慮や先輩との兼ね合いから、現在の「霊魂の預言者」へと集約された。</p>
+                </div>
+                <div class="episode-box reveal">
+                    <h3>韓国語交流</h3>
+                    <p>非常に流暢な韓国語を活かし、元KRメンバーの先輩らと深い交流を持つ。ENメンバーに韓国語を教える配信など、言語の壁を越えて活躍中。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="interaction-zone reveal">
+            <h2>AVOID THE CABBAGE</h2>
+            <p>ヴェールの天敵「紫キャベツ」を避けよう！出現するキャベツをクリックして消去せよ。</p>
+            <div class="cabbage-game" id="game-area">
+                <div class="target-cabbage" id="target">🥬</div>
+                <div class="score-display">Purity: <span id="score">100</span>%</div>
+            </div>
+        </section>
+
+        <section class="lore-section reveal">
+            <h2>LORE</h2>
+            <p>無限学科XSOLEILの3年生にして生徒会長。人の魂を覗き未来を読み取る能力を持つが、本人は乙女座のINFPらしく、内向的で親しみやすい性格。ファンマスコットの「白い虎」を大切にし、ファン（Villions）への感謝は常に忘れない。カードゲーム、特に遊戯王を愛し、天体観測を趣味とする。謎の多い預言者としての威厳と、時折見せる年相応のオタク気質のギャップが彼の真の魅力である。</p>
+        </section>
+    </main>
+
+    <div class="card-draw" id="card-overlay">
+        <div class="drawn-card" id="result-card">❓</div>
+    </div>
+
+    <script src="ver.js"></script>
+</body>
+
+</html>

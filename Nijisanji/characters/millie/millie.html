@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Millie Parfait (ミリー・パフェ) - Nijisanji EN Archive</title>
+    <link rel="stylesheet" href="../../nijisanji_style.css">
+    <link rel="stylesheet" href="millie.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="millie-theme">
+    <div class="witch-background" id="witch-bg">
+        <div class="sparkles-container" id="sparkles"></div>
+        <div class="magic-circle" id="circle"></div>
+    </div>
+
+    <header>
+        <nav>
+            <a href="../../nijisanji_index.html" class="back-link">← ARCHIVE</a>
+            <div class="h-stat">HAT SIZE: <span id="hat-size">LARGE</span></div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="unit-badge">Ethyria</div>
+                <h1 class="char-name">Millie Parfait <span class="jp-name">ミリー・パフェ</span></h1>
+                <p class="catchphrase">「Great Witch of Calamity! I'm here to mess everything up!」</p>
+                <div class="status-tags">
+                    <span>Calamity Witch</span>
+                    <span>Hell-dwelling Cat (Hidden)</span>
+                    <span>FaMillie</span>
+                </div>
+            </div>
+            <div class="character-visual" id="millie-visual">
+                <div class="witch-crest">
+                    <span class="cat-icon">🐈‍⬛</span>
+                    <div class="magic-spark"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="profile-grid">
+            <div class="witch-card info reveal">
+                <h2>WITCH LOG</h2>
+                <ul>
+                    <li><strong>誕生日:</strong> 12月12日</li>
+                    <li><strong>種族:</strong> 災厄の大魔女 (Great Witch of Calamity)</li>
+                    <li><strong>住居:</strong> エリーラの地下室の段ボール箱</li>
+                    <li><strong>好物:</strong> パフェ、舞元啓介</li>
+                    <li><strong>推し:</strong> 舞元啓介</li>
+                </ul>
+            </div>
+            <div class="witch-card traits reveal">
+                <h2>CHAOTIC MAGIC</h2>
+                <p>冥界の災厄の大魔女だが、パフェの魅力に抗えず地球へ。地球では魔法が弱まり、エリーラの地下室で生活。笑い上戸で、泣くと「グレムリン」化する愛すべきカオス。</p>
+                <div class="hat-control-zone">
+                    <input type="range" id="hat-slider" min="50" max="300" value="100">
+                    <p>ADJUST HAT SIZE 🧙‍♀️</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="episodes-section">
+            <h2 class="section-title">CALAMITY TALES</h2>
+            <div class="episode-grid">
+                <div class="episode-box reveal">
+                    <h3>ポムの葉ビジネス</h3>
+                    <p>初配信で突然「ポムの葉」を登場させ、勝手にビジネスを展開。後に先輩から使用料を請求される事態に。</p>
+                </div>
+                <div class="episode-box reveal">
+                    <h3>舞元啓介への愛</h3>
+                    <p>筋金入りの舞元ファン。3Dお披露目での念願の対面では、ハグからの壁ドン要求で限界化の極致へ。</p>
+                </div>
+                <div class="episode-box reveal">
+                    <h3>エリーラの横乳</h3>
+                    <p>位置情報を「Elira's sideboob」に設定するほどの重度のエリーラ愛。彼女の親愛は常にフルスロットル。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="magic-interaction reveal">
+            <h2>POMU LEAF CLICKER</h2>
+            <p>ポムの葉をクリックして、ミリタリーな魔法（？）を生成しよう！</p>
+            <div class="leaf-zone">
+                <div id="pomu-leaf" class="leaf-target">🍃</div>
+                <div class="counter">LEAVES HARVESTED: <span id="leaf-count">0</span></div>
+            </div>
+        </section>
+
+        <section class="lore-section reveal">
+            <h2>LORE</h2>
+            <p>魔女術の疑いをかけられた幼少期、使い魔のLucieに救われ魔女となる契約を結んだ。地球では魔法が制限されるため、ASMRや音楽、ゲーム配信を通じて力を蓄えている。同期のEnnaとはルームシェアをしていたほどの親友。自身のオリジナル帽子が大きすぎて配信スライドが隠れるという失敗も、小型帽子アセットを自作してネタにするポジティブな魔女。</p>
+        </section>
+    </main>
+
+    <div class="parfait-bomb" id="bomb">🍦✨</div>
+
+    <script src="millie.js"></script>
+</body>
+
+</html>

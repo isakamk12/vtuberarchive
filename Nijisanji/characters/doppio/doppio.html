@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doppio Dropscythe (ドッピオ ドロップサイト) - Nijisanji EN Archive</title>
+    <link rel="stylesheet" href="../../nijisanji_style.css">
+    <link rel="stylesheet" href="../char-base-v2.css">
+    <link rel="stylesheet" href="doppio.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="doppio-theme">
+    <div class="arcade-background" id="bg-canvas">
+        <div class="ball-pool" id="pool"></div>
+    </div>
+
+    <header>
+        <nav>
+            <a href="../../nijisanji_index.html" class="back-link">← ARCHIVE</a>
+            <div class="discipline-meter">DISCIPLINE: <span id="meter-val">100%</span></div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="unit-badge">XSOLEIL</div>
+                <h1 class="char-name">Doppio Dropscythe <span class="jp-name">ドッピオ ドロップサイト</span></h1>
+                <p class="catchphrase">「The D stands for... DELIGHTFUL! (And Discipline!)」</p>
+                <div class="status-tags">
+                    <span>Duke of Discipline</span>
+                    <span>XSOLEIL 1st Year</span>
+                    <span>Scythekicks</span>
+                </div>
+            </div>
+            <div class="character-visual">
+                <div class="floating-scythe" id="scythe">⛏️</div>
+                <div class="visual-container">
+                    <img src="../../assets/doppio_full.png" alt="Doppio Dropscythe Full Visual" class="main-img" id="doppio-img">
+                </div>
+            </div>
+        </section>
+
+        <section class="profile-grid">
+            <div class="arcade-card info reveal">
+                <h2>STUDENT DOSSIER</h2>
+                <ul>
+                    <li><strong>誕生日:</strong> 1月31日</li>
+                    <li><strong>身長:</strong> 187cm (ENトップクラス)</li>
+                    <li><strong>種族:</strong> 無限学科 XSOLEIL 生徒会執行者</li>
+                    <li><strong>特技:</strong> 多彩な声、台本執筆、編集</li>
+                    <li><strong>弱点:</strong> 自分より背が高い人、リンゴ</li>
+                </ul>
+            </div>
+            <div class="arcade-card traits reveal">
+                <h2>PioVerse CONGESTION</h2>
+                <p>自分らしさを貫く執行者。明るくハイテンションだが、規律を重んじる「D」の男。ゲームセンター「D_D」に住み、ボールプールから初配信を行う。オリバー先輩に圧倒されて横転するなどの可愛らしい一面も。</p>
+                <div class="mode-toggle-zone">
+                    <button id="trigger-d">THE D STANDS FOR... ❓</button>
+                    <p class="mode-desc">Status: <span id="d-label">DISCIPLINE</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="episodes-section">
+            <h2 class="section-title">執行者の記録 (DISCIPLINE LOGS)</h2>
+            <div class="episode-grid">
+                <div class="episode-box reveal">
+                    <h3>オリバー先輩と横転</h3>
+                    <p>身長190cmのオリバー・エバンスに圧倒され、椅子から転げ落ちてしまった。その後も遭遇するたびに横転する伝説。</p>
+                </div>
+                <div class="episode-box reveal">
+                    <h3>PioVerse</h3>
+                    <p>poco pio、Doom、Dolceなど多数の別名格が存在。セルフコラボを行い、視聴者を自分だけの多層的な世界観に引き込む。</p>
+                </div>
+                <div class="episode-box reveal">
+                    <h3>日本移住と漢字</h3>
+                    <p>2025年8月に日本へ移住。子供の頃からの夢を叶え、現在は漢字帳を使って熱心に日本語の読み書きを学んでいる。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="interaction-zone reveal">
+            <h2>BALL POOL DIVE</h2>
+            <p>ドッピオの住処、ボールプールへダイブ！クリックしてカラーボールを溢れさせよう。</p>
+            <div class="pool-box" id="pool-area">
+                <div class="doppio-nugget" id="nugget">🍗</div>
+            </div>
+        </section>
+
+        <section class="lore-section reveal">
+            <h2>LORE</h2>
+            <p>無限学科XSOLEILの1年生。かつては不良だったが、現在は規律を重んじる執行者として生徒会に所属。自分より高い身長には「横転」するほど弱いが、演技力と企画力はEN屈指。ドラマCD『Fortune's Trick』では声優、脚本、編集を自らプロデュース。サンドイッチやイタリア料理を得意とする料理男子でもある。2025年からは日本を拠点に、さらなるクリエイティブ活動を加速させている。</p>
+        </section>
+    </main>
+
+    <div class="fall-effect" id="fall-overlay">TIMBERRR! (横転)</div>
+
+    <script src="doppio.js"></script>
+</body>
+
+</html>

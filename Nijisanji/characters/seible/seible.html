@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seible (セイブル) - Nijisanji EN Archive</title>
+    <link rel="stylesheet" href="../../nijisanji_style.css">
+    <link rel="stylesheet" href="../char-base-v2.css">
+    <link rel="stylesheet" href="seible.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="seible-theme">
+    <div class="promoter-background" id="bg-canvas">
+        <div class="spotlight-ani" id="spotlight"></div>
+        <div class="falling-gems" id="gems"></div>
+    </div>
+
+    <header>
+        <nav>
+            <a href="../../nijisanji_index.html" class="back-link">← ARCHIVE</a>
+            <div class="dialect-status">DIALECT: <span id="dialect-val">KANSAI</span></div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="unit-badge">BY THE BEAT</div>
+                <h1 class="char-name">Seible <span class="jp-name">セイブル</span></h1>
+                <p class="catchphrase">「Locked in!! Attention loving promoter in the house! 💎👔」</p>
+                <div class="status-tags">
+                    <span>Pro Promoter</span>
+                    <span>Kansai-ben Native</span>
+                    <span>SEINYAN</span>
+                </div>
+            </div>
+            <div class="character-visual">
+                <div class="floating-pet" id="pet-icon">🐶</div>
+                <div class="visual-container">
+                    <img src="../../assets/seible_full.png" alt="Seible Full Visual" class="main-img" id="seible-img">
+                    <div class="maid-overlay" id="maid-outfit"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="profile-grid">
+            <div class="promoter-card info reveal">
+                <h2>PROMOTER FILE</h2>
+                <ul>
+                    <li><strong>誕生日:</strong> 10月3日</li>
+                    <li><strong>身長:</strong> 176cm (靴込み200cm)</li>
+                    <li><strong>職業:</strong> プロモーター</li>
+                    <li><strong>特技:</strong> テニス、剣道、レザークラフト</li>
+                    <li><strong>言語:</strong> 英語、日本語(関西弁)</li>
+                </ul>
+            </div>
+            <div class="promoter-card traits reveal">
+                <h2>THE EMOTIONAL ACE</h2>
+                <p>注目を浴びることが大好きな快活なプロモーター。日本語はネイティブレベルで、コテコテの関西弁を操る。情に厚く非常に涙もろい一面があり、リスナーの愛に感動して泣いてしまうことも。7回のオーディションを経て合格した不屈の精神を持ち、日本移住後も数々の波乱万丈なエピソード（スーツケース紛失等）を乗り越えて活動中。</p>
+                <div class="mode-toggle-zone">
+                    <button id="trigger-maid">SURPRISE MAID OUTFIT! 🐈</button>
+                    <p class="mode-desc">Status: <span id="maid-label">PROMOTER</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="episodes-section">
+            <h2 class="section-title">興行師の軌跡 (SEIBLE DIARIES)</h2>
+            <div class="episode-grid">
+                <div class="episode-box reveal">
+                    <h3>波乱の日本移住</h3>
+                    <p>PCを分解してスーツケースに入れたら行方不明に。1ヶ月で6回引越し、回線不安定。まさに「工事現場配信」の伝説。</p>
+                </div>
+                <div class="episode-box reveal">
+                    <h3>不屈の7回挑戦</h3>
+                    <p>Freoと同じく7回応募。最終募集で時間を間違えるも無事合格。合格後の喜びの涙は多くのファンの心を打った。</p>
+                </div>
+                <div class="episode-box reveal">
+                    <h3>セイブル語録</h3>
+                    <p>「さっぱりピーマン」「ごちゃまぜモンキー」など独特のワードセンス。関西弁と英語のスラングの混ざり方が絶妙。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="interaction-zone reveal">
+            <h2>KANSAI-BEN GENERATOR</h2>
+            <p>セイブルのコテコテの言葉をリッスン！クリックで語録が炸裂。</p>
+            <div class="kansai-box" id="kansai-area">
+                <div class="talk-bubble">「<span id="word-val">さっぱりピーマンやわ！</span>」</div>
+            </div>
+        </section>
+
+        <section class="lore-section reveal">
+            <h2>LORE</h2>
+            <p>人をまとめる力がある快活なプロモーター。読書に10時間没頭するインドア派ながら、オープンウォーターダイバーの資格を持つなど多才。自身を「猫を被った犬」と称し、マスコットのSeinyan（猫）を大切にしている。にじさんじ文化を熱狂的に愛し、プロセカの大会では2日でノーミスクリアまで仕上げるほどの熱量を持つ。ClaudeやRyomaとのチーム「Chopcon」では、先輩に愛されながら爆走する、BY THE BEATの感情豊かなムードメーカー。</p>
+        </section>
+    </main>
+
+    <div class="cry-overlay" id="cry-fx">LOCK IN!! (Crying tears of joy) 😭💎</div>
+
+    <script src="seible.js"></script>
+</body>
+
+</html>

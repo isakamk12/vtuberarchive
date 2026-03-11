@@ -1,0 +1,225 @@
+:root {
+    --enna-primary: #B0C4DE; /* Periwinkle */
+    --enna-secondary: #E6E6FA; /* Lavender */
+    --enna-accent: #FFFFFF;
+    --enna-bg: #0d141f;
+    --heaven-glass: rgba(176, 196, 222, 0.03);
+    --glow-light: rgba(176, 196, 222, 0.4);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.enna-theme {
+    background: var(--enna-bg);
+    color: var(--enna-accent);
+    font-family: 'Cormorant Garamond', 'Zen Kaku Gothic New', serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Premium Background: Ethereal Void */
+.heaven-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background: radial-gradient(circle at 50% 120%, #1a2436 0%, #0d141f 70%);
+}
+
+.feathers-container {
+    position: absolute;
+    width: 100%; height: 100%;
+    pointer-events: none;
+}
+
+/* Hero Section: Expansive Serenity */
+.hero-section {
+    min-height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5%;
+    gap: 6rem;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 650px;
+}
+
+.unit-badge {
+    color: var(--enna-primary);
+    font-weight: 300;
+    letter-spacing: 15px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    margin-bottom: 2.5rem;
+    display: block;
+    border-bottom: 1px solid rgba(176, 196, 222, 0.3);
+    padding-bottom: 0.5rem;
+}
+
+.char-name {
+    font-size: 6.5rem;
+    font-weight: 400;
+    line-height: 0.85;
+    letter-spacing: -1px;
+    color: var(--enna-primary);
+    text-shadow: 0 0 50px var(--glow-light);
+}
+
+.jp-name {
+    display: block;
+    font-size: 1.8rem;
+    color: var(--enna-secondary);
+    margin-top: 1.5rem;
+    font-weight: 400;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    letter-spacing: 4px;
+}
+
+.catchphrase {
+    margin-top: 3.5rem;
+    font-size: 1.6rem;
+    font-style: italic;
+    opacity: 0.8;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+.status-tags {
+    margin-top: 4rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.status-tags span {
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    padding: 0.8rem 2.5rem;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    background: transparent;
+    transition: 0.4s;
+}
+
+.status-tags span:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--enna-primary);
+}
+
+/* CSS-Based Bird Visual */
+.character-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heaven-crest {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bird-icon {
+    font-size: 13rem;
+    z-index: 2;
+    filter: drop-shadow(0 0 60px var(--enna-primary));
+    animation: drift 8s ease-in-out infinite;
+}
+
+@keyframes drift {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(-20px, -40px) scale(1.05); }
+}
+
+.feather-orbit {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(176, 196, 222, 0.05);
+    border-radius: 50%;
+    animation: orbitRotate 40s linear infinite;
+}
+
+@keyframes orbitRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Content Layout */
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 5rem;
+    padding: 10rem 10% 8rem;
+}
+
+.heavenly-card {
+    background: var(--heaven-glass);
+    backdrop-filter: blur(40px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 5rem;
+    transition: 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.heavenly-card:hover {
+    background: rgba(176, 196, 222, 0.08);
+}
+
+.heavenly-card h2 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: var(--enna-primary);
+    letter-spacing: 8px;
+    font-weight: 300;
+}
+
+/* Gremlin Mode Switch */
+.gremlin-toggle-zone {
+    margin-top: 4rem;
+}
+
+#unleash-gremlin {
+    background: none;
+    border: 1px solid var(--enna-secondary);
+    color: var(--enna-secondary);
+    padding: 1.5rem 3rem;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1rem;
+    letter-spacing: 5px;
+    transition: 0.2s;
+}
+
+#unleash-gremlin:hover {
+    background: var(--enna-secondary);
+    color: var(--enna-bg);
+}
+
+/* Reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(80px);
+    transition: 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 1200px) {
+    .char-name { font-size: 4.5rem; }
+    .hero-section { flex-direction: column; text-align: center; }
+    .profile-grid { grid-template-columns: 1fr; }
+}

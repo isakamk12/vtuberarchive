@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryoma Barrenwort (凉舞 バレンウォート) - Nijisanji EN Archive</title>
+    <link rel="stylesheet" href="../../nijisanji_style.css">
+    <link rel="stylesheet" href="ryoma.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="ryoma-theme">
+    <div class="tech-ronin-background" id="bg-canvas">
+        <div class="digital-rain" id="rain"></div>
+        <div class="jdm-car-drift" id="car-fx">🏎️💨</div>
+    </div>
+
+    <header>
+        <nav>
+            <a href="../../nijisanji_index.html" class="back-link">← ARCHIVE</a>
+            <div class="credit-status">LIMIT: <span id="limit-val">EXCEEDED</span></div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="unit-badge">Denauth</div>
+                <h1 class="char-name">Ryoma Barrenwort <span class="jp-name">凉舞 バレンウォート</span></h1>
+                <p class="catchphrase">「Credit card swiper, Ronin at heart. Take them, not me! 💳💨」</p>
+                <div class="status-tags">
+                    <span>Modern Ronin</span>
+                    <span>FPS Master</span>
+                    <span>Ryonins</span>
+                </div>
+            </div>
+            <div class="character-visual" id="ryoma-visual">
+                <div class="ronin-crest">
+                    <span class="ronin-icon">⚔️</span>
+                    <div class="digital-glow"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="profile-grid">
+            <div class="tech-card info reveal">
+                <h2>RONIN DATA</h2>
+                <ul>
+                    <li><strong>誕生日:</strong> 9月13日</li>
+                    <li><strong>身長:</strong> 173cm</li>
+                    <li><strong>職業:</strong> 浪費家浪人 (ボディーガード)</li>
+                    <li><strong>ランク:</strong> Apex Master</li>
+                    <li><strong>愛車:</strong> JDM 90s Cars</li>
+                </ul>
+            </div>
+            <div class="tech-card traits reveal">
+                <h2>THE MODERN FALLEN SAMURAI</h2>
+                <p>古風な浪人の外見とは裏腹に、最新ガジェットとPC環境に注ぎ込む「クレカ・スワイパー」。Denauthのボディーガードでありながら、真っ先に逃げる「Take them not me!」精神の持ち主。その実体はApexでマスターに到達し、プロからスカウトされるほどのガチFPSゲーマー。同期の保護者的存在でもある。</p>
+                <div class="mode-toggle-zone">
+                    <button id="trigger-swipe">SWIPE CREDIT CARD 💳</button>
+                    <p class="mode-desc">Status: <span id="ryoma-label">BROKE</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="episodes-section">
+            <h2 class="section-title">浪人の日常 (RYOMA LOGS)</h2>
+            <div class="episode-grid">
+                <div class="episode-box reveal">
+                    <h3>日本旅行のPON</h3>
+                    <p>洗濯機の操作パネルではなく、ラミネートされた「説明図」をボタンだと思って必死に連打した、愛すべき現代っ子PON。</p>
+                </div>
+                <div class="episode-box reveal">
+                    <h3>PEAK タイムアタック</h3>
+                    <p>過酷な山登りゲームでEN初のソロ登頂達成。さらに「39分38秒」という驚異的なタイムを記録し、その集中力を証明。</p>
+                </div>
+                <div class="episode-box reveal">
+                    <h3>冷水シャワーの掟</h3>
+                    <p>初配信から毎日続けた60秒の冷水シャワーチャレンジ。自己を律するための過酷な挑戦は、Ryoninsたちの語り草。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="interaction-zone reveal">
+            <h2>APEX PRECISION TRAINING</h2>
+            <p>マスターランクのエイムを体感！出現するターゲットを最速でクリックせよ。</p>
+            <div class="apex-box" id="game-area">
+                <div class="aim-target" id="target">🎯</div>
+                <div class="combo-display">COMBO: <span id="combo">0</span></div>
+            </div>
+        </section>
+
+        <section class="lore-section reveal">
+            <h2>LORE</h2>
+            <p>幽霊屋敷「天之尾羽張邸」のボディーガードとして恩人に送り込まれた浪人。しかし屋敷でもゲーム機を持ち込み、気に入った車があればクレカを叩きつける現代派。セミプロとしてFPS大会に出場していた過去を持ち、2026年には日本サーバーでもイモータルに到達した腕前を誇る。車への情熱は凄まじく、JDMの名車を求めて渋谷を走り回るほど。同期のKlaraが風邪を引いた際に自分のジャケットを貸すなどの「おじさん」らしい優しさと、肝心な時に逃げ出す臆病さが同居する、放っておけない浪人である。</p>
+        </section>
+    </main>
+
+    <div class="escape-fx" id="escape-msg">TAKE THEM! NOT ME! 💨</div>
+
+    <script src="ryoma.js"></script>
+</body>
+
+</html>

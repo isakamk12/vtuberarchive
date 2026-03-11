@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shu Yamino (闇ノシュウ) - Nijisanji EN Archive</title>
+    <link rel="stylesheet" href="../../nijisanji_style.css">
+    <link rel="stylesheet" href="shu.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="shu-theme">
+    <div class="sorcerer-background" id="bg-canvas">
+        <div class="yin-yang-rotating" id="yin-yang">☯</div>
+        <div class="ascii-particles" id="particles"></div>
+    </div>
+
+    <header>
+        <nav>
+            <a href="../../nijisanji_index.html" class="back-link">← ARCHIVE</a>
+            <div class="shupport-status">SYSTEM STATUS: <span id="sys-status">STABLE</span></div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="unit-badge">Luxiem</div>
+                <h1 class="char-name">Shu Yamino <span class="jp-name">闇ノシュウ</span></h1>
+                <p class="catchphrase">「Ey-yo! I'm your resident sorcerer, Shu Yamino!」</p>
+                <div class="status-tags">
+                    <span>Sorcerer</span>
+                    <span>Shupport</span>
+                    <span>Yaminions</span>
+                </div>
+            </div>
+            <div class="character-visual" id="shu-visual">
+                <div class="sorcerer-crest">
+                    <span class="banana-icon">🍌</span>
+                    <div class="mystic-aura"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="profile-grid">
+            <div class="mystic-card info reveal">
+                <h2>SORCERER DATA</h2>
+                <ul>
+                    <li><strong>誕生日:</strong> 5月2日</li>
+                    <li><strong>身長:</strong> 173cm</li>
+                    <li><strong>種族:</strong> 呪術師 (Sorcerer)</li>
+                    <li><strong>言語:</strong> 英語・日本語 (Native Level)</li>
+                    <li><strong>好物:</strong> 牛乳（を先に入れた）シリアル</li>
+                </ul>
+            </div>
+            <div class="mystic-card traits reveal">
+                <h2>SHUPPORT ABILITIES</h2>
+                <p>過去からやってきた穏やかな呪術師。完璧なバイリンガルであり、ENメンバーの技術トラブルを救う「Shupport」としても知られる。冷静沈着で「Luxiemの良心」とも呼ばれる。</p>
+                <div class="mode-toggle-zone">
+                    <button id="toggle-hikari">GREET HIKARINO 🕊️</button>
+                    <p class="mode-desc">Current Aspect: <span id="aspect-label">YAMINO</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="episodes-section">
+            <h2 class="section-title">SORCEROUS LEGENDS</h2>
+            <div class="episode-grid">
+                <div class="episode-box reveal">
+                    <h3>いらすとやLore動画</h3>
+                    <p>デビュー配信で「ウンコに襲われて現代へ」というシュールな内容をフリー素材「いらすとや」のみで構成し、同期と視聴者を震撼させた。</p>
+                </div>
+                <div class="episode-box reveal">
+                    <h3>日本語王</h3>
+                    <p>JPライバーとの『もじぴったん』対決で14勝0敗という圧倒的勝利を収め、名実ともにENの日本語王となった。</p>
+                </div>
+                <div class="episode-box reveal">
+                    <h3>不動の精神力</h3>
+                    <p>Jump King等の発狂ゲーを長時間プレイしても一切怒ることなく、終始穏やかなテンションでクリアする驚異の忍耐力。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="interaction-zone reveal">
+            <h2>CEREAL FIRST? NO.</h2>
+            <p>シュウのこだわり、牛乳先入れシリアルを体験！シリアルをボウルに……いや、牛乳を先に！</p>
+            <div class="cereal-bowl" id="bowl">
+                <div id="milk-layer" class="liquid"></div>
+                <button id="add-cereal">ADD CEREAL 🥣</button>
+                <button id="add-milk">ADD MILK 🥛</button>
+            </div>
+            <p id="cereal-msg">ORDER MATTERS.</p>
+        </section>
+
+        <section class="lore-section reveal">
+            <h2>LORE</h2>
+            <p>不思議な力を持つ呪術師。自分に危害を加える者には容赦なく呪いをかけるが、基本的には極めて穏やか。2019年からの「にじさんじ」オタクであり、ニコニコ動画や日本のネットミームに異様に詳しい。エイプリルフールには羽なし扇風機の「ファンくん」や前髪の「バナナ」として配信するなど、知的な外見に反して極めて高いユーモアセンスを持つ。</p>
+        </section>
+    </main>
+
+    <div class="irasutoya-overlay" id="irasutoya-bg"></div>
+
+    <script src="shu.js"></script>
+</body>
+
+</html>

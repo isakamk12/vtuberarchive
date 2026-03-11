@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaelix Debonair (ケイリクス・デボネア) - Nijisanji EN Archive</title>
+    <link rel="stylesheet" href="../../nijisanji_style.css">
+    <link rel="stylesheet" href="../char-base-v2.css">
+    <link rel="stylesheet" href="kaelix.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="kaelix-theme">
+    <div class="bouncer-background" id="bg-canvas">
+        <div class="stage-lights" id="lights"></div>
+        <div class="monkey-army" id="monkeys"></div>
+    </div>
+
+    <header>
+        <nav>
+            <a href="../../nijisanji_index.html" class="back-link">← ARCHIVE</a>
+            <div class="cardboard-status">REAL: <span id="cardboard-val">YES</span></div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="unit-badge">BY THE BEAT</div>
+                <h1 class="char-name">Kaelix Debonair <span class="jp-name">ケイリクス・デボネア</span></h1>
+                <p class="catchphrase">「A carefree bouncer with a classical voice. ...Did someone bark? 🎫🕶」</p>
+                <div class="status-tags">
+                    <span>Gentle Bouncer</span>
+                    <span>Classical Vocalist</span>
+                    <span>Debonheir</span>
+                </div>
+            </div>
+            <div class="character-visual">
+                <div class="floating-ticket" id="ticket-icon">🎫</div>
+                <div class="visual-container">
+                    <img src="../../assets/kaelix_full.png" alt="Kaelix Debonair Full Visual" class="main-img" id="kaelix-img">
+                    <div class="cardboard-panel" id="cardboard-kaelix"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="profile-grid">
+            <div class="bouncer-card info reveal">
+                <h2>BOUNCER LEDGER</h2>
+                <ul>
+                    <li><strong>誕生日:</strong> 11月5日</li>
+                    <li><strong>身長:</strong> 185cm (長身)</li>
+                    <li><strong>職業:</strong> バウンサー (元モデル)</li>
+                    <li><strong>声域:</strong> G#2～G5 (驚異の音域)</li>
+                    <li><strong>収集物:</strong> 猿のぬいぐるみ 200匹以上</li>
+                </ul>
+            </div>
+            <div class="bouncer-card traits reveal">
+                <h2>DEBONHEIR VIBES</h2>
+                <p>自然な魅力を持つ呑気なバウンサー。声楽とジャズを学んだ超本格派の歌声を持つ、BY THE BEATの「声」の象徴。英語の知性にこだわりを持ちつつ、犬になりきったり離席中に厚紙パネルを置いたりと、最高にお茶目な一面を持つ。ファンからは「デボネ丸」の愛称で親しまれる。</p>
+                <div class="mode-toggle-zone">
+                    <button id="trigger-cardboard">DEPLOY CARDBOARD KAELIX 📦</button>
+                    <p class="mode-desc">Presence: <span id="presence-label">PHYSICAL</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="episodes-section">
+            <h2 class="section-title">用心棒の楽譜 (KAELIX EPISODES)</h2>
+            <div class="episode-grid">
+                <div class="episode-box reveal">
+                    <h3>デボネ丸の命名</h3>
+                    <p>デビュー時に闇ノシュウ先輩に命名された。かわいい響きに本人も満足しており、JPファンの間でも共通言語となっている。</p>
+                </div>
+                <div class="episode-box reveal">
+                    <h3>200匹の猿</h3>
+                    <p>猿が世界で一番好き。200匹以上のぬいぐるみに囲まれて生活する、モデル時代からは想像できないマニアックな一面。</p>
+                </div>
+                <div class="episode-box reveal">
+                    <h3>RPの没入感</h3>
+                    <p>マインクラフトやGTAなど、設定を綿密に練り込む本格RP派。ホムンクルスや元子役など、多彩な人格を演じ分ける。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="interaction-zone reveal">
+            <h2>VOCAL RANGE VISUALIZER</h2>
+            <p>ケイリクスの圧倒的な声域を体験。クリックで音階を奏でよう。</p>
+            <div class="vocal-box" id="vocal-area">
+                <div class="range-bar" id="bar"></div>
+                <p id="note-val">G#2 - Low Bouncer</p>
+            </div>
+        </section>
+
+        <section class="lore-section reveal">
+            <h2>LORE</h2>
+            <p>モデル業界からバウンサーへと転身した、一見すると華やかな経歴の持ち主。しかしその中身は、早期履修で解剖学を学ぶほどの知性と、猿とチーズケーキを愛する無邪気さが共存している。将来の3Dパフォーマンスに向けて猛練習中に小指を骨折するなど、ドジな一面も。実家の猫の名前が「Tortoise（カメ）」であるなど、そのセンスは常に斜め上を行く。広い声域と高い編集スキルを武器に、今日もBY THE BEATの「デボネ丸」として世界を沸かせている。</p>
+        </section>
+    </main>
+
+    <div class="dog-bark" id="bark-fx">WOOF! WOOF! 🐶</div>
+
+    <script src="kaelix.js"></script>
+</body>
+
+</html>

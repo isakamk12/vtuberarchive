@@ -1,0 +1,220 @@
+:root {
+    --vox-primary: #960018; /* Carmine Red */
+    --vox-secondary: #D4AF37; /* Gold */
+    --vox-accent: #FFFFFF;
+    --vox-bg: #050505;
+    --demon-glow: rgba(150, 0, 24, 0.5);
+    --traditional-gold: rgba(212, 175, 55, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.vox-theme {
+    background: var(--vox-bg);
+    color: var(--vox-accent);
+    font-family: 'Cinzel', 'Zen Kaku Gothic New', serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Premium Background: Infernal Throne Room */
+.demon-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background: linear-gradient(to bottom, #000 0%, #1a0000 100%);
+}
+
+.oni-mask-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60vw;
+    opacity: 0.02;
+    pointer-events: none;
+    user-select: none;
+}
+
+.ember-container {
+    position: absolute;
+    width: 100%; height: 100%;
+}
+
+/* Hero Section: Clan Leader's Presence */
+.hero-section {
+    min-height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5%;
+    gap: 6rem;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 650px;
+}
+
+.unit-badge {
+    color: var(--vox-secondary);
+    font-weight: 700;
+    letter-spacing: 15px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+    display: block;
+    border-left: 5px solid var(--vox-primary);
+    padding-left: 1.5rem;
+}
+
+.char-name {
+    font-size: 7rem;
+    line-height: 0.85;
+    font-weight: 900;
+    color: var(--vox-primary);
+    text-shadow: 0 0 50px var(--demon-glow);
+}
+
+.jp-name {
+    display: block;
+    font-size: 2.2rem;
+    color: #fff;
+    margin-top: 1.5rem;
+    font-weight: 400;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    letter-spacing: 8px;
+    opacity: 0.7;
+}
+
+.catchphrase {
+    margin-top: 4rem;
+    font-size: 1.6rem;
+    font-style: italic;
+    background: rgba(150, 0, 24, 0.1);
+    border-right: 3px solid var(--vox-secondary);
+    padding: 2.5rem;
+    line-height: 1.6;
+}
+
+.status-tags {
+    margin-top: 4.5rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.status-tags span {
+    border: 1px solid var(--vox-secondary);
+    padding: 0.8rem 2.5rem;
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    color: var(--vox-secondary);
+}
+
+/* CSS-Based Oni Visual */
+.character-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.oni-crest {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.demon-icon {
+    font-size: 16rem;
+    z-index: 2;
+    filter: drop-shadow(0 0 80px var(--vox-primary));
+    animation: demonicPulse 5s ease-in-out infinite;
+}
+
+@keyframes demonicPulse {
+    0%, 100% { transform: scale(1) rotate(0); }
+    50% { transform: scale(1.1) rotate(2deg); }
+}
+
+.ember-spiral {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--traditional-gold);
+    animation: rotateSpiral 20s linear infinite;
+}
+
+@keyframes rotateSpiral {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Content Layout */
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+    padding: 12rem 10% 8rem;
+}
+
+.oni-card {
+    background: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(30px);
+    border: 1px solid rgba(150, 0, 24, 0.3);
+    padding: 5rem;
+    position: relative;
+    transition: 0.5s;
+}
+
+.oni-card:hover {
+    border-color: var(--vox-secondary);
+    background: rgba(150, 0, 24, 0.05);
+}
+
+.oni-card h2 {
+    font-size: 2rem;
+    margin-bottom: 3.5rem;
+    color: var(--vox-primary);
+    letter-spacing: 5px;
+}
+
+/* Interaction */
+.voice-interaction {
+    padding: 8rem 10%;
+    text-align: center;
+}
+
+.voice-vessel {
+    height: 450px;
+    background: #000;
+    border: 2px double var(--vox-secondary);
+}
+
+/* Reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 1200px) {
+    .char-name { font-size: 5rem; }
+    .hero-section { flex-direction: column; text-align: center; }
+    .profile-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonny Brisko (サニー・ブリスコー) - Nijisanji EN Archive</title>
+    <link rel="stylesheet" href="../../nijisanji_style.css">
+    <link rel="stylesheet" href="sonny.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="sonny-theme">
+    <div class="police-background" id="bg-canvas">
+        <div class="police-lights" id="lights"></div>
+        <div class="caution-tape">CAUTION VSF CAUTION VSF CAUTION</div>
+    </div>
+
+    <header>
+        <nav>
+            <a href="../../nijisanji_index.html" class="back-link">← ARCHIVE</a>
+            <div class="vsf-status">VSF OFFICER: <span id="officer-id">#BOO-722</span></div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="unit-badge">Noctyx</div>
+                <h1 class="char-name">Sonny Brisko <span class="jp-name">サニー・ブリスコー</span></h1>
+                <p class="catchphrase">「I'm a special police officer from the future. ...Pomu, my woman?」</p>
+                <div class="status-tags">
+                    <span>Officer</span>
+                    <span>Combatant</span>
+                    <span>Briskadets</span>
+                </div>
+            </div>
+            <div class="character-visual" id="sonny-visual">
+                <div class="vsf-crest">
+                    <span class="officer-icon">🛡️</span>
+                    <div class="cyber-scan"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="profile-grid">
+            <div class="police-card info reveal">
+                <h2>OFFICER DOSSIER</h2>
+                <ul>
+                    <li><strong>誕生日:</strong> 4月6日</li>
+                    <li><strong>身長:</strong> 180cm</li>
+                    <li><strong>種族:</strong> 特殊警察 (VSF Officer)</li>
+                    <li><strong>好物:</strong> 炙りえんがわ、ネギ (Scallions)</li>
+                    <li><strong>言語:</strong> 英語・日本語 (Native Level)</li>
+                </ul>
+            </div>
+            <div class="police-card traits reveal">
+                <h2>VSF OPERATIONAL TACTICS</h2>
+                <p>未来からやってきた特殊警察。落ち着いた「面白お兄さん」だが、銃火器を手にすると笑いながら敵を倒す「戦闘狂」へと変貌する。独学の日本語とハイクオリティな声真似が武器。</p>
+                <div class="mode-toggle-zone">
+                    <button id="toggle-battle">ENGAGE COMBAT MODE 🔫</button>
+                    <p class="mode-desc">Safety Status: <span id="safety-status">ON</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="episodes-section">
+            <h2 class="section-title">PILOT LOGS</h2>
+            <div class="episode-grid">
+                <div class="episode-box reveal">
+                    <h3>Pomu, my woman?</h3>
+                    <p>先輩からの「My man!」への返しを誤り、「俺の女…？」と口走ってしまった伝説の言い間違い。今も弄られ続ける鉄板ネタ。</p>
+                </div>
+                <div class="episode-box reveal">
+                    <h3>究極の声真似</h3>
+                    <p>若本規夫さん等の渋い日本人声優のクオリティが高すぎる声真似を誇る。初配信で視聴者の度肝を抜いた。</p>
+                </div>
+                <div class="episode-box reveal">
+                    <h3>ネギマニア</h3>
+                    <p>ネギをこよなく愛しており、何にでもネギを乗せて食べる。2025年にはついに日本へ移住を果たした。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="interaction-zone reveal">
+            <h2>DUBBING CHALLENGE</h2>
+            <p>サニーの「声」をシミュレート。ボタンを押して、渋いボイス（視覚効果）を生成しよう！</p>
+            <div class="voice-box" id="voice-area">
+                <div class="sound-wave" id="wave"></div>
+                <button id="dub-btn">MIMIC VOICE 🎙️</button>
+            </div>
+        </section>
+
+        <section class="lore-section reveal">
+            <h2>LORE</h2>
+            <p>未来の特殊警察官。少し乱暴な性格だが、同期や後輩からは「頼れるお兄ちゃん」として慕われる。暗殺ゲームで目撃者を皆殺しにするなどのサイコパスな振る舞いは「VSFの流儀」とも（？）。オーストラリア出身だが日本愛が深く、日本語の読解力はJPライバーに匹敵する「日本語王」候補の一人。</p>
+        </section>
+    </main>
+
+    <div class="battle-overlay" id="war-zone"></div>
+
+    <script src="sonny.js"></script>
+</body>
+
+</html>

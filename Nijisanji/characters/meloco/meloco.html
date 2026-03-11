@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meloco Kyoran (狂蘭 メロコ) - Nijisanji EN Archive</title>
+    <link rel="stylesheet" href="../../nijisanji_style.css">
+    <link rel="stylesheet" href="../char-base-v2.css">
+    <link rel="stylesheet" href="meloco.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;700&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="meloco-theme">
+    <div class="exorcist-background" id="bg-canvas">
+        <div class="spider-web"></div>
+        <div class="falling-charms" id="charms"></div>
+    </div>
+
+    <header>
+        <nav>
+            <a href="../../nijisanji_index.html" class="back-link">← ARCHIVE</a>
+            <div class="fortune-meter">運気: <span id="luck-val">UP</span></div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="unit-badge">XSOLEIL</div>
+                <h1 class="char-name">Meloco Kyoran <span class="jp-name">狂蘭 メロコ</span></h1>
+                <p class="catchphrase">「Exorcist by night, Event Planner by day. キョラキョラ～！🌂🕸」</p>
+                <div class="status-tags">
+                    <span>Exorcist</span>
+                    <span>XSOLEIL 2nd Year</span>
+                    <span>Meloves</span>
+                </div>
+            </div>
+            <div class="character-visual">
+                <div class="floating-umbrella" id="umbrella-icon">🌂</div>
+                <div class="visual-container">
+                    <img src="../../assets/meloco_full.png" alt="Meloco Kyoran Full Visual" class="main-img" id="meloco-img">
+                </div>
+            </div>
+        </section>
+
+        <section class="profile-grid">
+            <div class="exorcist-card info reveal">
+                <h2>EXORCIST PROFILE</h2>
+                <ul>
+                    <li><strong>誕生日:</strong> 10月29日</li>
+                    <li><strong>身長:</strong> 171cm (ヒール込み / 素164cm)</li>
+                    <li><strong>種族:</strong> 祓魔師 (Exorcist)</li>
+                    <li><strong>出身:</strong> 日本 (ENのバイリンガル架け橋)</li>
+                    <li><strong>趣味:</strong> 商業BL、モノマネ</li>
+                </ul>
+            </div>
+            <div class="exorcist-card traits reveal">
+                <h2>KAIUN PHENOMENON</h2>
+                <p>昼は生徒会のイベントプランナー、夜は祓魔師。お気に入りの傘で悪霊を退治する。クールな外見とは裏腹に、関西弁が飛び出す「おもしれー女」。無人島サバイバル経験を持つタフな精神と、JP・ENを繋ぐ高い言語能力を誇る。</p>
+                <div class="mode-toggle-zone">
+                    <button id="trigger-kaiun">KAIUN LUCK TRIGGER 🍀</button>
+                    <p class="mode-desc">Status: <span id="kaiun-label">ENHANCED</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="episodes-section">
+            <h2 class="section-title">祓魔の年代記 (MELOCO RECORDS)</h2>
+            <div class="episode-grid">
+                <div class="episode-box reveal">
+                    <h3>海運メロコ界隈</h3>
+                    <p>GTAイベントで作成した強烈な顔が「ご利益がある」と話題に。待ち受けにすると運気が上がると噂の、公式公認の「海運」現象。</p>
+                </div>
+                <div class="episode-box reveal">
+                    <h3>無人島サバイバル</h3>
+                    <p>教育方針により、デビュー前にタイの無人島でガチサバイバル。のちに石神のぞみと共に「2泊3日無人島生活」も敢行した。</p>
+                </div>
+                <div class="episode-box reveal">
+                    <h3>狂蘭ロメオ</h3>
+                    <p>エイプリルフールに現れる男性格。低音のイケメンボイスによるASMRや歌唱で、普段とは違う魅力を見せつけファンを沸かせる。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="interaction-zone reveal">
+            <h2>EXORCISM RITUAL</h2>
+            <p>メロコの傘をタップして悪霊を祓おう！運気が上がれば、特別な「海運」フェイスが現れるかも？</p>
+            <div class="ritual-box" id="ritual-area">
+                <div class="ghost-target" id="ghost">👻</div>
+                <div class="kaiun-face" id="kaiun-img">😎</div>
+            </div>
+        </section>
+
+        <section class="lore-section reveal">
+            <h2>LORE</h2>
+            <p>無限学科XSOLEILの2年生。祓魔師の名家「狂蘭家」に生まれ、厳しい教育（無人島送りなど）を経てライバーへ。デビューの1年前に渡米した経験から、ネイティブな日本語と流暢な英語を操り、JP・EN両リスナーから絶大な信頼を得ている。林原めぐみさんのキャラやハリウッドザコシショウのモノマネまでこなす多才ぶり。レースゲーム『首都高バトル』では「虹渡る異世界トラベラー」として参戦するなど、その活動は次元を超えて広がり続けている。</p>
+        </section>
+    </main>
+
+    <div class="umbrella-flash" id="flash-fx"></div>
+
+    <script src="meloco.js"></script>
+</body>
+
+</html>

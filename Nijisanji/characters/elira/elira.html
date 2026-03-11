@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elira Pendora (エリーラ ペンドラ) - Nijisanji EN Archive</title>
+    <link rel="stylesheet" href="../../nijisanji_style.css">
+    <link rel="stylesheet" href="elira.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="elira-theme">
+    <div class="sky-background" id="sky-bg">
+        <div class="sun-glow"></div>
+        <div class="clouds-container" id="clouds"></div>
+    </div>
+
+    <header>
+        <nav>
+            <a href="../../nijisanji_index.html" class="back-link">← ARCHIVE</a>
+            <div class="dragon-mode">DRAGON FORM: <span id="dragon-status">OFF</span></div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="unit-badge">LazuLight</div>
+                <h1 class="char-name">Elira Pendora <span class="jp-name">エリーラ ペンドラ</span></h1>
+                <p class="catchphrase">「Solar Sky Dragon, here to brighten your day!」</p>
+                <div class="status-tags">
+                    <span>Solar Sky Dragon</span>
+                    <span>LazuLight Leader (?)</span>
+                    <span>FamElira</span>
+                </div>
+            </div>
+            <div class="character-visual" id="elira-visual">
+                <div class="sky-crest">
+                    <span class="dragon-icon">🐉</span>
+                    <div class="solar-rings"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="profile-grid">
+            <div class="glass-card info reveal">
+                <h2>BASIC DATA</h2>
+                <ul>
+                    <li><strong>種族:</strong> Solar Sky Dragon (竜人)</li>
+                    <li><strong>誕生日:</strong> 10月16日</li>
+                    <li><strong>身長:</strong> 160cm (竜形態: 1,432cm)</li>
+                    <li><strong>特技:</strong> 超超超早口</li>
+                    <li><strong>ファンネーム:</strong> FamElira</li>
+                </ul>
+            </div>
+            <div class="glass-card traits reveal">
+                <h2>DRAGON TRAITS</h2>
+                <p>太陽に最も近い空からやってきた竜人。包容力のある性格で、NIJISANJI ENのまとめ役として慕われている。流暢な日本語と深いオタク知識（特に少年漫画や乙女ゲーム）を持つ。</p>
+                <div class="dragon-toggle-zone">
+                    <button id="toggle-dragon">TRANSFORM ☀️</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="episodes-section">
+            <h2 class="section-title">LEGENDARY TALES</h2>
+            <div class="episode-grid">
+                <div class="episode-box reveal">
+                    <h3>ナイアガラ構文</h3>
+                    <p>カナダ人としての「ナイアガラの滝」への熱い思いを息継ぎなしのマシンガントークで語り尽くした伝説。ファンの間で語り継がれている。</p>
+                </div>
+                <div class="episode-box reveal">
+                    <h3>LazuLightの名付け親</h3>
+                    <p>同期ユニット「LazuLight」の名前を発案。スタッフやメンバーから絶賛され、ENの始まりを飾る名前となった。</p>
+                </div>
+                <div class="episode-box reveal">
+                    <h3>Dragon Deez Nuts</h3>
+                    <p>デビュー配信冒頭での衝撃的なジョーク。清楚な見た目からのギャップで視聴者に強烈なインパクトを与えた。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="custom-interaction reveal">
+            <h2>NIAGARA SPEED-TALK</h2>
+            <p>エリーラの特技、超早口を体験！ボタンを押して「ナイアガラ構文」を発生させよう！</p>
+            <div class="niagara-vessel">
+                <div id="niagara-stream"></div>
+                <button id="talk-btn">MACHINEGUN TALK 💨</button>
+            </div>
+        </section>
+
+        <section class="lore-section reveal">
+            <h2>LORE</h2>
+            <p>晴れの日の光のように誰にでも平等で、優しく包容力のある性格。NIJISANJI ENの初期メンバーとして、公式番組の進行や大規模コラボの主催を務めることが多い。日本のアニメ・漫画、乙女ゲーム、ボカロ、声優に精通しており、ネットミームにも明るい。冷凍納豆をレンジで温めるという独特の食習慣で日本のファンを驚かせたこともある。</p>
+        </section>
+    </main>
+
+    <div class="solar-flare" id="flare"></div>
+
+    <script src="elira.js"></script>
+</body>
+
+</html>

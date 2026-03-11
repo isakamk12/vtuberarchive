@@ -1,0 +1,125 @@
+:root {
+    --freo-primary: #AA0037; /* Deep Red */
+    --freo-secondary: #000000;
+    --freo-accent: #FFFFFF;
+    --freo-bg: #121212;
+    --design-cyan: #00FFFF;
+}
+
+.freo-theme {
+    background: var(--freo-bg);
+    color: var(--freo-accent);
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Designer Background */
+.designer-background {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: -1;
+    background: #000;
+}
+
+.grid-layout {
+    position: absolute;
+    width: 100%; height: 100%;
+    background-image: 
+        linear-gradient(rgba(170, 0, 55, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(170, 0, 55, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+}
+
+.coffee-steam {
+    position: absolute;
+    bottom: 0; left: 50%;
+    width: 200px; height: 300px;
+    background: radial-gradient(ellipse at bottom, rgba(255,255,255,0.05) 0%, transparent 70%);
+    filter: blur(20px);
+    pointer-events: none;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 10rem 10% 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.char-name {
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: var(--freo-primary);
+    letter-spacing: -2px;
+}
+
+.jp-name {
+    display: block;
+    font-size: 1.8rem;
+    color: var(--freo-accent);
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    letter-spacing: 0;
+}
+
+/* Design Cards */
+.design-card {
+    background: rgba(255, 255, 255, 0.02);
+    border-left: 5px solid var(--freo-primary);
+    padding: 2.5rem;
+    backdrop-filter: blur(10px);
+}
+
+/* Interaction: Coffee */
+.coffee-box {
+    height: 180px;
+    background: rgba(170, 0, 55, 0.05);
+    border: 1px dashed var(--freo-primary);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.grinder {
+    font-size: 3rem;
+    transition: 0.5s;
+}
+
+.dripper {
+    font-size: 3rem;
+    margin-top: 10px;
+}
+
+/* Spanish Lesson */
+.spanish-lesson {
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--freo-primary);
+    color: white;
+    padding: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+    display: none;
+    z-index: 2000;
+    border-radius: 10px;
+}
+
+/* Reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 800px) {
+    .char-name { font-size: 2.5rem; }
+}

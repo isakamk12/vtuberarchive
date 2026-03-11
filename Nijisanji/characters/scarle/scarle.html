@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scarle Yonaguni (スカーレ ヨナグニ) - Nijisanji EN Archive</title>
+    <link rel="stylesheet" href="../../nijisanji_style.css">
+    <link rel="stylesheet" href="scarle.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,900;1,400&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="scarle-theme">
+    <div class="elegant-background" id="bg-canvas">
+        <div class="crimson-gradient"></div>
+        <div class="redbull-sparkles" id="sparkles"></div>
+    </div>
+
+    <header>
+        <nav>
+            <a href="../../nijisanji_index.html" class="back-link">← ARCHIVE</a>
+            <div class="room-status">ROOM STATUS: <span id="messy-level">MESSY</span></div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="unit-badge">ILUNA</div>
+                <h1 class="char-name">Scarle Yonaguni <span class="jp-name">スカーレ ヨナグニ</span></h1>
+                <p class="catchphrase">「Elegant, alluring, and a little bit... messy. 💋💅」</p>
+                <div class="status-tags">
+                    <span>Enchantress</span>
+                    <span>ILUNA 3rd Year</span>
+                    <span>Scarlings</span>
+                </div>
+            </div>
+            <div class="character-visual" id="scarle-visual">
+                <div class="enchant-crest">
+                    <span class="kiss-icon">💋</span>
+                    <div class="crimson-glow"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="profile-grid">
+            <div class="elegant-card info reveal">
+                <h2>ENCHANTRESS LOG</h2>
+                <ul>
+                    <li><strong>誕生日:</strong> 2月19日 (National Choco Mint Day)</li>
+                    <li><strong>身長:</strong> 165cm</li>
+                    <li><strong>属性:</strong> 異能学科 ILUNA 3年生</li>
+                    <li><strong>特技:</strong> 声の使い分け、チアリーディング (全国レベル)</li>
+                    <li><strong>弱点:</strong> 部屋の片付け (汚部屋勢)</li>
+                </ul>
+            </div>
+            <div class="elegant-card traits reveal">
+                <h2>ELEGANT DUALITY</h2>
+                <p>セクシーで大人な「ママ」の一面と、いじられると「ポン」が出る可愛らしいギャップの持ち主。ファン想いで長時間配信をこなし、料理やお絵描きなど様々なことに挑戦する。名前の「t」を書き忘れたエピソードは有名。</p>
+                <div class="mode-toggle-zone">
+                    <button id="toggle-buriho">MOMENT OF EMBARRASSMENT (BURIHO) 🌯</button>
+                    <p class="mode-desc">Current Persona: <span id="persona-label">SCARLE</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="episodes-section">
+            <h2 class="section-title">緋色の逸話 (SCARLE TALES)</h2>
+            <div class="episode-grid">
+                <div class="episode-box reveal">
+                    <h3>「t」を忘れた名前</h3>
+                    <p>オーディション時、「Scarlet」と書くはずが「t」を書き忘れ。結果、「Scarle」としてデビューすることに。</p>
+                </div>
+                <div class="episode-box reveal">
+                    <h3>ブリホーお姉さん</h3>
+                    <p>月ノ美兎の企画で偶然露出。恥ずかしさのあまりXの名前を「Buriho Oneesan」に変更し悶絶した。</p>
+                </div>
+                <div class="episode-box reveal">
+                    <h3>波乱のデビュー</h3>
+                    <p>通信トラブルにより配信が中断。のちに枠を取り直して再配信し、ファンとの絆を深めるきっかけとなった。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="interaction-zone reveal">
+            <h2>FOOD CRIME COOKER</h2>
+            <p>スカーレの独特な味覚を体験。材料を混ぜて「食の犯罪」を完成させよう！</p>
+            <div class="kitchen-box" id="kitchen">
+                <div class="bowl-inner" id="bowl">
+                    <div id="soup-color" class="liquid"></div>
+                </div>
+                <div class="ingredients">
+                    <button class="ing-btn" data-type="pizza">🍍 PIZZA</button>
+                    <button class="ing-btn" data-type="icecream">🍦 ICE CREAM</button>
+                    <button class="ing-btn" data-type="redbull">🥤 RED BULL</button>
+                </div>
+            </div>
+            <p id="cook-msg">SELECT INGREDIENTS...</p>
+        </section>
+
+        <section class="lore-section reveal">
+            <h2>LORE</h2>
+            <p>異能学科ILUNAの3年生。緋色の杖を持ち、妖艶な美しさを放つ実力者。レッドブル・シュガーフリーを愛飲し、空き缶が散乱する部屋で生活する「汚部屋勢」を公言している。外では人見知りだが配信では毒舌な一面も見せる。日本旅行では数々のトラブルに見舞われつつも、同期とディズニーシーを満喫するなど情に厚いお姉さん。</p>
+        </section>
+    </main>
+
+    <div class="redbull-flash" id="flash"></div>
+
+    <script src="scarle.js"></script>
+</body>
+
+</html>

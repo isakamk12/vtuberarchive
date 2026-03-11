@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freodore (フリオドール) - Nijisanji EN Archive</title>
+    <link rel="stylesheet" href="../../nijisanji_style.css">
+    <link rel="stylesheet" href="../char-base-v2.css">
+    <link rel="stylesheet" href="freodore.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="freo-theme">
+    <div class="designer-background" id="bg-canvas">
+        <div class="grid-layout"></div>
+        <div class="coffee-steam" id="steam"></div>
+    </div>
+
+    <header>
+        <nav>
+            <a href="../../nijisanji_index.html" class="back-link">← ARCHIVE</a>
+            <div class="philosophy-status">IOTMO: <span id="iotmo-status">OK</span></div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="unit-badge">BY THE BEAT</div>
+                <h1 class="char-name">Freodore <span class="jp-name">フリオドール</span></h1>
+                <p class="catchphrase">「A serious but lovable designer. It's okay to miss out. 💿📌」</p>
+                <div class="status-tags">
+                    <span>Visual Designer</span>
+                    <span>INTJ / 6w7</span>
+                    <span>Doremin</span>
+                </div>
+            </div>
+            <div class="character-visual">
+                <div class="floating-hedgehog" id="hedgehog-icon">🦔</div>
+                <div class="visual-container">
+                    <img src="../../assets/freo_full.png" alt="Freodore Full Visual" class="main-img" id="freo-img">
+                </div>
+            </div>
+        </section>
+
+        <section class="profile-grid">
+            <div class="design-card info reveal">
+                <h2>SPECIFICATION SHEET</h2>
+                <ul>
+                    <li><strong>誕生日:</strong> 2月11日</li>
+                    <li><strong>身長:</strong> 171cm</li>
+                    <li><strong>職業:</strong> デザイナー (Visual Design)</li>
+                    <li><strong>言語:</strong> 英語、スペイン語(Native)、日本語</li>
+                    <li><strong>特長:</strong> 色覚多様性の尊重、ミニマリズム哲学</li>
+                </ul>
+            </div>
+            <div class="design-card traits reveal">
+                <h2>CREATIVE BOUNDARY</h2>
+                <p>ユニット「BY THE BEAT」の技術・美学を管理するデザイナー。スペイン語を話す温かいトリリンガル。冷静でストイックな性格だが、7回のオーディションを経て夢を叶えた情熱の人。ファンへ「IOTMO（見逃しても大丈夫）」という優しい概念を提唱し、心地よい距離感を大切にしている。</p>
+                <div class="mode-toggle-zone">
+                    <button id="trigger-freo">FREO BY THE WAY ❓</button>
+                    <p class="mode-desc">Alias: <span id="alias-label">Freodore</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="episodes-section">
+            <h2 class="section-title">設計図の余白 (DESIGN LOGS)</h2>
+            <div class="episode-grid">
+                <div class="episode-box reveal">
+                    <h3>7回の挑戦</h3>
+                    <p>公式オーディションに7回応募し、諦めずに情熱を燃やし続けて掴み取ったデビュー。その真摯な姿勢が人々に勇気を与える。</p>
+                </div>
+                <div class="episode-box reveal">
+                    <h3>色覚多様性とデザイン</h3>
+                    <p>自身の色覚異常を公表。赤と緑をあえてイメージカラーに使い、「認識の差異」をクリエイティブな力に変えている。</p>
+                </div>
+                <div class="episode-box reveal">
+                    <h3>IOTMO 提唱</h3>
+                    <p>「It's Okay To Miss Out」の略。無理のない推し活を推奨する、リスナーへの深い愛情が詰まった彼独自のスローガン。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="interaction-zone reveal">
+            <h2>COFFEE ZATSU ASMR</h2>
+            <p>こだわりのハンドドリップ体験。豆を挽く音を聞きながら、穏やかなひとときを。</p>
+            <div class="coffee-box" id="coffee-area">
+                <div class="grinder" id="grinder-icon">⚙️</div>
+                <div class="dripper" id="dripper-icon">☕</div>
+                <p id="extraction-msg">4:6 Method Ready...</p>
+            </div>
+        </section>
+
+        <section class="lore-section reveal">
+            <h2>LORE</h2>
+            <p>デザイナーとして常に「最高」を追求し、ステージの演出から音響まで細部に情熱を注ぐ。日本のミニマリズムと「渋み」を愛し、機材への造詣も深い。戌亥とこさんを推しとし、日本の先輩ライバーへのリスペクトも忘れない。ハリネズミの「Doremin」と共に、スペイン語圏と世界、そこで日本を繋ぐ架け橋として、冷静かつ誠実に歩み続けている。</p>
+        </section>
+    </main>
+
+    <div class="spanish-lesson" id="lesson-overlay">¡Hola! Today's word: <span id="word-val">Amigo</span></div>
+
+    <script src="freodore.js"></script>
+</body>
+
+</html>

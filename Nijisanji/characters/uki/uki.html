@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uki Violeta (浮奇・ヴィオレタ) - Nijisanji EN Archive</title>
+    <link rel="stylesheet" href="../../nijisanji_style.css">
+    <link rel="stylesheet" href="uki.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Marcellus&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="uki-theme">
+    <div class="esper-background" id="bg-canvas">
+        <div class="stardust" id="stars"></div>
+        <div class="milky-way"></div>
+    </div>
+
+    <header>
+        <nav>
+            <a href="../../nijisanji_index.html" class="back-link">← ARCHIVE</a>
+            <div class="esper-mode">PSYCHIC ENERGY: <span id="psychic-val">MAX</span></div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="unit-badge">Noctyx</div>
+                <h1 class="char-name">Uki Violeta <span class="jp-name">浮奇・ヴィオレタ</span></h1>
+                <p class="catchphrase">「A shy esper from the future. Stargazing for you.」</p>
+                <div class="status-tags">
+                    <span>Esper</span>
+                    <span>Uki Mama</span>
+                    <span>Stargazers</span>
+                </div>
+            </div>
+            <div class="character-visual" id="uki-visual">
+                <div class="esper-crest">
+                    <span class="psychic-icon">🔮</span>
+                    <div class="stardust-aura"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="profile-grid">
+            <div class="esper-card info reveal">
+                <h2>PSYCHIC PROFILE</h2>
+                <ul>
+                    <li><strong>誕生日:</strong> 7月17日</li>
+                    <li><strong>身長:</strong> 169cm</li>
+                    <li><strong>属性:</strong> 未来のエスパー (Esper)</li>
+                    <li><strong>言語:</strong> 英語・中国語・韓国語・日本語</li>
+                    <li><strong>特技:</strong> 料理、タロット、ピアノ</li>
+                </ul>
+            </div>
+            <div class="esper-card traits reveal">
+                <h2>STARRY RADIANCE</h2>
+                <p>未来からやってきた超能力者。生粋の人見知りだが、愛情深く涙もろい「浮奇ママ」。LGBTQ+のリスナーを大切にし、誰もが安心できる居場所を作る。感受性が極めて豊か。</p>
+                <div class="mode-toggle-zone">
+                    <button id="trigger-consult">ASK UKI MAMA 💬</button>
+                    <p class="mode-desc">Status: <span id="mama-status">WARM</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="episodes-section">
+            <h2 class="section-title">PSYCHIC CHRONICLES</h2>
+            <div class="episode-grid">
+                <div class="episode-box reveal">
+                    <h3>ウベ事件（カビの悲劇）</h3>
+                    <p>紫芋デザートを冷蔵庫に入れ忘れ常温放置。数日後にカビが生えていることを配信中に確認した伝説のウベ事件。</p>
+                </div>
+                <div class="episode-box reveal">
+                    <h3>甲子園の奇跡</h3>
+                    <p>2022年にじさんじ甲子園。自身の誕生日直後の試合で代打サヨナラ打を放ち、監督と視聴者を感動させた。</p>
+                </div>
+                <div class="episode-box reveal">
+                    <h3>スイカゲーム寝落ち</h3>
+                    <p>配信中に「みんなでお昼寝しよう」と告げ、45分間本当に熟睡。起床後そのままゲームを続行した和みの回。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="interaction-zone reveal">
+            <h2>PSYCHIC ENERGY</h2>
+            <p>浮奇のサイキックエネルギーをチャージ。画面をなぞって「スターダスト」を生成しよう。</p>
+            <div class="energy-box" id="energy-area">
+                <div class="ube-cake" id="ube">🍰 <span id="mold">🦠</span></div>
+                <p id="energy-msg">DON'T FORGET THE UBE.</p>
+            </div>
+        </section>
+
+        <section class="lore-section reveal">
+            <h2>LORE</h2>
+            <p>未来からやってきた人見知りなエスパー。自身の中から発する不思議なエネルギーで超常現象を起こす。『DeJa Vu』の旋律には、彼がなぜ能力者となったのかという壮絶な過去が刻まれている。Noctyxへの愛は誰よりも深く、特にFulgurとは「PsyBorg」として強い絆で結ばれている。料理やバリスタの経験を持ち、その深い包容力は全Stargazersを包み込む。</p>
+        </section>
+    </main>
+
+    <div class="mama-consult" id="bubble">"Everything will be okay, stargazer."</div>
+
+    <script src="uki.js"></script>
+</body>
+
+</html>

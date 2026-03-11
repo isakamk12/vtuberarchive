@@ -1,0 +1,214 @@
+:root {
+    --luca-primary: #D4AF37; /* Gold */
+    --luca-secondary: #000000;
+    --luca-accent: #FFFFFF;
+    --luca-bg: #0a0a0a;
+    --gold-glow: rgba(212, 175, 55, 0.4);
+    --dark-glass: rgba(255, 255, 255, 0.02);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.luca-theme {
+    background: var(--luca-bg);
+    color: var(--luca-accent);
+    font-family: 'Bangers', 'Zen Kaku Gothic New', sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Premium Background: Underground Treasury */
+.mafia-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background: radial-gradient(circle at center, #1a1a1a 0%, #000 100%);
+}
+
+.gold-showers {
+    position: absolute;
+    width: 100%; height: 100%;
+}
+
+.gold-showers::before {
+    content: '';
+    position: absolute;
+    width: 100%; height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.05) 0%, transparent 80%);
+}
+
+/* Hero Section: Boss Presence */
+.hero-section {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5%;
+    gap: 5rem;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 650px;
+}
+
+.unit-badge {
+    color: var(--luca-primary);
+    font-weight: 400;
+    letter-spacing: 12px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    display: block;
+}
+
+.char-name {
+    font-size: 7.5rem;
+    line-height: 0.8;
+    color: var(--luca-primary);
+    text-shadow: 10px 10px 0px #000, 0 0 50px var(--gold-glow);
+    transform: skewX(-5deg);
+}
+
+.jp-name {
+    display: block;
+    font-size: 2rem;
+    color: #fff;
+    margin-top: 2rem;
+    font-weight: 400;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    letter-spacing: 10px;
+}
+
+.catchphrase {
+    margin-top: 4rem;
+    font-size: 1.8rem;
+    background: #000;
+    color: var(--luca-primary);
+    padding: 2.5rem;
+    border: 2px solid var(--luca-primary);
+    clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
+}
+
+.status-tags {
+    margin-top: 4rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.status-tags span {
+    background: var(--luca-primary);
+    color: #000;
+    padding: 0.8rem 2rem;
+    font-weight: 900;
+    font-size: 0.8rem;
+    box-shadow: 5px 5px 0px #000;
+}
+
+/* CSS-Based Boss Visual */
+.character-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mafia-crest {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boss-icon {
+    font-size: 15rem;
+    z-index: 2;
+    filter: drop-shadow(0 0 60px var(--luca-primary));
+    animation: bossFloat 4s ease-in-out infinite;
+}
+
+@keyframes bossFloat {
+    0%, 100% { transform: translateY(0) rotate(-2deg); }
+    50% { transform: translateY(-40px) rotate(2deg); }
+}
+
+.gold-pulse {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 5px solid var(--luca-primary);
+    opacity: 0.2;
+    animation: pulseGold 3s ease-out infinite;
+}
+
+@keyframes pulseGold {
+    0% { transform: scale(0.8); opacity: 0.5; }
+    100% { transform: scale(1.5); opacity: 0; }
+}
+
+/* Content Layout */
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    padding: 10rem 10% 8rem;
+}
+
+.gold-card {
+    background: #000;
+    border: 1px solid var(--luca-primary);
+    padding: 5rem;
+    position: relative;
+    transition: 0.4s;
+}
+
+.gold-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 50px var(--gold-glow);
+}
+
+.gold-card h2 {
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    color: var(--luca-primary);
+    text-transform: uppercase;
+}
+
+/* Interactions */
+.interaction-zone {
+    padding: 5rem 10%;
+    text-align: center;
+}
+
+.booba-training {
+    height: 400px;
+    background: #000;
+    border: 2px dashed var(--luca-primary);
+}
+
+/* Reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(100px) skewY(2deg);
+    transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0) skewY(0);
+}
+
+@media (max-width: 1200px) {
+    .char-name { font-size: 5rem; }
+    .hero-section { flex-direction: column; text-align: center; }
+    .profile-grid { grid-template-columns: 1fr; }
+}

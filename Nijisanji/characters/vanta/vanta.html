@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vantacrow Bringer (ベンタクロウ ブリンガー) - Nijisanji EN Archive</title>
+    <link rel="stylesheet" href="../../nijisanji_style.css">
+    <link rel="stylesheet" href="vanta.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="vanta-theme">
+    <div class="mercenary-background" id="bg-canvas">
+        <div class="crow-feathers" id="feathers"></div>
+    </div>
+
+    <header>
+        <nav>
+            <a href="../../nijisanji_index.html" class="back-link">← ARCHIVE</a>
+            <div class="hero-status">HERO RANK: <span id="rank-val">S</span></div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="unit-badge">Krisis</div>
+                <h1 class="char-name">Vantacrow Bringer <span class="jp-name">ベンタクロウ ブリンガー</span></h1>
+                <p class="catchphrase">「No trace left behind, only results. ...Crazy-dayo! 🃏🔪」</p>
+                <div class="status-tags">
+                    <span>Ace Mercenary</span>
+                    <span>Reformed Hero</span>
+                    <span>Vantacrew</span>
+                </div>
+            </div>
+            <div class="character-visual" id="vanta-visual">
+                <div class="mercenary-crest">
+                    <span class="vanta-icon">🦅</span>
+                    <div class="scarlet-aura"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="profile-grid">
+            <div class="mercenary-card info reveal">
+                <h2>HERO DOSSIER</h2>
+                <ul>
+                    <li><strong>誕生日:</strong> 2月6日</li>
+                    <li><strong>身長:</strong> 180cm (ヒール込み182cm)</li>
+                    <li><strong>種族:</strong> 人間 (元傭兵のヒーロー)</li>
+                    <li><strong>特技:</strong> 声劇、運動、言葉遊び</li>
+                    <li><strong>口癖:</strong> Crazy-dayo、Sick、Tabun</li>
+                </ul>
+            </div>
+            <div class="mercenary-card traits reveal">
+                <h2>THE UNSTOPPABLE TYRANT</h2>
+                <p>慎重かつ的確に仕事を遂行する信頼の切り札。かつては裏社会を震え上がらせた傭兵だったが、現在はヒーローとして心を入れ替えている。深みのある低音ボイスが特徴の内向的な「dork」。ダジャレと日本愛は誰にも負けない。</p>
+                <div class="mode-toggle-zone">
+                    <button id="trigger-crazy">CRAZY-DAYO! 🃏</button>
+                    <p class="mode-desc">Status: <span id="vanta-label">COOL</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="episodes-section">
+            <h2 class="section-title">傭兵の軌跡 (VANTA LOGS)</h2>
+            <div class="episode-grid">
+                <div class="episode-box reveal">
+                    <h3>告白配信 (Confession)</h3>
+                    <p>リスナーの秘密や懺悔を読み上げる名物配信。鋭いツッコミと時折見せる優しさで、Vantacrewたちの心を掴んでいる。</p>
+                </div>
+                <div class="episode-box reveal">
+                    <h3>日本語アドベンチャー</h3>
+                    <p>「Tabun（たぶん）」などの日本語を愛し、先輩をゲストに招いた「日本語のみ配信」を敢行。語学学習に極めて情熱的。</p>
+                </div>
+                <div class="episode-box reveal">
+                    <h3>靴のサイズ事件</h3>
+                    <p>自称トップクラスの靴サイズ（30cm）を誇っていたが、先輩Vox（31cm）の存在を知り激しく驚愕した敗北の記憶。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="interaction-zone reveal">
+            <h2>BATTLE CRY SIMULATOR</h2>
+            <p>ホラーゲーム（？）での絶叫をシミュレート。これは悲鳴ではなく「雄叫び（Battle Cry）」だ！</p>
+            <div class="voice-box" id="voice-area">
+                <div class="sound-wave" id="wave"></div>
+                <button id="cry-btn">ACTIVATE BATTLE CRY!! 👹</button>
+            </div>
+        </section>
+
+        <section class="lore-section reveal">
+            <h2>LORE</h2>
+            <p>秘密組織の元傭兵。現在はヒーローとして活動しているが、かつての「暴君」としての実力は健在。恥ずかしがり屋のAIカラス「Kurokocco」と共に任務を遂行する。柴犬の「Ryu」を愛でる家庭的な一面も。日本語の習得に余念がなく、演技力を活かしたASMRやボイスパックは非常に高い評価を得ている。慎重派だが、一度スイッチが入ると独自のユーモアと低音ボイスで場を支配する、Krisisの頼れるエース。</p>
+        </section>
+    </main>
+
+    <div class="shoe-scare" id="boot-shock">YOUR SHOES ARE HOW BIG?! (31cm)</div>
+
+    <script src="vanta.js"></script>
+</body>
+
+</html>

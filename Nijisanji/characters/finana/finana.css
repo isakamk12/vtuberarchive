@@ -1,0 +1,246 @@
+:root {
+    --finana-primary: #4BCABC; /* Deep Turquoise */
+    --finana-secondary: #FFB7B2; /* Coral Pink */
+    --finana-accent: #FFFFFF;
+    --finana-bg: #001f25;
+    --sea-glass: rgba(75, 202, 188, 0.05);
+    --glow-soft: rgba(75, 202, 188, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.finana-theme {
+    background: var(--finana-bg);
+    color: var(--finana-accent);
+    font-family: 'Fredoka', 'Zen Kaku Gothic New', sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Premium Background: Underwater Abyss */
+.ocean-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background: linear-gradient(to bottom, #002B36 0%, #000c11 100%);
+}
+
+.ocean-background::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at 50% -20%, rgba(75, 202, 188, 0.1) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.coral-reef {
+    position: absolute;
+    bottom: -10%;
+    width: 100%;
+    height: 40%;
+    background: radial-gradient(ellipse at bottom, rgba(255, 183, 178, 0.05) 0%, transparent 70%);
+    filter: blur(40px);
+}
+
+/* Hero Section: Expansive Fluidity */
+.hero-section {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5%;
+    gap: 5rem;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 650px;
+}
+
+.unit-badge {
+    color: var(--finana-primary);
+    font-weight: 700;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    display: block;
+    opacity: 0.8;
+}
+
+.char-name {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 0.9;
+    letter-spacing: -2px;
+    color: var(--finana-primary);
+    text-shadow: 0 0 40px var(--glow-soft);
+}
+
+.jp-name {
+    display: block;
+    font-size: 2rem;
+    color: var(--finana-secondary);
+    margin-top: 1rem;
+    font-weight: 400;
+}
+
+.catchphrase {
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    font-style: italic;
+    opacity: 0.9;
+    border-left: 5px solid var(--finana-secondary);
+    padding-left: 2rem;
+}
+
+.status-tags {
+    margin-top: 3rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.status-tags span {
+    border: 1px solid var(--finana-primary);
+    padding: 0.6rem 2rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    background: rgba(75, 202, 188, 0.05);
+}
+
+/* CSS-Based Mermaid Visual */
+.character-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.ocean-crest {
+    position: relative;
+    width: 450px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mermaid-icon {
+    font-size: 12rem;
+    z-index: 2;
+    filter: drop-shadow(0 0 50px var(--finana-primary));
+    animation: swim 6s ease-in-out infinite;
+}
+
+@keyframes swim {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    33% { transform: translate(20px, -30px) rotate(5deg); }
+    66% { transform: translate(-10px, -50px) rotate(-5deg); }
+}
+
+.bubble-stream {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.bubble-stream::before, .bubble-stream::after {
+    content: '🫧';
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0.4;
+    animation: rise 4s linear infinite;
+}
+
+@keyframes rise {
+    0% { transform: translateY(100px) scale(0); opacity: 0; }
+    50% { opacity: 0.5; }
+    100% { transform: translateY(-300px) scale(1.5); opacity: 0; }
+}
+
+/* Content Layout */
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    padding: 10rem 10% 5rem;
+}
+
+.sea-card {
+    background: var(--sea-glass);
+    backdrop-filter: blur(30px);
+    border: 1px solid rgba(75, 202, 188, 0.2);
+    border-radius: 40px;
+    padding: 4rem;
+    transition: 0.5s;
+}
+
+.sea-card:hover {
+    background: rgba(75, 202, 188, 0.1);
+    transform: translateY(-10px);
+}
+
+.sea-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: var(--finana-secondary);
+}
+
+/* Interaction: Stress Zone */
+.special-interaction {
+    padding: 0 10%;
+    margin-top: 10rem;
+    text-align: center;
+}
+
+.stress-zone {
+    height: 400px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--finana-primary);
+    box-shadow: inset 0 0 50px rgba(75, 202, 188, 0.2);
+}
+
+.soft-circle {
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(circle, var(--finana-secondary), var(--finana-primary));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    cursor: pointer;
+    box-shadow: 0 0 30px var(--finana-primary);
+    transition: 0.1s;
+}
+
+/* Reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: 1.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 1100px) {
+    .char-name { font-size: 4.5rem; }
+    .hero-section { flex-direction: column; text-align: center; }
+    .profile-grid { grid-template-columns: 1fr; }
+}

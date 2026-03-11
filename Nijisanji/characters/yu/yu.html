@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yu Q. Wilson (ユウ Q ウィルソン) - Nijisanji EN Archive</title>
+    <link rel="stylesheet" href="../../nijisanji_style.css">
+    <link rel="stylesheet" href="yu.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bangers&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="yu-theme">
+    <div class="hero-background" id="bg-canvas">
+        <div class="ash-grid"></div>
+        <div class="tentapod-tracker" id="tentapod">👾</div>
+    </div>
+
+    <header>
+        <nav>
+            <a href="../../nijisanji_index.html" class="back-link">← ARCHIVE</a>
+            <div class="coffee-status">COFFEE INTAKE: <span id="coffee-val">LITERS</span></div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="unit-badge">Krisis</div>
+                <h1 class="char-name">Yu Q. Wilson <span class="jp-name">ユウ Q ウィルソン</span></h1>
+                <p class="catchphrase">「Former hitman, current hero! Do you want to join the goooo gaga gang? 🥽」</p>
+                <div class="status-tags">
+                    <span>A.S.H. Agent</span>
+                    <span>Leader Material</span>
+                    <span>Wilsoneer</span>
+                </div>
+            </div>
+            <div class="character-visual" id="yu-visual">
+                <div class="agent-crest">
+                    <span class="protag-icon">🥽</span>
+                    <div class="ash-scanner"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="profile-grid">
+            <div class="ash-card info reveal">
+                <h2>AGENT DOSSIER</h2>
+                <ul>
+                    <li><strong>誕生日:</strong> 9月4日</li>
+                    <li><strong>身長:</strong> 171cm (ヒール込み175cm)</li>
+                    <li><strong>種族:</strong> 人間 (元ヒットマンのヒーロー)</li>
+                    <li><strong>所属:</strong> 秘密組織 A.S.H.</li>
+                    <li><strong>苦手:</strong> チョコミント、ピーマン</li>
+                </ul>
+            </div>
+            <div class="ash-card traits reveal">
+                <h2>THE HEROIC PROTAGONIST</h2>
+                <p>秘密組織「A.S.H.」所属。おちゃらけた性格だが、腕利きの元ヒットマン。アニメの主人公のような存在感を放ち、大規模なプロジェクト（Terrasanji等）を自ら監督するリーダー。左利きだがマウスは右。大のコーヒー好きで、常にしゃっくりと闘っている。</p>
+                <div class="mode-toggle-zone">
+                    <button id="trigger-hiccup">DRINK COFFEE ☕</button>
+                    <p class="mode-desc">Condition: <span id="yu-label">STABLE</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="episodes-section">
+            <h2 class="section-title">ヒーローの活動録 (YU RECORDS)</h2>
+            <div class="episode-grid">
+                <div class="episode-box reveal">
+                    <h3>Terrasanji 監督</h3>
+                    <p>ENライバー18名を巻き込んだ大型劇を企画。脚本60ページという情熱の塊を創り上げ、そのリーダーシップを見せつけた。</p>
+                </div>
+                <div class="episode-box reveal">
+                    <h3>Mention Jar 敗北</h3>
+                    <p>「同期の話をしたら罰金」という縛りに挑戦。しかし同期愛が強すぎて開始早々に失敗、無残に罰金が積み上がった。</p>
+                </div>
+                <div class="episode-box reveal">
+                    <h3>Goooo gaga gang</h3>
+                    <p>エプロン姿の同期Claudeを「バブバブギャング」と揶揄。それ以来、エプロンを見るたびに炸裂する鉄板ジョーク。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="interaction-zone reveal">
+            <h2>KRI$I$ MENTION JAR</h2>
+            <p>ユウが同期の名前を出すたびに罰金チャージ！クリックして罰金額を増やそう（？）</p>
+            <div class="jar-box" id="jar-area">
+                <div class="coin-ani" id="coin">🪙</div>
+                <div class="penalty-count">PENALTY: $<span id="balance">0</span></div>
+            </div>
+        </section>
+
+        <section class="lore-section reveal">
+            <h2>LORE</h2>
+            <p>元は闇の社会でヒットマンとして活躍していたが、現在は「A.S.H.」のエージェントとして平和を守る。どんな武器も使いこなすプロフェッショナル。「Tentapod」というAI相棒を連れ、宇宙規模の冒険を夢見ている。2025年夏に日本へ移住。同期のグッズで自室に祭壇を作るほどの「同期オタク」でもある。マネージャーを「頼れる友達」と慕うなど、情に厚く誠実な、自他共に認めるメインキャラクター。</p>
+        </section>
+    </main>
+
+    <div class="ash-overlay" id="ash-scan">SCANNING AGENT...</div>
+
+    <script src="yu.js"></script>
+</body>
+
+</html>

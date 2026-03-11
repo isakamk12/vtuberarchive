@@ -1,0 +1,231 @@
+:root {
+    --klara-primary: #C9A66B; /* Tea Brown */
+    --klara-secondary: #2E1A1A; /* Deep Wood */
+    --klara-accent: #FFFFFF;
+    --klara-bg: #FDF5E6; /* Antique White */
+    --bouquet-red: #D2691E;
+    --klara-mist: rgba(201, 166, 107, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.klara-theme {
+    background: var(--klara-bg);
+    color: var(--klara-secondary);
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Premium Background: Morning in the Manor Garden */
+.mansion-background {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    z-index: -1;
+    background: linear-gradient(to bottom, #fcf2e3 0%, #e0d1bc 100%);
+}
+
+.mansion-fog {
+    position: absolute;
+    width: 200%; height: 200%;
+    background: radial-gradient(circle, var(--klara-mist) 0%, transparent 60%);
+    animation: mistFlow 30s linear infinite;
+}
+
+@keyframes mistFlow {
+    from { transform: translate(-20%, -20%); }
+    to { transform: translate(0, 0); }
+}
+
+/* Hero Section: The Maid's Hospitality */
+.hero-section {
+    min-height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5%;
+    gap: 6rem;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 700px;
+}
+
+.unit-badge {
+    color: var(--bouquet-red);
+    font-weight: 700;
+    letter-spacing: 12px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    display: block;
+    border-bottom: 2px solid var(--bouquet-red);
+    width: fit-content;
+    padding-bottom: 0.5rem;
+}
+
+.char-name {
+    font-size: 5.5rem;
+    line-height: 1.1;
+    font-family: 'Dancing Script', cursive;
+    color: var(--klara-secondary);
+    text-shadow: 2px 2px 0 var(--klara-primary);
+    font-weight: 700;
+}
+
+.jp-name {
+    display: block;
+    font-size: 2rem;
+    color: var(--klara-secondary);
+    margin-top: 1rem;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    letter-spacing: 5px;
+    font-weight: 900;
+    opacity: 0.8;
+}
+
+.catchphrase {
+    margin-top: 4rem;
+    font-size: 1.6rem;
+    font-style: italic;
+    background: rgba(201, 166, 107, 0.1);
+    border: 1px solid var(--klara-primary);
+    padding: 3rem;
+    line-height: 1.6;
+    border-radius: 5px;
+    position: relative;
+}
+
+.catchphrase::after {
+    content: '🫖';
+    position: absolute;
+    bottom: -20px; right: 20px;
+    font-size: 3rem;
+    opacity: 0.3;
+}
+
+.status-tags {
+    margin-top: 4rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.status-tags span {
+    border: 1px solid var(--klara-secondary);
+    color: var(--klara-secondary);
+    padding: 0.8rem 2.22rem;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+    border-radius: 30px;
+}
+
+/* CSS-Based Maid Visual */
+.character-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mansion-crest {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.maid-icon {
+    font-size: 15rem;
+    z-index: 2;
+    filter: drop-shadow(0 0 40px rgba(0,0,0,0.1));
+    animation: gentleSteam 4s ease-in-out infinite;
+}
+
+@keyframes gentleSteam {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.ghost-wisp {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: 1px dashed var(--klara-primary);
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: spiritOrbit 15s linear infinite;
+}
+
+@keyframes spiritOrbit {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Content Layout */
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+    padding: 12rem 10% 8rem;
+}
+
+.maid-card {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(15px);
+    border: 1px solid var(--klara-primary);
+    padding: 5rem;
+    position: relative;
+    transition: 0.3s;
+    box-shadow: 15px 15px 0 var(--klara-primary);
+}
+
+.maid-card:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 20px 20px 0 var(--klara-primary);
+}
+
+.maid-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 3.5rem;
+    color: var(--klara-secondary);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+/* Interaction */
+.interaction-zone {
+    padding: 8rem 10%;
+    text-align: center;
+}
+
+.gps-box {
+    height: 350px;
+    background: #fff;
+    border: 2px solid var(--klara-primary);
+}
+
+/* Reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 1200px) {
+    .char-name { font-size: 4rem; }
+    .hero-section { flex-direction: column; text-align: center; }
+    .profile-grid { grid-template-columns: 1fr; }
+}

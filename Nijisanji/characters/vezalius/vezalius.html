@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vezalius Bandage (ヴェザリウス バンデージ) - Nijisanji EN Archive</title>
+    <link rel="stylesheet" href="../../nijisanji_style.css">
+    <link rel="stylesheet" href="vezalius.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@900&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="vezalius-theme">
+    <div class="medical-background" id="bg-canvas">
+        <div class="bandage-scroll" id="bandages"></div>
+    </div>
+
+    <header>
+        <nav>
+            <a href="../../nijisanji_index.html" class="back-link">← ARCHIVE</a>
+            <div class="medic-status">MEDIC: <span id="medic-val">READY</span></div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="unit-badge">Krisis</div>
+                <h1 class="char-name">Vezalius Bandage <span class="jp-name">ヴェザリウス バンデージ</span></h1>
+                <p class="catchphrase">「The truth of salvation lies beneath the bandages. Bonjour, mon ami. 🧻」</p>
+                <div class="status-tags">
+                    <span>Medic Hero</span>
+                    <span>Multilingual</span>
+                    <span>VezKits</span>
+                </div>
+            </div>
+            <div class="character-visual" id="vez-visual">
+                <div class="medical-crest">
+                    <span class="vez-icon">🩺</span>
+                    <div class="bandage-halo"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="profile-grid">
+            <div class="medical-card info reveal">
+                <h2>MEDICAL RECORD</h2>
+                <ul>
+                    <li><strong>誕生日:</strong> 11月17日</li>
+                    <li><strong>身長:</strong> 172cm (ヒール込み178cm)</li>
+                    <li><strong>種族:</strong> 医療兵 (Medic Hero)</li>
+                    <li><strong>出身:</strong> フランス (NIJI EN初のフランス人)</li>
+                    <li><strong>好物:</strong> チーズ、マカロン、じゃがりこ</li>
+                </ul>
+            </div>
+            <div class="medical-card traits reveal">
+                <h2>PARA-MEDICAL GENIUS</h2>
+                <p>自らの身を実験体にしてまで救済を願う医療兵。英語、フランス語、日本語の3カ国語を操るマルチリンガル。クールな外見に反し、ホラーで可愛い悲鳴を上げたり、イタズラ好きだったりとギャップの宝庫。スイカゲームでは驚異的な腕前を誇る。</p>
+                <div class="mode-toggle-zone">
+                    <button id="trigger-kanji">KANJI STUDY TIME ✍️</button>
+                    <p class="mode-desc">Literacy: <span id="kanji-label">LEARNING...</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="episodes-section">
+            <h2 class="section-title">救済のカルテ (ZALI CASE FILES)</h2>
+            <div class="episode-grid">
+                <div class="episode-box reveal">
+                    <h3>クロワッサン焦げ事件</h3>
+                    <p>マイクラで心血を注ぎ建築した「クロワッサン家」。自身の火遊びにより一部が消失。「人生最速のカルマ」として語り継がれる。</p>
+                </div>
+                <div class="episode-box reveal">
+                    <h3>激辛耐久カラオケ</h3>
+                    <p>歌詞を間違えるたびに「獄激辛ペヤング」を食べる過酷な企画。卓越した歌唱力と反比例する阿鼻叫喚の姿を披露した。</p>
+                </div>
+                <div class="episode-box reveal">
+                    <h3>ヘリ操縦のエース</h3>
+                    <p>にじGTA救急隊にて。走るトラックの荷台にヘリを着地させる神業を成功させ、「医龍」ならぬ「ヘリ龍」の異名をとった。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="interaction-zone reveal">
+            <h2>SUIKA MASTER'S CHAMBER</h2>
+            <p>にじさんじNO.1のスイカゲーム技術。クリックして「ダブルスイカ」への道を目指せ！</p>
+            <div class="suika-box" id="game-area">
+                <div class="fruit" id="melon">🍉</div>
+                <div class="fruit" id="melon-2">🍉</div>
+            </div>
+            <p id="game-msg">Target: DOUBLE SUIKA</p>
+        </section>
+
+        <section class="lore-section reveal">
+            <h2>LORE</h2>
+            <p>医療兵として戦火を駆け抜け、自身の肉体すら研究成果として捧げた。その包帯の奥には、狂気的なまでの救済への執念が隠されている。フランス出身らしい気障で甘い言葉を教える「フランス語教室」や、日本語の漢字を一から学ぶ「漢字勉強配信」など、知的な活動も精力的に行う。にじGTAでは救急隊の機動部隊エースとして、多くの命（とヘリ）を救った。同期やファン（VezKits）を大切にする、Krisisの心優しい治癒者。</p>
+        </section>
+    </main>
+
+    <div class="croissant-flash" id="burn-effect">OH NO! THE CROISSANT IS BURNING! 🔥</div>
+
+    <script src="vezalius.js"></script>
+</body>
+
+</html>

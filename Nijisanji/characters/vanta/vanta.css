@@ -1,0 +1,212 @@
+:root {
+    --vanta-primary: #CC0000; /* Deep Red */
+    --vanta-secondary: #000000;
+    --vanta-accent: #FFFFFF;
+    --vanta-bg: #050000;
+    --vanta-glow: rgba(204, 0, 0, 0.4);
+    --metal-trim: #444444;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.vanta-theme {
+    background: var(--vanta-bg);
+    color: var(--vanta-accent);
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Premium Background: Battlefield at Dusk */
+.mercenary-background {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    z-index: -1;
+    background: radial-gradient(circle at center, #1a0000 0%, #050000 100%);
+}
+
+.crow-feathers {
+    position: absolute;
+    width: 100%; height: 100%;
+    background: repeating-linear-gradient(135deg, rgba(204, 0, 0, 0.02) 0 2px, transparent 2px 50px);
+    pointer-events: none;
+}
+
+/* Hero Section: The Ace's Arrival */
+.hero-section {
+    min-height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5%;
+    gap: 6rem;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 650px;
+}
+
+.unit-badge {
+    color: var(--vanta-primary);
+    font-weight: 900;
+    letter-spacing: 15px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    display: block;
+    border-left: 5px solid var(--vanta-primary);
+    padding-left: 1.5rem;
+}
+
+.char-name {
+    font-size: 5.5rem;
+    line-height: 1;
+    font-family: 'UnifrakturMaguntia', cursive;
+    color: var(--vanta-primary);
+    text-shadow: 0 0 30px var(--vanta-glow);
+    letter-spacing: 2px;
+}
+
+.jp-name {
+    display: block;
+    font-size: 2rem;
+    color: #fff;
+    margin-top: 1.5rem;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    letter-spacing: 2px;
+    opacity: 0.8;
+}
+
+.catchphrase {
+    margin-top: 4rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    background: rgba(204, 0, 0, 0.05);
+    border: 1px solid var(--vanta-primary);
+    padding: 2.5rem;
+    line-height: 1.6;
+    clip-path: polygon(0% 0%, 95% 0%, 100% 100%, 5% 100%);
+}
+
+.status-tags {
+    margin-top: 4rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.status-tags span {
+    background: var(--vanta-primary);
+    color: #fff;
+    padding: 0.8rem 2.22rem;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+/* CSS-Based Mercenary Visual */
+.character-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mercenary-crest {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vanta-icon {
+    font-size: 15rem;
+    z-index: 2;
+    filter: drop-shadow(0 0 50px var(--vanta-primary));
+    animation: hawkDive 4s ease-in-out infinite;
+}
+
+@keyframes hawkDive {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-30px) scale(1.05); }
+}
+
+.scarlet-aura {
+    position: absolute;
+    width: 140%;
+    height: 140%;
+    background: radial-gradient(circle, var(--vanta-glow) 0%, transparent 60%);
+    pointer-events: none;
+    animation: pulseAura 3s ease-in-out infinite;
+}
+
+@keyframes pulseAura {
+    0%, 100% { transform: scale(1); opacity: 0.3; }
+    50% { transform: scale(1.2); opacity: 0.6; }
+}
+
+/* Content Layout */
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+    padding: 12rem 10% 8rem;
+}
+
+.mercenary-card {
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--metal-trim);
+    padding: 4.5rem;
+    position: relative;
+    transition: 0.4s;
+}
+
+.mercenary-card:hover {
+    border-color: var(--vanta-primary);
+    background: rgba(204, 0, 0, 0.03);
+}
+
+.mercenary-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 3.5rem;
+    color: var(--vanta-primary);
+    letter-spacing: 5px;
+    font-weight: 900;
+}
+
+/* Interaction */
+.interaction-zone {
+    padding: 6rem 10%;
+    text-align: center;
+}
+
+.voice-box {
+    height: 350px;
+    background: #000;
+    border: 2px solid var(--vanta-primary);
+}
+
+/* Reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+    transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+@media (max-width: 1200px) {
+    .char-name { font-size: 4rem; }
+    .hero-section { flex-direction: column; text-align: center; }
+    .profile-grid { grid-template-columns: 1fr; }
+}

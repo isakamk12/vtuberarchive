@@ -1,0 +1,221 @@
+:root {
+    --ryoma-primary: #FFD700; /* Gold */
+    --ryoma-secondary: #0A0A0A;
+    --ryoma-accent: #00ECFF; /* Tech Cyan */
+    --ryoma-bg: #050505;
+    --tech-glow: rgba(0, 236, 255, 0.4);
+    --gold-glow: rgba(255, 215, 0, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.ryoma-theme {
+    background: var(--ryoma-bg);
+    color: #fff;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Premium Background: Cyber Neon Katana */
+.tech-ronin-background {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    z-index: -1;
+    background: radial-gradient(circle at 70% 80%, #1a1a1a 0%, #000 100%);
+}
+
+.digital-rain {
+    position: absolute;
+    width: 100%; height: 100%;
+    background-image: linear-gradient(0deg, transparent 95%, var(--ryoma-accent) 95%);
+    background-size: 100% 40px;
+    opacity: 0.1;
+    animation: rainCode 2s linear infinite;
+}
+
+@keyframes rainCode {
+    from { background-position: 0 0; }
+    to { background-position: 0 1000px; }
+}
+
+/* Hero Section: The Ronin's Arrival */
+.hero-section {
+    min-height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5%;
+    gap: 6rem;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 700px;
+}
+
+.unit-badge {
+    color: var(--ryoma-accent);
+    font-weight: 900;
+    letter-spacing: 12px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    border: 2px solid var(--ryoma-accent);
+    background: rgba(0, 236, 255, 0.05);
+}
+
+.char-name {
+    font-size: 5.5rem;
+    line-height: 1;
+    font-family: 'Orbitron', sans-serif;
+    color: var(--ryoma-primary);
+    text-shadow: 0 0 30px var(--gold-glow);
+    font-weight: 900;
+}
+
+.jp-name {
+    display: block;
+    font-size: 2.2rem;
+    color: #fff;
+    margin-top: 1.5rem;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    letter-spacing: 6px;
+    font-weight: 900;
+    opacity: 0.9;
+}
+
+.catchphrase {
+    margin-top: 4rem;
+    font-size: 1.6rem;
+    background: rgba(0, 236, 255, 0.03);
+    border-left: 10px solid var(--ryoma-accent);
+    padding: 3rem;
+    line-height: 1.6;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 95% 100%, 0 100%);
+}
+
+.status-tags {
+    margin-top: 4rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.status-tags span {
+    background: var(--ryoma-primary);
+    color: #000;
+    padding: 0.8rem 2.22rem;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    font-weight: 900;
+    clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+}
+
+/* CSS-Based Ronin Visual */
+.character-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ronin-crest {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ronin-icon {
+    font-size: 16rem;
+    z-index: 2;
+    filter: drop-shadow(0 0 40px var(--ryoma-accent));
+    animation: driftDash 3s ease-in-out infinite;
+}
+
+@keyframes driftDash {
+    0%, 100% { transform: translateX(0) scale(1); }
+    50% { transform: translateX(20px) scale(1.05); skewX(-10deg); }
+}
+
+.digital-glow {
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle, var(--tech-glow) 0%, transparent 60%);
+    pointer-events: none;
+    animation: pulseScan 4s ease-in-out infinite;
+}
+
+@keyframes pulseScan {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 0.5; }
+}
+
+/* Content Layout */
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+    padding: 12rem 10% 8rem;
+}
+
+.tech-card {
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(0, 236, 255, 0.2);
+    padding: 5rem;
+    position: relative;
+    transition: 0.4s;
+}
+
+.tech-card:hover {
+    border-color: var(--ryoma-primary);
+    background: rgba(255, 215, 0, 0.03);
+}
+
+.tech-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 3.5rem;
+    color: var(--ryoma-accent);
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 5px;
+}
+
+/* Interaction */
+.interaction-zone {
+    padding: 8rem 10%;
+    text-align: center;
+}
+
+.apex-box {
+    height: 400px;
+    background: #000;
+    border: 2px solid var(--ryoma-accent);
+}
+
+/* Reveal */
+.reveal {
+    opacity: 0;
+    transform: skewX(-5deg) translateX(50px);
+    transition: 1s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: skewX(0) translateX(0);
+}
+
+@media (max-width: 1200px) {
+    .char-name { font-size: 3.5rem; }
+    .hero-section { flex-direction: column; text-align: center; }
+    .profile-grid { grid-template-columns: 1fr; }
+}

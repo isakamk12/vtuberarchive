@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ren Zotto (レン ゾット) - Nijisanji EN Archive</title>
+    <link rel="stylesheet" href="../../nijisanji_style.css">
+    <link rel="stylesheet" href="ren.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="ren-theme">
+    <div class="alien-background" id="bg-canvas">
+        <div class="green-nebula" id="nebula"></div>
+        <div class="sound-ripples" id="ripples"></div>
+    </div>
+
+    <header>
+        <nav>
+            <a href="../../nijisanji_index.html" class="back-link">← ARCHIVE</a>
+            <div class="breath-status">OXYGEN LEVEL: <span id="ox-val">99%</span></div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="unit-badge">ILUNA</div>
+                <h1 class="char-name">Ren Zotto <span class="jp-name">レン ゾット</span></h1>
+                <p class="catchphrase">「I'm here to conquer Earth with my melodies! ...and maybe some risotto.」</p>
+                <div class="status-tags">
+                    <span>Alien Prince</span>
+                    <span>Multi-Instrumentalist</span>
+                    <span>Renvaderz</span>
+                </div>
+            </div>
+            <div class="character-visual" id="ren-visual">
+                <div class="alien-crest">
+                    <span class="music-icon">🎸</span>
+                    <div class="nebula-wave"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="profile-grid">
+            <div class="alien-card info reveal">
+                <h2>INVASION LOG</h2>
+                <ul>
+                    <li><strong>誕生日:</strong> 3月25日</li>
+                    <li><strong>身長:</strong> 180cm (ツノ込み 190cm)</li>
+                    <li><strong>種族:</strong> Alien (異星の王子)</li>
+                    <li><strong>趣味:</strong> 呼吸 (Breathing)、ロードトリップ</li>
+                    <li><strong>天敵:</strong> ツノを売買しようとする同期</li>
+                </ul>
+            </div>
+            <div class="alien-card traits reveal">
+                <h2>MUSICAL PRINCE</h2>
+                <p>異世界からやってきた異星の王子。独自の音色で地球征服を目論むが、内実は気さくで親しみやすいムードメーカー。ギター、ピアノ、ベースを操る多才な音楽家。猫を犬と間違えるなど、地球の生物にはまだ疎い。</p>
+                <div class="mode-toggle-zone">
+                    <button id="toggle-risotto">RISOTTO MODE? 🍚</button>
+                    <p class="mode-desc">Status: <span id="mode-label">PRINCE</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="episodes-section">
+            <h2 class="section-title">宇宙の軌跡 (ALIEN CHRONIS)</h2>
+            <div class="episode-grid">
+                <div class="episode-box reveal">
+                    <h3>猫だ...いや犬だ</h3>
+                    <p>ゲーム内の猫を見て「かわいい犬だ」と発言。のちに自分が飼っていたペットも犬だったと気づく天然エピソード。</p>
+                </div>
+                <div class="episode-box reveal">
+                    <h3>ツノの闇売買</h3>
+                    <p>同期のKyoによって、夜な夜な自身のツノが切り落とされリスナーに売り捌かれているというネタ（プロレス）。</p>
+                </div>
+                <div class="episode-box reveal">
+                    <h3>1ST CONTACT</h3>
+                    <p>2026年開催の初3Dライブ。数多くのゲストと共に地球征服の第一歩たる最高のパフォーマンスを披露した。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="music-interaction reveal">
+            <h2>ALIEN JAM SESSION</h2>
+            <p>レンの楽器を奏でよう。クリックして独自の音色とエフェクトを生成！</p>
+            <div class="instrument-box" id="music-area">
+                <div class="inst-item" data-inst="guitar">🎸</div>
+                <div class="inst-item" data-inst="piano">🎹</div>
+                <div class="inst-item" data-inst="kazoo">🪈</div>
+            </div>
+            <p id="jam-msg">Select an instrument to start the conquest.</p>
+        </section>
+
+        <section class="lore-section reveal">
+            <h2>LORE</h2>
+            <p>異世界からやってきた凶悪な異星の王子。独自の音色で地球を征服する使命を持つが、地球での生活を存分に楽しんでいる。オリジナル楽曲「BLUE SUGAR」や「WANDERER」など、卓越した音楽センスでファンを魅了。グーフィーの声真似が得意という意外な特技も。呼吸を趣味とし、リスナーと共に瞑想する「呼吸配信」を行うなど、宇宙規模の広大な心を持つ。</p>
+        </section>
+    </main>
+
+    <div class="breath-overlay" id="breath"></div>
+
+    <script src="ren.js"></script>
+</body>
+
+</html>

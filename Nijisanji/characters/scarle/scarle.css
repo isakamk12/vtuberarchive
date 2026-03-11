@@ -1,0 +1,213 @@
+:root {
+    --scarle-primary: #E60012; /* Scarlet Red */
+    --scarle-secondary: #000000;
+    --scarle-accent: #FFFFFF;
+    --scarle-bg: #0a0505;
+    --gold-trim: #D4AF37;
+    --scarle-glow: rgba(230, 0, 18, 0.4);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.scarle-theme {
+    background: var(--scarle-bg);
+    color: var(--scarle-accent);
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Premium Background: Elegant Manor Night */
+.elegant-background {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    z-index: -1;
+    background: radial-gradient(circle at 70% 30%, #300000 0%, #0a0505 100%);
+}
+
+.crimson-gradient {
+    position: absolute;
+    width: 100%; height: 100%;
+    background: linear-gradient(180deg, transparent 50%, rgba(230, 0, 18, 0.05) 100%);
+    pointer-events: none;
+}
+
+/* Hero Section: Enchanting Presence */
+.hero-section {
+    min-height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5%;
+    gap: 6rem;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 650px;
+}
+
+.unit-badge {
+    color: var(--gold-trim);
+    font-weight: 700;
+    letter-spacing: 15px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+    display: block;
+    text-align: left;
+    border-bottom: 1px solid var(--gold-trim);
+    padding-bottom: 1rem;
+}
+
+.char-name {
+    font-size: 6rem;
+    line-height: 1;
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    color: var(--scarle-primary);
+    text-shadow: 4px 4px 0px var(--gold-trim), 0 0 50px var(--scarle-glow);
+}
+
+.jp-name {
+    display: block;
+    font-size: 2rem;
+    color: #fff;
+    margin-top: 2rem;
+    font-weight: 400;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    letter-spacing: 10px;
+}
+
+.catchphrase {
+    margin-top: 4rem;
+    font-size: 1.6rem;
+    font-style: italic;
+    background: rgba(230, 0, 18, 0.03);
+    border-left: 5px solid var(--gold-trim);
+    padding: 3rem;
+    line-height: 1.6;
+}
+
+.status-tags {
+    margin-top: 4rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.status-tags span {
+    border: 1px solid var(--gold-trim);
+    color: var(--gold-trim);
+    padding: 1rem 2.5rem;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* CSS-Based Enchantress Visual */
+.character-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.enchant-crest {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.kiss-icon {
+    font-size: 16rem;
+    z-index: 2;
+    filter: drop-shadow(0 0 60px var(--scarle-primary));
+    animation: allureFloat 6s ease-in-out infinite;
+}
+
+@keyframes allureFloat {
+    0%, 100% { transform: translateY(0) scale(1); filter: drop-shadow(0 0 60px var(--scarle-primary)); }
+    50% { transform: translateY(-30px) scale(1.05); filter: drop-shadow(0 0 100px var(--scarle-primary)); }
+}
+
+.crimson-glow {
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle, var(--scarle-glow) 0%, transparent 60%);
+    pointer-events: none;
+    animation: pulseGlow 4s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(1.2); }
+}
+
+/* Content Layout */
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+    padding: 15rem 10% 8rem;
+}
+
+.elegant-card {
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(40px);
+    border: 1px solid var(--gold-trim);
+    padding: 6rem;
+    position: relative;
+    transition: 0.5s;
+}
+
+.elegant-card:hover {
+    background: rgba(230, 0, 18, 0.05);
+    box-shadow: 0 0 40px rgba(212, 175, 55, 0.1);
+}
+
+.elegant-card h2 {
+    font-size: 2rem;
+    margin-bottom: 4rem;
+    color: var(--gold-trim);
+    letter-spacing: 8px;
+    border-left: 10px solid var(--scarle-primary);
+    padding-left: 2rem;
+}
+
+/* Interaction */
+.interaction-zone {
+    padding: 8rem 10%;
+    text-align: center;
+}
+
+.kitchen-box {
+    height: 400px;
+    background: rgba(0,0,0,0.8);
+    border: 1px solid var(--gold-trim);
+}
+
+/* Reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(80px);
+    transition: 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 1200px) {
+    .char-name { font-size: 4rem; }
+    .hero-section { flex-direction: column; text-align: center; }
+    .profile-grid { grid-template-columns: 1fr; }
+}
