@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>深影 | RK Music Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            --char-color: #81d4fa;
+            --char-glow: rgba(129, 212, 250, 0.4);
+            --char-color-soft: rgba(129, 212, 250, 0.1);
+            --char-border: rgba(129, 212, 250, 0.3);
+        }
+        .cp-bg::after {
+            background-image: radial-gradient(circle at 60% 40%, rgba(255, 100, 100, 0.05) 0%, transparent 50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../../rkmusic_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO ROSTER
+        </a>
+        <div class="cp-nav-gen">GRAYMYTH / VSinger</div>
+    </nav>
+
+    <section class="cp-hero">
+        <div class="cp-bg-letter">M</div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">Ghost VSinger</div>
+            <h1 class="cp-hero-name">深影</h1>
+            <span class="cp-hero-en">MIKAGE / The Ethereal Lens</span>
+            <div class="cp-chara-desc">
+                「自称・怖くない幽霊」。歌唱時の圧倒的な女神感と、トーク時の早口オタク・芸人ノリとの激しすぎるギャップで翻弄する。唐揚げをこよなく愛し、彼岸花を纏う不思議な存在。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">被写体</span>
+                <span class="cp-tag cp-tag-primary">グレイミース</span>
+                <span class="cp-tag cp-tag-muted">唐揚げ狂い</span>
+                <span class="cp-tag cp-tag-muted">神々影</span>
+            </div>
+        </div>
+        <div class="cp-hero-visualizer">
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+        </div>
+    </section>
+
+    <section class="cp-section cp-reveal">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>📸 カメラと「被写体」</h3>
+                <p>ファンネームは「被写体」。自身で撮影した写真をMVの背景に使用するほどのカメラ愛を持つ。ホクロを結ぶと夏の大三角形になる特徴的なビジュアルと、少し透ける背景が幽霊らしさを醸し出す。</p>
+            </div>
+            <div class="cp-card">
+                <h3>🍗 唐揚げへの執着</h3>
+                <p>無類の唐揚げ好き。配信タイトルが「からあげを見守るお仕事」になったり、リスナーを唐揚げに例えたりと、その愛はもはや生活の一部。歌の清楚さと唐揚げへの情熱の落差も魅力の一つ。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section cp-reveal">
+        <h2 class="cp-section-title">EPISODES</h2>
+        <div class="cp-grid cp-grid-2">
+            <div class="cp-card">
+                <h3>1. 「神々影」の絶え間ない噛み</h3>
+                <p>トーク中に非常に頻繁に噛んでしまうため、リスナーから「神々影（かみかみかげ）」の二つ名が。本人も認めるポンコツ仕様だが、その不安定さが逆に「幽霊らしい」愛おしさを生んでいる。</p>
+            </div>
+            <div class="cp-card">
+                <h3>2. 限界オタクの猛走</h3>
+                <p>ホラーや「鬱展開」の作品への愛は異常。特に『ひぐらしのなく頃に』を語り出すと止まらないマシンガントークが炸裂し、歌枠での女神像を自ら破壊しにいくスタイルが定着している。</p>
+            </div>
+            <div class="cp-card">
+                <h3>3. OBSクラッシャーの罠</h3>
+                <p>配信ソフトの操作を誤り、背景を変えようとして自分自身を画面から消してしまうなどのトラブルが頻発。汗をかきながら修復RTAを行う姿は、もはや「OBSクラッシャー」の名に相応しい。</p>
+            </div>
+            <div class="cp-card">
+                <h3>4. 感極まる情熱</h3>
+                <p>映画の話題で感動して配信中に泣きそうになったり、パーソナリティによる自身の楽曲への「歌がうめえ」の一言に大歓喜するなど、感情の起伏が激しくピュアな一面が多くのファンを惹きつけている。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <p>© 2026 VTuber Archive Project. RK Music / GRAYMYTH - Mikage Archive.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

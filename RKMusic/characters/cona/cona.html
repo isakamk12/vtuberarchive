@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONA | RK Music Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            --char-color: #607d8b;
+            --char-glow: rgba(96, 125, 139, 0.4);
+            --char-color-soft: rgba(96, 125, 139, 0.1);
+            --char-border: rgba(96, 125, 139, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../../rkmusic_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO ROSTER
+        </a>
+        <div class="cp-nav-gen">Fused / VSinger</div>
+    </nav>
+
+    <section class="cp-hero">
+        <div class="cp-bg-letter">C</div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">Fused Artist</div>
+            <h1 class="cp-hero-name">CONA</h1>
+            <span class="cp-hero-en">The Emotional Rock</span>
+            <div class="cp-chara-desc">
+                独特な世界観で、負の感情をエモーショナルに歌い上げるアーティスト。少年のような透明感と、ステージで見せる圧倒的なエネルギーのギャップが、聴く者の心を震わせる。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">ロックバラード</span>
+                <span class="cp-tag cp-tag-primary">Fused</span>
+                <span class="cp-tag cp-tag-muted">真面目な回答</span>
+                <span class="cp-tag cp-tag-muted">いくら・鮭・わかめ</span>
+            </div>
+        </div>
+        <div class="cp-hero-visualizer">
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+        </div>
+    </section>
+
+    <section class="cp-section cp-reveal">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>🎸 感情の正統進化</h3>
+                <p>アコースティックな要素を取り入れたバンドサウンドと、ロックバラードを真骨頂とする。「Reflect」や「無色夏」など、誰もが抱える無力さや苦しさを独白のように歌い上げるスタイルが高く評価されている。</p>
+            </div>
+            <div class="cp-card">
+                <h3>🌌 新境地「Fused」へ</h3>
+                <p>2026年2月、現実と仮想を繋ぐ「Fused」レーベルへ移籍。後輩たちへバトンを繋ぐ歌枠リレーへの参加やライブ出演など、レーベルを牽引する存在としての期待を一身に背負っている。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section cp-reveal">
+        <h2 class="cp-section-title">EPISODES</h2>
+        <div class="cp-grid cp-grid-2">
+            <div class="cp-card">
+                <h3>1. おにぎりの具への真摯な回答</h3>
+                <p>ライブ「OVER ONE」での圧巻のパフォーマンス後、MCで先輩のノインから「好きなおにぎりの具」を問われ、「いくら、鮭、わかめ」とあまりに真面目に回答。その素朴なギャップで会場を和ませた。</p>
+            </div>
+            <div class="cp-card">
+                <h3>2. 魂を削るライブパフォーマンス</h3>
+                <p>儚いビジュアルからは想像がつかないほど、ステージ上ではエネルギッシュ。感情を剥き出しにしたライブアレンジは、一度聴くと忘れられないほどのインパクトを観客の胸に刻み込む。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <p>© 2026 VTuber Archive Project. RK Music / Fused - CONA Archive.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

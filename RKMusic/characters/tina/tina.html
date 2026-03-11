@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TINA | RK Music Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            --char-color: #80cbc4;
+            --char-glow: rgba(128, 203, 196, 0.4);
+            --char-color-soft: rgba(128, 203, 196, 0.1);
+            --char-border: rgba(128, 203, 196, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../../rkmusic_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO ROSTER
+        </a>
+        <div class="cp-nav-gen">KMNLABEL / KMNZ</div>
+    </nav>
+
+    <section class="cp-hero">
+        <div class="cp-bg-letter">T</div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">KMNZ Vocal / MC</div>
+            <h1 class="cp-hero-name">TINA</h1>
+            <span class="cp-hero-en">The Shy Husky</span>
+            <div class="cp-chara-desc">
+                2024年に加入したKMNZの妹犬。キュートな高音と愛らしいキャラクターが武器だが、実は犬なのに猫派で、インドアな性格。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">チワワ</span>
+                <span class="cp-tag cp-tag-primary">困り眉</span>
+                <span class="cp-tag cp-tag-muted">犬種: シベリアンハスキー</span>
+                <span class="cp-tag cp-tag-muted">涙腺バグ</span>
+            </div>
+        </div>
+        <div class="cp-hero-visualizer">
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+        </div>
+    </section>
+
+    <section class="cp-section cp-reveal">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>🤍 感受性豊かな表現者</h3>
+                <p>非常に涙もろく、本人曰く「涙腺がバグっている」。自己紹介が極端に苦手で、インタビューで「苦手なこと：自己紹介」と答えるほど。チャームポイントは困り眉と複数のピアス。</p>
+            </div>
+            <div class="cp-card">
+                <h3>🐈 犬なのに猫っぽい？</h3>
+                <p>シベリアンハスキーだが、性格はインドアで猫っぽいところがある。デビュー前、スタッフの手違いによる「テレコ」という言葉を可愛い名前だと思ってDiscord名にした天然な一面も。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section cp-reveal">
+        <h2 class="cp-section-title">EPISODES</h2>
+        <div class="cp-grid cp-grid-2">
+            <div class="cp-card">
+                <h3>1. 店員さんからの箱ティッシュ</h3>
+                <p>飲食店で友人の昔の辛かった話を聞いて大号泣してしまい、店員さんから無言で箱ティッシュを差し出されたことがある。その感受性の強さが歌にも現れている。</p>
+            </div>
+            <div class="cp-card">
+                <h3>2. シベリアンハスキー（チワワ）</h3>
+                <p>本人は「世界一のシベリアンハスキー」と主張しているが、極度の緊張で震えたり眠くなったりするため、ファンや先輩から「チワワ」といじられがち。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <p>© 2026 VTuber Archive Project. RK Music / KMNLABEL - TINA Archive.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

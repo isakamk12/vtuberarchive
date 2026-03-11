@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LITA | RK Music Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            --char-color: #ffeb3b;
+            --char-glow: rgba(255, 235, 59, 0.4);
+            --char-color-soft: rgba(255, 235, 59, 0.1);
+            --char-border: rgba(255, 235, 59, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../../rkmusic_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO ROSTER
+        </a>
+        <div class="cp-nav-gen">KMNLABEL / KMNZ</div>
+    </nav>
+
+    <section class="cp-hero">
+        <div class="cp-bg-letter">L</div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">KMNZ Leader / MC</div>
+            <h1 class="cp-hero-name">LITA</h1>
+            <span class="cp-hero-en">The Reliable Leader</span>
+            <div class="cp-chara-desc">
+                KMNZを初期から引っ張り続ける頼れるリーダー。圧倒的なMC力とボーカル・ラップスキルを持つ「親分」的存在であり、多彩なフロウを操る。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">親分</span>
+                <span class="cp-tag cp-tag-primary">リタどん</span>
+                <span class="cp-tag cp-tag-muted">犬種: コーギー</span>
+                <span class="cp-tag cp-tag-muted">MBC: ENFP</span>
+            </div>
+        </div>
+        <div class="cp-hero-visualizer">
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+        </div>
+    </section>
+
+    <section class="cp-section cp-reveal">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>👑 リーダーの資質</h3>
+                <p>透明感のある高音ボーカルが武器。後輩やファンを気遣う優しさと、周囲をよく観察する視野の広さを持つ。英語や韓国語も話し、グローバルな発信も行う。</p>
+            </div>
+            <div class="cp-card">
+                <h3>🌏 グローバル・オーディエンス</h3>
+                <p>KMNLABELのフロントマンとして、ヒップホップを軸にした多様な楽曲を展開。その安定したパフォーマンスは新生KMNZの屋台骨となっている。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section cp-reveal">
+        <h2 class="cp-section-title">EPISODES</h2>
+        <div class="cp-grid cp-grid-2">
+            <div class="cp-card">
+                <h3>1. 愛称「リタどん」の黒歴史</h3>
+                <p>中学生時代、一人称を「おいどん」にしていた中二病時代があり、当時の友人から「おいどんは無理」と言われたことが愛称の由来。今では親しまれる名前となった。</p>
+            </div>
+            <div class="cp-card">
+                <h3>2. 胸ポケットのカッター</h3>
+                <p>同じく中二病時代の尖っていたエピソードとして、イライラした時に胸ポケットに入れたカッターをカチカチ鳴らしていたという、今では信じられない恥ずかしい過去を持つ。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <p>© 2026 VTuber Archive Project. RK Music / KMNLABEL - LITA Archive.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>シル | RK Music Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            --char-color: #fb8c00;
+            --char-glow: rgba(251, 140, 0, 0.4);
+            --char-color-soft: rgba(251, 140, 0, 0.1);
+            --char-border: rgba(251, 140, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../../rkmusic_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO ROSTER
+        </a>
+        <div class="cp-nav-gen">GRAYMYTH / VSinger</div>
+    </nav>
+
+    <section class="cp-hero">
+        <div class="cp-bg-letter">C</div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">Healing Demon VSinger</div>
+            <h1 class="cp-hero-name">シル</h1>
+            <span class="cp-hero-en">CIL / The Orange Majin</span>
+            <div class="cp-chara-desc">
+                魔界から地球の人々を癒すためにやってきた、オレンジの魔神。極度の方向音痴で地球に来るまで25年かかったが、朝活配信「朝まじ！」や常に笑いの絶えない「ゲラ魔神」としての活動で、多くのリスナーに癒しと笑顔を届けている。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">グレイミース</span>
+                <span class="cp-tag cp-tag-primary">肩幅魔神</span>
+                <span class="cp-tag cp-tag-muted">朝まじ！</span>
+                <span class="cp-tag cp-tag-muted">オレンジの魔神</span>
+            </div>
+        </div>
+        <div class="cp-hero-visualizer">
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+        </div>
+    </section>
+
+    <section class="cp-section cp-reveal">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>🍊 伸縮自在の「肩幅魔神」</h3>
+                <p>自作イラストの肩幅がダイナミックすぎたことから「肩幅魔神」の異名が定着。マスコットキャラ「肩幅魔神ちゃん」として配信に常駐するほど愛されている。実は噛み癖のある「噛み噛み魔神」でもある。</p>
+            </div>
+            <div class="cp-card">
+                <h3>☀️ 朝から魔神ラジオ！</h3>
+                <p>平日朝7:30からの「朝まじ！」が恒例。独自の運勢占いコーナーや、リスナーとの秀逸なプロレスが魅力。笑い出すと止まらない「ゲラ」の気質で、開始10秒で企画を終わらせるほどの破壊力を持つ。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section cp-reveal">
+        <h2 class="cp-section-title">EPISODES</h2>
+        <div class="cp-grid cp-grid-2">
+            <div class="cp-card">
+                <h3>1. 3000里のマイクラ旅</h3>
+                <p>「目指せエンドラ討伐」の初回で木の中にスポーンするという不運。極度の方向音痴のため村を見つけるまでに「3000里」を彷徨い、ようやく建てた拠点もクリーパーに爆破されるという不憫さがリスナーの保護欲を誘った。</p>
+            </div>
+            <div class="cp-card">
+                <h3>2. 独特すぎる「漢字でGo!」</h3>
+                <p>「十三」を「じゅうさん」、「放出」を「ほんまやで」と読むなど、独自の漢字センスが炸裂。しかしリスナーの助けを借りてオールクリアを達成し、自称「漢字マスター」へ上り詰めた奇跡の記録を持つ。</p>
+            </div>
+            <div class="cp-card">
+                <h3>3. 机とマイクの安否確認</h3>
+                <p>身振り手振りが大きすぎてマイクや机に手をぶつけるのが日常茶飯事。リスナーが本人ではなく「マイク君大丈夫？」と物の心配をし、本人が「シルの心配をして！」と突っ込むまでが伝統芸能となっている。</p>
+            </div>
+            <div class="cp-card">
+                <h3>4. 左肩に秘めた「青い羽」</h3>
+                <p>普段は収納されているが、いざという時に力を発揮する（かもしれない）大事な青い羽を左肩に宿している。ポンコツな日常の中にも、魔神としての誇りとポテンシャルを秘めた癒しの存在。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <p>© 2026 VTuber Archive Project. RK Music / GRAYMYTH - Cil Archive.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

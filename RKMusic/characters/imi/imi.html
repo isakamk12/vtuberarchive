@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMI | RK Music Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            --char-color: #ffd54f;
+            --char-glow: rgba(255, 213, 79, 0.4);
+            --char-color-soft: rgba(255, 213, 79, 0.1);
+            --char-border: rgba(255, 213, 79, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../../rkmusic_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO ROSTER
+        </a>
+        <div class="cp-nav-gen">VSINGER / Independent</div>
+    </nav>
+
+    <section class="cp-hero">
+        <div class="cp-bg-letter">I</div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">Gap-Moe VSinger</div>
+            <h1 class="cp-hero-name">IMI</h1>
+            <span class="cp-hero-en">The Meaning of Singing</span>
+            <div class="cp-chara-desc">
+                「ここで歌う意味(IMI)を探しに来ました」。関西弁のぽやぽやトークと、歌唱時のクールな低音・ラップが生む特大のギャップで魅了する、多才なVsinger。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">センシーズ</span>
+                <span class="cp-tag cp-tag-primary">ギャップ萌え</span>
+                <span class="cp-tag cp-tag-muted">チワワ疑惑</span>
+                <span class="cp-tag cp-tag-muted">自演ギャル</span>
+            </div>
+        </div>
+        <div class="cp-hero-visualizer">
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+        </div>
+    </section>
+
+    <section class="cp-section cp-reveal">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>🎨 多彩な特技と感性</h3>
+                <p>歌だけでなく、イラスト（スタンプ自作）、生け花、茶道など、意外なほど和の文化に精通。MBTIはENFP（運動家）で、人見知りながらも内面には熱い情熱と「ギャル」な一面を秘めている。</p>
+            </div>
+            <div class="cp-card">
+                <h3>🐶 チワワ計画進行中</h3>
+                <p>本人は否定しているが、周囲からは「チワワ」といじられがち。メンバーシップの継続バッジも最終的にはチワワになる仕様で、運営公認（？）でファンをチワワにする計画が進行している。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section cp-reveal">
+        <h2 class="cp-section-title">EPISODES</h2>
+        <div class="cp-grid cp-grid-2">
+            <div class="cp-card">
+                <h3>1. 初配信での「地声」解禁パニック</h3>
+                <p>当初は低い声を作って活動する予定だったが、初配信の緊張で作った声が出なくなり「もう地声出します！」と自ら崩壊。結果としてマネージャーも推奨する「ありのままの魅力」が伝わった。</p>
+            </div>
+            <div class="cp-card">
+                <h3>2. 推しの前での「唸り」限界化</h3>
+                <p>自腹でアクスタを買うほどの事務所ガチ勢。初めて推しの先輩と通話した際、緊張のあまり言葉が出ず「うーっ」と唸り続けてしまい、同席していたマネージャーを驚かせた。</p>
+            </div>
+            <div class="cp-card">
+                <h3>3. 深夜のお父さん召喚</h3>
+                <p>虫が極端に苦手で、深夜に部屋に一匹虫が出ただけでも、わざわざ寝ているお父さんを電話で呼び出して退治してもらうという、不器用ながら愛されている家族エピソードがある。</p>
+            </div>
+            <div class="cp-card">
+                <h3>4. 清楚のつもりが「一番ギャル」</h3>
+                <p>初顔合わせに清楚な服装で行ったつもりだったが、赤髪ウルフとピアスで「一番ギャルが来た」とマネージャーに思われていた。自覚ゼロのギャル特性が彼女の面白い一面。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <p>© 2026 VTuber Archive Project. RK Music - IMI Archive.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

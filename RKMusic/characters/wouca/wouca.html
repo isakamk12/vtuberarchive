@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>をうか | RK Music Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            --char-color: #4fc3f7;
+            --char-glow: rgba(79, 195, 247, 0.4);
+            --char-color-soft: rgba(79, 195, 247, 0.1);
+            --char-border: rgba(79, 195, 247, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../../rkmusic_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO ROSTER
+        </a>
+        <div class="cp-nav-gen">VSINGER / Independent</div>
+    </nav>
+
+    <section class="cp-hero">
+        <div class="cp-bg-letter">W</div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">Cheerful VSinger</div>
+            <h1 class="cp-hero-name">をうか</h1>
+            <span class="cp-hero-en">WOUCA / The Life Enjoyer</span>
+            <div class="cp-chara-desc">
+                「一緒に音楽を楽しみながら人生を謳歌しようぜ」。熱帯魚のベタをモチーフにした明るいVSinger。よく笑い、よく動くが、実はビビりで人見知りな一面も持つ、飾らない魅力の持ち主。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">をうたー</span>
+                <span class="cp-tag cp-tag-primary">ゲラ</span>
+                <span class="cp-tag cp-tag-muted">ロマンティカ</span>
+                <span class="cp-tag cp-tag-muted">ヤハ！</span>
+            </div>
+        </div>
+        <div class="cp-hero-visualizer">
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+        </div>
+    </section>
+
+    <section class="cp-section cp-reveal">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>🎸 罰ゲームから始まった道</h3>
+                <p>歌の原点はオンラインゲームの罰ゲームでアカペラを晒したこと。友人たちの絶賛を素直に受け取り、毎日のように投稿を始めたことが現在のVSingerとしての活動に繋がっている。</p>
+            </div>
+            <div class="cp-card">
+                <h3>🌟 夢への「謳歌」</h3>
+                <p>地上波ラジオで自身の曲「ロマンティカ」が流れ、星街すいせい等から絶賛された際は心臓が飛び出るほど歓喜。将来は水族館やプラネタリウムなど、音を大切にできる会場でのライブを夢見ている。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section cp-reveal">
+        <h2 class="cp-section-title">EPISODES</h2>
+        <div class="cp-grid cp-grid-2">
+            <div class="cp-card">
+                <h3>1. コロナ罹患からの完全復活</h3>
+                <p>デビュー直後にコロナに罹患し、忘れられる恐怖と戦った2週間。復帰後の配信で「歌えるの幸せ」と喜びを爆発させた姿は、リスナーとの絆をより強固なものにした。</p>
+            </div>
+            <div class="cp-card">
+                <h3>2. 恒例の「カメラフリーズ」</h3>
+                <p>感情豊かに動き回りすぎるあまり、トラッキング用カメラが頻繁にフリーズ。満面の笑みや変顔で固まってしまうことが「スクショタイム」として愛される恒例行事となっている。</p>
+            </div>
+            <div class="cp-card">
+                <h3>3. 強烈な「うさぎ」愛</h3>
+                <p>ちいかわの「うさぎ」にドハマり中。不意に「ヤハ！」とモノマネを披露したり、誕生日に記念イラストを自作してお祝いするなど、その熱烈な愛は配信中もしばしば溢れ出している。</p>
+            </div>
+            <div class="cp-card">
+                <h3>4. 飾らない「食いしん坊」</h3>
+                <p>ラーメンやお酒が大好き。配信中にお腹を鳴らしたり、駄菓子やケーキを頬張りながらマイペースに進めることもある、人間味溢れるプロシスタンスが支持される理由の一つ。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <p>© 2026 VTuber Archive Project. RK Music - Wouca Archive.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

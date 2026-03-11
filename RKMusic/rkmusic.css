@@ -1,37 +1,30 @@
 /* ============================================================
-   RK Music — rkmusic.css
+   RK Music - rkmusic.css
    ============================================================ */
 
-/* 音楽系を意識したシャープでモダンなフォント (Montserrat) */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Noto+Sans+JP:wght@400;700;900&display=swap');
 
-/* ─── TOKENS ───────────────────────────────────────────────── */
 :root {
-    /* RK Music のアクセントカラー (紫/マゼンタ系) */
     --rk-accent: #b829ff;
     --rk-accent-glow: rgba(184, 41, 255, 0.45);
     --rk-accent-soft: rgba(184, 41, 255, 0.08);
     --rk-border: rgba(184, 41, 255, 0.25);
-
-    /* Neutrals */
     --rk-dark: #0a050f;
     --rk-surface: rgba(255, 255, 255, 0.03);
     --rk-subtle: rgba(255, 255, 255, 0.06);
     --rk-text: #f0eafa;
-    --rk-muted: rgba(240, 234, 250, 0.55);
+    --rk-muted: rgba(240, 234, 250, 0.68);
     --rk-white: #ffffff;
 }
 
-/* ─── RESET ─────────────────────────────────────────────────── */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -41,7 +34,20 @@ body {
     overflow-x: hidden;
 }
 
-/* ─── BACKGROUND ─────────────────────────────────────────────── */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(184, 41, 255, 0.08), transparent 28%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .rk-bg {
     position: fixed;
     inset: 0;
@@ -54,43 +60,48 @@ body {
     position: absolute;
     inset: 0;
     background:
-        radial-gradient(ellipse at 80% 0%, color-mix(in srgb, var(--rk-accent) 20%, transparent) 0%, transparent 55%),
-        radial-gradient(ellipse at 15% 100%, color-mix(in srgb, var(--rk-accent) 10%, transparent) 0%, transparent 60%);
+        radial-gradient(circle at 82% 12%, rgba(184, 41, 255, 0.22), transparent 0 32%),
+        radial-gradient(circle at 18% 88%, rgba(184, 41, 255, 0.12), transparent 0 28%),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.02), transparent 35%);
 }
 
 .rk-bg::after {
     content: '';
     position: absolute;
     inset: 0;
-    /* 音波のような水平ストライプ */
-    background-image: repeating-linear-gradient(0deg,
-            transparent, transparent 18px,
-            rgba(184, 41, 255, 0.02) 18px, rgba(184, 41, 255, 0.02) 19px);
+    background-image: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 18px,
+        rgba(184, 41, 255, 0.025) 18px,
+        rgba(184, 41, 255, 0.025) 19px
+    );
 }
 
-/* ─── NAV ────────────────────────────────────────────────────── */
 .rk-nav {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     z-index: 1000;
-    padding: 1.1rem 5vw;
+    padding: 1rem 5vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(10, 5, 15, 0.85);
+    gap: 1rem;
+    background: rgba(10, 5, 15, 0.82);
     backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--rk-border);
 }
 
 .rk-nav-back {
-    font-size: 0.82rem;
-    letter-spacing: 2px;
-    color: var(--rk-muted);
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 0.6rem;
-    transition: color 0.3s;
+    font-size: 0.8rem;
+    letter-spacing: 0.18em;
+    color: var(--rk-muted);
+    transition: color 0.25s ease;
 }
 
 .rk-nav-back:hover {
@@ -101,33 +112,44 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.3rem;
     font-weight: 800;
-    letter-spacing: 3px;
+    letter-spacing: 0.2em;
     color: var(--rk-white);
 }
 
-.rk-nav-logo span {
+.rk-nav-logo span,
+.rk-footer-logo span,
+.rk-hero-name span {
     color: var(--rk-accent);
     font-weight: 300;
-    margin-left: 2px;
 }
 
 .rk-nav-tag {
-    font-size: 0.78rem;
-    letter-spacing: 2px;
-    color: var(--rk-accent);
-    opacity: 0.7;
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
+    color: rgba(240, 234, 250, 0.72);
 }
 
-/* ─── HERO ───────────────────────────────────────────────────── */
 .rk-hero {
     position: relative;
     z-index: 10;
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 9rem 5vw 5rem;
-    overflow: hidden;
+    padding: 8.5rem 5vw 5rem;
+    overflow: clip;
+}
+
+.rk-hero::after {
+    content: '';
+    position: absolute;
+    inset: 12% auto auto 5vw;
+    width: min(560px, 68vw);
+    height: min(560px, 68vw);
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(184, 41, 255, 0.12) 0%, transparent 65%);
+    filter: blur(18px);
+    pointer-events: none;
 }
 
 .rk-hero-bg-text {
@@ -136,100 +158,137 @@ body {
     top: 50%;
     transform: translateY(-50%);
     font-family: 'Montserrat', sans-serif;
-    font-size: 45vw;
+    font-size: clamp(12rem, 42vw, 38rem);
     font-weight: 900;
-    line-height: 0.85;
-    color: var(--rk-accent);
-    opacity: 0.03;
+    line-height: 0.82;
+    letter-spacing: -0.08em;
+    color: rgba(184, 41, 255, 0.08);
     user-select: none;
     pointer-events: none;
-    letter-spacing: -2vw;
 }
 
 .rk-hero-content {
     position: relative;
     z-index: 2;
+    display: grid;
+    gap: 1.3rem;
     max-width: 760px;
 }
 
 .rk-eyebrow {
-    font-size: 0.75rem;
-    letter-spacing: 5px;
-    color: var(--rk-accent);
-    text-transform: uppercase;
-    margin-bottom: 1.2rem;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--rk-accent);
 }
 
 .rk-eyebrow::before {
     content: '';
-    width: 30px;
+    width: 34px;
     height: 1px;
-    background: var(--rk-accent);
+    background: currentColor;
 }
 
 .rk-hero-name {
     font-family: 'Montserrat', sans-serif;
-    font-size: clamp(3.5rem, 9vw, 8.5rem);
+    font-size: clamp(3.8rem, 9vw, 8.5rem);
     font-weight: 900;
     line-height: 0.9;
+    letter-spacing: 0.04em;
     color: var(--rk-white);
-    text-shadow: 0 0 60px var(--rk-accent-glow);
-    margin-bottom: 0.6rem;
-    letter-spacing: 2px;
-}
-
-.rk-hero-name span {
-    color: var(--rk-accent);
-    font-weight: 300;
+    text-shadow: 0 0 48px var(--rk-accent-glow);
 }
 
 .rk-hero-tagline {
-    font-size: clamp(1rem, 1.8vw, 1.2rem);
-    letter-spacing: 4px;
-    color: var(--rk-accent);
-    opacity: 0.9;
-    margin-bottom: 2rem;
     font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    letter-spacing: 0.34em;
     text-transform: uppercase;
+    color: rgba(240, 234, 250, 0.88);
+}
+
+.rk-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+}
+
+.rk-hero-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0.85rem 1.35rem;
+    border: 1px solid var(--rk-border);
+    background: rgba(255, 255, 255, 0.02);
+    color: var(--rk-white);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.74rem;
+    letter-spacing: 0.18em;
+    transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+
+.rk-hero-link:hover {
+    transform: translateY(-2px);
+    border-color: rgba(184, 41, 255, 0.55);
+    background: rgba(184, 41, 255, 0.08);
+}
+
+.rk-hero-link-primary {
+    background: linear-gradient(135deg, rgba(184, 41, 255, 0.22), rgba(184, 41, 255, 0.06));
 }
 
 .rk-hero-concept {
-    font-size: 0.95rem;
+    max-width: 640px;
+    padding: 1.15rem 1.4rem 1.15rem 1.6rem;
+    border-left: 2px solid var(--rk-accent);
+    background: linear-gradient(90deg, rgba(184, 41, 255, 0.1), rgba(184, 41, 255, 0.02) 40%, transparent);
     color: var(--rk-muted);
     line-height: 1.95;
-    border-left: 2px solid var(--rk-accent);
-    padding: 1rem 1.8rem;
-    background: linear-gradient(90deg, var(--rk-accent-soft), transparent);
-    margin-bottom: 2.8rem;
-    max-width: 640px;
+    font-size: 0.95rem;
 }
 
 .rk-hero-stats {
     display: flex;
-    gap: 3rem;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+}
+
+.rk-stat {
+    min-width: 170px;
+    padding: 1rem 1.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.025);
 }
 
 .rk-stat-value {
     font-family: 'Montserrat', sans-serif;
-    font-size: 2.5rem;
+    font-size: 2.35rem;
     font-weight: 700;
-    color: var(--rk-white);
     line-height: 1;
+    color: var(--rk-white);
 }
 
 .rk-stat-label {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.65rem;
-    letter-spacing: 4px;
-    color: var(--rk-accent);
     margin-top: 0.5rem;
-    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.64rem;
+    letter-spacing: 0.3em;
+    color: var(--rk-accent);
 }
 
-/* ─── CONTAINER ──────────────────────────────────────────────── */
+.rk-hero-scroll {
+    margin-top: 0.8rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.28em;
+    color: rgba(240, 234, 250, 0.48);
+}
+
 .rk-container {
     position: relative;
     z-index: 10;
@@ -238,9 +297,9 @@ body {
     padding: 0 5vw 8rem;
 }
 
-/* ─── SECTION HEADER ─────────────────────────────────────────── */
 .rk-section {
     margin-bottom: 6rem;
+    scroll-margin-top: 7rem;
 }
 
 .rk-section-header {
@@ -264,17 +323,16 @@ body {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--rk-white);
-    letter-spacing: 2px;
+    letter-spacing: 0.08em;
 }
 
 .rk-section-title-sub {
+    display: block;
+    margin-top: 0.35rem;
     font-family: 'Montserrat', sans-serif;
     font-size: 0.65rem;
-    letter-spacing: 6px;
+    letter-spacing: 0.42em;
     color: var(--rk-accent);
-    opacity: 0.8;
-    display: block;
-    margin-top: 0.3rem;
 }
 
 .rk-divider {
@@ -283,164 +341,185 @@ body {
     background: linear-gradient(90deg, var(--rk-border), transparent);
 }
 
-/* ─── INFO CARDS ─────────────────────────────────────────────── */
-.rk-info-grid {
+.rk-info-grid,
+.rk-member-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.5rem;
+    gap: 1.35rem;
+}
+
+.rk-info-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.rk-member-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.rk-info-card,
+.rk-member-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--rk-subtle);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+    backdrop-filter: blur(8px);
+    transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
 }
 
 .rk-info-card {
-    background: var(--rk-surface);
-    border: 1px solid var(--rk-subtle);
-    border-radius: 2px;
-    padding: 2.2rem;
-    position: relative;
-    transition: all 0.3s;
-    overflow: hidden;
+    padding: 2rem;
 }
 
-.rk-info-card::before {
+.rk-member-card {
+    padding: 1.5rem 1.7rem;
+    cursor: pointer;
+}
+
+.rk-info-card::before,
+.rk-member-card::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
+    inset: 0 auto 0 0;
     width: 2px;
-    height: 100%;
-    background: var(--rk-accent);
+    background: linear-gradient(180deg, var(--rk-accent), transparent);
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: opacity 0.25s ease;
 }
 
-.rk-info-card:hover {
-    background: rgba(255, 255, 255, 0.05);
+.rk-info-card:hover,
+.rk-member-card:hover {
+    transform: translateY(-3px);
     border-color: var(--rk-border);
-    transform: translateX(4px);
+    background: linear-gradient(180deg, rgba(184, 41, 255, 0.08), rgba(255, 255, 255, 0.025));
 }
 
-.rk-info-card:hover::before {
+.rk-info-card:hover::before,
+.rk-member-card:hover::before {
     opacity: 1;
 }
 
-.rk-info-card h3 {
-    font-size: 0.95rem;
-    color: var(--rk-accent);
-    margin-bottom: 1rem;
+.rk-info-card h3,
+.rk-group-title,
+.rk-member-name,
+.rk-footer-logo {
     font-family: 'Montserrat', sans-serif;
+}
+
+.rk-info-card h3 {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
     font-weight: 600;
-    letter-spacing: 1px;
+    letter-spacing: 0.08em;
+    color: var(--rk-accent);
+}
+
+.rk-info-card p,
+.rk-member-ep,
+.rk-footer {
+    color: var(--rk-muted);
 }
 
 .rk-info-card p {
     font-size: 0.88rem;
-    color: var(--rk-muted);
     line-height: 1.8;
 }
 
-/* ─── MEMBER GRID ────────────────────────────────────────────── */
 .rk-group-title {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.1rem;
-    color: var(--rk-white);
-    margin: 3.5rem 0 1.2rem;
-    letter-spacing: 2px;
     display: flex;
     align-items: center;
     gap: 1rem;
+    margin: 3.5rem 0 1.2rem;
+    font-size: 1.1rem;
     font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--rk-white);
 }
 
 .rk-unit-badge {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.65rem;
-    letter-spacing: 3px;
-    padding: 0.2rem 0.8rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem 0.8rem;
+    border-radius: 999px;
     background: var(--rk-accent-soft);
     color: var(--rk-accent);
-    border-radius: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.65rem;
     font-weight: 600;
+    letter-spacing: 0.24em;
     text-transform: uppercase;
 }
 
-.rk-member-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 1.2rem;
-}
-
-.rk-member-card {
-    background: var(--rk-surface);
-    border: 1px solid var(--rk-subtle);
-    border-radius: 4px;
-    padding: 1.5rem 1.8rem;
-    transition: all 0.3s;
-    position: relative;
-}
-
-.rk-member-card:hover {
-    border-color: var(--rk-border);
-    background: rgba(184, 41, 255, 0.04);
-}
-
 .rk-member-name {
-    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    margin-bottom: 0.3rem;
     font-size: 1.05rem;
     font-weight: 700;
+    letter-spacing: 0.06em;
     color: var(--rk-white);
-    display: block;
-    margin-bottom: 0.2rem;
-    transition: color 0.25s;
-    letter-spacing: 1px;
+    transition: color 0.25s ease, text-shadow 0.25s ease;
 }
 
-a.rk-member-name:hover {
+
+.rk-member-name:hover {
     color: var(--rk-accent);
     text-shadow: 0 0 10px var(--rk-accent-glow);
 }
 
 .rk-member-read {
+    margin-bottom: 1rem;
     font-family: 'Montserrat', sans-serif;
     font-size: 0.65rem;
-    color: var(--rk-accent);
-    opacity: 0.8;
-    letter-spacing: 2px;
-    margin-bottom: 1rem;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
+    color: rgba(184, 41, 255, 0.88);
 }
 
 .rk-member-ep {
     font-size: 0.82rem;
-    color: var(--rk-muted);
-    line-height: 1.7;
+    line-height: 1.75;
 }
 
-/* ─── FOOTER ─────────────────────────────────────────────────── */
+.rk-member-card.is-graduated {
+    opacity: 0.65;
+    filter: grayscale(0.8);
+}
+
+.rk-member-card.is-graduated:hover {
+    opacity: 1;
+    filter: grayscale(0);
+}
+
+.rk-graduated-badge {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 0.45rem;
+    padding: 0.08rem 0.38rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: var(--rk-muted);
+    font-size: 0.58rem;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
 .rk-footer {
     position: relative;
     z-index: 10;
-    border-top: 1px solid rgba(184, 41, 255, 0.15);
     padding: 4rem 5vw;
+    border-top: 1px solid rgba(184, 41, 255, 0.15);
     text-align: center;
     font-size: 0.8rem;
-    color: var(--rk-muted);
 }
 
 .rk-footer-logo {
-    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 1rem;
     font-size: 1.5rem;
     font-weight: 800;
-    letter-spacing: 3px;
+    letter-spacing: 0.2em;
     color: var(--rk-white);
-    margin-bottom: 1rem;
 }
 
-.rk-footer-logo span {
-    color: var(--rk-accent);
-    font-weight: 300;
-    margin-left: 2px;
-}
-
-/* ─── REVEAL ANIMATION ───────────────────────────────────────── */
 .rk-reveal {
     opacity: 0;
     transform: translateY(30px);
@@ -452,27 +531,106 @@ a.rk-member-name:hover {
     transform: translateY(0);
 }
 
-/* ─── RESPONSIVE ─────────────────────────────────────────────── */
 @media (max-width: 900px) {
-    .rk-hero-bg-text {
-        font-size: 60vw;
+    .rk-nav {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
+    .rk-nav-back,
+    .rk-nav-logo,
+    .rk-nav-tag {
+        text-align: center;
+    }
+
+    .rk-hero {
+        min-height: auto;
+        padding-top: 10rem;
+    }
+
+    .rk-hero-bg-text {
+        right: -8%;
+        font-size: clamp(11rem, 54vw, 28rem);
+    }
+
+    .rk-hero-actions,
     .rk-hero-stats {
-        gap: 1.5rem;
+        gap: 1rem;
+    }
+
+    .rk-section-header {
+        flex-wrap: wrap;
+        align-items: flex-end;
+    }
+
+    .rk-divider {
+        width: 100%;
+        flex-basis: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .rk-nav {
+        padding: 0.9rem 1rem;
+    }
+
+    .rk-nav-logo {
+        font-size: 1.1rem;
+    }
+
+    .rk-nav-tag,
+    .rk-hero-scroll {
+        font-size: 0.64rem;
+    }
+
+    .rk-hero {
+        padding: 9.5rem 1rem 4rem;
+    }
+
+    .rk-hero-content {
+        gap: 1rem;
+    }
+
+    .rk-eyebrow,
+    .rk-hero-tagline,
+    .rk-hero-link,
+    .rk-stat-label,
+    .rk-section-title-sub {
+        letter-spacing: 0.18em;
+    }
+
+    .rk-hero-link,
+    .rk-stat {
+        width: 100%;
+    }
+
+    .rk-stat {
+        min-width: 0;
+    }
+
+    .rk-container,
+    .rk-footer {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .rk-section {
+        margin-bottom: 4.5rem;
     }
 
     .rk-section-num {
         font-size: 3rem;
     }
-}
 
-@media (max-width: 600px) {
+    .rk-info-grid,
     .rk-member-grid {
         grid-template-columns: 1fr;
     }
 
-    .rk-info-grid {
-        grid-template-columns: 1fr;
+    .rk-group-title {
+        flex-wrap: wrap;
     }
 }
+
+
+

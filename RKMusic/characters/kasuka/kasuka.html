@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KASUKA | RK Music Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            --char-color: #ff5252;
+            --char-glow: rgba(255, 82, 82, 0.4);
+            --char-color-soft: rgba(255, 82, 82, 0.08);
+            --char-border: rgba(255, 82, 82, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../../rkmusic_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO ROSTER
+        </a>
+        <div class="cp-nav-gen">VSINGER / VESPERBELL</div>
+    </nav>
+
+    <section class="cp-hero">
+        <div class="cp-bg-letter">K</div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">VESPERBELL Vocal</div>
+            <h1 class="cp-hero-name">KASUKA</h1>
+            <span class="cp-hero-en">The Rock Gorilla</span>
+            <div class="cp-chara-desc">
+                バーチャルガールズロックユニット「VESPERBELL」の高音担当。圧倒的なハイトーンボイスと、それとは裏腹なストイックな筋トレ愛で知られる。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">筋肉</span>
+                <span class="cp-tag cp-tag-primary">ハイトーン</span>
+                <span class="cp-tag cp-tag-muted">ゴリラ</span>
+                <span class="cp-tag cp-tag-muted">ストイック</span>
+            </div>
+        </div>
+        <div class="cp-hero-visualizer">
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+        </div>
+    </section>
+
+    <section class="cp-section cp-reveal">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>🦍 筋肉への情熱</h3>
+                <p>週2回ジムに通い、デッドリフトなどをこなすストイックな一面を持つ。ファンからは「ゴリラ」といじられることもあるが、そのパワーが彼女のパワフルな歌声を支えている。</p>
+            </div>
+            <div class="cp-card">
+                <h3>👗 独自の食べすぎ対策</h3>
+                <p>食べすぎを防止するため、外食時にはあえてウエストのコルセットやピチピチのジーンズを着用して出かけるが、結局苦しくなって外してしまうという茶目っ気のあるエピソードも。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section cp-reveal">
+        <h2 class="cp-section-title">EPISODES</h2>
+        <div class="cp-grid cp-grid-2">
+            <div class="cp-card">
+                <h3>1. 野太い歓声</h3>
+                <p>遊園地のジェットコースターで「きゃー！」ではなく「っしゃ！」「うおー！」と野太い声で叫びすぎ、一発で声を枯らした伝説を持つ。</p>
+            </div>
+            <div class="cp-card">
+                <h3>2. 相方・ヨミとの深い絆</h3>
+                <p>ヨミとは楽屋でも何時間もしょうもない会話を続けるほどの仲良し。ライブでは台本を無視して二人で自由すぎる空間を作り上げるのが定石となっている。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <p>© 2026 VTuber Archive Project. RK Music - KASUKA Archive.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HONK THE HORN | RK Music | VTuber Archive</title>
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #ffd700;
+            --char-glow: rgba(255, 215, 0, 0.5);
+            --char-color-soft: rgba(255, 215, 0, 0.08);
+            --char-border: rgba(255, 215, 0, 0.25);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a href="../rkmusic_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO INDEX
+        </a>
+        <div class="cp-nav-gen">KMNLABEL</div>
+    </nav>
+
+    <section class="cp-hero">
+        <div class="cp-bg-letter">H</div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">KMNLABEL / Unit</div>
+            <h1 class="cp-hero-name">HONK THE HORN</h1>
+            <span class="cp-hero-en">MOCO / BAMBI</span>
+            <div class="cp-chara-desc">
+                2026年3月にKMNLABELへ加入した待望の新ユニット。ストリート・カルチャーを主軸とした独自の世界観と、二人の織りなすサウンドが新たな旋風を巻き起こす。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">Unit</span>
+                <span class="cp-tag cp-tag-muted">KMNLABEL</span>
+                <span class="cp-tag cp-tag-muted">Street</span>
+            </div>
+        </div>
+        <div class="cp-hero-visualizer">
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+        </div>
+    </section>
+
+    <section class="cp-section cp-reveal">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>UNIT MEMBERS</h3>
+                <ul>
+                    <li><strong>Member:</strong> MOCO</li>
+                    <li><strong>Member:</strong> BAMBI</li>
+                    <li><strong>Label:</strong> KMNLABEL (2026.03〜)</li>
+                    <li><strong>Affiliation:</strong> RK Music</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        © 2026 VTuber Archive Project.
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) entry.target.classList.add('active');
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

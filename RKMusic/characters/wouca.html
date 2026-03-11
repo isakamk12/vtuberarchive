@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wouca | RK Music | VTuber Archive</title>
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #ffffff;
+            --char-glow: rgba(255, 255, 255, 0.5);
+            --char-color-soft: rgba(255, 255, 255, 0.08);
+            --char-border: rgba(255, 255, 255, 0.25);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a href="../rkmusic_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO INDEX
+        </a>
+        <div class="cp-nav-gen">Independent Artist</div>
+    </nav>
+
+    <section class="cp-hero">
+        <div class="cp-bg-letter">W</div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">Artist</div>
+            <h1 class="cp-hero-name">wouca</h1>
+            <span class="cp-hero-en">wouca</span>
+            <div class="cp-chara-desc">
+                RK Music所属として活動するVSinger。既存の枠に縛られない自由な表現力で、自身の音楽を追求し続けている。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">VSinger</span>
+                <span class="cp-tag cp-tag-muted">RK Music</span>
+                <span class="cp-tag cp-tag-muted">SOLO</span>
+            </div>
+        </div>
+        <div class="cp-hero-visualizer">
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+        </div>
+    </section>
+
+    <section class="cp-section cp-reveal">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>INFORMATION</h3>
+                <ul>
+                    <li><strong>Name:</strong> wouca (ウォカ)</li>
+                    <li><strong>Affiliation:</strong> RK Music</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        © 2026 VTuber Archive Project.
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) entry.target.classList.add('active');
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

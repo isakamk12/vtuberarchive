@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEUN | RK Music Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            --char-color: #8c9eff;
+            --char-glow: rgba(140, 158, 255, 0.4);
+            --char-color-soft: rgba(140, 158, 255, 0.1);
+            --char-border: rgba(140, 158, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../../rkmusic_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO ROSTER
+        </a>
+        <div class="cp-nav-gen">VSINGER / Independent</div>
+    </nav>
+
+    <section class="cp-hero">
+        <div class="cp-bg-letter">N</div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">Fallen Angel Singer</div>
+            <h1 class="cp-hero-name">NEUN</h1>
+            <span class="cp-hero-en">The Salvation Messenger</span>
+            <div class="cp-chara-desc">
+                元天使の「堕天使」バーチャルシンガー。自ら作詞・編曲まで手がけるクリエイターであり、圧倒的な歌唱力で多くのリスナーの魂を「救済」している。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">ノネット</span>
+                <span class="cp-tag cp-tag-primary">堕天使</span>
+                <span class="cp-tag cp-tag-muted">愛称: のいたん</span>
+                <span class="cp-tag cp-tag-muted">1ノイ=40分</span>
+            </div>
+        </div>
+        <div class="cp-hero-visualizer">
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+        </div>
+    </section>
+
+    <section class="cp-section cp-reveal">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>🌟 天使から堕天使へ</h3>
+                <p>大体19万歳の元天使。好物はおにぎり（特に鮭と筋子）。活動の節目にファンネーム（ノネット）やファンマーク（羊とアンテナ）を一新するなど、常にリスナーと共に進化を続ける姿勢を持つ。</p>
+            </div>
+            <div class="cp-card">
+                <h3>🎧 クリエイターとしての顔</h3>
+                <p>オリジナル楽曲「エンゲルスリート」がYouTube Musicで100万回再生を突破。新人VTuber楽曲ランキングでもTOP10入りを果たすなど、アーティストとしての実力は折り紙付き。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section cp-reveal">
+        <h2 class="cp-section-title">EPISODES</h2>
+        <div class="cp-grid cp-grid-2">
+            <div class="cp-card">
+                <h3>1. おにぎりへの異常な愛</h3>
+                <p>毎日おにぎりを食べるほどの食いしん坊。初のワンマンライブの裏側でも、同期二人が緊張で食欲がない中、一人だけお弁当とおにぎりをもぐもぐ食べて本番に挑んだという大物っぷりを見せた。</p>
+            </div>
+            <div class="cp-card">
+                <h3>2. 新単位「1ノイ＝40分」</h3>
+                <p>寝ることが大好き。ある日の朝活配信で40分の寝坊をした際、リスナーのノリから「1ノイ＝40分」という新たな時間の単位が生まれた。今でも愛称「のいたん」と共に親しまれている。</p>
+            </div>
+            <div class="cp-card">
+                <h3>3. VALORANTガチ勢</h3>
+                <p>ゲームではFPS（特にVALORANT）を得意とし、最高ランク「ダイヤ」に到達するほどの実力。歌唱時のクールさと、ゲーム中の熱いプレイスタイルのギャップが魅力。</p>
+            </div>
+            <div class="cp-card">
+                <h3>4. ホラーゲームでのポンコツ化</h3>
+                <p>FPSの強さとは裏腹にホラーゲームは大の苦手。同期とのコラボでもパニックになって叫び声を上げ、怯えまくるなど、リスナーからは「ポンコツ可愛い」と絶賛される一面も。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <p>© 2026 VTuber Archive Project. RK Music - NEUN Archive.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

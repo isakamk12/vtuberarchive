@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XIDEN | RK Music Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            --char-color: #7e57c2;
+            --char-glow: rgba(126, 87, 194, 0.4);
+            --char-color-soft: rgba(126, 87, 194, 0.1);
+            --char-border: rgba(126, 87, 194, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../../rkmusic_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO ROSTER
+        </a>
+        <div class="cp-nav-gen">VSINGER / Independent</div>
+    </nav>
+
+    <section class="cp-hero">
+        <div class="cp-bg-letter">X</div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">Dance & Vocal VSinger</div>
+            <h1 class="cp-hero-name">XIDEN</h1>
+            <span class="cp-hero-en">The ignited aXIs</span>
+            <div class="cp-chara-desc">
+                歌って踊れるVsinger。紫電一閃の如きパフォーマンスと、ファン(aXIs)への深い執着とも言える特大の愛を振りまく。お嬢様言葉を操る、ちょっぴりヤンデレ(?)な魅力の持ち主。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">aXIs</span>
+                <span class="cp-tag cp-tag-primary">ライブ中毒者</span>
+                <span class="cp-tag cp-tag-muted">蝶々と鎖</span>
+                <span class="cp-tag cp-tag-muted">フミフミフミ</span>
+            </div>
+        </div>
+        <div class="cp-hero-visualizer">
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+        </div>
+    </section>
+
+    <section class="cp-section cp-reveal">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>🦋 執念のパフォーマンス</h3>
+                <p>自らを「ライブ中毒者」と称し、ステージでは「死んでもいい」と思うほどの覚悟で挑む。K-POPや椎名林檎、宇多田ヒカルをルーツに持ち、自身のMVやデザインでも非常に高い美学を追求している。</p>
+            </div>
+            <div class="cp-card">
+                <h3>🏰 蔓延するお嬢様言葉</h3>
+                <p>配信で「〜ですわ」「〜ですの」といったお嬢様言葉を多用した結果、リスナーの間でも大ブームに。コメント欄が貴族の社交場と化すなど、独特の一体感を生み出す才能を持つ。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section cp-reveal">
+        <h2 class="cp-section-title">EPISODES</h2>
+        <div class="cp-grid cp-grid-2">
+            <div class="cp-card">
+                <h3>1. 特大の「重い愛」公言</h3>
+                <p>ファンに対して「みんな以上に執着してる」「一生付きまとう」と公言。他の活動者に浮気しないか心配するヤンデレ風のアピールは、ファンにとっての最大級のご褒美（？）となっている。</p>
+            </div>
+            <div class="cp-card">
+                <h3>2. 魂のファンマーク訂正事件</h3>
+                <p>自己紹介配信でファンマークを発表した直後、内容の間違いに気づき「嘘です！落ち着いて一回見なかったことにして！」と大パニック。完璧主義な面とおっちょこちょいな面の同居が尊い。</p>
+            </div>
+            <div class="cp-card">
+                <h3>3. 独特すぎる「フミフミ」笑い</h3>
+                <p>笑い方が「フミフミフミ」になったり、「大地を踏みしめて」というフレーズを多用したりと、ワードセンスが非常に独特。Minecraftでの座標メモを駆使した極度の迷子っぷりももはや様式美。</p>
+            </div>
+            <div class="cp-card">
+                <h3>4. 限界突破の「#ignite_the_x」</h3>
+                <p>初のワンマンライブでは、自身の限界を超えてステージで燃焼。観客(aXIs)を自身の「活動の軸」として再認識し、より強固な絆を築いた伝説の夜となった。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <p>© 2026 VTuber Archive Project. RK Music - XIDEN Archive.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

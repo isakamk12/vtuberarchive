@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CULUA | RK Music Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            --char-color: #f44336;
+            --char-glow: rgba(244, 67, 54, 0.4);
+            --char-color-soft: rgba(244, 67, 54, 0.1);
+            --char-border: rgba(244, 67, 54, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../../rkmusic_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO ROSTER
+        </a>
+        <div class="cp-nav-gen">Fused / VSinger</div>
+    </nav>
+
+    <section class="cp-hero">
+        <div class="cp-bg-letter">C</div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">Vampire Singer</div>
+            <h1 class="cp-hero-name">CULUA</h1>
+            <span class="cp-hero-en">The Searching Vampire</span>
+            <div class="cp-chara-desc">
+                歌を届ける吸血鬼。ボカロ曲をこよなく愛し、インターネットの深層から楽曲を発掘する「探求魔人」。変化を恐れず、バーチャルとリアルの両軸で自らの歌を追求し続けている。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">探求魔人</span>
+                <span class="cp-tag cp-tag-primary">カルミー</span>
+                <span class="cp-tag cp-tag-muted">同期: MELUNE</span>
+                <span class="cp-tag cp-tag-muted">白識吸血鬼</span>
+            </div>
+        </div>
+        <div class="cp-hero-visualizer">
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+        </div>
+    </section>
+
+    <section class="cp-section cp-reveal">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>🦇 健康的なバンパイア</h3>
+                <p>毎日3回歯を磨く、非常に規則正しい吸血鬼。名前の由来は花の名前「カルミア」とラテン語で歌を意味する「カルミナ」。同期のメダ、ノインとは「メルーン」というグループを組んでいる。</p>
+            </div>
+            <div class="cp-card">
+                <h3>🖊️ 究極の妥協案「CLA」</h3>
+                <p>自分のサインを筆記体でかっこよく書くために猛練習したが、結局上手く書けず、最終的に「CLA」という極限まで簡略化したサインに落ち着いたという愛らしいエピソードを持つ。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section cp-reveal">
+        <h2 class="cp-section-title">EPISODES</h2>
+        <div class="cp-grid cp-grid-2">
+            <div class="cp-card">
+                <h3>1. クールキャラの崩壊</h3>
+                <p>デビュー前は「ソークール」な姿で注目されたが、配信で見せる頻繁な噛み癖や、オタク気質な一面により、今では親しみやすいポンコツ系クール（？）としての地位を確立した。</p>
+            </div>
+            <div class="cp-card">
+                <h3>2. インターネットの深層へ</h3>
+                <p>聴く曲の半分以上がボカロ。マイナーな楽曲や掘り出しものの動画を発掘してはリスナーに共有する。その熱量から「布教隊長」とも呼ばれるほど音楽への愛が深い。</p>
+            </div>
+            <div class="cp-card">
+                <h3>3. 白識（博識）吸血鬼の苦悩</h3>
+                <p>自称「白識」だが、実際は漢字や英語が非常に苦手。「稀有（きお）」などの読み間違いをリスナーに指摘されるたび、「吸血鬼だから仕方ない」と可愛らしく開き直るのがお約束。</p>
+            </div>
+            <div class="cp-card">
+                <h3>4. 恐怖を凌駕するガチ恋</h3>
+                <p>ホラーゲームで霊が至近距離に来ても「ガチ恋距離だ」「僕モテすぎている」と余裕の対応。恐怖心よりも独自の美学やオタク的視点が勝ってしまう強心臓の持ち主。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <p>© 2026 VTuber Archive Project. RK Music / Fused - CULUA Archive.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

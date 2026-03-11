@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>瀬戸乃とと | RK Music Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            --char-color: #0088ff;
+            --char-glow: rgba(0, 136, 255, 0.5);
+            --char-color-soft: rgba(0, 136, 255, 0.1);
+            --char-border: rgba(0, 136, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../../rkmusic_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO ROSTER
+        </a>
+        <div class="cp-nav-gen">LIVE UNION</div>
+    </nav>
+
+    <section class="cp-hero">
+        <div class="cp-bg-letter">T</div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">Virtual Singer</div>
+            <h1 class="cp-hero-name">瀬戸乃とと</h1>
+            <span class="cp-hero-en">Rock Spirit from the Sea</span>
+            <div class="cp-chara-desc">
+                「情緒ぶち壊し系VSinger」を自称する、瀬戸内海からやってきた魚の妖精。艶のある中低音とロックを得意とし、アーティストとしての真摯な姿勢と飾らないトークのギャップでリスナーを魅了する。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">水槽夜会</span>
+                <span class="cp-tag cp-tag-primary">情緒ぶち壊し系</span>
+                <span class="cp-tag cp-tag-muted">年齢: 300歳</span>
+                <span class="cp-tag cp-tag-muted">反骨精神</span>
+            </div>
+        </div>
+        <div class="cp-hero-visualizer">
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+        </div>
+    </section>
+
+    <section class="cp-section cp-reveal">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>🐟 魚の妖精の魂</h3>
+                <p>キャッチフレーズは「立てば芍薬 座れば牡丹 三度の飯より百合が好き」。かっこいい歌声を持つが、MCでは「おしゃべりウーマン」と化すほどトークが止まらなくなるギャップの持ち主。</p>
+            </div>
+            <div class="cp-card">
+                <h3>🎸 ロックなメンタル</h3>
+                <p>人生の局面では「マキシマム ザ ホルモン」を聴いて強気なメンタルを作り上げる。過去の苦境を「泥水をすすっても生き延びてやる」という反骨精神で乗り越えてきた苦労人。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section cp-reveal">
+        <h2 class="cp-section-title">EPISODES</h2>
+        <div class="cp-grid cp-grid-2">
+            <div class="cp-card">
+                <h3>1. 生き延びる女の強さ</h3>
+                <p>過去にはライフラインが止まるほどの貧困を経験。配信をやめようと悩んだ時期もあったが、リスナーの支えで踏みとどまり、現在は「配信モンスター」へと進化を遂げた。</p>
+            </div>
+            <div class="cp-card">
+                <h3>2. ダンスDNAの欠如</h3>
+                <p>高い歌唱力を持つ一方で、ダンスは壊滅的に苦手。「右腕と右足が同時に出る」「自分にはダンスのDNAが組み込まれていない」と自虐するほど運動は苦手。</p>
+            </div>
+            <div class="cp-card">
+                <h3>3. 情緒ぶち壊し系トーク</h3>
+                <p>美しい歌声の直後に限界トークを展開し、「リスナーに風邪を引かせるのが趣味」と語る。鼻をかむ音もあえてミュートにしないなど、飾らない等身大の姿を晒している。</p>
+            </div>
+            <div class="cp-card">
+                <h3>4. 限界PCからの脱却</h3>
+                <p>長年メモリ16GBの低スペックPCで100曲耐久などをこなしてきたが、活動7周年に新PCを導入。「メモリを20%しか使ってない！」と感動し、さらなる高みへ。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <p>© 2026 VTuber Archive Project. RK Music / LIVE UNION - Setono Toto Archive.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

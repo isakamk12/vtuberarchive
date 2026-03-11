@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOMI | RK Music Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            --char-color: #2196f3;
+            --char-glow: rgba(33, 150, 243, 0.4);
+            --char-color-soft: rgba(33, 150, 243, 0.1);
+            --char-border: rgba(33, 150, 243, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../../rkmusic_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO ROSTER
+        </a>
+        <div class="cp-nav-gen">VSINGER / VESPERBELL</div>
+    </nav>
+
+    <section class="cp-hero">
+        <div class="cp-bg-letter">Y</div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">VESPERBELL Vocal</div>
+            <h1 class="cp-hero-name">YOMI</h1>
+            <span class="cp-hero-en">The Cool Prince</span>
+            <div class="cp-chara-desc">
+                バーチャルガールズロックユニット「VESPERBELL」のメンバー。普段は「王子様キャラ」として振る舞い、力強くも繊細な歌声でベルズの心を掴む。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">王子様</span>
+                <span class="cp-tag cp-tag-primary">クール(?)</span>
+                <span class="cp-tag cp-tag-muted">自称ポンコツ</span>
+                <span class="cp-tag cp-tag-muted">情報漏洩の要</span>
+            </div>
+        </div>
+        <div class="cp-hero-visualizer">
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+        </div>
+    </section>
+
+    <section class="cp-section cp-reveal">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>👑 王子様のギャップ</h3>
+                <p>クールな王子様として活動しているが、ライブ中に歌詞を忘れたり歌えなくなったりと、本人もネタにするほどのポンコツな一面も。MC中に相方のカスカを見つめる姿もしばしば目撃される。</p>
+            </div>
+            <div class="cp-card">
+                <h3>⚖️ 合理的なエゴサ術</h3>
+                <p>エゴサーチを快適に行うため、自分と合わなさそうな人をあらかじめミュートにするという、合理的かつ徹底した防衛策を講じている。その徹底ぶりも彼女らしい一面。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section cp-reveal">
+        <h2 class="cp-section-title">EPISODES</h2>
+        <div class="cp-grid cp-grid-2">
+            <div class="cp-card">
+                <h3>1. 情報漏洩の要</h3>
+                <p>公式発表前に配信のノリでうっかりポロっと未公開情報を喋ってしまうことがあり、「情報漏洩の要」「ガバガバの代名詞」と自称されるほど。その自由さが愛されている。</p>
+            </div>
+            <div class="cp-card">
+                <h3>2. カスカへの愛</h3>
+                <p>ライブのMC中にカスカを見て「俺の彼女可愛いだろ」という顔をしてしまうほどの仲の良さ。二人での自由すぎる台本無視トークはライブの名物となっている。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <p>© 2026 VTuber Archive Project. RK Music - YOMI Archive.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

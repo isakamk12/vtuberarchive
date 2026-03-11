@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HACHI | RK Music Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            --char-color: #ffc400;
+            --char-glow: rgba(255, 196, 0, 0.5);
+            --char-color-soft: rgba(255, 196, 0, 0.1);
+            --char-border: rgba(255, 196, 0, 0.3);
+        }
+        .cp-bg::after {
+            background-image: repeating-linear-gradient(0deg,
+                transparent, transparent 18px,
+                rgba(255, 196, 0, 0.02) 18px, rgba(255, 196, 0, 0.02) 19px);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../../rkmusic_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO ROSTER
+        </a>
+        <div class="cp-nav-gen">LIVE UNION</div>
+    </nav>
+
+    <section class="cp-hero">
+        <div class="cp-bg-letter">H</div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">Virtual Singer</div>
+            <h1 class="cp-hero-name">HACHI</h1>
+            <span class="cp-hero-en">Your Soul's Destination</span>
+            <div class="cp-chara-desc">
+                「あなたの心に寄り添う歌を」をモットーに活動するバーチャルシンガー。圧倒的で透明感のある歌唱力と、普段のぽんこつでよく笑う性格とのギャップが最大の魅力。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">Midnight station</span>
+                <span class="cp-tag cp-tag-primary">ハニカムステーション！</span>
+                <span class="cp-tag cp-tag-muted">誕生日: 1/16</span>
+                <span class="cp-tag cp-tag-muted">BEES</span>
+            </div>
+        </div>
+        <div class="cp-hero-visualizer">
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+        </div>
+    </section>
+
+    <section class="cp-section cp-reveal">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>🎤 活動コンセプト</h3>
+                <p>毎週火曜24時からは、しっとりとバラードで睡眠導入を促す「Midnight station（ミドステ）」、毎週金曜21時からは元気な曲や雑談を交える「ハニカムステーション！（ハニステ）」を配信中。</p>
+            </div>
+            <div class="cp-card">
+                <h3>🐝 ファンとの絆</h3>
+                <p>ファンネームは「BEES」。2周年の記念配信では、ファンが作ってくれたお祝いのホームページを見て大号泣するなど、リスナーとの信頼関係を何よりも大切にしている。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section cp-reveal">
+        <h2 class="cp-section-title">EPISODES</h2>
+        <div class="cp-grid cp-grid-2">
+            <div class="cp-card">
+                <h3>1. 歌担当と喋り担当がいる？</h3>
+                <p>歌っている時はクールだが、MCではふにゃふにゃになり、よく言葉を噛む。「歌担当と喋り担当の2人がいるのでは？」といじられるほどのギャップを持つ。豪快な「海賊の笑い声」も特徴。</p>
+            </div>
+            <div class="cp-card">
+                <h3>2. 逃げ場なし！エゴサの鬼</h3>
+                <p>Twitterでのエゴサーチ能力が非常に高く、検索避けのつもりで「たや」とだけ呟いても執念で見つけ出す。「息をするように見つかる」と恐れられつつも愛されている。</p>
+            </div>
+            <div class="cp-card">
+                <h3>3. 同期・焔魔るりへの愛</h3>
+                <p>初期メンバーの焔魔るりを「ソウルメイト」と呼び溺愛。一緒に箱根旅行に行ったり、仕事終わりにカラオケに行ったりするエピソードを嬉しそうに語る尊い関係性。</p>
+            </div>
+            <div class="cp-card">
+                <h3>4. 生ニンジン丸かじり事件</h3>
+                <p>ご飯を作るのが面倒になり、生のニンジンの皮をむいてマヨネーズとソルトをかけてそのまま丸かじりした。「馬じゃん」と突っ込まれたが、「固いものを砕きたかった」と反論した。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <p>© 2026 VTuber Archive Project. RK Music / LIVE UNION - HACHI Archive.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

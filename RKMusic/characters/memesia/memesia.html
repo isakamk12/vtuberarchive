@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>メメシア | RK Music Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            --char-color: #9575cd;
+            --char-glow: rgba(149, 117, 205, 0.4);
+            --char-color-soft: rgba(149, 117, 205, 0.1);
+            --char-border: rgba(149, 117, 205, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../../rkmusic_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO ROSTER
+        </a>
+        <div class="cp-nav-gen">GRAYMYTH / VSinger</div>
+    </nav>
+
+    <section class="cp-hero">
+        <div class="cp-bg-letter">M</div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">Former God VSinger</div>
+            <h1 class="cp-hero-name">メメシア</h1>
+            <span class="cp-hero-en">MEMESIA / The Lapis Crystal</span>
+            <div class="cp-chara-desc">
+                元神様のバーチャルアーティスト。体に宝石を有し、徐々に宝石化が進行している。クールなビジュアルとは裏腹に、極度の「めんどくさがり」で「人見知り」、そして圧倒的な「ゲラ」という親しみやすい神様。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">信仰者</span>
+                <span class="cp-tag cp-tag-primary">GRAYMYTH</span>
+                <span class="cp-tag cp-tag-muted">年齢: 267億歳</span>
+                <span class="cp-tag cp-tag-muted">水晶とワイン</span>
+            </div>
+        </div>
+        <div class="cp-hero-visualizer">
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+        </div>
+    </section>
+
+    <section class="cp-section cp-reveal">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>💎 宝石化する身体</h3>
+                <p>ユニット「GRAYMYTH（グレイミース）」で一番の高身長（169cm）。好物は生クリームを吸うこととお酒（梅酒など）。夢は「FF」シリーズの主題歌を担当することという、深いゲーマー魂を持つ。</p>
+            </div>
+            <div class="cp-card">
+                <h3>📢 特技は「大声」</h3>
+                <p>普段は人見知りで静かだが、一度スイッチが入ると圧倒的な声量（と笑い声）を響かせる。「唯一無二の存在になりたい」という信念のもと、Aimerをリスペクトした感情豊かな歌唱を追求している。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section cp-reveal">
+        <h2 class="cp-section-title">EPISODES</h2>
+        <div class="cp-grid cp-grid-2">
+            <div class="cp-card">
+                <h3>1. 初配信でのポンコツ宣言</h3>
+                <p>元神様という荘厳な設定で登場したものの、初配信から「ドラえもんの練習しすぎて喉痛めた」などと発言。クールな見た目を秒で裏切る愛嬌たっぷりのポンコツぶりでリスナーの心を掴んだ。</p>
+            </div>
+            <div class="cp-card">
+                <h3>2. 鼓膜破壊のホラゲ実況</h3>
+                <p>ホラーゲームが極度に苦手で、叫び声の大きさが「ゲーム内の化け物よりうるさい」と言われるほど。マイクの音量パラメーターを振り切るほどの本気の悲鳴は、もはや一つの芸風となっている。</p>
+            </div>
+            <div class="cp-card">
+                <h3>3. FF10への異常な偏愛</h3>
+                <p>オープニング映像を見ただけで大号泣するほどのFF10ガチ勢。配信では「初期武器縛り」という過酷なプレイを完遂するなど、単なるファンに留まらないストイックな愛を見せつけている。</p>
+            </div>
+            <div class="cp-card">
+                <h3>4. 「みんなで地図を書こう」</h3>
+                <p>普段はふざけているが、活動への熱量は凄まじい。毎日ショート動画を投稿し、目標や戦略をリスナーと真摯に共有。「一緒に夢を叶えよう」と語りかける熱い姿勢が多くの「信仰者」を惹きつけている。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <p>© 2026 VTuber Archive Project. RK Music / GRAYMYTH - Memesia Archive.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

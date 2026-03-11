@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ヨノ | RK Music Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            --char-color: #f5f5f5;
+            --char-glow: rgba(245, 245, 245, 0.4);
+            --char-color-soft: rgba(245, 245, 245, 0.05);
+            --char-border: rgba(245, 245, 245, 0.3);
+            --char-text-accent: #1a237e;
+        }
+        .cp-bg::after {
+            background-image: radial-gradient(circle at 50% 50%, rgba(26, 35, 126, 0.1) 0%, transparent 60%);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../../rkmusic_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO ROSTER
+        </a>
+        <div class="cp-nav-gen">VSINGER / Independent</div>
+    </nav>
+
+    <section class="cp-hero">
+        <div class="cp-bg-letter">Y</div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">Virtual Singer-Songwriter</div>
+            <h1 class="cp-hero-name">ヨノ</h1>
+            <span class="cp-hero-en">YONO / The White Note</span>
+            <div class="cp-chara-desc">
+                「爆裂清楚」を自称するバーチャルシンガーソングライター。自身で作詞・作曲を手がけ、ファン（ヨノーツ）を大切な「音符」として共に音楽を紡ぎ出す、等身大なアーティスト。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">ヨノーツ</span>
+                <span class="cp-tag cp-tag-primary">爆裂清楚</span>
+                <span class="cp-tag cp-tag-muted">しゃもじ勢</span>
+                <span class="cp-tag cp-tag-muted">月と楽譜</span>
+            </div>
+        </div>
+        <div class="cp-hero-visualizer">
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+        </div>
+    </section>
+
+    <section class="cp-section cp-reveal">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>🎼 ファンは大切な「音符」</h3>
+                <p>ファンネームは「ヨノーツ」。リスナーを「自分の楽曲を構成する大切な音符」と見なしており、彼らへの感謝を込めた”ラブレターソング”を書き下ろすなど、強い絆を大切にしている。</p>
+            </div>
+            <div class="cp-card">
+                <h3>🍙 白いご飯と「しゃもじ」</h3>
+                <p>無類の白米好きが高じて、ライブではしゃもじを振る独自の文化が定着。1stワンマンライブ「月下の花束」では客席でしゃもじが一番目立つという、ユーモア溢れる光景が繰り広げられた。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section cp-reveal">
+        <h2 class="cp-section-title">EPISODES</h2>
+        <div class="cp-grid cp-grid-2">
+            <div class="cp-card">
+                <h3>1. 伝説の「大合唱」トラブル</h3>
+                <p>1stワンマンライブにて機材トラブルで音が止まった際、不安な静寂を救ったのはファンの自発的な大合唱だった。その温かさに感動し大号泣。ファンとの確かな信頼を証明した伝説の夜となった。</p>
+            </div>
+            <div class="cp-card">
+                <h3>2. 等身大な「不器用」の告白</h3>
+                <p>自称「爆裂清楚」だが、実際は賑やかで気さくな人柄。「人の倍頑張らないと普通にできない」と自身の不器用さを正直に語る姿勢が、多くのリスナーの共感と応援を呼んでいる。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <p>© 2026 VTuber Archive Project. RK Music - Yono Archive.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

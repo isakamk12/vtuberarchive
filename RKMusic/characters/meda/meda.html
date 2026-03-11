@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>メダ | RK Music Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            --char-color: #f8bbd0;
+            --char-glow: rgba(248, 187, 208, 0.5);
+            --char-color-soft: rgba(248, 187, 208, 0.1);
+            --char-border: rgba(248, 187, 208, 0.3);
+        }
+        .cp-bg::after {
+            background-image: radial-gradient(circle at 50% 50%, rgba(248, 187, 208, 0.05) 0%, transparent 60%);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../../rkmusic_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO ROSTER
+        </a>
+        <div class="cp-nav-gen">VSINGER / Independent</div>
+    </nav>
+
+    <section class="cp-hero">
+        <div class="cp-bg-letter">M</div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">Android VSinger</div>
+            <h1 class="cp-hero-name">メダ</h1>
+            <span class="cp-hero-en">MEDA / The Futurism</span>
+            <div class="cp-chara-desc">
+                100年先の未来からやってきた、半人間アンドロイド。「チャームポイントは生歌、それ以外はポンコツ」を地で行く、圧倒的な歌唱力と愛すべきポンコツ性のギャップが魅力。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">選駆者</span>
+                <span class="cp-tag cp-tag-primary">キーペ！</span>
+                <span class="cp-tag cp-tag-muted">誕生日: 11/3</span>
+                <span class="cp-tag cp-tag-muted">年齢: -83歳</span>
+            </div>
+        </div>
+        <div class="cp-hero-visualizer">
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+        </div>
+    </section>
+
+    <section class="cp-section cp-reveal">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>🪐 未来からの選駆者</h3>
+                <p>ファンネームは「選駆者」。ファンマークは土星と砂時計。パステルカラーや押しボタン式のガジェットをこよなく愛するが、未来人とは思えないほど計算や数字に弱い一面を持つ。</p>
+            </div>
+            <div class="cp-card">
+                <h3>🥛 清楚ポイント100%</h3>
+                <p>自ら「大清楚」を自負し、ポケットティッシュを常備している点などを熱烈にアピール。アンケートでリスナーから清楚認定100%を勝ち取ったこともある、自他共に認める（？）清楚系。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section cp-reveal">
+        <h2 class="cp-section-title">EPISODES</h2>
+        <div class="cp-grid cp-grid-2">
+            <div class="cp-card">
+                <h3>1. 公式公認の計算ミス</h3>
+                <p>「マイナス83歳」という自身の年齢を計算し間違え、公式パンフレットにそのまま誤った年齢が記載・発行されてしまうという伝説を持つ。未来の技術でも計算弱弱は治らなかった模様。</p>
+            </div>
+            <div class="cp-card">
+                <h3>2. 豪快すぎる2Lラッパ飲み</h3>
+                <p>水分補給は2リットルのペットボトルをそのまま「ラッパ飲み」。乾杯の音頭を「KP（キーペ）」と言い間違えて以来、メダの枠では「キーペ！」が標準の挨拶となった。</p>
+            </div>
+            <div class="cp-card">
+                <h3>3. 戦慄の「羽交い締め」歓迎</h3>
+                <p>初見さんが来ると「わっしょい！」「羽交い締めだ！」とリスナー一丸となって囲い込む独自の文化がある。一度入ったら逃げられない、あたたかくも熱烈なコミュニティ。</p>
+            </div>
+            <div class="cp-card">
+                <h3>4. 緊急入院と健康志向</h3>
+                <p>2025年に便秘（？）が原因で緊急入院するという事件が発生。退院後は健康意識が爆上がりし、活動量計をつけて「超健康優良児」を目指して日々奮闘している。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <p>© 2026 VTuber Archive Project. RK Music - MEDA Archive.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

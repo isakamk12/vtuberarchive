@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>焔魔るり | RK Music Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            --char-color: #b829ff;
+            --char-glow: rgba(184, 41, 255, 0.5);
+            --char-color-soft: rgba(184, 41, 255, 0.1);
+            --char-border: rgba(184, 41, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../../rkmusic_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO ROSTER
+        </a>
+        <div class="cp-nav-gen">LIVE UNION</div>
+    </nav>
+
+    <section class="cp-hero">
+        <div class="cp-bg-letter">R</div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">Virtual Singer</div>
+            <h1 class="cp-hero-name">焔魔るり</h1>
+            <span class="cp-hero-en">The Storytelling Voice</span>
+            <div class="cp-chara-desc">
+                「ようこそ、あなたを楽曲の物語へ」をキャッチコピーに活動するVSinger。凛としたかっこいい歌声と、普段のぽわぽわとした可愛らしい喋り声のギャップが魅力。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">るりみゅー</span>
+                <span class="cp-tag cp-tag-primary">ナスに祈りオン</span>
+                <span class="cp-tag cp-tag-muted">イメージカラー: 紫</span>
+                <span class="cp-tag cp-tag-muted">オーディション合格組</span>
+            </div>
+        </div>
+        <div class="cp-hero-visualizer">
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+        </div>
+    </section>
+
+    <section class="cp-section cp-reveal">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>🍆 ナスの文化</h3>
+                <p>当初は「天才キャラ」だったが、いつの間にか「頭からナスが生えている」という設定に。リスナーと「ナスに祈りオン（御）」と唱える独特の文化が定着している。</p>
+            </div>
+            <div class="cp-card">
+                <h3>📽️ 継続の力「るりみゅー」</h3>
+                <p>2019年から毎週1本のカバー動画投稿を休むことなく継続。この地道な努力が、現在のVSingerとしての確固たる地位を築くきっかけとなった。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section cp-reveal">
+        <h2 class="cp-section-title">EPISODES</h2>
+        <div class="cp-grid cp-grid-2">
+            <div class="cp-card">
+                <h3>1. 伝説の1万人耐久やり直し</h3>
+                <p>7時間の耐久歌枠で1万人を達成して就寝したが、翌朝起きたら登録者が100人減って9900人台に戻っていたという、悲哀と笑いに満ちた伝説を持つ。</p>
+            </div>
+            <div class="cp-card">
+                <h3>2. 未だに「初配信」をしていない</h3>
+                <p>2018年から活動するベテランだが、正式な「初配信」を一度も行っていない。隙あらば「新人として初配信をしたい」と目論んでいる。</p>
+            </div>
+            <div class="cp-card">
+                <h3>3. 『空の境界』への異常な愛</h3>
+                <p>梶浦由記氏の楽曲をこよなく愛する。『空の境界』カバー企画では、分厚いコーラスを「4人分の焔魔るり」としてすべて一人で録音するほどの熱量を見せる。</p>
+            </div>
+            <div class="cp-card">
+                <h3>4. お姉ちゃんポジション</h3>
+                <p>長女であり、妹キャラではなく「お姉ちゃん」ポジションであると強く主張している。そのぽわぽわした声からは想像できないしっかり者の一面も。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <p>© 2026 VTuber Archive Project. RK Music / LIVE UNION - Enma Ruri Archive.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

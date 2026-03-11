@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEWNE | RK Music Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            --char-color: #cfd8dc;
+            --char-glow: rgba(207, 216, 220, 0.4);
+            --char-color-soft: rgba(207, 216, 220, 0.1);
+            --char-border: rgba(207, 216, 220, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../../rkmusic_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO ROSTER
+        </a>
+        <div class="cp-nav-gen">GRAYMICE / VSinger</div>
+    </nav>
+
+    <section class="cp-hero">
+        <div class="cp-bg-letter">L</div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">Evil God VSinger</div>
+            <h1 class="cp-hero-name">LEWNE</h1>
+            <span class="cp-hero-en">The Loudest Mischief</span>
+            <div class="cp-chara-desc">
+                ガールズユニット「GRAYMICE（グレイミース）」のおふざけ担当。自称「邪神」ながら、その正体はおつまみとお酒を愛し、リスナーと絶え間ないプロレスを繰り広げる賑やかなクリエイター。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">フィグナー</span>
+                <span class="cp-tag cp-tag-primary">邪神</span>
+                <span class="cp-tag cp-tag-muted">脇玉汁</span>
+                <span class="cp-tag cp-tag-muted">竜巻と枯れたバラ</span>
+            </div>
+        </div>
+        <div class="cp-hero-visualizer">
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+        </div>
+    </section>
+
+    <section class="cp-section cp-reveal">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>🦑 おつまみ邪神</h3>
+                <p>セブンイレブンのイカそうめんを毎日食べ、ハイボール（宝焼酎）を飲み交わす、庶民的かつおじさん臭い（？）一面を持つ。特技はギター弾き語りと、意外にも繊細なイラスト・裁縫。</p>
+            </div>
+            <div class="cp-card">
+                <h3>🖋️ 多彩なクリエイティビティ</h3>
+                <p>ポンコツエピソードに事欠かないが、自身の楽曲『空想線』のロゴや、毎月のファン向けカレンダーを自作するなど、デザイン能力が非常に高いクリエイターとしての顔も持っている。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section cp-reveal">
+        <h2 class="cp-section-title">EPISODES</h2>
+        <div class="cp-grid cp-grid-2">
+            <div class="cp-card">
+                <h3>1. 非実在概念「脇玉汁」</h3>
+                <p>「脇が酸っぱい」といじられた反論として「私は脇からかきたま汁が出せる」と言い張り、そこから「脇玉汁（わきたまじる）」という謎のパワーワードがファンの間で定着してしまった。</p>
+            </div>
+            <div class="cp-card">
+                <h3>2. 収録中の鼓膜破壊</h3>
+                <p>元々の声が大きすぎるため、収録で音割れが多発。最終的にマイクから5m以上離れたり、真横を向いて歌う羽目になったという、規格外の声量と熱量を備えるパワー系シンガー。</p>
+            </div>
+            <div class="cp-card">
+                <h3>3. 飲み過ぎ迷子の数時間</h3>
+                <p>お酒を飲んで楽しくなりすぎ、そのまま迷子になって数時間も夜の街を歩き回ったという邪神らしからぬポンコツな実話を持つ。リスナーとの遠慮のないプロレスは彼女の配信の華。</p>
+            </div>
+            <div class="cp-card">
+                <h3>4. 重すぎる愛の「アクセル全開」</h3>
+                <p>同期や先輩（IMI先輩など）への愛が限界突破しており、配信中に同期との夢小説妄想を語り出したり、コラボ相手にストーカー行為（？）をして困惑させるなど、オタク気質が極まっている。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <p>© 2026 VTuber Archive Project. RK Music / GRAYMICE - Lewne Archive.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

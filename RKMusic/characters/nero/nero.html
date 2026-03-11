@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NERO | RK Music Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            --char-color: #9e9e9e;
+            --char-glow: rgba(158, 158, 158, 0.4);
+            --char-color-soft: rgba(158, 158, 158, 0.1);
+            --char-border: rgba(158, 158, 158, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../../rkmusic_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO ROSTER
+        </a>
+        <div class="cp-nav-gen">KMNLABEL / KMNZ</div>
+    </nav>
+
+    <section class="cp-hero">
+        <div class="cp-bg-letter">N</div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">KMNZ Vocal / MC</div>
+            <h1 class="cp-hero-name">NERO</h1>
+            <span class="cp-hero-en">The Cool Boke</span>
+            <div class="cp-chara-desc">
+                2024年に加入。力強い低音やがなり、ラップを得意とする実力派。自称「クールビューティ担当」だが、実際は息をするようにボケを放つムードメーカー。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">エゴサマスター</span>
+                <span class="cp-tag cp-tag-primary">クールボケ</span>
+                <span class="cp-tag cp-tag-muted">犬種: シベリアンハスキー</span>
+                <span class="cp-tag cp-tag-muted">地低音の魅力</span>
+            </div>
+        </div>
+        <div class="cp-hero-visualizer">
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+        </div>
+    </section>
+
+    <section class="cp-section cp-reveal">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>🖤 がなりと熱量</h3>
+                <p>音楽への探求心が強く、Official髭男dismの藤原聡さんの大ファン。先輩のライブでの動きをメモして研究するなど、見えないところで圧倒的な努力を重ねている真面目な一面を持つ。</p>
+            </div>
+            <div class="cp-card">
+                <h3>🔍 異常なエゴサ能力</h3>
+                <p>「ネトストのネロ」を自称するほどエゴサ能力が高く、ファンのツイートを秒で捕捉する。初対面の打ち合わせで迷子になり大遅刻し、平謝りしたというポンコツな第一印象も。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section cp-reveal">
+        <h2 class="cp-section-title">EPISODES</h2>
+        <div class="cp-grid cp-grid-2">
+            <div class="cp-card">
+                <h3>1. パソコン初期化の力技</h3>
+                <p>極度の機械音痴で、配信環境の設定がうまくいかず頭を抱えた挙句、パソコンを初期化（ダウングレード）するという赤ちゃんレベルの操作ミスと力技で解決した伝説を持つ。</p>
+            </div>
+            <div class="cp-card">
+                <h3>2. 自称クールビューティ</h3>
+                <p>クールな外見に反して、常にボケを狙っている。「クールビューティ担当」を解任されそうになるほどキャラクター崩壊が激しいが、それこそが彼女の魅力となっている。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <p>© 2026 VTuber Archive Project. RK Music / KMNLABEL - NERO Archive.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

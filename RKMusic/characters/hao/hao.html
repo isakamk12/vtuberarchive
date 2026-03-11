@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>羽緒 | RK Music Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            --char-color: #795548;
+            --char-glow: rgba(121, 85, 72, 0.4);
+            --char-color-soft: rgba(121, 85, 72, 0.1);
+            --char-border: rgba(121, 85, 72, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../../rkmusic_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO ROSTER
+        </a>
+        <div class="cp-nav-gen">GRAYMYTH / VSinger</div>
+    </nav>
+
+    <section class="cp-hero">
+        <div class="cp-bg-letter">H</div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">Shinigami Singer</div>
+            <h1 class="cp-hero-name">羽緒</h1>
+            <span class="cp-hero-en">HAO / The Milk Tea Shinigami</span>
+            <div class="cp-chara-desc">
+                「ミルクティーが血液の死神」。ダークでクールな歌声とビジュアルを持つが、中身は驚くほどおっちょこちょいで親しみやすい。武道館ワンマンを夢見る、ストイックな努力家VSinger。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">黒名者</span>
+                <span class="cp-tag cp-tag-primary">GRAYMYTH</span>
+                <span class="cp-tag cp-tag-muted">ミルクティー中毒</span>
+                <span class="cp-tag cp-tag-muted">羽と骨付き肉</span>
+            </div>
+        </div>
+        <div class="cp-hero-visualizer">
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar Red"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+        </div>
+    </section>
+
+    <section class="cp-section cp-reveal">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>☕ 血液はミルクティー</h3>
+                <p>月に20本以上のペットボトルを消費する無類のミルクティー好き。緊張するとミルクティーがないと発狂しそうになるほど。オトモの小太郎とお揃いのアクセサリーを身につけている。</p>
+            </div>
+            <div class="cp-card">
+                <h3>🎤 圧倒的な歌唱体力</h3>
+                <p>「新春100曲耐久」を9時間以上かけて完走するほどのスタミナの持ち主。言葉で伝えるのが苦手な分、作詞を通して自身の複雑なニュアンスや感情を表現することに長けている。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section cp-reveal">
+        <h2 class="cp-section-title">EPISODES</h2>
+        <div class="cp-grid cp-grid-2">
+            <div class="cp-card">
+                <h3>1. マネージャーは「神様」</h3>
+                <p>初ライブの際、ミルクティーが切れて絶望しそうになったところを、何も言わずに買ってきてくれたマネージャーを「神様かと思った」と語る。彼女にとってミルクティーは生命線そのもの。</p>
+            </div>
+            <div class="cp-card">
+                <h3>2. 愉快な日付勘違い事件</h3>
+                <p>クールな外見からは想像できない「土地狂った」ポンコツさを持つ。自身のデビュー4ヶ月記念日を、翌日だと思い込んで完全に見逃してしまったというお茶目な伝説がある。</p>
+            </div>
+            <div class="cp-card">
+                <h3>3. 鍵を忘れて締め出し</h3>
+                <p>外出時に鍵を忘れ、配信直前に家に入れなくなり大パニックを起こすなど、日常でも死神らしからぬドジっ子属性を発揮。そのギャップがリスナー「黒名者」たちの母性をくすぐる。</p>
+            </div>
+            <div class="cp-card">
+                <h3>4. 武道館への渇望</h3>
+                <p>かつてノラ・ジョーンズの武道館ライブで受けた衝撃が、今の活動の原動力、夢の頂点は武道館でのワンマン、その景色を見るために、今日も彼女は歌い続ける。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <p>© 2026 VTuber Archive Project. RK Music / GRAYMYTH - Hao Archive.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

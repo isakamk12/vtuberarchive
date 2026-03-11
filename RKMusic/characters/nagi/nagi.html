@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水瀬 凪 | RK Music Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            --char-color: #4caf50;
+            --char-glow: rgba(76, 175, 80, 0.5);
+            --char-color-soft: rgba(76, 175, 80, 0.1);
+            --char-border: rgba(76, 175, 80, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../../rkmusic_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO ROSTER
+        </a>
+        <div class="cp-nav-gen">LIVE UNION</div>
+    </nav>
+
+    <section class="cp-hero">
+        <div class="cp-bg-letter">N</div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">Virtual Singer</div>
+            <h1 class="cp-hero-name">水瀬 凪</h1>
+            <span class="cp-hero-en">The Galactic 3-Year-Old</span>
+            <div class="cp-chara-desc">
+                「歌う健康優良3歳児」を自称する音楽好きの狼。アコギ弾き語りからゲーム実況まで幅広く活動し、ポンコツな一面と音楽への熱い情熱のギャップで愛されている。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">弾き語り</span>
+                <span class="cp-tag cp-tag-primary">ベテラン3歳児</span>
+                <span class="cp-tag cp-tag-muted">身長: 155光年</span>
+                <span class="cp-tag cp-tag-muted">なぎんこ</span>
+            </div>
+        </div>
+        <div class="cp-hero-visualizer">
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+            <div class="cp-vis-bar"></div>
+        </div>
+    </section>
+
+    <section class="cp-section cp-reveal">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>🍖 生ハムから始まった道</h3>
+                <p>配信を始めた理由は「REALITYで生ハムの原木がもらえるイベントがあったから」。当初はiPhone 1台を椅子の裏に置いて配信していたが、今や現地ライブに出演する実力派へ。</p>
+            </div>
+            <div class="cp-card">
+                <h3>🌌 155光年の夢</h3>
+                <p>「ベテラン3歳児」や「身長155光年」といった独特な設定を持ちつつ、目標は「フジロックなどのリアルライブフェスに出演すること」。有言実行で夢に突き進む。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section cp-reveal">
+        <h2 class="cp-section-title">EPISODES</h2>
+        <div class="cp-grid cp-grid-2">
+            <div class="cp-card">
+                <h3>1. 奇跡の「転職」エピソード</h3>
+                <p>リスナーが取引先に誤って配信の弾幕を送信。それを機に取引先がファンになり、最終的にそのリスナーが取引先に転職して同僚になるという奇跡を起こした。</p>
+            </div>
+            <div class="cp-card">
+                <h3>2. 安定の「初手ミュート」</h3>
+                <p>配信設定が苦手で、「初手ミュート」や機材トラブルはもはや伝統芸能。リスナーとの「プロレス」的な距離感も近く、常にあたたかいやり取りが繰り広げられる。</p>
+            </div>
+            <div class="cp-card">
+                <h3>3. 狼のルーツ</h3>
+                <p>種族は狼。元々は森に住んでいたが、町に出て音楽を聴いて過ごしていた音楽好き。活動開始から着実に成長し、多くの「なぎんこ」たちの心を掴んでいる。</p>
+            </div>
+            <div class="cp-card">
+                <h3>4. 原点の曲「ボイジャー」</h3>
+                <p>自身が初めて作詞を手がけた楽曲「ボイジャー」を「0枚目の曲」として大切にしている。音楽への真摯な想いは誰よりも強く、常に進化を続けている。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <p>© 2026 VTuber Archive Project. RK Music / LIVE UNION - Minase Nagi Archive.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
