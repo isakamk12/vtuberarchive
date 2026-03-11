@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
+    <!-- i18n -->
+    <script src="i18n.js"></script>
 </head>
 
 <body>
@@ -31,13 +33,25 @@
             <span>AKASHIC</span>
         </div>
         <div class="dock-links">
-            <a href="#" class="active"><i class="fa-solid fa-cubes"></i> <span>AGENCIES</span></a>
-            <a href="#"><i class="fa-solid fa-chart-network"></i> <span>STATISTICS</span></a>
-            <a href="#"><i class="fa-solid fa-clock-rotate-left"></i> <span>HISTORY</span></a>
+            <a href="#" class="active"><i class="fa-solid fa-cubes"></i> <span
+                    data-i18n="nav_agencies">AGENCIES</span></a>
+            <a href="#"><i class="fa-solid fa-chart-network"></i> <span data-i18n="nav_statistics">STATISTICS</span></a>
+            <a href="#"><i class="fa-solid fa-clock-rotate-left"></i> <span data-i18n="nav_history">HISTORY</span></a>
+        </div>
+        <div class="dock-lang">
+            <select id="langSelect">
+                <option value="ja">JP</option>
+                <option value="en">EN</option>
+                <option value="es">ES</option>
+                <option value="zh-Hans">简体</option>
+                <option value="zh-Hant">繁體</option>
+                <option value="ko">KO</option>
+            </select>
         </div>
         <div class="dock-search">
             <i class="fa-solid fa-search"></i>
-            <input type="text" id="searchInput" placeholder="Query Database...">
+            <input type="text" id="searchInput" placeholder="Query Database..."
+                data-i18n-placeholder="search_placeholder">
         </div>
     </nav>
 
@@ -50,15 +64,15 @@
         </div>
         <div class="hero-text-container">
             <h1 class="hero-title">VT_ARCHIVE</h1>
-            <p class="hero-subtitle">GLOBAL OBSERVATIONAL DATABASE</p>
+            <p class="hero-subtitle" data-i18n="hero_subtitle">GLOBAL OBSERVATIONAL DATABASE</p>
             <div class="hero-metrics">
                 <div class="metric">
                     <span class="metric-val" id="totalAgencies">0</span>
-                    <span class="metric-lbl">ACTIVE SECTORS</span>
+                    <span class="metric-lbl" data-i18n="metric_sectors">ACTIVE SECTORS</span>
                 </div>
                 <div class="metric">
                     <span class="metric-val status-ok">ONLINE</span>
-                    <span class="metric-lbl">SYSTEM STATUS</span>
+                    <span class="metric-lbl" data-i18n="metric_status">SYSTEM STATUS</span>
                 </div>
             </div>
         </div>
@@ -88,7 +102,7 @@
             font-weight: 700;
             letter-spacing: 0.15em;
             color: #ffc83d;
-        ">
+        " data-i18n="status_early_access">
             <i class="fa-solid fa-triangle-exclamation"></i>
             STATUS: EARLY ACCESS — 構築中
         </div>
@@ -97,8 +111,15 @@
             color: rgba(255,255,255,0.6);
             line-height: 1.7;
             margin-bottom: 16px;
-        ">
-            本アーカイブは現在構築中のため、各セクターの完成度にばらつきがあります。<br>
+        " data-i18n="status_notice_p1">
+            本アーカイブは現在構築中のため、各セクターの完成度にばらつきがあります。
+        </p>
+        <p style="
+            font-size: 0.82rem;
+            color: rgba(255,255,255,0.6);
+            line-height: 1.7;
+            margin-bottom: 16px;
+        " data-i18n="status_notice_p2">
             アクセス自体は可能ですが、一部ページはレイアウト未整備・内容暫定の状態です。
         </p>
         <div style="display: flex; flex-direction: column; gap: 8px;">
@@ -117,8 +138,8 @@
                     box-shadow: 0 0 6px rgba(57,255,114,0.5);
                     flex-shrink: 0;
                 "></span>
-                <strong style="min-width: 110px;">あおぎり高校</strong>
-                <span style="color: rgba(255,255,255,0.5);">── 最低限の構成が完成</span>
+                <strong style="min-width: 110px;" data-i18n="status_list_aogiri">あおぎり高校</strong>
+                <span style="color: rgba(255,255,255,0.5);" data-i18n="status_list_aogiri_desc">── 最低限の構成が完成</span>
             </div>
             <div style="
                 display: flex;
@@ -135,8 +156,8 @@
                     box-shadow: 0 0 6px rgba(255,200,61,0.5);
                     flex-shrink: 0;
                 "></span>
-                <strong style="min-width: 110px;">ぶいすぽっ！</strong>
-                <span style="color: rgba(255,255,255,0.5);">── 試験的なUI実装段階</span>
+                <strong style="min-width: 110px;" data-i18n="status_list_vspo">ぶいすぽっ！</strong>
+                <span style="color: rgba(255,255,255,0.5);" data-i18n="status_list_vspo_desc">── 試験的なUI実装段階</span>
             </div>
             <div style="
                 display: flex;
@@ -153,8 +174,9 @@
                     box-shadow: 0 0 6px rgba(102,170,255,0.5);
                     flex-shrink: 0;
                 "></span>
-                <strong style="min-width: 110px;">その他セクター</strong>
-                <span style="color: rgba(255,255,255,0.5);">── 設計中（アクセスは可能ですがキャラページが未完成の状態なのでご了承ください）</span>
+                <strong style="min-width: 110px;" data-i18n="status_list_others">その他セクター</strong>
+                <span style="color: rgba(255,255,255,0.5);" data-i18n="status_list_others_desc">──
+                    設計中（アクセスは可能ですがキャラページが未完成の状態なのでご了承ください）</span>
             </div>
         </div>
         <p style="
@@ -165,7 +187,7 @@
             margin-bottom: 0;
             padding-top: 12px;
             border-top: 1px dashed rgba(255,255,255,0.1);
-        ">
+        " data-i18n="status_notice_footer">
             ※ 上記リストにまだ追加していないプロジェクトも多数存在しますが、詳細な調査が完了次第順次制作するため掲載が遅延しています。
         </p>
     </div>
@@ -174,11 +196,11 @@
     <main class="omni-container">
         <!-- Filter Controls -->
         <div class="omni-filters" id="filterBar">
-            <button class="filter-btn active" data-filter="all">ALL SECTORS</button>
-            <button class="filter-btn" data-filter="major">MAJOR</button>
-            <button class="filter-btn" data-filter="corporate">CORPORATE</button>
-            <button class="filter-btn" data-filter="indie">INDIE / MID</button>
-            <button class="filter-btn" data-filter="global">GLOBAL</button>
+            <button class="filter-btn active" data-filter="all" data-i18n="filter_all">ALL SECTORS</button>
+            <button class="filter-btn" data-filter="major" data-i18n="filter_major">MAJOR</button>
+            <button class="filter-btn" data-filter="corporate" data-i18n="filter_corporate">CORPORATE</button>
+            <button class="filter-btn" data-filter="indie" data-i18n="filter_indie">INDIE / MID</button>
+            <button class="filter-btn" data-filter="global" data-i18n="filter_global">GLOBAL</button>
         </div>
 
         <!-- 3D Card Grid -->
@@ -189,8 +211,8 @@
         <!-- Empty State -->
         <div class="empty-state" id="emptyState" style="display: none;">
             <i class="fa-solid fa-triangle-exclamation"></i>
-            <h3>No Data Matches Query</h3>
-            <p>Recalibrate search parameters and try again.</p>
+            <h3 data-i18n="empty_state_title">No Data Matches Query</h3>
+            <p data-i18n="empty_state_desc">Recalibrate search parameters and try again.</p>
         </div>
     </main>
 
