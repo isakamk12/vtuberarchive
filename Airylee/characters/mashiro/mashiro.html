@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雪車町ましろ | エアリープロダクション | VTuber Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <link rel="stylesheet" href="mashiro.css">
+</head>
+<body>
+
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../../airylee_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO INDEX
+        </a>
+        <div class="cp-nav-gen">Airy Production 4期生</div>
+    </nav>
+
+    <main>
+        <section class="cp-hero cp-reveal">
+            <div class="cp-bg-letter">M</div>
+            <div class="cp-hero-content">
+                <span class="cp-gen-label">4期生 / あやかし部</span>
+                <h1 class="cp-hero-name">雪車町ましろ</h1>
+                <span class="cp-hero-en">Sori-machi Mashiro</span>
+                <p class="cp-chara-desc">
+                    「エアプロ随一の清楚担当、雪女の雪車町ましろです❄🤍」<br>
+                    人間社会を変えるために山から降りてきたはずが、今では文明の利器と美味しいご飯にどっぷり浸かったインドア雪女。自慢の相棒、シマエナガの「大福」と共に、人間界の楽しさを全力で謳歌中なんだとか。
+                </p>
+                <div class="cp-tags">
+                    <span class="cp-tag cp-tag-primary">❄🤍🦋</span>
+                    <span class="cp-tag cp-tag-muted">#ゆきん子</span>
+                    <span class="cp-tag cp-tag-muted">#清楚担当</span>
+                    <span class="cp-tag cp-tag-muted">#あやかし部</span>
+                </div>
+            </div>
+            <div class="cp-hero-motif"></div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">PROFILE</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>💎 基本データ</h3>
+                    <ul>
+                        <li><strong>誕生日：</strong> 2月20日</li>
+                        <li><strong>年齢：</strong> 400歳以上</li>
+                        <li><strong>身長：</strong> 160cm</li>
+                        <li><strong>種族：</strong> 雪女（幻獣）</li>
+                        <li><strong>相棒：</strong> シマエナガの「大福」</li>
+                        <li><strong>挨拶：</strong> こんゆき / おつましろ</li>
+                    </ul>
+                </div>
+                <div class="cp-card">
+                    <h3>🍜 雪女の現代生活</h3>
+                    <p>美味しいご飯（特に明太子やオムライス）とゲームが大好き。Uber Eatsを愛用し、寒い日には暖房をつけるか本気で迷うなど、完全に人間社会に適応しています。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">EPISODES</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>📓 努力で掴んだ合格</h3>
+                    <p>オーディションの際、先輩メンバー全員の「良いところ」をノートにまとめて面接に挑んだ努力家。書類選考でも溢れんばかりの熱意を伝え、運営から高い評価を得ました。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>🔤 漢字は「あえて」読まない？</h3>
+                    <p>「清楚担当」を自称するも、漢字が極端に苦手。読めない漢字が続出する配信はリスナーの笑いを誘い、今や彼女の欠かせない「愛されポンコツ」要素となっています。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>🍓 「大福」は非常食じゃないよ！</h3>
+                    <p>肩に乗るシマエナガの「大福」は大切な相棒。リスナーから「食べたい」といじられる度に「雪でできてるから食べられないよ！」と返すやり取りは配信の定番です。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>🏠 染まりすぎた雪女</h3>
+                    <p>休日は引きこもってゲーム三昧。「人間社会に染まりきった」自覚があり、季節関係なく屋内の娯楽を楽しむ姿は、もはや雪山よりPC前の方が似合っています。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="mashiro.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, i) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => entry.target.classList.add('active'), i * 150);
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

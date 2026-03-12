@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>龍華ちなり | エアリープロダクション | VTuber Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <link rel="stylesheet" href="chinari.css">
+</head>
+<body>
+
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../../airylee_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO INDEX
+        </a>
+        <div class="cp-nav-gen">Airy Production</div>
+    </nav>
+
+    <main>
+        <section class="cp-hero cp-reveal">
+            <div class="cp-bg-letter">C</div>
+            <div class="cp-hero-content">
+                <span class="cp-gen-label">ダルギャル竜族 / JK</span>
+                <h1 class="cp-hero-name">龍華ちなり</h1>
+                <span class="cp-hero-en">Ryuge Chinari</span>
+                <p class="cp-chara-desc">
+                    「今日もだるい、うざい、めんどくさい、ダルギャルのちなってぃだよ💖」<br>
+                    キラキラギャルに憧れる竜族の女の子。中身は極度のインキャで繊細だけど、リスナーとの「プロレス」や、体を張った罰ゲームで元気に（？）活動中なんだぽん！
+                </p>
+                <div class="cp-tags">
+                    <span class="cp-tag cp-tag-primary">💖🐉</span>
+                    <span class="cp-tag cp-tag-muted">#ちなリス</span>
+                    <span class="cp-tag cp-tag-muted">#ダルギャル</span>
+                    <span class="cp-tag cp-tag-muted">#DUM</span>
+                </div>
+            </div>
+            <div class="cp-hero-motif"></div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">PROFILE</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>💎 基本データ</h3>
+                    <ul>
+                        <li><strong>誕生日：</strong> 11月15日</li>
+                        <li><strong>年齢：</strong> 17歳（JK）</li>
+                        <li><strong>身長：</strong> 155cm</li>
+                        <li><strong>種族：</strong> 竜族</li>
+                        <li><strong>好きなもの：</strong> ダンス、空気読み</li>
+                        <li><strong>挨拶：</strong> だるい、うざい、めんどくさい</li>
+                    </ul>
+                </div>
+                <div class="cp-card">
+                    <h3>🎸 人間空気清浄機</h3>
+                    <p>他人の顔色を読みすぎてしまう繊細な心の持ち主。ギャルになりきれないネガティブさと、そんな自分を受け入れてくれるリスナーへの深い愛情が魅力です。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">EPISODES</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>🎵 中毒性抜群の「DUM」</h3>
+                    <p>挨拶の頭文字から生まれた「だるい、うざい、めんどくさい（DUM）」ソング。低予算が生んだ奇跡の毒電波BGMとして、配信の定番となりました。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>🦶 足つぼマットの絶叫歌枠</h3>
+                    <p>マカロンを賭けた戦いに敗れ、足つぼマットの上で悶絶しながら歌うカオスな配信を敢行。痛みに耐えるその姿に、リスナーは大爆笑の渦に。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>😭 ホラーゲームで本気泣き</h3>
+                    <p>『夜勤事件』などのホラゲに挑戦するも、怖さのあまりAIキャラに話しかけ始め、最終的には涙を流して号泣。不憫かわいい姿がクガリスの心を掴みました。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>🧅 重すぎる愛と「ちな玉」</h3>
+                    <p>「浮気しないで」と束縛激しめな一面を見せつつも、記念日にはリスナーのメッセージに号泣。ちな玉（ファン）との絆は、何よりも深いのです。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="chinari.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, i) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => entry.target.classList.add('active'), i * 150);
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

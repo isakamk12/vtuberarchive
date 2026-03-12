@@ -1,0 +1,22 @@
+:root {
+    --char-color: #e0f4ff;
+    --char-glow: rgba(224, 244, 255, 0.4);
+    --char-border: rgba(224, 244, 255, 0.25);
+}
+
+.cp-bg::before {
+    background: 
+        radial-gradient(circle at 70% 20%, rgba(224, 244, 255, 0.15), transparent 60%),
+        radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.1), transparent 50%);
+}
+
+.cp-hero-motif {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), transparent);
+    border-radius: 50% 50% 10% 10%; /* Rounded top like a snow mound or head */
+}
+
+.cp-hero-motif::before {
+    border-style: solid;
+    border-width: 1px;
+    opacity: 0.3;
+}

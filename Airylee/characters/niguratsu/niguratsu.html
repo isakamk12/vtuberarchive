@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黒羊ニグラス | エアリープロダクション | VTuber Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <link rel="stylesheet" href="niguratsu.css">
+</head>
+<body>
+
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../../airylee_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO INDEX
+        </a>
+        <div class="cp-nav-gen">Airy Production 3期生</div>
+    </nav>
+
+    <main>
+        <section class="cp-hero cp-reveal">
+            <div class="cp-bg-letter">N</div>
+            <div class="cp-hero-content">
+                <span class="cp-gen-label">3期生 / ユニット：EVILGOD</span>
+                <h1 class="cp-hero-name">黒羊ニグラス</h1>
+                <span class="cp-hero-en">Kokuyou Niggurath</span>
+                <p class="cp-chara-desc">
+                    「千の物語を紡ぎし森の黒山羊」<br>
+                    クトゥルフ神話の邪神、シュブ＝ニグラスとしての正体を持ちつつ、人間界では「黒羊」として活動中。ヤギなのにヒツジと間違えられた不憫な過去を持ちながら、リスナーへの重すぎる愛を注ぎ続けます。
+                </p>
+                <div class="cp-tags">
+                    <span class="cp-tag cp-tag-primary">♑🍼</span>
+                    <span class="cp-tag cp-tag-muted">#こやぎちゃん</span>
+                    <span class="cp-tag cp-tag-muted">#ヘラグラス</span>
+                    <span class="cp-tag cp-tag-muted">#迷えるこやぎちゃん</span>
+                </div>
+            </div>
+            <div class="cp-hero-motif"></div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">PROFILE</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>💎 基本データ</h3>
+                    <ul>
+                        <li><strong>誕生日：</strong> 1月16日</li>
+                        <li><strong>身長：</strong> 158cm</li>
+                        <li><strong>血液型：</strong> AB型</li>
+                        <li><strong>挨拶：</strong> こんぐらす〜</li>
+                        <li><strong>配信：</strong> ASMR、朗読、怪談</li>
+                    </ul>
+                </div>
+                <div class="cp-card">
+                    <h3>🖤 漆黒の愛情</h3>
+                    <p>ASMRや朗読を得意とする癒し系の声色ながら、リスナー（こやぎちゃん）への独占欲は邪神級。婚姻届を突きつけるなどの情熱的な愛情表現が特徴。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">EPISODES</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>🐐 ヒツジになった黒山羊</h3>
+                    <p>本来は「山羊」だが、運営との伝達ミスにより「羊」の字が名前に。不憫な立ち位置から「迷える子羊（こやぎ）」を導く、独自のアイデンティティを確立しました。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>😭 崩壊した「お姉さん」キャラ</h3>
+                    <p>当初のドSな大人のお姉さん設定は、数日で「ヘラグラス」「ガキグラス」へと変貌。感情が高ぶるとすぐに泣いてしまう、ギャップまみれの愛されキャラです。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>💍 重すぎる愛と独占欲</h3>
+                    <p>リスナーのSNS監視は当たり前。他のVTuberへの浮気には容赦ない圧をかける一方で、直筆の婚姻届を配布するなど、歪んでいるが深い愛でこやぎちゃんを魅了。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>🐱 自由奔放な「猫やぎ」</h3>
+                    <p>配信中に乱入する同居猫「猫やぎ」が名物。キーボードの上を走る音やドタバタ劇が、邪神のミステリアスな雰囲気を日常の癒しへと変えてくれます。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="cp-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial fan archive.</p>
+    </footer>
+
+    <script src="niguratsu.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, i) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => entry.target.classList.add('active'), i * 150);
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

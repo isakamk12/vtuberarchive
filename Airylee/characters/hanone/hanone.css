@@ -1,0 +1,17 @@
+:root {
+    --char-color: #f4c2c2; /* Baby Pink */
+    --char-glow: rgba(244, 194, 194, 0.4);
+    --char-border: rgba(244, 194, 194, 0.3);
+}
+
+.cp-bg::before {
+    background: 
+        radial-gradient(circle at 70% 30%, rgba(244, 194, 194, 0.15), transparent 60%),
+        radial-gradient(circle at 30% 70%, rgba(255, 255, 255, 0.1), transparent 50%);
+}
+
+.cp-hero-motif {
+    background: linear-gradient(135deg, rgba(244, 194, 194, 0.05), transparent);
+    /* Wing-like shape vibe */
+    clip-path: polygon(0% 20%, 30% 0%, 50% 20%, 70% 0%, 100% 20%, 100% 80%, 50% 100%, 0% 80%);
+}

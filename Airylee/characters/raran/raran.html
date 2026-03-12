@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>緑埜ララン | エアリープロダクション | VTuber Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <link rel="stylesheet" href="raran.css">
+</head>
+<body>
+
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../../airylee_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO INDEX
+        </a>
+        <div class="cp-nav-gen">Airy Production 5期生</div>
+    </nav>
+
+    <main>
+        <section class="cp-hero cp-reveal">
+            <div class="cp-bg-letter">R</div>
+            <div class="cp-hero-content">
+                <span class="cp-gen-label">5期生 / 四神：玄武</span>
+                <h1 class="cp-hero-name">緑埜ララン</h1>
+                <span class="cp-hero-en">Midirono Raran</span>
+                <p class="cp-chara-desc">
+                    「野生のエース、緑埜ラランだよ☘️🍜」<br>
+                    北の守護神・玄武。自称14歳だが、中身は平成のインターネット老人会。足のサイズは22.5cm。ごま油（麦茶）を片手に、今日も元気に「レロレロ」洗礼中！
+                </p>
+                <div class="cp-tags">
+                    <span class="cp-tag cp-tag-primary">☘️🍜</span>
+                    <span class="cp-tag cp-tag-muted">#ラランち集合中</span>
+                    <span class="cp-tag cp-tag-muted">#野生のエース</span>
+                    <span class="cp-tag cp-tag-muted">#ミドラー</span>
+                </div>
+            </div>
+            <div class="cp-hero-motif"></div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">PROFILE</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>💎 基本データ</h3>
+                    <ul>
+                        <li><strong>誕生日：</strong> 2月2日</li>
+                        <li><strong>年齢：</strong> 8888歳（中2設定）</li>
+                        <li><strong>身長：</strong> 158cm</li>
+                        <li><strong>種族：</strong> 玄武</li>
+                        <li><strong>特技：</strong> 平成ギャル風歌唱、野草判別</li>
+                        <li><strong>好物：</strong> ラーメン、ごま油（麦茶）</li>
+                    </ul>
+                </div>
+                <div class="cp-card">
+                    <h3>🐢 野生の常識人</h3>
+                    <p>自称14歳だが、ニコニコ文化や平成アニソンに精通。マシンガントークと独特のワードセンスでリスナーを圧倒するが、中身は同期で「一番まとも」と言われるほどの努力家で常識人。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">EPISODES</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>💧 水分補給は「ごま油」</h3>
+                    <p>配信中に必ず「ごま油飲みます」と宣言。実際の中身は麦茶やポカリだが、黄色い蓋のごま油メーカーを愛する、こだわり（？）の水分補給スタイル。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>👖 驚愕のノーパン健康法</h3>
+                    <p>「普段パンツ履かずに生きてる」と衝撃のカミングアウト。下着の締め付けが苦手で、コンビニ程度ならそのまま行くという、まさに野生のエースらしい自由奔放さ。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>👅 伝説の「レロレロ（唾付け）」</h3>
+                    <p>初見リスナーに対し「唾つけとこ！」と高速で舌を鳴らす謎の奇習。地域性（？）による洗礼だが、そのインパクトに圧倒されてミドラーになるファンが続出中。 </p>
+                </div>
+                <div class="cp-card">
+                    <h3>🔥 重ねた「暴挙」の努力</h3>
+                    <p>デビュー前、登録者数が伸び悩んだ際に「1日ショート動画2本投稿」という過酷なノルマを自らに課した。おちゃらけた外見の裏に、本物の「エース」の情熱を秘めている。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="raran.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, i) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => entry.target.classList.add('active'), i * 150);
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

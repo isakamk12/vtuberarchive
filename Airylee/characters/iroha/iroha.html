@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蒼神いろは | エアリープロダクション | VTuber Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <link rel="stylesheet" href="iroha.css">
+</head>
+<body>
+
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../../airylee_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO INDEX
+        </a>
+        <div class="cp-nav-gen">Airy Production 5期生</div>
+    </nav>
+
+    <main>
+        <section class="cp-hero cp-reveal">
+            <div class="cp-bg-letter">I</div>
+            <div class="cp-hero-content">
+                <span class="cp-gen-label">5期生 / 四神：青龍</span>
+                <h1 class="cp-hero-name">蒼神いろは</h1>
+                <span class="cp-hero-en">AOKAMI IROHA</span>
+                <p class="cp-chara-desc">
+                    「東の空を司る青龍、蒼神いろはだよ🐉🧿」<br>
+                    修行中の神様だが、実態は「ポンコツ・不憫・寂しがり屋」。凛々しい見た目を裏切るドジっ子属性で、リスナーからは「たまごっち枠」として温かく（？）見守られ中！
+                </p>
+                <div class="cp-tags">
+                    <span class="cp-tag cp-tag-primary">🐉🧿</span>
+                    <span class="cp-tag cp-tag-muted">#青神っこ</span>
+                    <span class="cp-tag cp-tag-muted">#おっぺけいろは</span>
+                    <span class="cp-tag cp-tag-muted">#たまごっち枠</span>
+                </div>
+            </div>
+            <div class="cp-hero-motif"></div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">PROFILE</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>💎 基本データ</h3>
+                    <ul>
+                        <li><strong>誕生日：</strong> 3月31日</li>
+                        <li><strong>年齢：</strong> 無限歳</li>
+                        <li><strong>身長：</strong> 161cm（角込み）</li>
+                        <li><strong>種族：</strong> 青龍</li>
+                        <li><strong>特技：</strong> きゅうりの早切り、折り紙</li>
+                        <li><strong>好物：</strong> チョコチップクッキー、マック</li>
+                    </ul>
+                </div>
+                <div class="cp-card">
+                    <h3>🌟 意外なハイスペック？</h3>
+                    <p>算数や漢字は苦手だが、バスケ部レギュラーでシャトルラン110回超の運動神経を持つ。謎の検定を多数所持しており、将来の夢は「リスナーに養ってもらうこと」。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">EPISODES</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>📢 デビュー前の「誤字龍」</h3>
+                    <p>初ツイートで「やってき龍（りゅう）」と豪快に誤字し、公式へのメンションも間違えるなど、デビュー前からポンコツっぷりを遺憾なく発揮。クールキャラ計画は即座に崩壊しました。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>🧄 インフルとニンニクの悲劇</h3>
+                    <p>初配信1週間前にインフルエンザに。検査前夜に餃子セットを完食したため、鼻の検査で医者にニンニク臭を漂わせるという、不憫すぎる思い出を刻みました。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>📉 配信を襲うバグの呪い</h3>
+                    <p>ゲーム配信中に原因不明のバグやフリーズに見舞われがち。アバターが突然消えたり進行不能になったりと、神様としての威厳（？）が試される展開が多発中。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>🛁 椅子から滑落、唇強打</h3>
+                    <p>入浴中に洗面所の音に驚いて椅子から滑り落ち、思い切り唇を噛んで口内炎を作るドジ。日常の些細な出来事が不条理な喜劇に変わる、生粋の不憫体質です。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="iroha.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, i) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => entry.target.classList.add('active'), i * 150);
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

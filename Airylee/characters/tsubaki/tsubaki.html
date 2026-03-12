@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>九娥つばき | エアリープロダクション | VTuber Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <link rel="stylesheet" href="tsubaki.css">
+</head>
+<body>
+
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../../airylee_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO INDEX
+        </a>
+        <div class="cp-nav-gen">Airy Production 4期生</div>
+    </nav>
+
+    <main>
+        <section class="cp-hero cp-reveal">
+            <div class="cp-bg-letter">T</div>
+            <div class="cp-hero-content">
+                <span class="cp-gen-label">4期生 / あやかし部</span>
+                <h1 class="cp-hero-name">九娥つばき</h1>
+                <span class="cp-hero-en">Kuga Tsubaki</span>
+                <p class="cp-chara-desc">
+                    「妖狐の里から修行にきた、悪戯好きのもふもふ九尾の狐、九娥つばきだよ🦊」<br>
+                    自称・もふもふ軍師。人間界の美味しいお菓子と、平成のオタク文化にどっぷり浸かったインターネット老人会会員（？）。天真爛漫な悪戯心でリスナーを翻弄中なんだとか。
+                </p>
+                <div class="cp-tags">
+                    <span class="cp-tag cp-tag-primary">🦊🌾</span>
+                    <span class="cp-tag cp-tag-muted">#くがしゃま</span>
+                    <span class="cp-tag cp-tag-muted">#もふもふ軍師</span>
+                    <span class="cp-tag cp-tag-muted">#インターネット老人会</span>
+                </div>
+            </div>
+            <div class="cp-hero-motif"></div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">PROFILE</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>💎 基本データ</h3>
+                    <ul>
+                        <li><strong>誕生日：</strong> 10月29日</li>
+                        <li><strong>年齢：</strong> 妖狐の里時間（秘密）</li>
+                        <li><strong>身長：</strong> 159cm</li>
+                        <li><strong>体重：</strong> 48kg（お菓子により変動）</li>
+                        <li><strong>得意科目：</strong> オタク知識、ゲーム実況</li>
+                    </ul>
+                </div>
+                <div class="cp-card">
+                    <h3>🌾 もふもふ軍師</h3>
+                    <p>里から人間界の勉強にやってきた九尾の狐。お菓子、特にパンケーキやお寿司には目がない。持ち前の明るさと、時折漏れ出るディープな知識のバランスが絶妙。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">EPISODES</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>📏 伝説の「座高90cm」</h3>
+                    <p>身長159cmに対し座高が90cm超という驚異の数値を公表。ユニクロのズボンが必ず余り、裾上げが必須という自虐エピソードは、クガリストの間ではもはや伝説。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>💾 老人会会員のオタク知識</h3>
+                    <p>平成初期のオタク文化やニコニコ全盛期のミステリーに精通。一度アニメや漫画の話に火がつくと早口になり、リスナー置いてきぼりのディープなトークが始まります。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>🚛 「憑依体」の裏設定</h3>
+                    <p>現在見えている姿は「霊体」であり、人間界では「トラックに轢かれたOL」に憑依しているという、二重構造の裏設定を持つ。そのため実生活との乖離に悩むことも。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>🐦 カスのバズツイート</h3>
+                    <p>ゲーム内での自己PRツイートが酷評され、半ばヤケクソで放った意味不明な投稿が大バズり。自身のツイートセンスが予測不能であることを証明してしまいました。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="tsubaki.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, i) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => entry.target.classList.add('active'), i * 150);
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

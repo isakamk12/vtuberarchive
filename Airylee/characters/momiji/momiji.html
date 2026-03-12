@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>屋島もみじ | エアリープロダクション | VTuber Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <link rel="stylesheet" href="momiji.css">
+</head>
+<body>
+
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../../airylee_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO INDEX
+        </a>
+        <div class="cp-nav-gen">Airy Production 4期生</div>
+    </nav>
+
+    <main>
+        <section class="cp-hero cp-reveal">
+            <div class="cp-bg-letter">M</div>
+            <div class="cp-hero-content">
+                <span class="cp-gen-label">4期生 / ユニット：八変化修行中</span>
+                <h1 class="cp-hero-name">屋島もみじ</h1>
+                <span class="cp-hero-en">Yashima Momizi</span>
+                <p class="cp-chara-desc">
+                    「おはぽこぽーん！ゲームとおだんごが大好き、化け狸の屋島もみじなんだぽん！」<br>
+                    恩返しのタネを探して人間界へやってきた狸。修行そっちのけでゲームに没頭中。癒し系の声から不意に飛び出す「口悪たぬき」のギャップが魅力なんだぽん！
+                </p>
+                <div class="cp-tags">
+                    <span class="cp-tag cp-tag-primary">🍃🍡</span>
+                    <span class="cp-tag cp-tag-muted">#もみじあん</span>
+                    <span class="cp-tag cp-tag-muted">#おたぬき</span>
+                    <span class="cp-tag cp-tag-muted">#お茶とおだんご</span>
+                </div>
+            </div>
+            <div class="cp-hero-motif"></div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">PROFILE</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>💎 基本データ</h3>
+                    <ul>
+                        <li><strong>誕生日：</strong> 8月4日</li>
+                        <li><strong>年齢：</strong> 8888歳</li>
+                        <li><strong>身長：</strong> 148cm</li>
+                        <li><strong>挨拶：</strong> おはぽこぽーん</li>
+                        <li><strong>好きなもの：</strong> お団子、ゲーム、漫画</li>
+                    </ul>
+                </div>
+                <div class="cp-card">
+                    <h3>🐾 狸の修行（？）</h3>
+                    <p>一人前の化け狸になるべく人間界を勉強中。しかし最近はもっぱら音ゲーやアクションゲームの耐久配信に明け暮れ、根性と集中力を別の方向で発揮しています。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">EPISODES</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>🥢 清楚と暴言の「口悪たぬき」</h3>
+                    <p>ゲームに熱中すると突如として口が悪くなる、通称「口悪たぬき」。豹変ぶりに驚くリスナーを「妖怪のせい」と言い訳でかわすのも含めて、彼女のエンタメスタイルです。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>🍵 抜け出せないおもてなし</h3>
+                    <p>初見リスナーには「お茶とお団子」を振る舞い、「食べ終わるまで帰さない」と引き止めるおもてなし。一度ハマると抜け出せない癒しの（？）罠が仕掛けられています。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>🪵 割り箸はふやかしたメンマ</h3>
+                    <p>メンマを「割り箸を醤油でふやかしたもの」だと本気で信じていた衝撃の天然エピソード。姉に騙されていたとはいえ、世間知らずな狸らしさが露呈した瞬間でした。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>🏢 伝説の「独り言」裏配信</h3>
+                    <p>間違えて裏で配信枠を立ててしまい、一人で楽しく喋ったあとに無言で消すというポンコツ事件。そんな放っておけない愛らしさが、多くの「もみじあん」を惹きつけます。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="cp-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial fan archive.</p>
+    </footer>
+
+    <script src="momiji.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, i) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => entry.target.classList.add('active'), i * 150);
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>甘楽はのね | エアリープロダクション | VTuber Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <link rel="stylesheet" href="hanone.css">
+</head>
+<body>
+
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../../airylee_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO INDEX
+        </a>
+        <div class="cp-nav-gen">Airy Production</div>
+    </nav>
+
+    <main>
+        <section class="cp-hero cp-reveal">
+            <div class="cp-bg-letter">H</div>
+            <div class="cp-hero-content">
+                <span class="cp-gen-label">愛嬌のエース / アイドルオタク</span>
+                <h1 class="cp-hero-name">甘楽はのね</h1>
+                <span class="cp-hero-en">Kanra Hanone</span>
+                <p class="cp-chara-desc">
+                    「愛嬌のエース、甘楽はのねだよ💍🪽」<br>
+                    アイドルが大好きすぎて、自分もトップアイドルを目指しちゃった一般オタクの女の子。アホ毛と羽は可愛さの結晶！毎日一生懸命、自分の“好き”を届けるために成長中なんだよ。
+                </p>
+                <div class="cp-tags">
+                    <span class="cp-tag cp-tag-primary">💍🪽</span>
+                    <span class="cp-tag cp-tag-muted">#ちゅはえる</span>
+                    <span class="cp-tag cp-tag-muted">#愛嬌のエース</span>
+                    <span class="cp-tag cp-tag-muted">#アイドルオタク</span>
+                </div>
+            </div>
+            <div class="cp-hero-motif"></div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">PROFILE</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>💎 基本データ</h3>
+                    <ul>
+                        <li><strong>誕生日：</strong> 9月9日</li>
+                        <li><strong>年齢：</strong> 18歳</li>
+                        <li><strong>身長：</strong> 155cm（アホ毛込み）</li>
+                        <li><strong>血液型：</strong> AB型</li>
+                        <li><strong>イメージ：</strong> ベビーピンク</li>
+                        <li><strong>座右の銘：</strong> 心が動いたら進めの合図</li>
+                    </ul>
+                </div>
+                <div class="cp-card">
+                    <h3>💍 アイドルを愛するアイドル</h3>
+                    <p>ライブアイドルのガチオタク。衣装の縫い目や鎖骨まで語り尽くす熱量から「中身はおじさん」といじられることもあるけれど、心は純粋な清楚アイドルなのです！</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">EPISODES</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>📦 伝説の「ダンボール机」</h3>
+                    <p>デビューから2ヶ月間、机がなくてダンボールの上で配信。マイクを手で持ちながら操作するその姿は、環境に負けない「ダンボールのエース」そのものでした。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>🍽️ 命懸け（？）の「食レポ」</h3>
+                    <p>アイドルの可愛い姿を見ると「美味しそう」といってしまう独特の感性。推しへの愛が溢れすぎていつの間にか特技となり、食品系案件を夢見るように。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>🧟‍♀️ 根っからの配信モンスター</h3>
+                    <p>多忙な日々でもリフレッシュ方法は「配信」。深夜からの長時間配信もポジティブに楽しむそのメンタルは、まさにトップアイドルの器を感じさせます。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>👓 ガチオタク特有の早口</h3>
+                    <p>女の子について語る時の熱量と早口は、もはやオ家芸。リスナーから「おじさん」と呼ばれても「可愛い女の子は正義！」と頑なに言い張る、ぶれないオタク魂。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="hanone.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, i) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => entry.target.classList.add('active'), i * 150);
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

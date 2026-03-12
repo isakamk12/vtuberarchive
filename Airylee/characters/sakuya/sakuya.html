@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>木花サクヤ | エアリープロダクション | VTuber Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <link rel="stylesheet" href="sakuya.css">
+</head>
+<body>
+
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../../airylee_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO INDEX
+        </a>
+        <div class="cp-nav-gen">Airy Production 0期生</div>
+    </nav>
+
+    <main>
+        <section class="cp-hero cp-reveal">
+            <div class="cp-bg-letter">S</div>
+            <div class="cp-hero-content">
+                <span class="cp-gen-label">0期生 / 静岡新聞SBS公認</span>
+                <h1 class="cp-hero-name">木花サクヤ</h1>
+                <span class="cp-hero-en">Konohana Sakuya</span>
+                <p class="cp-chara-desc">
+                    富士山の頂上に住むひとりぼっちのお姫様。もっと自分にお参りしてくれる人を増やすため、ふもとの学校で女子高生として生活していますが、格好のせいで正体はバレバレ。静岡県の魅力を世に知らしめるため、バーチャルとリアルの垣根を越えて活動中です。
+                </p>
+                <div class="cp-tags">
+                    <span class="cp-tag cp-tag-primary">🌸🗻</span>
+                    <span class="cp-tag cp-tag-muted">#県民ちゃん</span>
+                    <span class="cp-tag cp-tag-muted">#このはなし</span>
+                    <span class="cp-tag cp-tag-muted">#噛み様</span>
+                </div>
+            </div>
+            <div class="cp-hero-motif"></div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">PROFILE</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>💎 基本データ</h3>
+                    <ul>
+                        <li><strong>誕生日：</strong> 2月23日（富士山の日）</li>
+                        <li><strong>年齢：</strong> 16歳</li>
+                        <li><strong>身長：</strong> 148cm</li>
+                        <li><strong>体重：</strong> お茶っ葉3匙分</li>
+                        <li><strong>挨拶：</strong> 二礼二拍手一礼（221）</li>
+                    </ul>
+                </div>
+                <div class="cp-card">
+                    <h3>🌟 夢・目標</h3>
+                    <p>静岡県の魅力を伝え、友達を398万人（静岡県の人口）作ること。観光大使への就任や、魅力度ランキング1位を目指して日々奮闘しています。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">EPISODES</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>📰 日本初のメディア公認VTuber</h3>
+                    <p>静岡新聞社・静岡放送（SBS）公認。地上波テレビ番組のレギュラーMCや、市長・県議選の広報キャラクターなど、VTuberの枠を超えた「日本初」の活動を多数展開しています。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>✨ 圧倒的な支援での3D化</h3>
+                    <p>クラウドファンディングでは目標の762%（300万円超）を達成。デビュー1周年という節目で、ファン「県民ちゃん」との強い絆を証明する感動の3Dライブを実現しました。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>🍵 全員「静岡県民」認定</h3>
+                    <p>配信を一度でも見れば、どこに住んでいても「静岡県民」！地元愛が強すぎて、あらゆる話題を静岡に結びつける姿勢は、真の観光大使候補そのものです。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>🙏 愛される「噛み様」</h3>
+                    <p>「清楚可憐」を自称しつつも、ミュートのまま喋り続ける「ミュート芸」や、大事なところで噛んでしまうポンコツな一面がリスナーに愛されています。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="cp-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial fan archive.</p>
+    </footer>
+
+    <script src="sakuya.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, i) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => entry.target.classList.add('active'), i * 150);
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

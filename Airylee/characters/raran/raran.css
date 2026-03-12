@@ -1,0 +1,17 @@
+:root {
+    --char-color: #77dd77; /* Pastel Green */
+    --char-glow: rgba(119, 221, 119, 0.4);
+    --char-border: rgba(119, 221, 119, 0.3);
+}
+
+.cp-bg::before {
+    background: 
+        radial-gradient(circle at 70% 30%, rgba(119, 221, 119, 0.2), transparent 60%),
+        radial-gradient(circle at 30% 70%, rgba(34, 139, 34, 0.1), transparent 50%);
+}
+
+.cp-hero-motif {
+    background: linear-gradient(135deg, rgba(119, 221, 119, 0.1), transparent);
+    /* Turtle shell shape vibe */
+    clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+}

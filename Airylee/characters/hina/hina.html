@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>狼牙ヒナ | エアリープロダクション | VTuber Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <link rel="stylesheet" href="hina.css">
+</head>
+<body>
+
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../../airylee_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO INDEX
+        </a>
+        <div class="cp-nav-gen">Airy Production</div>
+    </nav>
+
+    <main>
+        <section class="cp-hero cp-reveal">
+            <div class="cp-bg-letter">H</div>
+            <div class="cp-hero-content">
+                <span class="cp-gen-label">エールのエース / 夢女子オオカミ</span>
+                <h1 class="cp-hero-name">狼牙ヒナ</h1>
+                <span class="cp-hero-en">Rouga Hina</span>
+                <p class="cp-chara-desc">
+                    「頑張るみんなの背中を叩く、エールのエース！狼牙ヒナだぞ🐺🧡」<br>
+                    狼と人間のハーフ。一人称は「俺」で中身はガチの夢女子オタク。利き緑茶とネットミームをこよなく愛する、寂しがり屋のカフェ店員なんだぞ！
+                </p>
+                <div class="cp-tags">
+                    <span class="cp-tag cp-tag-primary">🐺🧡</span>
+                    <span class="cp-tag cp-tag-muted">#老眼ちゅ</span>
+                    <span class="cp-tag cp-tag-muted">#エールのエース</span>
+                    <span class="cp-tag cp-tag-muted">#俺君</span>
+                </div>
+            </div>
+            <div class="cp-hero-motif"></div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">PROFILE</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>💎 基本データ</h3>
+                    <ul>
+                        <li><strong>誕生日：</strong> 8月13日</li>
+                        <li><strong>年齢：</strong> 18歳くらい</li>
+                        <li><strong>身長：</strong> 153cm（耳込み）</li>
+                        <li><strong>種族：</strong> 狼ハーフ</li>
+                        <li><strong>特技：</strong> 利き緑茶、声真似、三味線</li>
+                        <li><strong>好物：</strong> お〜いお茶、オタクトーク</li>
+                    </ul>
+                </div>
+                <div class="cp-card">
+                    <h3>🎮 生粋のオタク魂</h3>
+                    <p>FGOや呪術廻戦を愛する重量級オタク。息をするようにネットミームを口走る。陰キャでビビリな一面を自信満々な振る舞いで隠す、愛すべき「俺君」スタイル。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">EPISODES</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>🎭 伝説の「一人エヴァ」審査</h3>
+                    <p>オーディションに「4分間の早口オタクトーク」と「一人エヴァ声真似」動画を提出。爆速で合格し、「ヤバすぎて事務所に保護された」と語り草に。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>🧠 伝説の誤読「ハゲル」事件</h3>
+                    <p>FGO実況中に「無知（むち）」を「ハゲル」と堂々読了。公式番組でも取り上げられ、全エアプロリスナーにその名（失言）が知れ渡る大惨事に。 </p>
+                </div>
+                <div class="cp-card">
+                    <h3>🐴 マシュの馬になった狼</h3>
+                    <p>ゲーム内の推しが「馬が欲しい」と言ったのを「俺が馬になれってことか！」と解釈。プライドを捨てて「パカラン」と走るも、一人で恥をかくだけに終わる。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>📱 バイト先での身バレ危機</h3>
+                    <p>隠語としてLINEに「狼の絵文字」を設定していたら、同僚に「狼好きなの？」と聞かれ冷や汗。正体がバレたかと思い、オタク特有の被害妄想が炸裂した瞬間。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="hina.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, i) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => entry.target.classList.add('active'), i * 150);
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

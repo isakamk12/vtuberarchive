@@ -1,0 +1,17 @@
+:root {
+    --char-color: #a0a0ff;
+    --char-glow: rgba(160, 160, 255, 0.4);
+    --char-border: rgba(160, 160, 255, 0.3);
+}
+
+.cp-bg::before {
+    background: 
+        radial-gradient(circle at 70% 30%, rgba(160, 160, 255, 0.15), transparent 60%),
+        radial-gradient(circle at 30% 70%, rgba(180, 100, 255, 0.1), transparent 50%);
+}
+
+.cp-hero-motif {
+    background: linear-gradient(135deg, rgba(160, 160, 255, 0.05), transparent);
+    border-radius: 50%; /* Crystal/Spherical vibe */
+    width: 320px;
+}

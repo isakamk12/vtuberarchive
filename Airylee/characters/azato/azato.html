@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>赤魔アザト | エアリープロダクション | VTuber Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <link rel="stylesheet" href="azato.css">
+</head>
+<body>
+
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../../airylee_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO INDEX
+        </a>
+        <div class="cp-nav-gen">Airy Production 3期生</div>
+    </nav>
+
+    <main>
+        <section class="cp-hero cp-reveal">
+            <div class="cp-bg-letter">A</div>
+            <div class="cp-hero-content">
+                <span class="cp-gen-label">3期生 / ユニット：EVILGOD リーダー</span>
+                <h1 class="cp-hero-name">赤魔アザト</h1>
+                <span class="cp-hero-en">Akama Azato</span>
+                <p class="cp-chara-desc">
+                    「君がいればノンフィクション。アナタと歩むLIVEのエース。」<br>
+                    人間界を「配下」にして世界を邪神でいっぱいにするという野望を持つ、邪神の王。圧倒的な歌唱力と、普段のぽやぽやとしたギャップでリスナーを魅了します。
+                </p>
+                <div class="cp-tags">
+                    <span class="cp-tag cp-tag-primary">👑❤🔥</span>
+                    <span class="cp-tag cp-tag-muted">#アザトい配下</span>
+                    <span class="cp-tag cp-tag-muted">#拝啓あー様</span>
+                    <span class="cp-tag cp-tag-muted">#致死量のギャップ</span>
+                </div>
+            </div>
+            <div class="cp-hero-motif"></div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">PROFILE</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>💎 基本データ</h3>
+                    <ul>
+                        <li><strong>誕生日：</strong> 12月10日</li>
+                        <li><strong>年齢：</strong> 何十億歳（人間界では24歳位）</li>
+                        <li><strong>身長：</strong> 159cm（正装時は170cm）</li>
+                        <li><strong>好きなもの：</strong> お肉、お寿司、アニソン</li>
+                        <li><strong>お供：</strong> アザー、アザーテ、アザートゥ</li>
+                    </ul>
+                </div>
+                <div class="cp-card">
+                    <h3>🎤 憑依型の歌声</h3>
+                    <p>アニソン、ボカロ、ロックを得意とし、楽曲の世界観に入り込む力強い歌声が最大の特徴。Vsingerとしても高い実力を誇ります。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">EPISODES</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>💥 致死量のギャップ</h3>
+                    <p>普段の「ぽやぽや」した喋り方から一変、歌い出すとONE OK ROCKなどを熱唱する圧倒的な声量。初見リスナーの情緒を破壊するレベルのギャップが武器です。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>🤓 限界オタクの魂</h3>
+                    <p>重度のオタクであり、好きな作品や声優の話になると早口に。過去の「ガチ恋」エピソードや夢女子・腐女子トークも赤裸々に語る親しみやすさも魅力です。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>🍮 立てばアー様、座ればポン</h3>
+                    <p>王としての威厳を保とうとするも、ミュート芸や言い間違いなどの「ポンコツ」が頻発。リスナーからは愛を込めて「ポン」といじられています。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>👊 物理最強の邪神（112kg）</h3>
+                    <p>パンチングマシンで112kgという数値を叩き出した怪力の持ち主。邪神の王というより「脳筋」「物理系」と揶揄されることも。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="cp-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial fan archive.</p>
+    </footer>
+
+    <script src="azato.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, i) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => entry.target.classList.add('active'), i * 150);
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

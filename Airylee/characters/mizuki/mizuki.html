@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>五穣みずき | エアリープロダクション | VTuber Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <link rel="stylesheet" href="mizuki.css">
+</head>
+<body>
+
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../../airylee_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO INDEX
+        </a>
+        <div class="cp-nav-gen">Airy Production 4期生</div>
+    </nav>
+
+    <main>
+        <section class="cp-hero cp-reveal">
+            <div class="cp-bg-letter">M</div>
+            <div class="cp-hero-content">
+                <span class="cp-gen-label">4期生 / あやかし部</span>
+                <h1 class="cp-hero-name">五穣みずき</h1>
+                <span class="cp-hero-en">Gojou Mizuki</span>
+                <p class="cp-chara-desc">
+                    「かしこいかわいいッ！ ギャップで魅せるアマビエお姉さん🐚🍚」<br>
+                    人間界のオタク文化に惹かれて海から飛び出してきた、厄祓いの妖怪アマビエ。動画制作やナンパ（？）に忙しい、幸福製造のエースなんだとか。
+                </p>
+                <div class="cp-tags">
+                    <span class="cp-tag cp-tag-primary">🐚🍚</span>
+                    <span class="cp-tag cp-tag-muted">#保護者</span>
+                    <span class="cp-tag cp-tag-muted">#不憫のエース</span>
+                    <span class="cp-tag cp-tag-muted">#幸福製造</span>
+                </div>
+            </div>
+            <div class="cp-hero-motif"></div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">PROFILE</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>💎 基本データ</h3>
+                    <ul>
+                        <li><strong>誕生日：</strong> 7月20日</li>
+                        <li><strong>年齢：</strong> 226歳（人間換算26歳）</li>
+                        <li><strong>身長：</strong> 168cm</li>
+                        <li><strong>種族：</strong> アマビエ</li>
+                        <li><strong>好きなもの：</strong> 炭水化物、お酒、動画制作</li>
+                    </ul>
+                </div>
+                <div class="cp-card">
+                    <h3>📽️ クリエイティブな妖怪</h3>
+                    <p>動画制作スキルが高く、自身の活動でもクリエイティブな一面を発揮。一方で、ナンパを繰り返しては「刺される」というヤンデレ寸劇を繰り広げるカオスな側面も。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">EPISODES</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>🦗 伝説の「虫食い」審査</h3>
+                    <p>オーディションの書類審査で目立つため、虫を食べる動画を送りつけて合格を勝ち取った伝説の持ち主。その強靭なメンタルは今も活動の端々で垣間見えます。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>🪰 ハエ製造のエース</h3>
+                    <p>汚部屋から「ハイポーション作り」を配信し、本物のハエを映り込ませるという珍事を達成。リスナーからは親しみを込めて「不憫のエース」と呼ばれています。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>💌 エアプロの「伊藤誠」</h3>
+                    <p>可愛い女の子に目がなく、誰彼構わず自作の「婚姻届」を配り歩くエアプロ随一のナンパ師。結局いつも自業自得な結末を迎える姿が、もはや伝統芸能の域。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>🍼 外見は大人、頭脳はバブ</h3>
+                    <p>クールな見た目に反し、中身は驚くほどのポンコツ。英語や漢字のテストの結果は散々で、リスナーは彼女を心配して見守る「保護者」にならざるを得ません。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="mizuki.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, i) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => entry.target.classList.add('active'), i * 150);
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

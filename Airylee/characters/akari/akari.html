@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>火挟あかり | エアリープロダクション | VTuber Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <link rel="stylesheet" href="akari.css">
+</head>
+<body>
+
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../../airylee_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO INDEX
+        </a>
+        <div class="cp-nav-gen">Airy Production 4期生</div>
+    </nav>
+
+    <main>
+        <section class="cp-hero cp-reveal">
+            <div class="cp-bg-letter">A</div>
+            <div class="cp-hero-content">
+                <span class="cp-gen-label">4期生 / あやかし部</span>
+                <h1 class="cp-hero-name">火挟あかり</h1>
+                <span class="cp-hero-en">Hibasami Akari</span>
+                <p class="cp-chara-desc">
+                    「人間界に憧れてやってきた、喉が自慢の猫又なんだ🧡🐾」<br>
+                    120年生きすぎて猫又になった元・猫。頭の上には親友のリス「リス枝」を乗せて、マシンガントークと驚異の歌唱スタミナで今日も元気に配信中！
+                </p>
+                <div class="cp-tags">
+                    <span class="cp-tag cp-tag-primary">🧡🐾</span>
+                    <span class="cp-tag cp-tag-muted">#猫又生配信</span>
+                    <span class="cp-tag cp-tag-muted">#喉つよ猫又</span>
+                    <span class="cp-tag cp-tag-muted">#あやかし部</span>
+                </div>
+            </div>
+            <div class="cp-hero-motif"></div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">PROFILE</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>💎 基本データ</h3>
+                    <ul>
+                        <li><strong>誕生日：</strong> 12月1日</li>
+                        <li><strong>年齢：</strong> 121歳</li>
+                        <li><strong>身長：</strong> 150cm</li>
+                        <li><strong>種族：</strong> 猫又</li>
+                        <li><strong>好きなもの：</strong> 歌、またたび（お酒）、エビフライ</li>
+                        <li><strong>挨拶：</strong> こんあかり / おつあかり</li>
+                    </ul>
+                </div>
+                <div class="cp-card">
+                    <h3>🎸 魂の歌い手</h3>
+                    <p>レパートリーは1000曲以上。一度歌い始めると止まらない驚異のスタミナを持ち、ボカロやアニソンを中心に情熱的な歌声を響かせます。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">EPISODES</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>🎤 9時間120曲の鉄人</h3>
+                    <p>1回の配信で120曲を歌いきった伝説の耐久歌枠。喉の強さと持久力はエアプロ随一で、リスナーを圧倒的な熱量で魅了し続けました。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>🩹 「何もできない」で合格</h3>
+                    <p>オーディションの面接で「何もできないんですけど大丈夫ですか」と正直に質問して合格。2度目の挑戦で掴み取った、執念と純粋さの勝利です。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>🚑 またたび（酒）の黒歴史</h3>
+                    <p>お酒が大好きすぎて救急車で運ばれたという豪快な過去を持つ。現在はたしなむ程度だが、時折見せる酔っ払いムーブはもはや配信の風物詩。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>🧚 妖精（？）召喚事件</h3>
+                    <p>幼少期、妖精を呼ぼうと縁側に水を置いたところ、やってきたのはゴキブリ。真顔でカーテンを閉めたという、切なくもシュールな思い出が。 </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="akari.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, i) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => entry.target.classList.add('active'), i * 150);
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

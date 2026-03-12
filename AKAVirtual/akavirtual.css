@@ -518,6 +518,13 @@ body::selection {
     border-radius: 2px;
 }
 
+.ak-tag-alert {
+    background: rgba(255, 176, 32, 0.1);
+    color: #FFB020;
+    border-color: rgba(255, 176, 32, 0.4);
+    box-shadow: 0 0 5px rgba(255, 176, 32, 0.2);
+}
+
 .ak-member-icon {
     width: 70px;
     height: 70px;

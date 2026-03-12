@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ジル・ティーグルシュ | エアリープロダクション | VTuber Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <link rel="stylesheet" href="jill.css">
+</head>
+<body>
+
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../../airylee_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO INDEX
+        </a>
+        <div class="cp-nav-gen">Airy Production 5期生</div>
+    </nav>
+
+    <main>
+        <section class="cp-hero cp-reveal">
+            <div class="cp-bg-letter">J</div>
+            <div class="cp-hero-content">
+                <span class="cp-gen-label">5期生 / 四神：白虎</span>
+                <h1 class="cp-hero-name">ジル・ティーグルシュ</h1>
+                <span class="cp-hero-en">JILL TIGRUSH</span>
+                <p class="cp-chara-desc">
+                    「こんたら！神様見習いの白虎、ジル・ティーグルシュだよ🐯🛡️」<br>
+                    サイバー都市からやってきたサイバー騎士（趣味）。自称・立派な虎だが、リスナーからは「猫」扱いされるのがお約束。相棒の剣「黒典コネオ」と共に、修行という名のインターンを満喫中！
+                </p>
+                <div class="cp-tags">
+                    <span class="cp-tag cp-tag-primary">🐯🛡️</span>
+                    <span class="cp-tag cp-tag-muted">#じるじる見て</span>
+                    <span class="cp-tag cp-tag-muted">#ジルバニアファミリー</span>
+                    <span class="cp-tag cp-tag-muted">#白虎</span>
+                </div>
+            </div>
+            <div class="cp-hero-motif"></div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">PROFILE</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>💎 基本データ</h3>
+                    <ul>
+                        <li><strong>誕生日：</strong> 9月22日</li>
+                        <li><strong>年齢：</strong> 105歳</li>
+                        <li><strong>身長：</strong> 147cm</li>
+                        <li><strong>種族：</strong> 白虎</li>
+                        <li><strong>好きなゲーム：</strong> LoL、VALORANT、APEX</li>
+                        <li><strong>挨拶：</strong> こんたら / おつトラ</li>
+                    </ul>
+                </div>
+                <div class="cp-card">
+                    <h3>🎮 豹変するガチゲーマー</h3>
+                    <p>当初は癒やし枠を目指していたが、LoLの実況が始まると「暗黒爆笑」が飛び出すガチ勢に。味方の気持ちを代弁（？）する熱いプレイスタイルがリスナーに大受け。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">EPISODES</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>🐱 「虎だよ！」という様式美</h3>
+                    <p>小柄な体と可愛らしい反応から、リスナーからは猫扱いされるのが鉄板。必死に「虎だよ！」と訂正する姿が、今やジルファミの最大の癒やしとなっています。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>🥣 自称「豚汁」のリスナー</h3>
+                    <p>ファンネームをジルファミに決めたものの、ボツ案の「豚汁（とんじる）」をリスナーが自ら採用。配信画面が豚汁で溢れかえるカオスな光景が日常に。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>🚽 105歳の生々しい失敗</h3>
+                    <p>「マンションの玄関の外で漏らした」という衝撃の過去を赤裸々に告白。神様見習いとは思えない人間味（？）溢れるエピソードに、リスナーは唖然と爆笑。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>👗 3ヶ月悩む優柔不断</h3>
+                    <p>服を買うのに悩みすぎて、決断する頃には売り切れていることもしばしば。「縁がなかった」と自分に言い聞かせる、神の如き（？）悟りの境地を持っています。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="jill.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, i) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => entry.target.classList.add('active'), i * 150);
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

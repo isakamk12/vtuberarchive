@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>無印ヨグ | エアリープロダクション | VTuber Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <link rel="stylesheet" href="yogu.css">
+</head>
+<body>
+
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../../airylee_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO INDEX
+        </a>
+        <div class="cp-nav-gen">Airy Production 3期生</div>
+    </nav>
+
+    <main>
+        <section class="cp-hero cp-reveal">
+            <div class="cp-bg-letter">Y</div>
+            <div class="cp-hero-content">
+                <span class="cp-gen-label">3期生 / 常識枠（自称）</span>
+                <h1 class="cp-hero-name">無印ヨグ</h1>
+                <span class="cp-hero-en">Muzirushi Yogu</span>
+                <p class="cp-chara-desc">
+                    「時空を超えてこんよぐ！顔面偏差値最強、気分屋邪神の無印ヨグです」<br>
+                    宇宙からやってきたヨグ＝ソトース。自称「3期生の頭脳枠」だが、実態は「息をするように嘘をつく」ミステリアスなポンコツ邪神。
+                </p>
+                <div class="cp-tags">
+                    <span class="cp-tag cp-tag-primary">🔮🥛</span>
+                    <span class="cp-tag cp-tag-muted">#ヨグ団</span>
+                    <span class="cp-tag cp-tag-muted">#嘘の呼吸</span>
+                    <span class="cp-tag cp-tag-muted">#知ったかぶり</span>
+                </div>
+            </div>
+            <div class="cp-hero-motif"></div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">PROFILE</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>💎 基本データ</h3>
+                    <ul>
+                        <li><strong>誕生日：</strong> 10月4日</li>
+                        <li><strong>年齢：</strong> 数億年（不明）</li>
+                        <li><strong>身長：</strong> 154cm</li>
+                        <li><strong>好きなもの：</strong> 名探偵コナン、甘いもの</li>
+                        <li><strong>苦手なもの：</strong> 家事全般、早起き</li>
+                    </ul>
+                </div>
+                <div class="cp-card">
+                    <h3>☁️ 宇宙の知性（？）</h3>
+                    <p>3期生のまとめ役を自負。アイドルへの並外れた情熱を持ち、後輩の活動には誰よりも早く限界オタク化して反応する熱い先輩でもあります。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">EPISODES</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>🕛 伝説の12時間雑談</h3>
+                    <p>デビュー直後にいきなり12時間連続雑談を敢行。コナンの話を延々とし続けるスタミナとトーク力を見せ、新人離れした貫禄をリスナーに知らしめました。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>🎭 狂気の多重人格雑談</h3>
+                    <p>同接数の下一桁で人格（ロリ、ヤンデレ、清楚など）が切り替わるカオスな配信を企画。細部まで設定を分けるこだわりでリスナーを翻弄し、邪神の本領を発揮。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>🤥 嘘の呼吸・知ったかぶり</h3>
+                    <p>「嘘です」と即座に申告するスタイルの嘘トークが持ちネタ。ネット知識でそれっぽく語る「知ったかぶり」を特技とし、独自のゆるいエンタメ空間を構築しています。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>💞 後輩への限界ラブ</h3>
+                    <p>4期生などの後輩がデビューするや否や、誰よりも早く詳細を分析。先輩風を吹かすどころか、全力で推し活を楽しむ姿は、もはや「事務所公式の限界後輩オタク」。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="cp-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial fan archive.</p>
+    </footer>
+
+    <script src="yogu.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, i) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => entry.target.classList.add('active'), i * 150);
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

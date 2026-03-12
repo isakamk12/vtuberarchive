@@ -1,0 +1,20 @@
+:root {
+    --char-color: #F5FFFA; /* Mint Cream / Artistic clean theme */
+    --char-rgb: 245, 255, 250;
+}
+
+.char-hero {
+    background: linear-gradient(to bottom, rgba(245, 255, 250, 0.05), transparent);
+}
+
+.ep-card {
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--char-color);
+}
+
+.ep-card h3 {
+    font-family: 'Jura', sans-serif;
+    color: var(--char-color);
+    margin-bottom: 0.5rem;
+}

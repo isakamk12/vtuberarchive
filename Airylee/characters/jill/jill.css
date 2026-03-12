@@ -1,0 +1,17 @@
+:root {
+    --char-color: #E6E6FA; /* Lavender/White vibe */
+    --char-glow: rgba(230, 230, 250, 0.5);
+    --char-border: rgba(230, 230, 250, 0.3);
+}
+
+.cp-bg::before {
+    background: 
+        radial-gradient(circle at 70% 30%, rgba(230, 230, 250, 0.2), transparent 60%),
+        radial-gradient(circle at 30% 70%, rgba(100, 100, 150, 0.1), transparent 50%);
+}
+
+.cp-hero-motif {
+    background: linear-gradient(135deg, rgba(230, 230, 250, 0.1), transparent);
+    /* Shield/Hexagon shape */
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}

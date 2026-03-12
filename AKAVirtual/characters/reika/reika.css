@@ -1,0 +1,20 @@
+:root {
+    --char-color: #B22222; /* Firebrick / Mechanic & Ramen theme */
+    --char-rgb: 178, 34, 34;
+}
+
+.char-hero {
+    background: linear-gradient(to bottom, rgba(178, 34, 34, 0.05), transparent);
+}
+
+.ep-card {
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--char-color);
+}
+
+.ep-card h3 {
+    font-family: 'Jura', sans-serif;
+    color: var(--char-color);
+    margin-bottom: 0.5rem;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>飛影ハスタ | エアリープロダクション | VTuber Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <link rel="stylesheet" href="hasuta.css">
+</head>
+<body>
+
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../../airylee_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO INDEX
+        </a>
+        <div class="cp-nav-gen">Airy Production 3期生</div>
+    </nav>
+
+    <main>
+        <section class="cp-hero cp-reveal">
+            <div class="cp-bg-letter">H</div>
+            <div class="cp-hero-content">
+                <span class="cp-gen-label">3期生 / ユニット：EVILGOD</span>
+                <h1 class="cp-hero-name">飛影ハスタ</h1>
+                <span class="cp-hero-en">Hiei Hasuta</span>
+                <p class="cp-chara-desc">
+                    「顔面偏差値最強VTuber事務所エアリープロダクション3期生！わんぱくパワフル食いしん坊、パスタじゃないよ飛影ハスタなんだよ！」<br>
+                    地球の美味しい食べ物と特撮に惹かれ、キスノルベタ星からやってきた邪神。密かに地球侵略を計画中（？）
+                </p>
+                <div class="cp-tags">
+                    <span class="cp-tag cp-tag-primary">🍝🦖</span>
+                    <span class="cp-tag cp-tag-muted">#ハスちゃん教徒</span>
+                    <span class="cp-tag cp-tag-muted">#食って寝ろ</span>
+                    <span class="cp-tag cp-tag-muted">#EVILGOD</span>
+                </div>
+            </div>
+            <div class="cp-hero-motif"></div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">PROFILE</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>💎 基本データ</h3>
+                    <ul>
+                        <li><strong>誕生日：</strong> 10月25日</li>
+                        <li><strong>年齢：</strong> 数億歳（不詳）</li>
+                        <li><strong>身長：</strong> 145cm</li>
+                        <li><strong>挨拶：</strong> おはすたあ！</li>
+                        <li><strong>特技：</strong> FPS、プリキュアダンス</li>
+                    </ul>
+                </div>
+                <div class="cp-card">
+                    <h3>🎮 活動の特徴</h3>
+                    <p>VALORANTなどのFPSで高いセンスを見せる一方、明るく表現力豊かな歌声も魅力。何より「食」への執着が凄まじく、深夜の爆食配信はもはや伝説。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">EPISODES</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>🦖 特撮への限界オタク愛</h3>
+                    <p>戦隊・ライダー・プリキュアをこよなく愛する。推しの新情報やグッズの買い忘れで配信中に本気で号泣してしまうほどの熱い魂（とオタク心）の持ち主です。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>😱 邪神なのにホラゲ拒絶</h3>
+                    <p>邪神でありながらホラーが致命的に苦手。「嫌いなものはニンジン」と誤魔化していた時期もあったが、実況では絶叫とビビリ散らかす姿がリスナーの栄養に。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>🍝 尊き「洋食コンビ」</h3>
+                    <p>同期の黒羊ニグラス（グラタン）とは「ハスタとグラタン」で洋食コンビ。お泊まりオフコラボをするほど仲が良く、その「てぇてぇ」関係性は邪神らしからぬ温かさ。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>🤧 アイデンティティは「鼻かみ」</h3>
+                    <p>配信中に堂々と鼻をかむ姿が定着。「僕のアイデンティティ」と豪語し、時にはエコーまでかける。リスナーからは「助かる」「ファンサ」と謎の感謝をされることも。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="cp-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial fan archive.</p>
+    </footer>
+
+    <script src="hasuta.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, i) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => entry.target.classList.add('active'), i * 150);
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

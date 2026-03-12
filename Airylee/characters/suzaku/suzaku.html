@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>朱城スザク | エアリープロダクション | VTuber Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <link rel="stylesheet" href="suzaku.css">
+</head>
+<body>
+
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../../airylee_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO INDEX
+        </a>
+        <div class="cp-nav-gen">Airy Production 5期生</div>
+    </nav>
+
+    <main>
+        <section class="cp-hero cp-reveal">
+            <div class="cp-bg-letter">S</div>
+            <div class="cp-hero-content">
+                <span class="cp-gen-label">5期生 / 四神：朱雀</span>
+                <h1 class="cp-hero-name">朱城スザク</h1>
+                <span class="cp-hero-en">AKESHIRO SUZAKU</span>
+                <p class="cp-chara-desc">
+                    「夏と火を司る熱き魂、朱城スザクだ🐦🔥✿」<br>
+                    四神の朱雀。負けず嫌いの熱血神獣だが、実は激弱なお酒にも勝てない「ほろ酔い」未満。サッカーとパチンコを愛し、自宅に実機を導入するほどのガチ勢なんだ！
+                </p>
+                <div class="cp-tags">
+                    <span class="cp-tag cp-tag-primary">🐦🔥✿</span>
+                    <span class="cp-tag cp-tag-muted">#スザクの仲間たち</span>
+                    <span class="cp-tag cp-tag-muted">#熱さのエース</span>
+                    <span class="cp-tag cp-tag-muted">#70族</span>
+                </div>
+            </div>
+            <div class="cp-hero-motif"></div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">PROFILE</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>💎 基本データ</h3>
+                    <ul>
+                        <li><strong>誕生日：</strong> 7月2日</li>
+                        <li><strong>年齢：</strong> 4000歳（自称17歳）</li>
+                        <li><strong>身長：</strong> 160cm</li>
+                        <li><strong>種族：</strong> 朱雀</li>
+                        <li><strong>趣味：</strong> サッカー観戦、パチンコ</li>
+                        <li><strong>イメージ：</strong> バーミリオン</li>
+                    </ul>
+                </div>
+                <div class="cp-card">
+                    <h3>⚽ 情熱のサポーター</h3>
+                    <p>マンチェスター・シティの熱狂的なファン。イギリス現地観戦もこなすガチ勢。初配信と日本代表戦が被り、断腸の思いでカメラの前に立ったほど。将来の夢は「サッカーの仕事」。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">EPISODES</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>🎰 「パチンコの日」デビュー</h3>
+                    <p>デビュー日がパチンコの日という奇跡。激熱の「次回予告」で始まり、今や「事務所公認」で自宅に『エヴァ15』の実機を導入。当たりが続いて配信に遅刻するのもご愛嬌。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>🏢 事務所との信頼の絆？</h3>
+                    <p>実機の導入に際し、社長と副社長から手厚いサポートを受けた。事務所全体からその「熱量」が認められている、ある意味エアプロの顔（ギャンブラー）の一人。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>🩸 わずか5分の爆速献血</h3>
+                    <p>人助けのために献血へ。「15分かかる」と言われた200mlの採血が、特異な血流の良さによりわずか5分で終了。看護師も驚く「流れる朱雀」の伝説。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>🐦 クジャクは共演NG？</h3>
+                    <p>集合体恐怖症のため、クジャクの羽の模様が天敵。どんな強敵にも立ち向かう神獣だが、クジャクだけは「宇宙人の目に見える」と本気で恐れています。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="suzaku.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, i) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => entry.target.classList.add('active'), i * 150);
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
