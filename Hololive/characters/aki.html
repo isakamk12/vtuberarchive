@@ -7,54 +7,129 @@
     <title>アキ・ローゼンタール (Aki Rosenthal) — hololive</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #a8e6cf;
+            --char-color-alt: #3d8c40;
+            --bg-dark: #020d04;
+        }
+        .cp-hero-name {
+            background: linear-gradient(135deg, #fff 0%, var(--char-color) 100%);
+            -webkit-background-clip: text;
+        }
+        .episode-card {
+            background: rgba(168, 230, 207, 0.05);
+            border: 1px dashed var(--char-color);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            position: relative;
+        }
+        .episode-card::after {
+            content: '✿';
+            position: absolute;
+            bottom: 5px;
+            right: 10px;
+            color: var(--char-color);
+            opacity: 0.3;
+        }
+        .episode-title {
+            color: var(--char-color);
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+    </style>
 </head>
 
 <body>
     <div class="cp-bg"></div>
     <nav class="cp-nav">
         <a href="../hololive_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO hololive</a>
-        <span class="cp-nav-gen">1期生 // JP</span>
+        <span class="cp-nav-gen">hololive // 1期生</span>
     </nav>
+
     <section class="cp-hero">
         <div class="cp-hero-content">
-            <div class="cp-gen-label">hololive 1st Gen</div>
+            <div class="cp-gen-label">Half-Elf from another world</div>
             <h1 class="cp-hero-name">アキ・ローゼンタール</h1>
             <span class="cp-hero-en">Aki Rosenthal</span>
-            <p class="cp-chara-desc">異世界からやってきたハーフエルフの美少女。浮遊するツインテールは、実は魔法の……？ 癒やしの声と、本格的なベリーダンスも得意とする。</p>
+            <p class="cp-chara-desc">
+                異世界「シャ・ル・イース」からやって来たハーフエルフ。浮遊するツインテール「アイク」が特徴。癒し系お姉さんでありながら、ゲームでは歴戦の個体としての強さを見せる、ホロライブ随一のコミュ力と情熱の持ち主。
+            </p>
             <div class="cp-tags">
-                <span class="cp-tag">#Elf</span>
-                <span class="cp-tag">#Healing</span>
-                <span class="cp-tag">#Dance</span>
+                <span class="cp-tag">#アキロゼ</span>
+                <span class="cp-tag">#ムキロゼ</span>
+                <span class="cp-tag">#ロゼ隊</span>
+                <span class="cp-tag">#アローナ</span>
             </div>
         </div>
     </section>
+
     <div class="cp-section cp-reveal">
-        <h2 class="cp-section-title">ARCHIVE DATA</h2>
+        <h2 class="cp-section-title"><i class="fa-solid fa-leaf"></i> ELF RECORDS</h2>
         <div class="cp-grid">
             <div class="cp-card">
-                <h3>PROFILE</h3>
+                <h3>ELVEN PROFILE</h3>
                 <table class="cp-table">
-                    <tr>
-                        <th>DEBUT</th>
-                        <td>2018.06.01</td>
-                    </tr>
-                    <tr>
-                        <th>AFFILIATION</th>
-                        <td>hololive JP</td>
-                    </tr>
-                    <tr>
-                        <th>STATUS</th>
-                        <td>Active</td>
-                    </tr>
+                    <tr><th>デビュー</th><td>2018.06.01</td></tr>
+                    <tr><th>誕生日</th><td>2月17日</td></tr>
+                    <tr><th>身長</th><td>162cm</td></tr>
+                    <tr><th>ファンネーム</th><td>ロゼ隊</td></tr>
+                    <tr><th>好きなもの</th><td>麦ジュース（お酒）、唐揚げ</td></tr>
                 </table>
             </div>
             <div class="cp-card">
-                <h3>EPISODES</h3>
-                <p>癒やしのボイスで視聴者を魅了する一方、配信への情熱は非常に高く、ARKやマインクラフトでの活動も精力的に行っている。</p>
+                <h3>SPECIALITIES</h3>
+                <p>ベリーダンス、ミュージカル演出、ゲーム（ARK, スト6等）。オリジナル言語を用いた楽曲「シャルイース」など、幻想的な世界観の表現において非常に高い評価を得ている。</p>
             </div>
         </div>
     </div>
-    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+
+    <div class="cp-section cp-reveal">
+        <h2 class="cp-section-title"><i class="fa-solid fa-wand-sparkles"></i> MAGIC MOMENTS</h2>
+        
+        <div class="episode-card">
+            <div class="episode-title"><i class="fa-solid fa-vcard"></i> 1. 「ムキロゼ」とスト鯖での伝説</div>
+            <p>筋骨隆々の「ムキロゼ」としてARKで暴れ回り、VCR等のスト鯖企画で外部ストリーマーと広く交流。持ち前のコミュ力でギャングのボスになるなど、数々のドラマを生み出しました。</p>
+        </div>
+
+        <div class="episode-card">
+            <div class="episode-title"><i class="fa-solid fa-masks-theater"></i> 2. 圧巻のミュージカルライブ</div>
+            <p>生誕祭ライブなどで自ら監督・演出を手掛け、物語仕立てのステージを構築。本格的なダンスと共に披露されるそのクオリティは「ホロライブ最高傑作」と評されることも。</p>
+        </div>
+
+        <div class="episode-card">
+            <div class="episode-title"><i class="fa-solid fa-clover"></i> 3. 苦難を乗り越えた努力家</div>
+            <p>腰の手術や活動休止を乗り越えた不屈の精神。一方で、適当にアイテムをしまう「ゴミ箱インベントリ」など、愛される「PON」な一面も持ち合わせています。</p>
+        </div>
+
+        <div class="episode-card">
+            <div class="episode-title"><i class="fa-solid fa-heart"></i> 4. 独特のワードセンスとミーム</div>
+            <p>アキロゼの技を周囲が「可愛い」と言い換える「アキロゼはかわいい」ミームや、寝言での名言、不思議なワードセンスなど、常に独自の空気感でファンを魅了しています。</p>
+        </div>
+    </div>
+
+    <footer class="cp-footer">
+        &copy; 2026 VTuber Archive Project - Aki Rosenthal Fansite Profile.
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
 
 </html>

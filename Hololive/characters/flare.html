@@ -7,54 +7,255 @@
     <title>不知火フレア (Shiranui Flare) — hololive</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --chara-color: #ff5722; /* Flare Orange */
+            --chara-accent: #ffeb3b; /* Spark Yellow */
+            --bg-dark: #3e2723;
+            --card-bg: rgba(255, 255, 255, 0.95);
+            --text-main: #4e342e;
+        }
+
+        .cp-bg {
+            background: radial-gradient(circle at top right, #fff3e0 0%, #ffcc80 100%);
+            opacity: 0.1;
+        }
+
+        body {
+            color: var(--text-main);
+            background-color: #fffaf0;
+        }
+
+        .cp-nav {
+            background: rgba(62, 39, 35, 0.9);
+        }
+
+        .cp-hero {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=1000') center/cover;
+            color: #fff;
+            padding: 120px 20px;
+            text-align: center;
+            border-bottom: 6px solid var(--chara-color);
+        }
+
+        .cp-hero-name {
+            font-size: 4.5rem;
+            font-weight: 900;
+            text-shadow: 0 0 20px rgba(255, 87, 34, 0.5);
+            letter-spacing: 2px;
+        }
+
+        .cp-tag {
+            background: #fff;
+            color: var(--chara-color);
+            border: 2px solid var(--chara-color);
+            font-weight: bold;
+        }
+
+        .cp-section-title {
+            font-size: 2.8rem;
+            font-weight: 900;
+            color: var(--bg-dark);
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .cp-section-title::before {
+            content: "🔥";
+            margin-right: 15px;
+        }
+
+        .cp-card {
+            background: #fff;
+            border: 1px solid #efebe9;
+            box-shadow: 0 10px 30px rgba(62, 39, 35, 0.05);
+            border-radius: 12px;
+        }
+
+        .cp-table th {
+            color: var(--chara-color);
+        }
+
+        .ep-card {
+            background: #fff;
+            border-left: 8px solid var(--chara-color);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-radius: 4px 20px 20px 4px;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.03);
+            transition: all 0.3s ease;
+        }
+
+        .ep-card:hover {
+            transform: scale(1.01);
+            background: #fffde7;
+            border-left-color: var(--chara-accent);
+        }
+
+        .ep-num {
+            background: var(--chara-color);
+            color: #fff;
+            padding: 2px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .ep-title {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--bg-dark);
+            margin-bottom: 1rem;
+        }
+
+        .ep-quote {
+            background: #efebe9;
+            border-radius: 8px;
+            padding: 1.2rem;
+            margin-top: 1.5rem;
+            font-weight: 600;
+            color: #5d4037;
+            border-right: 5px solid var(--chara-color);
+        }
+
+        .cp-footer {
+            background: var(--bg-dark);
+            color: #bcaaa4;
+        }
+    </style>
 </head>
 
 <body>
     <div class="cp-bg"></div>
     <nav class="cp-nav">
         <a href="../hololive_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO hololive</a>
-        <span class="cp-nav-gen">3期生 // JP</span>
+        <span class="cp-nav-gen">3期生 (Fantasy) // JP</span>
     </nav>
-    <section class="cp-hero">
+
+    <header class="cp-hero">
         <div class="cp-hero-content">
-            <div class="cp-gen-label">hololive 3rd Gen (Fantasy)</div>
+            <div class="cp-gen-label" style="background: var(--chara-color); color: #fff; padding: 2px 12px; border-radius: 20px; font-weight: bold; margin-bottom: 1rem; display: inline-block;">hololive Fantasy</div>
             <h1 class="cp-hero-name">不知火フレア</h1>
-            <span class="cp-hero-en">Shiranui Flare</span>
-            <p class="cp-chara-desc">ハーフエルフのバーチャルエルフ。さっぱりした性格で頼りがいがあるが、実は乙女チックな一面も。歌唱力が非常に高く、情緒豊かな表現が持ち味。</p>
-            <div class="cp-tags">
+            <span class="cp-hero-en" style="font-size: 1.8rem; font-weight: bold; display: block; margin-bottom: 2rem; opacity: 0.9;">Shiranui Flare</span>
+            <p class="cp-chara-desc" style="max-width: 800px; margin: 0 auto; font-size: 1.25rem; line-height: 1.8;">
+                「こんぬいー！」<br>
+                人間とエルフのハーフエルフ。歌うこととゲームが大好きな、情に厚く涙もろいハーフエルフ。抜群のエイム力と、マインクラフトでの驚異的な建築センスを併せ持つ「不知火建設」の社長。
+            </p>
+            <div class="cp-tags" style="margin-top: 2rem;">
                 <span class="cp-tag">#HalfElf</span>
-                <span class="cp-tag">#Cool</span>
-                <span class="cp-tag">#Singer</span>
+                <span class="cp-tag">#Fire</span>
+                <span class="cp-tag">#ShiraKen</span>
+                <span class="cp-tag">#Sniper</span>
             </div>
         </div>
-    </section>
-    <div class="cp-section cp-reveal">
-        <h2 class="cp-section-title">ARCHIVE DATA</h2>
-        <div class="cp-grid">
-            <div class="cp-card">
-                <h3>PROFILE</h3>
-                <table class="cp-table">
-                    <tr>
-                        <th>DEBUT</th>
-                        <td>2019.08.07</td>
-                    </tr>
-                    <tr>
-                        <th>AFFILIATION</th>
-                        <td>hololive JP</td>
-                    </tr>
-                    <tr>
-                        <th>STATUS</th>
-                        <td>Active</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="cp-card">
-                <h3>EPISODES</h3>
-                <p>メンバー思いの性格で、同期や後輩からの信頼が厚い。マインクラフトでの建築センスにも定評があり、数々の芸術的な制作物を残している。</p>
+    </header>
+
+    <main class="cp-main" style="padding: 80px 20px; max-width: 1000px; margin: 0 auto;">
+        
+        <div class="cp-section cp-reveal">
+            <h2 class="cp-section-title">ELVEN ARCHIVES</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3 style="color: var(--bg-dark); margin-bottom: 1.5rem; font-weight: 900;">基本プロフィール</h3>
+                    <table class="cp-table">
+                        <tr>
+                            <th>誕生日</th>
+                            <td>4月2日</td>
+                        </tr>
+                        <tr>
+                            <th>身長</th>
+                            <td>158cm</td>
+                        </tr>
+                        <tr>
+                            <th>ファン名</th>
+                            <td>エルフレンド</td>
+                        </tr>
+                        <tr>
+                            <th>愛称</th>
+                            <td>ふーたん</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="cp-card">
+                    <h3 style="color: var(--bg-dark); margin-bottom: 1.5rem; font-weight: 900;">ハーフエルフの横顔</h3>
+                    <p style="line-height: 2;">
+                        普段は適当でマイペースに楽しんでいるが、実は情に厚く涙もろい。褒められると照れてしまう可愛い一面も。一方で、裏声なしで3オクターブほど出せる高い歌唱力を誇り、負けず嫌いで死にゲーも笑顔でプレイするタフさを持つ。
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+
+        <div class="cp-section cp-reveal">
+            <h2 class="cp-section-title">LEGENDARY EPISODES</h2>
+
+            <div class="ep-card">
+                <span class="ep-num">EPISODE 01</span>
+                <div class="ep-title">情に厚く、涙もろい社長</div>
+                <p>クールな見た目に反して非常に感受性が豊か。ゲームの悲しい物語やメンバーからの優しさに触れると、すぐに感極まって泣いてしまう。同期への想いは誰よりも強い。</p>
+                <div class="ep-quote">「同期がみんな優しくて なんかこうね 簡単に泣けてしまうんだわ 泣かせに来るから」</div>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">EPISODE 02</span>
+                <div class="ep-title">音ゲー「ポップン」への深すぎる愛</div>
+                <p>『ポップンミュージック』をこよなく愛し、特に「MZD」は長年の激推し。デビュー時からコナミの案件を待ち望んでいるほどのガチファンである。</p>
+                <div class="ep-quote">「フレアは神押しなんだよね。ずっとMZD一筋です」</div>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">EPISODE 03</span>
+                <div class="ep-title">不知火建設の情熱と狂気</div>
+                <p>マインクラフトで「不知火建設」を立ち上げ。畳の表現のために6時間かけてマップアートを作成するなど、職人としての凄まじいこだわりを見せる。一方で洋館を燃やしてしまう破天荒な一面も。</p>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">EPISODE 04</span>
+                <div class="ep-title">恐怖の「神エイム」スナイパー</div>
+                <p>FPSでのエイム力が非常に高く、マイクラ夏祭りの射的ではちょっかいを出してきたホロメンを遠距離から撃ち抜く伝説を残した。自画自賛するほどの振り向きボムも必見。</p>
+                <div class="ep-quote">「今のフレアの振り向きボムを見たかい うますぎて馬になるわね」</div>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">EPISODE 05</span>
+                <div class="ep-title">一伊那尓栖（イナニス）への重すぎる愛</div>
+                <p>hololive Englishのイナニスの大ファンで「俺のイナ」と呼んで限界化。ただのファンとして彼女の幸せを願う、献身的（？）で重厚な愛を語っている。</p>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">EPISODE 06</span>
+                <div class="ep-title">「青梅」と「青海」のタクシー大移動</div>
+                <p>鷹嶺ルイとの待ち合わせ場所「青海（あおみ）」を「青梅（おうめ）」と勘違い。タクシーで2時間かけて東京を大移動するという、愛すべき大PONエピソード。</p>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">EPISODE 07</span>
+                <div class="ep-title">ポケモンに即座に「勧誘拒否」を食らう</div>
+                <p>『Pokémon LEGENDS Z-A』で不調のフォッコを助けた後、「うち来る？」と勧誘したところ、ゲーム画面に「こぬ！」と表示され、奇跡のタイミングで拒絶された伝説回。</p>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="cp-footer" style="padding: 50px 0; text-align: center;">
+        <p>&copy; 2016-2024 Cover Corp.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
 
 </html>

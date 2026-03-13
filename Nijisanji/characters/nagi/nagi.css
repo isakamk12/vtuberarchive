@@ -1,0 +1,64 @@
+:root {
+    --nagi-main: #7C86DE;
+    --nagi-sub: #ffffff;
+    --nagi-accent: #ffd700;
+}
+
+.nagi-theme {
+    --card-bg: rgba(124, 134, 222, 0.05);
+    --border-color: rgba(124, 134, 222, 0.2);
+}
+
+.rain-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, rgba(124, 134, 222, 0.02));
+    overflow: hidden;
+}
+
+.rain-overlay::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(transparent, transparent 20px, rgba(124, 134, 222, 0.1) 20px, rgba(124, 134, 222, 0.1) 22px);
+    animation: rainMotion 0.5s linear infinite;
+}
+
+@keyframes rainMotion {
+    from { transform: translateY(-22px); }
+    to { transform: translateY(0); }
+}
+
+.rose-particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="%237C86DE" opacity="0.05"><path d="M416 192c0-88.4-71.6-160-160-160S96 103.6 96 192c0 34.3 10.8 66.1 29.3 92.2L128 288c0 70.7 57.3 128 128 128s128-57.3 128-128l2.7-3.8c18.5-26.1 29.3-57.9 29.3-92.2z"/></svg>');
+    background-size: 150px 150px;
+}
+
+.en-name {
+    color: var(--nagi-main);
+}
+
+.section-title {
+    color: var(--nagi-main);
+}
+
+.crown-effect {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem;
+    color: var(--nagi-accent);
+    opacity: 0.2;
+}
+
+.crown-effect::before {
+    content: '\f44e';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+}

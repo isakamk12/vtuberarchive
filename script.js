@@ -695,7 +695,7 @@ document.addEventListener('DOMContentLoaded', () => {
             color: "0, 210, 255",
             icon: "H",
             url: "Hololive/hololive_index.html",
-            tags: ["Idol", "Global"],
+            tags: ["Idol", "Global", "ときのそら", "星街すいせい", "赤井はあと", "はあちゃま", "百鬼あやめ", "癒月ちょこ", "大空スバル", "大神ミオ", "猫又おかゆ", "戌神ころね", "白銀ノエル", "兎田ぺこら", "不知火フレア", "宝鐘マリン", "角巻わため", "姫森ルーナ", "桃鈴ねね", "雪花ラミィ", "ラプラス・ダークネス", "山田", "獅白ぼたん", "尾丸ポルカ", "鷹嶺ルイ", "博衣こより", "風真いろは", "沙花叉クロヱ", "天音かなた", "桐生ココ", "紫咲シオン", "湊あくあ"],
             desc: "にじさんじと並ぶ業界の双璧。公式サイトは世界中のファンを対象とした多言語対応が完璧で、情報の網羅性は世界一と言える。",
             desc_en: "A global leader alongside NIJISANJI. Their site features perfect multi-language support for fans worldwide.",
             desc_es: "Líder global junto a NIJISANJI. Su sitio cuenta con un soporte multiidioma perfecto para fans de todo el mundo.",

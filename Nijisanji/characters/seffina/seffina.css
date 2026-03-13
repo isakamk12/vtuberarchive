@@ -1,0 +1,68 @@
+:root {
+    --seffy-main: #ff66aa;
+    --seffy-sub: #ffddf0;
+    --seffy-accent: #ffd700;
+}
+
+.seffina-theme {
+    --card-bg: rgba(255, 102, 170, 0.05);
+    --border-color: rgba(255, 102, 170, 0.2);
+}
+
+.moonlight-effect {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255, 230, 240, 0.1) 0%, transparent 70%);
+    filter: blur(50px);
+}
+
+.flower-particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="%23ff66aa" opacity="0.05"><path d="M256 160c-53 0-96 43-96 96s43 96 96 96 96-43 96-96-43-96-96-96zm0 160c-35.3 0-64-28.7-64-64s28.7-64 64-64 64 28.7 64 64-28.7 64-64 64z"/></svg>');
+    background-size: 100px 100px;
+}
+
+.en-name {
+    color: var(--seffy-main);
+    text-shadow: 0 0 30px rgba(255, 102, 170, 0.5);
+}
+
+.section-title {
+    color: var(--seffy-main);
+}
+
+.fairy-dust {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    bottom: 10%;
+    background: radial-gradient(circle, var(--seffy-accent) 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.2;
+    animation: glitter 4s infinite linear;
+}
+
+@keyframes glitter {
+    0% { background-position: 0 0; }
+    100% { background-position: 100px 0; }
+}
+
+.mecafina-mascot {
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+    font-size: 4rem;
+    opacity: 0.1;
+    transform: rotate(-15deg);
+}
+
+.lore-card:hover {
+    border-color: var(--seffy-main);
+    transform: translateY(-10px) scale(1.02);
+}

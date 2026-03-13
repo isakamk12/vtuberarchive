@@ -7,55 +7,253 @@
     <title>角巻わため (Tsunomaki Watame) — hololive</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --chara-color: #fdd835; /* Wool Yellow */
+            --chara-accent: #8bc34a; /* Seaweed Green / Cloak */
+            --bg-dark: #795548;
+            --card-bg: rgba(255, 255, 255, 0.95);
+            --text-main: #5d4037;
+        }
+
+        .cp-bg {
+            background: radial-gradient(circle at center, #ffffff 0%, #fff9c4 100%);
+            opacity: 0.15;
+        }
+
+        body {
+            color: var(--text-main);
+            background-color: #fffdf7;
+        }
+
+        .cp-nav {
+            background: rgba(121, 85, 72, 0.9);
+        }
+
+        .cp-hero {
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1484557985045-edf25e08da73?auto=format&fit=crop&q=80&w=1000') center/cover;
+            color: #fff;
+            padding: 110px 20px;
+            text-align: center;
+            border-bottom: 6px solid var(--chara-color);
+        }
+
+        .cp-hero-name {
+            font-size: 4.5rem;
+            font-weight: 900;
+            text-shadow: 0 0 15px rgba(0,0,0,0.3);
+        }
+
+        .cp-tag {
+            background: #fff;
+            color: var(--bg-dark);
+            border: 2px solid var(--chara-color);
+            font-weight: bold;
+        }
+
+        .cp-section-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--bg-dark);
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .cp-section-title::after {
+            content: "🐑";
+            display: block;
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+
+        .cp-card {
+            background: #fff;
+            border: 1px solid #efebe9;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            border-radius: 15px;
+        }
+
+        .cp-table th {
+            color: var(--bg-dark);
+            font-weight: 800;
+        }
+
+        .ep-card {
+            background: #fff;
+            border-top: 8px solid var(--chara-color);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+            transition: all 0.3s ease;
+        }
+
+        .ep-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.07);
+            border-top-color: var(--chara-accent);
+        }
+
+        .ep-num {
+            background: var(--bg-dark);
+            color: #fff;
+            padding: 2px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .ep-title {
+            font-size: 1.6rem;
+            font-weight: 900;
+            color: var(--bg-dark);
+            margin-bottom: 1rem;
+        }
+
+        .ep-quote {
+            background: #fff9c4;
+            border-left: 5px solid var(--bg-dark);
+            padding: 1.2rem;
+            margin-top: 1.5rem;
+            font-weight: 600;
+            color: #4e342e;
+            font-style: italic;
+        }
+
+        .cp-footer {
+            background: #3e2723;
+            color: #8d6e63;
+        }
+    </style>
 </head>
 
 <body>
     <div class="cp-bg"></div>
     <nav class="cp-nav">
         <a href="../hololive_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO hololive</a>
-        <span class="cp-nav-gen">4期生 // JP</span>
+        <span class="cp-nav-gen">4期生 (holoforce) // JP</span>
     </nav>
-    <section class="cp-hero">
+
+    <header class="cp-hero">
         <div class="cp-hero-content">
-            <div class="cp-gen-label">hololive 4th Gen</div>
+            <div class="cp-gen-label" style="background: rgba(255,255,255,0.2); backdrop-filter: blur(5px); padding: 2px 12px; display: inline-block; margin-bottom: 1rem; border-radius: 4px; font-weight: bold;">hololive 4th Gen</div>
             <h1 class="cp-hero-name">角巻わため</h1>
-            <span class="cp-hero-en">Tsunomaki Watame</span>
-            <p class="cp-chara-desc">
-                吟遊詩人をしながら旅を続けている羊。ふわふわした容姿と心地よい歌声が特徴。「わためは悪くないよねぇ」が口癖。深夜の雑談配信「わためぇないとふぃーばー」でも親しまれている。</p>
-            <div class="cp-tags">
-                <span class="cp-tag">#Sheep</span>
-                <span class="cp-tag">#Bard</span>
-                <span class="cp-tag">#WTM</span>
+            <span class="cp-hero-en" style="font-size: 1.8rem; font-weight: bold; display: block; margin-bottom: 2rem; opacity: 0.9;">Tsunomaki Watame</span>
+            <p class="cp-chara-desc" style="max-width: 800px; margin: 0 auto; font-size: 1.2rem; line-height: 1.8;">
+                「こんばんドドド！」<br>
+                吟遊詩人をしながらのんびり旅をしている羊。歌うことが大好きで、癒やし系の声の持ち主だが、一度配信を始めると朝まで止まらない「配信モンスター」。情に厚く、ファンを何より大切にする。
+            </p>
+            <div class="cp-tags" style="margin-top: 2rem;">
+                <span class="cp-tag">#わためいと</span>
+                <span class="cp-tag">#吟遊詩人</span>
+                <span class="cp-tag">#配信モンスター</span>
+                <span class="cp-tag">#Fins</span>
             </div>
         </div>
-    </section>
-    <div class="cp-section cp-reveal">
-        <h2 class="cp-section-title">ARCHIVE DATA</h2>
-        <div class="cp-grid">
-            <div class="cp-card">
-                <h3>PROFILE</h3>
-                <table class="cp-table">
-                    <tr>
-                        <th>DEBUT</th>
-                        <td>2019.12.29</td>
-                    </tr>
-                    <tr>
-                        <th>AFFILIATION</th>
-                        <td>hololive JP</td>
-                    </tr>
-                    <tr>
-                        <th>STATUS</th>
-                        <td>Active</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="cp-card">
-                <h3>EPISODES</h3>
-                <p>武道館でのライブを目標に掲げ、音楽活動に非常に熱心。数多くのオリジナル楽曲を制作し、その表現力の幅を広げ続けている。</p>
+    </header>
+
+    <main class="cp-main" style="padding: 80px 20px; max-width: 1000px; margin: 0 auto;">
+        
+        <div class="cp-section cp-reveal">
+            <h2 class="cp-section-title">BARD'S MANUSCRIPT</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3 style="color: var(--bg-dark); margin-bottom: 1.5rem; font-weight: 900;">基本プロフィール</h3>
+                    <table class="cp-table">
+                        <tr>
+                            <th>誕生日</th>
+                            <td>6月6日</td>
+                        </tr>
+                        <tr>
+                            <th>年齢</th>
+                            <td>9歳（羊年齢）</td>
+                        </tr>
+                        <tr>
+                            <th>身長</th>
+                            <td>151cm</td>
+                        </tr>
+                        <tr>
+                            <th>ファン名</th>
+                            <td>わためいと</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="cp-card">
+                    <h3 style="color: var(--bg-dark); margin-bottom: 1.5rem; font-weight: 900;">羊の横顔</h3>
+                    <p style="line-height: 2;">
+                        ふわふわとした癒やしのオーラを纏うが、夜から朝までぶっ通しでプレイする耐久配信が名物。イタズラ好きで「ド畜生羊」と呼ばれるギャップや、おじさん臭い一面（わたおじ）も魅力。夢はオリジナル曲のみでの武道館ライブ。
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+
+        <div class="cp-section cp-reveal">
+            <h2 class="cp-section-title">LEGENDARY EPISODES</h2>
+
+            <div class="ep-card">
+                <span class="ep-num">EPISODE 01</span>
+                <div class="ep-title">「わためは悪くないよねぇ？」</div>
+                <p>デビュー初期、回線落ちが頻発。桐生ココの謝罪会見企画で放ったこの一言がきっかけで、自身の代名詞的な決め台詞へと進化した。</p>
+                <div class="ep-quote">「回線落ちしたことについて一言、わためは悪くないよねぇ？」</div>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">EPISODE 02</span>
+                <div class="ep-title">リスナーを戦慄させる「ド畜生」ムーブ</div>
+                <p>大空スバルへのイタズラ（ス虐）に目覚め、サバイバルゲームで仲間に向かって火炎瓶を投げ込むなど、時折見せるサイコパスな振る舞いに視聴者は戦慄する。</p>
+                <div class="ep-quote">「暗くね？ ほうら明るくなっただろう（火炎瓶投下）」</div>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">EPISODE 03</span>
+                <div class="ep-title">しぐれういとの遭遇と「ういビーム」乱用</div>
+                <p>イラストレーターのしぐれういと声が酷似しており、初期は同一人物説も。本人があまり撃たない「ういビーム」を勝手に乱発し、本人から監視される事態に。</p>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">EPISODE 04</span>
+                <div class="ep-title">悲しき「シルベーヌ事件」</div>
+                <p>楽しみに取っておいたお菓子「シルベーヌ」を、兄に中身だけ食べられ袋だけ戻されるという、家族との切なくも笑える悲劇エピソード。</p>
+                <div class="ep-quote">「食べようと思ったら全部食べられてて、ゴミだけ中に入ってたよ」</div>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">EPISODE 05</span>
+                <div class="ep-title">終わらない長時間配信「さばき」</div>
+                <p>深夜から朝まで行われる雑談やゲームを、わためいとは「さばき（裁き）」と呼ぶ。本人は一切休憩を与えず、リスナーの睡眠時間を削り続ける。</p>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">EPISODE 06</span>
+                <div class="ep-title">念願のポルノグラフィティ楽曲提供</div>
+                <p>長年の大ファンであるポルノグラフィティから、オリジナル曲『Fins』の提供を受けるという、ファンとして最高峰の夢を叶えたドラマチックな実績。</p>
+                <div class="ep-quote">「みんなのおかげでまた一つ夢を叶えることができました」</div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="cp-footer" style="padding: 50px 0; text-align: center;">
+        <p>&copy; 2016-2024 Cover Corp.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
 
 </html>

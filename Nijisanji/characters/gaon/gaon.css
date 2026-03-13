@@ -1,0 +1,61 @@
+:root {
+    --gaon-main: #F9E072;
+    --gaon-sub: #333333;
+    --gaon-accent: #ffffff;
+}
+
+.gaon-theme {
+    --card-bg: rgba(249, 224, 114, 0.05);
+    --border-color: rgba(249, 224, 114, 0.2);
+}
+
+.office-window-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        repeating-linear-gradient(90deg, transparent 0, transparent 100px, rgba(249, 224, 114, 0.05) 100px, rgba(249, 224, 114, 0.05) 102px);
+    opacity: 0.5;
+}
+
+.oyoyo-particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="%23F9E072" opacity="0.03"><path d="M480 320c0 17.7-14.3 32-32 32H64c-17.7 0-32-14.3-32-32s14.3-32 32-32h384c17.7 0 32 14.3 32 32z"/></svg>');
+    background-size: 200px 200px;
+}
+
+.en-name {
+    color: var(--gaon-main);
+    letter-spacing: 15px;
+}
+
+.section-title {
+    color: var(--gaon-main);
+}
+
+.tie-stripe {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(249, 224, 114, 0.1), transparent);
+    z-index: -1;
+}
+
+.oyoyo-mascot {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    font-size: 3rem;
+    opacity: 0.1;
+    transform: rotate(10deg);
+}
+
+.lore-card h3 i {
+    color: var(--gaon-main);
+}

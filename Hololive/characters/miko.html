@@ -7,54 +7,125 @@
     <title>さくらみこ (Sakura Miko) — hololive</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #ff4d6d;
+            --char-color-alt: #ffd1d1;
+            --bg-dark: #120306;
+        }
+        .cp-hero-name {
+            background: linear-gradient(135deg, #fff 0%, var(--char-color) 100%);
+            -webkit-background-clip: text;
+        }
+        .episode-card {
+            background: rgba(255, 77, 109, 0.05);
+            border-bottom: 2px solid var(--char-color);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 0 0 15px 0;
+        }
+        .episode-title {
+            color: var(--char-color);
+            font-weight: bold;
+            font-size: 1.15rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+    </style>
 </head>
 
 <body>
     <div class="cp-bg"></div>
     <nav class="cp-nav">
         <a href="../hololive_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO hololive</a>
-        <span class="cp-nav-gen">0期生 // JP</span>
+        <span class="cp-nav-gen">hololive // 0期生</span>
     </nav>
+
     <section class="cp-hero">
         <div class="cp-hero-content">
-            <div class="cp-gen-label">hololive 0th Gen</div>
+            <div class="cp-gen-label">Elite Miko Idol</div>
             <h1 class="cp-hero-name">さくらみこ</h1>
             <span class="cp-hero-en">Sakura Miko</span>
-            <p class="cp-chara-desc">電脳世界から降臨したエリート巫女。自称エリートだが、数々の伝説的な「ポンコツ」エピソードを持つ。独特の話し方（みこ語）が特徴。</p>
+            <p class="cp-chara-desc">
+                電脳桜神社に仕えるエリート巫女。自他共に認める「ポンコツ（PON）」でありながら、折れない心と卓越したプロデュース能力で、数々の大型企画を成功に導くホロライブのムードメーカー。
+            </p>
             <div class="cp-tags">
-                <span class="cp-tag">#ShrineMaiden</span>
-                <span class="cp-tag">#Elite</span>
-                <span class="cp-tag">#Ponkotsu</span>
+                <span class="cp-tag">#さくらみこ</span>
+                <span class="cp-tag">#みこち</span>
+                <span class="cp-tag">#35P</span>
+                <span class="cp-tag">#にゃっはろ〜</span>
             </div>
         </div>
     </section>
+
     <div class="cp-section cp-reveal">
-        <h2 class="cp-section-title">ARCHIVE DATA</h2>
+        <h2 class="cp-section-title"><i class="fa-solid fa-torii-gate"></i> SHRINE RECORD</h2>
         <div class="cp-grid">
             <div class="cp-card">
-                <h3>PROFILE</h3>
+                <h3>ELITE DATA</h3>
                 <table class="cp-table">
-                    <tr>
-                        <th>DEBUT</th>
-                        <td>2018.08.01</td>
-                    </tr>
-                    <tr>
-                        <th>AFFILIATION</th>
-                        <td>hololive JP</td>
-                    </tr>
-                    <tr>
-                        <th>STATUS</th>
-                        <td>Active</td>
-                    </tr>
+                    <tr><th>デビュー</th><td>2018.08.01</td></tr>
+                    <tr><th>誕生日</th><td>3月5日</td></tr>
+                    <tr><th>身長/血液型</th><td>152cm / O型</td></tr>
+                    <tr><th>ファンネーム</th><td>35P (みこぴー)</td></tr>
+                    <tr><th>愛称</th><td>みこち、エリート巫女</td></tr>
                 </table>
             </div>
             <div class="cp-card">
-                <h3>EPISODES</h3>
-                <p>GTAシリーズを中心としたゲーム実況で世界的な人気を博す。「全ロス」など、取れ高の絶えない配信が持ち味。</p>
+                <h3>PREFERENCES</h3>
+                <p>たい焼き、美少女ゲーム（エロゲ）、アニメをこよなく愛する。独特の滑舌により語尾が「にぇ」になるのが特徴的。</p>
             </div>
         </div>
     </div>
-    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+
+    <div class="cp-section cp-reveal">
+        <h2 class="cp-section-title"><i class="fa-solid fa-scroll"></i> ELITE TALES</h2>
+        
+        <div class="episode-card">
+            <div class="episode-title"><i class="fa-solid fa-wind"></i> 1. 加湿器事件から公式コラボへ</div>
+            <p>加湿器を1年近く「水なし」で稼働。「新品の匂いがするぜぇ〜」という発言がSHARP公式の目に留まり、最終的に音声付加湿器の発売へと繋がったエリートすぎる伏線回収。</p>
+        </div>
+
+        <div class="episode-card">
+            <div class="episode-title"><i class="fa-solid fa-fire"></i> 2. マグマダイブと「1日消防署長」</div>
+            <p>マイクラでの数々の全ロス・放火事件が功を奏したのか、2026年には神田消防署の「1日消防署長」に任命されるというミラクルを達成。</p>
+        </div>
+
+        <div class="episode-card">
+            <div class="episode-title"><i class="fa-solid fa-language"></i> 3. 天才的なエリートイングリッシュ</div>
+            <p>「FREEDOM LADY（自由の女神）」や「I'm a gummy bear」など、破壊力抜群の誤読語録を量産。世界中のファンに愛されています。</p>
+        </div>
+
+        <div class="episode-card">
+            <div class="episode-title"><i class="fa-solid fa-comet"></i> 4. 最高の相棒「miComet」</div>
+            <p>星街すいせいとのコンビ。当初は「ビジネスフレンド」を自称しつつも、現在は共に大型企画を主催するホロライブ屈指の名コンビへ。</p>
+        </div>
+
+        <div class="episode-card">
+            <div class="episode-title"><i class="fa-solid fa-book-open"></i> 5. 夢を形にするクリエイティビティ</div>
+            <p>たい焼きコラボの実現、自作の絵本『みこぴーとおおきなさくらのき』の出版など、有言実行で夢を叶え続ける努力家な一面。</p>
+        </div>
+    </div>
+
+    <footer class="cp-footer">
+        &copy; 2026 VTuber Archive Project - Sakura Miko Fansite Profile.
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
 
 </html>

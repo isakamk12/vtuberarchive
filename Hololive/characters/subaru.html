@@ -7,6 +7,131 @@
     <title>大空スバル (Oozora Subaru) — hololive</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --chara-color: #ff9800;
+            --chara-accent: #00bcd4;
+            --bg-dark: #f5f5f5;
+            --card-bg: rgba(255, 255, 255, 0.95);
+            --text-main: #333;
+        }
+
+        .cp-bg {
+            background: linear-gradient(135deg, #ff9800 0%, #ffc107 100%);
+            opacity: 0.1;
+        }
+
+        body {
+            color: var(--text-main);
+            background-color: #fff;
+        }
+
+        .cp-nav {
+            background: rgba(255, 152, 0, 0.9);
+        }
+
+        .cp-hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1526676037777-05a232554f77?auto=format&fit=crop&q=80&w=1000') center/cover;
+            color: #fff;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .cp-hero-name {
+            font-size: 4rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+            color: #fff;
+            text-shadow: 3px 3px 0px var(--chara-color);
+        }
+
+        .cp-tag {
+            background: #fff;
+            color: var(--chara-color);
+            border: 2px solid var(--chara-color);
+            font-weight: bold;
+        }
+
+        .ep-card {
+            background: #fff;
+            border: 2px solid #eee;
+            border-top: 6px solid var(--chara-color);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .ep-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            border-top-color: var(--chara-accent);
+        }
+
+        .ep-num {
+            background: var(--chara-color);
+            color: #fff;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .ep-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .ep-quote {
+            background: #fdf2e9;
+            border-left: 5px solid var(--chara-color);
+            padding: 1rem;
+            margin-top: 1.5rem;
+            font-weight: 600;
+            color: #555;
+        }
+
+        .cp-section-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--chara-color);
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .cp-section-title::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 5px;
+            background: var(--chara-accent);
+        }
+
+        .cp-card {
+            background: #fff;
+            border: 1px solid #eee;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .cp-table th {
+            color: var(--chara-color);
+        }
+
+        .cp-footer {
+            background: #333;
+            color: #fff;
+        }
+    </style>
 </head>
 
 <body>
@@ -15,46 +140,120 @@
         <a href="../hololive_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO hololive</a>
         <span class="cp-nav-gen">2期生 // JP</span>
     </nav>
-    <section class="cp-hero">
+
+    <header class="cp-hero">
         <div class="cp-hero-content">
-            <div class="cp-gen-label">hololive 2nd Gen</div>
+            <div class="cp-gen-label" style="background: var(--chara-accent); color: #fff; padding: 2px 10px; display: inline-block; border-radius: 4px; margin-bottom: 1rem;">hololive 2nd Gen</div>
             <h1 class="cp-hero-name">大空スバル</h1>
-            <span class="cp-hero-en">Oozora Subaru</span>
-            <p class="cp-chara-desc">総合格闘技部・水泳部のマネージャー。底抜けに明るく元気なボーイッシュ美少女（？）。ホロライブ随一の「ツッコミ」担当。</p>
-            <div class="cp-tags">
-                <span class="cp-tag">#Sporty</span>
+            <span class="cp-hero-en" style="font-size: 1.5rem; font-weight: bold; display: block; margin-bottom: 1.5rem;">Oozora Subaru</span>
+            <p class="cp-chara-desc" style="max-width: 800px; margin: 0 auto; font-size: 1.15rem; line-height: 1.8;">
+                「ちわーす！ホロライブ2期生の大空スバルっス！」<br>
+                総合格闘技部とe-sports部のマネージャー。底抜けに明るく元気で活発、誰とも分け隔てなく接する太陽のような女の子。ホロライブ随一の「ツッコミ」担当としても欠かせない存在。
+            </p>
+            <div class="cp-tags" style="margin-top: 2rem;">
                 <span class="cp-tag">#Sunshine</span>
                 <span class="cp-tag">#Duck</span>
+                <span class="cp-tag">#Manager</span>
+                <span class="cp-tag">#Omae</span>
             </div>
         </div>
-    </section>
-    <div class="cp-section cp-reveal">
-        <h2 class="cp-section-title">ARCHIVE DATA</h2>
-        <div class="cp-grid">
-            <div class="cp-card">
-                <h3>PROFILE</h3>
-                <table class="cp-table">
-                    <tr>
-                        <th>DEBUT</th>
-                        <td>2018.09.16</td>
-                    </tr>
-                    <tr>
-                        <th>AFFILIATION</th>
-                        <td>hololive JP</td>
-                    </tr>
-                    <tr>
-                        <th>STATUS</th>
-                        <td>Active</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="cp-card">
-                <h3>EPISODES</h3>
-                <p>オタク知識ゼロの状態からVTuber業界に飛び込み、持ち前の明るさで道を切り拓いた。そのバイタリティは、周りのタレントたちをも鼓舞している。</p>
+    </header>
+
+    <main class="cp-main" style="padding: 60px 20px;">
+        <div class="cp-section cp-reveal">
+            <h2 class="cp-section-title">MANAGER'S LOG</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>基本プロフィール</h3>
+                    <table class="cp-table">
+                        <tr>
+                            <th>誕生日</th>
+                            <td>7月2日</td>
+                        </tr>
+                        <tr>
+                            <th>身長</th>
+                            <td>154cm</td>
+                        </tr>
+                        <tr>
+                            <th>血液型</th>
+                            <td>B型</td>
+                        </tr>
+                        <tr>
+                            <th>ファン名</th>
+                            <td>スバ友</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="cp-card">
+                    <h3>活動のモットー</h3>
+                    <p>
+                        「ゲームできない、歌できない、アニメ知らない」状態からスタート。壮絶な過去を笑いに変え、常に前向きに努力を続ける姿は、多くのメンバーやファンに勇気を与えている。
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+
+        <div class="cp-section cp-reveal" style="max-width: 900px; margin: 0 auto;">
+            <h2 class="cp-section-title">LEGENDARY EPISODES</h2>
+            
+            <div class="ep-card">
+                <span class="ep-num">EPISODE 01</span>
+                <div class="ep-title">「家が燃えた」からの逆転劇</div>
+                <p>家が火事になり、お金を稼ぐためにホロライブへ。当初はオタク知識ゼロだったが、持ち前のバイタリティで1年後に両親へハワイ旅行をプレゼントする親孝行を果たした。</p>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">EPISODE 02</span>
+                <div class="ep-title">スバルドダックの爆誕</div>
+                <p>ASMR配信で囁き声を出そうとした際、喉が締め付けられて某有名アヒルにそっくりな声になってしまった事件。これがきっかけで「アヒル」が彼女の象徴の一つに。</p>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">EPISODE 03</span>
+                <div class="ep-title">2軒隣まで貫通する最大声量</div>
+                <p>ホロライブ随一の声量を誇り、ライブの楽屋では彼女の声が2つ隣の控室まで筒抜けだったという。叫ぶと即終了のゲームでも「普通に喋るだけ」で終了する伝説を持つ。</p>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">EPISODE 04</span>
+                <div class="ep-title">「〇〇なんですけど！？」</div>
+                <p>今や定番の口癖は、母親から送られてきた「亀いるんですけど!?」というLINEが発祥。家族間の独特なやり取りを配信でネタにすることで定着した。</p>
+                <div class="ep-quote">「帰ってきたんかって会話にならねえだろう！普通！」</div>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">EPISODE 05</span>
+                <div class="ep-title">大空警察、まさかの自爆逮捕</div>
+                <p>メンバーの悪行を取り締まる「大空警察」を主催。しかし2024年には自らのセクハラ言動（初対面の後輩への発言）が露見し、自分自身を逮捕する羽目に。</p>
+                <div class="ep-quote">「疲れれてて目の前におっぱいがあったら見ちゃうだろ」</div>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">EPISODE 06</span>
+                <div class="ep-title">ホロライブの「太陽」</div>
+                <p>同期や後輩から「太陽」と評される。その明るさは「眩しすぎて目が見えなくなる」と言われるほど。周囲をまとめ、空気を読み、全員を笑顔にする天性のリーダー資質。</p>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="cp-footer" style="padding: 40px 0; text-align: center;">
+        <p>&copy; 2016-2024 Cover Corp.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
 
 </html>

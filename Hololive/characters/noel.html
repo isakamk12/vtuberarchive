@@ -7,54 +7,253 @@
     <title>白銀ノエル (Shirogane Noel) — hololive</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --chara-color: #9e9e9e; /* Silver */
+            --chara-accent: #f44336; /* Beef bowl red / Heart */
+            --bg-dark: #424242;
+            --card-bg: rgba(255, 255, 255, 0.95);
+            --text-main: #333;
+        }
+
+        .cp-bg {
+            background: radial-gradient(circle at center, #ffffff 0%, #e0e0e0 100%);
+            opacity: 0.1;
+        }
+
+        body {
+            color: var(--text-main);
+            background-color: #fafafa;
+        }
+
+        .cp-nav {
+            background: rgba(66, 66, 66, 0.9);
+        }
+
+        .cp-hero {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1599420186946-7b6fb4e297f0?auto=format&fit=crop&q=80&w=1000') center/cover;
+            color: #fff;
+            padding: 120px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--chara-color);
+        }
+
+        .cp-hero-name {
+            font-size: 4.5rem;
+            font-weight: 900;
+            text-shadow: 0 0 15px rgba(0,0,0,0.5);
+        }
+
+        .cp-tag {
+            background: #fff;
+            color: var(--bg-dark);
+            border: 2px solid var(--chara-color);
+            font-weight: bold;
+        }
+
+        .cp-section-title {
+            font-size: 2.8rem;
+            font-weight: 900;
+            color: var(--bg-dark);
+            text-align: center;
+            margin-bottom: 3.5rem;
+            position: relative;
+        }
+
+        .cp-section-title::after {
+            content: "⚔️";
+            display: block;
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+
+        .cp-card {
+            background: #fff;
+            border: 1px solid #eee;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-radius: 12px;
+        }
+
+        .cp-table th {
+            color: var(--chara-color);
+            border-bottom: 2px solid #f5f5f5;
+        }
+
+        .ep-card {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-top: 6px solid var(--chara-color);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .ep-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            border-top-color: var(--chara-accent);
+        }
+
+        .ep-num {
+            background: var(--bg-dark);
+            color: #fff;
+            padding: 3px 12px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .ep-title {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--bg-dark);
+            margin-bottom: 1rem;
+        }
+
+        .ep-quote {
+            background: #f5f5f5;
+            border-left: 5px solid var(--chara-accent);
+            padding: 1.2rem;
+            margin-top: 1.5rem;
+            font-weight: 600;
+            color: #444;
+            font-style: italic;
+        }
+
+        .cp-footer {
+            background: var(--bg-dark);
+            color: #ccc;
+        }
+    </style>
 </head>
 
 <body>
     <div class="cp-bg"></div>
     <nav class="cp-nav">
         <a href="../hololive_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO hololive</a>
-        <span class="cp-nav-gen">3期生 // JP</span>
+        <span class="cp-nav-gen">3期生 (Fantasy) // JP</span>
     </nav>
-    <section class="cp-hero">
+
+    <header class="cp-hero">
         <div class="cp-hero-content">
-            <div class="cp-gen-label">hololive 3rd Gen (Fantasy)</div>
+            <div class="cp-gen-label" style="background: rgba(255,255,255,0.2); backdrop-filter: blur(5px); padding: 2px 12px; display: inline-block; margin-bottom: 1rem; border-radius: 4px;">hololive Fantasy</div>
             <h1 class="cp-hero-name">白銀ノエル</h1>
-            <span class="cp-hero-en">Shirogane Noel</span>
-            <p class="cp-chara-desc">おっとりしているが、いざという時は力強い（物理）騎士。ASMR配信での包容力溢れるボイスは、疲れたリスナーの心を癒やし続けている。</p>
-            <div class="cp-tags">
-                <span class="cp-tag">#Knight</span>
+            <span class="cp-hero-en" style="font-size: 1.8rem; font-weight: bold; display: block; margin-bottom: 2rem; opacity: 0.9;">Shirogane Noel</span>
+            <p class="cp-chara-desc" style="max-width: 800px; margin: 0 auto; font-size: 1.2rem; line-height: 1.8;">
+                「こんまっする～！ホロライブ3期生の白銀ノエルです！」<br>
+                おっとりしているが、なんでも筋力でどうにかする物騒な面を持つ、ゆるふわ脳筋女騎士。強さに憧れるあまり、つよつよな人達が集まるVTuber界に武者修行にやってきた。
+            </p>
+            <div class="cp-tags" style="margin-top: 2rem;">
+                <span class="cp-tag">#筋肉</span>
+                <span class="cp-tag">#牛丼</span>
                 <span class="cp-tag">#ASMR</span>
-                <span class="cp-tag">#Muscle</span>
+                <span class="cp-tag">#脳筋</span>
             </div>
         </div>
-    </section>
-    <div class="cp-section cp-reveal">
-        <h2 class="cp-section-title">ARCHIVE DATA</h2>
-        <div class="cp-grid">
-            <div class="cp-card">
-                <h3>PROFILE</h3>
-                <table class="cp-table">
-                    <tr>
-                        <th>DEBUT</th>
-                        <td>2019.08.08</td>
-                    </tr>
-                    <tr>
-                        <th>AFFILIATION</th>
-                        <td>hololive JP</td>
-                    </tr>
-                    <tr>
-                        <th>STATUS</th>
-                        <td>Active</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="cp-card">
-                <h3>EPISODES</h3>
-                <p>牛丼が大好きという庶民的な一面も。不知火フレアとは公私共に仲が良く、「しらぬえ」としてファンに親しまれている。</p>
+    </header>
+
+    <main class="cp-main" style="padding: 80px 20px; max-width: 1000px; margin: 0 auto;">
+        
+        <div class="cp-section cp-reveal">
+            <h2 class="cp-section-title">KNIGHT'S PROTOCOL</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3 style="color: var(--bg-dark); margin-bottom: 1.5rem; font-weight: 900;">基本プロフィール</h3>
+                    <table class="cp-table">
+                        <tr>
+                            <th>誕生日</th>
+                            <td>11月24日</td>
+                        </tr>
+                        <tr>
+                            <th>身長</th>
+                            <td>158cm</td>
+                        </tr>
+                        <tr>
+                            <th>ファン名</th>
+                            <td>白銀聖騎士団</td>
+                        </tr>
+                        <tr>
+                            <th>大胸筋</th>
+                            <td>Kカップ（？）</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="cp-card">
+                    <h3 style="color: var(--bg-dark); margin-bottom: 1.5rem; font-weight: 900;">騎士の素顔</h3>
+                    <p style="line-height: 2;">
+                        「脳筋」を自称し、力加減が苦手でリングフィットでは計測上限を叩き出す怪力の持ち主。一方で、牛丼をこよなく愛し、ASMRでは包容力溢れる癒やしを提供。同期や先輩への愛が非常に重く、時に「限界化」する様子も愛されている。
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+
+        <div class="cp-section cp-reveal">
+            <h2 class="cp-section-title">LEGENDARY EPISODES</h2>
+
+            <div class="ep-card">
+                <span class="ep-num">EPISODE 01</span>
+                <div class="ep-title">涙の「吉野家」公式コラボ</div>
+                <p>デビュー前から「牛丼が世界で一番好き」と公言。2026年、ついに念願の吉野家コラボが実現。苦しかった学生時代を支えてくれた思い出に、涙ながらに感謝を語った。</p>
+                <div class="ep-quote">「こんなに幸せでいいのかな」</div>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">EPISODE 02</span>
+                <div class="ep-title">大空スバルへの重すぎる愛</div>
+                <p>大空スバルの熱狂的ファン（通称：アヒージョ）。愛が暴走し過ぎて第二人格「だんちょむ」が爆誕。スバルが書いた書き初めの画像を「元気を得るためにしゃぶる」など、狂気的な愛を見せる。</p>
+                <div class="ep-quote">「ウヒヒヒヒ、かわぃぃー！」</div>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">EPISODE 03</span>
+                <div class="ep-title">圧倒的な大胸筋とそれにまつわる苦労</div>
+                <p>ホロライブ随一の大胸筋を誇るが、「胸がつかえてうつ伏せになれない」「バランスが取れず自転車に乗れない」といった切実な悩みを抱える。弱点でありながら、自慢のチャームポイントでもある。</p>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">EPISODE 04</span>
+                <div class="ep-title">不眠症を救う包容力ASMR</div>
+                <p>トップクラスのASMR技術。ノエルママやノエル先生など、全肯定でリスナーを癒やし、多くの「バブちゃん」たちを安らかな眠りへと誘う。</p>
+                <div class="ep-quote">「バブちゃんがいっぱいぐっすり眠れるようにノエル先生頑張っちゃおうかな」</div>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">EPISODE 05</span>
+                <div class="ep-title">「バーチャル大分」観光大使（自称）</div>
+                <p>大分への深い郷土愛を持ち、独自の大分口上やオリジナル曲をリリース。その熱意が通じ、大分県知事から直々にメッセージをもらうなど、自称から本物の親善大使へと近づいている。</p>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">EPISODE 06</span>
+                <div class="ep-title">計測不能な脳筋フィジカル</div>
+                <p>『リングフィットアドベンチャー』の計測で、押し込み・引っ張り共にゲームの測定上限（100 / -100）を叩き出し、開発側の想定を超える筋力を証明した。</p>
+                <div class="ep-quote">「白金ノエル、何者にも屈しない！！本気（ガチンコ）で戦う！！！」</div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="cp-footer" style="padding: 50px 0; text-align: center;">
+        <p>&copy; 2016-2024 Cover Corp.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
 
 </html>

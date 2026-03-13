@@ -4,9 +4,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>紫咲シオン (Murasaki Shion) — hololive Archive</title>
+    <title>紫咲シオン (Murasaki Shion) — hololive</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --chara-color: #d1c4e9; /* Witch Purple */
+            --chara-accent: #673ab7; /* Deep Magic Purple */
+            --bg-dark: #311b92;
+            --card-bg: rgba(255, 255, 255, 0.95);
+            --text-main: #4a148c;
+        }
+
+        .cp-bg {
+            background: radial-gradient(circle at center, #ede7f6 0%, #d1c4e9 100%);
+            opacity: 0.15;
+            z-index: -1;
+        }
+
+        body {
+            color: var(--text-main);
+            background-color: #fff;
+        }
+
+        .cp-nav {
+            background: rgba(49, 27, 146, 0.9);
+        }
+
+        .cp-hero {
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&q=80&w=1000') center/cover;
+            color: #fff;
+            padding: 130px 20px;
+            text-align: center;
+            border-bottom: 8px solid var(--chara-color);
+        }
+
+        .cp-hero-name {
+            font-size: 5rem;
+            font-weight: 950;
+            text-shadow: 0 0 30px var(--chara-accent);
+            letter-spacing: -1px;
+        }
+
+        .cp-tag {
+            background: #fff;
+            color: var(--bg-dark);
+            border: 2px solid var(--chara-color);
+            border-radius: 4px;
+            font-weight: 900;
+        }
+
+        .cp-section-title {
+            font-size: 3rem;
+            font-weight: 950;
+            color: var(--bg-dark);
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .cp-section-title::after {
+            content: "🌙";
+            display: inline-block;
+            margin-left: 15px;
+        }
+
+        .cp-card {
+            background: #fff;
+            border: 1px solid #d1c4e9;
+            box-shadow: 0 10px 40px rgba(103, 58, 183, 0.05);
+            border-radius: 12px;
+        }
+
+        .cp-table th {
+            color: var(--chara-accent);
+            font-weight: 950;
+        }
+
+        .ep-card {
+            background: #fff;
+            border-left: 12px solid var(--chara-color);
+            padding: 3.5rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.06);
+            transition: all 0.4s ease;
+        }
+
+        .ep-card:hover {
+            transform: scale(1.02);
+            border-left-color: var(--chara-accent);
+        }
+
+        .ep-num {
+            background: var(--chara-accent);
+            color: #fff;
+            padding: 4px 15px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 900;
+            display: inline-block;
+            margin-bottom: 1.2rem;
+        }
+
+        .ep-title {
+            font-size: 2.1rem;
+            font-weight: 950;
+            color: var(--bg-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .ep-quote {
+            background: #f3e5f5;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            font-weight: 700;
+            color: #4a148c;
+            font-style: italic;
+            line-height: 1.8;
+            border-right: 6px solid var(--chara-accent);
+        }
+
+        .cp-footer {
+            background: #1a1a1a;
+            color: var(--chara-color);
+        }
+
+        /* Moon Decoration */
+        .moon-decor {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 80px;
+            height: 80px;
+            background: url('https://api.iconify.design/mdi:moon-waning-crescent.svg?color=%23673ab7') no-repeat center/contain;
+            opacity: 0.1;
+        }
+    </style>
 </head>
 
 <body>
@@ -15,46 +148,124 @@
         <a href="../hololive_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO hololive</a>
         <span class="cp-nav-gen">2期生 // JP</span>
     </nav>
-    <section class="cp-hero">
+
+    <header class="cp-hero">
         <div class="cp-hero-content">
-            <div class="cp-gen-label">hololive 2nd Gen [GRADUATED]</div>
+            <div class="cp-gen-label" style="background: var(--chara-color); color: var(--bg-dark); padding: 4px 15px; font-weight: 950; border-radius: 4px; margin-bottom: 1rem; display: inline-block;">THE GENIUS WITCH</div>
             <h1 class="cp-hero-name">紫咲シオン</h1>
-            <span class="cp-hero-en">Murasaki Shion</span>
-            <p class="cp-chara-desc">魔界学校に出没する子供……ではなく、魔法使いの女の子。自称「天才魔法使い」で、生意気な言動と時折見せる可愛らしさ（クソガキ感）で人気を博した。</p>
-            <div class="cp-tags">
-                <span class="cp-tag">#Witch</span>
-                <span class="cp-tag">#Kusogaki</span>
-                <span class="cp-tag">#Genius</span>
+            <span class="cp-hero-en" style="font-size: 2.22rem; font-weight: 950; display: block; margin-bottom: 3rem; opacity: 0.9;">Murasaki Shion</span>
+            <p class="cp-chara-desc" style="max-width: 900px; margin: 0 auto; font-size: 1.35rem; line-height: 2; font-weight: 600;">
+                「こんしお～、紫咲シオンだよ」<br>
+                魔界学校に出没する、自称・名門出身の天才魔法使い。ハーバード大卒（自称）の知性と、愛嬌のある「クソガキムーブ」を併せ持つ。予測不能なトークと、時折見せる真摯な努力のギャップが魅力。
+            </p>
+            <div class="cp-tags" style="margin-top: 3.5rem;">
+                <span class="cp-tag">#紫咲シオン</span>
+                <span class="cp-tag">#クソガキ</span>
+                <span class="cp-tag">#ハバ卒</span>
+                <span class="cp-tag">#塩っ子</span>
             </div>
         </div>
-    </section>
-    <div class="cp-section cp-reveal">
-        <h2 class="cp-section-title">ARCHIVE DATA</h2>
-        <div class="cp-grid">
-            <div class="cp-card">
-                <h3>PROFILE</h3>
-                <table class="cp-table">
-                    <tr>
-                        <th>DEBUT</th>
-                        <td>2018.08.17</td>
-                    </tr>
-                    <tr>
-                        <th>GRADUATED</th>
-                        <td>2025.04.13</td>
-                    </tr>
-                    <tr>
-                        <th>STATUS</th>
-                        <td>Graduated</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="cp-card">
-                <h3>LEGACY</h3>
-                <p>その独特な煽りスキルと、実は繊細で真面目な性格のギャップが魅力的だった。多くのタレントとのコラボレーションを通じて、ホロライブのバラエティ面を支えた。</p>
+    </header>
+
+    <main class="cp-main" style="padding: 120px 20px; max-width: 1100px; margin: 0 auto;">
+        
+        <div class="cp-section cp-reveal">
+            <div class="cp-grid">
+                <div class="cp-card" style="padding: 50px; position: relative;">
+                    <div class="moon-decor"></div>
+                    <h3 style="color: var(--bg-dark); margin-bottom: 2.5rem; font-weight: 950; font-size: 2.1rem;">WITCH ARCHIVE</h3>
+                    <table class="cp-table">
+                        <tr>
+                            <th>誕生日</th>
+                            <td>12月8日</td>
+                        </tr>
+                        <tr>
+                            <th>身長</th>
+                            <td>145cm</td>
+                        </tr>
+                        <tr>
+                            <th>学歴</th>
+                            <td>ハーバード大学 (自称)</td>
+                        </tr>
+                        <tr>
+                            <th>ファン名</th>
+                            <td>塩っ子</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="cp-card" style="padding: 50px; background: var(--bg-dark); color: #fff;">
+                    <h3 style="color: var(--chara-color); margin-bottom: 2rem; font-weight: 900; font-size: 2rem;">天才の矜持</h3>
+                    <p style="line-height: 2.2; font-size: 1.15rem; opacity: 0.9;">
+                        脊髄反射で飛び出す毒舌と愛嬌でリスナーを翻弄する。マニュアル免許を取得してAT勢にマウントを取ったり、「豚の肉が厚い」といった迷言を生み出したりと、話題に事欠かない。一方でライブへの情熱は凄まじく、数分のステージのために無限の時間を費やすストイックな一面も。
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+
+        <div class="cp-section cp-reveal">
+            <h2 class="cp-section-title">WITCH'S DIARY</h2>
+
+            <div class="ep-card">
+                <span class="ep-num">SPELL 01</span>
+                <div class="ep-title">「左足いそがし～ｗ」MT免許マウント</div>
+                <p>休止中にマニュアル（MT）免許を取得。オートマ（AT）派のホロメンやリスナーに対し、「クラッチ踏まない人生かわいそ～ｗ」と容赦ないマウントを取り、ファンの度肝を抜いた。</p>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">SPELL 02</span>
+                <div class="ep-title">究極のエアプ「マスタードしか勝たん」</div>
+                <p>マスタードを食べたことがないのに「マスタード派を煽るために」マスタードしか勝たんと豪語。後に食べてみて美味しかったため、あっさりとガチ勢に転向した。 </p>
+                <div class="ep-quote">「とかいうシオンちゃんはマスタード食べたことがないんですけどね」</div>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">SPELL 03</span>
+                <div class="ep-title">マリオで悟った「人生の真理」</div>
+                <p>マリオでのあっけないミスを自己弁護する中で、不意に飛び出した深い一言。クソガキキャラの下に隠れた、彼女の意外な人生観が垣間見えた瞬間。</p>
+                <div class="ep-quote">「でもやってみるとねぇ、人生と一緒。やってみるとそう上手くはいかない。」</div>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">SPELL 04</span>
+                <div class="ep-title">ダンスに込めた「無限の時間」</div>
+                <p>3周年記念ライブにて、一曲3分のパフォーマンスの裏にある、何ヶ月もの過酷な練習と「無限の時間」について語った。アイドルの世知辛さと、彼女の誇りが伝わるエピソード。</p>
+                <div class="ep-quote">「シオンにとってはマジで無限に時間を費やした3分なんだよって。ダンスって深いんだよって。」</div>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">SPELL 05</span>
+                <div class="ep-title">「豚の肉が厚い」と厚かましい</div>
+                <p>漢字読み書き対決にて、「面の皮が厚い」の回答として生み出された迷言。「肉が厚いと厚かましいと思った」という、彼女なりの（？）論理展開が光る。</p>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">SPELL 06</span>
+                <div class="ep-title">王者の一言「使うなら勝て」</div>
+                <p>ゲームで「紫咲シオン」という名前を使っている偽物に対し、寛大でありながらも圧倒的な実力者としてのプレッシャーを放った、格好良すぎる一撃。</p>
+                <div class="ep-quote">「名前を使ってることは特に何も思わないんですけどぉ、使うなら勝て。」</div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="cp-footer" style="padding: 70px 0; text-align: center;">
+        <p style="font-weight: 950; letter-spacing: 5px;">&copy; 2016-2024 Cover Corp. HARVARD GRADUATE (SELF-PROCLAIMED)</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
 
 </html>

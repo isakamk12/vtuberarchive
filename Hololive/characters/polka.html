@@ -7,54 +7,280 @@
     <title>尾丸ポルカ (Omaru Polka) — hololive</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --chara-color: #ffeb3b; /* Polka Yellow */
+            --chara-accent: #f44336; /* Circus Red */
+            --chara-sub: #2196f3; /* Bright Blue */
+            --bg-dark: #1a1a1a;
+            --card-bg: rgba(255, 255, 255, 0.95);
+            --text-main: #333;
+        }
+
+        .cp-bg {
+            background: 
+                radial-gradient(circle at 0% 0%, rgba(244, 67, 54, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 100% 100%, rgba(33, 150, 243, 0.1) 0%, transparent 50%),
+                #fff;
+            opacity: 0.2;
+            z-index: -1;
+        }
+
+        body {
+            color: var(--text-main);
+            background-color: #fff;
+        }
+
+        .cp-nav {
+            background: rgba(26, 26, 26, 0.85);
+        }
+
+        .cp-hero {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1549413550-2f98621be4f4?auto=format&fit=crop&q=80&w=1000') center/cover;
+            color: #fff;
+            padding: 130px 20px;
+            text-align: center;
+            border-bottom: 10px solid transparent;
+            border-image: linear-gradient(to right, #f44336, #ffeb3b, #2196f3) 1;
+        }
+
+        .cp-hero-name {
+            font-size: 5rem;
+            font-weight: 950;
+            text-shadow: 0 0 30px rgba(0,0,0,0.5);
+            letter-spacing: -2px;
+        }
+
+        .cp-tag {
+            background: #fff;
+            color: var(--chara-accent);
+            border: 2px solid var(--chara-accent);
+            border-radius: 4px;
+            font-weight: 900;
+        }
+
+        .cp-section-title {
+            font-size: 3.2rem;
+            font-weight: 950;
+            color: var(--bg-dark);
+            text-align: center;
+            margin-bottom: 4.5rem;
+            text-transform: uppercase;
+        }
+
+        .cp-section-title::after {
+            content: "🎪";
+            display: block;
+            font-size: 2rem;
+            margin-top: 10px;
+        }
+
+        .cp-card {
+            background: #fff;
+            border: 3px solid #f5f5f5;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+            border-radius: 25px;
+        }
+
+        .cp-table th {
+            color: var(--chara-accent);
+            font-weight: 900;
+        }
+
+        .ep-card {
+            background: #fff;
+            border-radius: 30px;
+            padding: 3.5rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 25px 55px rgba(0,0,0,0.06);
+            border: 2px solid #fafafa;
+            position: relative;
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            overflow: hidden;
+        }
+
+        .ep-card:hover {
+            transform: scale(1.02) rotate(-1deg);
+            border-color: var(--chara-sub);
+        }
+
+        .ep-num {
+            background: linear-gradient(45deg, var(--chara-accent), var(--chara-sub));
+            color: #fff;
+            padding: 5px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 900;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        .ep-title {
+            font-size: 2.2rem;
+            font-weight: 950;
+            color: var(--bg-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .ep-quote {
+            background: #fff9c4;
+            border-right: 10px solid var(--chara-accent);
+            padding: 1.8rem;
+            margin-top: 2rem;
+            font-weight: 800;
+            color: #b71c1c;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            border-radius: 8px;
+        }
+
+        .cp-footer {
+            background: #111;
+            color: #666;
+        }
+
+        /* Circus Stripe Decoration */
+        .circus-stripe {
+            position: absolute;
+            top: 0;
+            right: 20px;
+            width: 40px;
+            height: 100%;
+            background: repeating-linear-gradient(
+                45deg,
+                var(--chara-accent) 0,
+                var(--chara-accent) 10px,
+                #fff 10px,
+                #fff 20px
+            );
+            opacity: 0.1;
+        }
+    </style>
 </head>
 
 <body>
     <div class="cp-bg"></div>
     <nav class="cp-nav">
         <a href="../hololive_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO hololive</a>
-        <span class="cp-nav-gen">5期生 // JP</span>
+        <span class="cp-nav-gen">5期生 (NePoLaBo) // JP</span>
     </nav>
-    <section class="cp-hero">
+
+    <header class="cp-hero">
         <div class="cp-hero-content">
-            <div class="cp-gen-label">hololive 5th Gen (NePoLaBo)</div>
+            <div class="cp-gen-label" style="background: rgba(255,255,255,0.25); backdrop-filter: blur(5px); padding: 5px 20px; border-radius: 50px; font-weight: 950; margin-bottom: 1.5rem; display: inline-block;">POLKA ORUKA? ORUYO!</div>
             <h1 class="cp-hero-name">尾丸ポルカ</h1>
-            <span class="cp-hero-en">Omaru Polka</span>
-            <p class="cp-chara-desc">サーカス団からやってきた座長。常にハイテンションで賑やかな配信スタイルが持ち味だが、実は非常に繊細でクリエイティブな一面も持つ。</p>
-            <div class="cp-tags">
-                <span class="cp-tag">#Fennec</span>
-                <span class="cp-tag">#Circus</span>
-                <span class="cp-tag">#Creative</span>
+            <span class="cp-hero-en" style="font-size: 2.2rem; font-weight: 950; display: block; margin-bottom: 3rem; color: var(--chara-color); text-shadow: 2px 2px 0px var(--chara-accent);">Omaru Polka</span>
+            <p class="cp-chara-desc" style="max-width: 900px; margin: 0 auto; font-size: 1.3rem; line-height: 2; font-weight: 600;">
+                「ポルカおるか？おるよ～！」<br>
+                サーカス団の座長を目指す、フェネックのクォーター。圧倒的な企画力、編集センス、そして止まらないトークでリスナーを「おまる座」へと誘う天才エンターテイナー。
+            </p>
+            <div class="cp-tags" style="margin-top: 3.5rem;">
+                <span class="cp-tag">#おまる座</span>
+                <span class="cp-tag">#ポルカの伝説</span>
+                <span class="cp-tag">#座長</span>
+                <span class="cp-tag">#ポルポル</span>
             </div>
         </div>
-    </section>
-    <div class="cp-section cp-reveal">
-        <h2 class="cp-section-title">ARCHIVE DATA</h2>
-        <div class="cp-grid">
-            <div class="cp-card">
-                <h3>PROFILE</h3>
-                <table class="cp-table">
-                    <tr>
-                        <th>DEBUT</th>
-                        <td>2020.08.16</td>
-                    </tr>
-                    <tr>
-                        <th>AFFILIATION</th>
-                        <td>hololive JP</td>
-                    </tr>
-                    <tr>
-                        <th>STATUS</th>
-                        <td>Active</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="cp-card">
-                <h3>EPISODES</h3>
-                <p>巧みなトーク術と動画編集能力で、独自のバラエティ企画を数多く生み出している。座長として、周囲を巻き込む力は一級品。</p>
+    </header>
+
+    <main class="cp-main" style="padding: 120px 20px; max-width: 1100px; margin: 0 auto;">
+        
+        <div class="cp-section cp-reveal">
+            <div class="cp-grid">
+                <div class="cp-card" style="padding: 50px; position: relative; overflow: hidden;">
+                    <div class="circus-stripe"></div>
+                    <h3 style="color: var(--bg-dark); margin-bottom: 2.5rem; font-weight: 950; font-size: 2rem;">SHOWMAN DATA</h3>
+                    <table class="cp-table">
+                        <tr>
+                            <th>誕生日</th>
+                            <td>1月30日</td>
+                        </tr>
+                        <tr>
+                            <th>身長</th>
+                            <td>153cm</td>
+                        </tr>
+                        <tr>
+                            <th>種族</th>
+                            <td>フェネック (1/4)</td>
+                        </tr>
+                        <tr>
+                            <th>ファン名</th>
+                            <td>座員 (おまる座)</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="cp-card" style="padding: 50px; background: #1a1a1a; color: #fff;">
+                    <h3 style="color: var(--chara-color); margin-bottom: 2rem; font-weight: 900; font-size: 2rem;">エンターテイナーの魂</h3>
+                    <p style="line-height: 2.2; font-size: 1.15rem; opacity: 0.9;">
+                        非常に高い頻度で配信を行い、「配信活動＝生きる意味」と言い切るほどの情熱家。バラエティ番組『ポルカの伝説』では、企画から構成まで深く関わり、VTuberの枠を超えたエンターテインメントを追求し続けている。
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+
+        <div class="cp-section cp-reveal">
+            <h2 class="cp-section-title">THE POLKA SHOWTIME</h2>
+
+            <div class="ep-card">
+                <span class="ep-num">ACT 01</span>
+                <div class="ep-title">伝説の「枠移動」初配信</div>
+                <p>初配信で予期せぬトラブルが発生し、何度も配信URLを作り直して移動することに。しかし、そのパニックすらも笑いに変え、デビュー初日から強烈なインパクトを残した。</p>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">ACT 02</span>
+                <div class="ep-title">5期生ユニット「ねぽらぼ」命名</div>
+                <p>同期ユニット名『ねぽらぼ』をわずか5秒で考案。彼女のひらめきと、同期への深い愛情が形となった瞬間であった。</p>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">ACT 03</span>
+                <div class="ep-title">「配信しないと死」という執念</div>
+                <p>「配信することがみんなと出会う目的であり、生きてることの一つ」と語り、驚異的な頻度で配信を継続。その熱意は、多くの座員たちを支える光となっている。</p>
+                <div class="ep-quote">「ポルカは配信しないともう死だからさ」</div>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">ACT 04</span>
+                <div class="ep-title">ホロメンの関係性を眺める「壁」</div>
+                <p>ホロメン同士の仲の良さをオタク目線で楽しむのが大好き。特定のメンバーの間に流れる「尊い空気」を吸うために「壁になりたい」と熱弁する。</p>
+                <div class="ep-quote">「スバオカの壁になってみたいかな」</div>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">ACT 05</span>
+                <div class="ep-title">AIやNPCへの慈悲深き優しさ</div>
+                <p>ゲーム内のAIやNPCに対しても、一人の人間として接する。会話が通じないことに申し訳なさを感じて話を合わせようとする、彼女の根底にある優しさが垣間見える。</p>
+                <div class="ep-quote">「彼女も人間です AIだと思ってないよ」</div>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">ACT 06</span>
+                <div class="ep-title">「ポルカリズム」への熱烈な応援</div>
+                <p>競馬に熱中しており、特に自分と名前の似た競走馬「ポルカリズム」を激推し。愛馬への想いが強すぎて、時に謎の使命感を燃やして応援する。</p>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="cp-footer" style="padding: 70px 0; text-align: center;">
+        <p style="font-weight: 950; letter-spacing: 5px;">&copy; 2016-2024 Cover Corp. POLKA ORUYO!</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
 
 </html>

@@ -7,54 +7,266 @@
     <title>風真いろは (Kazama Iroha) — hololive</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --chara-color: #8bc34a; /* Bamboo Green */
+            --chara-accent: #33691e; /* Deep Dojo Green */
+            --bg-dark: #1b5e20;
+            --card-bg: rgba(255, 255, 255, 0.95);
+            --text-main: #2e7d32;
+        }
+
+        .cp-bg {
+            background: 
+                linear-gradient(rgba(139, 195, 74, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(139, 195, 74, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+            opacity: 0.3;
+        }
+
+        body {
+            color: var(--text-main);
+            background-color: #f1f8e9;
+        }
+
+        .cp-nav {
+            background: rgba(46, 125, 50, 0.9);
+        }
+
+        .cp-hero {
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1528164344705-47542687000d?auto=format&fit=crop&q=80&w=1000') center/cover;
+            color: #fff;
+            padding: 130px 20px;
+            text-align: center;
+            border-bottom: 8px solid var(--chara-color);
+        }
+
+        .cp-hero-name {
+            font-size: 5rem;
+            font-weight: 950;
+            text-shadow: 0 0 20px var(--chara-accent);
+            letter-spacing: 2px;
+        }
+
+        .cp-tag {
+            background: #fff;
+            color: var(--bg-dark);
+            border: 2px solid var(--chara-color);
+            border-radius: 4px;
+            font-weight: 900;
+        }
+
+        .cp-section-title {
+            font-size: 3rem;
+            font-weight: 950;
+            color: var(--bg-dark);
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .cp-section-title::after {
+            content: "🍃";
+            display: inline-block;
+            margin-left: 15px;
+        }
+
+        .cp-card {
+            background: #fff;
+            border: 1px solid #c5e1a5;
+            box-shadow: 0 10px 40px rgba(51, 105, 30, 0.05);
+            border-radius: 12px;
+        }
+
+        .cp-table th {
+            color: var(--chara-accent);
+            font-weight: 950;
+        }
+
+        .ep-card {
+            background: #fff;
+            border-top: 10px solid var(--chara-color);
+            padding: 3rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 15px 45px rgba(0,0,0,0.05);
+            transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+            position: relative;
+        }
+
+        .ep-card:hover {
+            transform: translateY(-10px);
+            border-top-color: var(--chara-accent);
+        }
+
+        .ep-num {
+            color: var(--chara-accent);
+            font-weight: 900;
+            font-size: 0.9rem;
+            display: block;
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+        }
+
+        .ep-title {
+            font-size: 2.22rem;
+            font-weight: 950;
+            color: var(--bg-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .ep-quote {
+            background: #f9fbe7;
+            border-left: 8px solid var(--chara-color);
+            padding: 1.5rem;
+            margin-top: 2rem;
+            font-weight: 700;
+            color: #33691e;
+            font-style: italic;
+            line-height: 1.8;
+        }
+
+        .cp-footer {
+            background: #263238;
+            color: #8bc34a;
+        }
+
+        /* Bamboo Forest Decoration */
+        .bamboo-decor {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 80px;
+            height: 80px;
+            background: url('https://api.iconify.design/mdi:bamboo.svg?color=%238bc34a') no-repeat center/contain;
+            opacity: 0.1;
+        }
+    </style>
 </head>
 
 <body>
     <div class="cp-bg"></div>
     <nav class="cp-nav">
         <a href="../hololive_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO hololive</a>
-        <span class="cp-nav-gen">6期生 // JP</span>
+        <span class="cp-nav-gen">秘密結社holoX // JP</span>
     </nav>
-    <section class="cp-hero">
+
+    <header class="cp-hero">
         <div class="cp-hero-content">
-            <div class="cp-gen-label">秘密結社holoX 用心棒</div>
+            <div class="cp-gen-label" style="background: var(--chara-color); color: #fff; padding: 4px 15px; font-weight: 950; border-radius: 4px; margin-bottom: 1rem; display: inline-block; letter-spacing: 1px;">BODYGUARD OF holoX</div>
             <h1 class="cp-hero-name">風真いろは</h1>
-            <span class="cp-hero-en">Kazama Iroha</span>
-            <p class="cp-chara-desc">秘密結社holoXの用心棒。田舎育ちで礼儀正しく、真面目な侍。卓越した剣術と高い運動能力を誇る一方で、流行に疎い純真な一面も持つ。ござる！</p>
-            <div class="cp-tags">
-                <span class="cp-tag">#Samurai</span>
-                <span class="cp-tag">#Ninja</span>
-                <span class="cp-tag">#Gozaru</span>
+            <span class="cp-hero-en" style="font-size: 2.2rem; font-weight: 900; display: block; margin-bottom: 3rem; color: #dcedc8;">Kazama Iroha</span>
+            <p class="cp-chara-desc" style="max-width: 900px; margin: 0 auto; font-size: 1.3rem; line-height: 2; font-weight: 600;">
+                「holoXの用心棒、侍の風真いろはでござる！」<br>
+                日銭を稼ぎながらholoXに雇われている侍。金髪碧眼の容姿から「忍者」と誤解されがちだが、本人は侍の誇りを貫く。圧倒的なフィジカルと、推しを前に語彙力を失う限界オタクの顔を持つ。
+            </p>
+            <div class="cp-tags" style="margin-top: 3.5rem;">
+                <span class="cp-tag">#侍</span>
+                <span class="cp-tag">#ござる</span>
+                <span class="cp-tag">#ジャキンジャキン</span>
+                <span class="cp-tag">#NotNinja</span>
             </div>
         </div>
-    </section>
-    <div class="cp-section cp-reveal">
-        <h2 class="cp-section-title">ARCHIVE DATA</h2>
-        <div class="cp-grid">
-            <div class="cp-card">
-                <h3>PROFILE</h3>
-                <table class="cp-table">
-                    <tr>
-                        <th>DEBUT</th>
-                        <td>2021.11.30</td>
-                    </tr>
-                    <tr>
-                        <th>AFFILIATION</th>
-                        <td>hololive JP</td>
-                    </tr>
-                    <tr>
-                        <th>STATUS</th>
-                        <td>Active</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="cp-card">
-                <h3>EPISODES</h3>
-                <p>3Dライブでの殺陣パフォーマンスは圧巻の完成度。マインクラフトやFPSゲームでのひたむきなプレイ姿勢も評価されており、多くのファンに「ござる」と親しまれている。</p>
+    </header>
+
+    <main class="cp-main" style="padding: 120px 20px; max-width: 1100px; margin: 0 auto;">
+        
+        <div class="cp-section cp-reveal">
+            <div class="cp-grid">
+                <div class="cp-card" style="padding: 50px; position: relative;">
+                    <div class="bamboo-decor"></div>
+                    <h3 style="color: var(--bg-dark); margin-bottom: 2.5rem; font-weight: 950; font-size: 2rem;">SAMURAI FILE</h3>
+                    <table class="cp-table">
+                        <tr>
+                            <th>誕生日</th>
+                            <td>6月18日</td>
+                        </tr>
+                        <tr>
+                            <th>身長</th>
+                            <td>156cm</td>
+                        </tr>
+                        <tr>
+                            <th>一人称</th>
+                            <td>風真（かざま） / 拙者</td>
+                        </tr>
+                        <tr>
+                            <th>愛刀</th>
+                            <td>名刀「ﾁｬｷ丸」</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="cp-card" style="padding: 50px; background: var(--bg-dark); color: #fff;">
+                    <h3 style="color: var(--chara-color); margin-bottom: 2rem; font-weight: 900; font-size: 2rem;">武士の魂と創作</h3>
+                    <p style="line-height: 2.2; font-size: 1.15rem; opacity: 0.9;">
+                        デビュー前に自作PCを破壊してしまう不運に見舞われるも、一晩で素材を作り直す不屈の「クリエイター侍」。礼儀正しく清楚な振る舞いで人気だが、極度の方向音痴（プロ迷子）やホラーでの幼児退行など、愛らしい隙も多い。
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+
+        <div class="cp-section cp-reveal">
+            <h2 class="cp-section-title">SAMURAI CHRONICLES</h2>
+
+            <div class="ep-card">
+                <span class="ep-num">卷ノ一</span>
+                <div class="ep-title">PC破壊から見せた「執念」の初配信</div>
+                <p>自爆によるPC故障でデータを失うが、徹夜で全素材を再制作。侍としての意地と、高度な動画編集・Live2D動画制作スキルを証明した伝説の幕開け。</p>
+                <div class="ep-quote">「なんとか徹夜して初配信系で使うその素材…を全部なんとか作ったつもりではあったんですけど」</div>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">卷ノ二</span>
+                <div class="ep-title">忍者じゃなくて「侍」でござる！</div>
+                <p>「ニンニン」といういじりに対し、「のっと！ﾆﾝﾆﾝ！！ いえす！ｼﾞｬｷﾝｼﾞｬｷﾝ！！」と全力で否定。侍としてのアイデンティティを死守する姿勢が定番。 </p>
+                <div class="ep-quote">「Twitterでもいたでござる、もっ（のっ）とニンニンでござる、イエスジャ金（ジャキン）でござる。そうこれだけはね、港（皆殿）の忘れないでほしいでござる」</div>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">卷ノ三</span>
+                <div class="ep-title">圧倒的フィジカル「ジャン筋」とスーパーへの疾走</div>
+                <p>3km先のスーパーまで走り、リングフィットでは平然と最高負荷で雑談。Jump Kingで鍛えられた「ジャン筋」を誇る、ホロライブ最強クラスの肉体派。</p>
+                <div class="ep-quote">「さっき走っただけだからね、前で余裕でござる。正直何もきつくなかったでござる」</div>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">卷ノ四</span>
+                <div class="ep-title">古参「星詠み」かつ「そらとも」</div>
+                <p>ときのそらの初配信から追っている生粋の古参ファン。憧れの星街すいせいを前にすると、侍の面影はなくなり、ただの語彙力を失った限界オタクと化す。</p>
+                <div class="ep-quote">「もう憧れのすいせい先輩なんでござるよ。すいせい先輩本当に歌めっちゃ好きでござるよ」</div>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">卷ノ五</span>
+                <div class="ep-title">専属の係が必要な「プロ迷子」</div>
+                <p>ゲーム内でも現実でもすぐ迷う極度の方向音痴。ついに同期のルイが「迷子係」になるほどで、空間把握能力のなさをネタに「プロ迷子」を自称している。</p>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">卷ノ六</span>
+                <div class="ep-title">ホラーで露呈する「幼児退行」</div>
+                <p>普段は「かっこいい侍」だが、ホラーは大の苦手。プレイ中は恐怖のあまり悲鳴が止まらず、思考が幼児化してしまうギャップが隊士たちの心を掴んでいる。</p>
+                <div class="ep-quote">「いやこわ。どうやっていけばいいの…こわい…こういう人には関わっちゃダメだよいやは（いろは）」</div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="cp-footer" style="padding: 70px 0; text-align: center;">
+        <p style="font-weight: 950; letter-spacing: 5px;">&copy; 2016-2024 Cover Corp. YES JAKIN JAKIN!</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
 
 </html>

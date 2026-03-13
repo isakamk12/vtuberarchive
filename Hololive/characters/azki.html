@@ -4,57 +4,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AZKi — hololive</title>
+    <title>AZKi (あずき) — hololive</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #ff66cc;
+            --char-color-alt: #990066;
+            --bg-dark: #0d020d;
+        }
+        .cp-hero-name {
+            background: linear-gradient(135deg, #fff 0%, var(--char-color) 100%);
+            -webkit-background-clip: text;
+        }
+        .episode-card {
+            background: rgba(255, 102, 204, 0.05);
+            border-right: 4px solid var(--char-color);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            text-align: right;
+            border-radius: 20px 0 0 20px;
+        }
+        .episode-title {
+            color: var(--char-color);
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 0.5rem;
+        }
+    </style>
 </head>
 
 <body>
     <div class="cp-bg"></div>
     <nav class="cp-nav">
         <a href="../hololive_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO hololive</a>
-        <span class="cp-nav-gen">0期生 // JP</span>
+        <span class="cp-nav-gen">hololive // 0期生</span>
     </nav>
+
     <section class="cp-hero">
         <div class="cp-hero-content">
-            <div class="cp-gen-label">hololive 0th Gen</div>
-            <h1 class="cp-hero-name" style="font-size: 8rem;">AZKi</h1>
+            <div class="cp-gen-label">Virtual Diva & Geoguesser</div>
+            <h1 class="cp-hero-name">AZKi</h1>
             <span class="cp-hero-en">AZKi</span>
-            <p class="cp-chara-desc">仮想世界から届く歌声。バーチャルシンガーとして数多くの楽曲をリリース。現在はホロライブの0期生として、多方面に「開拓」を続けている。</p>
+            <p class="cp-chara-desc">
+                仮想世界の伴走する歌姫。透き通るような歌声で多くのファン（開拓者）を導き、近年では『GeoGuessr』での驚異的な能力で「地図のお姉さん」としても覚醒。常に未知の世界を開拓し続けるマルチな歌姫。
+            </p>
             <div class="cp-tags">
-                <span class="cp-tag">#Diva</span>
-                <span class="cp-tag">#Kaitaku</span>
-                <span class="cp-tag">#Map</span>
+                <span class="cp-tag">#AZKi</span>
+                <span class="cp-tag">#開拓者</span>
+                 <span class="cp-tag">#ゼロゲッサー</span>
+                <span class="cp-tag">#VirtualDiva</span>
             </div>
         </div>
     </section>
+
     <div class="cp-section cp-reveal">
-        <h2 class="cp-section-title">ARCHIVE DATA</h2>
+        <h2 class="cp-section-title"><i class="fa-solid fa-map-location-dot"></i> EXPLORATION DATA</h2>
         <div class="cp-grid">
             <div class="cp-card">
-                <h3>PROFILE</h3>
+                <h3>DIVA PROFILE</h3>
                 <table class="cp-table">
-                    <tr>
-                        <th>DEBUT</th>
-                        <td>2018.11.15</td>
-                    </tr>
-                    <tr>
-                        <th>AFFILIATION</th>
-                        <td>hololive JP</td>
-                    </tr>
-                    <tr>
-                        <th>STATUS</th>
-                        <td>Active</td>
-                    </tr>
+                    <tr><th>デビュー</th><td>2018.11.15</td></tr>
+                    <tr><th>誕生日</th><td>7月1日</td></tr>
+                    <tr><th>身長</th><td>158cm</td></tr>
+                    <tr><th>血液型</th><td>A型</td></tr>
+                    <tr><th>ファンネーム</th><td>開拓者</td></tr>
                 </table>
             </div>
             <div class="cp-card">
-                <h3>EPISODES</h3>
-                <p>イノナカミュージックの終了後、ホロライブ本体へと移籍。GeoGuessrを用いた「地図」の企画でも才能を発揮し、新たなファン層を開拓した。</p>
+                <h3>SPECIAL SKILLS</h3>
+                <p>作詞作曲、料理。音楽特化の「Virtual Diva」としてデビューし、多様なジャンルを歌いこなす。GeoGuessr公認プレイヤーの一人であり、Yahoo!カーナビの音声にも起用された。</p>
             </div>
         </div>
     </div>
-    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+
+    <div class="cp-section cp-reveal">
+        <h2 class="cp-section-title"><i class="fa-solid fa-compass"></i> PIONEER TALES</h2>
+        
+        <div class="episode-card">
+            <div class="episode-title">1. 「終わり」を乗り越え新たな道へ <i class="fa-solid fa-road"></i></div>
+            <p>2022年に活動終了する予定を覆し、「終わりの先へと進む」ルートβ、γを自ら選択。メジャーデビューを果たし、開拓者と共に歩み続けています。</p>
+        </div>
+
+        <div class="episode-card">
+            <div class="episode-title">2. 地図のお姉さん！GeoGuessrの異能 <i class="fa-solid fa-map"></i></div>
+            <p>市外局番や地名から場所を特定し、誤差0mの「ゼロゲッサー」を連発。日本に3人しかいない公認プレイヤーに選ばれるほどのガチ勢となりました。</p>
+        </div>
+
+        <div class="episode-card">
+            <div class="episode-title">3. 伝説の「100曲耐久歌枠」 <i class="fa-solid fa-microphone"></i></div>
+            <p>誤BANトラブルを乗り越え、約11時間をかけて100曲を完走。登録者数100万人達成の瞬間を歌声と共に飾った、不屈の根性を見せた配信。</p>
+        </div>
+
+        <div class="episode-card">
+            <div class="episode-title">4. 推しへの愛が強すぎて「床になる」 <i class="fa-solid fa-heart"></i></div>
+            <p>Vシンガー花譜さんの大ファンで、サプライズメッセージに崩れ落ちて「床」になったエピソード。筋金入りの推し活ぶりも彼女の魅力です。</p>
+        </div>
+
+        <div class="episode-card">
+            <div class="episode-title">5. 破壊力抜群のASMR配信 <i class="fa-solid fa-ear-deaf"></i></div>
+            <p>清楚代表の一人ながら、ヤンデレや罵倒ASMRで新境地を開拓。その演技力はYouTube公式からも褒められるほどの大反響を呼びました。</p>
+        </div>
+    </div>
+
+    <footer class="cp-footer">
+        &copy; 2026 VTuber Archive Project - AZKi Fansite Profile.
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
 
 </html>

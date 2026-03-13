@@ -7,54 +7,262 @@
     <title>鷹嶺ルイ (Takane Lui) — hololive</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --chara-color: #f06292; /* Rose Pink */
+            --chara-accent: #212121; /* Exec Black */
+            --bg-dark: #880e4f;
+            --card-bg: rgba(255, 255, 255, 0.95);
+            --text-main: #4a001f;
+        }
+
+        .cp-bg {
+            background: radial-gradient(circle at top right, #fce4ec 0%, #f8bbd0 100%);
+            opacity: 0.15;
+            z-index: -1;
+        }
+
+        body {
+            color: var(--text-main);
+            background-color: #fff;
+        }
+
+        .cp-nav {
+            background: rgba(136, 14, 79, 0.9);
+        }
+
+        .cp-hero {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1000') center/cover;
+            color: #fff;
+            padding: 130px 20px;
+            text-align: center;
+            border-bottom: 8px solid var(--chara-color);
+        }
+
+        .cp-hero-name {
+            font-size: 5rem;
+            font-weight: 950;
+            text-shadow: 0 0 20px rgba(240, 98, 146, 0.4);
+            letter-spacing: 1px;
+        }
+
+        .cp-tag {
+            background: #fff;
+            color: var(--bg-dark);
+            border: 2px solid var(--chara-color);
+            font-weight: 800;
+        }
+
+        .cp-section-title {
+            font-size: 3rem;
+            font-weight: 950;
+            color: var(--bg-dark);
+            text-align: center;
+            margin-bottom: 4.5rem;
+        }
+
+        .cp-section-title::after {
+            content: "🥀";
+            display: inline-block;
+            margin-left: 15px;
+        }
+
+        .cp-card {
+            background: #fff;
+            border: 1px solid #fce4ec;
+            box-shadow: 0 10px 40px rgba(136, 14, 79, 0.05);
+            border-radius: 12px;
+        }
+
+        .cp-table th {
+            color: var(--bg-dark);
+            font-weight: 950;
+        }
+
+        .ep-card {
+            background: #fff;
+            border-left: 10px solid var(--chara-color);
+            padding: 3rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 15px 45px rgba(0,0,0,0.04);
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .ep-card:hover {
+            transform: translateX(10px);
+            border-left-color: var(--chara-accent);
+        }
+
+        .ep-num {
+            background: var(--bg-dark);
+            color: #fff;
+            padding: 3px 15px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 900;
+            display: inline-block;
+            margin-bottom: 1.2rem;
+        }
+
+        .ep-title {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--bg-dark);
+            margin-bottom: 1rem;
+        }
+
+        .ep-quote {
+            background: #fdf2f6;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            font-weight: 700;
+            color: #ad1457;
+            font-style: italic;
+            border: 1px dashed var(--chara-color);
+        }
+
+        .cp-footer {
+            background: var(--bg-dark);
+            color: #f8bbd0;
+        }
+
+        /* Exec Accent */
+        .exec-pattern {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 100px;
+            height: 100px;
+            background: url('https://api.iconify.design/mdi:tie.svg?color=%23f06292') no-repeat center/contain;
+            opacity: 0.1;
+        }
+    </style>
 </head>
 
 <body>
     <div class="cp-bg"></div>
     <nav class="cp-nav">
         <a href="../hololive_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO hololive</a>
-        <span class="cp-nav-gen">6期生 // JP</span>
+        <span class="cp-nav-gen">秘密結社holoX // JP</span>
     </nav>
-    <section class="cp-hero">
+
+    <header class="cp-hero">
         <div class="cp-hero-content">
-            <div class="cp-gen-label">秘密結社holoX 女幹部</div>
+            <div class="cp-gen-label" style="background: var(--chara-color); color: #fff; padding: 4px 15px; font-weight: 900; margin-bottom: 1rem; display: inline-block; text-transform: uppercase;">Executive Officer of holoX</div>
             <h1 class="cp-hero-name">鷹嶺ルイ</h1>
-            <span class="cp-hero-en">Takane Lui</span>
-            <p class="cp-chara-desc">秘密結社holoXの女幹部。総帥に代わって実務を取り仕切る、結社の「お母さん」的存在。多言語を操る才女でありながら、時折見せる抜けた一面も魅力。</p>
-            <div class="cp-tags">
-                <span class="cp-tag">#Executive</span>
-                <span class="cp-tag">#Hawk</span>
-                <span class="cp-tag">#Mother</span>
+            <span class="cp-hero-en" style="font-size: 2.2rem; font-weight: 900; display: block; margin-bottom: 3rem; opacity: 0.9;">Takane Lui</span>
+            <p class="cp-chara-desc" style="max-width: 900px; margin: 0 auto; font-size: 1.3rem; line-height: 2; font-weight: 600;">
+                「待ったかね〜？秘密結社holoXの女幹部、鷹嶺ルイです！」<br>
+                司令塔として組織を支える有能幹部。元営業職エースのビジネススキルと企画力を持つが、肝心なところで水をこぼす「圧倒的PON」な一面も。料理上手でダジャレ好きなお姉さん。
+            </p>
+            <div class="cp-tags" style="margin-top: 3.5rem;">
+                <span class="cp-tag">#ルイ姉</span>
+                <span class="cp-tag">#女幹部</span>
+                <span class="cp-tag">#ルイ友</span>
+                <span class="cp-tag">#身の丈に合わない挑戦をしろ</span>
             </div>
         </div>
-    </section>
-    <div class="cp-section cp-reveal">
-        <h2 class="cp-section-title">ARCHIVE DATA</h2>
-        <div class="cp-grid">
-            <div class="cp-card">
-                <h3>PROFILE</h3>
-                <table class="cp-table">
-                    <tr>
-                        <th>DEBUT</th>
-                        <td>2021.11.27</td>
-                    </tr>
-                    <tr>
-                        <th>AFFILIATION</th>
-                        <td>hololive JP</td>
-                    </tr>
-                    <tr>
-                        <th>STATUS</th>
-                        <td>Active</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="cp-card">
-                <h3>EPISODES</h3>
-                <p>卓越した歌唱力とダンススキルを誇り、ライブパフォーマンスでは圧倒的な存在感を放つ。また、周囲のタレントへの気配りも欠かさない人格者。</p>
+    </header>
+
+    <main class="cp-main" style="padding: 120px 20px; max-width: 1100px; margin: 0 auto;">
+        
+        <div class="cp-section cp-reveal">
+            <div class="cp-grid">
+                <div class="cp-card" style="padding: 50px; position: relative;">
+                    <div class="exec-pattern"></div>
+                    <h3 style="color: var(--bg-dark); margin-bottom: 2.5rem; font-weight: 950; font-size: 2rem;">OFFICER'S FILE</h3>
+                    <table class="cp-table">
+                        <tr>
+                            <th>誕生日</th>
+                            <td>6月11日</td>
+                        </tr>
+                        <tr>
+                            <th>身長</th>
+                            <td>161cm</td>
+                        </tr>
+                        <tr>
+                            <th>役職</th>
+                            <td>女幹部 (司令塔)</td>
+                        </tr>
+                        <tr>
+                            <th>座右の銘</th>
+                            <td>身の丈に合わない挑戦をしろ</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="cp-card" style="padding: 50px; background: var(--bg-dark); color: #fff;">
+                    <h3 style="color: var(--chara-color); margin-bottom: 2rem; font-weight: 900; font-size: 2rem;">幹部の素顔</h3>
+                    <p style="line-height: 2.2; font-size: 1.15rem; opacity: 0.9;">
+                        クールで知的な印象とは裏腹に、非常に感受性が豊かで「めんどくさい女」ムーブを見せることも。ホラーゲームは大の苦手。エンタメのためなら相棒「がんも」をデビューさせるほどのサービス精神に溢れている。
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+
+        <div class="cp-section cp-reveal">
+            <h2 class="cp-section-title">THE EXECUTIVE LOGS</h2>
+
+            <div class="ep-card">
+                <span class="ep-num">LOG 01</span>
+                <div class="ep-title">伝説の「開幕水こぼし」事件</div>
+                <p>ホラーゲーム配信にて、ゲームが始まる前のタイトル画面で机の上の水をこぼし、叫んで即配信終了。わずか数分で配信を伝説に変えた「伝説のPON」エピソード。</p>
+                <div class="ep-quote">「うわっ！ちょっと待って水が！水、水！」</div>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">LOG 02</span>
+                <div class="ep-title">脅威のビジネススキルと「#YAGOO王」</div>
+                <p>デビュー直後から自ら企画書を作成し、マネージャー陣へプレゼン。大型企画『YAGOO王』を成功させるなど、元営業職のスキルを遺憾なく発揮している。</p>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">LOG 03</span>
+                <div class="ep-title">オフデートでの「めんどくさい女」</div>
+                <p>雪花ラミィとの水族館デートでは、相手の壁紙やお揃いのキーホルダーについて執拗に気にするなど、愛が深すぎるがゆえの「めんどくさい」一面を露呈した。</p>
+                <div class="ep-quote">「その壁紙、どうせ次会ったら変わってるんじゃないですか？」</div>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">LOG 04</span>
+                <div class="ep-title">漢字よわよわ幹部「あえんびえん」</div>
+                <p>知的キャラでありながら漢字が少し苦手。「阿鼻叫喚」を「あえんびえん」と読み、競馬実況では危うい読み間違いを連発するなど、ギャップが激しい。</p>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">LOG 05</span>
+                <div class="ep-title">相棒「がんも」の華麗なるデビュー</div>
+                <p>自身の収益化記念で、相棒のガマグチヨタカ「がんも」の初配信を実施。専用のLive2Dまで用意する徹底したエンタメ精神を見せつけた。</p>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">LOG 06</span>
+                <div class="ep-title">懐の深さと「おもてなし」の心</div>
+                <p>猫又おかゆが勝手に他メンバーを家に連れ込んでも、文句一つ言わずに全員を温かく迎え入れる。面倒見の良さと包容力は、ホロメンたちの心の支えとなっている。</p>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="cp-footer" style="padding: 70px 0; text-align: center;">
+        <p style="font-weight: 950; letter-spacing: 5px;">&copy; 2016-2024 Cover Corp. WA MA TA KANE!</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
 
 </html>

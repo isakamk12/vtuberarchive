@@ -1,0 +1,80 @@
+:root {
+    --hari-main: #a080ff;
+    --hari-sub: #1a1a2e;
+    --hari-accent: #ffffff;
+}
+
+.hari-theme {
+    --card-bg: rgba(160, 128, 255, 0.05);
+    --border-color: rgba(160, 128, 255, 0.2);
+}
+
+.night-sky {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 10% 10%, #1a1a2e 0%, #0c0c1e 100%);
+    overflow: hidden;
+}
+
+.night-sky::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    box-shadow: 10vw 20vh white, 50vw 10vh white, 80vw 30vh white, 20vw 80vh white, 70vw 90vh white;
+    opacity: 0.3;
+}
+
+.shadow-particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, rgba(160, 128, 255, 0.1) 1px, transparent 1px);
+    background-size: 60px 60px;
+    animation: shadowDrift 20s infinite linear;
+}
+
+@keyframes shadowDrift {
+    from { background-position: 0 0; }
+    to { background-position: 200px 200px; }
+}
+
+.en-name {
+    color: var(--hari-main);
+    text-shadow: 0 0 15px rgba(160, 128, 255, 0.6);
+}
+
+.section-title {
+    color: var(--hari-main);
+}
+
+.eye-glance {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 4rem;
+    opacity: 0.1;
+    color: var(--hari-main);
+}
+
+.eye-glance::before {
+    content: '\f075';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+}
+
+.hari-cat {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 3.5rem;
+    opacity: 0.1;
+    transform: scaleX(-1) rotate(-10deg);
+}
+
+.lore-card:hover {
+    border-color: var(--hari-main);
+}

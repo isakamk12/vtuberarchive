@@ -7,6 +7,104 @@
     <title>癒月ちょこ (Yuzuki Choco) — hololive</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --chara-color: #e91e63;
+            --chara-accent: #ffd700;
+            --bg-dark: #1a0a1a;
+            --card-bg: rgba(40, 20, 40, 0.85);
+        }
+
+        .cp-bg {
+            background: linear-gradient(135deg, #1a0a1a 0%, #2e1c3b 100%);
+        }
+
+        .cp-bg::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: 
+                radial-gradient(circle at 30% 20%, rgba(233, 30, 99, 0.1) 0%, transparent 40%),
+                radial-gradient(circle at 70% 80%, rgba(255, 215, 0, 0.05) 0%, transparent 40%);
+            z-index: -1;
+        }
+
+        .cp-hero-name {
+            color: var(--chara-color);
+            text-shadow: 0 0 20px rgba(233, 30, 99, 0.4);
+            font-family: 'Playfair Display', serif;
+        }
+
+        .cp-tag {
+            background: rgba(233, 30, 99, 0.15);
+            border: 1px solid var(--chara-color);
+        }
+
+        .ep-card {
+            background: var(--card-bg);
+            border-bottom: 2px solid var(--chara-color);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ep-card::before {
+            content: "\f004";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            right: -10px;
+            bottom: -10px;
+            font-size: 4rem;
+            color: rgba(233, 30, 99, 0.05);
+            pointer-events: none;
+        }
+
+        .ep-card:hover {
+            transform: translateY(-5px);
+            background: rgba(60, 30, 60, 0.95);
+            border-bottom-color: var(--chara-accent);
+        }
+
+        .ep-num {
+            color: var(--chara-accent);
+            font-weight: bold;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .ep-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 0.75rem;
+            color: #fff;
+        }
+
+        .ep-quote {
+            font-style: italic;
+            color: #ec407a;
+            background: rgba(0,0,0,0.2);
+            padding: 0.75rem;
+            border-radius: 6px;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .cp-section-title {
+            color: var(--chara-accent);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 2rem;
+            text-align: center;
+            width: 100%;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -15,46 +113,117 @@
         <a href="../hololive_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO hololive</a>
         <span class="cp-nav-gen">2期生 // JP</span>
     </nav>
+
     <section class="cp-hero">
         <div class="cp-hero-content">
             <div class="cp-gen-label">hololive 2nd Gen</div>
             <h1 class="cp-hero-name">癒月ちょこ</h1>
             <span class="cp-hero-en">Yuzuki Choco</span>
-            <p class="cp-chara-desc">魔界学校の保健医。セクシーで大人な雰囲気を持つが、実は超が付くほどのお料理上手。その包容力で後輩たちを導く「お姉さん」的存在。</p>
+            <p class="cp-chara-desc">
+                「Good evening! my cute students. ちょっこーん！」<br>
+                魔界学校の保健医。セクシーで大人な雰囲気を持つ悪魔だが、実は超が付くほどのお料理上手で、面倒見の良い「お姉さん」的存在。校内の男子たちから絶大な人気を誇る。
+            </p>
             <div class="cp-tags">
-                <span class="cp-tag">#Nurse</span>
-                <span class="cp-tag">#Cooking</span>
+                <span class="cp-tag">#Succubus</span>
                 <span class="cp-tag">#ASMR</span>
+                <span class="cp-tag">#Cooking</span>
+                <span class="cp-tag">#Gera</span>
             </div>
         </div>
     </section>
-    <div class="cp-section cp-reveal">
-        <h2 class="cp-section-title">ARCHIVE DATA</h2>
-        <div class="cp-grid">
-            <div class="cp-card">
-                <h3>PROFILE</h3>
-                <table class="cp-table">
-                    <tr>
-                        <th>DEBUT</th>
-                        <td>2018.09.04</td>
-                    </tr>
-                    <tr>
-                        <th>AFFILIATION</th>
-                        <td>hololive JP</td>
-                    </tr>
-                    <tr>
-                        <th>STATUS</th>
-                        <td>Active</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="cp-card">
-                <h3>EPISODES</h3>
-                <p>ASMR配信の先駆けとしても知られ、その甘いささやきボイスで多くのリスナーを虜にしている。学力テスト系の企画でも、保健医らしい（？）一面を見せる。</p>
+
+    <main class="cp-main">
+        <div class="cp-section cp-reveal">
+            <h2 class="cp-section-title">NURSE'S RECORD</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>基本プロフィール</h3>
+                    <table class="cp-table">
+                        <tr>
+                            <th>誕生日</th>
+                            <td>2月14日</td>
+                        </tr>
+                        <tr>
+                            <th>種族</th>
+                            <td>悪魔（保健医）</td>
+                        </tr>
+                        <tr>
+                            <th>身長</th>
+                            <td>165cm（角含む）</td>
+                        </tr>
+                        <tr>
+                            <th>ファン名</th>
+                            <td>ちょこめいと</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="cp-card">
+                    <h3>活動の軌跡</h3>
+                    <p>
+                        雑談、企画、ゲーム実況、ASMR、料理配信など多岐にわたる。名物企画「Vtuber身体測定コラボ」や、鷹嶺ルイと共に送る「りっちしょこら」など、独自の企画力でも知られる。
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+
+        <div class="cp-section cp-reveal">
+            <h2 class="cp-section-title">LEGENDARY EPISODES</h2>
+            
+            <div class="ep-card">
+                <span class="ep-num">EPISODE 01</span>
+                <div class="ep-title">伝説の「配信モンスター」</div>
+                <p>活動初期、朝のニュースから夜のASMRまで毎日4～5回行動を行っていた驚異の体力の持ち主。ゲームにハマると廃人化する一面も。</p>
+                <div class="ep-quote">「約普通に5回行動ほぼ毎日4、5回行動を毎日配信をしてたんよ」</div>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">EPISODE 02</span>
+                <div class="ep-title">セクシーすぎてAIに怒られた過去</div>
+                <p>魅力的すぎる声がYouTubeに「不適切」と判断され、収益化を剥奪された伝説を持つ。本人は至って健全な配信を主張している。</p>
+                <div class="ep-quote">「あの声がエチいという理由で収益化を剥奪されてしまい…」</div>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">EPISODE 03</span>
+                <div class="ep-title">圧倒的「フッ軽」な悪魔</div>
+                <p>LINEの筆不精だが、誘われたら即座に行く抜群のフットワーク。コラボや遊びの誘いを断らない、付き合いの良い悪魔。</p>
+                <div class="ep-quote">「誘われたら基本断らない悪魔すね」</div>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">EPISODE 04</span>
+                <div class="ep-title">日常を侵食する「ガチぃ？」</div>
+                <p>代名詞となった「ガチぃ？」という口癖だが、最近は配信外でもうっかり出てしまい、外では「マズい」に変換して凌いでいる。</p>
+                <div class="ep-quote">「外ではマズいって言うようにしてる…そっちに変えている」</div>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">EPISODE 05</span>
+                <div class="ep-title">その包容力と「ゲラ」のギャップ</div>
+                <p>大人っぽい印象とは裏腹に、非常に笑いのツボが浅い。配信中にすぐツボに入って笑ってしまう可愛らしいギャップも魅力。</p>
+                <div class="ep-quote">「チョコ笑いのツボめちゃくちゃ浅いんよ」</div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="cp-footer">
+        <p>&copy; 2016-2024 Cover Corp.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
 
 </html>
