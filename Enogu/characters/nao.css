@@ -1,0 +1,11 @@
+/* nao.css */
+:root {
+    --char-color: #2ecc71; /* 緑 */
+    --char-glow: rgba(46, 204, 113, 0.4);
+    --char-color-soft: rgba(46, 204, 113, 0.1);
+    --char-border: rgba(46, 204, 113, 0.3);
+}
+
+.cp-hero-motif::after {
+    content: '🍀';
+}

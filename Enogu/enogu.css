@@ -13,13 +13,10 @@
     --eg-accent-glow: rgba(255, 87, 87, 0.4);
     --eg-accent-soft: rgba(255, 87, 87, 0.1);
 
-    /* メンバーカラー想定 (適宜公式カラーに寄せます) */
-    --eg-color-anzu: #4a90e2;
-    /* 青系想定 */
-    --eg-color-tamaki: #f5a623;
-    /* オレンジ/黄系想定 */
-    --eg-color-nao: #d0021b;
-    /* 赤系想定 */
+    /* メンバーカラー想定 */
+    --eg-color-anzu: #4a90e2;   /* 青 */
+    --eg-color-tamaki: #e63946; /* 赤系 */
+    --eg-color-nao: #2ecc71;    /* 緑 */
 
     /* 背景は暗めのパレットでアイドルステージ感を維持しつつ柔らかく */
     --eg-dark: #1a1016;
@@ -390,15 +387,15 @@ body {
     letter-spacing: 2px;
 }
 
-.eg-member-card.eg-color-anzu .eg-member-name:hover {
+.eg-member-card.eg-color-anzu:hover .eg-member-name {
     color: var(--eg-color-anzu);
 }
 
-.eg-member-card.eg-color-tamaki .eg-member-name:hover {
+.eg-member-card.eg-color-tamaki:hover .eg-member-name {
     color: var(--eg-color-tamaki);
 }
 
-.eg-member-card.eg-color-nao .eg-member-name:hover {
+.eg-member-card.eg-color-nao:hover .eg-member-name {
     color: var(--eg-color-nao);
 }
 

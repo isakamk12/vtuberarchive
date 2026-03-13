@@ -1,0 +1,11 @@
+/* tamaki.css */
+:root {
+    --char-color: #e63946; /* 赤系 */
+    --char-glow: rgba(230, 57, 70, 0.4);
+    --char-color-soft: rgba(230, 57, 70, 0.1);
+    --char-border: rgba(230, 57, 70, 0.3);
+}
+
+.cp-hero-motif::after {
+    content: '☀️';
+}

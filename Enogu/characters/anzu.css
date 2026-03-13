@@ -1,0 +1,11 @@
+/* anzu.css */
+:root {
+    --char-color: #4a90e2; /* 青 */
+    --char-glow: rgba(74, 144, 226, 0.4);
+    --char-color-soft: rgba(74, 144, 226, 0.1);
+    --char-border: rgba(74, 144, 226, 0.3);
+}
+
+.cp-hero-motif::after {
+    content: '💙';
+}

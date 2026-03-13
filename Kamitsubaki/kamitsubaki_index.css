@@ -285,3 +285,37 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* YouTube Hub Link */
+.hub-link {
+    color: var(--kami-dim);
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.hub-link:hover {
+    color: var(--kami-red);
+}
+
+/* Individual YouTube Link */
+.yt-link {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: var(--kami-dim);
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 2;
+    transition: color 0.3s;
+}
+
+.pillar-card:hover .yt-link {
+    color: #fff;
+}
+
+.yt-link:hover {
+    color: var(--kami-red) !important;
+}
