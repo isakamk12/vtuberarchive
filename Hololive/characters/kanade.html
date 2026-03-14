@@ -4,9 +4,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>音乃瀬奏 (Otonose Kanade) — hololive</title>
+    <title>音乃瀬奏 (Otonose Kanade) — hololive Archive</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --chara-color: #fdd835; /* Bright Yellow / Gold */
+            --chara-accent: #37474f; /* Slate Gray */
+            --bg-dark: #f9a825;
+            --card-bg: rgba(255, 255, 255, 0.95);
+            --text-main: #263238;
+        }
+
+        .cp-bg {
+            background: radial-gradient(circle at center, #fffde7 0%, #fff9c4 100%);
+            opacity: 0.15;
+        }
+
+        body {
+            color: var(--text-main);
+            background-color: #fff;
+        }
+
+        .cp-nav {
+            background: rgba(55, 71, 79, 0.9);
+        }
+
+        .cp-hero {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1520529611489-40da31227094?auto=format&fit=crop&q=80&w=1200') center/cover;
+            color: #fff;
+            padding: 140px 20px;
+            text-align: center;
+            border-bottom: 8px solid var(--chara-color);
+        }
+
+        .cp-hero-name {
+            font-size: 5.5rem;
+            font-weight: 950;
+            text-shadow: 0 0 40px rgba(253, 216, 53, 0.6);
+            letter-spacing: -2px;
+            margin-bottom: 0.5rem;
+        }
+
+        .cp-hero-en {
+            font-size: 2.2rem;
+            font-weight: 950;
+            display: block;
+            margin-bottom: 2.5rem;
+            color: #fff9c4;
+            letter-spacing: 2px;
+        }
+
+        .cp-catchphrase {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--chara-color);
+            margin-bottom: 2rem;
+            font-style: italic;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .cp-chara-desc {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.3rem;
+            line-height: 2;
+            font-weight: 600;
+            text-shadow: 1px 1px 10px rgba(0,0,0,0.8);
+        }
+
+        .cp-tag {
+            background: #fff;
+            color: var(--bg-dark);
+            border: 2px solid var(--chara-color);
+            border-radius: 4px;
+            font-weight: 900;
+            padding: 5px 15px;
+        }
+
+        .cp-section-title {
+            font-size: 3.5rem;
+            font-weight: 950;
+            color: var(--bg-dark);
+            text-align: center;
+            margin-bottom: 5rem;
+            position: relative;
+        }
+
+        .cp-section-title::after {
+            content: "🎹✨";
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        .cp-card {
+            background: #fff;
+            border: 1px solid #fff59d;
+            box-shadow: 0 15px 50px rgba(249, 168, 37, 0.08);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .cp-table th {
+            color: var(--bg-dark);
+            font-weight: 950;
+            width: 40%;
+        }
+
+        .ep-card {
+            background: #263238;
+            color: #eceff1;
+            border-left: 10px solid var(--chara-color);
+            padding: 3.5rem;
+            margin-bottom: 4rem;
+            box-shadow: 0 25px 55px rgba(0,0,0,0.15);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            border-radius: 0 16px 16px 0;
+        }
+
+        .ep-card:hover {
+            transform: translateX(10px) scale(1.01);
+            border-left-color: #fff;
+        }
+
+        .ep-num {
+            color: var(--chara-color);
+            font-weight: 900;
+            font-size: 1rem;
+            display: block;
+            margin-bottom: 1.5rem;
+            letter-spacing: 3px;
+        }
+
+        .ep-title {
+            font-size: 2.2rem;
+            font-weight: 950;
+            color: #fff;
+            margin-bottom: 2rem;
+        }
+
+        .ep-quote {
+            background: rgba(253, 216, 53, 0.1);
+            border: 1px solid var(--chara-color);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-top: 2.5rem;
+            font-weight: 700;
+            color: #fff;
+            font-style: italic;
+            line-height: 1.8;
+            position: relative;
+        }
+
+        .ep-quote::before {
+            content: "💬";
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: #263238;
+            padding: 0 10px;
+            font-size: 1.5rem;
+        }
+
+        .mission-box {
+            background: #fffde7;
+            border-left: 5px solid #fdd835;
+            padding: 20px;
+            margin-top: 20px;
+            color: #263238;
+            border-radius: 4px;
+        }
+
+        .cp-footer {
+            background: #1a1a1a;
+            color: var(--chara-color);
+            border-top: 5px solid var(--chara-color);
+        }
+
+        .piano-keys {
+            display: flex;
+            height: 10px;
+            margin-top: 50px;
+        }
+        .piano-key { flex: 1; border: 1px solid #ddd; background: #fff; }
+        .piano-key.black { background: #000; flex: 0.6; margin: 0 -0.3%; z-index: 1; height: 6px; }
+
+        @media (max-width: 768px) {
+            .cp-hero-name { font-size: 3.5rem; }
+            .ep-card { padding: 2rem; }
+            .ep-title { font-size: 1.6rem; }
+        }
+    </style>
 </head>
 
 <body>
@@ -15,46 +204,151 @@
         <a href="../hololive_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO hololive</a>
         <span class="cp-nav-gen">DEV_IS // ReGLOSS</span>
     </nav>
-    <section class="cp-hero">
+
+    <header class="cp-hero">
         <div class="cp-hero-content">
-            <div class="cp-gen-label">hololive DEV_IS (ReGLOSS)</div>
+            <div class="cp-gen-label" style="background: var(--chara-color); color: #263238; padding: 6px 20px; font-weight: 950; border-radius: 50px; margin-bottom: 1.5rem; display: inline-block;">hololive DEV_IS (ReGLOSS)</div>
             <h1 class="cp-hero-name">音乃瀬奏</h1>
             <span class="cp-hero-en">Otonose Kanade</span>
-            <p class="cp-chara-desc">音楽の名門校に通う学生。圧倒的な歌唱パフォーマンスと、自由奔放な言動のギャップが魅力。「奏でる」喜びを全身で表現する新世代のアーティスト。</p>
-            <div class="cp-tags">
-                <span class="cp-tag">#Music</span>
-                <span class="cp-tag">#Singer</span>
+            <div class="cp-catchphrase">「ここが私のステージだから！」</div>
+            <p class="cp-chara-desc">
+                ReGLOSSの歌柱、音楽家の卵。普段の天真爛漫な「クソガキ」属性と、歌枠で見せる透明感溢れる力強い歌声のギャップが最大の魅力。トリリンガルであり、音楽への情熱のために海を越えてやってきた新世代アーティスト。
+            </p>
+            <div class="cp-tags" style="margin-top: 4rem;">
+                <span class="cp-tag">#音乃瀬奏</span>
                 <span class="cp-tag">#ReGLOSS</span>
+                <span class="cp-tag">#歌柱</span>
+                <span class="cp-tag">#おまえら</span>
             </div>
         </div>
-    </section>
-    <div class="cp-section cp-reveal">
-        <h2 class="cp-section-title">ARCHIVE DATA</h2>
-        <div class="cp-grid">
-            <div class="cp-card">
-                <h3>PROFILE</h3>
-                <table class="cp-table">
-                    <tr>
-                        <th>DEBUT</th>
-                        <td>2023.09.09</td>
-                    </tr>
-                    <tr>
-                        <th>AFFILIATION</th>
-                        <td>hololive DEV_IS</td>
-                    </tr>
-                    <tr>
-                        <th>STATUS</th>
-                        <td>Active</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="cp-card">
-                <h3>EPISODES</h3>
-                <p>情緒豊かで力強い歌声は、多くのリスナーの心を掴んでいる。持ち前の明るさと、時折見せる真面目な音楽への情熱が、ReGLOSSのハーモニーを支えている。</p>
+    </header>
+
+    <main class="cp-main" style="padding: 120px 20px; max-width: 1100px; margin: 0 auto;">
+        
+        <div class="cp-section cp-reveal">
+            <div class="cp-grid">
+                <div class="cp-card" style="padding: 50px; position: relative;">
+                    <h3 style="color: var(--bg-dark); margin-bottom: 3rem; font-weight: 950; font-size: 2.2rem;">PIANO DATA</h3>
+                    <table class="cp-table">
+                        <tr>
+                            <th>誕生日</th>
+                            <td>4月20日</td>
+                        </tr>
+                        <tr>
+                            <th>身長</th>
+                            <td>153cm <span style="font-size: 0.8em; opacity: 0.7;">(自称165cm)</span></td>
+                        </tr>
+                        <tr>
+                            <th>所属</th>
+                            <td>hololive DEV_IS (ReGLOSS)</td>
+                        </tr>
+                        <tr>
+                            <th>ファン名</th>
+                            <td>音の勢 / おまえら</td>
+                        </tr>
+                        <tr>
+                            <th>推しマーク</th>
+                            <td>🎹✨</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="cp-card" style="padding: 50px; background: var(--bg-dark); color: #fff;">
+                    <h3 style="color: #fff; margin-bottom: 2.5rem; font-weight: 900; font-size: 2.2rem;">クソガキ歌姫の素顔</h3>
+                    <p style="line-height: 2.2; font-size: 1.2rem; opacity: 0.95;">
+                        日本語・韓国語・英語を話すトリリンガル。リスナーを「おまえら」と呼び、煽り合いやイタズラをこよなく愛する元気いっぱいな性格。おやじギャグに自分で爆笑するゲラな一面もあるが、パズルゲームやタイピングでは圧倒的な実力を見せる意外な頭脳派でもある。
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+
+        <div class="cp-section cp-reveal">
+            <h2 class="cp-section-title">MUSICAL LOGS</h2>
+
+            <div class="ep-card">
+                <span class="ep-num">LOG 01</span>
+                <div class="ep-title">先輩たちも騒然！ 伝説の初配信</div>
+                <p>OP映像が間に合わず、ペラペラの2D姿で画面を舞うという前代未聞のスタート。突然リコーダーで『遊☆戯☆王』のBGMを吹き始めたり、リスナーのクイズ解答を「バカ目！！！！」と全否定して煽り散らすなど、初日から完成された「やべーやつ」っぷりを見せつけた。</p>
+                <div class="ep-quote">
+                    「OP間に合いませんでした……」<br>
+                    「正解は…バカ目！！！！！！！！！」
+                </div>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">LOG 02</span>
+                <div class="ep-title">本気の活動のために海を越えた決断</div>
+                <p>幼少期から韓国で育ち、独学で日本語を習得。本格的な活動とボイトレのため、在学していた大学を休学して単身日本へ移住した。見知らぬ土地での一人暮らしに奮闘しながら、VTuber活動に懸ける強い覚悟と努力家な一面を覗かせている。</p>
+                <div class="ep-quote">「もっとね、歌を頑張りたいって思っていて。（中略）ボイトレに通いたいっていうので日本来ちゃった」</div>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">LOG 03</span>
+                <div class="ep-title">存在しない言語「チンアナ語」とギャグ愛</div>
+                <p>「6カ国語を話せる」と豪語し、「チンアナ語」や「ヤ語ー」などを披露。本人は自信満々だったが、先輩たちからは「スベっている」と評され衝撃を受ける。それでもダジャレとおもしろ動画への愛は深く、独自のユーモアで配信を盛り上げ続けている。</p>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">LOG 04</span>
+                <div class="ep-title">リスナーの悲鳴を呼ぶ「月曜日煽り」</div>
+                <p>日曜日の配信終わりに「明日は月曜日♪」と即興ソングで煽り倒すのが恒例。執拗な煽りに憤慨したリスナーからの通報が相次ぎ、「大空警察」にクソガキ罪で逮捕されたことも。「煽らないと日常の幸せがなくなる」と語り、反省の色は見せていない。</p>
+                <div class="ep-quote">
+                    「明日は月曜日♪ルンルンルンルン月曜日♪」<br>
+                    「リスナーを煽らないとですね、あの日常の幸せがなくなってしまうんですよ！」
+                </div>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">LOG 05</span>
+                <div class="ep-title">先輩を狂わせる愛され力と「ママ」化</div>
+                <p>人見知りな一面がある一方で、一度懐いた相手への甘え方は凄まじく、お世話をしてくれる先輩を次々と「ママ」にしてしまう。大型コラボ『holoGTA』では大空スバル署長に怒られながらも「手のかかる子供」として愛される名シーンを連発した。</p>
+                <div class="ep-quote">「固定給はさぁ、いかにサボれるかが大事ってワケ！」</div>
+            </div>
+
+            <div class="cp-card cp-reveal" style="padding: 60px; background: #fffde7; margin-top: 8rem; border: 4px solid var(--chara-color); text-align: center;">
+                <h3 style="color: var(--bg-dark); font-size: 2.5rem; font-weight: 950; margin-bottom: 2rem;">奏の目指す場所</h3>
+                <p style="font-size: 1.4rem; line-height: 2.2; font-weight: 700; color: #263238;">
+                    「歌ではときめきっていう感動を届けて、配信では笑顔を届けるっていうのが奏の活動の、目指すところなんですよ」
+                </p>
+                <p style="margin-top: 2rem; opacity: 0.8; font-weight: 600;">
+                    ちっちゃい頃から「歌でご飯を食べていきたい」という信念を持ち続ける彼女。圧倒的なギャップこそが、音乃瀬奏の最大の魅力である。
+                </p>
+                <div class="piano-keys">
+                    <div class="piano-key"></div>
+                    <div class="piano-key black"></div>
+                    <div class="piano-key"></div>
+                    <div class="piano-key black"></div>
+                    <div class="piano-key"></div>
+                    <div class="piano-key"></div>
+                    <div class="piano-key black"></div>
+                    <div class="piano-key"></div>
+                    <div class="piano-key black"></div>
+                    <div class="piano-key"></div>
+                    <div class="piano-key black"></div>
+                    <div class="piano-key"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="cp-footer" style="padding: 80px 0; text-align: center;">
+        <p style="font-weight: 950; letter-spacing: 5px;">&copy; 2016-2024 Cover Corp. OTONOSE STAGE</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
 
-</html>
+</html>

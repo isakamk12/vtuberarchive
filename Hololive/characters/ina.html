@@ -4,9 +4,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>一伊那尓栖 / Ninomae Ina'nis — hololive</title>
+    <title>一伊那尓栖 (Ninomae Ina'nis) — hololive Archive</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --chara-color: #4a148c; /* Deep Purple */
+            --chara-accent: #ffd700; /* Gold */
+            --void-black: #120c1d;
+            --galaxy: #311b92;
+        }
+
+        .cp-bg {
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(74, 20, 140, 0.4) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(49, 27, 146, 0.4) 0%, transparent 40%),
+                var(--void-black);
+            opacity: 1;
+        }
+
+        body {
+            background-color: var(--void-black);
+            color: #eee;
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+        }
+
+        .cp-nav {
+            background: rgba(18, 12, 29, 0.9);
+            border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+        }
+
+        .cp-hero {
+            background: linear-gradient(to bottom, rgba(18, 12, 29, 0.4), var(--void-black)), 
+                        url('https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?auto=format&fit=crop&q=80&w=1200') center/cover;
+            padding: 200px 20px;
+            text-align: center;
+            border-bottom: 4px solid var(--chara-accent);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .star-field {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: radial-gradient(white, rgba(255,255,255,0.2) 2px, transparent 40px);
+            background-size: 100px 100px;
+            opacity: 0.1;
+            pointer-events: none;
+        }
+
+        .cp-hero-name {
+            font-size: 5.5rem;
+            font-weight: 950;
+            color: #fff;
+            letter-spacing: 15px;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+            margin-bottom: 0.5rem;
+        }
+
+        .cp-hero-en {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--chara-accent);
+            text-transform: uppercase;
+            letter-spacing: 10px;
+            margin-bottom: 3.5rem;
+        }
+
+        .wah-badge {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #120c1d;
+            background: var(--chara-accent);
+            padding: 10px 30px;
+            border-radius: 50px;
+            display: inline-block;
+            margin-bottom: 3rem;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+
+        .cp-chara-desc {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.3rem;
+            line-height: 2.2;
+            font-weight: 500;
+            color: #ccc;
+        }
+
+        .cp-section-title {
+            font-size: 3rem;
+            font-weight: 950;
+            color: var(--chara-accent);
+            margin-bottom: 4rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .cp-section-title::after {
+            content: "WAH! WAH! WAH!";
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.8rem;
+            letter-spacing: 10px;
+            opacity: 0.3;
+        }
+
+        .cp-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 215, 0, 0.1);
+            border-radius: 20px;
+            padding: 45px;
+            backdrop-filter: blur(10px);
+        }
+
+        .cp-table th {
+            color: var(--chara-accent);
+            font-weight: 900;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+        }
+
+        .cp-table td {
+            font-weight: 600;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+        }
+
+        .void-log-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .void-log {
+            background: rgba(74, 20, 140, 0.1);
+            border-left: 5px solid var(--chara-accent);
+            padding: 35px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .void-log:hover {
+            background: rgba(74, 20, 140, 0.2);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .log-icon {
+            position: absolute;
+            right: -20px;
+            bottom: -20px;
+            font-size: 8rem;
+            opacity: 0.05;
+            color: var(--chara-accent);
+            transform: rotate(-15deg);
+        }
+
+        .void-log-title {
+            font-size: 1.6rem;
+            font-weight: 900;
+            color: var(--chara-accent);
+            margin-bottom: 1.5rem;
+        }
+
+        .void-log-text {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            font-weight: 400;
+            color: #ddd;
+        }
+
+        .quote-box {
+            background: linear-gradient(135deg, rgba(74, 20, 140, 0.3), rgba(49, 27, 146, 0.3));
+            padding: 60px;
+            border-radius: 30px;
+            margin-top: 100px;
+            text-align: center;
+            border: 1px solid rgba(255,215,0,0.1);
+        }
+
+        .main-quote {
+            font-size: 1.5rem;
+            line-height: 2.2;
+            font-weight: 600;
+            font-style: italic;
+            color: #fff;
+            margin-bottom: 2rem;
+        }
+
+        .inaff-badge {
+            display: inline-block;
+            color: var(--chara-accent);
+            font-weight: 900;
+            font-size: 1.2rem;
+            margin-top: 2rem;
+        }
+
+        .footer-void {
+            padding: 80px 0;
+            text-align: center;
+            border-top: 1px solid rgba(255,215,0,0.1);
+            margin-top: 120px;
+        }
+
+        @media (max-width: 768px) {
+            .cp-hero-name { font-size: 3rem; }
+            .cp-hero-en { font-size: 1.5rem; }
+            .void-log-container { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 
 <body>
@@ -15,47 +228,131 @@
         <a href="../hololive_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO hololive</a>
         <span class="cp-nav-gen">hololive EN // Myth</span>
     </nav>
-    <section class="cp-hero">
+
+    <header class="cp-hero">
+        <div class="star-field"></div>
         <div class="cp-hero-content">
-            <div class="cp-gen-label">hololive English -Myth-</div>
             <h1 class="cp-hero-name">一伊那尓栖</h1>
             <span class="cp-hero-en">Ninomae Ina'nis</span>
-            <p class="cp-chara-desc">「古きもの」の司祭。ある日、一冊の不思議な本を手に入れてからタコのような触手を使えるようになった。圧倒的なイラストスキルと、穏やかで落ち着いた雰囲気が魅力。WAH.
+            <div class="wah-badge">W.A.H (We Are Happy)</div>
+            <p class="cp-chara-desc">
+                古き神の司祭。ある日「変な本」を拾ったことで触手を操れるようになった人間。<br>
+                プロ級の画力と、穏やかでダウナーな癒やしボイス、そして愛すべきダジャレ（Dad jokes）で世界を優しく侵略中。
             </p>
-            <div class="cp-tags">
-                <span class="cp-tag">#Priestess</span>
-                <span class="cp-tag">#Artist</span>
-                <span class="cp-tag">#EN</span>
+        </div>
+    </header>
+
+    <main class="cp-main" style="padding: 120px 20px; max-width: 1200px; margin: 0 auto;">
+        
+        <div class="cp-section cp-reveal">
+            <h2 class="cp-section-title">NECHRONOMICON DATA</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3 style="color: var(--chara-accent); font-weight: 950; margin-bottom: 2.5rem; font-size: 2rem; letter-spacing: 5px;">PRIESTESS INFO</h3>
+                    <table class="cp-table">
+                        <tr>
+                            <th>DEBUT</th>
+                            <td>2020.09.13</td>
+                        </tr>
+                        <tr>
+                            <th>BIRTHDAY</th>
+                            <td>5月20日</td>
+                        </tr>
+                        <tr>
+                            <th>LANGUAGE</th>
+                            <td>EN / JP / KR (Trilingual)</td>
+                        </tr>
+                        <tr>
+                            <th>FAN NAME</th>
+                            <td>Tentacult / Takodachis</td>
+                        </tr>
+                        <tr>
+                            <th>Oshi Mark</th>
+                            <td>🐙</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="cp-card" style="display: flex; flex-direction: column; justify-content: center;">
+                    <h3 style="color: var(--chara-accent); font-weight: 950; margin-bottom: 1.5rem; font-size: 2rem;">Ina's Dad Jokes</h3>
+                    <p style="font-size: 1.25rem; line-height: 2; font-weight: 400; color: #ddd; font-style: italic;">
+                        「あいにく」と言ってから「meet meat（ミートミート）」と繋げたり、<br>
+                        「素敵なステーキ」と呟いたりと、息を吸うようにダジャレを放つ。<br>
+                        「ダジャレ、ウケたことあるの？」と聞かれた際の返しは...<br>
+                        <span style="color: var(--chara-accent); font-weight: 800;">「……心が抉られたわ（Ina-flicted）」</span>
+                    </p>
+                </div>
             </div>
         </div>
-    </section>
-    <div class="cp-section cp-reveal">
-        <h2 class="cp-section-title">ARCHIVE DATA</h2>
-        <div class="cp-grid">
-            <div class="cp-card">
-                <h3>PROFILE</h3>
-                <table class="cp-table">
-                    <tr>
-                        <th>DEBUT</th>
-                        <td>2020.09.13</td>
-                    </tr>
-                    <tr>
-                        <th>AFFILIATION</th>
-                        <td>hololive EN</td>
-                    </tr>
-                    <tr>
-                        <th>STATUS</th>
-                        <td>Active</td>
-                    </tr>
-                </table>
+
+        <div class="cp-section cp-reveal" style="margin-top: 150px;">
+            <h2 class="cp-section-title">CHRONICLE OF TENTACLES</h2>
+
+            <div class="void-log-container">
+                <div class="void-log">
+                    <i class="fas fa-palette log-icon"></i>
+                    <div class="void-log-title">じゃじゃーん！超絶画力の衝撃</div>
+                    <div class="void-log-text">デビュー前にわざと下手な絵を投稿し、初配信で「あれは左の触手が描いたもの」と言い訳。直後にプロ級の自作絵を披露し、世界中のリスナーの度肝を抜いた伝説。</div>
+                </div>
+
+                <div class="void-log">
+                    <i class="fas fa-microphone log-icon"></i>
+                    <div class="void-log-title">「寿限無」一気読みの挨拶</div>
+                    <div class="void-log-text">初配信の挨拶にて、落語の「寿限無」をノーミスで完璧に読み上げる。終了後「寿限無よりは短いです、一伊那尓栖です」と秀逸なオチをつけた。</div>
+                </div>
+
+                <div class="void-log">
+                    <i class="fas fa-leaf log-icon"></i>
+                    <div class="void-log-title">きゅうりとタコダチのプロレス</div>
+                    <div class="void-log-text">きゅうりが大の苦手。離席中にリスナーが画面をきゅうりだらけにして遊び、戻った彼女に「おやつノクッキー無しだよ！」と怒られるのが恒例の癒やし風景。</div>
+                </div>
+
+                <div class="void-log">
+                    <i class="fas fa-train log-icon"></i>
+                    <div class="void-log-title">日本語学習は駅名から</div>
+                    <div class="void-log-text">日本の電車が大好きで、駅名の漢字やアナウンスで日本語を自習。「押上（おしあげ）」の「推し」という字に反応するなど、知的な一面を持つ。</div>
+                </div>
+
+                <div class="void-log">
+                    <i class="fas fa-fish log-icon"></i>
+                    <div class="void-log-title">煮干し狂想曲（ペット用も可）</div>
+                    <div class="void-log-text">来日時に煮干しにハマり在庫を枯らす。帰国後、どうしても食べたくて「塩が付いていないだけなら一緒」とワンちゃん用の煮干しまで実食した猛者。</div>
+                </div>
+
+                <div class="void-log">
+                    <i class="fas fa-star log-icon"></i>
+                    <div class="void-log-title">限界オタク（星詠み）の姿</div>
+                    <div class="void-log-text">星街すいせいの大ファン。念願の対面を果たすも、緊張でフリーズしハグもできず。後日「夜な夜な悔しくてブランケットを蹴飛ばしている」と語った。</div>
+                </div>
             </div>
-            <div class="cp-card">
-                <h3>EPISODES</h3>
-                <p>超絶技巧のイラスト配信は、観る者を魔法のような時間へと誘う。穏やかな語り口と、時折見せるダジャレ（Inaff!）でリスナーの心を癒やし続けている、Mythの「癒やし」担当。</p>
+
+            <div class="quote-box cp-reveal">
+                <p class="main-quote">
+                    「もし私があなたの人生に少しでも色を添えられるなら、それだけで私は幸せなんです。」
+                </p>
+                <p style="color: #aaa; font-weight: 500; font-size: 1.1rem; line-height: 2;">
+                    Mythの1周年コラボでは、直接会えない寂しさに涙しながら<br>
+                    「いつかみんなと本当にハグしたい」と語り、タコダチの涙を誘った。
+                </p>
+                <div class="inaff-badge">WE ARE HAPPY. <i class="fas fa-heart"></i></div>
             </div>
+
         </div>
-    </div>
-    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+
+    </main>
+
+    <footer class="footer-void">
+        <p style="font-weight: 950; letter-spacing: 5px; color: var(--chara-accent);">&copy; 2020-2025 COVER CORP. // ANCIENT ONE'S BLESSING</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => { entry.isIntersecting && entry.target.classList.add('active'); });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
 
-</html>
+</html>
