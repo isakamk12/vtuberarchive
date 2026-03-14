@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gigi Murin (ジジ・ムリン) — hololive EN</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --c1: #FFA500; /* Gremlin Orange */
+            --c2: #FFD700; /* Gold */
+            --bg: #1A120B;
+            --card-bg: rgba(255, 165, 0, 0.05);
+            --accent: #8B4513; /* Saddle Brown */
+            --glass: rgba(255, 255, 255, 0.03);
+            --border: rgba(255, 165, 0, 0.2);
+            --text: #F5E6D3;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Outfit', 'Fredoka', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .bg-pattern {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: 
+                radial-gradient(circle at 10% 10%, rgba(255, 165, 0, 0.1) 0%, transparent 40%),
+                radial-gradient(circle at 90% 90%, rgba(139, 69, 19, 0.1) 0%, transparent 40%);
+        }
+
+        .bg-pattern::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 5 L30 15 L40 20 L30 25 L25 35 L20 25 L10 20 L20 15 Z' fill='%23FFA500' fill-opacity='0.03'/%3E%3C/svg%3E");
+        }
+
+        nav {
+            padding: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .back-link {
+            color: var(--c1);
+            text-decoration: none;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: 0.3s;
+        }
+
+        .back-link:hover {
+            color: var(--c2);
+            transform: scale(1.1);
+        }
+
+        .gen-tag {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            color: var(--c1);
+            font-family: 'Fredoka', sans-serif;
+        }
+
+        header {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 10%;
+        }
+
+        .hero-title {
+            font-family: 'Fredoka', sans-serif;
+            font-size: clamp(3rem, 10vw, 8rem);
+            font-weight: 700;
+            color: var(--c1);
+            line-height: 0.9;
+            margin-bottom: 1rem;
+            filter: drop-shadow(0 0 20px rgba(255, 165, 0, 0.4));
+        }
+
+        .hero-jp {
+            font-size: 1.5rem;
+            color: var(--text);
+            letter-spacing: 5px;
+            opacity: 0.8;
+        }
+
+        .hero-catch {
+            margin-top: 2rem;
+            font-style: italic;
+            color: var(--c2);
+            max-width: 600px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            padding: 5% 10%;
+        }
+
+        .stat-card {
+            background: var(--glass);
+            border: 1px solid var(--border);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .stat-card:hover {
+            background: var(--card-bg);
+            transform: translateY(-10px) rotate(2deg);
+            border-color: var(--c1);
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--c1);
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .episode-section {
+            padding: 5% 10%;
+        }
+
+        .section-title {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 3rem;
+            margin-bottom: 4rem;
+            color: var(--c1);
+            text-align: center;
+        }
+
+        .episode-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .episode-card {
+            background: var(--glass);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            transition: 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .episode-card:hover {
+            background: var(--card-bg);
+            border-color: var(--c2);
+        }
+
+        .episode-tag {
+            color: var(--c1);
+            font-weight: 700;
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .episode-title {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .episode-text {
+            color: rgba(245, 230, 211, 0.7);
+            font-size: 0.95rem;
+        }
+
+        footer {
+            padding: 5rem;
+            text-align: center;
+            opacity: 0.5;
+            font-size: 0.8rem;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            .episode-grid { grid-template-columns: 1fr; }
+            .hero-title { font-size: 4rem; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-pattern"></div>
+
+    <nav>
+        <a href="../../hololive_index.html" class="back-link"><i class="fa-solid fa-gamepad"></i> JUSTICE</a>
+        <div class="gen-tag">GREMLIN CHASER</div>
+    </nav>
+
+    <header>
+        <h1 class="hero-title reveal">Gigi Murin</h1>
+        <span class="hero-jp reveal">ジジ・ムリン</span>
+        <p class="hero-catch reveal">「え？でも面白かったじゃん！ 怒らないでよ！」</p>
+    </header>
+
+    <div class="stats-grid reveal">
+        <div class="stat-card">
+            <span class="stat-label">Birthday</span>
+            <span class="stat-value">October 18</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-label">Height</span>
+            <span class="stat-value">153cm</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-label">Luck</span>
+            <span class="stat-value">D20 (1/20)</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-label">Fandom</span>
+            <span class="stat-value">Gremurins</span>
+        </div>
+    </div>
+
+    <section class="episode-section">
+        <h2 class="section-title reveal">CHAOS LOGS</h2>
+        <div class="episode-grid">
+            <div class="episode-card reveal">
+                <span class="episode-tag">Madness</span>
+                <h3 class="episode-title">狂気の「September」8時間耐久</h3>
+                <p class="episode-text">
+                    Earth, Wind & Fireの「September」のみを8時間歌い続けるという狂気の配信を敢行。21種類の楽器や奇妙な背景、そしてチャット欄を埋め尽くした謎のスパム。ホロライブ史に刻まれる伝説の「狂った」夜。
+                </p>
+            </div>
+
+            <div class="episode-card reveal">
+                <span class="episode-tag">Skill</span>
+                <h3 class="episode-title">3919ピースを繋ぐ「パズルゴッド」</h3>
+                <p class="episode-text">
+                    新春ゲーム祭にて、超難易度のデジタルパズルで驚異の集中力を発揮。チーム全体の約3割を一人で完成させ、大空スバルから「パズルゴッド」の称号を授けられた。クソガキの裏に隠されたガチの作業耐性。
+                </p>
+            </div>
+
+            <div class="episode-card reveal">
+                <span class="episode-tag">Intellectual</span>
+                <h3 class="episode-title">初代ホロスペリング王</h3>
+                <p class="episode-text">
+                    普段の「頭空っぽ」ムーブに反し、スペリング大会で唯一のノーミス優勝。超難解単語をあっさり正解し、「昔、小説家になりたかった」という意外な知的バックグラウンドを披露した。
+                </p>
+            </div>
+
+            <div class="episode-card reveal">
+                <span class="episode-tag">Chaos 3D</span>
+                <h3 class="episode-title">3Dお披露目ミュージカルの衝撃</h3>
+                <p class="episode-text">
+                    「ダンボールに異世界転生」から始まり、実写のお爺さん、ネリッサとの謎の出産、ドラゴン討伐。ジジの脳内をそのまま具現化したような、視聴者の理解を3周遅れにするカオス空間を作り上げた。
+                </p>
+            </div>
+
+            <div class="episode-card reveal">
+                <span class="episode-tag">LoL Harassment</span>
+                <h3 class="episode-title">Calliopeのクローン生成</h3>
+                <p class="episode-text">
+                    憧れのCalliope先輩をLoLに誘うも断られ続け、ついには「Calliopeのクローン」を配信に登場させ、勝手に一緒にプレイしているテイの偽装ニュースを流すという前代未聞のハラスメント（愛）を行った。
+                </p>
+            </div>
+
+            <div class="episode-card reveal">
+                <span class="episode-tag">Unit: CCGG</span>
+                <h3 class="episode-title">セシリアとの「終わらないプロレス」</h3>
+                <p class="episode-text">
+                    同期のセシリアとは「AutoFister」コンビとして知られ、配信では互いを崖から突き落とすなどの激しいプロレスを展開。しかし裏では常に手を繋いでいるという噂も絶えない、Justice屈指の絆。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 VTuber Archive - Gigi Murin Fan Space</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) entry.target.classList.add('active');
+                });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

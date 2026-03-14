@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const agencies = [
 
         // ── JAPAN (稼働中) ──
-        // ── JAPAN (稼働中) ──
+
         {
             name: "あおぎり高校",
             name_en: "Aogiri High School",
@@ -353,7 +353,7 @@ document.addEventListener('DOMContentLoaded', () => {
             desc_ko: "고양이를 모티브로 한 컨셉이 명확한 사무소입니다. 공식 사이트는 귀여운 디자인으로 통일되어 있으며 팬들을 위한 콘텐츠가 충실합니다."
         },
         {
-            name: "NeoPorte", sub: "ネオポルテ", filter: "corporate", color: "221, 24, 24", icon: "N", url: "NeoPorte/neoporte_index.html", tags: ["Esports", "CR-Mafu"],
+            name: "NeoPorte", sub: "ネオポルテ", filter: "corporate", color: "221, 24, 24", icon: "N", url: "NeoPorte/neoporte_index.html", tags: ["Esports", "Gaming", "JP"],
             desc: "ゲームと配信のプロフェッショナルが設立。公式サイトはゲーマー向けのクールなデザインで、大会実績などが詳しく掲載されている。",
             desc_en: "Founded by gaming and streaming pros. Their cool, gamer-centric site highlights tournament achievements and talent info.",
             desc_es: "Fundada por profesionales del gaming y streaming. Su sitio centrado en gamers destaca logros en torneos e info de talentos.",
@@ -695,12 +695,12 @@ document.addEventListener('DOMContentLoaded', () => {
             color: "0, 210, 255",
             icon: "H",
             url: "Hololive/hololive_index.html",
-            tags: ["Idol", "Global", "ときのそら", "星街すいせい", "赤井はあと", "はあちゃま", "百鬼あやめ", "癒月ちょこ", "大空スバル", "大神ミオ", "猫又おかゆ", "戌神ころね", "白銀ノエル", "兎田ぺこら", "不知火フレア", "宝鐘マリン", "角巻わため", "姫森ルーナ", "桃鈴ねね", "雪花ラミィ", "ラプラス・ダークネス", "山田", "獅白ぼたん", "尾丸ポルカ", "鷹嶺ルイ", "博衣こより", "風真いろは", "沙花叉クロヱ", "天音かなた", "桐生ココ", "紫咲シオン", "湊あくあ"],
-            desc: "にじさんじと並ぶ業界の双璧。公式サイトは世界中のファンを対象とした多言語対応が完璧で、情報の網羅性は世界一と言える。",
-            desc_en: "A global leader alongside NIJISANJI. Their site features perfect multi-language support for fans worldwide.",
-            desc_es: "Líder global junto a NIJISANJI. Su sitio cuenta con un soporte multiidioma perfecto para fans de todo el mundo.",
-            desc_zh: "与彩虹社并驾齐驱的行业巨头。官网完美支持多语言，面向全球粉丝，信息全面性堪称世界一流。",
-            desc_ko: "니지산지와 나란히 업계를 이끄는 양대 산맥입니다. 전 세계 팬들을 위한 다국어 지원이 완벽하며 정보의 포괄성은 세계 최고 수준입니다."
+            tags: ["Idol", "Music"],
+            desc: "世界的人気を誇るVTuberグループ。公式サイトは世界中のファンに対応した多言語展開が完璧で、情報の網羅性に優れている。",
+            desc_en: "A world-famous VTuber group. Their site features perfect multi-language support for fans worldwide.",
+            desc_es: "Un grupo VTuber de fama mundial. Su sitio cuenta con un soporte multiidioma perfecto para fans de todo el mundo.",
+            desc_zh: "享誉全球的VTuber团体。官网完美支持多语言，面向全球粉丝，信息全面性极佳。",
+            desc_ko: "전 세계적으로 인기를 끌고 있는 버추얼 유튜버 그룹입니다. 전 세계 팬들을 위한 다국어 지원이 완벽하며 정보의 포괄성은 세계 최고 수준입니다."
         },
         {
             name: "Marble Creators",
@@ -1031,7 +1031,7 @@ document.addEventListener('DOMContentLoaded', () => {
             color: "63, 43, 150",
             icon: "P",
             url: "PhaseConnect/phaseconnect_index.html",
-            tags: ["EN", "Coffee"],
+            tags: ["EN", "Agency", "Variety"],
             desc: "英語圏で独特の存在感を放つ。公式サイトは各メンバーのプロフィールが非常に詳しく、海外のミームにも対応している。",
             desc_en: "Has a unique presence in the English-speaking world. Their site features highly detailed member profiles and embraces international memes.",
             desc_es: "Tiene una presencia única en el mundo de habla inglesa. Su sitio presenta perfiles de miembros muy detallados y adopta memes internacionales.",
@@ -1710,6 +1710,149 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ];
 
+    const MAX_CARD_TAGS = 5;
+    const BLOCKED_TAGS = new Set(['CR-Mafu', 'Coffee']);
+    const INVESTIGATING_TAG = '調査中';
+    const agencyTagTranslations = {
+        '3D': { ja: '3D', en: '3D', es: '3D', zh: '3D', ko: '3D' },
+        '3D Idol': { ja: '3Dアイドル', en: '3D Idol', es: 'Idol 3D', zh: '3D偶像', ko: '3D 아이돌' },
+        'Agency': { ja: '事務所', en: 'Agency', es: 'Agencia', zh: '事务所', ko: '에이전시' },
+        'Asia': { ja: 'アジア', en: 'Asia', es: 'Asia', zh: '亚洲', ko: '아시아' },
+        'Brave Group': { ja: 'Brave Group', en: 'Brave Group', es: 'Brave Group', zh: 'Brave Group', ko: 'Brave Group' },
+        'Comedy': { ja: 'コメディ', en: 'Comedy', es: 'Comedia', zh: '喜剧', ko: '코미디' },
+        'Corporate': { ja: '企業', en: 'Corporate', es: 'Corporativo', zh: '企业', ko: '기업' },
+        'Creator': { ja: 'クリエイター', en: 'Creator', es: 'Creador', zh: '创作者', ko: '크리에이터' },
+        'CN': { ja: '中国圏', en: 'CN', es: 'CN', zh: '中文', ko: '중국어권' },
+        'Cute': { ja: 'キュート', en: 'Cute', es: 'Cute', zh: '可爱', ko: '큐트' },
+        'EN': { ja: '英語圏', en: 'EN', es: 'EN', zh: '英语', ko: '영어권' },
+        'Esports': { ja: 'eスポーツ', en: 'Esports', es: 'eSports', zh: '电子竞技', ko: 'e스포츠' },
+        'EU': { ja: '欧州', en: 'EU', es: 'EU', zh: '欧洲', ko: '유럽' },
+        'FPS': { ja: 'FPS', en: 'FPS', es: 'FPS', zh: '第一人称射击', ko: 'FPS' },
+        'Gaming': { ja: 'ゲーム', en: 'Gaming', es: 'Gaming', zh: '游戏', ko: '게임' },
+        'Global': { ja: 'グローバル', en: 'Global', es: 'Global', zh: '全球', ko: '글로벌' },
+        'HQ': { ja: '本部', en: 'HQ', es: 'Sede', zh: '总部', ko: '본부' },
+        'Holdings': { ja: '持株会社', en: 'Holdings', es: 'Holding', zh: '控股', ko: '지주사' },
+        'Idol': { ja: 'アイドル', en: 'Idol', es: 'Idol', zh: '偶像', ko: '아이돌' },
+        'Indie': { ja: '個人勢', en: 'Indie', es: 'Indie', zh: '个人势', ko: '인디' },
+        'Individual': { ja: '個人', en: 'Individual', es: 'Individual', zh: '个人', ko: '개인' },
+        'JP': { ja: '日本', en: 'JP', es: 'JP', zh: '日本', ko: '일본' },
+        'KR': { ja: '韓国圏', en: 'KR', es: 'KR', zh: '韩语', ko: '한국어권' },
+        'Legend': { ja: '伝説級', en: 'Legend', es: 'Leyenda', zh: '传奇', ko: '레전드' },
+        'Live': { ja: 'ライブ', en: 'Live', es: 'Directo', zh: '直播', ko: '라이브' },
+        'Manga': { ja: 'マンガ', en: 'Manga', es: 'Manga', zh: '漫画', ko: '만화' },
+        'Media Mix': { ja: 'メディアミックス', en: 'Media Mix', es: 'Media Mix', zh: '多媒体联动', ko: '미디어 믹스' },
+        'Magic': { ja: 'マジック', en: 'Magic', es: 'Magia', zh: '魔法', ko: '마법' },
+        'Multilingual': { ja: '多言語', en: 'Multilingual', es: 'Multilingue', zh: '多语言', ko: '다국어' },
+        'Music': { ja: '音楽', en: 'Music', es: 'Música', zh: '音乐', ko: '음악' },
+        'MY': { ja: 'マレーシア', en: 'MY', es: 'MY', zh: '马来西亚', ko: '말레이시아' },
+        'Pioneer': { ja: '先駆', en: 'Pioneer', es: 'Pionero', zh: '先驱', ko: '개척자' },
+        'Platform': { ja: '配信基盤', en: 'Platform', es: 'Plataforma', zh: '平台', ko: '플랫폼' },
+        'Pop': { ja: 'ポップ', en: 'Pop', es: 'Pop', zh: '流行', ko: '팝' },
+        'Regional': { ja: '地域密着', en: 'Regional', es: 'Regional', zh: '地区', ko: '지역' },
+        'Shorts': { ja: 'ショート動画', en: 'Shorts', es: 'Cortos', zh: '短视频', ko: '쇼츠' },
+        'Sony': { ja: 'ソニー', en: 'Sony', es: 'Sony', zh: '索尼', ko: '소니' },
+        'Streamer': { ja: '配信者', en: 'Streamer', es: 'Streamer', zh: '主播', ko: '스트리머' },
+        'Synth': { ja: 'シンセ', en: 'Synth', es: 'Sinte', zh: '合成器', ko: '신스' },
+        'Tech': { ja: '技術', en: 'Tech', es: 'Tecnología', zh: '技术', ko: '기술' },
+        'Tokyo': { ja: '東京', en: 'Tokyo', es: 'Tokio', zh: '东京', ko: '도쿄' },
+        'Under Investigation': { ja: '調査中', en: 'Under Investigation', es: 'En investigación', zh: '调查中', ko: '조사 중' },
+        'Underground': { ja: 'アンダーグラウンド', en: 'Underground', es: 'Subterráneo', zh: '地下', ko: '언더그라운드' },
+        'Variety': { ja: 'バラエティ', en: 'Variety', es: 'Variedad', zh: '综合', ko: '버라이어티' },
+        'Virtual Art': { ja: 'バーチャルアート', en: 'Virtual Art', es: 'Arte Virtual', zh: '虚拟艺术', ko: '버추얼 아트' },
+        'Worldbuilding': { ja: '世界観', en: 'Worldbuilding', es: 'Construcción de mundo', zh: '世界观', ko: '세계관' }
+    };
+    const ALLOWED_AGENCY_TAGS = new Set([
+        ...Object.keys(agencyTagTranslations),
+        INVESTIGATING_TAG,
+        'Defunct'
+    ]);
+    const inferredAgencyTagRules = [
+        { tag: 'Agency', match: (agency, text) => agency.name !== '個人勢 VTuber' && ['major', 'corporate', 'global'].includes(agency.filter) },
+        { tag: 'Corporate', match: (_agency, text) => /持ち株会社|corporate|company/i.test(text) },
+        { tag: 'Holdings', match: (_agency, text) => /持ち株会社|holding company|holdings/i.test(text) },
+        { tag: 'Music', match: (_agency, text) => /音楽|music|singer|discography|song|vsinger/i.test(text) },
+        { tag: 'Idol', match: (_agency, text) => /アイドル|idol/i.test(text) },
+        { tag: 'Comedy', match: (_agency, text) => /コメディ|comedy|お笑い/i.test(text) },
+        { tag: 'Shorts', match: (_agency, text) => /ショート|shorts?/i.test(text) },
+        { tag: 'Variety', match: (_agency, text) => /バラエティ|variety|多様|diverse|diversity/i.test(text) },
+        { tag: 'Gaming', match: (_agency, text) => /ゲーム|gaming|gamer|gameplay|実況/i.test(text) },
+        { tag: 'Esports', match: (_agency, text) => /eスポーツ|esports|tournament|大会|fps/i.test(text) },
+        { tag: '3D', match: (_agency, text) => /3d|xr|vr|モーション/i.test(text) },
+        { tag: 'Tech', match: (_agency, text) => /技術|technology|tech|platform/i.test(text) },
+        { tag: 'Multilingual', match: (_agency, text) => /多言語|multilingual|trilingual|bilingual|language support/i.test(text) },
+        { tag: 'Global', match: (agency, text) => agency.filter === 'global' || /グローバル|global|international|海外/i.test(text) },
+        { tag: 'Regional', match: (_agency, text) => /地域|ご当地|regional|local/i.test(text) },
+        { tag: 'Media Mix', match: (_agency, text) => /メディアミックス|media mix|既存のip|linked with the existing ip/i.test(text) },
+        { tag: 'Virtual Art', match: (_agency, text) => /芸術|artistic|virtual art|アート/i.test(text) },
+        { tag: 'Worldbuilding', match: (_agency, text) => /世界観|物語|storytelling|worldview|narrative/i.test(text) },
+        { tag: 'Creator', match: (_agency, text) => /クリエイター|creator|漫画|manga/i.test(text) },
+        { tag: 'Platform', match: (_agency, text) => /配信プラットフォーム|platform/i.test(text) },
+        { tag: 'Live', match: (_agency, text) => /ライブ|live information|concert/i.test(text) },
+        { tag: 'Pioneer', match: (_agency, text) => /老舗|pioneer|先駆/i.test(text) }
+    ];
+
+    function buildAgencyTagHaystack(agency) {
+        return [
+            agency.name,
+            agency.sub,
+            agency.desc,
+            agency.desc_en,
+            agency.desc_es,
+            agency.desc_zh,
+            agency.desc_ko
+        ]
+            .filter(Boolean)
+            .join(' ')
+            .toLowerCase();
+    }
+
+    function translateAgencyTag(tag) {
+        const baseLang = currentLang.split('-')[0];
+        return agencyTagTranslations[tag]?.[baseLang] || agencyTagTranslations[tag]?.[currentLang] || tag;
+    }
+
+    function resolveAgencyTags(agency) {
+        const sourceTags = Array.isArray(agency.tags) ? agency.tags : [];
+        if (sourceTags.includes(INVESTIGATING_TAG)) {
+            return [INVESTIGATING_TAG];
+        }
+
+        const haystack = buildAgencyTagHaystack(agency);
+        const resolved = [];
+        const dropped = [];
+
+        const addTag = (tag) => {
+            if (!tag || resolved.length >= MAX_CARD_TAGS || BLOCKED_TAGS.has(tag) || !ALLOWED_AGENCY_TAGS.has(tag) || resolved.includes(tag)) {
+                if (tag && (BLOCKED_TAGS.has(tag) || !ALLOWED_AGENCY_TAGS.has(tag))) {
+                    dropped.push(tag);
+                }
+                return;
+            }
+            resolved.push(tag);
+        };
+
+        sourceTags.forEach(addTag);
+        inferredAgencyTagRules.forEach((rule) => {
+            if (resolved.length < MAX_CARD_TAGS && rule.match(agency, haystack)) {
+                addTag(rule.tag);
+            }
+        });
+
+        if (sourceTags.length > MAX_CARD_TAGS || dropped.length > 0) {
+            console.debug('[tag-debug]', agency.name, {
+                source: sourceTags,
+                resolved,
+                dropped
+            });
+        }
+
+        return resolved.slice(0, MAX_CARD_TAGS);
+    }
+
+    agencies.forEach((agency) => {
+        agency.resolvedTags = resolveAgencyTags(agency);
+    });
+
     // Total Count Update
     totalAgenciesEl.textContent = agencies.length;
 
@@ -1726,64 +1869,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
         data.forEach((agency, index) => {
             const card = document.createElement('div');
-            const isDefunct = agency.tags && agency.tags.includes('Defunct');
+            const tags = agency.resolvedTags || [];
+            const isDefunct = tags.includes('Defunct');
             card.className = `datapanel-card fade-in${isDefunct ? ' card-defunct' : ''}`;
             card.style.animationDelay = `${index * 0.05}s`;
             card.style.setProperty('--brand-rgb', agency.color);
 
             // Build Tags HTML
             let tagsHTML = '';
-            if (agency.tags && agency.tags.length > 0) {
+            if (tags.length > 0) {
                 tagsHTML = `<div class="card-tags">
-                    ${agency.tags.map(tag => {
+                    ${tags.map(tag => {
                     let cls = 'card-tag';
-                    let displayTag = tag;
-
-                    // Dynamic Tag Translation Mapping
-                    const tagMap = {
-                        'Comedy': { en: 'Comedy', es: 'Comedia', zh: '喜剧', ko: '코미디' },
-                        'Shorts': { en: 'Shorts', es: 'Cortos', zh: '短视频', ko: '쇼츠' },
-                        'Esports': { en: 'Esports', es: 'eSports', zh: '电子竞技', ko: 'e스포츠' },
-                        'FPS': { en: 'FPS', es: 'FPS', zh: '第一人称射击', ko: 'FPS' },
-                        'Pop': { en: 'Pop', es: 'Pop', zh: '流行', ko: '팝' },
-                        'Streamer': { en: 'Streamer', es: 'Streamer', zh: '主播', ko: '스트리머' },
-                        'Idol': { en: 'Idol', es: 'Idol', zh: '偶像', ko: '아이돌' },
-                        'Global': { en: 'Global', es: 'Global', zh: '全球', ko: '글로벌' },
-                        'Music': { en: 'Music', es: 'Música', zh: '音乐', ko: '음악' },
-                        'Agency': { en: 'Agency', es: 'Agencia', zh: '事务所', ko: '에이전시' },
-                        'JP': { en: 'JP', es: 'JP', zh: '日本', ko: '일본' },
-                        'EN': { en: 'EN', es: 'EN', zh: '英语', ko: '영어' },
-                        'KR': { en: 'KR', es: 'KR', zh: '韩语', ko: '한국어' },
-                        'CN': { en: 'CN', es: 'CN', zh: '中文', ko: '중국어' },
-                        'EU': { en: 'EU', es: 'EU', zh: '欧洲', ko: '유럽' },
-                        'Legend': { en: 'Legend', es: 'Leyenda', zh: '传奇', ko: '레전드' },
-                        'Music': { en: 'Music', es: 'Música', zh: '音乐', ko: '음악' },
-                        'Underground': { en: 'Underground', es: 'Subterráneo', zh: '地下', ko: '언더그라운드' },
-                        'Coffee': { en: 'Coffee', es: 'Café', zh: '咖啡', ko: '커피' },
-                        'HQ': { en: 'HQ', es: 'Sede', zh: '总部', ko: '본부' },
-                        'Individual': { en: 'Individual', es: 'Individual', zh: '个人', ko: '개인' },
-                        'Regional': { en: 'Regional', es: 'Regional', zh: '地区', ko: '지역' },
-                        'Manga': { en: 'Manga', es: 'Manga', zh: '漫画', ko: '만화' },
-                        'Legend': { en: 'Legend', es: 'Leyenda', zh: '传奇', ko: '레전드' },
-                        'Pioneer': { en: 'Pioneer', es: 'Pionero', zh: '先驱', ko: '개척자' },
-                        'Media Mix': { en: 'Media Mix', es: 'Media Mix', zh: '多媒体联动', ko: '미디어 믹스' },
-                        'Synth': { en: 'Synth', es: 'Sinte', zh: '合成器', ko: '신스' },
-                        'Virtual Art': { en: 'Virtual Art', es: 'Arte Virtual', zh: '虚拟艺术', ko: '버추얼 아트' },
-                        'Variety': { en: 'Variety', es: 'Variedad', zh: '综合', ko: '버라이어티' }
-                    };
-
-                    const baseLang = currentLang.split('-')[0]; // Simple mapping for zh-Hans -> zh
-                    if (tagMap[tag] && tagMap[tag][baseLang]) {
-                        displayTag = tagMap[tag][baseLang];
-                    }
+                    let displayTag = translateAgencyTag(tag);
 
                     if (tag === 'Defunct') {
                         cls += ' tag-defunct';
-                        displayTag = (currentLang === 'en') ? 'Defunct' : '活動終了';
+                        displayTag = (currentLang.split('-')[0] === 'en') ? 'Defunct' : '活動終了';
                     }
-                    if (tag === '調査中') {
+                    if (tag === INVESTIGATING_TAG) {
                         cls += ' tag-chosa';
-                        displayTag = (currentLang === 'en') ? 'Under Investigation' : '調査中';
+                        displayTag = translateAgencyTag('Under Investigation');
                     }
                     return `<span class="${cls}">${displayTag}</span>`;
                 }).join('')}
@@ -1841,7 +1947,7 @@ document.addEventListener('DOMContentLoaded', () => {
             card.addEventListener('click', () => {
                 if (agency.url && agency.url !== '#') {
                     window.location.href = agency.url;
-                } else if (agency.tags && agency.tags.includes('調査中')) {
+                } else if (tags.includes(INVESTIGATING_TAG)) {
                     alert(translations[currentLang].alert_investigating);
                 } else {
                     alert(translations[currentLang].alert_not_active);
@@ -1883,7 +1989,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 item.name.toLowerCase().includes(query) ||
                 item.sub.toLowerCase().includes(query) ||
                 (item.desc && item.desc.toLowerCase().includes(query)) ||
-                (item.tags && item.tags.some(tag => tag.toLowerCase().includes(query)))
+                (item.resolvedTags && item.resolvedTags.some(tag => tag.toLowerCase().includes(query)))
             );
         }
         renderAgencies(results);

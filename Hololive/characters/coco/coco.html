@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>桐生ココ (Kiryu Coco) — hololive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            --chara-color: #ff9800; /* Dragon Orange */
+            --chara-accent: #fbc02d; /* Gold / Majestic */
+            --bg-dark: #bf360c;
+            --card-bg: rgba(255, 255, 255, 0.95);
+            --text-main: #5d4037;
+        }
+
+        .cp-bg {
+            background: radial-gradient(circle at center, #fff3e0 0%, #ffe0b2 100%);
+            opacity: 0.15;
+            z-index: -1;
+        }
+
+        body {
+            color: var(--text-main);
+            background-color: #fff;
+        }
+
+        .cp-nav {
+            background: rgba(191, 54, 12, 0.9);
+        }
+
+        .cp-hero {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1577493340887-b7bfff550145?auto=format&fit=crop&q=80&w=1000') center/cover;
+            color: #fff;
+            padding: 130px 20px;
+            text-align: center;
+            border-bottom: 10px solid var(--chara-accent);
+        }
+
+        .cp-hero-name {
+            font-size: 5.5rem;
+            font-weight: 950;
+            text-shadow: 0 0 40px rgba(255, 152, 0, 0.6);
+            letter-spacing: 2px;
+        }
+
+        .cp-tag {
+            background: #fff;
+            color: var(--bg-dark);
+            border: 2px solid var(--chara-color);
+            border-radius: 4px;
+            font-weight: 950;
+        }
+
+        .cp-section-title {
+            font-size: 3.2rem;
+            font-weight: 950;
+            color: var(--bg-dark);
+            text-align: center;
+            margin-bottom: 4.5rem;
+            text-transform: uppercase;
+        }
+
+        .cp-section-title::after {
+            content: "🐉";
+            display: inline-block;
+            margin-left: 15px;
+        }
+
+        .cp-card {
+            background: #fff;
+            border: 2px solid #ffe0b2;
+            box-shadow: 0 15px 50px rgba(191, 54, 12, 0.08);
+            border-radius: 15px;
+        }
+
+        .cp-table th {
+            color: var(--bg-dark);
+            font-weight: 950;
+        }
+
+        .ep-card {
+            background: #fff;
+            border-left: 15px solid var(--chara-color);
+            padding: 3.5rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.06);
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            position: relative;
+        }
+
+        .ep-card:hover {
+            transform: translateX(15px);
+            border-left-color: var(--chara-accent);
+        }
+
+        .ep-num {
+            background: var(--bg-dark);
+            color: #fff;
+            padding: 5px 20px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 900;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        .ep-title {
+            font-size: 2.2rem;
+            font-weight: 950;
+            color: var(--bg-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .ep-quote {
+            background: #fff8e1;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-top: 2.5rem;
+            font-weight: 800;
+            color: #5d4037;
+            font-style: italic;
+            line-height: 2;
+            border: 2px dashed var(--chara-color);
+        }
+
+        .cp-footer {
+            background: #1a1a1a;
+            color: var(--chara-accent);
+        }
+
+        /* Dragon Tail Decoration */
+        .dragon-decor {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 120px;
+            height: 120px;
+            background: url('https://api.iconify.design/mdi:dragon.svg?color=%23ff9800') no-repeat center/contain;
+            opacity: 0.1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a href="../../hololive_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO hololive</a>
+        <span class="cp-nav-gen">4期生 (Graduate) // JP/EN</span>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-content">
+            <div class="cp-gen-label" style="background: var(--chara-accent); color: #000; padding: 5px 20px; font-weight: 950; border-radius: 4px; margin-bottom: 1.5rem; display: inline-block; letter-spacing: 2px;">THE LEGENDARY CHAIRMAN</div>
+            <h1 class="cp-hero-name">桐生ココ</h1>
+            <span class="cp-hero-en" style="font-size: 2.5rem; font-weight: 950; display: block; margin-bottom: 3rem; color: #ffe0b2;">Kiryu Coco</span>
+            <p class="cp-chara-desc" style="max-width: 950px; margin: 0 auto; font-size: 1.4rem; line-height: 2; font-weight: 600;">
+                「Good Morning Motherf**kers!!」<br>
+                人間の文化に興味を持ち、異世界からやってきたドラゴンの子。伝説の朝番組『あさココLIVE』や、海を越えたファンを繋ぐ企画でホロライブの歴史を塗り替えた。任侠を重んじ、誰よりも仲間を愛した永遠の会長。
+            </p>
+            <div class="cp-tags" style="margin-top: 4rem;">
+                <span class="cp-tag">#桐生会</span>
+                <span class="cp-tag">#あさココ</span>
+                <span class="cp-tag">#たつのこ</span>
+                <span class="cp-tag">#RedditShitpostReview</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="cp-main" style="padding: 120px 20px; max-width: 1150px; margin: 0 auto;">
+        
+        <div class="cp-section cp-reveal">
+            <div class="cp-grid">
+                <div class="cp-card" style="padding: 60px; position: relative;">
+                    <div class="dragon-decor"></div>
+                    <h3 style="color: var(--bg-dark); margin-bottom: 3rem; font-weight: 950; font-size: 2.22rem; border-bottom: 6px solid var(--chara-accent); display: inline-block;">CHAIRMAN'S FILE</h3>
+                    <table class="cp-table">
+                        <tr>
+                            <th>誕生日</th>
+                            <td>6月17日</td>
+                        </tr>
+                        <tr>
+                            <th>年齢</th>
+                            <td>3500歳+</td>
+                        </tr>
+                        <tr>
+                            <th>身長</th>
+                            <td>180cm (人型) / 7m (竜型)</td>
+                        </tr>
+                        <tr>
+                            <th>ファン名</th>
+                            <td>たつのこ</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="cp-card" style="padding: 60px; background: var(--bg-dark); color: #fff;">
+                    <h3 style="color: var(--chara-accent); margin-bottom: 2.5rem; font-weight: 900; font-size: 2rem;">ドラゴンのこだわり</h3>
+                    <p style="line-height: 2.3; font-size: 1.2rem; opacity: 0.95;">
+                        人間の姿を保つために「爆乳爆尻」であることに異常なまでのこだわりを持つ。破天荒な言動の裏で、深夜から明け方まで一人で『あさココ』の準備をこなすストイックな努力家。英語と日本語の架け橋となり、ホロライブを世界へと押し上げた。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cp-section cp-reveal">
+            <h2 class="cp-section-title">THE COCO LEGACY</h2>
+
+            <div class="ep-card">
+                <span class="ep-num">ACT 01</span>
+                <div class="ep-title">「今年中に9万人」という計算ミス</div>
+                <p>デビュー配信にて「今年中に9万人」という高い目標を掲げるが、デビュー日が12月28日だったため、あと3日しかないことに気づき悶絶。伝説のお茶目なスタートを切った。</p>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">ACT 02</span>
+                <div class="ep-title">革命の朝番組『あさココLIVE』</div>
+                <p>毎朝6時の配信のために深夜から一人で準備。ホロメンの不祥事（？）をニュース形式で面白おかしく紹介し、箱全体の認知度を爆発的に高めた伝説のコンテンツ。</p>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">ACT 03</span>
+                <div class="ep-title">YAGOOの夢を粉砕する日々</div>
+                <p>「AKBのようなグループを」という谷郷社長（YAGOO）の清楚な夢を、クソコラやミームで次々と粉砕。しかし、その破壊力が新たなアイドル像を確立させた。</p>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">ACT 04</span>
+                <div class="ep-title">Reddit Shitpost Review</div>
+                <p>海外掲示板の「クソ投稿」をゲストのホロメンと一緒に紹介。言語の壁を超え、世界中のファンが「同じネタで笑える」空間を作り上げた世界的な架け橋。</p>
+                <div class="ep-quote">「海外サイトのミームをドンドン見ていこうと思います。ぜひ一緒に笑ってやってくださいよ」</div>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">ACT 05</span>
+                <div class="ep-title">世界へ広げたいという熱き咆哮</div>
+                <p>「VTuber文化をもっと世界に知ってほしい」という大きな夢を抱き、実際にそれを成し遂げた。彼女が残した「世界進出」の道筋は、今も後輩たちへと受け継がれている。</p>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">ACT 06</span>
+                <div class="ep-title">「私のことを、忘れないでね」</div>
+                <p>卒業ライブで語った、アイドルとしての究極の願い。たつのこたちの心には、今もオレンジ色の光が輝き続けている。</p>
+                <div class="ep-quote">「アイドルにとっての“死”とは、みんなに忘れられることだと思っています。だから、私のことを忘れないでね」</div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="cp-footer" style="padding: 70px 0; text-align: center;">
+        <p style="font-weight: 950; letter-spacing: 5px;">&copy; 2016-2024 Cover Corp. WEATHER HACKERS FOREVER</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

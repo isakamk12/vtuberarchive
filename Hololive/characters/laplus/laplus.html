@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ラプラス・ダークネス (La+ Darknesss) — hololive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            --chara-color: #7e57c2; /* Darkness Purple */
+            --chara-accent: #212121; /* Void Black */
+            --bg-dark: #311b92;
+            --card-bg: rgba(255, 255, 255, 0.95);
+            --text-main: #1a237e;
+        }
+
+        .cp-bg {
+            background: radial-gradient(circle at center, #1a237e 0%, #000000 100%);
+            opacity: 0.1;
+        }
+
+        body {
+            color: var(--text-main);
+            background-color: #f5f5f5;
+        }
+
+        .cp-nav {
+            background: rgba(49, 27, 146, 0.9);
+        }
+
+        .cp-hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?auto=format&fit=crop&q=80&w=1000') center/cover;
+            color: #fff;
+            padding: 130px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--chara-color);
+        }
+
+        .cp-hero-name {
+            font-size: 4.5rem;
+            font-weight: 950;
+            text-shadow: 0 0 30px var(--chara-color);
+            letter-spacing: -1px;
+        }
+
+        .cp-tag {
+            background: #fff;
+            color: var(--chara-color);
+            border: 2px solid var(--chara-color);
+            border-radius: 4px;
+            font-weight: 900;
+        }
+
+        .cp-section-title {
+            font-size: 3rem;
+            font-weight: 950;
+            color: var(--bg-dark);
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .cp-section-title::after {
+            content: "🛸";
+            display: block;
+            font-size: 2rem;
+            margin-top: 10px;
+        }
+
+        .cp-card {
+            background: #fff;
+            border: 1px solid #d1c4e9;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            border-radius: 12px;
+        }
+
+        .cp-table th {
+            color: var(--chara-color);
+        }
+
+        .ep-card {
+            background: #212121;
+            color: #eee;
+            border-left: 10px solid var(--chara-color);
+            padding: 3rem;
+            margin-bottom: 3rem;
+            border-radius: 4px;
+            box-shadow: 0 20px 50px rgba(49, 27, 146, 0.2);
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .ep-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 30px 60px rgba(49, 27, 146, 0.3);
+        }
+
+        .ep-num {
+            background: var(--chara-color);
+            color: #fff;
+            padding: 3px 15px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 900;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        .ep-title {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #fff;
+            margin-bottom: 1.25rem;
+        }
+
+        .ep-quote {
+            background: #311b92;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            font-weight: 800;
+            color: #b39ddb;
+            font-style: italic;
+            border-right: 5px solid var(--chara-color);
+            line-height: 1.8;
+        }
+
+        .cp-footer {
+            background: #000;
+            color: #555;
+        }
+
+        /* Crow Accent */
+        .crow-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 80px;
+            height: 80px;
+            background: url('https://api.iconify.design/mdi:bird.svg?color=%237e57c2') no-repeat center/contain;
+            opacity: 0.1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a href="../../hololive_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO hololive</a>
+        <span class="cp-nav-gen">秘密結社holoX // JP</span>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-content">
+            <div class="cp-gen-label" style="background: var(--chara-color); color: #fff; padding: 4px 15px; font-weight: 950; border-radius: 0; margin-bottom: 1rem; display: inline-block; letter-spacing: 2px;">THE FOUNDER OF holoX</div>
+            <h1 class="cp-hero-name">ラプラス・ダークネス</h1>
+            <span class="cp-hero-en" style="font-size: 2.2rem; font-weight: bold; display: block; margin-bottom: 3rem; color: #b39ddb;">La+ Darknesss</span>
+            <p class="cp-chara-desc" style="max-width: 900px; margin: 0 auto; font-size: 1.3rem; line-height: 2; font-weight: 600;">
+                「刮目せよ！！吾輩が秘密結社holoXの総帥、ラプラス・ダークネスだ！」<br>
+                地球を手に入れるためにやってきたholoXの総帥。本来は膨大な力を誇るが、現在は枷により封印されている。尊大な口調の裏に隠しきれない「いい子」さと、圧倒的なオタク知識を持つ。
+            </p>
+            <div class="cp-tags" style="margin-top: 3.5rem;">
+                <span class="cp-tag">#総帥</span>
+                <span class="cp-tag">#刮目せよ</span>
+                <span class="cp-tag">#山田</span>
+                <span class="cp-tag">#PlusMate</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="cp-main" style="padding: 120px 20px; max-width: 1100px; margin: 0 auto;">
+        
+        <div class="cp-section cp-reveal">
+            <h2 class="cp-section-title">SECRET ARCHIVES</h2>
+            <div class="cp-grid">
+                <div class="cp-card" style="padding: 50px;">
+                    <h3 style="color: var(--bg-dark); margin-bottom: 2.5rem; font-weight: 950; font-size: 2rem;">総帥ステータス</h3>
+                    <table class="cp-table">
+                        <tr>
+                            <th>誕生日</th>
+                            <td>5月25日</td>
+                        </tr>
+                        <tr>
+                            <th>身長</th>
+                            <td>139cm</td>
+                        </tr>
+                        <tr>
+                            <th>血液型</th>
+                            <td>AB型</td>
+                        </tr>
+                        <tr>
+                            <th>地元</th>
+                            <td>栃木県</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="cp-card" style="padding: 50px; background: #311b92; color: #fff;">
+                    <h3 style="color: var(--chara-color); margin-bottom: 2rem; font-weight: 900; font-size: 2rem;">刮目すべき素顔</h3>
+                    <p style="line-height: 2.2; font-size: 1.15rem; opacity: 0.9;">
+                        2本の大きな角が特徴。頭の上にはカラスの「キュピ」が乗っている。FPSを愛し、ストリーマーとの交流も広い。配信上では尊大なクソガキキャラを演じているが、舞台裏では先輩から「礼儀正しいいい子」とバラされるのがお約束。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cp-section cp-reveal">
+            <h2 class="cp-section-title">THE DARKNESS LOGS</h2>
+
+            <div class="ep-card">
+                <div class="crow-icon"></div>
+                <span class="ep-num">LOG 01</span>
+                <div class="ep-title">「山田 (YMD)」の不本意な誕生</div>
+                <p>初配信で「Yes My Dark」をレスポンスに要求したところ、頭文字を取って「山田」と呼ばれ定着。総帥としての威厳を求めていた本人の意図に反し、親しみやすい愛称となった。</p>
+                <div class="ep-quote">「山田って呼ぶな！吾輩のことを山田と……」</div>
+            </div>
+
+            <div class="ep-card">
+                <div class="crow-icon"></div>
+                <span class="ep-num">LOG 02</span>
+                <div class="ep-title">同担拒否のガチ「厄介オタク」</div>
+                <p>『アイドルマスター』や『ラブライブ！』などへの愛が深く、キャラクターへのガチ恋と「同担拒否」を公言。オタクとしての深い知識と情熱は、リスナーの共感（と困惑）を呼んでいる。</p>
+                <div class="ep-quote">「我輩が初めて落ちた女がね園田海未ちゃんまであるからね。マジ恋だから」</div>
+            </div>
+
+            <div class="ep-card">
+                <div class="crow-icon"></div>
+                <span class="ep-num">LOG 03</span>
+                <div class="ep-title">ママを求める「ASMR」限界化</div>
+                <p>大のASMRファン。特にお姉さん系ASMRへの執着が凄まじく、同期のASMR配信を同時視聴しては絶叫し、 Tier表まで作成するほどの情熱を注ぐ。</p>
+                <div class="ep-quote">「ママから産まれるよ吾輩！ ママ、吾輩とひとつになろう！」</div>
+            </div>
+
+            <div class="ep-card">
+                <div class="crow-icon"></div>
+                <span class="ep-num">LOG 04</span>
+                <div class="ep-title">恒例のブツ切りエンディング</div>
+                <p>長時間配信を好まず、1時間程度でスパッと終わる。挨拶すら言い切る前に配信がプツンと切れる「ブツ切り」はもはや彼女のエンターテインメントの一つ。</p>
+                <div class="ep-quote">「何をそんなに1時間だか2時間だかにやってられるんだよ。30分で十分だろう」</div>
+            </div>
+
+            <div class="ep-card">
+                <div class="crow-icon"></div>
+                <span class="ep-num">LOG 05</span>
+                <div class="ep-title">トワ様ガチ恋の「常闇眷属」</div>
+                <p>先輩である常闇トワを「トワ様」と崇め奉るガチファン。コラボの際などには総帥の面影はなく、ただの限界オタクと化した姿を露呈する。</p>
+            </div>
+
+            <div class="ep-card">
+                <div class="crow-icon"></div>
+                <span class="ep-num">LOG 06</span>
+                <div class="ep-title">尊大キャラの下に隠れた「いい子」</div>
+                <p>「貴様ら」と尊大な態度をとるが、その礼儀正しさは先輩たちのお墨付き。カメラの外での「優しさ」を暴露されると、本人は営業妨害（？）とばかりに照れ隠しをする。</p>
+                <div class="ep-quote">「お前はいいやつだって言われたの。でも優しくした覚えねえよって思って」</div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="cp-footer" style="padding: 70px 0; text-align: center;">
+        <p style="font-weight: 950; letter-spacing: 5px;">&copy; 2016-2024 Cover Corp. YES MY DARK</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

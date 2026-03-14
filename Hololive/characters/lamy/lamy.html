@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雪花ラミィ (Yukihana Lamy) — hololive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            --chara-color: #bbdefb; /* Ice Blue */
+            --chara-accent: #1976d2; /* Deep Water Blue */
+            --bg-dark: #0d47a1;
+            --card-bg: rgba(255, 255, 255, 0.95);
+            --text-main: #01579b;
+        }
+
+        .cp-bg {
+            background: radial-gradient(circle at center, #ffffff 0%, #e3f2fd 100%);
+            opacity: 0.2;
+        }
+
+        body {
+            color: var(--text-main);
+            background-color: #fff;
+        }
+
+        .cp-nav {
+            background: rgba(13, 71, 161, 0.9);
+        }
+
+        .cp-hero {
+            background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1418985991508-e47386d96a71?auto=format&fit=crop&q=80&w=1000') center/cover;
+            color: #fff;
+            padding: 120px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--chara-color);
+        }
+
+        .cp-hero-name {
+            font-size: 5rem;
+            font-weight: 950;
+            text-shadow: 0 0 20px rgba(13, 71, 161, 0.4);
+        }
+
+        .cp-tag {
+            background: #fff;
+            color: var(--bg-dark);
+            border: 2px solid var(--chara-color);
+            font-weight: bold;
+        }
+
+        .cp-section-title {
+            font-size: 2.8rem;
+            font-weight: 950;
+            color: var(--bg-dark);
+            text-align: center;
+            margin-bottom: 3.5rem;
+            position: relative;
+        }
+
+        .cp-section-title::after {
+            content: "❄️";
+            display: block;
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+
+        .cp-card {
+            background: #fff;
+            border: 1px solid #e1f5fe;
+            box-shadow: 0 10px 30px rgba(1, 87, 155, 0.05);
+            border-radius: 12px;
+        }
+
+        .cp-table th {
+            color: var(--bg-dark);
+        }
+
+        .ep-card {
+            background: #fff;
+            border-top: 8px solid var(--chara-color);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.03);
+            transition: all 0.3s ease;
+        }
+
+        .ep-card:hover {
+            transform: translateY(-5px);
+            border-top-color: var(--chara-accent);
+        }
+
+        .ep-num {
+            background: var(--bg-dark);
+            color: #fff;
+            padding: 2px 12px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .ep-title {
+            font-size: 1.6rem;
+            font-weight: 900;
+            color: var(--bg-dark);
+            margin-bottom: 1rem;
+        }
+
+        .ep-quote {
+            background: #e3f2fd;
+            border-left: 5px solid var(--chara-accent);
+            padding: 1.2rem;
+            margin-top: 1.5rem;
+            font-weight: 700;
+            color: #0d47a1;
+            font-style: italic;
+        }
+
+        .cp-footer {
+            background: var(--bg-dark);
+            color: #bbdefb;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a href="../../hololive_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO hololive</a>
+        <span class="cp-nav-gen">5期生 (NePoLaBo) // JP</span>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-content">
+            <div class="cp-gen-label" style="background: rgba(255,255,255,0.2); backdrop-filter: blur(5px); padding: 3px 15px; border-radius: 4px; font-weight: bold; margin-bottom: 1rem; display: inline-block;">HOLO-BLUE SNOW ELF</div>
+            <h1 class="cp-hero-name">雪花ラミィ</h1>
+            <span class="cp-hero-en" style="font-size: 2rem; font-weight: bold; display: block; margin-bottom: 2.5rem; opacity: 0.9;">Yukihana Lamy</span>
+            <p class="cp-chara-desc" style="max-width: 850px; margin: 0 auto; font-size: 1.3rem; line-height: 1.9; font-weight: 600;">
+                「こんらみです！顔が肝臓、雪花ラミィです！」<br>
+                人里離れた白銀の大地に住む、雪の一族の令嬢。清楚なお嬢様としてデビューしたが、現在はキレのあるツッコミと日本酒への深い愛で知られる、ホロライブ随一の酒豪。
+            </p>
+            <div class="cp-tags" style="margin-top: 3rem;">
+                <span class="cp-tag">#雪民</span>
+                <span class="cp-tag">#日本酒</span>
+                <span class="cp-tag">#顔が肝臓</span>
+                <span class="cp-tag">#清楚(芸人)</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="cp-main" style="padding: 100px 20px; max-width: 1050px; margin: 0 auto;">
+        
+        <div class="cp-section cp-reveal">
+            <h2 class="cp-section-title">FROST FILES</h2>
+            <div class="cp-grid">
+                <div class="cp-card" style="padding: 40px;">
+                    <h3 style="color: var(--bg-dark); margin-bottom: 2rem; font-weight: 900; font-size: 1.8rem;">基本プロフィール</h3>
+                    <table class="cp-table">
+                        <tr>
+                            <th>誕生日</th>
+                            <td>11月15日</td>
+                        </tr>
+                        <tr>
+                            <th>年齢</th>
+                            <td>210歳 (自称)</td>
+                        </tr>
+                        <tr>
+                            <th>身長</th>
+                            <td>158cm</td>
+                        </tr>
+                        <tr>
+                            <th>ファン名</th>
+                            <td>雪民</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="cp-card" style="padding: 40px; background: var(--bg-dark); color: #fff;">
+                    <h3 style="color: var(--chara-color); margin-bottom: 2rem; font-weight: 900; font-size: 1.8rem;">お嬢様の素顔</h3>
+                    <p style="line-height: 2.2; font-size: 1.1rem; opacity: 0.9;">
+                        当初の清楚ポジションから、常闇トワとのプロレスを経て芸人魂が開花。寂しがり屋で「めんどくさい女」と呼ばれることもあるが、キレのあるツッコミと、握力44.5kgという驚異のフィジカルを併せ持つ。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cp-section cp-reveal">
+            <h2 class="cp-section-title">LEGENDARY SNOW</h2>
+
+            <div class="ep-card">
+                <span class="ep-num">PHASE 01</span>
+                <div class="ep-title">お酒好きが高じた「顔が肝臓」</div>
+                <p>大の酒豪で晩酌配信が定番。戌神ころねからの言い間違いをきっかけに「顔が肝臓」という異名が定着。自ら開発した日本酒『雪夜月』をリリースするほどの実力派。</p>
+                <div class="ep-quote">「酒、酒、酒、酒、つまみ、酒、酒、酒ですね」</div>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">PHASE 02</span>
+                <div class="ep-title">初期ラミィとの壮絶なギャップ</div>
+                <p>デビュー当初の清楚な姿は今や本人の黒歴史。当時のアーカイブを見返すと、余りのギャップに「喉を我慢するな」と現在の自分が絶叫するのがお約束。</p>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">PHASE 03</span>
+                <div class="ep-title">雪民への「重すぎる愛」</div>
+                <p>リスナーである雪民とは同棲設定。時に「背中の皮を剥いで家具にしたい」などの物騒な愛情表現を見せ、猟奇的な一面で一部のドMなファンを喜ばせている。</p>
+                <div class="ep-quote">「ラミィは生きている細胞が欲しいの。ゆきみんさんの生きている細胞が」</div>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">PHASE 04</span>
+                <div class="ep-title">謎の悲鳴「はーい！」</div>
+                <p>パニックになると、なぜか「はーい！」と元気よく返事をするような悲鳴を上げる。ホラーゲームでのこの独特なリアクションは、もはや彼女の様式美となっている。</p>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">PHASE 05</span>
+                <div class="ep-title">力技で解決する「脳筋」パズル</div>
+                <p>握力40kg超えのフィジカルを活かし、ゲーム内の謎解きも力技で強行突破することが多い。「正解は人数の分だけある」と言い張るその姿にリスナーは脱帽する。</p>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">PHASE 06</span>
+                <div class="ep-title">後輩への強烈な「圧」と愛情</div>
+                <p>ツッコミ枠として後輩たちとも積極的に絡むが、時に見せる強烈な「圧」とプロレスが特徴。後輩からの気を使った回答も、喜んで（？）受け入れる寛大さも。 </p>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="cp-footer" style="padding: 50px 0; text-align: center;">
+        <p>&copy; 2016-2024 Cover Corp.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

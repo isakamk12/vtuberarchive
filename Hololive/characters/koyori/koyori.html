@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博衣こより (Hakui Koyori) — hololive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            --chara-color: #f48fb1; /* Coyote Pink */
+            --chara-accent: #f06292; /* Scientific Pink */
+            --bg-dark: #880e4f;
+            --card-bg: rgba(255, 255, 255, 0.95);
+            --text-main: #4a148c;
+        }
+
+        .cp-bg {
+            background: radial-gradient(circle at center, #fce4ec 0%, #f3e5f5 100%);
+            opacity: 0.15;
+            z-index: -1;
+        }
+
+        body {
+            color: var(--text-main);
+            background-color: #fff;
+        }
+
+        .cp-nav {
+            background: rgba(136, 14, 79, 0.9);
+        }
+
+        .cp-hero {
+            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=1000') center/cover;
+            color: #fff;
+            padding: 130px 20px;
+            text-align: center;
+            border-bottom: 8px solid var(--chara-color);
+        }
+
+        .cp-hero-name {
+            font-size: 5rem;
+            font-weight: 950;
+            text-shadow: 0 0 25px rgba(244, 143, 177, 0.5);
+            letter-spacing: -1px;
+        }
+
+        .cp-tag {
+            background: #fff;
+            color: var(--bg-dark);
+            border: 2px solid var(--chara-color);
+            border-radius: 50px;
+            font-weight: 800;
+        }
+
+        .cp-section-title {
+            font-size: 3rem;
+            font-weight: 950;
+            color: var(--bg-dark);
+            text-align: center;
+            margin-bottom: 4.5rem;
+        }
+
+        .cp-section-title::after {
+            content: "🧪";
+            display: inline-block;
+            margin-left: 15px;
+        }
+
+        .cp-card {
+            background: #fff;
+            border: 2px solid #fce4ec;
+            box-shadow: 0 10px 40px rgba(136, 14, 79, 0.05);
+            border-radius: 20px;
+        }
+
+        .cp-table th {
+            color: var(--bg-dark);
+            font-weight: 950;
+        }
+
+        .ep-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 15px 45px rgba(0,0,0,0.04);
+            border-top: 10px solid var(--chara-color);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+        }
+
+        .ep-card:hover {
+            transform: translateY(-10px);
+            border-top-color: var(--bg-dark);
+        }
+
+        .ep-num {
+            color: var(--chara-accent);
+            font-weight: 900;
+            font-size: 0.9rem;
+            display: block;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .ep-title {
+            font-size: 2rem;
+            font-weight: 950;
+            color: var(--bg-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .ep-quote {
+            background: #f3e5f5;
+            border-right: 8px solid var(--chara-color);
+            padding: 1.5rem;
+            margin-top: 2rem;
+            font-weight: 700;
+            color: #4a148c;
+            line-height: 1.8;
+            font-style: italic;
+        }
+
+        .cp-footer {
+            background: #4a148c;
+            color: #fce4ec;
+        }
+
+        /* Lab Pattern Decoration */
+        .lab-pattern {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 120px;
+            height: 120px;
+            background: url('https://api.iconify.design/mdi:flask-outline.svg?color=%23f48fb1') no-repeat center/contain;
+            opacity: 0.05;
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a href="../../hololive_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO hololive</a>
+        <span class="cp-nav-gen">秘密結社holoX // JP</span>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-content">
+            <div class="cp-gen-label" style="background: rgba(255,255,255,0.25); backdrop-filter: blur(5px); padding: 5px 20px; border-radius: 4px; font-weight: 950; margin-bottom: 1.5rem; display: inline-block;">THE BRAIN OF holoX</div>
+            <h1 class="cp-hero-name">博衣こより</h1>
+            <span class="cp-hero-en" style="font-size: 2.2rem; font-weight: 950; display: block; margin-bottom: 3rem; color: #fce4ec;">Hakui Koyori</span>
+            <p class="cp-chara-desc" style="max-width: 900px; margin: 0 auto; font-size: 1.35rem; line-height: 2; font-weight: 600;">
+                「こんこよー！助手くんたち、実験の時間だよ！」<br>
+                秘密結社holoXの研究者。自称「holoXの頭脳」だが、その実態は1日20時間以上の配信もこなす「配信モンスター」。滑舌の良さと、ピンクな思考（？）が隠しきれないコヨーテ。
+            </p>
+            <div class="cp-tags" style="margin-top: 3.5rem;">
+                <span class="cp-tag">#博衣こより</span>
+                <span class="cp-tag">#朝こよ</span>
+                <span class="cp-tag">#配信モンスター</span>
+                <span class="cp-tag">#頭ピンクコヨーテ</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="cp-main" style="padding: 120px 20px; max-width: 1100px; margin: 0 auto;">
+        
+        <div class="cp-section cp-reveal">
+            <div class="cp-grid">
+                <div class="cp-card" style="padding: 50px; position: relative; overflow: hidden;">
+                    <div class="lab-pattern"></div>
+                    <h3 style="color: var(--bg-dark); margin-bottom: 2.5rem; font-weight: 950; font-size: 2rem;">RESEARCHER DATA</h3>
+                    <table class="cp-table">
+                        <tr>
+                            <th>誕生日</th>
+                            <td>3月15日</td>
+                        </tr>
+                        <tr>
+                            <th>身長</th>
+                            <td>153cm</td>
+                        </tr>
+                        <tr>
+                            <th>種族</th>
+                            <td>コヨーテ</td>
+                        </tr>
+                        <tr>
+                            <th>ファン名</th>
+                            <td>こよりの助手くん</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="cp-card" style="padding: 50px; background: #4a148c; color: #fff;">
+                    <h3 style="color: var(--chara-color); margin-bottom: 2rem; font-weight: 900; font-size: 2rem;">飽くなき探究心</h3>
+                    <p style="line-height: 2.2; font-size: 1.15rem; opacity: 0.9;">
+                        高頻度かつ長時間の配信を行うことで知られ、喉と体力の強さはホロライブ屈指。朝の帯番組『朝こよ』の継続や、高難易度ゲームの耐久など、助手くんたちを飽きさせない圧倒的なサービス精神を誇る。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cp-section cp-reveal">
+            <h2 class="cp-section-title">EXPERIMENTAL LOGS</h2>
+
+            <div class="ep-card">
+                <span class="ep-num">LOG 01</span>
+                <div class="ep-title">Twitter凍結RTA「最短記録」</div>
+                <p>デビュー発表からわずか10分でTwitterアカウントが凍結。ホロライブ史上最短記録をいきなり樹立し、初配信では凍結すらもネタにして笑いに変えた。</p>
+                <div class="ep-quote">「Twitterがですね、公開された10分後に凍結されたんですよ」</div>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">LOG 02</span>
+                <div class="ep-title">21時間連続プレイ「体感8時間」</div>
+                <p>『ゼルダの伝説 ティアキン』を21時間ぶっ通しでプレイ。終了後もケロッとしており、「体感8時間」と言い放つ異次元のスタミナを見せつけた。</p>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">LOG 03</span>
+                <div class="ep-title">迷言「土美味しいねぇ！！」</div>
+                <p>『栄冠ナイン』にて勝利した際、負けて土を持ち帰る相手チームに向けて放たれた畜生発言。彼女の隠しきれない煽り性能（？）が爆発した瞬間。</p>
+                <div class="ep-quote">「土美味しいねぇ！！」</div>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">LOG 04</span>
+                <div class="ep-title">「頭ピンクコヨーテ」の称号</div>
+                <p>本人は真面目なつもりでも、なぜか言葉の端々にセンシティブなニュアンスが混じる。特にポケモン配信での「ふたなり」発言は、彼女の愛称を盤石のものとした。</p>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">LOG 05</span>
+                <div class="ep-title">朝のジャーナリスト「NDK」</div>
+                <p>朝番組『朝こよ』にて、他メンバーの失敗を容赦なくいじり、直接「どんな気持ち？」と取材に行く不屈のジャーナリスト精神（煽り）を発揮する。</p>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">LOG 06</span>
+                <div class="ep-title">マヨネーズは「飲み物」</div>
+                <p>大のマヨネーズ好きであり、「マヨネーズは飲み物、麩菓子は空気」という独自の食の哲学を持つ。待機画面でもこのフレーズが流れるのがお約束。</p>
+                <div class="ep-quote">「マヨネーズは飲み物です。ちなみに麩菓子は空気です」</div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="cp-footer" style="padding: 70px 0; text-align: center;">
+        <p style="font-weight: 950; letter-spacing: 5px;">&copy; 2016-2024 Cover Corp. LOG OUT🧪</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

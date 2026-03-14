@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>セレス・ファウナ (Ceres Fauna) — hololive Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            --chara-color: #4caf50; /* Forest Green */
+            --chara-accent: #a5d6a7; /* Leaf Green */
+            --nature-brown: #3e2723;
+            --soft-white: #f1f8e9;
+            --grad-gray: #78909c;
+        }
+
+        .cp-bg {
+            background: 
+                linear-gradient(rgba(241, 248, 233, 0.9), rgba(241, 248, 233, 0.9)),
+                url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=1200') center/cover;
+            opacity: 1;
+        }
+
+        body {
+            background-color: var(--soft-white);
+            color: var(--nature-brown);
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+        }
+
+        .cp-nav {
+            background: rgba(255, 255, 255, 0.9);
+            border-bottom: 2px solid var(--chara-color);
+        }
+
+        .cp-hero {
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.1)), 
+                        url('https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&q=80&w=1200') center/cover;
+            padding: 220px 20px;
+            text-align: center;
+            position: relative;
+            color: #fff;
+            border-bottom: 5px solid var(--chara-color);
+        }
+
+        .leaf-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/leaf.png');
+            opacity: 0.1;
+            pointer-events: none;
+        }
+
+        .cp-hero-name {
+            font-size: 5.5rem;
+            font-weight: 950;
+            text-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            margin-bottom: 0px;
+        }
+
+        .cp-hero-en {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--chara-accent);
+            text-transform: uppercase;
+            letter-spacing: 12px;
+            margin-bottom: 3rem;
+            display: block;
+        }
+
+        .grad-badge {
+            background: var(--grad-gray);
+            color: #fff;
+            padding: 8px 25px;
+            font-weight: 950;
+            margin-bottom: 2.5rem;
+            display: inline-block;
+            letter-spacing: 3px;
+        }
+
+        .cp-chara-desc {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.3rem;
+            line-height: 2.2;
+            font-weight: 500;
+            color: #f5f5f5;
+            background: rgba(0,0,0,0.3);
+            backdrop-filter: blur(5px);
+            padding: 30px;
+            border-radius: 20px;
+        }
+
+        .cp-section-title {
+            font-size: 2.8rem;
+            font-weight: 950;
+            color: var(--chara-color);
+            margin-bottom: 4rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .cp-section-title::after {
+            content: "🌿";
+            display: block;
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+
+        .cp-card {
+            background: #fff;
+            border: 1px solid var(--chara-accent);
+            border-radius: 25px;
+            padding: 45px;
+            box-shadow: 0 10px 30px rgba(76, 175, 80, 0.05);
+        }
+
+        .cp-table th {
+            color: var(--chara-color);
+            font-weight: 900;
+        }
+
+        .nature-log-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+            margin-top: 50px;
+        }
+
+        .nature-log {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 35px;
+            border-radius: 20px;
+            border-left: 8px solid var(--chara-color);
+            transition: all 0.3s ease;
+        }
+
+        .nature-log:hover {
+            transform: translateY(-5px);
+            background: #fff;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+        }
+
+        .nature-log-title {
+            font-size: 1.4rem;
+            font-weight: 950;
+            color: var(--nature-brown);
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .nature-log-text {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #5d4037;
+        }
+
+        .quote-block {
+            background: var(--chara-color);
+            color: #fff;
+            padding: 80px 40px;
+            text-align: center;
+            margin-top: 120px;
+            border-radius: 50px 50px 0 0;
+        }
+
+        .footer-nature {
+            padding: 80px 0;
+            text-align: center;
+            color: var(--nature-brown);
+            background: #e8f5e9;
+            font-weight: 800;
+        }
+
+        .uuu-accent {
+            font-style: italic;
+            color: var(--chara-accent);
+            font-weight: 900;
+        }
+
+        @media (max-width: 768px) {
+            .cp-hero-name { font-size: 3rem; }
+            .nature-log-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a href="../../hololive_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO hololive</a>
+        <span class="cp-nav-gen">hololive EN // Promise</span>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="leaf-overlay"></div>
+        <div class="cp-hero-content">
+            <div class="grad-badge">LEGACY MEMBER // 2025.01.04</div>
+            <h1 class="cp-hero-name">セレス・ファウナ</h1>
+            <span class="cp-hero-en">Ceres Fauna</span>
+            <p class="cp-chara-desc">
+                「自然」の番人であり、心安らぐドルイドの麒麟。<br>
+                柔らかなソプラノボイス（<span class="uuu-accent">Uuu...</span>）でリスナーを癒やす「ママ」のような存在だが、その内側にはディープなインターネットミームと、勝負事に熱くなりすぎる「自然の脅威」を秘めている。
+            </p>
+        </div>
+    </header>
+
+    <main class="cp-main" style="padding: 100px 20px; max-width: 1200px; margin: 0 auto;">
+        
+        <div class="cp-section cp-reveal">
+            <h2 class="cp-section-title">NATURE'S DOSSIER</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3 style="color: var(--chara-color); font-weight: 950; margin-bottom: 2rem;">SPECIFICATION</h3>
+                    <table class="cp-table">
+                        <tr>
+                            <th>BIRTHDAY</th>
+                            <td>3月21日</td>
+                        </tr>
+                        <tr>
+                            <th>AGE</th>
+                            <td>45.4億歳 (Earth's Age)</td>
+                        </tr>
+                        <tr>
+                            <th>HEIGHT</th>
+                            <td>164cm</td>
+                        </tr>
+                        <tr>
+                            <th>FAN NAME</th>
+                            <td>Saplings (苗木)</td>
+                        </tr>
+                        <tr>
+                            <th>OSHI MARK</th>
+                            <td>🌿</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="cp-card" style="display: flex; flex-direction: column; justify-content: center; background: #e8f5e9;">
+                    <h3 style="color: var(--chara-color); font-weight: 950; margin-bottom: 1.5rem;">"Nature is Cruel"</h3>
+                    <p style="font-size: 1.15rem; line-height: 2; color: var(--nature-brown);">
+                        普段は穏やかだが、ゲームで負けると「自然の残酷さ」を体現する。Getting Over ItやFall Guys、そしてマインクラフトでの奔放な行動は、まさに予測不能な大自然そのもの。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cp-section cp-reveal" style="margin-top: 120px;">
+            <h2 class="cp-section-title">NATURAL PHENOMENA</h2>
+
+            <div class="nature-log-grid">
+                <div class="nature-log">
+                    <div class="nature-log-title"><i class="fas fa-fire"></i> 森を火の海に</div>
+                    <div class="nature-log-text">マイクラ初日、ムメイへの反撃に失敗しマグマで森を焼失。「またファウナか！？」と言われる伝統芸の始まり。</div>
+                </div>
+
+                <div class="nature-log">
+                    <div class="nature-log-title"><i class="fas fa-heart-broken"></i> ヤンデレ・ドルイド</div>
+                    <div class="nature-log-text">「人間は文明に夢中で、私のことはもう必要ないのね？」耳元で囁かれる重すぎる愛の囁きは、多くの苗木を狂わせた。</div>
+                </div>
+
+                <div class="nature-log">
+                    <div class="nature-log-title"><i class="fas fa-cat"></i> 愛猫 Clover & Snail</div>
+                    <div class="nature-log-text">2匹の猫を溺愛。配信中に鳴き声が入ると、途端にデレデレなママの顔に戻ってしまう。</div>
+                </div>
+
+                <div class="nature-log">
+                    <div class="nature-log-title"><i class="fas fa-leaf"></i> 穏やかなヴィーガン</div>
+                    <div class="nature-log-text">徹底した完全菜食主義だが、他人に強要はしない。ただし、サブウェイのヴィーガンメニューには「丸太じゃないんだから」と辛口。</div>
+                </div>
+
+                <div class="nature-log">
+                    <div class="nature-log-title"><i class="fas fa-microphone"></i> 癒やし(と破壊)のASMR</div>
+                    <div class="nature-log-text">ASMRの腕前はプロ級。だが、機材トラブルで突然爆音を出す「鼓膜破壊PON」も彼女のチャームポイント。</div>
+                </div>
+
+                <div class="nature-log">
+                    <div class="nature-log-title"><i class="fas fa-tree"></i> 伝説の世界樹</div>
+                    <div class="nature-log-text">卒業を前に、665日をかけて建築した巨大な世界樹。仲間と共に完成させたその姿は、彼女がホロライブに残した不朽の証。</div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <div class="quote-block cp-reveal">
+        <h3 style="font-size: 2.22rem; font-weight: 950; margin-bottom: 2rem;">"Natural is Cruel, but Natural is Beauty."</h3>
+        <p style="font-size: 1.4rem; line-height: 2.2; max-width: 850px; margin: 0 auto;">
+            森が燃えても、雨が降っても、彼女はいつもそこ（配信）で微笑んでいた。<br>
+            45.4億年の孤独を癒やした「苗木」たちとの日々は、永遠に緑の記憶として刻まれ続ける。
+        </p>
+    </div>
+
+    <footer class="footer-nature">
+        <p>&copy; COVER CORP. // SAPLINGS ARE ETERNAL PART OF NATURE</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => { entry.isIntersecting && entry.target.classList.add('active'); });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

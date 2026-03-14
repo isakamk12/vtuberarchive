@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vestia Zeta (ベスティア・ゼータ) — hololive ID</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Outfit:wght@400;700&family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --c1: #708090; /* Slate Grey */
+            --c2: #4682B4; /* Steel Blue */
+            --c3: #E6E6FA; /* Lavender (White accent) */
+            --bg: #1A1A2E;
+            --card-bg: rgba(70, 130, 180, 0.1);
+            --accent: #00D2FF;
+            --glass: rgba(255, 255, 255, 0.03);
+            --border: rgba(70, 130, 180, 0.3);
+            --text: #D1D1E9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Outfit', 'M PLUS Rounded 1c', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Spy Agency Background */
+        .bg-agency {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: 
+                radial-gradient(circle at 90% 10%, rgba(0, 210, 255, 0.1) 0%, transparent 40%),
+                radial-gradient(circle at 10% 90%, rgba(70, 130, 180, 0.1) 0%, transparent 40%);
+        }
+
+        .grid-lines {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px);
+            background-size: 50px 50px;
+            opacity: 0.1;
+        }
+
+        nav {
+            padding: 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border);
+            background: rgba(26, 26, 46, 0.8);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .back-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-family: 'Space Mono', monospace;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: 0.3s;
+        }
+
+        .back-link:hover {
+            color: #fff;
+            text-shadow: 0 0 10px var(--accent);
+        }
+
+        .code-tag {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--c2);
+            background: rgba(70, 130, 180, 0.1);
+            padding: 0.3rem 1rem;
+            border: 1px solid var(--border);
+        }
+
+        header {
+            height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 10%;
+            position: relative;
+        }
+
+        .mission-icon {
+            font-size: 4rem;
+            color: var(--accent);
+            margin-bottom: 2rem;
+            animation: pulse 2s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.6; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.1); }
+        }
+
+        .hero-title {
+            font-family: 'Space Mono', monospace;
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            color: #fff;
+            margin-bottom: 1rem;
+            letter-spacing: -2px;
+        }
+
+        .hero-jp {
+            font-size: 1.3rem;
+            letter-spacing: 12px;
+            color: var(--c2);
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+        }
+
+        .hero-desc {
+            max-width: 800px;
+            background: var(--glass);
+            padding: 2.5rem;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            position: relative;
+        }
+
+        .hero-desc::before {
+            content: 'DECRYPTED DATA';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            background: var(--bg);
+            padding: 0 10px;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--accent);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            padding: 5% 10%;
+        }
+
+        .stat-card {
+            background: var(--glass);
+            border: 1px solid var(--border);
+            padding: 2.5rem;
+            text-align: center;
+            transition: 0.4s;
+        }
+
+        .stat-card:hover {
+            border-color: var(--accent);
+            background: var(--card-bg);
+        }
+
+        .stat-label {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .stat-value {
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .spec-section {
+            padding: 10%;
+            background: linear-gradient(180deg, transparent, rgba(70, 130, 180, 0.05), transparent);
+        }
+
+        .section-title {
+            font-family: 'Space Mono', monospace;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 6rem;
+            color: #fff;
+        }
+
+        .cat-denial {
+            text-align: center;
+            margin-bottom: 8rem;
+        }
+
+        .cat-box {
+            display: inline-block;
+            padding: 2rem 4rem;
+            border: 2px solid var(--accent);
+            border-radius: 50px;
+            font-family: 'Space Mono', monospace;
+            font-size: 1.5rem;
+            color: var(--accent);
+            position: relative;
+        }
+
+        .cat-box::after {
+            content: 'ERROR: FELINE DETECTED';
+            position: absolute;
+            bottom: -30px;
+            right: 20px;
+            font-size: 0.7rem;
+            color: #ff4757;
+        }
+
+        .episode-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+        }
+
+        .episode-card {
+            background: var(--glass);
+            border: 1px solid var(--border);
+            padding: 3rem;
+            position: relative;
+            transition: 0.4s;
+        }
+
+        .episode-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 30px rgba(0, 210, 255, 0.1);
+        }
+
+        .episode-tag {
+            font-family: 'Space Mono', monospace;
+            color: var(--accent);
+            font-size: 0.75rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .episode-title {
+            font-size: 1.6rem;
+            margin-bottom: 1.5rem;
+            color: #fff;
+        }
+
+        .episode-text {
+            font-size: 0.95rem;
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        footer {
+            padding: 5rem;
+            text-align: center;
+            border-top: 1px solid var(--border);
+            font-family: 'Space Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--c2);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: 1s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            .hero-title { font-size: 3rem; }
+            .cat-box { font-size: 1.1rem; padding: 1.5rem 2rem; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-agency">
+        <div class="grid-lines"></div>
+    </div>
+
+    <nav>
+        <a href="../../hololive_index.html" class="back-link">> ACCESS ARCHIVE</a>
+        <div class="code-tag">V.7 INTERFACE</div>
+    </nav>
+
+    <header>
+        <div class="mission-icon reveal"><i class="fa-solid fa-user-secret"></i></div>
+        <h1 class="hero-title reveal">Vestia Zeta</h1>
+        <span class="hero-jp reveal">ベスティア・ゼータ</span>
+        <p class="hero-desc reveal">
+            「私は猫じゃない！人間だ！そして凄腕のスパイだ！」<br>
+            組織「シークレット・アーカイブ・ユニット」の7人目の構成員。あらゆるデータにアクセスできるコードネーム「V.7」。クールなスパイを自称するが、マニュアルを外れるとすぐドジが露呈してしまう、世界一「PON」なエージェント。
+        </p>
+    </header>
+
+    <div class="stats-grid reveal">
+        <div class="stat-card">
+            <span class="stat-label">Codename</span>
+            <span class="stat-value">V.7 (Zecretary)</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-label">Height</span>
+            <span class="stat-value">155cm</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-label">Enemy</span>
+            <span class="stat-value">Vegetables</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-label">Status</span>
+            <span class="stat-value">Human (Not a Cat)</span>
+        </div>
+    </div>
+
+    <section class="spec-section reveal">
+        <div class="cat-denial">
+            <div class="cat-box">
+                "I AM NOT A CAT!"
+            </div>
+        </div>
+
+        <h2 class="section-title">INTELLIGENCE LOGS</h2>
+        <div class="episode-grid">
+            <div class="episode-card reveal">
+                <span class="episode-tag">CATEGORY: IDENTITY</span>
+                <h3 class="episode-title">終わらない「猫」疑惑と猫の王</h3>
+                <p class="episode-text">
+                    髪型が猫耳に見えることから、デビュー以来「猫」と呼ばれ続けている。頑なに否定しているが、うっかり自爆発言を繰り返した結果、最終的には自ら「Catlord（猫の王）」を名乗るという敗北（？）宣言。
+                </p>
+            </div>
+
+            <div class="episode-card reveal">
+                <span class="episode-tag">CATEGORY: ERROR</span>
+                <h3 class="episode-title">愛すべき「PON」エージェント</h3>
+                <p class="episode-text">
+                    Apexで画面真っ暗なまま実況を続けたり、RUSTで愛馬「Umami」を4代目まで死なせて「ペットキラー」と呼ばれたり。本人は「私がミスをするのは人間である証拠。猫はミスをしないから！」と謎理論で猫否定に利用する。
+                </p>
+            </div>
+
+            <div class="episode-card reveal">
+                <span class="episode-tag">CATEGORY: JEALOUSY</span>
+                <h3 class="episode-title">マスコット「Buzo」への嫉妬</h3>
+                <p class="episode-text">
+                    自身のマスコットである鹿のBuzoがリスナーから愛されすぎて激怒。「Buzoにお金を払うなら、私を処分したほうがいいかも」と、スパイらしい（？）過激なジョークで本気の嫉妬を見せる。
+                </p>
+            </div>
+
+            <div class="episode-card reveal">
+                <span class="episode-tag">CATEGORY: STUDY</span>
+                <h3 class="episode-title">Duolingoでの野菜への憎悪</h3>
+                <p class="episode-text">
+                    日本語学習中、「野菜はいらない！」という例文が出ると、待ってましたとばかりに激しく同意。語学の勉強を通じて、自身の極度の野菜嫌いを世界中にアピールするエージェント。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>> DISCONNECTING FROM V.7 SYSTEM...</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) entry.target.classList.add('active');
+                });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

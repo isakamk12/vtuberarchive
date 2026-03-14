@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>沙花叉クロヱ (Sakamata Chloe) — hololive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            --chara-color: #ef5350; /* Deep Red / Orca Accent */
+            --chara-accent: #263238; /* Orca Black */
+            --bg-dark: #b71c1c;
+            --card-bg: rgba(255, 255, 255, 0.95);
+            --text-main: #37474f;
+        }
+
+        .cp-bg {
+            background: radial-gradient(circle at center, #eceff1 0%, #cfd8dc 100%);
+            opacity: 0.1;
+        }
+
+        body {
+            color: var(--text-main);
+            background-color: #fff;
+        }
+
+        .cp-nav {
+            background: rgba(38, 50, 56, 0.9);
+        }
+
+        .cp-hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1551244072-5d12893278ab?auto=format&fit=crop&q=80&w=1000') center/cover;
+            color: #fff;
+            padding: 130px 20px;
+            text-align: center;
+            border-bottom: 8px solid var(--chara-color);
+        }
+
+        .cp-hero-name {
+            font-size: 5rem;
+            font-weight: 950;
+            text-shadow: 0 0 30px var(--chara-color);
+            letter-spacing: -1px;
+        }
+
+        .cp-tag {
+            background: #fff;
+            color: var(--bg-dark);
+            border: 2px solid var(--chara-color);
+            border-radius: 4px;
+            font-weight: 900;
+        }
+
+        .cp-section-title {
+            font-size: 3rem;
+            font-weight: 950;
+            color: var(--bg-dark);
+            text-align: center;
+            margin-bottom: 4.5rem;
+        }
+
+        .cp-section-title::after {
+            content: "🎨";
+            display: inline-block;
+            margin-left: 15px;
+        }
+
+        .cp-card {
+            background: #fff;
+            border: 1px solid #ffcdd2;
+            box-shadow: 0 10px 40px rgba(183, 28, 28, 0.05);
+            border-radius: 12px;
+        }
+
+        .cp-table th {
+            color: var(--bg-dark);
+            font-weight: 950;
+        }
+
+        .ep-card {
+            background: #1a1a1a;
+            color: #eee;
+            border-left: 10px solid var(--chara-color);
+            padding: 3rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 20px 45px rgba(0,0,0,0.2);
+            transition: all 0.4s ease;
+        }
+
+        .ep-card:hover {
+            transform: scale(1.02);
+            border-left-color: #fff;
+        }
+
+        .ep-num {
+            color: var(--chara-color);
+            font-weight: 900;
+            font-size: 0.9rem;
+            display: block;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .ep-title {
+            font-size: 2rem;
+            font-weight: 950;
+            color: #fff;
+            margin-bottom: 1.5rem;
+        }
+
+        .ep-quote {
+            background: #b71c1c;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            font-weight: 700;
+            color: #fff;
+            font-style: italic;
+            line-height: 1.8;
+            border-bottom: 4px solid #fff;
+        }
+
+        .cp-footer {
+            background: #000;
+            color: var(--chara-color);
+        }
+
+        /* Orca Pattern Decoration */
+        .orca-decor {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 100px;
+            height: 100px;
+            background: url('https://api.iconify.design/mdi:fish.svg?color=%23ef5350') no-repeat center/contain;
+            opacity: 0.1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a href="../../hololive_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO hololive</a>
+        <span class="cp-nav-gen">秘密結社holoX // JP</span>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-content">
+            <div class="cp-gen-label" style="background: var(--chara-color); color: #fff; padding: 4px 15px; font-weight: 950; border-radius: 4px; margin-bottom: 1rem; display: inline-block;">CLEANER OF holoX</div>
+            <h1 class="cp-hero-name">沙花叉クロヱ</h1>
+            <span class="cp-hero-en" style="font-size: 2.22rem; font-weight: 950; display: block; margin-bottom: 3rem; color: #ffcdd2;">Sakamata Chloe</span>
+            <p class="cp-chara-desc" style="max-width: 900px; margin: 0 auto; font-size: 1.3rem; line-height: 2; font-weight: 600;">
+                「こんさかまたー！沙花叉クロヱだよ！」<br>
+                秘密結社holoXの掃除屋、シャチの女の子。ぽわぽわした可愛い声と七色の歌声を使い分ける圧倒的アーティスト。驚異の「お風呂嫌い」と「汚部屋」エピソードを持つ、ギャップの塊。
+            </p>
+            <div class="cp-tags" style="margin-top: 3.5rem;">
+                <span class="cp-tag">#沙花叉クロヱ</span>
+                <span class="cp-tag">#掃除屋</span>
+                <span class="cp-tag">#飼育員</span>
+                <span class="cp-tag">#人生リセットボタンぽちーｗ</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="cp-main" style="padding: 120px 20px; max-width: 1100px; margin: 0 auto;">
+        
+        <div class="cp-section cp-reveal">
+            <div class="cp-grid">
+                <div class="cp-card" style="padding: 50px; position: relative;">
+                    <div class="orca-decor"></div>
+                    <h3 style="color: var(--bg-dark); margin-bottom: 2.5rem; font-weight: 950; font-size: 2rem;">CLEANER ARCHIVE</h3>
+                    <table class="cp-table">
+                        <tr>
+                            <th>誕生日</th>
+                            <td>5月18日</td>
+                        </tr>
+                        <tr>
+                            <th>身長</th>
+                            <td>148cm</td>
+                        </tr>
+                        <tr>
+                            <th>役割</th>
+                            <td>掃除屋 (インターン)</td>
+                        </tr>
+                        <tr>
+                            <th>ファン名</th>
+                            <td>飼育員</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="cp-card" style="padding: 50px; background: var(--bg-dark); color: #fff;">
+                    <h3 style="color: #fff; margin-bottom: 2rem; font-weight: 900; font-size: 2rem;">シャチの素顔</h3>
+                    <p style="line-height: 2.2; font-size: 1.15rem; opacity: 0.9;">
+                        公式設定は「冷静沈着」だが、初配信での寝坊からいきなり設定が崩壊。低血圧なロングスリーパーで、1日12時間眠ることも。作詞作曲までこなす高い音楽性と、BLトークや独自の性癖を熱く語るオタク気質のギャップが魅力。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cp-section cp-reveal">
+            <h2 class="cp-section-title">THE ORCA LOGS</h2>
+
+            <div class="ep-card">
+                <span class="ep-num">LOG 01</span>
+                <div class="ep-title">伝説の「初配信寝坊」PON</div>
+                <p>冷静沈着な設定でデビューするはずが、初配信当日の朝に寝坊し謝罪ツイートからスタート。配信本番でもミスを連発し、一瞬で「愛されポンコツ」としての地位を確立した。</p>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">LOG 02</span>
+                <div class="ep-title">お風呂嫌いと「汚部屋」の生態</div>
+                <p>1週間お風呂に入らないこともザラ。自室には「壁の前に壁ができた」と語るほどの物があり、ファンからも「汚部屋の主」として親しまれている（？）。</p>
+                <div class="ep-quote">「3 日 風呂入んないやつの 坂本（※沙花叉） 水 だからね」</div>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">LOG 03</span>
+                <div class="ep-title">解読不能！？個性的すぎる「達筆」</div>
+                <p>文字が独特すぎて、他のホロメンから「ひじきが散らばってる」と評される。直筆サインはもはや芸術の域に達しており、スタッフのチェックをすり抜けると言われている。</p>
+                <div class="ep-quote">「きったねえ 時（※字） に 母屋（※なりました）、 マジ で 読める か どう か 考え（※わかんない） けど」</div>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">LOG 04</span>
+                <div class="ep-title">類稀なる美声とアーティストの魂</div>
+                <p>普段の舌足らずな喋り方とは一変、歌声は力強く美しい「七色の歌声」。自作の『人生リセットボタンぽちーｗ』はSNSで大流行し、音楽への深い造詣を見せつけた。</p>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">LOG 05</span>
+                <div class="ep-title">飼育員との「拳」で語り合う信頼</div>
+                <p>ファンを「オタクくんたち」と呼び、激しくプロレス（煽り合い）を繰り広げる。その裏には、素の自分をさらけ出せる深い信頼関係が築かれている。</p>
+                <div class="ep-quote">「距離 感 こん だけ クソ 近い の は 奇跡 だ と 思っ て 君 たち の おかげ です」</div>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">LOG 06</span>
+                <div class="ep-title">先輩・紫咲シオンへの限界オタク</div>
+                <p>デビュー前から紫咲シオンを推し続けているガチの「塩っ子」。シオンとの対面時には、冷静さを完全に失い、ただの限界化したファンへと変貌する。</p>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="cp-footer" style="padding: 70px 0; text-align: center;">
+        <p style="font-weight: 950; letter-spacing: 5px;">&copy; 2016-2024 Cover Corp. SAKAMATA CHIPS!</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

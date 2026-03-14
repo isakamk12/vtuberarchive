@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>赤井はあと (Akai Haato) — hololive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            --chara-color: #ff0033;
+            --chara-bg: linear-gradient(135deg, #ff0033 0%, #330000 100%);
+            --accent-color: #ffd1dc;
+        }
+
+        .cp-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                        url('https://images.unsplash.com/photo-1518133835878-5a93cc3f89e5?auto=format&fit=crop&q=80'); /* Heartland/Red vibe */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .episode-card {
+            border-left: 4px solid var(--chara-color);
+            background: rgba(255, 0, 51, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .episode-card:hover {
+            transform: translateX(10px);
+            background: rgba(255, 0, 51, 0.1);
+        }
+
+        .haachama-mode {
+            font-family: 'serif';
+            letter-spacing: 2px;
+            color: var(--chara-color);
+            text-shadow: 0 0 10px rgba(255, 0, 51, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a href="../../hololive_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO hololive</a>
+        <span class="cp-nav-gen">1期生 // JP</span>
+    </nav>
+
+    <section class="cp-hero">
+        <div class="cp-hero-content">
+            <div class="cp-gen-label" style="background: var(--chara-color);">hololive 1st Gen</div>
+            <h1 class="cp-hero-name">赤井はあと</h1>
+            <span class="cp-hero-en">Akai Haato / Haachama</span>
+            <p class="cp-chara-desc">ワールドワイドの最強アイドル！金髪碧眼のツンデレな後輩……のはずが、いつしか狂気と混沌の「はあちゃま」へと覚醒。独自の感性で世界を魅了する、唯一無二のエンターテイナー。</p>
+            <div class="cp-tags">
+                <span class="cp-tag">#Haachama</span>
+                <span class="cp-tag">#Cooking</span>
+                <span class="cp-tag">#DualPersonality</span>
+                <span class="cp-tag">#StrongestIdol</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="cp-section cp-reveal">
+        <h2 class="cp-section-title">BIOGRAPHY</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>PROFILE</h3>
+                <table class="cp-table">
+                    <tr><th>BIRTHDAY</th><td>8月10日</td></tr>
+                    <tr><th>HEIGHT</th><td>154cm</td></tr>
+                    <tr><th>BLOOD TYPE</th><td>A型</td></tr>
+                    <tr><th>FAN NAME</th><td>はあとん</td></tr>
+                    <tr><th>DEBUT</th><td>2018.06.02</td></tr>
+                </table>
+            </div>
+            <div class="cp-card">
+                <h3>CHARACTER</h3>
+                <p>デビュー当初は生意気な後輩キャラだったが、留学経験や活動を経て、エキセントリックな「はあちゃま」やボーイッシュな「ちゃまお」など複数の人格（？）を使い分けるように。現在は「旅するアイドル」として、リアルとバーチャルを股にかけ活動中。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="cp-section cp-reveal">
+        <h2 class="cp-section-title">LEGENDARY EPISODES</h2>
+        <div class="cp-episodes-list">
+            <div class="cp-card episode-card">
+                <h4 style="color: var(--chara-color);"><i class="fa-solid fa-utensils"></i> 狂気の「はあちゃまクッキング」</h4>
+                <p>タランチュラ、サソリ、ワニ……。常識を遥かに超えた食材を平然と調理し、食す伝説の企画。「私はタランチュラを食べた女です」とロックな生き様を見せつけ、世界中を驚かせた。</p>
+                <div class="quote">「これぞーちゃまの作るカレー飯。神様仏様はちゃまに感謝」</div>
+            </div>
+
+            <div class="cp-card episode-card">
+                <h4 style="color: var(--chara-color);"><i class="fa-solid fa-ghost"></i> 「赤井はあと」と「はあちゃま」の奇跡</h4>
+                <p>3Dライブにて、相反する二人が同時にステージに立つというホラーかつ感動的な演出。自分自身の内面的な葛藤をエンターテインメントへと昇華させた。</p>
+                <div class="quote">「ずっと一緒にいなきゃ嫌だよ。ハートちゃんとはちゃんもずっと一緒だよ」</div>
+            </div>
+
+            <div class="cp-card episode-card">
+                <h4 style="color: var(--chara-color);"><i class="fa-solid fa-heart-crack"></i> 22名への「ガチ恋DM」ドッキリ</h4>
+                <p>ホロメン22名に全く同じ告白文を送りつけるという大胆不敵な計画。瞬く間に晒され、ホロライブ中を修羅場と笑いに包み込んだ。</p>
+                <div class="quote">「実はさ、ほんとは言うか迷ったんだけど、ガチ恋しちゃったんだよね... 付き合わない？」</div>
+            </div>
+
+            <div class="cp-card episode-card">
+                <h4 style="color: var(--chara-color);"><i class="fa-solid fa-headset"></i> 悲劇の「エア壺男」事件</h4>
+                <p>『壺男』の超絶技巧を30分間披露し続けるも、画面が映っていないという痛恨のミス。生放送での大号泣すらも後に動画のネタにするタフさを見せた。</p>
+            </div>
+
+            <div class="cp-card episode-card">
+                <h4 style="color: var(--chara-color);"><i class="fa-solid fa-brain"></i> 復帰後の「記憶喪失」ドッキリ</h4>
+                <p>8ヶ月の休養明け、「記憶をなくした」とホロメンに嘘をつき、捏造された自分の過去を募集。感動の復帰をはあちゃまらしい混沌で彩った。</p>
+            </div>
+
+            <div class="cp-card episode-card">
+                <h4 style="color: var(--chara-color);"><i class="fa-solid fa-microphone-lines"></i> 逃げないRAP BATTLE</h4>
+                <p>視聴者からの過激なディスラップに対し、逃げずに真正面からアンサーを叩きつけた。彼女のロックで真っ直ぐな生き様を象徴する回となった。</p>
+            </div>
+
+            <div class="cp-card episode-card">
+                <h4 style="color: var(--chara-color);"><i class="fa-solid fa-plane-departure"></i> 旅するアイドルとしての決意</h4>
+                <p>ネットの中だけに留まらず、47都道府県を巡る「旅するアイドル」へ。ファンとのリアルな絆を大切にし、新たなステージへと突き進んでいる。</p>
+                <div class="quote">「ネットだけじゃ得られないものが現代にはある。やっぱりはあちゃまの居場所はホロライブなんだなって！」</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 VTuber Archive Project. For Fan Work Purposes.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>
+
+</html>

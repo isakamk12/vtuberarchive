@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kobo Kanaeru (こぼ・かなえる) — hololive ID</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&family=Outfit:wght@400;700&family=M+PLUS+Rounded+1c:wght@400;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --c1: #00BFFF; /* Deep Sky Blue */
+            --c2: #FFFFFF; /* White Rain */
+            --c3: #4682B4; /* Steel Blue */
+            --bg: #E0F7FF;
+            --card-bg: rgba(0, 191, 255, 0.08);
+            --accent: #FF69B4; /* Pink (Childish) */
+            --glass: rgba(255, 255, 255, 0.6);
+            --border: rgba(0, 191, 255, 0.2);
+            --text: #2C3E50;
+        }
+
+        [data-theme="dark"] {
+            --bg: #0A192F;
+            --text: #DDF;
+            --glass: rgba(255, 255, 255, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Outfit', 'M PLUS Rounded 1c', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Rain Background */
+        .bg-rain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(180deg, var(--bg), #B2EBF2);
+        }
+
+        .rain-drop {
+            position: absolute;
+            width: 1px;
+            height: 20px;
+            background: rgba(0, 191, 255, 0.3);
+            top: -20px;
+            animation: rainfall 0.8s infinite linear;
+        }
+
+        @keyframes rainfall {
+            to { transform: translateY(100vh); }
+        }
+
+        nav {
+            padding: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .back-link {
+            color: var(--c1);
+            text-decoration: none;
+            font-family: 'Fredoka', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: 0.3s;
+        }
+
+        .code-status {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--c3);
+        }
+
+        header {
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 5% 10%;
+            position: relative;
+        }
+
+        .cloud-icon {
+            font-size: 5rem;
+            color: #fff;
+            filter: drop-shadow(0 0 20px var(--c1));
+            margin-bottom: 2rem;
+            animation: drift 4s infinite alternate ease-in-out;
+        }
+
+        @keyframes drift {
+            from { transform: translateX(-10px); }
+            to { transform: translateX(10px); }
+        }
+
+        .hero-title {
+            font-family: 'Fredoka', sans-serif;
+            font-size: clamp(3rem, 10vw, 6rem);
+            color: var(--c1);
+            line-height: 0.9;
+            margin-bottom: 1rem;
+        }
+
+        .hero-jp {
+            font-size: 1.5rem;
+            color: var(--c3);
+            letter-spacing: 10px;
+            margin-bottom: 3rem;
+        }
+
+        .hero-desc {
+            max-width: 800px;
+            background: var(--glass);
+            padding: 3rem;
+            border-radius: 30px;
+            border: 2px solid var(--border);
+            box-shadow: 0 15px 40px rgba(0, 191, 255, 0.1);
+            position: relative;
+        }
+
+        .hero-desc::before {
+            content: '';
+            position: absolute;
+            top: -15px;
+            right: 40px;
+            width: 30px;
+            height: 30px;
+            background: var(--c1);
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            padding: 5% 10%;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            transition: 0.4s;
+            border: 1px solid var(--border);
+        }
+
+        .stat-card:hover {
+            transform: scale(1.05);
+            background: #f0fbff;
+        }
+
+        .stat-label {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 0.8rem;
+            color: var(--c1);
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .stat-value {
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .coding-skills {
+            padding: 8% 10%;
+            background: #1A2639;
+            color: #4ECDC4;
+            text-align: center;
+            font-family: 'Space Mono', monospace;
+        }
+
+        .code-grid {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .code-item {
+            padding: 1.5rem 3rem;
+            border: 1px solid #4ECDC4;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+
+        .code-item:hover {
+            background: rgba(78, 205, 196, 0.1);
+            box-shadow: 0 0 20px rgba(78, 205, 196, 0.3);
+        }
+
+        .episodes {
+            padding: 10%;
+        }
+
+        .episode-row {
+            display: flex;
+            gap: 4rem;
+            margin-bottom: 6rem;
+            align-items: center;
+        }
+
+        .episode-row:nth-child(even) {
+            flex-direction: row-reverse;
+            text-align: right;
+        }
+
+        .episode-img {
+            width: 100px;
+            height: 100px;
+            background: var(--c1);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.5rem;
+            color: #fff;
+            flex-shrink: 0;
+            box-shadow: 0 10px 20px rgba(0, 191, 255, 0.2);
+        }
+
+        .episode-title {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--c1);
+        }
+
+        .episode-text {
+            font-size: 1rem;
+            color: #5A6D7E;
+            max-width: 600px;
+        }
+
+        footer {
+            padding: 5rem;
+            text-align: center;
+            background: var(--c1);
+            color: white;
+            font-family: 'Fredoka', sans-serif;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: 1s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            .episode-row, .episode-row:nth-child(even) { flex-direction: column; text-align: center; }
+            .hero-title { font-size: 3.5rem; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-rain" id="rain-canvas"></div>
+
+    <nav>
+        <a href="../../hololive_index.html" class="back-link"><i class="fa-solid fa-cloud-showers-heavy"></i> KOBOKERZ</a>
+        <div class="code-status">git commit -m "雨乞いなう"</div>
+    </nav>
+
+    <header>
+        <div class="cloud-icon reveal"><i class="fa-solid fa-umbrella"></i></div>
+        <h1 class="hero-title reveal">Kobo Kanaeru</h1>
+        <span class="hero-jp reveal">こぼ・かなえる</span>
+        <p class="hero-desc reveal">
+            「私の道具（ワタシノドグ）たち、準備はいい！？」<br>
+            灯台に住む最強のレイン・シャーマン（雨乞い師）の末裔。最強の雨乞い能力を持つが、本人は気まぐれ。特技はなんと「HTML, CSS, JavaScript」。クソガキ感満載のお茶目な魔王様だが、その歌唱力と才能でIDトップの登録者数を誇る。
+        </p>
+    </header>
+
+    <div class="coding-skills reveal">
+        <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">$ speak_language --type=technical</h2>
+        <div class="code-grid">
+            <div class="code-item">HTML5</div>
+            <div class="code-item">CSS6(?)</div>
+            <div class="code-item">JAVASCRIPT</div>
+        </div>
+        <p style="margin-top: 2rem; opacity: 0.7;">デビュー配信をウェブサイト風画面で演出する、真のITシャーマン。</p>
+    </div>
+
+    <div class="stats-grid reveal">
+        <div class="stat-card">
+            <span class="stat-label">Birthday</span>
+            <span class="stat-value">December 12</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-label">Height</span>
+            <span class="stat-value">150cm</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-label">Title</span>
+            <span class="stat-value">Rain Shaman / Demon Lord</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-label">Power</span>
+            <span class="stat-value">2M+ Subscriptions</span>
+        </div>
+    </div>
+
+    <section class="episodes">
+        <h2 class="hero-title reveal" style="text-align: center; margin-bottom: 8rem; font-size: 3rem;">RAINY RECORDS</h2>
+
+        <div class="episode-row reveal">
+            <div class="episode-img"><i class="fa-solid fa-laptop-code"></i></div>
+            <div>
+                <h3 class="episode-title">プロミング言語を話す特技</h3>
+                <p class="episode-text">
+                    「話せる言語はHTML, CSS, JavaScript」と豪語し、実際にWeb開発スキルを持つ。デビュー配信では自作サイト風の画面でプレゼンを行い、リスナーの度肝を抜いたITに強い雨乞い師。
+                </p>
+            </div>
+        </div>
+
+        <div class="episode-row reveal">
+            <div class="episode-img"><i class="fa-solid fa-crown"></i></div>
+            <div>
+                <h3 class="episode-title">魔王様と「道具」たち</h3>
+                <p class="episode-text">
+                    自らを「魔王」、ファンを「私の道具（dogu）」と呼ぶ独特のプロレスを展開。煽ってくるリスナーに「ブロックするぞ！」と豪語しながらも、実は抜群のコミュニケーション力で愛されている。
+                </p>
+            </div>
+        </div>
+
+        <div class="episode-row reveal">
+            <div class="episode-img"><i class="fa-solid fa-baby"></i></div>
+            <div>
+                <h3 class="episode-title">ホロENのパパとママ</h3>
+                <p class="episode-text">
+                    Mori Calliopeを「Daddy」、Takanashi Kiaraを「Mommy」と呼び、天性のクソガキっぷりと甘え上手で翻弄。普段の傍若無人ぶりから一変、社会性（バッテリー）が切れるとZetaの手を離さなくなる可愛い一面も。
+                </p>
+            </div>
+        </div>
+
+        <div class="episode-row reveal">
+            <div class="episode-img"><i class="fa-solid fa-ghost"></i></div>
+            <div>
+                <h3 class="episode-title">恐怖のあまり「実母」を召喚</h3>
+                <p class="episode-text">
+                    ホラーゲーム配信中、恐怖で絶叫しながら「マミー！」と叫んだところ、本当に隣室のリアルお母さんが登場。本人以上に落ち着いた様子でファンに挨拶した「ママ初登場」は伝説。
+                </p>
+            </div>
+        </div>
+
+        <div class="episode-row reveal">
+            <div class="episode-img"><i class="fa-solid fa-music"></i></div>
+            <div>
+                <h3 class="episode-title">圧巻の歌唱力と弾き語り</h3>
+                <p class="episode-text">
+                    騒がしい普段の姿からは想像できない、圧倒的な歌の才能。オリジナル曲『Mantra Hujan』はバイラルヒットを記録。即興の弾き語りも得意で、ボカロからJ-POPまで感情豊かに歌い上げる。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 VTuber Archive — Rain makes us grow.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) entry.target.classList.add('active');
+                });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+            // Rain generator
+            const rainBox = document.getElementById('rain-canvas');
+            for(let i=0; i<100; i++) {
+                const drop = document.createElement('div');
+                drop.className = 'rain-drop';
+                drop.style.left = Math.random() * 100 + '%';
+                drop.style.animationDuration = (Math.random() * 0.5 + 0.5) + 's';
+                drop.style.animationDelay = Math.random() * 2 + 's';
+                rainBox.appendChild(drop);
+            }
+        });
+    </script>
+</body>
+
+</html>

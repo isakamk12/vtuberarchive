@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shiori Novella (シオリ・ノヴェラ) — hololive Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            --chara-color: #212121; /* Shiori Black */
+            --chara-accent: #f5f5f5; /* Shiori White */
+            --lavender-gray: #9e9e9e;
+            --archivist-ink: #311b92; /* Deep Indigo */
+            --danger-purple: #4a148c;
+        }
+
+        .cp-bg {
+            background: 
+                linear-gradient(to right, rgba(0,0,0,0.8) 50%, rgba(255,255,255,0.8) 50%),
+                url('https://www.transparenttextures.com/patterns/dust.png');
+            opacity: 1;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1;
+        }
+
+        body {
+            background-color: var(--chara-color);
+            color: var(--chara-accent);
+            font-family: 'Inter', 'Noto Sans JP', 'Courier New', monospace;
+            overflow-x: hidden;
+        }
+
+        .cp-nav {
+            background: rgba(0, 0, 0, 0.9);
+            border-bottom: 2px solid var(--chara-accent);
+        }
+
+        .cp-hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                        url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&q=80&w=1200') center/cover;
+            padding: 240px 20px;
+            text-align: center;
+            border-bottom: 10px double var(--chara-accent);
+        }
+
+        /* Two-tone text effect */
+        .cp-hero-name {
+            font-size: 6rem;
+            font-weight: 950;
+            background: linear-gradient(to right, #fff 50%, #555 50%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 4px 4px 0 rgba(49, 27, 146, 0.3);
+            margin-bottom: 0px;
+        }
+
+        .cp-hero-en {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--lavender-gray);
+            text-transform: uppercase;
+            letter-spacing: 12px;
+            margin-bottom: 3.5rem;
+            display: block;
+        }
+
+        .collector-tag {
+            border: 1px solid var(--chara-accent);
+            padding: 5px 30px;
+            font-weight: 950;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            display: inline-block;
+            margin-bottom: 2.5rem;
+        }
+
+        .cp-chara-desc {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.25rem;
+            line-height: 2.3;
+            font-weight: 500;
+            color: #ccc;
+            background: rgba(0,0,0,0.7);
+            padding: 40px;
+            border: 1px solid #444;
+            backdrop-filter: blur(10px);
+        }
+
+        .cp-section-title {
+            font-size: 3rem;
+            font-weight: 950;
+            color: var(--chara-accent);
+            margin-bottom: 5rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .cp-section-title::after {
+            content: "👁🗨";
+            display: block;
+            margin-top: 15px;
+            font-size: 1.5rem;
+        }
+
+        .archive-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .cp-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid #333;
+            padding: 45px;
+            border-radius: 0;
+            position: relative;
+        }
+
+        .cp-card::before {
+            content: "";
+            position: absolute;
+            top: 5px; left: 5px; right: 5px; bottom: 5px;
+            border: 1px solid rgba(255,255,255,0.1);
+            pointer-events: none;
+        }
+
+        .cp-table th {
+            color: #9e9e9e;
+            font-weight: 950;
+        }
+
+        .bookmark-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 80px;
+        }
+
+        .bookmark-item {
+            background: #fff;
+            color: #000;
+            padding: 40px;
+            border-left: 15px solid var(--archivist-ink);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .bookmark-item:nth-child(even) {
+            background: #212121;
+            color: #fff;
+            border-left-color: #f5f5f5;
+        }
+
+        .bookmark-item:hover {
+            transform: rotate(-1deg) scale(1.02);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+        }
+
+        .bookmark-title {
+            font-size: 1.5rem;
+            font-weight: 950;
+            margin-bottom: 1.2rem;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .bookmark-text {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        .scissor-cut {
+            text-decoration: line-through;
+            color: #666;
+        }
+
+        .yorick-quote {
+            text-align: center;
+            padding: 100px 40px;
+            background: #000;
+            margin-top: 150px;
+            border-top: 5px solid var(--archivist-ink);
+        }
+
+        .footer-archive {
+            padding: 60px 0;
+            text-align: center;
+            color: #444;
+            font-size: 0.8rem;
+            letter-spacing: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .cp-hero-name { font-size: 3rem; }
+            .archive-grid { grid-template-columns: 1fr; }
+            .bookmark-list { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a href="../../hololive_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO hololive</a>
+        <span class="cp-nav-gen">hololive EN // Advent</span>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-content">
+            <div class="collector-tag">ARCHIVIST // SUBJECT: NOVELLA</div>
+            <h1 class="cp-hero-name">Shiori Novella</h1>
+            <span class="cp-hero-en">シオリ・ノヴェラ</span>
+            <p class="cp-chara-desc">
+                膨大な知識と物語を栞（しおり）に変えて保管する「収集家」。<br>
+                知的好奇心が昂じるあまり、人類が触れてはならない禁断の知識に到達し投獄。脱獄を果たした現在は、独特な美的センスと常識の外側を行く「収集活動」を続け、リスナーを自らの奇妙な物語へと引き込んでいる。
+            </p>
+        </div>
+    </header>
+
+    <main class="cp-main" style="padding: 120px 20px; max-width: 1200px; margin: 0 auto;">
+        
+        <div class="cp-section cp-reveal">
+            <h2 class="cp-section-title">THE ARCHIVIST'S DATA</h2>
+            <div class="archive-grid">
+                <div class="cp-card">
+                    <h3 style="color: #fff; font-weight: 950; margin-bottom: 2rem;">SPECIFICATIONS</h3>
+                    <table class="cp-table">
+                        <tr>
+                            <th>BIRTHDAY</th>
+                            <td>5月2日</td>
+                        </tr>
+                        <tr>
+                            <th>HEIGHT</th>
+                            <td>163cm</td>
+                        </tr>
+                        <tr>
+                            <th>DEBUT</th>
+                            <td>2023.07.30</td>
+                        </tr>
+                        <tr>
+                            <th>OSHI MARK</th>
+                            <td>👁🗨</td>
+                        </tr>
+                        <tr>
+                            <th>MASCOT</th>
+                            <td>Yorick (Skull)</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="cp-card" style="display: flex; flex-direction: column; justify-content: center; border-right: 5px solid var(--archivist-ink);">
+                    <h3 style="color: #fff; font-weight: 950; margin-bottom: 2rem;">"Wouldn't that be a lovely story?"</h3>
+                    <p style="font-size: 1.1rem; line-height: 2.2; color: #aaa;">
+                        思考が止まることのない彼女の脳内は、常に数多の「IF」と物語で溢れている。<br>
+                        その過剰な知識欲の代償か、彼女の髪は半分白く染まり、夜も眠れぬ不眠症と頭痛が彼女を悩ませ続けている。それでも彼女は、次の物語を栞に変える手を止めない。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cp-section cp-reveal" style="margin-top: 150px;">
+            <h2 class="cp-section-title">COLLECTED BOOKMARKS</h2>
+            
+            <div class="bookmark-list">
+                <div class="bookmark-item">
+                    <div class="bookmark-title">#01 ステーキはハサミで</div>
+                    <div class="bookmark-text">「切ってそのまま口に運べる」という理由で、ステーキ、ピザ、さらにはアイスまでハサミで食べる。効率至上主義が生んだ、彼女を象徴する衝撃の食生活。</div>
+                </div>
+
+                <div class="bookmark-item">
+                    <div class="bookmark-title">#02 死んだハエと顕微鏡</div>
+                    <div class="bookmark-text">幼少期の遊び相手はピンセットで摘んだ死んだハエ。現在も顕微鏡で昆虫や寄生虫を観察・解剖する様子を、美貌を崩さず平然と語る。</div>
+                </div>
+
+                <div class="bookmark-item">
+                    <div class="bookmark-title">#03 限界オタクの自己投影</div>
+                    <div class="bookmark-text">物語に激しく自己投影するタイプ。好きな男キャラが不遇だと発狂し、『東京喰種』の話題ではFワードを連呼した直後に「ごめんね♪」と微笑むヤンデレ。</div>
+                </div>
+
+                <div class="bookmark-item">
+                    <div class="bookmark-title">#04 子供時代の破壊者</div>
+                    <div class="bookmark-text">オーディションで有名童話の「本当の惨劇」を面接官に語り聞かせ、彼らの子供時代を破壊して合格を勝ち取ったという伝説の持ち主。</div>
+                </div>
+
+                <div class="bookmark-item">
+                    <div class="bookmark-title">#05 虫以下かどうかの選別</div>
+                    <div class="bookmark-text">カフカを語りながら「私がゴキブリになったら？」という問いに「踏み潰すわ。昔の友人ならしないけど、見極める。虫以下かどうかをね」とSっ気満載に回答。</div>
+                </div>
+
+                <div class="bookmark-item">
+                    <div class="bookmark-title">#06 1日1万歩の執念</div>
+                    <div class="bookmark-text">ステッパーで1日1万歩を義務付ける健康志向。しかし Character AI との狂信的な会話に時間を忘れ、結局睡眠サイクルを破壊している。</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="yorick-quote cp-reveal">
+            <h3 style="font-size: 2.5rem; font-weight: 950; margin-bottom: 2rem;">"What is human, if not a collection of memories?"</h3>
+            <p style="font-size: 1.3rem; line-height: 2.2; max-width: 850px; margin: 0 auto; color: #888;">
+                彼女が栞に変えるのは、ただの物語ではない。それはあなたの、そして人類の、<span style="color: #fff;">忘れ去られるべきではない一瞬</span>の記録。<br>
+                「それって、素敵な物語だと思わない？」
+            </p>
+        </div>
+
+    </main>
+
+    <footer class="footer-archive">
+        <p>&copy; COVER CORP. // SUBJECT NO.3 NOVELLA // ARCHIVE CLOSED</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => { entry.isIntersecting && entry.target.classList.add('active'); });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

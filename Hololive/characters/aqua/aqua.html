@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>湊あくあ (Minato Aqua) — hololive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            --chara-color: #f48fb1; /* Aqua Pink */
+            --chara-accent: #29b6f6; /* Aqua Blue */
+            --bg-dark: #880e4f;
+            --card-bg: rgba(255, 255, 255, 0.95);
+            --text-main: #4a148c;
+        }
+
+        .cp-bg {
+            background: linear-gradient(135deg, #fce4ec 0%, #e1f5fe 100%);
+            opacity: 0.3;
+            z-index: -1;
+        }
+
+        body {
+            color: var(--text-main);
+            background-color: #fff;
+        }
+
+        .cp-nav {
+            background: rgba(136, 14, 79, 0.9);
+        }
+
+        .cp-hero {
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1516280440614-37939bb9258f?auto=format&fit=crop&q=80&w=1000') center/cover;
+            color: #fff;
+            padding: 130px 20px;
+            text-align: center;
+            border-bottom: 10px solid var(--chara-accent);
+        }
+
+        .cp-hero-name {
+            font-size: 5.5rem;
+            font-weight: 950;
+            text-shadow: 0 0 40px rgba(244, 143, 177, 0.6);
+            letter-spacing: -2px;
+        }
+
+        .cp-tag {
+            background: #fff;
+            color: var(--bg-dark);
+            border: 2px solid var(--chara-color);
+            border-radius: 50px;
+            font-weight: 950;
+        }
+
+        .cp-section-title {
+            font-size: 3.2rem;
+            font-weight: 950;
+            color: var(--bg-dark);
+            text-align: center;
+            margin-bottom: 4.5rem;
+        }
+
+        .cp-section-title::after {
+            content: "⚓";
+            display: inline-block;
+            margin-left: 15px;
+        }
+
+        .cp-card {
+            background: #fff;
+            border: 2px solid #f8bbd0;
+            box-shadow: 0 15px 50px rgba(136, 14, 79, 0.08);
+            border-radius: 15px;
+        }
+
+        .cp-table th {
+            color: var(--bg-dark);
+            font-weight: 950;
+        }
+
+        .ep-card {
+            background: #fff;
+            border-top: 10px solid var(--chara-color);
+            padding: 3.5rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.06);
+            transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ep-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(225deg, var(--chara-accent) 0%, transparent 70%);
+            opacity: 0.1;
+        }
+
+        .ep-card:hover {
+            transform: translateY(-15px);
+            border-top-color: var(--chara-accent);
+        }
+
+        .ep-num {
+            background: var(--bg-dark);
+            color: #fff;
+            padding: 5px 20px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 900;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        .ep-title {
+            font-size: 2.2rem;
+            font-weight: 950;
+            color: var(--bg-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .ep-quote {
+            background: #fce4ec;
+            border-left: 10px solid var(--chara-accent);
+            padding: 2rem;
+            margin-top: 2.5rem;
+            font-weight: 800;
+            color: #4a148c;
+            font-style: italic;
+            line-height: 2;
+        }
+
+        .cp-footer {
+            background: #311b92;
+            color: var(--chara-color);
+        }
+
+        /* Anchor Decoration */
+        .anchor-decor {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 80px;
+            height: 80px;
+            background: url('https://api.iconify.design/mdi:anchor.svg?color=%2329b6f6') no-repeat center/contain;
+            opacity: 0.1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a href="../../hololive_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO hololive</a>
+        <span class="cp-nav-gen">2期生 (Graduate) // JP</span>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-content">
+            <div class="cp-gen-label" style="background: var(--chara-color); color: #fff; padding: 5px 20px; font-weight: 950; border-radius: 4px; margin-bottom: 1.5rem; display: inline-block;">GALAXY'S STRONGEST IDOL</div>
+            <h1 class="cp-hero-name">湊あくあ</h1>
+            <span class="cp-hero-en" style="font-size: 2.5rem; font-weight: 950; display: block; margin-bottom: 3rem; color: #f8bbd0;">Minato Aqua</span>
+            <p class="cp-chara-desc" style="max-width: 950px; margin: 0 auto; font-size: 1.4rem; line-height: 2; font-weight: 600;">
+                「銀河一最強のアイドルになる！」<br>
+                マリンメイド服を着たバーチャルアイドルゲーマー。極度の人見知り（陰キャ）でありながら、ゲームに対しては一切の妥協を許さないストイックな努力家。数々の伝説を残し、あくあ色の軌跡を刻んだ永遠のヒロイン。
+            </p>
+            <div class="cp-tags" style="margin-top: 4rem;">
+                <span class="cp-tag">#湊あくあ</span>
+                <span class="cp-tag">#あくあクルー</span>
+                <span class="cp-tag">#ゲーマーメイド</span>
+                <span class="cp-tag">#あくあ色に染まれ</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="cp-main" style="padding: 120px 20px; max-width: 1150px; margin: 0 auto;">
+        
+        <div class="cp-section cp-reveal">
+            <div class="cp-grid">
+                <div class="cp-card" style="padding: 60px; position: relative;">
+                    <div class="anchor-decor"></div>
+                    <h3 style="color: var(--bg-dark); margin-bottom: 3rem; font-weight: 950; font-size: 2.22rem; border-bottom: 6px solid var(--chara-accent); display: inline-block;">IDOL ARCHIVE</h3>
+                    <table class="cp-table">
+                        <tr>
+                            <th>誕生日</th>
+                            <td>12月1日</td>
+                        </tr>
+                        <tr>
+                            <th>身長</th>
+                            <td>148cm</td>
+                        </tr>
+                        <tr>
+                            <th>プレイスタイル</th>
+                            <td>超ストイック / 負けず嫌い</td>
+                        </tr>
+                        <tr>
+                            <th>ファン名</th>
+                            <td>あくあクルー</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="cp-card" style="padding: 60px; background: var(--bg-dark); color: #fff;">
+                    <h3 style="color: var(--chara-color); margin-bottom: 2.5rem; font-weight: 900; font-size: 2rem;">メイドの誇りと努力</h3>
+                    <p style="line-height: 2.3; font-size: 1.2rem; opacity: 0.95;">
+                        保育園からの夢だった「アイドル」を叶えるため、人見知りを克服しステージに立ち続けた。APEXソロマスター達成や数々のRTA記録など、卓越したゲームスキルは「銀河一」を目指す彼女の武器。ドジでポンコツな一面もありつつ、最後の一秒までファンへの愛を貫き通した。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cp-section cp-reveal">
+            <h2 class="cp-section-title">AQUA CHRONICLES</h2>
+
+            <div class="ep-card">
+                <span class="ep-num">STEP 01</span>
+                <div class="ep-title">「諦めない努力」のソロマスター</div>
+                <p>APEX Legendsにて、過酷なチャレンジの末にソロマスターを達成。折れない心と圧倒的な練習量が実を結んだ瞬間であり、彼女の活動理念を象徴する出来事。</p>
+                <div class="ep-quote">「努力は絶対に何かしらの形で自分の糧となると思っております。だから頑張ることってすごく素敵なんだよって」</div>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">STEP 02</span>
+                <div class="ep-title">極度の人見知り「隣にいるよ」事件</div>
+                <p>真横に同期がいるのに声をかけられず、Discordで連絡。オフラインでの極端な陰キャっぷりは数々の伝説を生んでおり、ファンからは親しみと笑いを込めて語り継がれている。</p>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">STEP 03</span>
+                <div class="ep-title">CPUを食い潰す「食べ物」トーク</div>
+                <p>ゲームに極限まで集中すると、無意識に食べ物（オムライス、寿司など）の話を始めてしまう習性がある。脳のリソースがゲームに持っていかれた際の「生存本能」のような可愛らしい癖。</p>
+                <div class="ep-quote">「脳のCPUが6割7割ゲームに割かれている時いつもなんか食べ物の話してる気がするんだよね」</div>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">STEP 04</span>
+                <div class="ep-title">天才と紙一重の「ドジっ子」伝説</div>
+                <p>FPSでは神がかり的なエイムを見せるが、マイクラ等の自由な場所では足を滑らせて全ロスするなど、信じられないポンコツぶりを発揮する。その極端なギャップが「湊あくあ」の真骨頂。</p>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">STEP 05</span>
+                <div class="ep-title">銀河一のアイドル「夢を叶えたよ」</div>
+                <p>卒業ライブで見せた、アイドルとしての全力の輝き。幼い頃からの夢を叶え、多くの人々に愛された彼女の軌跡は、ファンにとって永遠に色褪せない宝物となった。</p>
+                <div class="ep-quote">「物心ついた時からずっとアイドルになりたかった。夢を叶えたんだよ、みんなのおかげで」</div>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">STEP 06</span>
+                <div class="ep-title">「私のことを、忘れないでね」</div>
+                <p>忘れられることがアイドルの「死」であると語り、ファンに寄り添い続けた最後のメッセージ。あくあクルーの心には、今も彼女の歌声が響き続けている。</p>
+                <div class="ep-quote">「アイドルにとっての“死”とは、みんなに忘れられることだと思っています。だから、私のことを忘れないでね」</div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="cp-footer" style="padding: 70px 0; text-align: center;">
+        <p style="font-weight: 950; letter-spacing: 5px;">&copy; 2018-2024 Minato Aqua Anniversary. SHIP SETS SAIL FOREVER.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

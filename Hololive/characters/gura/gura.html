@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>がうる・ぐら (Gawr Gura) — hololive Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            --chara-color: #00bcd4; /* Shark Blue */
+            --chara-accent: #e0f7fa; /* Ocean Foam */
+            --deep-sea: #006064;
+            --shrimp-red: #ff5252;
+        }
+
+        .cp-bg {
+            background: 
+                linear-gradient(to bottom, #00acc1 0%, #006064 100%);
+            opacity: 0.1;
+        }
+
+        body {
+            background-color: #fff;
+            color: #333;
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+        }
+
+        .cp-nav {
+            background: rgba(0, 188, 212, 0.9);
+        }
+
+        .cp-hero {
+            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1551244072-5d12893278ab?auto=format&fit=crop&q=80&w=1200') center/cover;
+            padding: 180px 20px;
+            text-align: center;
+            border-bottom: 8px solid var(--chara-color);
+            position: relative;
+            overflow: hidden;
+            color: #fff;
+        }
+
+        .water-effect {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .cp-hero-name {
+            font-size: 5.5rem;
+            font-weight: 950;
+            text-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            margin-bottom: 0.5rem;
+        }
+
+        .cp-hero-en {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--chara-accent);
+            text-transform: uppercase;
+            letter-spacing: 8px;
+            margin-bottom: 3.5rem;
+        }
+
+        .a-badge {
+            font-size: 3rem;
+            font-weight: 950;
+            background: #fff;
+            color: var(--chara-color);
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .cp-chara-desc {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.3rem;
+            line-height: 2.2;
+            font-weight: 600;
+            color: #f0f0f0;
+        }
+
+        .cp-section-title {
+            font-size: 3rem;
+            font-weight: 950;
+            color: var(--deep-sea);
+            margin-bottom: 4rem;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .cp-section-title::before {
+            content: "\f71d"; /* Trident icon */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+        }
+
+        .cp-card {
+            background: #fff;
+            border: 2px solid var(--chara-accent);
+            border-radius: 30px;
+            padding: 45px;
+            box-shadow: 0 20px 40px rgba(0, 188, 212, 0.05);
+        }
+
+        .cp-table th {
+            color: var(--chara-color);
+            font-weight: 900;
+            border-bottom: 1px solid #eee;
+        }
+
+        .cp-tab-badge {
+            background: var(--shrimp-red);
+            color: #fff;
+            padding: 5px 15px;
+            border-radius: 5px;
+            font-weight: 900;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .shark-log-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .shark-log {
+            background: #fcfdfe;
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid #e1f5fe;
+            transition: all 0.3s ease;
+        }
+
+        .shark-log:hover {
+            border-color: var(--chara-color);
+            box-shadow: 0 10px 25px rgba(0, 188, 212, 0.1);
+        }
+
+        .shark-log-title {
+            font-size: 1.4rem;
+            font-weight: 900;
+            color: var(--deep-sea);
+            margin-bottom: 1rem;
+        }
+
+        .shark-log-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #666;
+        }
+
+        .bubble-accent {
+            color: var(--chara-color);
+            font-weight: 900;
+        }
+
+        .footer-ocean {
+            background: var(--deep-sea);
+            color: #fff;
+            padding: 80px 0;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .grad-info {
+            background: rgba(255, 82, 82, 0.1);
+            color: var(--shrimp-red);
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-weight: 900;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .cp-hero-name { font-size: 3rem; }
+            .cp-hero-en { font-size: 1.5rem; }
+            .shark-log-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a href="../../hololive_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO hololive</a>
+        <span class="cp-nav-gen">hololive EN // Myth</span>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="water-effect"></div>
+        <div class="cp-hero-content">
+            <div class="a-badge">a</div>
+            <h1 class="cp-hero-name">がうる・ぐら</h1>
+            <span class="cp-hero-en">Gawr Gura</span>
+            <p class="cp-chara-desc">
+                「海底つまらんすぎてワロタ」と言いながら地上へやってきたアトランティスの末裔。<br>
+                VTuber史上初の登録者400万人超えを達成した、世界一のサメちゃん。
+            </p>
+            <div class="grad-info">LEGENDARY STATUS: GRADUATED (2025.05.01)</div>
+        </div>
+    </header>
+
+    <main class="cp-main" style="padding: 120px 20px; max-width: 1200px; margin: 0 auto;">
+        
+        <div class="cp-section cp-reveal">
+            <h2 class="cp-section-title">ATLANTIS ARCHIVE</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3 style="color: var(--chara-color); font-weight: 950; margin-bottom: 2rem;">SHARK SPEC</h3>
+                    <table class="cp-table">
+                        <tr>
+                            <th>BIRTHDAY</th>
+                            <td>6月20日</td>
+                        </tr>
+                        <tr>
+                            <th>AGE</th>
+                            <td>9000歳超え</td>
+                        </tr>
+                        <tr>
+                            <th>HEIGHT</th>
+                            <td>141cm</td>
+                        </tr>
+                        <tr>
+                            <th>FAN NAME</th>
+                            <td>Chumbuds</td>
+                        </tr>
+                        <tr>
+                            <th>OSHI MARK</th>
+                            <td>🔱</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="cp-card" style="border-left: 8px solid var(--shrimp-red);">
+                    <span class="cp-tab-badge">NOTICE</span>
+                    <h3 style="color: var(--shrimp-red); font-weight: 950; margin-bottom: 1.5rem;">なぜ「エビ (Shrimp)」なのか</h3>
+                    <p style="font-size: 1.15rem; line-height: 2; color: #555;">
+                        ガチ恋勢を指すネットスラング<span class="bubble-accent">「Simp」</span>を、ぐらが<span class="bubble-accent">「Shrimp（エビ）」</span>と聞き間違えたことがきっかけ。それ以来、彼女のリスナーは赤いエビの姿として定着することになった。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cp-section cp-reveal" style="margin-top: 150px;">
+            <h2 class="cp-section-title">CHRONICLES OF "a"</h2>
+
+            <div class="shark-log-grid">
+                <div class="shark-log">
+                    <div class="shark-log-title">伝説の第一声「a」</div>
+                    <div class="shark-log-text">初配信の冒頭、たった一言放った「a（あ）」が世界的なネットミームに。VTuber史上最速の快進撃はここから始まった。</div>
+                </div>
+
+                <div class="shark-log">
+                    <div class="shark-log-title">お風呂ピザ「5秒ルール」</div>
+                    <div class="shark-log-text">お風呂でピザを食べてお湯に落とすも、「5秒ルールだからセーフ！」と言い放ちそのまま食べた。私生活の強烈なPONエピソードの一つ。</div>
+                </div>
+
+                <div class="shark-log">
+                    <div class="shark-log-title">9+10=11の計算能力</div>
+                    <div class="shark-log-text">簡単な計算やスペルミスを頻繁にやらかし、「Bonehead shark（おバカなサメ）」と親しまれる。自信満々に「11」と答えたシーンはもはや歴史。</div>
+                </div>
+
+                <div class="shark-log">
+                    <div class="shark-log-title">「38歳ですが？」空港事件</div>
+                    <div class="shark-log-text">幼く見られすぎて空港で足止めされた際、咄嗟に「38歳」とサバを読んで切り抜けた。以来、彼女は38歳というネタが定着した。</div>
+                </div>
+
+                <div class="shark-log">
+                    <div class="shark-log-title">下ネタ大王のギャップ</div>
+                    <div class="shark-log-text">可愛らしいロリ枠の見た目に反し、配信中にさらりと（しかも無自覚に）放送禁止用語を口走る。清楚とは程遠い「やべーやつ」の一人。</div>
+                </div>
+
+                <div class="shark-log">
+                    <div class="shark-log-title">ドジャースでの奇跡</div>
+                    <div class="shark-log-text">米球場で歌唱した直後にホームランが飛び出し逆転勝利。「幸運のサメ」として大谷翔平選手ら野球ファンをも驚かせた。</div>
+                </div>
+            </div>
+
+            <div class="cp-card cp-reveal" style="background: var(--deep-sea); color: #fff; margin-top: 100px; text-align: center; border: none; padding: 80px;">
+                <h3 style="color: var(--chara-accent); font-size: 2.2rem; font-weight: 950; margin-bottom: 2rem;">CITY POP & CHILL</h3>
+                <p style="font-size: 1.3rem; line-height: 2.5; font-weight: 500;">
+                    日本のシティ・ポップをこよなく愛し、透き通るような歌声で世界を魅了した。<br>
+                    「海底つまらん」と言って飛び出した彼女が、地上の景色を最も眩しく変えた瞬間だった。
+                </p>
+                <div style="margin-top: 3rem; font-size: 2.5rem;">🔱🌊🦈</div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="footer-ocean">
+        <p style="font-weight: 950; letter-spacing: 5px; color: var(--chara-accent);">&copy; COVER CORP. // SHARK OF DESTINY</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => { entry.isIntersecting && entry.target.classList.add('active'); });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

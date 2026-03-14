@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水宮枢 (Mizumiya Suu) — hololive Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            --chara-color: #ff80ab; /* Soft Pink */
+            --chara-accent: #81d4fa; /* Sky Blue */
+            --bg-light: #fff9fb;
+            --card-border: #ffc2d1;
+        }
+
+        .cp-bg {
+            background: 
+                radial-gradient(var(--chara-accent) 1px, transparent 1px),
+                radial-gradient(var(--chara-color) 1px, transparent 1px);
+            background-size: 40px 40px;
+            background-position: 0 0, 20px 20px;
+            opacity: 0.05;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: #444;
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+        }
+
+        .cp-nav {
+            background: rgba(255, 128, 171, 0.9);
+        }
+
+        .cp-hero {
+            background: linear-gradient(135deg, rgba(255,128,171,0.2), rgba(129,212,250,0.2)), url('https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&q=80&w=1200') center/cover;
+            padding: 180px 20px;
+            text-align: center;
+            border-bottom: 8px solid var(--chara-color);
+            position: relative;
+        }
+
+        .bubble {
+            position: absolute;
+            background: rgba(255,255,255,0.4);
+            border-radius: 50%;
+            pointer-events: none;
+            animation: float 6s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .cp-hero-name {
+            font-size: 5rem;
+            font-weight: 900;
+            color: var(--chara-color);
+            text-shadow: 0 5px 15px rgba(255,128,171,0.3);
+            margin-bottom: 0.5rem;
+        }
+
+        .cp-hero-en {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--chara-accent);
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            margin-bottom: 3rem;
+        }
+
+        .cp-catchphrase {
+            font-size: 1.5rem;
+            font-weight: 800;
+            display: inline-block;
+            background: #fff;
+            padding: 10px 30px;
+            border-radius: 50px;
+            border: 3px dashed var(--chara-color);
+            color: var(--chara-color);
+            margin-bottom: 2.5rem;
+        }
+
+        .cp-chara-desc {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.3rem;
+            line-height: 2;
+            font-weight: 600;
+            color: #555;
+        }
+
+        .cp-section-title {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--chara-color);
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .cp-section-title::before, .cp-section-title::after {
+            content: "✨";
+            margin: 0 15px;
+        }
+
+        .cp-grid { gap: 40px; }
+
+        .cp-card {
+            background: #fff;
+            border: 2px solid var(--card-border);
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(255,128,171,0.1);
+            padding: 40px;
+            transition: transform 0.3s ease;
+        }
+
+        .cp-card:hover { transform: translateY(-10px); }
+
+        .cp-table th {
+            color: var(--chara-color);
+            font-weight: 800;
+            font-size: 1.1rem;
+            text-align: left;
+        }
+
+        .cp-table td {
+            font-weight: 600;
+            text-align: right;
+        }
+
+        .episode-card {
+            background: #fff;
+            border-radius: 25px;
+            padding: 3rem;
+            margin-bottom: 4rem;
+            border-left: 10px solid var(--chara-accent);
+            box-shadow: 5px 5px 20px rgba(0,0,0,0.05);
+            position: relative;
+        }
+
+        .ep-icon {
+            position: absolute;
+            right: 30px;
+            top: 20px;
+            font-size: 4rem;
+            color: rgba(129,212,250,0.2);
+        }
+
+        .ep-type {
+            font-weight: 900;
+            color: var(--chara-accent);
+            font-size: 1rem;
+            display: block;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .ep-title {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+
+        .ep-text {
+            font-size: 1.2rem;
+            line-height: 1.9;
+            font-weight: 500;
+        }
+
+        .quote-box {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin-top: 1.5rem;
+            border: 1px solid var(--card-border);
+            font-weight: 700;
+            color: var(--chara-color);
+        }
+
+        .genius-badge {
+            display: inline-block;
+            padding: 5px 15px;
+            background: var(--chara-color);
+            color: #fff;
+            border-radius: 5px;
+            font-weight: 950;
+            margin-right: 10px;
+        }
+
+        .footer-smol {
+            background: #fff;
+            padding: 60px 0;
+            text-align: center;
+            border-top: 2px solid var(--card-border);
+        }
+
+        @media (max-width: 768px) {
+            .cp-hero-name { font-size: 3rem; }
+            .cp-hero-en { font-size: 1.5rem; }
+            .episode-card { padding: 2rem; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a href="../../hololive_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO hololive</a>
+        <span class="cp-nav-gen">DEV_IS // FLOW GLOW</span>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="bubble" style="width:50px; height:50px; left:10%; top:20%;"></div>
+        <div class="bubble" style="width:30px; height:30px; right:15%; top:10%;"></div>
+        <div class="bubble" style="width:40px; height:40px; left:20%; bottom:15%;"></div>
+        <div class="cp-hero-content">
+            <h1 class="cp-hero-name">水宮枢</h1>
+            <span class="cp-hero-en">Mizumiya Suu</span>
+            <div class="cp-catchphrase">しゅぴしゅわー すうの充電たりてる？</div>
+            <p class="cp-chara-desc">
+                FLOW GLOWの宣伝担当。「てんさい」「えらい」「でかい」の3拍子（自称）が揃った自信満々な女の子。<br>
+                145cmの圧倒的「女児」ビジュアルを持ちながら、中身は出汁への拘りが強すぎる食通で、リスナーへの愛が重すぎる「圧」の持ち主。
+            </p>
+        </div>
+    </header>
+
+    <main class="cp-main" style="padding: 100px 20px; max-width: 1100px; margin: 0 auto;">
+        
+        <div class="cp-section cp-reveal">
+            <h2 class="cp-section-title">ADVERTISING DATA</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3 style="color: var(--chara-accent); border-bottom: 2px solid var(--chara-accent); padding-bottom: 10px; margin-bottom: 2rem;">BASIC PROFILE</h3>
+                    <table class="cp-table">
+                        <tr>
+                            <th>誕生日</th>
+                            <td>6月16日</td>
+                        </tr>
+                        <tr>
+                            <th>身長</th>
+                            <td>145cm (サバ読み 183cm)</td>
+                        </tr>
+                        <tr>
+                            <th>担当</th>
+                            <td>宣伝担当</td>
+                        </tr>
+                        <tr>
+                            <th>ファン名</th>
+                            <td>すうりす</td>
+                        </tr>
+                        <tr>
+                            <th>推し</th>
+                            <td>大空スバル</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="cp-card" style="border-color: var(--chara-accent);">
+                    <h3 style="color: var(--chara-color); border-bottom: 2px solid var(--chara-color); padding-bottom: 10px; margin-bottom: 1.5rem;">天才の証明 (PON)</h3>
+                    <p style="font-size: 1.15rem; line-height: 1.9; font-weight: 500;">
+                        自他共に認める「てんさい」だが、漢字や英語が極端に苦手。独自の言語センスで「遣唐使」を「とうがらし」と読むなど、歴史に名を刻むPONを量産。本人は「ENだから」という謎の言い訳で乗り切る。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cp-section cp-reveal" style="margin-top: 120px;">
+            <h2 class="cp-section-title">PROMOTION LOGS</h2>
+
+            <div class="episode-card">
+                <i class="fas fa-bowl-food ep-icon"></i>
+                <span class="ep-type">Obsession</span>
+                <div class="ep-title">異常な「出汁」への拘り</div>
+                <div class="ep-text">「ラーメンよりうどんでいいじゃん」と言うリスナーに対し「ラーメンと飲める出汁の深みが違うんだよ！」と熱弁。数の子はシャキシャキするので野菜、ゴア・マガラ（モンハン）は甘辛い調味料に見えるなど、独特の食い意地を見せる。</div>
+            </div>
+
+            <div class="episode-card" style="border-left-color: var(--chara-color);">
+                <i class="fas fa-heart ep-icon" style="color: rgba(255,128,171,0.2);"></i>
+                <span class="ep-type">Pressure</span>
+                <div class="ep-title">重すぎる愛とリスナーへの圧</div>
+                <div class="ep-text">リスナーの浮気の気配を察知すると、笑顔のまま声色を変えずに圧をかける。「愛は時間。水を飲ませて調整させるもの」という独自の洗脳論理を構築。女児扱いされると「女児って言うほうが女児なんだから！」と最強の論理崩壊を繰り出す。</div>
+            </div>
+
+            <div class="episode-card">
+                <i class="fas fa-book-open ep-icon"></i>
+                <span class="ep-type">Genius PON</span>
+                <div class="ep-title">PON神様としての伝説</div>
+                <div class="ep-text">『漢字でGO！』にて「老若男女」を「老二九女人」と書き、この世から若者と男を抹消。焦ると「I from World！Space！Yeah！」と出鱈目なイングリッシュを連発し、「ENだから」と豪語する。</div>
+                <div class="quote-box">「とうがらし！？（遣唐使を見ながら）」</div>
+            </div>
+
+            <div class="episode-card" style="border-left-color: var(--chara-color);">
+                <i class="fas fa-ghost ep-icon" style="color: rgba(255,128,171,0.2);"></i>
+                <span class="ep-type">Otaku Side</span>
+                <div class="ep-title">関係性オタクと感受性</div>
+                <div class="ep-text">生粋の腐女子であり、ストーリーゲーでは絆を見つけるとニチャニチャが止まらない。一方でホラーが苦手すぎて、何も起きていない暗闇から「もうここで死ぬんだ！」と絶望して号泣する。</div>
+            </div>
+
+            <div class="episode-card">
+                <i class="fas fa-shield-cat ep-icon"></i>
+                <span class="ep-type">Kindness</span>
+                <div class="ep-title">「杞憂民」への優しさ</div>
+                <div class="ep-text">自身の不安を察したファンに対し「私が一番の杞憂民だから、みんなが心配するようなところはもう心配しきっている」と笑い飛ばす。ファンに心配をかけず、笑って過ごしてほしいという大人な一面。</div>
+                <div class="quote-box">「私が心配してる時は、言えるぐらいには元気なんだな、って笑ってていいんだよ」</div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="footer-smol">
+        <p style="font-weight: 800; color: var(--chara-color);">&copy; 2024-2025 Cover Corp. SMOL BUT SMART</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => { entry.isIntersecting && entry.target.classList.add('active'); });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

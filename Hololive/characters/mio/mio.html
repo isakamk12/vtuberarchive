@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大神ミオ (Ookami Mio) — hololive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            --chara-color: #2e7d32; /* Forest Green */
+            --chara-accent: #c62828; /* Shrine Red */
+            --bg-dark: #1b5e20;
+            --card-bg: rgba(255, 255, 255, 0.95);
+            --text-main: #263238;
+        }
+
+        .cp-bg {
+            background: linear-gradient(180deg, #1b5e20 0%, #000 100%);
+            opacity: 0.8;
+            z-index: -2;
+        }
+
+        .cp-particles {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/stardust.png');
+            opacity: 0.3;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        body {
+            color: var(--text-main);
+            background-color: #f1f8e9;
+        }
+
+        .cp-nav {
+            background: rgba(27, 94, 32, 0.9);
+        }
+
+        .cp-hero {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=1000') center/cover;
+            color: #fff;
+            padding: 130px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--chara-accent);
+        }
+
+        .cp-hero-name {
+            font-size: 4.5rem;
+            font-weight: 900;
+            text-shadow: 0 0 20px rgba(46, 125, 50, 0.8);
+            letter-spacing: 4px;
+        }
+
+        .cp-tag {
+            background: rgba(255,255,255,0.1);
+            color: #fff;
+            border: 1px solid rgba(255,255,255,0.3);
+            backdrop-filter: blur(5px);
+            padding: 5px 15px;
+        }
+
+        .cp-section-title {
+            font-size: 2.8rem;
+            font-weight: 900;
+            color: var(--bg-dark);
+            text-align: center;
+            margin-bottom: 3.5rem;
+            letter-spacing: 2px;
+        }
+
+        .cp-section-title::before {
+            content: "🌲";
+            margin-right: 15px;
+            opacity: 0.5;
+        }
+
+        .cp-card {
+            background: #fff;
+            border: 1px solid #e8f5e9;
+            box-shadow: 0 15px 35px rgba(27, 94, 32, 0.1);
+            border-radius: 20px;
+        }
+
+        .cp-table th {
+            color: var(--chara-color);
+        }
+
+        .ep-card {
+            background: #fff;
+            border: 1px solid #e8f5e9;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .ep-card::after {
+            content: "🎴";
+            position: absolute;
+            bottom: -10px;
+            right: -10px;
+            font-size: 5rem;
+            opacity: 0.03;
+            transform: rotate(-15deg);
+        }
+
+        .ep-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(27, 94, 32, 0.15);
+            border-color: var(--chara-color);
+        }
+
+        .ep-num {
+            color: var(--chara-color);
+            font-weight: 900;
+            font-size: 0.9rem;
+            display: block;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        .ep-title {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--bg-dark);
+            margin-bottom: 1rem;
+        }
+
+        .ep-quote {
+            border-left: 4px solid var(--chara-accent);
+            padding: 1rem 1.5rem;
+            background: #fffcfc;
+            margin-top: 1.5rem;
+            font-weight: 600;
+            color: #5d4037;
+        }
+
+        .cp-footer {
+            background: #111;
+            color: #4caf50;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <div class="cp-particles"></div>
+    
+    <nav class="cp-nav">
+        <a href="../../hololive_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO hololive</a>
+        <span class="cp-nav-gen">ホロライブゲーマーズ // JP</span>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-content">
+            <div class="cp-gen-label" style="border: 1px solid #fff; padding: 2px 12px; display: inline-block; margin-bottom: 1.5rem; font-size: 0.9rem; letter-spacing: 2px;">WOLF OF THE FOREST</div>
+            <h1 class="cp-hero-name">大神ミオ</h1>
+            <span class="cp-hero-en" style="font-size: 1.8rem; font-weight: bold; display: block; margin-bottom: 2rem; opacity: 0.8;">Ookami Mio</span>
+            <p class="cp-chara-desc" style="max-width: 850px; margin: 0 auto; font-size: 1.25rem; line-height: 1.8; font-weight: 400;">
+                「うちうち、うちだよ、大神ミオだよ～！」<br>
+                どこからともなく現れた黒髪のケモミミ少女。神社によく出没するオオカミ。ホロライブの「ママ」的存在としてメンバーから慕われ、抜群の進行能力と、周囲を和ませる温かな笑い声（ゲラ）が魅力。
+            </p>
+            <div class="cp-tags" style="margin-top: 2.5rem;">
+                <span class="cp-tag">#MioMama</span>
+                <span class="cp-tag">#BigGodMioon</span>
+                <span class="cp-tag">#Gera</span>
+                <span class="cp-tag">#ShrineWolf</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="cp-main" style="padding: 100px 20px; max-width: 1000px; margin: 0 auto;">
+        
+        <div class="cp-section cp-reveal">
+            <h2 class="cp-section-title">SHRINE RECORDS</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3 style="color: var(--bg-dark); margin-bottom: 1.5rem; font-weight: 900; display: flex; align-items: center; gap: 10px;">
+                        <i class="fa-solid fa-scroll"></i> 基本プロフィール
+                    </h3>
+                    <table class="cp-table">
+                        <tr>
+                            <th>誕生日</th>
+                            <td>8月20日</td>
+                        </tr>
+                        <tr>
+                            <th>身長</th>
+                            <td>160cm</td>
+                        </tr>
+                        <tr>
+                            <th>絵師</th>
+                            <td>泉彩</td>
+                        </tr>
+                        <tr>
+                            <th>ファン名</th>
+                            <td>ミオファ</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="cp-card">
+                    <h3 style="color: var(--bg-dark); margin-bottom: 1.5rem; font-weight: 900; display: flex; align-items: center; gap: 10px;">
+                        <i class="fa-solid fa-leaf"></i> 役割と魅力
+                    </h3>
+                    <p style="line-height: 2;">
+                        司会や進行役としてホロライブ全体を支える柱。料理が得意で、多くのメンバーに「家庭的な温かさ」を感じさせる。笑いの沸点が低く、一度ツボに入ると「ガハハハ」と笑い転げる姿は、リスナーにも笑顔を伝播させる。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cp-section cp-reveal">
+            <h2 class="cp-section-title">LEGENDARY EPISODES</h2>
+
+            <div class="ep-card">
+                <span class="ep-num">EARLY DAYS</span>
+                <div class="ep-title">「ビッグゴッドミォーン」の戦慄</div>
+                <p>先輩への切り込み口として始めたタロット占い。しかしその的中率は凄まじく、今やメンバーから崇められる存在に。マリカ大会で自ら占った「最悪の運勢」を自ら引き当てて11位になった際、占いの力に自ら戦慄した。</p>
+                <div class="ep-quote">「うらないって すげー！」</div>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">FEAR & BRAVERY</span>
+                <div class="ep-title">恐怖を紛らわす「すずめがサンバ」</div>
+                <p>極度のホラゲ苦手。恐怖が限界に達すると、突然「すずめがサンバ」を必死に歌い出すという謎の防衛本能を見せる。しかし、すずめたちの陽気な踊りも、彼女の恐怖を消し去ることはできなかった。</p>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">MIO-RU INCIDENT</span>
+                <div class="ep-title">伝説の「ミオる（嘔吐）」事件</div>
+                <p>味覚が敏感すぎるのか、配信中にこみ上げてしまうことがあり「ミオる」という言葉が誕生。罰ゲームのわさびシュークリームや、記念3Dでのケーキなど、アイドルらしからぬ放送事故（？）は公式アニメでもネタにされた。</p>
+                <div class="ep-quote">「ちょっとこみ上げてきただけ」</div>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">PONKOTSU REVELATION</span>
+                <div class="ep-title">マイクの「向き」と大寝坊</div>
+                <p>しっかり者だが天然。数ヶ月間「音がこもる」と悩んでいた高級マイクが、実はずっと「前後逆」だったことが発覚。また、自ら主催した朝の企画で痛恨の大寝坊をし、さくらみこに起こされるという伝説も作った。</p>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">ENGLISH TEST</span>
+                <div class="ep-title">衝撃の「FUCK YOU」小声翻訳</div>
+                <p>赤井はあと主催の英語テストにて。「YAGOOに小声で罵られた」を英訳する際、あまりにストレートすぎる単語を配置し、普段の温厚なイメージを自ら（？）破壊する珍回答を連発した。</p>
+                <div class="ep-quote">「もうフューチャー（※フィーチャー）しないで！」</div>
+            </div>
+
+            <div class="ep-card">
+                <span class="ep-num">HEALING LAUGHTER</span>
+                <div class="ep-title">笑いすぎて限界突破するゲラ</div>
+                <p>ゲーマーズの仲間たちのボケに対し、ツッコミを入れながらもゲラゲラと笑い続ける。その楽しそうな「ガハハ」という笑い声は、聞いているだけでファンを元気にさせる圧倒的なヒーリング効果を持つ。</p>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="cp-footer" style="padding: 60px 0; text-align: center;">
+        <p>&copy; 2016-2024 Cover Corp.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

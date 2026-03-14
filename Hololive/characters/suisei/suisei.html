@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>星街すいせい (Hoshimachi Suisei) — hololive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            --char-color: #4da6ff;
+            --char-color-alt: #004d99;
+            --bg-dark: #020814;
+        }
+        .cp-hero-name {
+            background: linear-gradient(135deg, #fff 0%, var(--char-color) 100%);
+            -webkit-background-clip: text;
+        }
+        .episode-card {
+            background: rgba(77, 166, 255, 0.05);
+            border-left: 4px solid var(--char-color);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 95% 100%, 0 100%);
+        }
+        .episode-title {
+            color: var(--char-color);
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a href="../../hololive_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO hololive</a>
+        <span class="cp-nav-gen">hololive // 0期生</span>
+    </nav>
+
+    <section class="cp-hero">
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">Eternal 18-year-old Idol</div>
+            <h1 class="cp-hero-name">星街すいせい</h1>
+            <span class="cp-hero-en">Hoshimachi Suisei</span>
+            <p class="cp-chara-desc">
+                「彗星のごとく現れたスターの原石！」圧倒的な歌唱力と、マルチクリエイターとしての才能を兼ね備えたバーチャルアイドル。不屈の精神で個人勢から這い上がった、ホロライブ随一のシンデレラストーリーを歩む。
+            </p>
+            <div class="cp-tags">
+                <span class="cp-tag">#星街すいせい</span>
+                <span class="cp-tag">#すいちゃん</span>
+                <span class="cp-tag">#星詠み</span>
+                <span class="cp-tag">#今日もかわいい</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="cp-section cp-reveal">
+        <h2 class="cp-section-title"><i class="fa-solid fa-comet"></i> STELLAR DATA</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>STAR PROFILE</h3>
+                <table class="cp-table">
+                    <tr><th>活動開始</th><td>2018.03.22</td></tr>
+                    <tr><th>誕生日</th><td>3月22日</td></tr>
+                    <tr><th>身長</th><td>160cm</td></tr>
+                    <tr><th>所属</th><td>hololive 0期生</td></tr>
+                    <tr><th>ファンネーム</th><td>星詠み (ほしよみ)</td></tr>
+                </table>
+            </div>
+            <div class="cp-card">
+                <h3>VIRTUAL ASCENSION</h3>
+                <p>個人勢としてデビュー後、イノナカミュージックを経てホロライブへ。デザイン、モデリング、編集までこなすマルチクリエイター。アイドルコンテンツを愛するガチオタクな一面も。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="cp-section cp-reveal">
+        <h2 class="cp-section-title"><i class="fa-solid fa-meteor"></i> COMET TALES</h2>
+        
+        <div class="episode-card">
+            <div class="episode-title"><i class="fa-solid fa-crown"></i> 1. 不屈のシンデレラストーリー</div>
+            <p>個人勢時代の苦労や複数の落選を乗り越え、自ら直談判を行ってホロライブ所属を勝ち取った努力の人。逆境から自らの手で道を切り拓いた不屈の精神は、多くのファンの心を打っています。</p>
+        </div>
+
+        <div class="episode-card">
+            <div class="episode-title"><i class="fa-solid fa-gamepad"></i> 2. テトリス最強アイドル</div>
+            <p>『テトリス99』の腕前はVTuber界随一。世界ランクの猛者たちや「テトリスの神」をも翻弄するその実力は、もはやアイドルの枠を超えています。</p>
+        </div>
+
+        <div class="episode-card">
+            <div class="episode-title"><i class="fa-solid fa-skull"></i> 3. 狂気の「サイコパすいせい」</div>
+            <p>雪山人狼での金色の「斧」を片手にした惨殺劇や、GTAでの「星集め」など、可愛い姿とは裏腹な物騒なプレイスタイルがギャップとして大人気。</p>
+        </div>
+
+        <div class="episode-card">
+            <div class="episode-title"><i class="fa-solid fa-music"></i> 4. 音楽的快挙と日本武道館</div>
+            <p>VTuber史上初の『THE FIRST TAKE』出演や、夢であった日本武道館でのワンマンライブ実現など、バーチャルの壁を越える先駆者として歴史を更新し続けています。</p>
+        </div>
+    </div>
+
+    <footer class="cp-footer">
+        &copy; 2026 VTuber Archive Project - Hoshimachi Suisei Fansite Profile.
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>
