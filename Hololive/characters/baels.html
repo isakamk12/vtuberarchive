@@ -4,9 +4,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ハコス・ベールズ / Hakos Baelz — hololive</title>
+    <title>ハコス・ベールズ (Hakos Baelz) — hololive Archive</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --chara-color: #ff1744; /* Chaos Red */
+            --chara-accent: #ffea00; /* Cheese Yellow */
+            --chaos-black: #1a1a1a;
+            --rat-gray: #455a64;
+        }
+
+        .cp-bg {
+            background: 
+                repeating-linear-gradient(45deg, rgba(255, 23, 68, 0.02) 0, rgba(255, 23, 68, 0.02) 20px, transparent 20px, transparent 40px),
+                var(--chaos-black);
+            opacity: 1;
+        }
+
+        body {
+            background-color: var(--chaos-black);
+            color: #eceff1;
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .cp-nav {
+            background: rgba(26, 26, 26, 0.95);
+            border-bottom: 3px solid var(--chara-color);
+        }
+
+        .cp-hero {
+            background: linear-gradient(rgba(0,0,0,0.4), var(--chaos-black)), 
+                        url('https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&q=80&w=1200') center/cover;
+            padding: 220px 20px;
+            text-align: center;
+            position: relative;
+            border-bottom: 10px solid var(--chara-color);
+        }
+
+        .chaos-glitch {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(transparent 50%, rgba(255, 23, 68, 0.05) 50%);
+            background-size: 100% 4px;
+            pointer-events: none;
+        }
+
+        .cp-hero-name {
+            font-size: 6.5rem;
+            font-weight: 950;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            text-shadow: 4px 4px 0 var(--chara-color);
+            margin-bottom: 0px;
+        }
+
+        .cp-hero-en {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--chara-accent);
+            text-transform: uppercase;
+            letter-spacing: 12px;
+            margin-bottom: 3.5rem;
+            display: block;
+        }
+
+        .chaos-badge {
+            font-size: 1.2rem;
+            font-weight: 900;
+            background: var(--chara-color);
+            color: #fff;
+            padding: 10px 40px;
+            border-radius: 0px;
+            display: inline-block;
+            margin-bottom: 3rem;
+            transform: skew(-10deg);
+            box-shadow: 5px 5px 0 var(--chara-accent);
+        }
+
+        .cp-chara-desc {
+            max-width: 950px;
+            margin: 0 auto;
+            font-size: 1.3rem;
+            line-height: 2.3;
+            font-weight: 600;
+            color: #cfd8dc;
+            background: rgba(0,0,0,0.5);
+            padding: 30px;
+            border: 1px dashed var(--chara-color);
+        }
+
+        .cp-section-title {
+            font-size: 3.5rem;
+            font-weight: 950;
+            color: var(--chara-accent);
+            margin-bottom: 5rem;
+            text-align: left;
+            text-transform: uppercase;
+            border-left: 15px solid var(--chara-color);
+            padding-left: 30px;
+        }
+
+        .cp-card {
+            background: #263238;
+            border: none;
+            border-radius: 0;
+            padding: 45px;
+            box-shadow: 20px 20px 0 rgba(255, 23, 68, 0.1);
+        }
+
+        .cp-table th {
+            color: var(--chara-color);
+            font-weight: 900;
+            border-bottom: 2px solid #37474f;
+        }
+
+        .cp-table td {
+            color: #fff;
+            font-weight: 700;
+            border-bottom: 1px solid #37474f;
+        }
+
+        .rat-log-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 25px;
+            margin-top: 50px;
+        }
+
+        .rat-log {
+            background: #212121;
+            padding: 40px;
+            border: 1px solid #333;
+            position: relative;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .rat-log:hover {
+            border-color: var(--chara-color);
+            transform: translateY(-5px) rotate(1deg);
+        }
+
+        .rat-log::before {
+            content: "CHAOS DATA";
+            position: absolute;
+            top: 15px; left: 20px;
+            font-size: 0.7rem;
+            font-weight: 900;
+            color: var(--chara-color);
+            letter-spacing: 2px;
+        }
+
+        .rat-log-title {
+            font-size: 1.6rem;
+            font-weight: 950;
+            color: #fff;
+            margin-bottom: 1.5rem;
+            margin-top: 10px;
+        }
+
+        .rat-log-text {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: #b0bec5;
+        }
+
+        .n1-badge {
+            background: var(--chara-accent);
+            color: #000;
+            padding: 5px 15px;
+            border-radius: 3px;
+            font-weight: 950;
+            font-size: 1rem;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+
+        .coffee-section {
+            background: linear-gradient(45deg, #3e2723, #1a1a1a);
+            padding: 80px 40px;
+            border-radius: 0;
+            margin-top: 150px;
+            border-left: 10px solid #795548;
+            position: relative;
+        }
+
+        .coffee-section i {
+            position: absolute;
+            right: 40px;
+            bottom: 40px;
+            font-size: 10rem;
+            opacity: 0.1;
+            color: #fff;
+        }
+
+        .footer-chaos {
+            padding: 100px 0;
+            text-align: center;
+            color: #546e7a;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .cp-hero-name { font-size: 3rem; }
+            .cp-hero-en { font-size: 1.2rem; }
+            .rat-log-grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 
 <body>
@@ -15,48 +223,122 @@
         <a href="../hololive_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO hololive</a>
         <span class="cp-nav-gen">hololive EN // Promise</span>
     </nav>
-    <section class="cp-hero">
+
+    <header class="cp-hero">
+        <div class="chaos-glitch"></div>
         <div class="cp-hero-content">
-            <div class="cp-gen-label">hololive English -Council-</div>
-            <h1 class="cp-hero-name">ハコス・ベールズ</h1>
-            <span class="cp-hero-en">Hakos Baelz</span>
-            <p class="cp-chara-desc">「混沌」の議長。ネズミの姿をした混沌そのもの。圧倒的なダンススキルと、周囲を巻き込むエネルギー、そして実は非常に真面目な常識人というギャップが魅力。LETS
-                GOOOO!</p>
-            <div class="cp-tags">
-                <span class="cp-tag">#Chaos</span>
-                <span class="cp-tag">#Rat</span>
-                <span class="cp-tag">#EN</span>
+            <h1 class="cp-hero-name">Hakos Baelz</h1>
+            <span class="cp-hero-en">ハコス・ベールズ</span>
+            <div class="chaos-badge">COUNCIL CHAIRPERSON / CHAOS</div>
+            <p class="cp-chara-desc">
+                『カオス』そのものであり、前触れでもある一匹のネズミ。<br>
+                圧倒的なパフォーマンス力を持ちながら、実は同期の中で一番の常識人で世話焼きの「オカン」。<br>
+                母国語以上の日本語(JLPT N1)を操り、世界中を混沌とした笑顔で包み込む。
+            </p>
+        </div>
+    </header>
+
+    <main class="cp-main" style="padding: 120px 20px; max-width: 1200px; margin: 0 auto;">
+        
+        <div class="cp-section cp-reveal">
+            <h2 class="cp-section-title">RAT IDENTIFICATION</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3 style="color: var(--chara-accent); font-weight: 950; margin-bottom: 2rem;">DOSSIER</h3>
+                    <table class="cp-table">
+                        <tr>
+                            <th>BIRTHDAY</th>
+                            <td>2月29日 (Chaos Age)</td>
+                        </tr>
+                        <tr>
+                            <th>HEIGHT</th>
+                            <td>149cm (7.45 Cheeses)</td>
+                        </tr>
+                        <tr>
+                            <th>LANGUAGE</th>
+                            <td>EN / JP <span class="n1-badge">N1</span> / KR / CN</td>
+                        </tr>
+                        <tr>
+                            <th>FAN NAME</th>
+                            <td>Brats</td>
+                        </tr>
+                        <tr>
+                            <th>OSHI MARK</th>
+                            <td>🎲</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="cp-card" style="background: var(--chara-color); color: #fff;">
+                    <h3 style="font-weight: 950; margin-bottom: 1.5rem; color: var(--chara-accent);">"PAT" Myth?</h3>
+                    <p style="font-size: 1.15rem; line-height: 2;">
+                        Tシャツの「RAT」を「PAT (胸パット)」と読み間違えられたことで浮上した疑惑。しかし、後の心理テストで「肘をくっつけられない」ことが判明し、実はかなりのバストサイズであることが確定した。
+                    </p>
+                </div>
             </div>
         </div>
-    </section>
-    <div class="cp-section cp-reveal">
-        <h2 class="cp-section-title">ARCHIVE DATA</h2>
-        <div class="cp-grid">
-            <div class="cp-card">
-                <h3>PROFILE</h3>
-                <table class="cp-table">
-                    <tr>
-                        <th>DEBUT</th>
-                        <td>2021.08.23</td>
-                    </tr>
-                    <tr>
-                        <th>AFFILIATION</th>
-                        <td>hololive EN</td>
-                    </tr>
-                    <tr>
-                        <th>STATUS</th>
-                        <td>Active</td>
-                    </tr>
-                </table>
+
+        <div class="cp-section cp-reveal" style="margin-top: 150px;">
+            <h2 class="cp-section-title">CHAOS INCIDENTS</h2>
+
+            <div class="rat-log-grid">
+                <div class="rat-log">
+                    <div class="rat-log-title">「ハコ太郎」の襲名</div>
+                    <div class="rat-log-text">当初は「ネズミだから」と拒否していたが、最終的には自ら「アイデンティティーはハコ太郎になりました」と名乗るまでに。</div>
+                </div>
+
+                <div class="rat-log">
+                    <div class="rat-log-title">Genital Jousting 事件</div>
+                    <div class="rat-log-text">過激すぎるゲームを配信しマネージャーストップがかかった伝説。本人は「みんなのためにモルモットになった」と弁明。</div>
+                </div>
+
+                <div class="rat-log">
+                    <div class="rat-log-title">実質JPとしての日本移住</div>
+                    <div class="rat-log-text">2024年に日本へ移住。ストグラ等でも日本語が上手すぎて「英語が上手ですね」と褒められる逆転現象が多発。</div>
+                </div>
+
+                <div class="rat-log">
+                    <div class="rat-log-title">リンゴ柄の靴下事件</div>
+                    <div class="rat-log-text">火威青らとの食事中、ジャケットに付いていた洗濯済みの靴下を店内で落とし、社長に拾われるという赤っ恥PONエピソード。</div>
+                </div>
+
+                <div class="rat-log">
+                    <div class="rat-log-title">ベジマイトによる支配</div>
+                    <div class="rat-log-text">豪州のソウルフード（？）ベジマイトをYAGOO社長含むホロメンに実食させる恐怖のシリーズ企画。</div>
+                </div>
+
+                <div class="rat-log">
+                    <div class="rat-log-title">100万円の使い道</div>
+                    <div class="rat-log-text">ビンゴで当選した特賞を使い、EN所属全員での歌ってみた動画を制作。仲間想いでカオスなリーダーシップ。</div>
+                </div>
             </div>
-            <div class="cp-card">
-                <h3>EPISODES</h3>
-                <p>持ち前の明るさと統率力で、Promiseをまとめ上げるリーダー。多言語を操るスキルを活かし、ENとJPの垣根を超えた活動でファンを沸かせている。そのパフォーマンス力は、世界中のアイドルファンをも虜にする。
+
+            <div class="coffee-section cp-reveal">
+                <i class="fas fa-coffee"></i>
+                <h3 style="font-size: 2.5rem; font-weight: 950; color: var(--chara-accent); margin-bottom: 2rem;">THE CAFFEINE OVERLORD</h3>
+                <p style="font-size: 1.3rem; line-height: 2.2; max-width: 850px; color: #bdbdbd;">
+                    猛烈なダンスステップと、重度のコーヒー中毒。ホラーゲームでガチ泣きする可愛らしさと、舞台上で見せる圧倒的なカリスマの二面性。<br>
+                    混沌とした世界を最も楽しんでいるのは、この小さなネズミかもしれない。
                 </p>
+                <div style="margin-top: 3rem; font-size: 3rem; color: var(--chara-color);">🎲🐀🧀☕</div>
             </div>
+
         </div>
-    </div>
-    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+
+    </main>
+
+    <footer class="footer-chaos">
+        <p>&copy; COVER CORP. // LONG LIVE THE CHAOS RAT</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => { entry.isIntersecting && entry.target.classList.add('active'); });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
 
-</html>
+</html>

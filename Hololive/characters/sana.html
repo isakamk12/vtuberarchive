@@ -7,55 +7,304 @@
     <title>九十九佐命 (Tsukumo Sana) — hololive Archive</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --chara-color: #512da8; /* Space Purple */
+            --chara-accent: #ffd54f; /* Sun Gold */
+            --nebula-deep: #1a0b3b;
+            --nebula-light: #483d8b;
+            --eternal-white: #ffffff;
+        }
+
+        .cp-bg {
+            background: 
+                radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+            opacity: 1;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1;
+        }
+
+        /* Star field effect */
+        .stars {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        body {
+            background-color: var(--nebula-deep);
+            color: #e0e0e0;
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .cp-nav {
+            background: rgba(26, 11, 59, 0.9);
+            border-bottom: 2px solid var(--chara-accent);
+        }
+
+        .cp-hero {
+            background: linear-gradient(rgba(0,0,0,0.3), var(--nebula-deep)),
+                        url('https://images.unsplash.com/photo-1464802686167-b939a67e06a1?auto=format&fit=crop&q=80&w=1200') center/cover;
+            padding: 240px 20px;
+            text-align: center;
+            position: relative;
+            border-bottom: 5px solid var(--chara-accent);
+        }
+
+        .cp-hero-name {
+            font-size: 6.5rem;
+            font-weight: 950;
+            color: var(--eternal-white);
+            text-shadow: 0 0 30px rgba(81, 45, 168, 0.8), 0 0 60px rgba(255, 213, 79, 0.4);
+            margin-bottom: 0px;
+        }
+
+        .cp-hero-en {
+            font-size: 2.22rem;
+            font-weight: 800;
+            color: var(--chara-accent);
+            text-transform: uppercase;
+            letter-spacing: 20px;
+            margin-bottom: 4rem;
+            display: block;
+        }
+
+        .beeg-badge {
+            font-size: 1.2rem;
+            font-weight: 950;
+            border: 3px solid var(--chara-accent);
+            color: var(--chara-accent);
+            padding: 10px 50px;
+            display: inline-block;
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 8px;
+            background: rgba(255, 213, 79, 0.1);
+            animation: pulse-beeg 2s infinite;
+        }
+
+        @keyframes pulse-beeg {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 213, 79, 0.4); }
+            70% { transform: scale(1.05); box-shadow: 0 0 20px 10px rgba(255, 213, 79, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 213, 79, 0); }
+        }
+
+        .cp-chara-desc {
+            max-width: 950px;
+            margin: 0 auto;
+            font-size: 1.35rem;
+            line-height: 2.3;
+            font-weight: 500;
+            color: #cfd8dc;
+            background: rgba(0,0,0,0.5);
+            padding: 40px;
+            border-radius: 0;
+            border-left: 5px solid var(--chara-accent);
+        }
+
+        .cp-section-title {
+            font-size: 3.5rem;
+            font-weight: 950;
+            color: var(--chara-accent);
+            margin-bottom: 5rem;
+            text-align: center;
+            letter-spacing: 10px;
+            text-transform: uppercase;
+        }
+
+        .cp-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 213, 79, 0.2);
+            padding: 50px;
+            position: relative;
+        }
+
+        .cp-table th {
+            color: var(--chara-accent);
+            font-weight: 950;
+            border-bottom: 1px solid rgba(255, 213, 79, 0.1);
+        }
+
+        .space-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .space-item {
+            background: linear-gradient(135deg, rgba(81, 45, 168, 0.1), rgba(26, 11, 59, 0.4));
+            padding: 45px;
+            border: 1px solid rgba(255, 213, 79, 0.05);
+            transition: all 0.4s ease;
+        }
+
+        .space-item:hover {
+            border-color: var(--chara-accent);
+            background: rgba(81, 45, 168, 0.2);
+            transform: translateY(-10px);
+        }
+
+        .space-item-title {
+            font-size: 1.6rem;
+            font-weight: 950;
+            color: var(--chara-accent);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .space-item-text {
+            font-size: 1.15rem;
+            line-height: 2;
+            color: #b0bec5;
+        }
+
+        .eternal-section {
+            background: linear-gradient(to top, var(--nebula-deep), transparent);
+            padding: 120px 40px;
+            text-align: center;
+            margin-top: 150px;
+        }
+
+        .footer-space {
+            padding: 80px 0;
+            text-align: center;
+            color: var(--chara-accent);
+            font-weight: 800;
+            letter-spacing: 5px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .cp-hero-name { font-size: 3.5rem; }
+            .cp-hero-en { font-size: 1.2rem; letter-spacing: 10px; }
+            .space-grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 
 <body>
     <div class="cp-bg"></div>
+    <div class="stars"></div>
     <nav class="cp-nav">
         <a href="../hololive_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO hololive</a>
         <span class="cp-nav-gen">hololive EN // Promise</span>
     </nav>
-    <section class="cp-hero">
+
+    <header class="cp-hero">
         <div class="cp-hero-content">
-            <div class="cp-gen-label">hololive English -Council- [GRADUATED]</div>
+            <div class="beeg-badge">BEEG SIZE SPEAKER</div>
             <h1 class="cp-hero-name">九十九佐命</h1>
             <span class="cp-hero-en">Tsukumo Sana</span>
             <p class="cp-chara-desc">
-                「空間」の番人。宇宙のように広く、そして暖かい心を持つ。圧倒的な芸術的センスと、占星術への情熱で、ホロライブENの「愛」を体現した存在。宇宙規模のポジティブさで愛された。BEEG.</p>
-            <div class="cp-tags">
-                <span class="cp-tag">#Space</span>
-                <span class="cp-tag">#Beeg</span>
-                <span class="cp-tag">#EN</span>
+                無限に広がる「空間」の代弁者であり、宇宙そのものの具現。<br>
+                地球を遥かに凌駕する圧倒的な質量（BEEG）を持ちながら、その心は誰よりも暖かく、パンとポケモンを愛する無邪気な芸術家。
+                かつて地球に舞い降りた彼女は、笑顔を残して永遠の宇宙へと帰還した。
+            </p>
+        </div>
+    </header>
+
+    <main class="cp-main" style="padding: 120px 20px; max-width: 1200px; margin: 0 auto;">
+        
+        <div class="cp-section cp-reveal">
+            <h2 class="cp-section-title">COSMIC RECORDS</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3 style="color: var(--chara-accent); font-weight: 950; margin-bottom: 2rem;">DOSSIER</h3>
+                    <table class="cp-table">
+                        <tr>
+                            <th>BIRTHDAY</th>
+                            <td>6月10日</td>
+                        </tr>
+                        <tr>
+                            <th>AGE</th>
+                            <td>138億歳 (Universe's Age)</td>
+                        </tr>
+                        <tr>
+                            <th>HEIGHT</th>
+                            <td>169cm (Variable)</td>
+                        </tr>
+                        <tr>
+                            <th>GRADUATED</th>
+                            <td>2022.07.31</td>
+                        </tr>
+                        <tr>
+                            <th>OSHI MARK</th>
+                            <td>🪐</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="cp-card" style="border-right: 8px solid var(--chara-accent); background: rgba(81, 45, 168, 0.05);">
+                    <h3 style="color: var(--chara-accent); font-weight: 950; margin-bottom: 1.5rem;">"Sana is Eternal"</h3>
+                    <p style="font-size: 1.2rem; line-height: 2.2; color: #999;">
+                        彼女が去り際に残した言葉。ファンが夜空を見上げるたび、彼女の存在を思い出すことができるように。その愛は重力のように、今も私たちの心を引き寄せて離さない。
+                    </p>
+                </div>
             </div>
         </div>
+
+        <div class="cp-section cp-reveal" style="margin-top: 150px;">
+            <h2 class="cp-section-title">NEBULA INCIDENTS</h2>
+
+            <div class="space-grid">
+                <div class="space-item">
+                    <div class="space-item-title"><i class="fas fa-meteor"></i> デビュー即・地球破壊</div>
+                    <div class="space-item-text">リミッターを外した瞬間、巨大すぎる質量で地球を粉砕。宇宙を漂うリスナーに「みんな死後の世界はどう？」と語りかけた衝撃の幕開け。</div>
+                </div>
+
+                <div class="space-item">
+                    <div class="space-item-title"><i class="fas fa-gamepad"></i> ポケモンへの執念</div>
+                    <div class="space-item-text">色違い厳選のためなら12時間以上の連続配信も厭わない。「ポケモンをしている時、時間は意味を持たないの」という名言は、全ゲーマーの魂に響いた。</div>
+                </div>
+
+                <div class="space-item">
+                    <div class="space-item-title"><i class="fas fa-bread-slice"></i> 混沌の NEIGHBULA</div>
+                    <div class="space-item-text">馬とパンが融合した謎の生物を生み出し、YAGOO社長に「馬のパンを焼きました」と怪文書を送付。宇宙規模のシュールなユーモアを発揮。</div>
+                </div>
+
+                <div class="space-item">
+                    <div class="space-item-title"><i class="fas fa-pencil-alt"></i> BEEGsmols の母</div>
+                    <div class="space-item-text">卓越したデザイン能力を持ち、Council メンバーの3Dミニモデルのデザインを手掛けるなど、クリエイティブ面でも議会を支え続けた。</div>
+                </div>
+
+                <div class="space-item">
+                    <div class="space-item-title"><i class="fas fa-heart"></i> わためのパン屋</div>
+                    <div class="space-item-text">JPの角巻わためとマイクラで共同作業。国境を越えた「てぇてぇ」絆を築き、卒業前の号泣コラボは伝説の感動巨編となった。</div>
+                </div>
+
+                <div class="space-item">
+                    <div class="space-item-title"><i class="fas fa-rocket"></i> サナナラの旅立ち</div>
+                    <div class="space-item-text">卒業配信のラスト、自らデザインしたパンに乗って宇宙の彼方へと消えていく演出。最後まで「九十九佐命」らしい、壮大で暖かい別れであった。</div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <section class="eternal-section cp-reveal">
+        <h3 style="font-size: 3rem; font-weight: 950; color: #fff; margin-bottom: 3rem;">Sananara. We are always under the same sky.</h3>
+        <p style="font-size: 1.5rem; color: var(--chara-accent); font-weight: 700;">🪐 SANALITE FOREVER 🪐</p>
     </section>
-    <div class="cp-section cp-reveal">
-        <h2 class="cp-section-title">ARCHIVE DATA</h2>
-        <div class="cp-grid">
-            <div class="cp-card">
-                <h3>PROFILE</h3>
-                <table class="cp-table">
-                    <tr>
-                        <th>DEBUT</th>
-                        <td>2021.08.23</td>
-                    </tr>
-                    <tr>
-                        <th>GRADUATED</th>
-                        <td>2022.07.31</td>
-                    </tr>
-                    <tr>
-                        <th>STATUS</th>
-                        <td>Graduated</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="cp-card">
-                <h3>LEGACY</h3>
-                <p>彼女が残した「愛」と「希望」は、今もENのメンバーやファンの中に生き続けている。宇宙へと旅立った彼女の輝きは、夜空を見上げるたびに思い出される永遠の光である。</p>
-            </div>
-        </div>
-    </div>
-    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+
+    <footer class="footer-space">
+        <p>&copy; COVER CORP. // TSUKUMO SANA IS ETERNAL IN OUR HEARTS</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => { entry.isIntersecting && entry.target.classList.add('active'); });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
 
-</html>
+</html>

@@ -4,57 +4,460 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elizabeth Rose Bloodflame (エリザベス・ローズ・ブラッドフレイム) — hololive</title>
+    <title>Elizabeth Rose Bloodflame (エリザベス・ローズ・ブラッドフレイム) — hololive EN</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="char-base.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Outfit:wght@400;700&family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --c1: #E31E24; /* Scarlet Rose */
+            --c2: #FFD700; /* Royal Gold */
+            --bg: #0A0A12;
+            --card-bg: rgba(227, 30, 36, 0.05);
+            --accent: #4B0082; /* Indigo Justice */
+            --glass: rgba(255, 255, 255, 0.03);
+            --border: rgba(227, 30, 36, 0.2);
+            --text: #E6EDF3;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Outfit', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Royal Crest Background */
+        .bg-royal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: 
+                radial-gradient(circle at 0% 0%, rgba(227, 30, 36, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 100% 100%, rgba(75, 0, 130, 0.1) 0%, transparent 50%);
+        }
+
+        .bg-royal::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 10 L60 40 L90 50 L60 60 L50 90 L40 60 L10 50 L40 40 Z' fill='%23FFD700' fill-opacity='0.03'/%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+
+        nav {
+            padding: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .back-link {
+            color: var(--c2);
+            text-decoration: none;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: 0.3s;
+            font-family: 'Cinzel', serif;
+        }
+
+        .back-link:hover {
+            color: var(--c1);
+            text-shadow: 0 0 10px var(--c1);
+        }
+
+        .gen-tag {
+            background: rgba(0,0,0,0.5);
+            border: 1px solid var(--c2);
+            padding: 0.5rem 1.5rem;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            color: var(--c2);
+            letter-spacing: 2px;
+            font-family: 'Cinzel', serif;
+        }
+
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-title-container {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .hero-crown {
+            font-size: 3rem;
+            color: var(--c2);
+            margin-bottom: 1rem;
+            filter: drop-shadow(0 0 15px var(--c2));
+            animation: crown-float 3s ease-in-out infinite;
+        }
+
+        @keyframes crown-float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .hero-title {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(3rem, 10vw, 7rem);
+            font-weight: 700;
+            line-height: 0.9;
+            color: #fff;
+            text-shadow: 0 0 40px rgba(227, 30, 36, 0.5);
+        }
+
+        .hero-jp {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 1.8rem;
+            color: var(--c1);
+            letter-spacing: 8px;
+            margin-top: 1rem;
+            display: block;
+        }
+
+        .hero-quote {
+            max-width: 700px;
+            font-style: italic;
+            color: rgba(255,255,255,0.7);
+            margin-top: 3rem;
+            padding: 0 2rem;
+            border-left: 1px solid var(--c2);
+            border-right: 1px solid var(--c2);
+        }
+
+        .stats-wrap {
+            padding: 5% 10%;
+            background: linear-gradient(180deg, transparent, rgba(75, 0, 130, 0.1), transparent);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .stat-card {
+            background: var(--glass);
+            border: 1px solid var(--border);
+            padding: 2rem;
+            border-radius: 5px;
+            text-align: center;
+            transition: 0.5s;
+            position: relative;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 2px;
+            background: linear-gradient(90deg, transparent, var(--c2), transparent);
+            opacity: 0;
+            transition: 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--c2);
+            background: rgba(227, 30, 36, 0.08);
+        }
+
+        .stat-card:hover::before {
+            opacity: 1;
+        }
+
+        .stat-label {
+            font-family: 'Cinzel', serif;
+            font-size: 0.8rem;
+            color: var(--c2);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .stat-value {
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .main-section {
+            padding: 5% 10%;
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 5rem;
+            color: var(--c2);
+        }
+
+        .episode-timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .episode-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .episode-row:nth-child(even) {
+            direction: rtl;
+        }
+
+        .episode-row:nth-child(even) .episode-content {
+            direction: ltr;
+            text-align: left;
+        }
+
+        .episode-content {
+            background: var(--glass);
+            padding: 3rem;
+            border-radius: 10px;
+            border-left: 5px solid var(--c1);
+            transition: 0.5s;
+        }
+
+        .episode-row:nth-child(even) .episode-content {
+            border-left: none;
+            border-right: 5px solid var(--c1);
+        }
+
+        .episode-content:hover {
+            background: rgba(227, 30, 36, 0.1);
+            transform: scale(1.02);
+        }
+
+        .episode-tag {
+            font-family: 'Cinzel', serif;
+            color: var(--c2);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .episode-title {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #fff;
+        }
+
+        .episode-text {
+            color: rgba(255,255,255,0.7);
+        }
+
+        .skill-section {
+            padding: 10%;
+            text-align: center;
+        }
+
+        .vocal-meter {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--glass);
+            height: 10px;
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+
+        .vocal-fill {
+            position: absolute;
+            top: 0; left: 0; height: 100%;
+            width: 95%;
+            background: linear-gradient(90deg, var(--c1), var(--c2));
+            box-shadow: 0 0 20px var(--c1);
+        }
+
+        .skill-label {
+            display: flex;
+            justify-content: space-between;
+            max-width: 600px;
+            margin: 1rem auto 3rem;
+            font-family: 'Cinzel', serif;
+            color: var(--c2);
+            font-size: 0.8rem;
+        }
+
+        footer {
+            padding: 5rem;
+            text-align: center;
+            border-top: 1px solid var(--border);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: 1s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            .episode-row { grid-template-columns: 1fr; gap: 2rem; }
+            .hero-title { font-size: 4rem; }
+        }
+    </style>
 </head>
 
 <body>
-    <div class="cp-bg"></div>
-    <nav class="cp-nav">
-        <a href="../hololive_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO hololive</a>
-        <span class="cp-nav-gen">hololive EN // Justice</span>
+    <div class="bg-royal"></div>
+
+    <nav>
+        <a href="../hololive_index.html" class="back-link"><i class="fa-solid fa-crown"></i> HOLOLIVE ARCHIVE</a>
+        <div class="gen-tag">JUSTICE LEADER</div>
     </nav>
-    <section class="cp-hero">
-        <div class="cp-hero-content">
-            <div class="cp-gen-label">hololive English -Justice-</div>
-            <h1 class="cp-hero-name">Elizabeth Rose Bloodflame</h1>
-            <span class="cp-hero-en">エリザベス・ローズ・ブラッドフレイム</span>
-            <p class="cp-chara-desc">「正義」の名の下に戦う騎士。圧倒的な歌唱スキルと、気高い精神を持つJusticeのリーダー。彼女の歌声は、戦場を浄化し、人々の心に希望の火を灯す。</p>
-            <div class="cp-tags">
-                <span class="cp-tag">#Knight</span>
-                <span class="cp-tag">#Justice</span>
-                <span class="cp-tag">#EN</span>
-            </div>
+
+    <header>
+        <div class="hero-crown reveal"><i class="fa-solid fa-chess-queen"></i></div>
+        <div class="hero-title-container">
+            <h1 class="hero-title reveal">Elizabeth Rose<br>Bloodflame</h1>
+            <span class="hero-jp reveal">エリザベス・ローズ・ブラッドフレイム</span>
         </div>
-    </section>
-    <div class="cp-section cp-reveal">
-        <h2 class="cp-section-title">ARCHIVE DATA</h2>
-        <div class="cp-grid">
-            <div class="cp-card">
-                <h3>PROFILE</h3>
-                <table class="cp-table">
-                    <tr>
-                        <th>DEBUT</th>
-                        <td>2024.06.21</td>
-                    </tr>
-                    <tr>
-                        <th>AFFILIATION</th>
-                        <td>hololive EN</td>
-                    </tr>
-                    <tr>
-                        <th>STATUS</th>
-                        <td>Active</td>
-                    </tr>
-                </table>
+        <p class="hero-quote reveal">
+            "Roses are red, the fire of my heart is blue. I am the Scarlet Queen, the harbinger of order."
+        </p>
+    </header>
+
+    <div class="stats-wrap">
+        <div class="stats-grid reveal">
+            <div class="stat-card">
+                <span class="stat-label">Royal Birthday</span>
+                <span class="stat-value">April 25</span>
             </div>
-            <div class="cp-card">
-                <h3>EPISODES</h3>
-                <p>持ち前の統率力と、力強くも繊細な歌声で、Justiceを導いている。配信では気さくな一面も見せ、多くのリスナー（Scarlet Souls）から絶大な支持を得ている。</p>
+            <div class="stat-card">
+                <span class="stat-label">Height</span>
+                <span class="stat-value">171cm</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">Vocal Range</span>
+                <span class="stat-value">3+ Octaves</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">Crest</span>
+                <span class="stat-value">💄 Rose & Flame</span>
             </div>
         </div>
     </div>
-    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+
+    <section class="skill-section reveal">
+        <h2 class="section-title">QUEEN'S VOCAL POWER</h2>
+        <div class="vocal-meter"><div class="vocal-fill"></div></div>
+        <div class="skill-label">
+            <span>SOPRANO</span>
+            <span>POWERHOUSE</span>
+            <span>LEGENDARY</span>
+        </div>
+        <p style="max-width: 800px; margin: 0 auto; color: rgba(255,255,255,0.6);">
+            ミュージカル歌手のような圧倒的ビブラート。UKロックから昭和歌謡まで、その歌声は「次元が違う」と評される。
+        </p>
+    </section>
+
+    <section class="main-section">
+        <h2 class="section-title reveal">THE SCARLET CHRONICLES</h2>
+
+        <div class="episode-timeline">
+            <div class="episode-row reveal">
+                <div class="episode-content">
+                    <span class="episode-tag">Debut Highlight</span>
+                    <h3 class="episode-title">伝説の「一人TAKAMORI劇場」</h3>
+                    <p class="episode-text">
+                        初配信で美しい歌声を披露した直後、突如としてMori CalliopeとTakanashi Kiaraの声真似で寸劇を開始。本人たちも驚愕するクオリティで「一人TAKAMORI」を完遂し、その多才さを世界に知らしめた。
+                    </p>
+                </div>
+                <div class="episode-visual"></div>
+            </div>
+
+            <div class="episode-row reveal">
+                <div class="episode-content">
+                    <span class="episode-tag">British Culture</span>
+                    <h3 class="episode-title">UKミームと「ボォオウォオア」</h3>
+                    <p class="episode-text">
+                        イギリス文化を熱心に発信。ネット上のミームであるイギリス英語の「bo'ohw'o'wo'er (bottle of water)」を完璧な発音で披露したり、チップバティ（ポテトサンド）を好むなど、英国の風をホロライブに吹き込んでいる。
+                    </p>
+                </div>
+                <div class="episode-visual"></div>
+            </div>
+
+            <div class="episode-row reveal">
+                <div class="episode-content">
+                    <span class="episode-tag">Language Mastery</span>
+                    <h3 class="episode-title">Passion JapaneseとMother Trucker</h3>
+                    <p class="episode-text">
+                        自身の日本語を「Passion Japanese（情熱の日本語）」と呼び、懸命に学ぶ姿勢が評価されている。また、焦った時に出る「Mother trucker」や「Fudge」といった、公序良俗を守る（？）可愛らしいマイルドな悪態も彼女の定番。
+                    </p>
+                </div>
+                <div class="episode-visual"></div>
+            </div>
+
+            <div class="episode-row reveal">
+                <div class="episode-content">
+                    <span class="episode-tag">Roleplay Life</span>
+                    <h3 class="episode-title">『ENreco』で見せた真の騎士道</h3>
+                    <p class="episode-text">
+                        マイクラ企画『ENreco』では鍛冶屋兼騎士として徹底したロールプレイを披露。仲間を救うために自ら危険な穴へ飛び込むなど、高潔で義理堅い「緋色の女王」としての姿で多くのリスナーを感動させた。
+                    </p>
+                </div>
+                <div class="episode-visual"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Scarlet Souls Archive - Elizabeth Rose Bloodflame</p>
+    </header>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
 
 </html>

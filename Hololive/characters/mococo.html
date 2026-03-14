@@ -4,59 +4,431 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mococo Abyssgard (モココ・アビスガード) — hololive</title>
+    <title>Mococo Abyssgard (モココ・アビスガード) — hololive EN</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="char-base.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --c1: #FFB3DE; /* Mococo Pink */
+            --c2: #FFFFFF;
+            --bg: #0D1117;
+            --card-bg: rgba(255, 179, 222, 0.05);
+            --accent: #85D7FF; /* Fuwawa Blue for accents */
+            --glass: rgba(255, 255, 255, 0.03);
+            --border: rgba(255, 179, 222, 0.2);
+            --text: #E6EDF3;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Outfit', 'M PLUS Rounded 1c', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Abstract Background - Mirrored gradient */
+        .bg-shards {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: 
+                radial-gradient(circle at 80% 20%, rgba(255, 179, 222, 0.1) 0%, transparent 40%),
+                radial-gradient(circle at 20% 80%, rgba(133, 215, 255, 0.05) 0%, transparent 40%);
+        }
+
+        .bg-shards::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='30' cy='30' r='5' fill='%23FFB3DE' fill-opacity='0.05'/%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+
+        nav {
+            padding: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .back-link {
+            color: var(--c1);
+            text-decoration: none;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: 0.3s;
+        }
+
+        .back-link:hover {
+            color: var(--accent);
+            transform: translateX(-5px);
+        }
+
+        .gen-tag {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--c1);
+            letter-spacing: 1px;
+        }
+
+        header {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 0 10%;
+            position: relative;
+            justify-content: flex-end; /* Mirrored layout */
+            text-align: right;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 1rem;
+            color: var(--c2);
+            text-shadow: 0 0 30px rgba(255, 179, 222, 0.3);
+        }
+
+        .hero-jp {
+            font-size: 1.5rem;
+            color: var(--c1);
+            display: block;
+            margin-bottom: 2rem;
+            letter-spacing: 5px;
+        }
+
+        .hero-desc {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.7);
+            max-width: 600px;
+            margin-bottom: 3rem;
+            position: relative;
+            padding-right: 2rem;
+            border-right: 3px solid var(--c1);
+            margin-left: auto;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            padding: 10% 10% 5%;
+        }
+
+        .stat-card {
+            background: var(--glass);
+            border: 1px solid var(--border);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            transition: 0.5s;
+        }
+
+        .stat-card:hover {
+            background: var(--card-bg);
+            transform: translateY(-10px);
+            border-color: var(--c1);
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--c1);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--c2);
+        }
+
+        .episode-section {
+            padding: 5% 10%;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            margin-bottom: 4rem;
+            text-align: center;
+            position: relative;
+            color: var(--c2);
+        }
+
+        .section-title::after {
+            content: 'BAU BAU';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1rem;
+            color: var(--c1);
+            letter-spacing: 10px;
+            opacity: 0.5;
+        }
+
+        .episode-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+        }
+
+        .episode-card {
+            background: var(--glass);
+            border-radius: 20px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid var(--border);
+            transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+        }
+
+        .episode-card::before {
+            content: '🐾';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2rem;
+            opacity: 0.1;
+            transition: 0.3s;
+        }
+
+        .episode-card:hover {
+            transform: scale(1.02);
+            border-color: var(--c1);
+            background: var(--card-bg);
+        }
+
+        .episode-card:hover::before {
+            opacity: 0.5;
+            transform: rotate(-20deg);
+        }
+
+        .episode-content {
+            padding: 2.5rem;
+        }
+
+        .episode-tag {
+            color: var(--c1);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .episode-title {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--c2);
+        }
+
+        .episode-text {
+            color: rgba(255,255,255,0.7);
+            font-size: 1rem;
+        }
+
+        .mirror-hint {
+            text-align: center;
+            padding: 5rem;
+            opacity: 0.5;
+            font-style: italic;
+        }
+
+        .mirror-link {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px dashed var(--accent);
+        }
+
+        footer {
+            padding: 5rem;
+            text-align: center;
+            border-top: 1px solid var(--border);
+            background: linear-gradient(to bottom, transparent, rgba(255, 179, 222, 0.05));
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: 1s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            header { padding: 0 5%; text-align: center; justify-content: center; }
+            .hero-desc { border-right: none; border-bottom: 3px solid var(--c1); padding-right: 0; padding-bottom: 1rem; }
+            .episode-grid { grid-template-columns: 1fr; }
+            .hero-title { font-size: 4rem; }
+        }
+    </style>
 </head>
 
 <body>
-    <div class="cp-bg"></div>
-    <nav class="cp-nav">
-        <a href="../hololive_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO hololive</a>
-        <span class="cp-nav-gen">hololive EN // Advent</span>
+    <div class="bg-shards"></div>
+
+    <nav>
+        <a href="../hololive_index.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> INDEX</a>
+        <div class="gen-tag">HOLOLIVE ENGLISH -ADVENT-</div>
     </nav>
-    <section class="cp-hero">
-        <div class="cp-hero-content">
-            <div class="cp-gen-label">hololive English -Advent- (FUWAMOCO)</div>
-            <h1 class="cp-hero-name">Mococo Abyssgard</h1>
-            <span class="cp-hero-en">モココ・アビスガード</span>
-            <p class="cp-chara-desc">
-                深淵の番犬双子「FUWAMOCO」の妹。元気いっぱいでちょっぴり食いしん坊、そして何より姉のフワワが大好き。姉との完璧なコンビネーションで、世界中に「幸せ」を振りまく。ハッハッハッ！BAU BAU!</p>
-            <div class="cp-tags">
-                <span class="cp-tag">#Twin</span>
-                <span class="cp-tag">#BauBau</span>
-                <span class="cp-tag">#EN</span>
+
+    <header>
+        <div class="hero-content">
+            <span class="hero-jp reveal">妹のモコモコな方</span>
+            <h1 class="hero-title reveal">Mococo<br>Abyssgard</h1>
+            <span class="hero-jp reveal">モココ・アビスガード</span>
+            <p class="hero-desc reveal">
+                「フワワじゃないよ！モココだよ！」<br>
+                深淵の番犬「FUWAMOCO」の妹。元気いっぱいでちょっぴり辛辣なツッコミ役。Advent唯一（？）の常識人。姉のフワワが大好きで、時に拗ねては慰められる。
+            </p>
+        </div>
+    </header>
+
+    <div class="stats-grid reveal">
+        <div class="stat-card">
+            <span class="stat-label">Birthday</span>
+            <span class="stat-value">February 2</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-label">Nickname</span>
+            <span class="stat-value">Mogojan (モゴジャン)</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-label">Height</span>
+            <span class="stat-value">155cm</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-label">Oshi Mark</span>
+            <span class="stat-value">🐾</span>
+        </div>
+    </div>
+
+    <section class="episode-section">
+        <h2 class="section-title reveal">LOGS & EPISODES</h2>
+
+        <div class="episode-grid">
+            <div class="episode-card reveal">
+                <div class="episode-content">
+                    <span class="episode-tag">Miracle Moment</span>
+                    <h3 class="episode-title">無防備すぎる「寝落ち事件」</h3>
+                    <p class="episode-text">
+                        『Kanon』同時視聴中、深夜の疲れからか徐々に口数が減り、ついに目をつぶって熟睡。Live2Dの精密なトラッキングにより、寝落ちからくしゃみで起きるまでの一部始終が世界中に丸わかりになった。
+                    </p>
+                </div>
+            </div>
+
+            <div class="episode-card reveal">
+                <div class="episode-content">
+                    <span class="episode-tag">Funny Sound</span>
+                    <h3 class="episode-title">悲鳴が「雅楽（越天楽）」</h3>
+                    <p class="episode-text">
+                        ホラーゲーム配信中、あまりの恐怖に上げた悲鳴のトーンとリズムが、まるでお正月の神社で流れる「越天楽」のようだと話題に。多数の切り抜き動画が作られ、伝説の音色として語り継がれている。
+                    </p>
+                </div>
+            </div>
+
+            <div class="episode-card reveal">
+                <div class="episode-content">
+                    <span class="episode-tag">Strong Will</span>
+                    <h3 class="episode-title">狂犬（？）ぺこら先輩との口論</h3>
+                    <p class="episode-text">
+                        ホロGTAでは、クレームを入れてきた強敵の兎田ぺこらに対し、一歩も引かずに日本語で言い返す強心臓ぶりを披露。「バカだけどバカじゃない。強い。」と自称する通り、先輩相手でも物怖じしない一面がある。
+                    </p>
+                </div>
+            </div>
+
+            <div class="episode-card reveal">
+                <div class="episode-content">
+                    <span class="episode-tag">Victim</span>
+                    <h3 class="episode-title">姉による「キーボード破壊」の悲劇</h3>
+                    <p class="episode-text">
+                        タイピング王決定戦で、姉のフワワがブチギレてモココのキーボードを物理破壊。「F1,F3,F4死んじゃいました！」と絶叫し、「キーボードも心も両方壊れてます」と意気消沈する大惨事の被害者となった。
+                    </p>
+                </div>
+            </div>
+
+            <div class="episode-card reveal">
+                <div class="episode-content">
+                    <span class="episode-tag">3D Battle</span>
+                    <h3 class="episode-title">最後のドーナツを奪い取れ！</h3>
+                    <p class="episode-text">
+                        3Dお披露目配信のクライマックス、最後のポン・デ・リングを巡り姉フワワとプロレス対決。DDTプロレスリング監修のガチ技で見事勝利を収め、勝者としてドーナツを頬張る姿をファンに印象付けた。
+                    </p>
+                </div>
+            </div>
+
+            <div class="episode-card reveal">
+                <div class="episode-content">
+                    <span class="episode-tag">Heritage</span>
+                    <h3 class="episode-title">ディープなオタク知識と肉フェスコール</h3>
+                    <p class="episode-text">
+                        日本の古いアニメやゲームに精通。歌枠では『ハム太郎』の「肉フェスコール」を完璧に再現したり、1963年の「恋のバカンス」をセットリストに入れるなど、年齢不詳なディープな知識でリスナーを驚かせている。
+                    </p>
+                </div>
             </div>
         </div>
     </section>
-    <div class="cp-section cp-reveal">
-        <h2 class="cp-section-title">ARCHIVE DATA</h2>
-        <div class="cp-grid">
-            <div class="cp-card">
-                <h3>PROFILE</h3>
-                <table class="cp-table">
-                    <tr>
-                        <th>DEBUT</th>
-                        <td>2023.07.31</td>
-                    </tr>
-                    <tr>
-                        <th>AFFILIATION</th>
-                        <td>hololive EN</td>
-                    </tr>
-                    <tr>
-                        <th>STATUS</th>
-                        <td>Active</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="cp-card">
-                <h3>EPISODES</h3>
-                <p>姉のフワワと共に、ホロライブEnglish初の双子タレントとして活動。圧倒的なエネルギーと、リスナー（Ruffians）への温かなメッセージで知られる。二人の絆が奏でるハーモニーは、世界のどこにいても笑顔を咲かせる。
-                </p>
-            </div>
-        </div>
+
+    <div class="mirror-hint reveal">
+        Looking for the "Fuwa-Fuwa" side? Visit <a href="fuwawa.html" class="mirror-link">Fuwawa's Page</a>
     </div>
-    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+
+    <footer>
+        <p>&copy; 2026 VTuber Archive - Mococo Abyssgard Fan Page (BAU BAU!)</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
 
 </html>

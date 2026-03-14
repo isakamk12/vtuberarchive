@@ -4,57 +4,396 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anya Melfissa (アーニャ・メルフィッサ) — hololive</title>
+    <title>Anya Melfissa (アーニャ・メルフィッサ) — hololive ID</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="char-base.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;700&family=Outfit:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --c1: #D4AF37; /* Antique Gold */
+            --c2: #8B0000; /* Deep Crimson */
+            --c3: #F5F5DC; /* beige */
+            --bg: #121212;
+            --card-bg: rgba(212, 175, 55, 0.05);
+            --accent: #FFD700;
+            --glass: rgba(255, 255, 255, 0.03);
+            --border: rgba(212, 175, 55, 0.2);
+            --text: #E0E0E0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Outfit', 'Noto Serif JP', serif;
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        /* Blade & Spirit Background */
+        .bg-blade {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: 
+                radial-gradient(circle at 10% 10%, rgba(139, 0, 0, 0.2) 0%, transparent 40%),
+                radial-gradient(circle at 90% 90%, rgba(212, 175, 55, 0.1) 0%, transparent 40%);
+        }
+
+        .dagger-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 10 L60 40 L50 80 L40 40 Z' fill='%23D4AF37' fill-opacity='0.02'/%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+
+        nav {
+            padding: 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border);
+            background: rgba(18, 18, 18, 0.9);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .back-link {
+            color: var(--c1);
+            text-decoration: none;
+            font-family: 'Shippori Mincho', serif;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: 0.3s;
+        }
+
+        .back-link:hover {
+            color: var(--accent);
+            text-shadow: 0 0 10px var(--c1);
+        }
+
+        .gen-tag {
+            font-family: 'Shippori Mincho', serif;
+            font-size: 0.8rem;
+            letter-spacing: 4px;
+            color: var(--c1);
+            border: 1px solid var(--border);
+            padding: 0.4rem 1.2rem;
+        }
+
+        header {
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 10%;
+        }
+
+        .blade-icon {
+            font-size: 5rem;
+            color: var(--c1);
+            margin-bottom: 2.5rem;
+            filter: drop-shadow(0 0 20px var(--c2));
+            animation: float 4s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+
+        .hero-title {
+            font-family: 'Shippori Mincho', serif;
+            font-size: clamp(2.5rem, 8vw, 6rem);
+            color: var(--c1);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero-jp {
+            font-family: 'Shippori Mincho', serif;
+            font-size: 1.4rem;
+            letter-spacing: 10px;
+            color: var(--c2);
+            margin-bottom: 3.5rem;
+        }
+
+        .hero-desc {
+            max-width: 750px;
+            padding: 3rem;
+            background: var(--glass);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            position: relative;
+        }
+
+        .hero-desc::before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 2px;
+            background: var(--c1);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            padding: 5% 10%;
+        }
+
+        .stat-card {
+            background: var(--glass);
+            border: 1px solid var(--border);
+            padding: 3rem;
+            text-align: center;
+            transition: 0.5s;
+        }
+
+        .stat-card:hover {
+            background: var(--card-bg);
+            border-color: var(--c1);
+        }
+
+        .stat-label {
+            font-family: 'Shippori Mincho', serif;
+            font-size: 0.8rem;
+            color: var(--c2);
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .stat-value {
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .japanese-mastery {
+            padding: 10% 15%;
+            background: linear-gradient(180deg, transparent, rgba(139, 0, 0, 0.05), transparent);
+            text-align: center;
+        }
+
+        .quote-box {
+            font-family: 'Shippori Mincho', serif;
+            font-size: 2rem;
+            color: var(--c1);
+            margin-bottom: 3rem;
+            line-height: 1.4;
+        }
+
+        .episodes {
+            padding: 10%;
+        }
+
+        .episode-list {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .episode-item {
+            display: flex;
+            gap: 4rem;
+            margin-bottom: 6rem;
+            position: relative;
+        }
+
+        .episode-circle {
+            flex-shrink: 0;
+            width: 80px;
+            height: 80px;
+            border: 2px solid var(--c1);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Shippori Mincho', serif;
+            font-size: 1.5rem;
+            color: var(--c1);
+        }
+
+        .episode-content {
+            border-left: 1px solid var(--border);
+            padding-left: 3rem;
+        }
+
+        .episode-tag {
+            color: var(--c2);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 3px;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .episode-title {
+            font-family: 'Shippori Mincho', serif;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .episode-text {
+            color: #AAA;
+            font-size: 1rem;
+        }
+
+        footer {
+            padding: 5rem;
+            text-align: center;
+            border-top: 1px solid var(--border);
+            font-family: 'Shippori Mincho', serif;
+            color: #555;
+            letter-spacing: 5px;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            .episode-item { flex-direction: column; gap: 1.5rem; }
+            .episode-content { border-left: none; border-top: 1px solid var(--border); padding: 1.5rem 0 0 0; }
+            .hero-title { font-size: 3rem; }
+        }
+    </style>
 </head>
 
 <body>
-    <div class="cp-bg"></div>
-    <nav class="cp-nav">
-        <a href="../hololive_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO hololive</a>
-        <span class="cp-nav-gen">hololive ID // 2期生</span>
+    <div class="bg-blade">
+        <div class="dagger-pattern"></div>
+    </div>
+
+    <nav>
+        <a href="../hololive_index.html" class="back-link">⚔️ CRIS SPIRIT</a>
+        <div class="gen-tag">二期生 HOLORO</div>
     </nav>
-    <section class="cp-hero">
-        <div class="cp-hero-content">
-            <div class="cp-gen-label">hololive Indonesia 2nd Gen</div>
-            <h1 class="cp-hero-name">Anya Melfissa</h1>
-            <span class="cp-hero-en">アーニャ・メルフィッサ</span>
-            <p class="cp-chara-desc">「クリス」という名の剣が人間に転生した姿。おっとりとしたマイペースな性格だが、時折見せる鋭い一言（物理）が武器。読書と睡眠をこよなく愛する。</p>
-            <div class="cp-tags">
-                <span class="cp-tag">#Sword</span>
-                <span class="cp-tag">#Relax</span>
-                <span class="cp-tag">#ID</span>
+
+    <header>
+        <div class="blade-icon reveal"><i class="fa-solid fa-wand-sparkles"></i></div>
+        <h1 class="hero-title reveal">Anya Melfissa</h1>
+        <span class="hero-jp reveal">アーニャ・メルフィッサ</span>
+        <p class="hero-desc reveal">
+            「古代武器だった彼女は、主人の儀式によって人間の身体を与えられた」<br>
+            ほとんど寝ているかゲームをしている、人懐っこくない「短剣」。しかし、一度口を開けば日本人顔負けの流暢な、そして辛辣な日本語が飛び出す、ホロライブID最強の「武器」。
+        </p>
+    </header>
+
+    <div class="stats-grid reveal">
+        <div class="stat-card">
+            <span class="stat-label">Weapon Type</span>
+            <span class="stat-value">Keris (Dagger)</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-label">Language Proficiency</span>
+            <span class="stat-value">JP Level: N1+</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-label">Hobby</span>
+            <span class="stat-value">Sleeping / VN</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-label">Trait</span>
+            <span class="stat-value">Horror Immunity</span>
+        </div>
+    </div>
+
+    <section class="japanese-mastery reveal">
+        <div class="quote-box">
+            「お前もう優勝でいいよ」
+        </div>
+        <p>ネットスラングから敬語まで完璧に使いこなす。その語学力は、日本人ストリーマーを絶句させるほど。</p>
+    </section>
+
+    <section class="episodes">
+        <div class="episode-list">
+            <div class="episode-item reveal">
+                <div class="episode-circle">壹</div>
+                <div class="episode-content">
+                    <span class="episode-tag">LINGUIST</span>
+                    <h3 class="episode-title">名誉ホロライブJP級の日本語</h3>
+                    <p class="episode-text">
+                        初配信から披露した驚異の日本語力。『NEEDY GIRL OVERDOSE』実況でのキレのあるツッコミや、RUSTサーバーでの謙譲語を交えた会話は、「中に日本人が入っている」と疑われるレベル。
+                    </p>
+                </div>
+            </div>
+
+            <div class="episode-item reveal">
+                <div class="episode-circle">貳</div>
+                <div class="episode-content">
+                    <span class="episode-tag">BRAVERY</span>
+                    <h3 class="episode-title">ホラー耐性最強と「義務キャー」</h3>
+                    <p class="episode-text">
+                        どんなホラーゲームでも全く動じない「古代兵器」。あまりに驚かないため、リスナーの要望でわざと驚いて見せる「義務キャー」が定番。他メンバーが絶叫する中、一人冷静に指示を出す姿はまさに最強。
+                    </p>
+                </div>
+            </div>
+
+            <div class="episode-item reveal">
+                <div class="episode-circle">参</div>
+                <div class="episode-content">
+                    <span class="episode-tag">FAN GIRL</span>
+                    <h3 class="episode-title">初音ミクとの伝説の共演</h3>
+                    <p class="episode-text">
+                        2026年の生誕祭3Dライブで、最推しの「初音ミク」と共演。長年のボカロファンとしての夢を叶え、普段の冷静さを失って限界化する姿は、多くのオタクの涙を誘った。
+                    </p>
+                </div>
+            </div>
+
+            <div class="episode-item reveal">
+                <div class="episode-circle">肆</div>
+                <div class="episode-content">
+                    <span class="episode-tag">STANCE</span>
+                    <h3 class="episode-title">「指示厨」を許さない我が道</h3>
+                    <p class="episode-text">
+                        マイクラを当初やらなかった理由は「早くやれと指示されるのがムカつくから」。周囲に流されず、自分の楽しさを最優先するキッパリとした性格が、Melfriends（ファン）からの絶大な信頼を得ている。
+                    </p>
+                </div>
             </div>
         </div>
     </section>
-    <div class="cp-section cp-reveal">
-        <h2 class="cp-section-title">ARCHIVE DATA</h2>
-        <div class="cp-grid">
-            <div class="cp-card">
-                <h3>PROFILE</h3>
-                <table class="cp-table">
-                    <tr>
-                        <th>DEBUT</th>
-                        <td>2020.12.05</td>
-                    </tr>
-                    <tr>
-                        <th>AFFILIATION</th>
-                        <td>hololive ID</td>
-                    </tr>
-                    <tr>
-                        <th>STATUS</th>
-                        <td>Active</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="cp-card">
-                <h3>EPISODES</h3>
-                <p>日本語が非常に堪能で、日本のリスナーとも深い交流を持つ。落ち着いたトーンの配信は、癒やしを求めるファンにとっての安らぎの場となっている。</p>
-            </div>
-        </div>
-    </div>
-    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+
+    <footer>
+        <p>— SLEEP WELL, SHARP BLADE —</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) entry.target.classList.add('active');
+                });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
 
 </html>

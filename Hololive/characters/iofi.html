@@ -4,57 +4,423 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Airani Iofifteen (アイラニ・イオフイフティーン) — hololive</title>
+    <title>Airani Iofifteen (アイラニ・イオフィフティーン) — hololive ID</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="char-base.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Outfit:wght@400;700&family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --c1: #FFB7C5; /* Pastel Pink */
+            --c2: #87CEEB; /* Sky Blue */
+            --c3: #FFD700; /* Gold */
+            --bg: #FFFFFF;
+            --card-bg: rgba(255, 183, 197, 0.1);
+            --accent: #FF69B4;
+            --glass: rgba(255, 255, 255, 0.4);
+            --border: rgba(255, 183, 197, 0.3);
+            --text: #5A4A4A;
+        }
+
+        [data-theme="dark"] {
+            --bg: #1A1A1A;
+            --text: #F0F0F0;
+            --glass: rgba(0, 0, 0, 0.3);
+            --border: rgba(135, 206, 235, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Outfit', 'M PLUS Rounded 1c', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Artistic Alien Background */
+        .bg-art {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.3;
+            background: 
+                radial-gradient(circle at 10% 20%, var(--c1) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, var(--c2) 0%, transparent 40%);
+        }
+
+        .splatter {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(50px);
+            opacity: 0.2;
+        }
+
+        nav {
+            padding: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px dashed var(--border);
+        }
+
+        .back-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-family: 'Hachi Maru Pop', cursive;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: 0.3s;
+        }
+
+        .back-link:hover {
+            transform: scale(1.1) rotate(-2deg);
+        }
+
+        .gen-tag {
+            background: var(--c2);
+            color: #fff;
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px 0 20px 0;
+            font-weight: 700;
+            font-size: 0.8rem;
+        }
+
+        header {
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 5% 10%;
+            position: relative;
+        }
+
+        .paint-brush {
+            font-size: 4rem;
+            color: var(--accent);
+            margin-bottom: 2rem;
+            animation: paint 3s infinite ease-in-out;
+        }
+
+        @keyframes paint {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(20deg) scale(1.1); }
+        }
+
+        .hero-title {
+            font-family: 'Hachi Maru Pop', cursive;
+            font-size: clamp(3rem, 10vw, 6rem);
+            color: var(--accent);
+            margin-bottom: 1rem;
+            text-shadow: 3px 3px 0 var(--c2);
+        }
+
+        .hero-jp {
+            font-size: 1.2rem;
+            color: var(--text);
+            letter-spacing: 5px;
+            margin-bottom: 3rem;
+            display: block;
+        }
+
+        .hero-desc {
+            max-width: 800px;
+            font-size: 1.1rem;
+            padding: 2.5rem;
+            background: var(--glass);
+            border: 2px solid var(--border);
+            border-radius: 30px;
+            position: relative;
+        }
+
+        .hero-desc::before {
+            content: '“';
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            font-size: 5rem;
+            color: var(--c1);
+            font-family: serif;
+            opacity: 0.5;
+        }
+
+        .polyglot-section {
+            padding: 5% 10%;
+            background: var(--card-bg);
+            text-align: center;
+        }
+
+        .lang-grid {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+
+        .lang-chip {
+            background: #fff;
+            padding: 1rem 2rem;
+            border-top: 5px solid var(--c2);
+            border-radius: 10px;
+            font-weight: 700;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+
+        .lang-chip:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            padding: 5% 10%;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 40px;
+            border: 2px solid var(--border);
+            text-align: center;
+            transition: 0.4s;
+        }
+
+        .stat-card:hover {
+            box-shadow: 0 20px 40px rgba(255, 183, 197, 0.2);
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .stat-value {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .episodes {
+            padding: 10%;
+        }
+
+        .section-title {
+            font-family: 'Hachi Maru Pop', cursive;
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 5rem;
+            color: var(--accent);
+        }
+
+        .episode-masonry {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .episode-item {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            position: relative;
+            transition: 0.4s;
+        }
+
+        .episode-item::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            right: -5px;
+            width: 100%;
+            height: 100%;
+            background: var(--c1);
+            z-index: -1;
+            border-radius: 20px;
+            opacity: 0.1;
+        }
+
+        .episode-item:hover {
+            transform: rotate(1deg) translateY(-5px);
+        }
+
+        .episode-tag {
+            color: var(--c2);
+            font-weight: 700;
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .episode-title {
+            font-family: 'Hachi Maru Pop', cursive;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text);
+        }
+
+        .episode-text {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        footer {
+            padding: 5rem;
+            text-align: center;
+            background: var(--c2);
+            color: #fff;
+            font-family: 'Hachi Maru Pop', cursive;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: 1s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            .hero-title { font-size: 3.5rem; }
+            .lang-grid { gap: 1rem; }
+        }
+    </style>
 </head>
 
 <body>
-    <div class="cp-bg"></div>
-    <nav class="cp-nav">
-        <a href="../hololive_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO hololive</a>
-        <span class="cp-nav-gen">hololive ID // 1期生</span>
+    <div class="bg-art">
+        <div class="splatter" style="top: 10%; left: 5%; width: 300px; height: 300px; background: var(--c1);"></div>
+        <div class="splatter" style="bottom: 10%; right: 5%; width: 400px; height: 400px; background: var(--c2);"></div>
+    </div>
+
+    <nav>
+        <a href="../hololive_index.html" class="back-link"><i class="fa-solid fa-palette"></i> AREA 15</a>
+        <div class="gen-tag">#IOFORIA</div>
     </nav>
-    <section class="cp-hero">
-        <div class="cp-hero-content">
-            <div class="cp-gen-label">hololive Indonesia 1st Gen</div>
-            <h1 class="cp-hero-name">Airani Iofifteen</h1>
-            <span class="cp-hero-en">アイラニ・イオフイフティーン</span>
-            <p class="cp-chara-desc">宇宙からやってきたエイリアンの美少女。地球の文化、特にお絵描きと多言語学習に強い関心を持つ。ホロライブ全体の架け橋となる、社交的で明るい「お姉さん」的存在。</p>
-            <div class="cp-tags">
-                <span class="cp-tag">#Alien</span>
-                <span class="cp-tag">#Artist</span>
-                <span class="cp-tag">#ID</span>
+
+    <header>
+        <div class="paint-brush reveal"><i class="fa-solid fa-paintbrush"></i></div>
+        <h1 class="hero-title reveal">Airani Iofifteen</h1>
+        <span class="hero-jp reveal">アイラニ・イオフィフティーン</span>
+        <p class="hero-desc reveal">
+            「ヨピ可愛い、最高だよって言われると嬉しい！」<br>
+            家出して地球にやってきた、お絵描き大好き宇宙人のお姫様。地球のオタク文化、特に日本の声優やアニメが大好き。絵を描くことと、多言語を学ぶことに情熱を注ぐ、ホロライブIDの明るい「架け橋」。
+        </p>
+    </header>
+
+    <section class="polyglot-section reveal">
+        <h2 class="section-title">MULTILINGUAL ALIEN</h2>
+        <div class="lang-grid">
+            <div class="lang-chip">Bahasa Indonesia</div>
+            <div class="lang-chip">English</div>
+            <div class="lang-chip">日本語 (Animation Study)</div>
+            <div class="lang-chip">Deutsch</div>
+            <div class="lang-chip">한국어</div>
+        </div>
+    </section>
+
+    <div class="stats-grid reveal">
+        <div class="stat-card">
+            <span class="stat-label">Birthday</span>
+            <span class="stat-value">July 15</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-label">Height</span>
+            <span class="stat-value">150cm (Self-proclaimed)</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-label">Species</span>
+            <span class="stat-value">Alien Princess</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-label">Hobby</span>
+            <span class="stat-value">Otaku Culture</span>
+        </div>
+    </div>
+
+    <section class="episodes">
+        <h2 class="section-title reveal">ARTISTIC LOGS</h2>
+        <div class="episode-masonry">
+            <div class="episode-item reveal">
+                <span class="episode-tag">EFFORT</span>
+                <h3 class="episode-title">アニメで学んだ驚異の日本語</h3>
+                <p class="episode-text">
+                    ホロライブ加入前は日本語未経験だったが、アニメやゲームだけで独学。今やJPメンバーと遜色なく会話できるほど。緑川光や杉田智和といった男性声優への愛も深く、オタク特有のニュアンスまで完全に使いこなす。
+                </p>
+            </div>
+
+            <div class="episode-item reveal">
+                <span class="episode-tag">BRIDGE</span>
+                <h3 class="episode-title">Pekomoonaを支えた「外星天使」</h3>
+                <p class="episode-text">
+                    人見知りで交流をためらっていたムーナを「私が通訳するから！」と励まし、ぺこらとの交流を後押し。「外星天使」や「ID組のママ」とも呼ばれ、ブランチを越えた国際的な絆の橋渡し役を担っている。
+                </p>
+            </div>
+
+            <div class="episode-item reveal">
+                <span class="episode-tag">IDENTITY</span>
+                <h3 class="episode-title">お絵描きと共に成長するアイドル</h3>
+                <p class="episode-text">
+                    「ヨピの成長を生で見られるからね」と、配信で数時間にわたりキャンバスに向き合う。その実力は、CLIP STUDIO PAINTのプロモーションに公式協賛されるほどで、お絵描きは彼女のアイデンティティそのもの。
+                </p>
+            </div>
+
+            <div class="episode-item reveal">
+                <span class="episode-tag">OTAKU</span>
+                <h3 class="episode-title">飾らないオタクっぷりと「Erofi」</h3>
+                <p class="episode-text">
+                    怪獣ガチ勢で「夫はゴジラ」と公言。清楚な外見に反してセンシティブな話題にもノリが良く、「Erofi（エロフィ）」と愛着を込めて呼ばれることも。ファンとの距離の近さが最大の魅力。
+                </p>
+            </div>
+
+            <div class="episode-item reveal">
+                <span class="episode-tag">LOVE</span>
+                <h3 class="episode-title">IOFORIAへのストレートな愛</h3>
+                <p class="episode-text">
+                    登録者数よりも一人ひとりの常連を覚えることを大切にしている。記念配信では感極まって号泣してしまうなど、感情豊かで人間味（宇宙人味）あふれる姿がファンを惹きつけて離さない。
+                </p>
             </div>
         </div>
     </section>
-    <div class="cp-section cp-reveal">
-        <h2 class="cp-section-title">ARCHIVE DATA</h2>
-        <div class="cp-grid">
-            <div class="cp-card">
-                <h3>PROFILE</h3>
-                <table class="cp-table">
-                    <tr>
-                        <th>DEBUT</th>
-                        <td>2020.04.12</td>
-                    </tr>
-                    <tr>
-                        <th>AFFILIATION</th>
-                        <td>hololive ID</td>
-                    </tr>
-                    <tr>
-                        <th>STATUS</th>
-                        <td>Active</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="cp-card">
-                <h3>EPISODES</h3>
-                <p>インドネシア語、英語、日本語に加え、韓国語やドイツ語なども学ぶ語学の天才。お絵描き配信では、その卓越した画力で様々なキャラクターを描き上げ、ファンとの交流を楽しんでいる。</p>
-            </div>
-        </div>
-    </div>
-    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+
+    <footer>
+        <p>IOFORIA~! OBISA! Ciao Ciao!</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) entry.target.classList.add('active');
+                });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
 
 </html>
