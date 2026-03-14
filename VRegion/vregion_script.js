@@ -16,10 +16,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Parallax background elements
     const bgPattern = document.querySelector('.vr-bg-pattern');
-    if (bgPattern) {
-        window.addEventListener('scroll', () => {
-            const offset = window.scrollY * 0.1;
-            bgPattern.style.backgroundPositionY = `${offset}px`;
-        });
-    }
+    const nodes = document.querySelector('.vr-map-nodes');
+    
+    window.addEventListener('scroll', () => {
+        const scrolled = window.scrollY;
+        
+        if (bgPattern) {
+            bgPattern.style.backgroundPositionY = `${scrolled * 0.15}px`;
+        }
+        
+        if (nodes) {
+            nodes.style.transform = `translateY(${scrolled * 0.25}px)`;
+            nodes.style.opacity = Math.max(0.1, 0.4 - scrolled / 1000);
+        }
+    });
 });

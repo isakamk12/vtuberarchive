@@ -12,6 +12,14 @@
 
     <nav class="nav">
         <a href="../index.html" class="nav-brand">TSUN<span>DERIA</span></a>
+        <div class="theme-switch-container">
+            <span class="mode-label label-tsun">TSUN</span>
+            <label class="switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider round"></span>
+            </label>
+            <span class="mode-label label-dere">DERE</span>
+        </div>
         <div style="font-family: 'Bangers'; font-size: 1.5rem;">CHAPTER 1</div>
     </nav>
 
@@ -150,14 +158,7 @@
 
     </main>
 
-    <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('active');
-            });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-    </script>
+    <script src="tsunderia_script.js"></script>
 </body>
 
 </html>

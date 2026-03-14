@@ -36,12 +36,37 @@ body {
     line-height: 1.8;
 }
 
-/* Background with Wa-pattern (Seigaiha/Asanoha simple representation) */
+/* Background with Wa-pattern */
 .mh-bg {
     position: fixed;
     inset: 0;
     z-index: -1;
     pointer-events: none;
+    overflow: hidden;
+}
+
+.mh-film-grain {
+    position: absolute;
+    inset: -100%;
+    background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+    opacity: 0.05;
+    animation: filmGrain 1s steps(2) infinite;
+    pointer-events: none;
+    z-index: 100;
+}
+
+@keyframes filmGrain {
+    0% { transform: translate(0,0); }
+    10% { transform: translate(-5%,-5%); }
+    20% { transform: translate(-10%,5%); }
+    30% { transform: translate(5%,-10%); }
+    40% { transform: translate(-5%,15%); }
+    50% { transform: translate(-10%,5%); }
+    60% { transform: translate(15%,0); }
+    70% { transform: translate(0,10%); }
+    80% { transform: translate(-15%,0); }
+    90% { transform: translate(10%,5%); }
+    100% { transform: translate(5%,0); }
 }
 
 .mh-bg-pattern {
@@ -432,6 +457,42 @@ body {
     color: #fff;
     border-color: var(--mh-vermilion);
     transform: scale(1.1);
+}
+
+/* Hanko Stamp Hover */
+.mh-hanko-hover {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--mh-vermilion);
+    border-radius: 4px;
+    color: var(--mh-vermilion);
+    font-family: 'Shippori Mincho', serif;
+    font-weight: 800;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: scale(0.5) rotate(10deg);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    pointer-events: none;
+}
+
+.mh-member-card:hover .mh-hanko-hover {
+    opacity: 0.3;
+    transform: scale(1) rotate(-5deg);
+}
+
+.mh-hanko-hover.pulse {
+    animation: hankoPulse 2s infinite ease-in-out;
+}
+
+@keyframes hankoPulse {
+    0%, 100% { opacity: 0.2; transform: scale(1) rotate(-5deg); }
+    50% { opacity: 0.4; transform: scale(1.2) rotate(5deg); box-shadow: 0 0 10px var(--mh-vermilion); }
 }
 
 .mh-member-card:hover .mh-member-name {

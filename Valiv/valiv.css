@@ -265,6 +265,7 @@ body {
     color: transparent;
     background: linear-gradient(45deg, var(--vl-brand), var(--vl-brand-alt));
     -webkit-background-clip: text;
+    background-clip: text;
     line-height: 1;
 }
 
@@ -409,14 +410,70 @@ body {
     gap: 1.5rem;
 }
 
+/* Member Cards */
 .vl-member-card {
     background: var(--vl-glass);
     border: 1px solid var(--vl-border);
     border-radius: 12px;
     position: relative;
     overflow: hidden;
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.4s;
     cursor: pointer;
+}
+
+/* Holographic Glint */
+.vl-member-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent 0%,
+        transparent 40%,
+        rgba(255, 255, 255, 0.1) 50%,
+        transparent 60%,
+        transparent 100%
+    );
+    transform: rotate(45deg) translateX(-100%);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    pointer-events: none;
+}
+
+.vl-member-card:hover::after {
+    transform: rotate(45deg) translateX(100%);
+}
+
+/* Glass Ripple */
+.vl-glass-ripple {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border-radius: 50%;
+    animation: rippleEffect 0.6s linear;
+}
+
+@keyframes rippleEffect {
+    from { width: 0; height: 0; opacity: 0.5; }
+    to { width: 500px; height: 500px; opacity: 0; }
+}
+
+/* Floating Nodes */
+.vl-bg-node {
+    position: absolute;
+    border: 1px solid rgba(180, 100, 255, 0.1);
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, rgba(180, 100, 255, 0.05), transparent);
+    pointer-events: none;
+    animation: nodeFloat 10s infinite ease-in-out alternate;
+}
+
+@keyframes nodeFloat {
+    0% { transform: translateY(0) scale(1); }
+    100% { transform: translateY(-30px) scale(1.1); }
 }
 
 .vl-member-bg {

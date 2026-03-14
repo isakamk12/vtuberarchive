@@ -23,4 +23,20 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 300);
         }, index * 100 + 500);
     });
+
+    // Generate monster particles in the background
+    const bg = document.querySelector('.vm-bg');
+    const icons = ['fa-ghost', 'fa-skull', 'fa-bolt', 'fa-fire', 'fa-dragon'];
+    
+    for (let i = 0; i < 15; i++) {
+        const particle = document.createElement('i');
+        particle.className = `fa-solid ${icons[Math.floor(Math.random() * icons.length)]} vm-particle`;
+        particle.style.left = `${Math.random() * 100}vw`;
+        particle.style.top = `${Math.random() * 100}vh`;
+        particle.style.fontSize = `${Math.random() * 20 + 10}px`;
+        particle.style.opacity = Math.random() * 0.1 + 0.05;
+        particle.style.animation = `float ${Math.random() * 5 + 5}s ease-in-out infinite`;
+        particle.style.animationDelay = `${Math.random() * 5}s`;
+        bg.appendChild(particle);
+    }
 });

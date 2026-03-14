@@ -150,15 +150,58 @@ body {
     font-family: 'Zen Old Mincho', serif;
     font-size: clamp(6rem, 20vw, 15rem);
     font-weight: 900;
-    color: rgba(124, 157, 114, 0.08);
+    color: rgba(124, 157, 114, 0.05);
     pointer-events: none;
     user-select: none;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 0;
+    z-index: 1;
     letter-spacing: 0.1em;
 }
+
+/* Map Nodes */
+.vr-map-nodes {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+.vr-node {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: var(--vr-green-light);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.vr-node::after {
+    content: '';
+    position: absolute;
+    inset: -10px;
+    border: 2px solid var(--vr-green-light);
+    border-radius: 50%;
+    animation: pinPulse 2s ease-out infinite;
+}
+
+@keyframes pinPulse {
+    0% { transform: scale(0.5); opacity: 1; }
+    100% { transform: scale(3); opacity: 0; }
+}
+
+.vr-node.node-kanto { background: var(--reg-kanto); }
+.vr-node.node-chubu { background: var(--reg-chubu); }
+.vr-node.node-kansai { background: var(--reg-kansai); }
+.vr-node.node-chugoku { background: var(--reg-chugoku); }
+.vr-node.node-shikoku { background: var(--reg-shikoku); }
+.vr-node.node-kanto::after { border-color: var(--reg-kanto); }
+.vr-node.node-chubu::after { border-color: var(--reg-chubu); }
+.vr-node.node-kansai::after { border-color: var(--reg-kansai); }
+.vr-node.node-chugoku::after { border-color: var(--reg-chugoku); }
+.vr-node.node-shikoku::after { border-color: var(--reg-shikoku); }
 
 .vr-hero-content {
     position: relative;

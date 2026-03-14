@@ -13,6 +13,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     reveals.forEach(el => observer.observe(el));
 
+    // Radar Scanner Element
+    const radar = document.createElement('div');
+    radar.className = 'radar-scanner';
+    document.body.appendChild(radar);
+
+    // Click Ripple (Raid Start Effect)
+    document.addEventListener('mousedown', (e) => {
+        const ripple = document.createElement('div');
+        ripple.className = 'ripple';
+        ripple.style.left = `${e.clientX}px`;
+        ripple.style.top = `${e.clientY}px`;
+        document.body.appendChild(ripple);
+        setTimeout(() => ripple.remove(), 1000);
+    });
+
     // Simple particle effect (Sky motes)
     const particleContainer = document.getElementById('particles');
     if (particleContainer) {

@@ -14,12 +14,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Subtle compass rotation effect based on scroll
-    const logoIcon = document.querySelector('.vb-logo-icon.fa-box-open, .vb-nav-back .fa-compass');
-    if (logoIcon) {
-        window.addEventListener('scroll', () => {
-            const rot = window.scrollY * 0.2;
-            logoIcon.style.transform = `rotate(${rot}deg)`;
-        });
+    // Subtle compass/logo rotation effect based on scroll
+    const logoIcon = document.querySelector('.vb-logo-icon');
+    const hero = document.querySelector('.vb-hero');
+    
+    if (hero) {
+        setTimeout(() => hero.classList.add('active'), 300);
     }
+
+    window.addEventListener('scroll', () => {
+        const rot = window.scrollY * 0.15;
+        if (logoIcon) logoIcon.style.transform = `rotate(${rot}deg)`;
+        
+        // Parallax for bg map
+        const bgMap = document.querySelector('.vb-bg-map');
+        if (bgMap) bgMap.style.backgroundPosition = `0 ${window.scrollY * 0.2}px`;
+    });
 });

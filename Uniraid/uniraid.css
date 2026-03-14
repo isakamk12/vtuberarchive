@@ -52,6 +52,51 @@ body {
     opacity: 0.1;
 }
 
+/* Hex Grid Background */
+.rpg-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='104' viewBox='0 0 60 104' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M60 104V78h-1l-29-16.743L1 78H0v26h1l29 16.743L59 104h1zM30 52.743L59 69.486 59 86.23 30 69.486 1 86.23V69.486L30 52.743z' fill='%23eab308' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+    opacity: 0.5;
+}
+
+/* Radar Scan Line */
+.radar-scanner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 200vmax;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--r-gold), transparent);
+    transform-origin: 0 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.2;
+    animation: radarSweep 8s linear infinite;
+}
+
+@keyframes radarSweep {
+    from { transform: rotate(0deg) translateX(0); }
+    to { transform: rotate(360deg) translateX(0); }
+}
+
+/* Ripple effect */
+.ripple {
+    position: fixed;
+    border: 2px solid var(--r-gold);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    animation: rippleEffect 1s ease-out forwards;
+    z-index: 1000;
+}
+
+@keyframes rippleEffect {
+    0% { width: 0; height: 0; opacity: 1; }
+    100% { width: 500px; height: 500px; opacity: 0; }
+}
+
 /* Nav */
 .uniraid-nav {
     position: fixed;

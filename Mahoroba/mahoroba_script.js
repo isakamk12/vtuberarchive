@@ -1,20 +1,45 @@
-// MAHOROBA — Agency Script
-
+// Mahoroba — Agency Script
 document.addEventListener('DOMContentLoaded', () => {
-    // Reveal Observer with a slower, more elegant timing
-    const reveals = document.querySelectorAll('.mh-reveal');
+    // 1. Warm Reveal (Intersection Observer)
+    const reveals = document.querySelectorAll('.mh-reveal, .mh-section');
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry, i) => {
             if (entry.isIntersecting) {
-                setTimeout(() => entry.target.classList.add('active'), i * 200);
+                // Soft delay for staggered feel
+                setTimeout(() => {
+                    entry.target.classList.add('active');
+                    entry.target.style.filter = 'blur(0)';
+                }, i * 150);
             }
         });
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-    reveals.forEach(el => observer.observe(el));
+    }, { threshold: 0.1 });
+    
+    reveals.forEach(el => {
+        el.style.filter = 'blur(10px)'; // Initial state for warm fade
+        observer.observe(el);
+    });
 
-    // Make entire member card clickable
+    // 2. Hanko Stamp Pulse
     const cards = document.querySelectorAll('.mh-member-card');
     cards.forEach(card => {
+        // Create Hanko Element if it doesn't exist
+        const stamps = ["幸", "雅", "結", "和", "楽"];
+        const stampStr = stamps[Math.floor(Math.random() * stamps.length)];
+        
+        const hanko = document.createElement('div');
+        hanko.className = 'mh-hanko-hover';
+        hanko.textContent = stampStr;
+        card.appendChild(hanko);
+
+        card.addEventListener('mouseenter', () => {
+            hanko.classList.add('pulse');
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            hanko.classList.remove('pulse');
+        });
+
+        // Click Logic
         const link = card.querySelector('.mh-member-name');
         if (link) {
             card.addEventListener('click', (e) => {
@@ -23,18 +48,5 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }
-    });
-
-    // Add staggered entrance animations for grid items on load
-    const gridItems = document.querySelectorAll('.mh-member-card');
-    gridItems.forEach((item, index) => {
-        item.style.opacity = '0';
-        item.style.transform = 'translateY(20px)';
-        item.style.transition = 'all 0.6s cubic-bezier(0.25, 1, 0.5, 1)';
-
-        setTimeout(() => {
-            item.style.opacity = '1';
-            item.style.transform = 'translateY(0)';
-        }, 300 + (index * 100));
     });
 });

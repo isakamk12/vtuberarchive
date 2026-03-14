@@ -141,27 +141,14 @@ body {
 
 /* HERO */
 .vb-hero {
-    min-height: 85vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 120px 2rem 4rem;
     position: relative;
     text-align: center;
-}
-
-.vb-hero-bg-text {
-    position: absolute;
-    font-family: 'Cinzel', serif;
-    font-size: clamp(6rem, 20vw, 15rem);
-    font-weight: 800;
-    color: rgba(197, 160, 89, 0.1);
-    pointer-events: none;
-    user-select: none;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 0;
+    perspective: 1000px;
 }
 
 .vb-hero-content {
@@ -171,21 +158,28 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"><rect width="10" height="10" fill="%23f4eaec" fill-opacity="0.95"/></svg>');
+    background: var(--vb-parchment);
     padding: 4rem;
     border: 2px solid var(--vb-gold);
     outline: 1px solid var(--vb-gold);
     outline-offset: -8px;
-    box-shadow: 10px 10px 20px rgba(74, 59, 50, 0.2);
-    position: relative;
+    box-shadow: 20px 20px 40px rgba(74, 59, 50, 0.2);
+    transform: rotateX(10deg);
+    transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    opacity: 0;
+}
+
+.vb-hero.active .vb-hero-content {
+    transform: rotateX(0deg);
+    opacity: 1;
 }
 
 .vb-hero-content::before,
 .vb-hero-content::after {
     content: '';
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     border: 2px solid var(--vb-gold);
 }
 
@@ -359,19 +353,12 @@ body {
     background: var(--vb-parchment);
     padding: 1.5rem;
     box-shadow: var(--vb-shadow);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
     cursor: pointer;
     display: flex;
     justify-content: center;
-}
-
-.vb-card-frame {
-    position: absolute;
-    inset: 10px;
-    border: 1px solid var(--vb-gold);
-    opacity: 0.6;
-    transition: border-width 0.3s;
-    pointer-events: none;
+    transform-style: preserve-3d;
+    perspective: 1000px;
 }
 
 .vb-card-inner {
@@ -384,57 +371,26 @@ body {
     width: 100%;
     border: 1px dashed var(--vb-brown-light);
     background: rgba(255, 255, 255, 0.4);
-}
-
-.vb-member-icon {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    background: var(--vb-brown);
-    color: var(--vb-gold);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5), 0 5px 15px rgba(74, 59, 50, 0.2);
-    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.vb-member-name {
-    font-size: 1.3rem;
-    font-weight: 800;
-    color: var(--vb-brown);
-    text-decoration: none;
-    margin-bottom: 6px;
-    transition: color 0.3s;
-}
-
-.vb-member-read {
-    font-family: 'Cinzel', serif;
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: var(--vb-green);
-    letter-spacing: 0.05em;
+    transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .vb-member-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(74, 59, 50, 0.3);
+    transform: translateY(-5px);
+    box-shadow: 0 25px 50px rgba(74, 59, 50, 0.2);
 }
 
-.vb-member-card:hover .vb-card-frame {
-    border-width: 2px;
-    opacity: 1;
+.vb-member-card:hover .vb-card-inner {
+    transform: rotateX(-5deg) translateZ(20px);
+    background: rgba(255, 255, 255, 0.8);
 }
 
 .vb-member-card:hover .vb-member-icon {
-    transform: rotate(15deg) scale(1.1);
-    background: var(--vb-green);
+    transform: translateZ(30px) rotateY(360deg);
 }
 
 .vb-member-card:hover .vb-member-name {
-    color: var(--vb-gold);
+    color: var(--vb-green);
+    transform: translateZ(10px);
 }
 
 /* FOOTER */

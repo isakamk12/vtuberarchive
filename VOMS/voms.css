@@ -51,6 +51,13 @@ body::selection {
     opacity: 0.1;
 }
 
+.vm-particle {
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+    color: var(--vm-black);
+}
+
 /* NAV */
 .vm-nav {
     position: fixed;
@@ -371,13 +378,34 @@ body::selection {
 }
 
 /* HOVER EFFECTS */
+@keyframes wiggle {
+    0%, 100% { transform: rotate(-2deg) translate(0, 0); }
+    25% { transform: rotate(2deg) translate(2px, -2px); }
+    50% { transform: rotate(-1deg) translate(-2px, 2px); }
+    75% { transform: rotate(3deg) translate(1px, -1px); }
+}
+
+@keyframes jitter {
+    0% { transform: translate(0,0); }
+    25% { transform: translate(-1px, 1px); }
+    50% { transform: translate(1px, -1px); }
+    75% { transform: translate(-1px, -1px); }
+    100% { transform: translate(1px, 1px); }
+}
+
 .vm-member-card:hover {
     transform: translate(-4px, -4px) scale(1.02);
     box-shadow: 10px 10px 0 var(--vm-black);
+    animation: wiggle 0.3s ease-in-out infinite alternate;
+}
+
+.vm-member-card:hover .vm-card-teeth {
+    animation: jitter 0.1s infinite;
 }
 
 .vm-member-card:hover .vm-member-icon {
     transform: scale(1.1) rotate(10deg);
+    box-shadow: 6px 6px 0 var(--vm-black);
 }
 
 /* ALUMNI SECTION */

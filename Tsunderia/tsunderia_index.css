@@ -50,12 +50,87 @@ body::before {
     color: #fff;
 }
 
+/* Theme Toggle Switch */
+.theme-switch-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--tsun-text);
+    transition: .4s;
+    border: 2px solid var(--tsun-text);
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 2px;
+    bottom: 2px;
+    background-color: var(--tsun-pink);
+    transition: .4s;
+}
+
+input:checked + .slider:before {
+    transform: translateX(30px);
+    background-color: var(--tsun-blue);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.mode-label {
+    font-size: 1.2rem;
+    color: var(--tsun-text);
+}
+
+.dere-mode .label-dere { color: var(--tsun-blue); text-shadow: 2px 2px 0 var(--tsun-text); }
+.label-tsun { color: var(--tsun-pink); text-shadow: 2px 2px 0 var(--tsun-text); }
+.dere-mode .label-tsun { color: var(--tsun-text); text-shadow: none; }
+
+/* Dere Mode Overrides */
+body.dere-mode {
+    --tsun-bg: #fdf2f8; /* Soft pinkish white */
+    --tsun-pink: #0ea5e9; /* Soft blue */
+    --tsun-yellow: #bae6fd; /* Light blue burst */
+    --tsun-blue: #f472b6; /* Soft pink accent */
+}
+
 /* Navigation */
 .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 3rem;
+    padding: 0.8rem 3rem;
     position: fixed;
     top: 0;
     width: 100%;
@@ -63,6 +138,7 @@ body::before {
     background: var(--tsun-bg);
     border-bottom: 4px solid var(--tsun-text);
     box-shadow: 0 10px 0 var(--tsun-pink);
+    transition: background 0.4s, box-shadow 0.4s;
 }
 
 .nav-brand {

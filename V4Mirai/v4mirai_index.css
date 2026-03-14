@@ -131,29 +131,12 @@ body::after {
 }
 
 @keyframes glitch-anim {
-    0% {
-        clip: rect(10px, 9999px, 80px, 0);
-    }
-
-    20% {
-        clip: rect(30px, 9999px, 10px, 0);
-    }
-
-    40% {
-        clip: rect(90px, 9999px, 50px, 0);
-    }
-
-    60% {
-        clip: rect(20px, 9999px, 100px, 0);
-    }
-
-    80% {
-        clip: rect(60px, 9999px, 20px, 0);
-    }
-
-    100% {
-        clip: rect(50px, 9999px, 70px, 0);
-    }
+    0% { clip: rect(10px, 9999px, 80px, 0); transform: skew(0.5deg); }
+    20% { clip: rect(30px, 9999px, 10px, 0); transform: skew(-0.5deg); }
+    40% { clip: rect(90px, 9999px, 50px, 0); transform: skew(0.3deg); }
+    60% { clip: rect(20px, 9999px, 100px, 0); transform: skew(-0.3deg); }
+    80% { clip: rect(60px, 9999px, 20px, 0); transform: skew(0.2deg); }
+    100% { clip: rect(50px, 9999px, 70px, 0); transform: skew(0); }
 }
 
 .hero-subtitle {
@@ -163,8 +146,63 @@ body::after {
     margin-top: 1rem;
     letter-spacing: 3px;
     background: rgba(0, 0, 0, 0.5);
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.5rem;
     border: 1px solid var(--vm-dim);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-subtitle::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 204, 0.2), transparent);
+    animation: subtitle-sweep 3s infinite;
+}
+
+@keyframes subtitle-sweep {
+    100% { left: 200%; }
+}
+
+/* Digital Mist */
+.digital-mist {
+    position: fixed;
+    bottom: -20px;
+    width: 2px;
+    height: 40px;
+    background: var(--vm-primary);
+    box-shadow: 0 0 10px var(--vm-primary);
+    pointer-events: none;
+    z-index: 5;
+    filter: blur(1px);
+    animation: mistRise 5s linear infinite;
+}
+
+@keyframes mistRise {
+    0% { transform: translateY(0); opacity: 0; }
+    20% { opacity: 0.5; }
+    100% { transform: translateY(-300px); opacity: 0; }
+}
+
+/* Active Scanline */
+.active-scanline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, transparent 49%, rgba(0, 255, 204, 0.05) 50%, transparent 51%);
+    pointer-events: none;
+    z-index: 1001;
+    animation: fullScan 8s linear infinite;
+}
+
+@keyframes fullScan {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
 }
 
 .container {
