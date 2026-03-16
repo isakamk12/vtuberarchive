@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>堰代ミコ - 774inc. Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+</head>
+
+<body>
+    <div class="bg-fx"></div>
+    <nav class="nav">
+        <a href="../../nanashi_index.html" class="nav-brand"><i class="fa-solid fa-7"></i> 774inc.</a>
+        <div class="nav-links">
+            <a href="../../nanashi_index.html">BACK TO LIST</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1 class="hero-name">堰代ミコ</h1>
+        <p class="hero-subtitle">Sekishiro Miko</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item">
+                        <span class="label">Affiliation</span>
+                        <span class="value">ななしいんく（旧ハニーストラップ）</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Debut</span>
+                        <span class="value">2018.07.14</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Birthday</span>
+                        <span class="value">03.05</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Age</span>
+                        <span class="value">8,115歳（悪魔年齢）</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Height</span>
+                        <span class="value">155cm（ブーツ込み）</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Color</span>
+                        <span class="value">Green (#47885E)</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Oshi Mark</span>
+                        <span class="value">🔱🍏</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Fan Name</span>
+                        <span class="value">ミコの使い魔</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Bust</span>
+                        <span class="value">Gカップ</span>
+                    </div>
+                </div>
+                <div class="tags">
+                    <span class="tag">#ミコの使い魔</span>
+                    <span class="tag">#ハニーストラップ</span>
+                    <span class="tag">#VakaTuber</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">DESCRIPTION</h2>
+            <p class="description">
+                「ぼくの使い魔になっちゃう？」が挨拶のボクっ娘悪魔。パフェのさくらんぼ担当としてハニーストラップに参加。
+                眼帯は「外すと地球を滅ぼす」とされるが、外したこともある。無自覚な天然と多彩な声色を操る演技力で、
+                歌ってみたや朗読作品でも高い人気を誇る。
+            </p>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">FEATURED EPISODES</h2>
+            <div class="history-box">
+                <div class="history-item">
+                    <span class="history-date">EP01</span>
+                    <span>学力テスト企画「VakaTuberは誰だ」で珍回答を連発し、VakaTuberの称号を獲得。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP02</span>
+                    <span>父のタンスの隠し扉からエロ本を発見し、配信で内容を暴露して特定される事件が起きた。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP03</span>
+                    <span>歯ぎしりの破壊力が強すぎて犬歯が削れ、マウスピースを作ることになった。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP04</span>
+                    <span>カバンの中身が「ソファの裏みたい」と言われるほどで、レシートが財布に溜まりがち。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP05</span>
+                    <span>ホラゲ配信で「指示厨になっていい」と宣言し、操作を丸投げするほどの大パニック。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP06</span>
+                    <span>弟の運動会にタトゥーシールなど奇抜な格好で登場し、弟に暴露される。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP07</span>
+                    <span>貧乏一人暮らし時代に菓子パン生活、さらにトイレットペーパー洗濯で大惨事に。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP08</span>
+                    <span>お姉さん人格「micoさん」が配信で登場し、保護者目線でミコを語った。</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

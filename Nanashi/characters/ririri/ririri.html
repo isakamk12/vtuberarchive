@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>羽流鷲りりり - 774inc. Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+</head>
+
+<body>
+    <div class="bg-fx"></div>
+    <nav class="nav">
+        <a href="../../nanashi_index.html" class="nav-brand"><i class="fa-solid fa-7"></i> 774inc.</a>
+        <div class="nav-links">
+            <a href="../../nanashi_index.html">BACK TO LIST</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1 class="hero-name">羽流鷲りりり</h1>
+        <p class="hero-subtitle">Uruwashi Ririri</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item">
+                        <span class="label">Affiliation</span>
+                        <span class="value">ななしいんく</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Debut</span>
+                        <span class="value">2025.04.27</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Birthday</span>
+                        <span class="value">02.02</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Height</span>
+                        <span class="value">160cm</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Color</span>
+                        <span class="value">Light Purple (#996699)</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Fan Name</span>
+                        <span class="value">ワシら</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Membership</span>
+                        <span class="value">ワシラ最強ギャルズ</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Unit</span>
+                        <span class="value">うるぱんおばけ（天絆ささは / 幽音しの）</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Oshi Mark</span>
+                        <span class="value">🦅</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Games</span>
+                        <span class="value">VALORANT(ASC1) / Apex(MASTER) / SF6(Master)</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">MBTI</span>
+                        <span class="value">ESFP</span>
+                    </div>
+                </div>
+                <div class="tags">
+                    <span class="tag">#ワシら</span>
+                    <span class="tag">#ギャル</span>
+                    <span class="tag">#うるぱんおばけ</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">DESCRIPTION</h2>
+            <p class="description">
+                天空から舞い降りたフッ軽鳥人ギャル。守護神「もこみ」を連れており、裏表ゼロの素直さが魅力。
+                FPSや格ゲーで高ランクに到達するガチゲーマーで、スト6豪鬼への愛が強い。
+            </p>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">FEATURED EPISODES</h2>
+            <div class="history-box">
+                <div class="history-item">
+                    <span class="history-date">EP01</span>
+                    <span>スト6で豪鬼を使い込み、マスター到達。プロゲーマーとの交流でも度胸を見せた。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP02</span>
+                    <span>裏表のないギャルマインドで、先輩にも臆せず距離を詰めるコミュ力が武器。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP03</span>
+                    <span>酔うと甘えん坊になり、飲酒配信でギャップを見せる。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP04</span>
+                    <span>『漢字でGO!』で珍回答を連発するなど、おバカ面も愛されている。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP05</span>
+                    <span>同期や箱を大切にし「ななしいんくを有名にしたい」と語る熱量が支持される。</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

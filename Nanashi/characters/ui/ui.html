@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天羽衣 - 774inc. Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+</head>
+
+<body>
+    <div class="bg-fx"></div>
+    <nav class="nav">
+        <a href="../../nanashi_index.html" class="nav-brand"><i class="fa-solid fa-7"></i> 774inc.</a>
+        <div class="nav-links">
+            <a href="../../nanashi_index.html">BACK TO LIST</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1 class="hero-name">天羽衣</h1>
+        <p class="hero-subtitle">Amahou Ui</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item">
+                        <span class="label">Affiliation</span>
+                        <span class="value">ななしいんく</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Debut</span>
+                        <span class="value">2023.04.22</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Birthday</span>
+                        <span class="value">09.15</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Height</span>
+                        <span class="value">148cm（人型） / 本体8〜10cm</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Color</span>
+                        <span class="value">Baby Blue (#bbdcf4)</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Oshi Mark</span>
+                        <span class="value">🩵</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Fan Name</span>
+                        <span class="value">翁（おきな）</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Membership</span>
+                        <span class="value">あまういぷらいむ</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Tags</span>
+                        <span class="value">#天羽衣伝説 / #天羽衣絵巻 / #朝羽衣 / #懐羽衣</span>
+                    </div>
+                </div>
+                <div class="tags">
+                    <span class="tag">#天羽衣伝説</span>
+                    <span class="tag">#天羽衣絵巻</span>
+                    <span class="tag">#朝羽衣</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">DESCRIPTION</h2>
+            <p class="description">
+                月の世界から来たお姫様だが、宇宙恐怖症で地球に滞在中。清楚なビジュアルとは裏腹に、
+                ゲームが絡むとパワーワードが飛び出すギャップが魅力。OW2のトップランク経験者で配信体力も桁違い。
+                キャッチフレーズは「お傍におります」。
+            </p>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">FEATURED EPISODES</h2>
+            <div class="history-box">
+                <div class="history-item">
+                    <span class="history-date">EP01</span>
+                    <span>OW2のガチ勢で「人は殴ったら死ぬ」発言が定着。誕生日グッズにTシャツ化された。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP02</span>
+                    <span>PCと寝袋だけの生活で「独房」と呼ばれるほど生活感がない部屋に住んでいた。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP03</span>
+                    <span>滑舌が甘く「あまうい」が「甘栗」に聞こえ、栗絵文字が推しマークになりかけた。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP04</span>
+                    <span>月300時間近い配信をする配信モンスター。1日11〜14時間配信も平然とこなす。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP05</span>
+                    <span>ファンネームは「翁」。お兄ちゃん呼びを拒否するプロレスが定番。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP06</span>
+                    <span>母「ママうい」がスケジュールや切り抜きを管理する敏腕サポーター。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP07</span>
+                    <span>現実の運動神経は低めで、握力14kgや体の硬さが話題に。</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

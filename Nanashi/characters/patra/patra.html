@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>周防パトラ - 774inc. Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+</head>
+
+<body>
+    <div class="bg-fx"></div>
+    <nav class="nav">
+        <a href="../../nanashi_index.html" class="nav-brand"><i class="fa-solid fa-7"></i> 774inc.</a>
+        <div class="nav-links">
+            <a href="../../nanashi_index.html">BACK TO LIST</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1 class="hero-name">周防パトラ</h1>
+        <p class="hero-subtitle">Suou Patra</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item">
+                        <span class="label">Affiliation</span>
+                        <span class="value">個人勢（元・ハニーストラップ）</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Debut</span>
+                        <span class="value">2018.07.11</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Fan Name</span>
+                        <span class="value">ワンちゃん</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Favorite</span>
+                        <span class="value">かにプ（プリン×カニカマ）</span>
+                    </div>
+                </div>
+                <div class="tags">
+                    <span class="tag">#ワンちゃん</span>
+                    <span class="tag">#ASMR</span>
+                    <span class="tag">#かにプ</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">DESCRIPTION</h2>
+            <p class="description">
+                魔界から来た悪魔の女王という設定を持つASMR界のトップランナー。
+                ASMR、ゲーム、雑談、歌、DTM、ギター演奏まで幅広く活動し、作詞・作曲・編曲も自ら行う。
+                リスナーへの気遣いとストイックな創作姿勢で強い支持を集める。
+            </p>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">FEATURED EPISODES</h2>
+            <div class="history-box">
+                <div class="history-item">
+                    <span class="history-date">EP01</span>
+                    <span>ASMR収録専用の防音スタジオを建設するほどの情熱を持ち、ASMR動画に広告を付けない配慮も有名。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP02</span>
+                    <span>2023年5月に個人勢へ独立。チャンネルやモデル等の権利を買い取っての独立が話題に。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP03</span>
+                    <span>DTM配信で楽曲制作を公開し、民族音楽的な要素や低音へのこだわりを語る。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP04</span>
+                    <span>小学生時代から同人誌を作るほどのオタク気質。黒歴史も笑いに変える。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP05</span>
+                    <span>企画配信で上手くボケられなかった反省として、筋トレ配信で詫びる真面目さ。</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

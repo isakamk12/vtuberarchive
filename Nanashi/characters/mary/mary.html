@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>西園寺メアリ - 774inc. Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+</head>
+
+<body>
+    <div class="bg-fx"></div>
+    <nav class="nav">
+        <a href="../../nanashi_index.html" class="nav-brand"><i class="fa-solid fa-7"></i> 774inc.</a>
+        <div class="nav-links">
+            <a href="../../nanashi_index.html">BACK TO LIST</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1 class="hero-name">西園寺メアリ</h1>
+        <p class="hero-subtitle">Saionji Mary</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item">
+                        <span class="label">Affiliation</span>
+                        <span class="value">774inc.（ハニーストラップ / ななしいんく）</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Debut</span>
+                        <span class="value">2018.07.14</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Birthday</span>
+                        <span class="value">11.22（いい夫婦の日）</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Age</span>
+                        <span class="value">魔界年齢で8000歳超え（気分で変わる）</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Height</span>
+                        <span class="value">159cm</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Color</span>
+                        <span class="value">Purple (#7E318E)</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Race</span>
+                        <span class="value">悪魔</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Oshi Mark</span>
+                        <span class="value">🍼🔮</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Greeting</span>
+                        <span class="value">おかえりなさい / おつメアリ</span>
+                    </div>
+                </div>
+                <div class="tags">
+                    <span class="tag">#おつメアリ</span>
+                    <span class="tag">#ハニーストラップ</span>
+                    <span class="tag">#裏メアリ</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">DESCRIPTION</h2>
+            <p class="description">
+                夜の喫茶店「ハニーストラップ」のお姉さま店員。母性と包容力でリスナーを包み込む一方、
+                酒が入ると毒舌で感情豊かな「裏メアリ」が顔を出すギャップが魅力。
+                ささやき声のASMR配信は中毒者が続出する人気コンテンツとして知られる。
+            </p>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">FEATURED EPISODES</h2>
+            <div class="history-box">
+                <div class="history-item">
+                    <span class="history-date">EP01</span>
+                    <span>周防パトラとの飲酒コラボで即興の「よっぱっぱの歌」を生み出し、名物ネタとして定着。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP02</span>
+                    <span>誕生日に2年契約のiPadをねだられて購入→1週間後に音信不通という母性が裏目に出た恋愛エピソード。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP03</span>
+                    <span>傷心の帰り道にカラーコーンへ抱きつき号泣し、周囲を回って踊った「カラーコーン事件」。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP04</span>
+                    <span>同窓会で泥酔し土下座絶叫。回収に来た母親の車から脱走しようとして大暴れした。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP05</span>
+                    <span>配信中のゲップに「炭酸の上積みを吸っただけ」と必死に言い訳し、後に記念日にする自虐へ昇華。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP06</span>
+                    <span>ドMを自認しつつ「サービスのS」として厳しく叱咤する配信で、様々な性癖を満たす。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP07</span>
+                    <span>伏見稲荷で野生の猿に遭遇し逃げた先で、猿がみかんを食べる姿を見て大爆笑。</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

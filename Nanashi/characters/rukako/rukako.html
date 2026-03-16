@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大浦るかこ - 774inc. Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+</head>
+
+<body>
+    <div class="bg-fx"></div>
+    <nav class="nav">
+        <a href="../../nanashi_index.html" class="nav-brand"><i class="fa-solid fa-7"></i> 774inc.</a>
+        <div class="nav-links">
+            <a href="../../nanashi_index.html">BACK TO LIST</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1 class="hero-name">大浦るかこ</h1>
+        <p class="hero-subtitle">Ooura Rukako</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item">
+                        <span class="label">Affiliation</span>
+                        <span class="value">ななしいんく（デビュー時：有閑喫茶あにまーれ）</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Debut</span>
+                        <span class="value">2021.02.07</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Birthday</span>
+                        <span class="value">09.26</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Age</span>
+                        <span class="value">20歳</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Height / Shoes</span>
+                        <span class="value">159cm / 23cm</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Oshi Mark</span>
+                        <span class="value">🦉</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Fan Name</span>
+                        <span class="value">諜ホー員</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Tags</span>
+                        <span class="value">#電脳図書室 / #裏ラジ オウルナイト</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Likes</span>
+                        <span class="value">叙述トリック、砂肝、アンジュルム</span>
+                    </div>
+                </div>
+                <div class="tags">
+                    <span class="tag">#諜ホー員</span>
+                    <span class="tag">#電脳図書室</span>
+                    <span class="tag">#裏ラジ オウルナイト</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">DESCRIPTION</h2>
+            <p class="description">
+                知性派・読書系VTuber。高い語彙力と落ち着いたトーンで「電脳図書室」「裏ラジ オウルナイト」を展開。
+                サムネ職人としても評価が高く、2023年5月に運営スタッフへ転向する異例の経歴を持つ。
+            </p>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">FEATURED EPISODES</h2>
+            <div class="history-box">
+                <div class="history-item">
+                    <span class="history-date">EP01</span>
+                    <span>炊飯器や電子レンジを捨てるなど生活力皆無エピソードが多数。ふりかけだけで食事を済ませたことも。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP02</span>
+                    <span>電気ケトルに卵を入れて爆発させるなど、ポンコツエピソードが伝説に。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP03</span>
+                    <span>湿度90%設定でマイクを水没させ、加湿で機材を壊す事件を起こす。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP04</span>
+                    <span>マダミス「狂気山脈」で初心者ながらMVPを獲得し、TRPGの才能を見せた。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP05</span>
+                    <span>活動休止配信で泣かないため太ももにペンを刺したと語り、涙を誘った。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP06</span>
+                    <span>運営転向後、公式配信のトラブルで「あってまーす」とマイクオン復帰したのが話題に。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP07</span>
+                    <span>偏食に見えて実は水泳でバタフライ2km泳げるフィジカルの持ち主。</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

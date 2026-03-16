@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>橙里セイ - 774inc. Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+</head>
+
+<body>
+    <div class="bg-fx"></div>
+    <nav class="nav">
+        <a href="../../nanashi_index.html" class="nav-brand"><i class="fa-solid fa-7"></i> 774inc.</a>
+        <div class="nav-links">
+            <a href="../../nanashi_index.html">BACK TO LIST</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1 class="hero-name">橙里セイ</h1>
+        <p class="hero-subtitle">Touri Sei</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item">
+                        <span class="label">Affiliation</span>
+                        <span class="value">ななしいんく（元・緋翼のクロスピース）</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Debut</span>
+                        <span class="value">2021.10.23（初配信：2021.10.24）</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Birthday</span>
+                        <span class="value">08.08</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Age</span>
+                        <span class="value">10代（17〜18歳くらい）</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Height</span>
+                        <span class="value">158cm</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Blood Type</span>
+                        <span class="value">B型</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Job</span>
+                        <span class="value">吟遊詩人</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Fan Name</span>
+                        <span class="value">セイ歌隊</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Membership</span>
+                        <span class="value">橙里楽団</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Fan Mark</span>
+                        <span class="value">🪗</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Stream Tag</span>
+                        <span class="value">#トウリサイタル</span>
+                    </div>
+                </div>
+                <div class="tags">
+                    <span class="tag">#セイ歌隊</span>
+                    <span class="tag">#トウリサイタル</span>
+                    <span class="tag">#吟遊詩人</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">DESCRIPTION</h2>
+            <p class="description">
+                ピアノ弾き語りを得意とする多才な音楽系クリエイター。作詞・作曲・編曲だけでなく、
+                動画やイラスト制作まで自ら手がける。グループ内ではお姉さん枠だが、
+                かわいい女の子が大好きで「セイおじ」と呼ばれる一面も。運の悪さや独特のリアクションも魅力。
+            </p>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">FEATURED EPISODES</h2>
+            <div class="history-box">
+                <div class="history-item">
+                    <span class="history-date">EP01</span>
+                    <span>罰ゲームで自転車の琵琶湖一周（ビワイチ）を完走。雪で断念した後の再挑戦をやり切った。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP02</span>
+                    <span>「しわしわピカチュウ」を知らず、ポポにドン引きされながら独特コメントで爆笑を呼んだ。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP03</span>
+                    <span>AI「森田のおっちゃん」に愚痴を聞いてもらい、卒業前に感謝の言葉を送った。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP04</span>
+                    <span>『Cuphead』に没頭し、初めて配信を忘れるほど集中。クリアのため初のコントローラー購入。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP05</span>
+                    <span>時計なしで10時間を当てる企画で、ほぼドンピシャの体内時計を見せつけた。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP06</span>
+                    <span>2025.04.02に卒業を発表。最後まで前向きな姿勢でファンを励ました。</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

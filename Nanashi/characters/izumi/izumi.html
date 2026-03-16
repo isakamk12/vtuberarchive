@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>柚原いづみ - 774inc. Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+</head>
+
+<body>
+    <div class="bg-fx"></div>
+    <nav class="nav">
+        <a href="../../nanashi_index.html" class="nav-brand"><i class="fa-solid fa-7"></i> 774inc.</a>
+        <div class="nav-links">
+            <a href="../../nanashi_index.html">BACK TO LIST</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1 class="hero-name">柚原いづみ</h1>
+        <p class="hero-subtitle">Yunohara Izumi</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item">
+                        <span class="label">Affiliation</span>
+                        <span class="value">ななしいんく（旧：有閑喫茶あにまーれ）</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Debut</span>
+                        <span class="value">2020.02.22</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Birthday</span>
+                        <span class="value">01.23（いづみの日）</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Height</span>
+                        <span class="value">159cm</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Color</span>
+                        <span class="value">Brown (#A16945)</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Fan Name</span>
+                        <span class="value">子いづみ</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Oshi Mark</span>
+                        <span class="value">♨🐾</span>
+                    </div>
+                </div>
+                <div class="tags">
+                    <span class="tag">#子いづみ</span>
+                    <span class="tag">#風呂友</span>
+                    <span class="tag">#柚原いづみ</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">DESCRIPTION</h2>
+            <p class="description">
+                カピバラ担当の関西弁VTuber。可愛らしい声と軽快なトークのギャップが魅力で、
+                雪中ソロキャンプやバンジージャンプなど体を張った実写企画でも人気を集める。
+                ベイブレードや遊戯王などバトルホビーを愛するディープなオタクで、
+                自称「男児妻」として熱量の高い語りを繰り広げる。
+            </p>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">FEATURED EPISODES</h2>
+            <div class="history-box">
+                <div class="history-item">
+                    <span class="history-date">EP01</span>
+                    <span>初配信で「18禁カレー」完食に挑み、挨拶以外ほぼカレー実食という伝説回を作った。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP02</span>
+                    <span>2025年1月の雀魂配信で役満「天和」を和了。33万分の1の奇跡に本人も視聴者も大興奮。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP03</span>
+                    <span>サムネに多用する「あぇ生首」が代名詞化し、誕生日グッズで生首クッションとして商品化。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP04</span>
+                    <span>『スト6』対戦中の声が「環境音」と命名され、初見コラボ相手への特効ネタとして定着。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP05</span>
+                    <span>「配信しながら寝る」企画で9時間超の爆睡配信。コメント欄がフリーチャット化する事態に。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP06</span>
+                    <span>ホラゲ苦手なのに『SILENT HILL 2』案件で「叫んだら即終了」に挑戦し、開始5分で最速終了。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP07</span>
+                    <span>マイクラでは几帳面さが爆発し、整地作業の達人として「山消しのいづみ」と呼ばれた。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP08</span>
+                    <span>実家が更地になっていたエピソードなど、波乱万丈な私生活を逞しくネタに昇華している。</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

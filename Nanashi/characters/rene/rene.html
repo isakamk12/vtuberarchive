@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>龍ヶ崎リン - 774inc. Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+</head>
+
+<body>
+    <div class="bg-fx"></div>
+    <nav class="nav">
+        <a href="../../nanashi_index.html" class="nav-brand"><i class="fa-solid fa-7"></i> 774inc.</a>
+        <div class="nav-links">
+            <a href="../../nanashi_index.html">BACK TO LIST</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1 class="hero-name">龍ヶ崎リン</h1>
+        <p class="hero-subtitle">Ryugasaki Rene</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item">
+                        <span class="label">Affiliation</span>
+                        <span class="value">ななしいんく（元774inc.「シュガーリリック」）</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Debut</span>
+                        <span class="value">2020.03.28（Twitter始動：2020.03.20）</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Birthday</span>
+                        <span class="value">06.01</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Age</span>
+                        <span class="value">人間年齢29歳 / 魔界年齢3歳</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Height</span>
+                        <span class="value">168cmぐらい（旧ビジュアルは156cm）</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Blood Type</span>
+                        <span class="value">A型</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Origin</span>
+                        <span class="value">魔界（魔関西）</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Color</span>
+                        <span class="value">Red (#C8161D)</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Oshi Mark</span>
+                        <span class="value">🦒</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Fan Name</span>
+                        <span class="value">ぞうおじ / ガサキッズ</span>
+                    </div>
+                </div>
+                <div class="tags">
+                    <span class="tag">#ぞうおじ</span>
+                    <span class="tag">#ガサキ語録</span>
+                    <span class="tag">#RENE_MUSIC_RADIO</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">DESCRIPTION</h2>
+            <p class="description">
+                ミッドレンジの低音ボイスが特徴的なVTuberアーティスト。HIPHOPやR&Bを軸に歌枠・歌ってみた・
+                オリジナルラップ制作を行い、ASMRやホラーゲーム、ラジオ配信『RENE MUSIC RADIO』など幅広く活動。
+                魔界から人間界に来た理由は「ラップをやりたかったから」。
+            </p>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">FEATURED EPISODES</h2>
+            <div class="history-box">
+                <div class="history-item">
+                    <span class="history-date">EP01</span>
+                    <span>クール路線を目指していたが本音を吐露し、ポンコツ面を出したことで愛される存在に。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP02</span>
+                    <span>「象の皮膚みたいなおじさん」発言がきっかけでファンネーム「ぞうおじ」が爆誕。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP03</span>
+                    <span>「辛辣ながら」「コンビニ」など漢字弱すぎ伝説とガサキ語録が話題に。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP04</span>
+                    <span>『コネクトフォー』最弱王で、数時間耐久の末に塩を頭にかける奇行まで発生。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP05</span>
+                    <span>ラップをやりたくて魔界から来た。憧れのらっぷびとに許可を取り、涙ぐんだ。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP06</span>
+                    <span>激辛料理で痔が悪化し、デビュー前日に「尻が爆発」したという伝説を残す。</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

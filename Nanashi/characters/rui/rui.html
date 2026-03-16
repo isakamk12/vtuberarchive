@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>瀬島るい - 774inc. Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+</head>
+
+<body>
+    <div class="bg-fx"></div>
+    <nav class="nav">
+        <a href="../../nanashi_index.html" class="nav-brand"><i class="fa-solid fa-7"></i> 774inc.</a>
+        <div class="nav-links">
+            <a href="../../nanashi_index.html">BACK TO LIST</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1 class="hero-name">瀬島るい</h1>
+        <p class="hero-subtitle">Seshima Rui</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item">
+                        <span class="label">Affiliation</span>
+                        <span class="value">ななしいんく（元あにまーれ）</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Debut</span>
+                        <span class="value">2020.10.10</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Birthday</span>
+                        <span class="value">04.20</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Age</span>
+                        <span class="value">17歳</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Height</span>
+                        <span class="value">157.5cm</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">First Person</span>
+                        <span class="value">俺</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Motif</span>
+                        <span class="value">ミックス犬</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Color</span>
+                        <span class="value">Bordeaux (#9D3636)</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Fan Name</span>
+                        <span class="value">るいめいと</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Membership</span>
+                        <span class="value">ふぁみるい</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Oshi Mark</span>
+                        <span class="value">📮🦴</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Tags</span>
+                        <span class="value">#生ぬるーい / #あとるい絵 / #るいぶい</span>
+                    </div>
+                </div>
+                <div class="tags">
+                    <span class="tag">#るいめいと</span>
+                    <span class="tag">#生ぬるーい</span>
+                    <span class="tag">#オタクに優しいギャル</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">DESCRIPTION</h2>
+            <p class="description">
+                「笑う門には福来る」をモットーにした、あにまーれの歌う笑い袋。
+                オタクに優しいギャルせしナースとして親しまれ、ナース経験を活かした健康相談も行う。
+                歌ってみた動画はイラスト・編集までセルフ制作する多才さも魅力。
+            </p>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">FEATURED EPISODES</h2>
+            <div class="history-box">
+                <div class="history-item">
+                    <span class="history-date">EP01</span>
+                    <span>初配信でおならSEを連発→翌日にはハイクオリティな歌ってみたを投稿するギャップが話題に。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP02</span>
+                    <span>宗谷いちかをフルネーム呼び。正体は「しせまる」説や、近くに引っ越した話まで飛び出す。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP03</span>
+                    <span>操作を忘れて「せしばぁ」扱いされるなど、ポンコツエピソードが愛されている。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP04</span>
+                    <span>リスナーとのプロレスが名物。胸盛りイラストをいじるトークも人気。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP05</span>
+                    <span>2023年の誕生日3Dソロライブを完全セルフプロデュースで開催。</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

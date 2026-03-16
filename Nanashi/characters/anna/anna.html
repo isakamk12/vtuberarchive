@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>虎城アンナ - 774inc. Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+</head>
+
+<body>
+    <div class="bg-fx"></div>
+    <nav class="nav">
+        <a href="../../nanashi_index.html" class="nav-brand"><i class="fa-solid fa-7"></i> 774inc.</a>
+        <div class="nav-links">
+            <a href="../../nanashi_index.html">BACK TO LIST</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1 class="hero-name">虎城アンナ</h1>
+        <p class="hero-subtitle">Kojou Anna</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item">
+                        <span class="label">Affiliation</span>
+                        <span class="value">774inc.（シュガーリリック）→ ソロタレント</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Debut</span>
+                        <span class="value">2020.03.28</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Graduation</span>
+                        <span class="value">2024.02.02</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Birthday</span>
+                        <span class="value">02.02</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Age</span>
+                        <span class="value">20歳（卒業時）</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Height</span>
+                        <span class="value">154cm</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Blood Type</span>
+                        <span class="value">O型</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Fan Name</span>
+                        <span class="value">こじょオタ</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Oshi Mark</span>
+                        <span class="value">🐯💜</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Greeting</span>
+                        <span class="value">キラハピ</span>
+                    </div>
+                </div>
+                <div class="tags">
+                    <span class="tag">#こじょオタ</span>
+                    <span class="tag">#キラハピ</span>
+                    <span class="tag">#彫金VTuber</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">DESCRIPTION</h2>
+            <p class="description">
+                シュガーリリック出身。彫金、振付、ダンスと多才で、ASMRや歌配信も人気。
+                小悪魔ムーブと「パパ声」のギャップでファンを魅了した。
+            </p>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">FEATURED EPISODES</h2>
+            <div class="history-box">
+                <div class="history-item">
+                    <span class="history-date">EP01</span>
+                    <span>自宅工房で彫金を行う「彫金VTuber」。卒業時にジュエリーブランドも立ち上げた。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP02</span>
+                    <span>「へそ舐め我慢選手権」など狂気の企画で配信を盛り上げた。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP03</span>
+                    <span>ホラゲで「パパ声」降臨。タイトルに「パパ声注意」と入るほどの名物に。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP04</span>
+                    <span>白髪ロリ愛が重すぎて運営ストップがかかったが、後日オフコラボで成仏。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP05</span>
+                    <span>ダンスや振付の実力が高く、3Dライブでも圧巻のパフォーマンスを披露。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP06</span>
+                    <span>卒業配信は笑顔で締め、「キラハピ」で明るく送り出した。</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

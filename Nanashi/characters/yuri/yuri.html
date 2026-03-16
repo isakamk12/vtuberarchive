@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>瑚白ユリ - 774inc. Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+</head>
+
+<body>
+    <div class="bg-fx"></div>
+    <nav class="nav">
+        <a href="../../nanashi_index.html" class="nav-brand"><i class="fa-solid fa-7"></i> 774inc.</a>
+        <div class="nav-links">
+            <a href="../../nanashi_index.html">BACK TO LIST</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1 class="hero-name">瑚白ユリ</h1>
+        <p class="hero-subtitle">Kohaku Yuri</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item">
+                        <span class="label">Affiliation</span>
+                        <span class="value">ななしいんく（旧：緋翼のクロスピース）</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Debut</span>
+                        <span class="value">2021.10.24</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Birthday</span>
+                        <span class="value">04.07</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Height</span>
+                        <span class="value">155cm</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Job</span>
+                        <span class="value">白魔道士（ヒーラー）</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Color</span>
+                        <span class="value">White (#EAEFF9)</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Oshi Mark</span>
+                        <span class="value">🦙</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Fan Name</span>
+                        <span class="value">瑚白党</span>
+                    </div>
+                </div>
+                <div class="tags">
+                    <span class="tag">#瑚白党</span>
+                    <span class="tag">#白魔道士</span>
+                    <span class="tag">#どついたれ清楚</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">DESCRIPTION</h2>
+            <p class="description">
+                爽やかなヒーリングボイスと清楚な外見を持つ白魔道士。しかし配信では口が悪くなるギャップがあり、
+                ヤンキー気質やストイックなゲーマー魂も見せる。自己肯定感は低めで、リスナーへの愛が重い一面も魅力。
+            </p>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">FEATURED EPISODES</h2>
+            <div class="history-box">
+                <div class="history-item">
+                    <span class="history-date">EP01</span>
+                    <span>初配信の「瑚白ユリを取り戻せ！ガチャ」でスケバン姿が排出され、ヤンキーキャラが定着。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP02</span>
+                    <span>高難易度ゲーム中に暴言が飛び出すが、直後にお茶目なフォローで「どついたれ清楚」化。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP03</span>
+                    <span>マイクラ廃人と化し、配信の至る所で出没して「774incサーバーの住人」と呼ばれる。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP04</span>
+                    <span>全員収益化のタイミングでも「覚悟が足りない」と自ら延期を申し出たストイックさ。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP05</span>
+                    <span>自己肯定感が低く、リスナーへの愛が重い「メンヘラ」発言がたびたび話題に。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP06</span>
+                    <span>炊飯器のないミニマリストで、豆腐＋サラダチキンなど独特な食生活を送る。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP07</span>
+                    <span>極度の方向音痴でホラゲ配信は大混乱。『Ib』は全エンディング回収するほどのめり込んだ。</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

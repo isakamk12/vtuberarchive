@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>風見くく - 774inc. Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+</head>
+
+<body>
+    <div class="bg-fx"></div>
+    <nav class="nav">
+        <a href="../../nanashi_index.html" class="nav-brand"><i class="fa-solid fa-7"></i> 774inc.</a>
+        <div class="nav-links">
+            <a href="../../nanashi_index.html">BACK TO LIST</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1 class="hero-name">風見くく</h1>
+        <p class="hero-subtitle">Kazami Kuku</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item">
+                        <span class="label">Affiliation</span>
+                        <span class="value">ななしいんく（旧：有閑喫茶あにまーれ）</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Debut</span>
+                        <span class="value">2020.02.22（発表：2020.02.08）</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Birthday</span>
+                        <span class="value">09.09</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Height</span>
+                        <span class="value">148cm</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Color</span>
+                        <span class="value">Orange (#f08437)</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">First Person</span>
+                        <span class="value">ボク / オレ</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Nicknames</span>
+                        <span class="value">くくたそ、くくん、風見、あの風見</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Fan Name</span>
+                        <span class="value">くくふぁーまー（ファンクラブ名：🐔KFC🍗）</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Stream Tag</span>
+                        <span class="value">#風見観察</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Character Design</span>
+                        <span class="value">中村エイト</span>
+                    </div>
+                </div>
+                <div class="tags">
+                    <span class="tag">#風見観察</span>
+                    <span class="tag">#くくふぁーまー</span>
+                    <span class="tag">#KFC</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">DESCRIPTION</h2>
+            <p class="description">
+                ニワトリをモチーフにしたVTuber。デビュー当初は自信がなく自らを「骨なしチキンクソ野郎」と呼んでいたが、
+                活動を通じて自己肯定感を育み、今では後輩からも慕われる存在に成長した。
+                多彩な声真似や宴会芸、透き通る高音から芯の通った低音まで使い分ける歌唱力が魅力。
+                ASMR配信にも定評があり、幅広い表現力でファンを惹きつけている。
+            </p>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">FEATURED EPISODES</h2>
+            <div class="history-box">
+                <div class="history-item">
+                    <span class="history-date">EP01</span>
+                    <span>初配信で頭部を「イャンクック」にし、イケボ自己紹介と声真似連発で強烈なインパクトを残した。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP02</span>
+                    <span>『Phasmophobia』をやり込み、ホラーが「座学」「ギャグ」に見えるほどの理解度に到達。初心者の引率役として頼られる。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP03</span>
+                    <span>神域リーグ2023で不運の連続に遭い、渋川難波監督にイジられながらも愛される存在感を発揮した。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP04</span>
+                    <span>『Quick, Draw!』で自画像が「ハリネズミ」と判定され、「ハリネズミさん」という別キャラが誕生。グッズ化まで進む人気に。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP05</span>
+                    <span>2023年11月の新ビジュアルで「前の風見は一回死にました」と宣言。オレ一人称になり、吹っ切れた魅力が一気に開花。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP06</span>
+                    <span>マイクラで城建築を宣言すると「あの風見の担当曜日」が決まり、先輩たちに愛される大奥エピソードが誕生。</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

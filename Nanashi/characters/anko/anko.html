@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>季咲あんこ - 774inc. Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+</head>
+
+<body>
+    <div class="bg-fx"></div>
+    <nav class="nav">
+        <a href="../../nanashi_index.html" class="nav-brand"><i class="fa-solid fa-7"></i> 774inc.</a>
+        <div class="nav-links">
+            <a href="../../nanashi_index.html">BACK TO LIST</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1 class="hero-name">季咲あんこ</h1>
+        <p class="hero-subtitle">Kisaki Anko</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item">
+                        <span class="label">Affiliation</span>
+                        <span class="value">ななしいんく（旧ブイアパ）</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Debut</span>
+                        <span class="value">2019.10.26</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Birthday</span>
+                        <span class="value">04.15</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Age</span>
+                        <span class="value">15歳くらい</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Height</span>
+                        <span class="value">148cm</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Color</span>
+                        <span class="value">Baby Pink (#F3A8B4)</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Fan Name</span>
+                        <span class="value">ホシ☆リス</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Oshi Mark</span>
+                        <span class="value">🌸🐿</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Greeting</span>
+                        <span class="value">こんあああ～～🌸🐿</span>
+                    </div>
+                </div>
+                <div class="tags">
+                    <span class="tag">#ホシ☆リス</span>
+                    <span class="tag">#全肯定あんこ</span>
+                    <span class="tag">#ななしいんくの太陽神</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">DESCRIPTION</h2>
+            <p class="description">
+                田舎から東京にやってきた底なしに明るいゲーマーアイドル。
+                FPSを全力で楽しむ一方、ステージでは高い歌唱力とパフォーマンスで魅了する。
+                偏食で生魚や野菜（特にトマト）が苦手だが、タリーズのミルクティーと甘いもの、
+                そしてピンク色をこよなく愛する。「みんなが安心出来る場所を作りたい」という想いで配信を続けている。
+            </p>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">FEATURED EPISODES</h2>
+            <div class="history-box">
+                <div class="history-item">
+                    <span class="history-date">EP01</span>
+                    <span>「ななしいんくの太陽神」「全肯定あんこ」と呼ばれるほど、周囲を明るくする笑顔と前向きさが評価される。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP02</span>
+                    <span>杏戸ゆげが引退を相談した際「ゆげが辞めるなら私も辞める」と引き留め、深い絆を示した。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP03</span>
+                    <span>「パプリカ」歌ってみたで音源を一発撮りし、MP4提出という伝説の事件を起こした。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP04</span>
+                    <span>3周年でホラーゲーム「地獄銭湯」に挑戦し、阿鼻叫喚の悲鳴を上げ続けた。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP05</span>
+                    <span>NEWTOWNのGTA企画で警察に就職し、迷子や失敗を経て成長する姿が感動を呼んだ。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP06</span>
+                    <span>「ふぐねぎ」「もみじおろし」をフグの臓物だと思い込んでいた天然エピソードが話題に。</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

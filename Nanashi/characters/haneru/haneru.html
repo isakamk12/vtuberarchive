@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>因幡はねる - 774inc. Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+</head>
+
+<body>
+    <div class="bg-fx"></div>
+    <nav class="nav">
+        <a href="../../nanashi_index.html" class="nav-brand"><i class="fa-solid fa-7"></i> 774inc.</a>
+        <div class="nav-links">
+            <a href="../../nanashi_index.html">BACK TO LIST</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1 class="hero-name">因幡はねる</h1>
+        <p class="hero-subtitle">Inaba Haneru</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item">
+                        <span class="label">Affiliation</span>
+                        <span class="value">有閑喫茶あにまーれ（グループリーダー / 雇われ店長）</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Debut</span>
+                        <span class="value">2018.06.09</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Birthday</span>
+                        <span class="value">03.03</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Height</span>
+                        <span class="value">156cm</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Fan Name</span>
+                        <span class="value">はねるっこ / 因幡組 / 因の者</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Color</span>
+                        <span class="value">Yellow</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Hashtags</span>
+                        <span class="value">#はねるあーと / #はねるどーが</span>
+                    </div>
+                </div>
+                <div class="tags">
+                    <span class="tag">#はねるあーと</span>
+                    <span class="tag">#はねるどーが</span>
+                    <span class="tag">#VakaTuberは誰だ</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">DESCRIPTION</h2>
+            <p class="description">
+                圧倒的な企画力と司会スキルで大型コラボを牽引するVTuber。サンリオ・ポムポムプリンの大ファンとしても知られ、
+                企画「VakaTuberは誰だ」や「Vのから騒ぎ」の主催・MCを務める。
+                自身を陰キャと語る一方、リスナーへの深い愛情と記憶力で強い絆を築いている。
+            </p>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">FEATURED EPISODES</h2>
+            <div class="history-box">
+                <div class="history-item">
+                    <span class="history-date">EP01</span>
+                    <span>2018年6月11日の朝配信でマイク故障の爆音放送事故。「これ戦争だからさ」発言が伝説に。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP02</span>
+                    <span>リスナーの“浮気”を許さない監視網で話題に。PartyHardを嬉々としてプレイしたことも。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP03</span>
+                    <span>小1の体育評に「校庭の裏で一人で縄跳びを練習していて涙が出ました」と書かれたエピソード。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP04</span>
+                    <span>「仲良くなりたい時は手料理を作って家に呼ぶ」と語る不器用なコミュニケーションが共感を呼んだ。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP05</span>
+                    <span>2025年に肘の脱臼や骨折など全身の7割負傷という満身創痍エピソードが明かされた。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP06</span>
+                    <span>実母「ままねる」の暴露で幼少期から“おかしい”と呼び出されていたことが判明。</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

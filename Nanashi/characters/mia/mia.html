@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>湖南みあ - 774inc. Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+</head>
+
+<body>
+    <div class="bg-fx"></div>
+    <nav class="nav">
+        <a href="../../nanashi_index.html" class="nav-brand"><i class="fa-solid fa-7"></i> 774inc.</a>
+        <div class="nav-links">
+            <a href="../../nanashi_index.html">BACK TO LIST</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1 class="hero-name">湖南みあ</h1>
+        <p class="hero-subtitle">Konan Mia</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item">
+                        <span class="label">Affiliation</span>
+                        <span class="value">774inc.（旧・有閑喫茶あにまーれ）</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Debut</span>
+                        <span class="value">2021.02.07</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Birthday</span>
+                        <span class="value">08.07</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Age</span>
+                        <span class="value">15歳（設定）</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Height</span>
+                        <span class="value">153cm</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Motif</span>
+                        <span class="value">キャット寄りのミーアキャット</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Color</span>
+                        <span class="value">Cream Yellow (#FFE893)</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Fan Name</span>
+                        <span class="value">みあミーゴ（旧：湖南一座）</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Membership</span>
+                        <span class="value">婚約者候補</span>
+                    </div>
+                </div>
+                <div class="tags">
+                    <span class="tag">#みあミーゴ</span>
+                    <span class="tag">#婚約者候補</span>
+                    <span class="tag">#借金返済VTuber</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">DESCRIPTION</h2>
+            <p class="description">
+                九州から上京した婚活系・酒カス系VTuberを自称。歌と料理が得意で、
+                明るいトークと行動力で「みあミーゴ」を引っ張る。
+                前職は歯科衛生士で、配信では生活感のあるエピソードも赤裸々に語る。
+            </p>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">FEATURED EPISODES</h2>
+            <div class="history-box">
+                <div class="history-item">
+                    <span class="history-date">EP01</span>
+                    <span>2024年に卒業発表→卒業撤回という異例の展開で話題に。借金返済と活動継続を宣言した。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP02</span>
+                    <span>「婚活系VTuber」として旦那募集飯を投稿。旦那オーディション企画も実施した。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP03</span>
+                    <span>社会人時代はストロングゼロ生活を送っていたことを告白するなど、酒カス伝説が多数。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP04</span>
+                    <span>泥酔で記憶が飛ぶこともあり、配信後に「ちゃんと切ったか不安」と話す。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP05</span>
+                    <span>中二病時代の黒歴史（男装やネット恋愛など）を包み隠さず披露。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP06</span>
+                    <span>配信中の広告トラブルを正直に謝罪するなど、体当たり企画と正直さが支持される。</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日ノ隈らん - 774inc. Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+</head>
+
+<body>
+    <div class="bg-fx"></div>
+    <nav class="nav">
+        <a href="../../nanashi_index.html" class="nav-brand"><i class="fa-solid fa-7"></i> 774inc.</a>
+        <div class="nav-links">
+            <a href="../../nanashi_index.html">BACK TO LIST</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1 class="hero-name">日ノ隈らん</h1>
+        <p class="hero-subtitle">Hinokuma Ran</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item">
+                        <span class="label">Affiliation</span>
+                        <span class="value">有閑喫茶あにまーれ → ななしいんく → 個人勢（2024.10.28 独立）</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Debut</span>
+                        <span class="value">2018.06.08</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Birthday</span>
+                        <span class="value">11.18</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Age</span>
+                        <span class="value">12歳（年齢不詳）</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Height</span>
+                        <span class="value">139cm</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Motif</span>
+                        <span class="value">クマ（耳がしいたけに似ているとイジられるが本人はしいたけ嫌い）</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Character Design</span>
+                        <span class="value">karory</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Membership</span>
+                        <span class="value">くま㌠</span>
+                    </div>
+                </div>
+                <div class="tags">
+                    <span class="tag">#日ノ隈らん</span>
+                    <span class="tag">#くま㌠</span>
+                    <span class="tag">#あにまーれ</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">DESCRIPTION</h2>
+            <p class="description">
+                有閑喫茶あにまーれの「店員」ではなく「居候」としてデビューした自由奔放なムードメーカー。
+                ゲーム配信を中心に活動し、FPS大会や外部コラボでも存在感を発揮するコミュ力の高さから
+                「あにまーれの外交担当」と呼ばれる。周囲をよく見て支える優しさも持ち味で、
+                『ストグラ』参加や歌への挑戦など、活動の幅を広げ続けている。
+            </p>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">FEATURED EPISODES</h2>
+            <div class="history-box">
+                <div class="history-item">
+                    <span class="history-date">EP01</span>
+                    <span>辛いものが苦手なのに罰ゲームで激辛へ挑み、完食する姿がバズって激辛食レポブームのきっかけに。挑み続けた結果、胃を壊してドクターストップという伝説も残した。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP02</span>
+                    <span>『VTuber最協決定戦』などでチームの精神的支柱として活躍。風見くくを全力で褒めて労い、リスナーを感動させた。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP03</span>
+                    <span>後夜祭のシャッフルチームで、葛葉と一ノ瀬うるはの間を回す役を任され、神コミュ力を発揮した。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP04</span>
+                    <span>料理配信で片手卵割りを披露する一方、餃子に果汁グミを入れるなどの奇行で「化け物料理」と恐れられる。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP05</span>
+                    <span>『ストグラ』では未来人警察官「ひのらん」として参加。ヘリ操縦が壊滅的で爆散を繰り返し、愛されポンコツ枠として定着した。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP06</span>
+                    <span>2024.10.28に独立。配信冒頭の「音楽性の違いです（笑）」や「変わらず絡む」宣言で、最後まで明るく前向きな空気を作り続けた。</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

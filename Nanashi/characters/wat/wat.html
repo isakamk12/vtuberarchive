@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>不磨わっと - 774inc. Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+</head>
+
+<body>
+    <div class="bg-fx"></div>
+    <nav class="nav">
+        <a href="../../nanashi_index.html" class="nav-brand"><i class="fa-solid fa-7"></i> 774inc.</a>
+        <div class="nav-links">
+            <a href="../../nanashi_index.html">BACK TO LIST</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1 class="hero-name">不磨わっと</h1>
+        <p class="hero-subtitle">Fuma Wat</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item">
+                        <span class="label">Affiliation</span>
+                        <span class="value">774inc.（ブイアパ）→ ななしいんく個人タレント</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Debut</span>
+                        <span class="value">2020.05.23</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Retired</span>
+                        <span class="value">2023.04.25</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Birthday</span>
+                        <span class="value">10.10（好きな缶詰の誕生日）</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Height</span>
+                        <span class="value">149cm（正確な身長は不明）</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Fan Name</span>
+                        <span class="value">ふまるぶ</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Fan Mark</span>
+                        <span class="value">🧠</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Tags</span>
+                        <span class="value">#わっとあらいぶ / #絵レキバン</span>
+                    </div>
+                </div>
+                <div class="tags">
+                    <span class="tag">#ふまるぶ</span>
+                    <span class="tag">#わっとあらいぶ</span>
+                    <span class="tag">#絵レキバン</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">DESCRIPTION</h2>
+            <p class="description">
+                ブイアパのアパートの「開かずの扉」から発見された人間。困惑時の「なんなノ〜」や
+                「うちこれガチ得意」など口癖が多く、エゴサの鬼としても知られる。
+                2023年4月に引退し、前向きな決断としてファンの胸に残った。
+            </p>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">FEATURED EPISODES</h2>
+            <div class="history-box">
+                <div class="history-item">
+                    <span class="history-date">EP01</span>
+                    <span>「自分が楽しいゲームだけやる」主義を貫き、流行に流されない姿勢が支持された。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP02</span>
+                    <span>スロットアプリ案件で赤字に。同期から「お前みたいなのがカモ」と言われるまでが様式美。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP03</span>
+                    <span>エゴサしすぎて「いいね規制」に週1で引っかかるのが伝統芸。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP04</span>
+                    <span>1月の寒空に植物を放置して全滅させるなど、生活力のポンコツぶりが話題に。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP05</span>
+                    <span>誕生日配信が食中毒の最中だったことを後日明かし、リスナーを驚かせた。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP06</span>
+                    <span>ウォーターサーバーを導入するも使わず解約。違約金を払ってしまう。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP07</span>
+                    <span>引退配信で「1秒でも早く自分のしたいことをするのが全員のため」と語った。</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

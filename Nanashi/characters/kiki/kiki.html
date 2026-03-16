@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>紫水キキ - 774inc. Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+</head>
+
+<body>
+    <div class="bg-fx"></div>
+    <nav class="nav">
+        <a href="../../nanashi_index.html" class="nav-brand"><i class="fa-solid fa-7"></i> 774inc.</a>
+        <div class="nav-links">
+            <a href="../../nanashi_index.html">BACK TO LIST</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1 class="hero-name">紫水キキ</h1>
+        <p class="hero-subtitle">Shisui Kiki</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item">
+                        <span class="label">Affiliation</span>
+                        <span class="value">ななしいんく（デビュー時：緋翼のクロスピース）</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Debut</span>
+                        <span class="value">2021.10.24</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Graduation</span>
+                        <span class="value">2024.06.30</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Birthday</span>
+                        <span class="value">06.21</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Height</span>
+                        <span class="value">148cm</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Job</span>
+                        <span class="value">パペットマスター</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Design</span>
+                        <span class="value">りいちゅ</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Color</span>
+                        <span class="value">Purple / Violet</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Fan Name</span>
+                        <span class="value">お屋敷パペット</span>
+                    </div>
+                </div>
+                <div class="tags">
+                    <span class="tag">#お屋敷パペット</span>
+                    <span class="tag">#暗黒集会</span>
+                    <span class="tag">#紫水先生</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">DESCRIPTION</h2>
+            <p class="description">
+                月のように闇夜をやさしく照らすミステリアスな存在。雑談が大好きで長時間話し続けることも多い。
+                歌ってみたの表現力が高く、ハロプロ愛やダジャレの止まらない一面も魅力。
+                「噛まなくていいもの」「甘い飲み物」が好きで、疲れる食べ物は苦手。
+            </p>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">FEATURED EPISODES</h2>
+            <div class="history-box">
+                <div class="history-item">
+                    <span class="history-date">EP01</span>
+                    <span>初期配信の「暗黒集会」で黒歴史マシュマロをえぐり、個人3回目とは思えない企画力を見せた。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP02</span>
+                    <span>夏休みの宿題は先生を見極めて先に片付けるなど、徹底したリスクヘッジの学生時代。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP03</span>
+                    <span>「大人になったのは5、6歳」と語る独特の価値観が話題に。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP04</span>
+                    <span>数字が分からなくなった境目は「何割引」。積分で完全に詰んだと告白。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP05</span>
+                    <span>マイクラでエンダードラゴンの頭をマグマダイブでロスト→自宅全焼の悲劇。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP06</span>
+                    <span>ブルアカに「ハマってない」発言をしつつ、完全吹き替え配信で紫水先生と呼ばれた。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP07</span>
+                    <span>給食は流動食派で、凍ったパイナップルやゼリーを好んでいた。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP08</span>
+                    <span>ヘラジカやキリンなどスケールの大きいペットの夢を語る。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP09</span>
+                    <span>体力がないと言いつつ、3Dライブで立ちブリッジや側転まで披露した。</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

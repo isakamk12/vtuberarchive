@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蛇宵ティア - 774inc. Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+</head>
+
+<body>
+    <div class="bg-fx"></div>
+    <nav class="nav">
+        <a href="../../nanashi_index.html" class="nav-brand"><i class="fa-solid fa-7"></i> 774inc.</a>
+        <div class="nav-links">
+            <a href="../../nanashi_index.html">BACK TO LIST</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1 class="hero-name">蛇宵ティア</h1>
+        <p class="hero-subtitle">Hebiyoi Tia</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item">
+                        <span class="label">Affiliation</span>
+                        <span class="value">ななしいんく（2022.12.17〜 シュガーリリックとしてデビュー）</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Debut</span>
+                        <span class="value">2022.12.17</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Birthday</span>
+                        <span class="value">10.01</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Height</span>
+                        <span class="value">161cm</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Color</span>
+                        <span class="value">Blue Wisteria (#6879ba)</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Fan Name</span>
+                        <span class="value">子ヘビちゃん</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Membership</span>
+                        <span class="value">蛇宵幸福教団</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">MBTI</span>
+                        <span class="value">INFJ-A</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Skills</span>
+                        <span class="value">ダンス / クラシックバレエ</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Hobby</span>
+                        <span class="value">パチスロ</span>
+                    </div>
+                </div>
+                <div class="tags">
+                    <span class="tag">#子ヘビちゃん</span>
+                    <span class="tag">#蛇宵幸福教団</span>
+                    <span class="tag">#ブルーウィステリア</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">DESCRIPTION</h2>
+            <p class="description">
+                魔界から来た小悪魔お姉さん教祖。鎖骨の2連ほくろや蛇と月のピアス、ぐるぐるの角がチャームポイント。
+                バレエ経験を活かしたダンスと、全力で楽しむ配信姿勢が魅力。兼業で働きながらVTuber活動を続ける努力家でもある。
+            </p>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">FEATURED EPISODES</h2>
+            <div class="history-box">
+                <div class="history-item">
+                    <span class="history-date">EP01</span>
+                    <span>『スト6』でマノンを使用し、バレエ経験を活かした解説が話題に。大会優勝にも貢献。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP02</span>
+                    <span>酔っ払い配信でアポ無し通話を連発する「凸爆撃」が名物。ダル絡みも含めて愛される。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP03</span>
+                    <span>『ストグラ』や「ニュータウン」でのドタバタ珍道中。誤射や事故も含めて笑いを生む。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP04</span>
+                    <span>ドMな教団員へのプロレス対応から、活動の信念まで全力で向き合う姿勢が支持される。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP05</span>
+                    <span>プロゲーマー立川との宗教マウント（？）トークなど、予想外の会話力でも爪痕を残す。</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

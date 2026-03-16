@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const totalAgenciesEl = document.getElementById('totalAgencies');
     const emptyState = document.getElementById('emptyState');
     const langSelect = document.getElementById('langSelect');
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
     let currentLang = localStorage.getItem('vt_archive_lang') || 'ja';
 
@@ -1918,35 +1920,47 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="card-watermark">${agency.icon}</div>
             `;
 
-            // 3D Tilt
-            let bounds;
-            card.addEventListener('mouseenter', () => {
-                bounds = card.getBoundingClientRect();
-                card.style.transition = 'none';
+            // 3D Tilt (hover only)
+            if (canHover) {
+                let bounds;
+                card.addEventListener('mouseenter', () => {
+                    bounds = card.getBoundingClientRect();
+                    card.style.transition = 'none';
+                });
+                card.addEventListener('mousemove', (e) => {
+                    if (!bounds) bounds = card.getBoundingClientRect();
+                    const calcX = e.clientX - bounds.left - bounds.width / 2;
+                    const calcY = e.clientY - bounds.top - bounds.height / 2;
+                    const intensity = 15;
+                    const rotateX = (calcY / (bounds.height / 2)) * -intensity;
+                    const rotateY = (calcX / (bounds.width / 2)) * intensity;
+                    const glareX = (e.clientX - bounds.left) / bounds.width * 100;
+                    const glareY = (e.clientY - bounds.top) / bounds.height * 100;
+                    const glareEl = card.querySelector('.card-glare');
+                    if (glareEl) glareEl.style.background = `radial-gradient(circle at ${glareX}% ${glareY}%, rgba(255,255,255,0.15), transparent 50%)`;
+                    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+                });
+                card.addEventListener('mouseleave', () => {
+                    bounds = null;
+                    card.style.transition = 'transform 0.5s cubic-bezier(0.23, 1, 0.32, 1)';
+                    card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+                    const glareEl = card.querySelector('.card-glare');
+                    if (glareEl) glareEl.style.background = `radial-gradient(circle at 50% 50%, rgba(255,255,255,0.0), transparent 50%)`;
+                });
+            }
+
+            card.addEventListener('pointerdown', () => {
+                card.classList.add('is-pressed');
             });
-            card.addEventListener('mousemove', (e) => {
-                if (!bounds) bounds = card.getBoundingClientRect();
-                const calcX = e.clientX - bounds.left - bounds.width / 2;
-                const calcY = e.clientY - bounds.top - bounds.height / 2;
-                const intensity = 15;
-                const rotateX = (calcY / (bounds.height / 2)) * -intensity;
-                const rotateY = (calcX / (bounds.width / 2)) * intensity;
-                const glareX = (e.clientX - bounds.left) / bounds.width * 100;
-                const glareY = (e.clientY - bounds.top) / bounds.height * 100;
-                const glareEl = card.querySelector('.card-glare');
-                if (glareEl) glareEl.style.background = `radial-gradient(circle at ${glareX}% ${glareY}%, rgba(255,255,255,0.15), transparent 50%)`;
-                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+            card.addEventListener('pointerup', () => {
+                card.classList.remove('is-pressed');
             });
-            card.addEventListener('mouseleave', () => {
-                bounds = null;
-                card.style.transition = 'transform 0.5s cubic-bezier(0.23, 1, 0.32, 1)';
-                card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
-                const glareEl = card.querySelector('.card-glare');
-                if (glareEl) glareEl.style.background = `radial-gradient(circle at 50% 50%, rgba(255,255,255,0.0), transparent 50%)`;
+            card.addEventListener('pointercancel', () => {
+                card.classList.remove('is-pressed');
             });
             card.addEventListener('click', () => {
                 if (agency.url && agency.url !== '#') {
-                    window.location.href = agency.url;
+                    navigateWithTransition(agency.url);
                 } else if (tags.includes(INVESTIGATING_TAG)) {
                     alert(translations[currentLang].alert_investigating);
                 } else {
@@ -2040,4 +2054,195 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initial Translation Load
     applyTranslations(currentLang);
+
+    // --- Interaction Effects & Transitions ---
+    function setupFxLayers() {
+        const fxLayer = document.createElement('div');
+        fxLayer.className = 'fx-layer';
+        fxLayer.id = 'fxLayer';
+        document.body.appendChild(fxLayer);
+
+        const stageBg = document.createElement('div');
+        stageBg.className = 'stage-bg';
+        stageBg.setAttribute('aria-hidden', 'true');
+        document.body.appendChild(stageBg);
+
+        const stageOverlay = document.createElement('div');
+        stageOverlay.className = 'stage-overlay';
+        stageOverlay.setAttribute('aria-hidden', 'true');
+        document.body.appendChild(stageOverlay);
+
+        const transitionLayer = document.createElement('div');
+        transitionLayer.className = 'page-transition';
+        transitionLayer.id = 'pageTransition';
+        document.body.appendChild(transitionLayer);
+
+        requestAnimationFrame(() => {
+            document.body.classList.add('is-ready');
+        });
+
+        return { fxLayer, transitionLayer };
+    }
+
+    function setupCursorGlow(fxLayer) {
+        if (!canHover) return;
+
+        const glow = document.createElement('div');
+        glow.className = 'cursor-glow';
+        fxLayer.appendChild(glow);
+
+        let targetX = window.innerWidth / 2;
+        let targetY = window.innerHeight / 2;
+        let currentX = targetX;
+        let currentY = targetY;
+
+        const speed = 0.22;
+
+        const animate = () => {
+            currentX += (targetX - currentX) * speed;
+            currentY += (targetY - currentY) * speed;
+            glow.style.transform = `translate3d(${currentX}px, ${currentY}px, 0)`;
+            requestAnimationFrame(animate);
+        };
+
+        document.addEventListener('pointermove', (e) => {
+            if (e.pointerType !== 'mouse') return;
+            targetX = e.clientX;
+            targetY = e.clientY;
+            glow.classList.add('is-active');
+        });
+
+        document.addEventListener('pointerleave', () => {
+            glow.classList.remove('is-active');
+        });
+
+        animate();
+    }
+
+    function setupPenlightTrail(fxLayer) {
+        if (prefersReducedMotion) return;
+
+        const canvas = document.createElement('canvas');
+        canvas.className = 'penlight-canvas';
+        fxLayer.appendChild(canvas);
+
+        const ctx = canvas.getContext('2d');
+        let width = 0;
+        let height = 0;
+        let trails = [];
+        let lastTime = performance.now();
+
+        const resize = () => {
+            width = window.innerWidth;
+            height = window.innerHeight;
+            const dpr = Math.min(window.devicePixelRatio || 1, 2);
+            canvas.width = width * dpr;
+            canvas.height = height * dpr;
+            canvas.style.width = `${width}px`;
+            canvas.style.height = `${height}px`;
+            ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        };
+
+        resize();
+        window.addEventListener('resize', resize);
+
+        const addPoint = (x, y) => {
+            trails.push({
+                x,
+                y,
+                vx: 0,
+                vy: 0,
+                life: 1,
+                width: 1.2
+            });
+            if (trails.length > 80) {
+                trails = trails.slice(trails.length - 80);
+            }
+        };
+
+        document.addEventListener('pointermove', (e) => {
+            if (e.pointerType !== 'mouse') return;
+            addPoint(e.clientX, e.clientY);
+        });
+
+        document.addEventListener('pointerdown', (e) => {
+            if (e.pointerType !== 'touch') return;
+            addPoint(e.clientX, e.clientY);
+        }, { passive: true });
+
+        const animate = (now) => {
+            const dt = Math.min((now - lastTime) / 16.67, 2);
+            lastTime = now;
+
+            ctx.clearRect(0, 0, width, height);
+            ctx.globalCompositeOperation = 'lighter';
+            ctx.lineCap = 'round';
+            ctx.lineJoin = 'round';
+
+            for (let i = 1; i < trails.length; i += 1) {
+                const prev = trails[i - 1];
+                const curr = trails[i];
+                const alpha = Math.min(prev.life, curr.life);
+                ctx.beginPath();
+                ctx.strokeStyle = `rgba(210, 250, 255, ${0.35 * alpha})`;
+                ctx.lineWidth = prev.width;
+                ctx.moveTo(prev.x, prev.y);
+                ctx.lineTo(curr.x, curr.y);
+                ctx.stroke();
+            }
+
+            for (let i = 0; i < trails.length; i += 1) {
+                const p = trails[i];
+                p.life -= 0.03 * dt;
+                p.width = Math.max(0.6, p.width - 0.01 * dt);
+            }
+
+            trails = trails.filter(p => p.life > 0);
+            requestAnimationFrame(animate);
+        };
+
+        requestAnimationFrame(animate);
+    }
+
+    function spawnTouchRipple(fxLayer, x, y) {
+        const ripple = document.createElement('div');
+        ripple.className = 'touch-ripple';
+        ripple.style.left = `${x}px`;
+        ripple.style.top = `${y}px`;
+        fxLayer.appendChild(ripple);
+        ripple.addEventListener('animationend', () => {
+            ripple.remove();
+        });
+    }
+
+    function setupTouchEffects(fxLayer) {
+        document.addEventListener('pointerdown', (e) => {
+            if (e.pointerType === 'touch') {
+                spawnTouchRipple(fxLayer, e.clientX, e.clientY);
+            }
+        }, { passive: true });
+    }
+
+    function navigateWithTransition(url) {
+        if (!url) return;
+        if (prefersReducedMotion) {
+            window.location.href = url;
+            return;
+        }
+
+        const layer = document.getElementById('pageTransition');
+        if (layer) {
+            layer.classList.add('is-active');
+            setTimeout(() => {
+                window.location.href = url;
+            }, 720);
+        } else {
+            window.location.href = url;
+        }
+    }
+
+    const { fxLayer } = setupFxLayers();
+    setupCursorGlow(fxLayer);
+    setupPenlightTrail(fxLayer);
+    setupTouchEffects(fxLayer);
 });

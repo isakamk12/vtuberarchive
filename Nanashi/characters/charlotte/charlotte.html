@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>島村シャルロット - 774inc. Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+</head>
+
+<body>
+    <div class="bg-fx"></div>
+    <nav class="nav">
+        <a href="../../nanashi_index.html" class="nav-brand"><i class="fa-solid fa-7"></i> 774inc.</a>
+        <div class="nav-links">
+            <a href="../../nanashi_index.html">BACK TO LIST</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1 class="hero-name">島村シャルロット</h1>
+        <p class="hero-subtitle">Shimamura Charlotte</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item">
+                        <span class="label">Affiliation</span>
+                        <span class="value">ななしいんく（元 ハニーストラップ）</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Age</span>
+                        <span class="value">8,051歳</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Birthday</span>
+                        <span class="value">06.25</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Height</span>
+                        <span class="value">159cm</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Debut</span>
+                        <span class="value">2018.07.11（活動開始） / 2018.07.14（初配信）</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="label">Fan Name</span>
+                        <span class="value">ひつじ</span>
+                    </div>
+                </div>
+                <div class="tags">
+                    <span class="tag">#ひつじ</span>
+                    <span class="tag">#ハニーストラップ</span>
+                    <span class="tag">#島村建設株式会社</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">DESCRIPTION</h2>
+            <p class="description">
+                ハニーストラップの末っ子わがまま店員で、自称ツッコミ担当。悪魔であることを強調する一方、
+                純真無垢で優しい言動から「天使」「天然」と言われがち。Minecraftの定期配信『シャルクラ』は500回を超え、
+                「島村建設株式会社」の社長としても知られる。
+            </p>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">FEATURED EPISODES</h2>
+            <div class="history-box">
+                <div class="history-item">
+                    <span class="history-date">EP01</span>
+                    <span>リスナー名を「執事」から「ひつじ」に変更。罰ゲームの天使ロールプレイでも優しさが滲み出た。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP02</span>
+                    <span>「焦燥感」を「あせかんかん」、「あまのじゃく」を「おたまじゃくし」と読むなど、天然語録が多数。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP03</span>
+                    <span>マイクラにハマった理由を「厳しい実家から解放され、自由に自己表現できる世界だったから」と語った。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP04</span>
+                    <span>魔界の家族との思い出やしつけの話を語り、厳しさの中にある温かさを見せる。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP05</span>
+                    <span>甘いものが苦手で「お米はデザート」。米騒動ならぬ「シャル騒動」発言で米愛が話題に。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP06</span>
+                    <span>極度の人見知りで後輩対応に悩み、ライブ時に嘘をついて逃げたことを後日懺悔。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP07</span>
+                    <span>使い魔の羊「わたあめ」を自慢したら、ひつじたちの嫉妬が予想以上に強く驚いた。</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">EP08</span>
+                    <span>体力テストはよわよわだが、水泳大会経験やダンス歴が長い意外な運動歴を持つ。</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>
