@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>彼女なぉた | SHINSOGUMI Archive</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;700;800&family=Montserrat:wght@300;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="mist"></div>
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+
+    <nav class="nav">
+        <a href="../../shinsogumi_index.html" class="nav-back">← 深層組へ戻る</a>
+        <span class="nav-chip">SHINSOGUMI_DATABASE</span>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-badge">Dark Charm Talker</div>
+        <h1 class="hero-name" data-text="NAOTA">NAOTA</h1>
+        <p class="hero-subtitle">彼女なぉた</p>
+        <p class="hero-copy">関西弁の軽快なトークと、闇の深さをさらけ出す等身大さで支持を集める配信者。</p>
+        <div class="hero-tags">
+            <span class="tag">なぉ民</span>
+            <span class="tag">2022 Debut</span>
+            <span class="tag">💔</span>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <div class="section-head">
+                <h2>Profile</h2>
+                <p>基本プロフィール</p>
+            </div>
+            <div class="profile-grid">
+                <div class="profile-item">
+                    <span class="label">名前</span>
+                    <span class="value">彼女なぉた（かのめ なぉた）</span>
+                </div>
+                <div class="profile-item">
+                    <span class="label">愛称</span>
+                    <span class="value">なぉたん / なぉちゃん</span>
+                </div>
+                <div class="profile-item">
+                    <span class="label">デビュー</span>
+                    <span class="value">2022年3月13日（個人勢）</span>
+                </div>
+                <div class="profile-item">
+                    <span class="label">誕生日</span>
+                    <span class="value">8月3日</span>
+                </div>
+                <div class="profile-item">
+                    <span class="label">年齢</span>
+                    <span class="value">永遠の20歳</span>
+                </div>
+                <div class="profile-item">
+                    <span class="label">ファンネーム</span>
+                    <span class="value">なぉ民</span>
+                </div>
+                <div class="profile-item">
+                    <span class="label">推しマーク</span>
+                    <span class="value">💔💣</span>
+                </div>
+                <div class="profile-item">
+                    <span class="label">挨拶</span>
+                    <span class="value">なぉはー / おつなぉ</span>
+                </div>
+                <div class="profile-item">
+                    <span class="label">好きなもの</span>
+                    <span class="value">歌 / かわいいもの / ゲーム / ポケモン / ちいかわ</span>
+                </div>
+                <div class="profile-item">
+                    <span class="label">苦手なもの</span>
+                    <span class="value">ホラー / マルチタスク / 機械 / 漢字</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <div class="section-head">
+                <h2>Character</h2>
+                <p>人物像・特徴</p>
+            </div>
+            <div class="glass">
+                <p>闇と光が同居するテンションと、ポンポン話題が切り替わる雑談配信が持ち味。リスナーの共感を集める等身大さで支持されています。</p>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <div class="section-head">
+                <h2>Signature Episodes</h2>
+                <p>代表的エピソード</p>
+            </div>
+            <div class="timeline">
+                <article class="episode">
+                    <div class="episode-index">01</div>
+                    <div class="episode-body">
+                        <h3>闇の深さをさらけ出す雑談</h3>
+                        <p>軽快な関西弁トークと、赤裸々な言葉選びでリスナーを惹きつける。</p>
+                    </div>
+                </article>
+                <article class="episode">
+                    <div class="episode-index">02</div>
+                    <div class="episode-body">
+                        <h3>ホラー耐性ゼロの配信</h3>
+                        <p>ホラーへの苦手意識が強く、配信でも“苦手さ”がストレートに伝わるのが魅力。</p>
+                    </div>
+                </article>
+                <article class="episode">
+                    <div class="episode-index">03</div>
+                    <div class="episode-body">
+                        <h3>歌と感情で押し切る瞬間</h3>
+                        <p>感情の起伏をそのまま歌に乗せるスタイルが、ファンの心を掴んでいます。</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>彼女なぉた / SHINSOGUMI Archive</p>
+        <span class="footer-mark">💔</span>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>
