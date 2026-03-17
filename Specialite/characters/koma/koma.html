@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>尾幌 こま (Koma Oboro) — SPECIALITE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            /* 尾幌こま：ミッドナイトブルー、ウルフシルバー */
+            --char-color: #3b82f6;
+            --char-glow: rgba(59, 130, 246, 0.4);
+            --char-dark: rgba(59, 130, 246, 0.1);
+        }
+
+        .cp-hero-name {
+            color: #ffffff;
+            text-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
+        }
+
+        .cp-section-title::before {
+            content: '\f6d3'; /* 狼・動物の足跡 */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--char-color);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <div class="cp-bg-letter">KOMA</div>
+
+    <nav class="cp-nav">
+        <a href="../../specialite_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> ESCAPE TO INDEX
+        </a>
+        <div class="cp-nav-gen">1ST GEN / クールビューティ(？)</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">
+                <i class="fa-solid fa-paw"></i> PLAYER 02 / KOMA OBORO
+            </div>
+            <h1 class="cp-hero-name">尾幌 こま</h1>
+            <span class="cp-hero-en">The "Cool Beauty" Wolf Gamer</span>
+
+            <div class="cp-chara-desc">
+                「すぺしゃりて」1期生。公式では「物静かで落ち着いたFPSゲーマー」とされるが、実態はよく笑い、喜怒哀楽がはっきりした「おもろいお姉さん」。<br>
+                FPS（特にタルコフやApex）ではプロ級のエイムと強気な立ち回りを見せる一方、ホラーゲームでは絶叫して武器を求めるという凄まじいギャップを持つ。リスナー(文字)とのキレのあるプロレスも名物。
+            </div>
+
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">狼(犬じゃない)</span>
+                <span class="cp-tag cp-tag-primary">エイムがいい女</span>
+                <span class="cp-tag cp-tag-primary">クール(ゲラ)</span>
+                <span class="cp-tag cp-tag-primary">タルコフ廃人</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">PLAYER PROFILE</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>Basic Stats</h3>
+                    <p>
+                        <strong>種族:</strong> 狼<br>
+                        <strong>誕生日:</strong> 2月7日<br>
+                        <strong>身長:</strong> 162cm（耳含まず）<br>
+                        <strong>イメージカラー:</strong> 青、黒、白、灰色
+                    </p>
+                </div>
+                <div class="cp-card">
+                    <h3>Favorites</h3>
+                    <p>
+                        <strong>ゲーム:</strong> Tarkov, Apex, VALORANT<br>
+                        <strong>嗜好:</strong> ミリタリー、コーヒー、内臓系、挽肉
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">ACHIEVEMENTS / EPISODES</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>01. 数日で消えた「クール」</h3>
+                    <p>デビュー前はクールビューティを装っていたが、初配信前に「モザンビークヒア」のモノマネを投稿。初配信後には笑い上戸な「おぼろゲラ」が露呈し、計画は瓦解した。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>02. ホラーでの「武器乞い」</h3>
+                    <p>「ボコボコにしてやる」と強気なFPS時とは対照的に、バイオハザード等では絶叫。「武器があれば行けるので！」と本気で怯えるギャップがリスナーを魅了する。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>03. 「お前らは文字！私は3次元！」</h3>
+                    <p>リスナーを「文字」と呼び、ガチ恋をバッサリ斬るドSなプロレスが大得意。しかし恋愛相談では親身になるなど、ツンデレな姉御肌を見せる。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>04. タルコフ・ログイン戦争の悲劇</h3>
+                    <p>タルコフのワイプ時にログインできず、悲しみのあまり歌枠を始めてしまうほどゲームへの愛が重い。北海道のイベントでつい「Thank you!!」と配信テンションで叫んだ天然な一面も。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="cp-footer">
+        © 2026 VTuber Archive Project. Player Archive: Oboro Koma.
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

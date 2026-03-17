@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>王猛 ちたむ (Chitamu Omo) — SPECIALITE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            /* 王猛ちたむ：閻魔グリーン、もちもちホワイト */
+            --char-color: #10b981;
+            --char-glow: rgba(16, 185, 129, 0.4);
+            --char-dark: rgba(16, 185, 129, 0.1);
+        }
+
+        .cp-hero-name {
+            color: #ffffff;
+            text-shadow: 0 0 20px rgba(16, 185, 129, 0.6);
+        }
+
+        .cp-section-title::before {
+            content: '\f1ab'; /* 舌（閻魔大王） */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--char-color);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <div class="cp-bg-letter">CHITAMU</div>
+
+    <nav class="cp-nav">
+        <a href="../../specialite_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> ESCAPE TO INDEX
+        </a>
+        <div class="cp-nav-gen">3RD GEN / 閻魔大王</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">
+                <i class="fa-solid fa-fire"></i> PLAYER 11 / CHITAMU OMO
+            </div>
+            <h1 class="cp-hero-name">王猛 ちたむ</h1>
+            <span class="cp-hero-en">The Adorable King of Hell</span>
+
+            <div class="cp-chara-desc">
+                「すぺしゃりて」3期生。魔界の辺境からやってきた閻魔大王様。
+                かっこいい大王になりたいが、角が生えないためカチューシャで代用中。初配信でロシアン寿司に挑んだり、トースターを爆発させたりと、その不幸体質から「かわいそうは可愛い（重逆）」という独自のジャンルを確立している。
+            </div>
+
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">閻魔大王</span>
+                <span class="cp-tag cp-tag-primary">トースター爆発</span>
+                <span class="cp-tag cp-tag-primary">重逆(おもぎゃく)</span>
+                <span class="cp-tag cp-tag-primary">猪突猛進麻雀</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">PLAYER PROFILE</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>Basic Stats</h3>
+                    <p>
+                        <strong>名前:</strong> 王猛 ちたむ<br>
+                        <strong>誕生日:</strong> 6月5日<br>
+                        <strong>年齢:</strong> 1000歳以上<br>
+                        <strong>ファン名:</strong> 重軍団
+                    </p>
+                </div>
+                <div class="cp-card">
+                    <h3>Preferences</h3>
+                    <p>
+                        <strong>食べ物:</strong> ズッキーニ、ヤングコーン<br>
+                        <strong>こだわり:</strong> 足が床に届かない椅子<br>
+                        <strong>飲み物:</strong> 牛乳、メロンフロート
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">MISSION LOGS / EPISODES</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>01. トースター炎上事件</h3>
+                    <p>正月に餅を焼いていたところ、トースターを炎上させ火事になりかける。あまりの衝撃に、自身の作品のMVでもネタにされるほどの伝説となった。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>02. Jump King 11時間耐久</h3>
+                    <p>登録者1万人記念で開始したJump King。約11時間ぶっ通しでプレイしたものの、結局スタート地点からほぼ進めず幕を閉じた不屈の（？）記録。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>03. 閻魔のロシアン寿司</h3>
+                    <p>初配信で実写ロシアン寿司に挑戦。しかし、あからさますぎるリアクションにより、運営からも「バレバレ」と一蹴されるポンコツぶりを露呈した。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>04. 嘘から出た「メロン派」</h3>
+                    <p>本当はグレープ派だが、「メロンを選ぶ女の子は可愛い」と気づき、可愛い子の真似をしてメロンを選ぶようになるという形から入る形骸。 </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="cp-footer">
+        © 2026 VTuber Archive Project. Player Archive: Omo Chitamu.
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

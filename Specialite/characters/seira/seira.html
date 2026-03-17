@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智念 せいら (Seira Chinen) — SPECIALITE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            /* 智念せいら：エスパーパープル、ウィステリアホワイト */
+            --char-color: #a78bfa;
+            --char-glow: rgba(167, 139, 250, 0.4);
+            --char-dark: rgba(167, 139, 250, 0.1);
+        }
+
+        .cp-hero-name {
+            color: #ffffff;
+            text-shadow: 0 0 20px rgba(167, 139, 250, 0.6);
+        }
+
+        .cp-section-title::before {
+            content: '\f6ff'; /* フラスコ・超能力 */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--char-color);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <div class="cp-bg-letter">SEIRA</div>
+
+    <nav class="cp-nav">
+        <a href="../../specialite_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> ESCAPE TO INDEX
+        </a>
+        <div class="cp-nav-gen">2ND GEN / 清楚(自称)担当</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">
+                <i class="fa-solid fa-brain"></i> PLAYER 07 / SEIRA CHINEN
+            </div>
+            <h1 class="cp-hero-name">智念 せいら</h1>
+            <span class="cp-hero-en">The 30% Accuracy Esper Girl</span>
+
+            <div class="cp-chara-desc">
+                「すぺしゃりて」2期生。時々未来が見える（打率3割）エスパーの女の子。
+                瞳のWi-Fiマークで未来予知を受信している。シャドバのグランドマスターを20期以上達成する弩級のガチ勢であり、レート上げを「義務修復作業」と呼ぶ。清楚担当を自認するが、ゲームが白熱すると剥がれ落ちるメッキが魅力。
+            </div>
+
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">3割予知エスパー</span>
+                <span class="cp-tag cp-tag-primary">シャドバ廃人</span>
+                <span class="cp-tag cp-tag-primary">砂テトマシン</span>
+                <span class="cp-tag cp-tag-primary">清楚(願望)</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">PLAYER PROFILE</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>Basic Stats</h3>
+                    <p>
+                        <strong>種族:</strong> エスパー<br>
+                        <strong>誕生日:</strong> 3月1日（PSYの日）<br>
+                        <strong>身長:</strong> 148cm<br>
+                        <strong>嗜好:</strong> チョコミント、辛いもの（ココイチ5辛級）
+                    </p>
+                </div>
+                <div class="cp-card">
+                    <h3>Psychic Items</h3>
+                    <p>
+                        <strong>Wi-Fi瞳:</strong> 未来予知の受信アンテナ<br>
+                        <strong>XXピン:</strong> 審判（XX）のカードをあしらった意匠<br>
+                        <strong>ペット:</strong> ネザーランドドワーフを溺愛
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">MISSION LOGS / EPISODES</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>01. ガチ勢すぎる「義務修復」</h3>
+                    <p>シャドバのグランドマスターを20期以上達成。公式番組への出場経験もあり、あまりの没入ぶりにリスナーから「男ですか？」と疑われるほどの実力を持つ。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>02. 剥がれ落ちる清楚のメッキ</h3>
+                    <p>清楚担当を自称するが、対人ゲームでは「常識に囚われない上スマ」など名言を連発。声だけは清楚、心には清楚を秘めていると言い張り続けている。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>03. 驚異の「砂テトマシン」</h3>
+                    <p>Sandtrix（砂テトリス）で才能が覚醒。プロゲーマー「ypp」を名乗り、息をするように4連鎖を組む。55万点超えのスコアでリスナーをドン引きさせた。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>04. 応援という名の「念力供給」</h3>
+                    <p>特技のスプーン曲げを披露する際、リスナーにパワーを求める。「悪いことをすると、こうしてこう（曲げる）だからね」と愛ある脅しを入れるのが恒例。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="cp-footer">
+        © 2026 VTuber Archive Project. Player Archive: Chinen Seira.
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

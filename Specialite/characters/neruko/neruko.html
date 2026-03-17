@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>紙束 ねるこ (Neruko Kamitaba) — SPECIALITE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            /* 紙束ねるこ：カードレッド、ショップブルー */
+            --char-color: #ef4444;
+            --char-glow: rgba(239, 68, 68, 0.4);
+            --char-dark: rgba(239, 68, 68, 0.1);
+        }
+
+        .cp-hero-name {
+            color: #ffffff;
+            text-shadow: 0 0 20px rgba(239, 68, 68, 0.6);
+        }
+
+        .cp-section-title::before {
+            content: '\f249'; /* IDカード */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--char-color);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <div class="cp-bg-letter">NERUKO</div>
+
+    <nav class="cp-nav">
+        <a href="../../specialite_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> ESCAPE TO INDEX
+        </a>
+        <div class="cp-nav-gen">4TH GEN / カードショップ店長</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">
+                <i class="fa-solid fa-dragon"></i> PLAYER 16 / NERUKO KAMITABA
+            </div>
+            <h1 class="cp-hero-name">紙束 ねるこ</h1>
+            <span class="cp-hero-en">The Dragon Card Shop Manager</span>
+
+            <div class="cp-chara-desc">
+                「すぺしゃりて」4期生。カードゲームショップ「かーどねる」の店主にして、レベル5のドラゴン。
+                真面目で正直な性格だが、冷蔵庫で2ヶ月前の卵を「誘発」として育ててしまうズボラな一面も。遊戯王やポケカへの情熱は凄まじく、展開ルートを失敗して悔し泣きするほどゲームに本気で向き合う、社員（ファン）に愛される店長。
+            </div>
+
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">ドラゴン(Lv.5)</span>
+                <span class="cp-tag cp-tag-primary">TCGマニア</span>
+                <span class="cp-tag cp-tag-primary">悔し泣きの情熱</span>
+                <span class="cp-tag cp-tag-primary">真面目な予習勢</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">PLAYER PROFILE</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>Shop Info</h3>
+                    <p>
+                        <strong>名前:</strong> 紙束 ねるこ<br>
+                        <strong>誕生日:</strong> 11月11日<br>
+                        <strong>年齢:</strong> 推定24歳強<br>
+                        <strong>色:</strong> 赤と青
+                    </p>
+                </div>
+                <div class="cp-card">
+                    <h3>Hobbies</h3>
+                    <p>
+                        <strong>TCG:</strong> 遊戯王, シャドバ, ポケカ<br>
+                        <strong>推し:</strong> ハロプロ, 劇団四季<br>
+                        <strong>相棒:</strong> コルネ（召喚素材）
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">MISSION LOGS / EPISODES</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>01. 真剣ゆえの「鼻かみ泣き」</h3>
+                    <p>マスターデュエルで練習した展開ができず、情けなさで号泣。ミュートにして鼻をかむ姿が「本気で向き合っている」と社員たちの心を掴んだ。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>02. 冷蔵庫の「誘発」卵</h3>
+                    <p>2ヶ月前の卵を放置。「何か産まれちゃうかな」と怯える姿に、リスナーから「（手札）誘発になるから気をつけて」とカードゲーマーらしい突っ込みが飛んだ。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>03. クエ真面目な「ハリポタ予習」</h3>
+                    <p>コラボに備えハリポタの呪文を完コピ予習。しかし本番では緊張で全て飛び、同期に「真面目すぎる」と爆笑されるなど、隠しきれない優等生気質。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>04. よだれプリントの悲劇</h3>
+                    <p>学生時代、真面目すぎてノートを完璧に取るも、一度だけ爆睡。提出用プリントがよだれで「べしょべしょ」になり、人生で初めて提出物を捨てた過去を持つ。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="cp-footer">
+        © 2026 VTuber Archive Project. Player Archive: Kamitaba Neruko.
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>あいうらら (Urara Ai) — SPECIALITE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            /* 愛うらら：エンジェルピンク、クラウドスルー */
+            --char-color: #f472b6;
+            --char-glow: rgba(244, 114, 182, 0.4);
+            --char-dark: rgba(244, 114, 182, 0.1);
+        }
+
+        .cp-hero-name {
+            color: #ffffff;
+            text-shadow: 0 0 20px rgba(244, 114, 182, 0.6);
+        }
+
+        .cp-section-title::before {
+            content: '\f0c2'; /* 雲 */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--char-color);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <div class="cp-bg-letter">URARA</div>
+
+    <nav class="cp-nav">
+        <a href="../../specialite_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> ESCAPE TO INDEX
+        </a>
+        <div class="cp-nav-gen">3RD GEN / ゲーム愛天使</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">
+                <i class="fa-solid fa-cloud-sun"></i> PLAYER 12 / URARA AI
+            </div>
+            <h1 class="cp-hero-name">愛うらら</h1>
+            <span class="cp-hero-en">The Angel Who Loves Games</span>
+
+            <div class="cp-chara-desc">
+                「すぺしゃりて」3期生。「ゲームを愛する天使」を掲げるが、その実体は天界最強ゲーマーにして重度の引きこもり。
+                お家で友達を作るために配信を開始。長時間配信も苦にしない体力おばけであり、配信によってむしろ健康になったと語る、お布団とゲームが大好きの天使。
+            </div>
+
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">天界最強ゲーマー</span>
+                <span class="cp-tag cp-tag-primary">長時間配信おばけ</span>
+                <span class="cp-tag cp-tag-primary">寺(カラータイル)耐久</span>
+                <span class="cp-tag cp-tag-primary">重い「なの愛」</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">PLAYER PROFILE</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>Basic Stats</h3>
+                    <p>
+                        <strong>名前:</strong> 愛 うらら<br>
+                        <strong>誕生日:</strong> 10月4日（天使の日）<br>
+                        <strong>身長:</strong> 150cm（厚底込）<br>
+                        <strong>味覚:</strong> 赤ちゃん舌（ハンバーグ好き）
+                    </p>
+                </div>
+                <div class="cp-card">
+                    <h3>Fan Life</h3>
+                    <p>
+                        <strong>ファン名:</strong> 裏とも<br>
+                        <strong>最推し:</strong> 小鳥谷なの先輩<br>
+                        <strong>自腹購読:</strong> なのちゃんメン限
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">MISSION LOGS / EPISODES</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>01. 王族のチンパンジー事件</h3>
+                    <p>初配信の清楚は数日で露呈。リスナーを「王族のチンパンジー」と形容したところ、小鳥谷先輩に拾われ本気で心臓が止まりかけたエピソード。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>02. 狂気の「寺」耐久</h3>
+                    <p>カラータイルの1/8192耐久を6時間でクリア。「景色が忘れられない」と語る謎の感動を生み出すなど、異常なゲーム体力を発揮した。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>03. 重すぎる愛の咆哮</h3>
+                    <p>小鳥谷先輩への愛を問われ、息継ぎなしで10個の長所を即答。「結婚するなら圧倒的なのちゃん」と言い切るガチ勢っぷりを見せる。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>04. 倉庫爆破の大惨事</h3>
+                    <p>マイクラサーバーで小鳥谷先輩の立派な倉庫を誤って爆破。パニックで言葉を失うも、本気で寿命が縮む思いをした語り草のエピソード。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="cp-footer">
+        © 2026 VTuber Archive Project. Player Archive: Ai Urara.
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雪芽 るみ (Lumi Yukime) — SPECIALITE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            /* 雪芽るみ：スノーホワイト、クリスタルアイス */
+            --char-color: #e2e8f0;
+            --char-glow: rgba(226, 232, 240, 0.4);
+            --char-dark: rgba(226, 232, 240, 0.1);
+        }
+
+        .cp-hero-name {
+            color: #ffffff;
+            text-shadow: 0 0 20px rgba(226, 232, 240, 0.6);
+        }
+
+        .cp-section-title::before {
+            content: '\f2dc'; /* 雪の結晶 */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--char-color);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <div class="cp-bg-letter">LUMI</div>
+
+    <nav class="cp-nav">
+        <a href="../../specialite_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> ESCAPE TO INDEX
+        </a>
+        <div class="cp-nav-gen">2ND GEN / バイリンガルお化け</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">
+                <i class="fa-solid fa-ghost"></i> PLAYER 10 / LUMI YUKIME
+            </div>
+            <h1 class="cp-hero-name">雪芽 るみ</h1>
+            <span class="cp-hero-en">The High-Spec Ghost from Far North</span>
+
+            <div class="cp-chara-desc">
+                「すぺしゃりて」2期生。雪国で雪の結晶から生まれたハイスペックな「怖いお化け」。
+                英語と日本語を操るバイリンガルであり、年間469回の配信をこなす圧倒的なストイックさを誇る。自称「大人のお化け」だが、漢字の弱さや愛くるしい挙動から「バブ（赤ちゃん）」扱いされることも。
+            </div>
+
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">バイリンガル</span>
+                <span class="cp-tag cp-tag-primary">配信の鉄人</span>
+                <span class="cp-tag cp-tag-primary">爆速レス優等生</span>
+                <span class="cp-tag cp-tag-primary">ケツ穴ドーン（騙）</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">PLAYER PROFILE</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>Basic Stats</h3>
+                    <p>
+                        <strong>種族:</strong> お化け<br>
+                        <strong>誕生日:</strong> 1月16日（いい子+1）<br>
+                        <strong>身長:</strong> 135cm<br>
+                        <strong>言語:</strong> 日・英バイリンガル
+                    </p>
+                </div>
+                <div class="cp-card">
+                    <h3>Favorites</h3>
+                    <p>
+                        <strong>食べ物:</strong> 水グミ、塩タン、寿司<br>
+                        <strong>趣味:</strong> 楽器演奏(ピアノ/ドラム等)<br>
+                        <strong>天敵:</strong> 3D酔い、鳥、蝶々
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">MISSION LOGS / EPISODES</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>01. 年間1600時間の鉄人</h3>
+                    <p>配信を一日も休まず継続し、2025年には年間469回の配信を達成。そのストイックさは運営からも「超優等生」と太鼓判を押されるほど。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>02. 漢字でポンコツ「バブ」</h3>
+                    <p>流暢な英語を操る一方で、漢字は極端に苦手。初配信に『漢字でGO!』を選び、リスナーに読み方を教わる微笑ましい姿が恒例となった。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>03. 純粋ゆえの「ドーン」</h3>
+                    <p>同期に「大事な挨拶」と騙され、真面目な顔で「ケツ穴ドーン」と発言。コラボ相手を驚愕させるピュアすぎる（？）事件を引き起こした。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>04. ストイックなリアリスト</h3>
+                    <p>「思い出は心にある」と写真に執着しないドライな一面や、味方を攻撃した際に「快感」を覚えるドS思考など、深淵な性格も併せ持つ。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="cp-footer">
+        © 2026 VTuber Archive Project. Player Archive: Yukime Lumi.
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

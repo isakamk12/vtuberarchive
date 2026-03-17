@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>終末 むくろ (Mukuro Owarino) — SPECIALITE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            /* 終末むくろ：デッドブラック、ゴーストホワイト、クリムゾン十字 */
+            --char-color: #94a3b8;
+            --char-glow: rgba(148, 163, 184, 0.4);
+            --char-dark: rgba(148, 163, 184, 0.1);
+        }
+
+        .cp-hero-name {
+            color: #ffffff;
+            text-shadow: 0 0 20px rgba(148, 163, 184, 0.6);
+        }
+
+        .cp-section-title::before {
+            content: '\f714'; /* 骸骨 */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--char-color);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <div class="cp-bg-letter">MUKURO</div>
+
+    <nav class="cp-nav">
+        <a href="../../specialite_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> ESCAPE TO INDEX
+        </a>
+        <div class="cp-nav-gen">2ND GEN / 新人死神</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">
+                <i class="fa-solid fa-skull-crossbones"></i> PLAYER 09 / MUKURO OWARINO
+            </div>
+            <h1 class="cp-hero-name">終末 むくろ</h1>
+            <span class="cp-hero-en">The "Backstab" Shinigami Maiden</span>
+
+            <div class="cp-chara-desc">
+                「すぺしゃりて」2期生。冥界一の超絶美少女新人死神を自称するが、喋るとボロが出るポンコツ。
+                引きこもり生活でインターネット老人会。エルデンリング等のアクションゲームでの必殺技は、背後からの「ケツ穴ドーン！」。声の可愛さには自信があるが、白熱すると口の悪い「メスガキ」が顔を出す。
+            </div>
+
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">新人死神</span>
+                <span class="cp-tag cp-tag-primary">ケツ穴ドーン！</span>
+                <span class="cp-tag cp-tag-primary">24時間超耐久</span>
+                <span class="cp-tag cp-tag-primary">メスガキ属性</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">PLAYER PROFILE</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>Basic Stats</h3>
+                    <p>
+                        <strong>種族:</strong> 死神<br>
+                        <strong>誕生日:</strong> 11月2日（死者の日）<br>
+                        <strong>身長:</strong> 150cm<br>
+                        <strong>ファン名:</strong> たましいちゃん
+                    </p>
+                </div>
+                <div class="cp-card">
+                    <h3>Deadly Favorites</h3>
+                    <p>
+                        <strong>ゲーム:</strong> 逆転裁判, ホラーゲーム<br>
+                        <strong>武器:</strong> ソウルテイカー（鎌）<br>
+                        <strong>特技:</strong> 漢検2級
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">MISSION LOGS / EPISODES</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>01. 代名詞「ケツ穴ドーン！」</h3>
+                    <p>『エルデンリング』で絶大な人気を博した謎の必殺技。「ケツ穴のむくろ」と呼ばれたことに謎の誇りを持ち、今や彼女を象徴するフレーズとして定着した。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>02. マリオ・24時間超耐久</h3>
+                    <p>初代マリオをノーセーブクリアするため、24時間〜26時間以上という壮絶な時間を戦い抜いた。心が折れかけながらも見せた根性は、全たましいちゃんを震わせた。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>03. 冥界時代のあだ名「ペイン」</h3>
+                    <p>声が特徴的で「エロボイス」、オタク男子にNARUTO好きを合わせたら「ペイン」と呼ばれた悲しき（？）過去を暴露。引きこもりオタクとしての年季が違う。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>04. 運命の「星ピノ」</h3>
+                    <p>面接の前日、そして初配信の前日。どちらもアイスのピノで「星」を引き当てた。死神とは思えない幸運と直感で「すぺしゃりて」の門を叩いた奇跡の少女。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="cp-footer">
+        © 2026 VTuber Archive Project. Player Archive: Owarino Mukuro.
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

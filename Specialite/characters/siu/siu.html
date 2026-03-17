@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>藍坂 しう (Siu Aisaka) — SPECIALITE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            /* 藍坂しう：脳内ピンク、バタフライパープル */
+            --char-color: #ff69b4;
+            --char-glow: rgba(255, 105, 180, 0.4);
+            --char-dark: rgba(255, 105, 180, 0.1);
+        }
+
+        .cp-hero-name {
+            color: #ffffff;
+            text-shadow: 0 0 20px rgba(255, 105, 180, 0.6);
+        }
+
+        .cp-section-title::before {
+            content: '\f1d1'; /* 蝶 */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--char-color);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <div class="cp-bg-letter">SIU</div>
+
+    <nav class="cp-nav">
+        <a href="../../specialite_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> ESCAPE TO INDEX
+        </a>
+        <div class="cp-nav-gen">1ST GEN / みんなの後輩</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">
+                <i class="fa-solid fa-butterfly"></i> PLAYER 03 / SIU AISAKA
+            </div>
+            <h1 class="cp-hero-name">藍坂 しう</h1>
+            <span class="cp-hero-en">The Genius Gamer "Pink" Kouhai</span>
+
+            <div class="cp-chara-desc">
+                「すぺしゃりて」1期生。清楚な見た目と可愛らしい声とは裏腹に、口を開けば「うんち」の話をしてしまう脳内ピンク担当。
+                LOLへの愛は異常で、1日数時間をプレイに費やす重度のゲーマー。インキャでコミュ障を自称するが、オーディションでは自分の可愛さをゴリ押しして合格を勝ち取ったインターネットの申し子。
+            </div>
+
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">みんなの後輩</span>
+                <span class="cp-tag cp-tag-primary">天才ゲーマー</span>
+                <span class="cp-tag cp-tag-primary">脳内ピンク</span>
+                <span class="cp-tag cp-tag-primary">LOL廃人</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">PLAYER PROFILE</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>Basic Stats</h3>
+                    <p>
+                        <strong>年齢:</strong> 18歳<br>
+                        <strong>誕生日:</strong> 5月7日<br>
+                        <strong>身長:</strong> 145cm<br>
+                        <strong>部活:</strong> 帰宅部
+                    </p>
+                </div>
+                <div class="cp-card">
+                    <h3>Specialties</h3>
+                    <p>
+                        <strong>ゲーム:</strong> LOL, VALORANT, APEX<br>
+                        <strong>こだわり:</strong> 「SIU」表記への執着
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">MISSION LOGS / EPISODES</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>01. 初配信のミュート忘れ</h3>
+                    <p>配信開始直前、マイクを切り忘れ「行きたくないよー」「無理無理無理」と泣きつく音声が全世界に公開。波乱の幕開けとなった伝説的事件。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>02. 朝活（徹夜明け）の寝落ち</h3>
+                    <p>朝活と称しているが、その実体はほぼ全て徹夜明け。あまりの眠さに配信中に40分ほどガチ寝落ちしてしまったことも。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>03. 3Dゴミ部屋再現</h3>
+                    <p>3Dお披露目では、自身のゴミ部屋（カップ麺の容器など）を忠実に再現され「片付ければよかった」と嘆くリアルな一面を披露。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>04. アイトラッカーの本性</h3>
+                    <p>バニーガーデンをプレイ中、アイトラッカーによって視線がおっぱいに固定されていることがバレ、「見てますね、見た」と潔く開き直った。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="cp-footer">
+        © 2026 VTuber Archive Project. Player Archive: Aisaka Siu.
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

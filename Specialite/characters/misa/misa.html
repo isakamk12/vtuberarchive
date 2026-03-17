@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>安心院 みさ (Misa Anshinin) — SPECIALITE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            /* 安心院みさ：教祖パープル、セイントゴールド */
+            --char-color: #8b5cf6;
+            --char-glow: rgba(139, 92, 246, 0.4);
+            --char-dark: rgba(139, 92, 246, 0.1);
+        }
+
+        .cp-hero-name {
+            color: #ffffff;
+            text-shadow: 0 0 20px rgba(139, 92, 246, 0.6);
+        }
+
+        .cp-section-title::before {
+            content: '\f663'; /* 十字架 */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--char-color);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <div class="cp-bg-letter">MISA</div>
+
+    <nav class="cp-nav">
+        <a href="../../specialite_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> ESCAPE TO INDEX
+        </a>
+        <div class="cp-nav-gen">4TH GEN / 安心教教祖</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">
+                <i class="fa-solid fa-cross"></i> PLAYER 18 / MISA ANSHININ
+            </div>
+            <h1 class="cp-hero-name">安心院 みさ</h1>
+            <span class="cp-hero-en">The Grand Priest of Peace & Legs</span>
+
+            <div class="cp-chara-desc">
+                「すぺしゃりて」4期生。人々の心に安らぎを与える「安心教」の教祖。
+                Live2D自作による「世界一可愛い太もも」の表現への情熱は凄まじい。「IQ1億2000万」を自称し、『Q』公式をも信者に変えるカリスマ性を持つ一方で、カップ麺の3分すら待てない超せっかちなお姉さん。
+            </div>
+
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">安心教教祖</span>
+                <span class="cp-tag cp-tag-primary">太もも開運神</span>
+                <span class="cp-tag cp-tag-primary">IQ1億2000万(自称)</span>
+                <span class="cp-tag cp-tag-primary">安心メイデン</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">PLAYER PROFILE</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>Gospel Info</h3>
+                    <p>
+                        <strong>名前:</strong> 安心院 みさ<br>
+                        <strong>誕生日:</strong> 2月12日<br>
+                        <strong>身長:</strong> 160cm<br>
+                        <strong>ファン名:</strong> 信者
+                    </p>
+                </div>
+                <div class="cp-card">
+                    <h3>Gifts</h3>
+                    <p>
+                        <strong>趣味:</strong> 映画, 漫画, 早口言葉<br>
+                        <strong>自作:</strong> Live2Dモデリング<br>
+                        <strong>弱点:</strong> 壊滅的な歌唱力(努力中)
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">MISSION LOGS / EPISODES</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>01. 太もも開運の「逆富士」</h3>
+                    <p>「太ももを見ると開運する」と称し、下半身を強調する画角（逆富士）を確立。ブーツに乗ったお肉の物理演算を自作するほどの変態的こだわりを持つ。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>02. 『Q』公式を「入信」させる</h3>
+                    <p>インテリジェンス教祖として『Q』をプレイ。公式アカウントが配信に通い詰め、果ては自らスパチャやグッズを購入するまでのガチ信者にしてしまった。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>03. 秘技「安心メイデン」</h3>
+                    <p>ホラーゲームでパニックになりながらも、バグやギミックを偶然利用して敵をハメ殺す奇跡を連発。拷問器具になぞらえた必殺技名が誕生した。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>04. バキバキ1分カップ麺</h3>
+                    <p>3分が待てず、1分でバキバキの状態のまま麺を平らげる超せっかち。ロード時間が待てずマウスを激しく動かしゲームを落とすことも日常茶飯事。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="cp-footer">
+        © 2026 VTuber Archive Project. Player Archive: Anshinin Misa.
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

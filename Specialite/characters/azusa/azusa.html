@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>本阿弥 あずさ (Azusa Honami) — SPECIALITE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            /* 本阿弥あずさ：アジュールブルー、アーケードシルバー */
+            --char-color: #0ea5e9;
+            --char-glow: rgba(14, 165, 233, 0.4);
+            --char-dark: rgba(14, 165, 233, 0.1);
+        }
+
+        .cp-hero-name {
+            color: #ffffff;
+            text-shadow: 0 0 20px rgba(14, 165, 233, 0.6);
+        }
+
+        .cp-section-title::before {
+            content: '\f11b'; /* ゲームパッド */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--char-color);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <div class="cp-bg-letter">AZUSA</div>
+
+    <nav class="cp-nav">
+        <a href="../../specialite_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> ESCAPE TO INDEX
+        </a>
+        <div class="cp-nav-gen">1ST GEN / 初恋のお姉さん</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">
+                <i class="fa-solid fa-heart"></i> PLAYER 04 / AZUSA HONAMI
+            </div>
+            <h1 class="cp-hero-name">本阿弥 あずさ</h1>
+            <span class="cp-hero-en">Your First Love "Onee-san"</span>
+
+            <div class="cp-chara-desc">
+                「すぺしゃりて」1期生。「君の初恋のお姉さん」をキャッチコピーに、ゲームセンター「アジュール」の看板娘として働く。
+                17歳の女子高生を自称するが、ワードチョイスにはバブル期や昭和の香りが漂う謎多きお姉さん。格ゲーへの熱量は本物で、スト6ではマスターランクに到達。キレのある「たわけ！」が口癖。
+            </div>
+
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">初恋のお姉さん</span>
+                <span class="cp-tag cp-tag-primary">格ゲー女子</span>
+                <span class="cp-tag cp-tag-primary">永遠の17歳</span>
+                <span class="cp-tag cp-tag-primary">汚部屋の住人</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">PLAYER PROFILE</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>Basic Stats</h3>
+                    <p>
+                        <strong>年齢:</strong> 17歳（自称）<br>
+                        <strong>誕生日:</strong> 6月23日（昇龍拳の日）<br>
+                        <strong>身長:</strong> 158cm<br>
+                        <strong>相棒:</strong> べー太郎（ヒヨコ）
+                    </p>
+                </div>
+                <div class="cp-card">
+                    <h3>Interests</h3>
+                    <p>
+                        <strong>ゲーム:</strong> ストリートファイター6, レトロゲーム<br>
+                        <strong>好物:</strong> お父特製の豚キムチ<br>
+                        <strong>推し:</strong> 夏油傑
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">MISSION LOGS / EPISODES</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>01. 隠しきれない「イニシエ」</h3>
+                    <p>「ジャスパぜよ」「プラズマの仕業」など、17歳（設定）にあるまじきレトロなネタが頻出。リスナーから「歴史を感じる」と突っ込まれるのが恒例のプロレス。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>02. 驚愕の「ゴミ柱」伝説</h3>
+                    <p>壮絶な汚部屋に住んでおり、片付け配信はもはや伝説。大量の空ペットボトルや謎の異臭袋が発掘されるなど、過酷な環境を生き抜く逞しさを見せる。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>03. 誇り高き「マスター」</h3>
+                    <p>スト6では実力でマスターランクに到達。負けると熱くなり机を叩く（台パン）こともあるが、アケコンだけは絶対に叩かないという深い愛を持つ。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>04. 希少な「2%の女」</h3>
+                    <p>女性リスナーの割合が2.4%だった際、彼女らを「2%の女」と呼び崇めた。後に5.8%に上昇した際には狂喜乱舞して報告した。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="cp-footer">
+        © 2026 VTuber Archive Project. Player Archive: Honami Azusa.
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

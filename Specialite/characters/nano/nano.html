@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小鳥谷 なの (Nano Kozuya) — SPECIALITE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            /* 小鳥谷なの：カナリアイエロー、エナジーピンク */
+            --char-color: #facc15;
+            --char-glow: rgba(250, 204, 21, 0.4);
+            --char-dark: rgba(250, 204, 21, 0.1);
+        }
+
+        .cp-hero-name {
+            color: #ffffff;
+            text-shadow: 0 0 20px rgba(250, 204, 21, 0.6);
+        }
+
+        .cp-section-title::before {
+            content: '\f11b'; /* ゲームパッド */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--char-color);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <div class="cp-bg-letter">NANO</div>
+
+    <nav class="cp-nav">
+        <a href="../../specialite_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> ESCAPE TO INDEX
+        </a>
+        <div class="cp-nav-gen">1ST GEN / お元気担当</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">
+                <i class="fa-solid fa-bolt"></i> PLAYER 01 / NANO KOZUYA
+            </div>
+            <h1 class="cp-hero-name">小鳥谷 なの</h1>
+            <span class="cp-hero-en">The Human "Gyaru" Bird (Wait, not a bird)</span>
+
+            <div class="cp-chara-desc">
+                「すぺしゃりて」1期生のお元気担当。とにかくよく喋り、声が大きく、周りを明るくするパワーの持ち主。<br>
+                生ギャルを自称し、鳥ではないと言い張るが、名前には「鳥」が入っている。ゲームへの情熱は本物で、高難易度アクションや耐久ゲームでも絶対に諦めない根性を見せる。実は意外と繊細で、真面目な一人反省会を欠かさない一面も。
+            </div>
+
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">お元気担当</span>
+                <span class="cp-tag cp-tag-primary">人間(生ギャル)</span>
+                <span class="cp-tag cp-tag-primary">カラータイル最強</span>
+                <span class="cp-tag cp-tag-primary">仲間想い</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">PLAYER PROFILE</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>Basic Stats</h3>
+                    <p>
+                        <strong>種族:</strong> 人間（生ギャル）<br>
+                        <strong>誕生日:</strong> 9月20日<br>
+                        <strong>身長:</strong> 155cm<br>
+                        <strong>ファン名:</strong> なの花
+                    </p>
+                </div>
+                <div class="cp-card">
+                    <h3>Favorites</h3>
+                    <p>
+                        <strong>ゲーム:</strong> カラータイル、アンダーテール、SEKIRO、エルデンリング、レイトン教授<br>
+                        <strong>マーク:</strong> ピニャータ（叩き合う楽しさ）
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">MISSION LOGS / EPISODES</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>01. セラミックファンヒーター事件</h3>
+                    <p>初配信で「吐くほど緊張」した彼女だが、配信前に「セラミックファンヒーター」の防寒性能について熱弁していたことが発覚。リスナーから速攻でツッコミを受ける伝説のスタートを切った。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>02. カラータイルの「真骨頂」</h3>
+                    <p>「カラータイルが得意」という豪語はハッタリではなかった。配信中、喋りながら片手間で満点を4回も連発。リスナーに「なのの腕前はガチだ」と認めさせた。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>03. 伝説の大寝坊・ベッド配信</h3>
+                    <p>朝活を宣言した日に40分の大寝坊。「配信つけて二度寝しちゃった」とベッドから放送を開始した。以来、時間通りに起きるだけでドヤ顔をするように。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>04. 「のんでり」とミーニャの絆</h3>
+                    <p>つい無神経(のんでり)な発言をしてしまうが、同期のミーニャ・スコットはそれを「面白い」と受け入れる。互いに深い信頼で結ばれ、ライブでは感動の涙を流した。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="cp-footer">
+        © 2026 VTuber Archive Project. Player Archive: Kozuya Nano.
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

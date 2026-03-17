@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>夢見 むむ (Mumu Yumemi) — SPECIALITE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            /* 夢見むむ：バクパープル、ドリームバイオレット */
+            --char-color: #a855f7;
+            --char-glow: rgba(168, 85, 247, 0.4);
+            --char-dark: rgba(168, 85, 247, 0.1);
+        }
+
+        .cp-hero-name {
+            color: #ffffff;
+            text-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
+        }
+
+        .cp-section-title::before {
+            content: '\f27a'; /* 吹き出し */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--char-color);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <div class="cp-bg-letter">MUMU</div>
+
+    <nav class="cp-nav">
+        <a href="../../specialite_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> ESCAPE TO INDEX
+        </a>
+        <div class="cp-nav-gen">4TH GEN / ギャルゲー担当</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">
+                <i class="fa-solid fa-moon"></i> PLAYER 15 / MUMU YUMEMI
+            </div>
+            <h1 class="cp-hero-name">夢見 むむ</h1>
+            <span class="cp-hero-en">The Dream-Eating "Baku" Maiden</span>
+
+            <div class="cp-chara-desc">
+                「すぺしゃりて」4期生。キュンが主食の獏（バク）一族の女の子。
+                担当はギャルゲー。18禁シーンがない方が妄想が広がるという独自の持論を持ち、美少女への愛は限界突破している。一方で数学3点や配信ボタン押し忘れなど、リスナーに「しっかりしてください」と突っ込まれるポンコツ具合も魅力。
+            </div>
+
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">獏の妖怪</span>
+                <span class="cp-tag cp-tag-primary">ギャルゲー廃人</span>
+                <span class="cp-tag cp-tag-primary">数学3点の天才</span>
+                <span class="cp-tag cp-tag-primary">爆睡16時間</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">PLAYER PROFILE</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>Basic Stats</h3>
+                    <p>
+                        <strong>名前:</strong> 夢見 むむ<br>
+                        <strong>誕生日:</strong> 3月14日（ホワイトデー）<br>
+                        <strong>年齢:</strong> 661歳<br>
+                        <strong>身長:</strong> 150cm
+                    </p>
+                </div>
+                <div class="cp-card">
+                    <h3>Baku Life</h3>
+                    <p>
+                        <strong>主食:</strong> キュン（バキュが変換）<br>
+                        <strong>夢:</strong> ギャルゲーを全制覇する<br>
+                        <strong>特性:</strong> 極度の人見知り(顔合わせ後号泣)
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">MISSION LOGS / EPISODES</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>01. 数学3点と「義務教育」</h3>
+                    <p>学校時代、数学で驚愕の3点を記録。理系科目が全滅で進級危機に陥るなど、学業面でのポンコツ伝説はリスナーの弾幕ミーム「しっかりして」の起源。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>02. 無人配信お花摘み事件</h3>
+                    <p>配信を開始したつもりでトイレへ。戻ってきたら開始ボタンが押されておらず、単なる無人ルームだった。ドジのレベルが獏レベルを凌駕している。</p>
+                </div>
+                <div class="cp-card)
+                    <h3>03. 全年齢版推奨の熱き持論</h3>
+                    <p>「18禁シーンがない方が妄想が捗ってエッチ」という熱いギャルゲー哲学を持つ。美少女への執着は凄まじく、匂いやぬくもりまで妄想する紳士。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>04. 16時間半の爆睡記録</h3>
+                    <p>寝すぎて声の出し方を忘れるほどの16時間半睡眠を記録。獏として他人の悪夢と戦っていた（親指に傷があった）という不思議な体験を持つ。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="cp-footer">
+        © 2026 VTuber Archive Project. Player Archive: Yumemi Mumu.
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

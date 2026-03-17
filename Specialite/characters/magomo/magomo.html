@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>孫守 まごも (Magomo Magomori) — SPECIALITE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            /* 孫守まごも：よつばグリーン、お守りゴールド */
+            --char-color: #10b981;
+            --char-glow: rgba(16, 185, 129, 0.4);
+            --char-dark: rgba(16, 185, 129, 0.1);
+        }
+
+        .cp-hero-name {
+            color: #ffffff;
+            text-shadow: 0 0 20px rgba(16, 185, 129, 0.6);
+        }
+
+        .cp-section-title::before {
+            content: '\f0f3'; /* 鈴（お守りイメージ） */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--char-color);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <div class="cp-bg-letter">MAGOMO</div>
+
+    <nav class="cp-nav">
+        <a href="../../specialite_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> ESCAPE TO INDEX
+        </a>
+        <div class="cp-nav-gen">4TH GEN / みんなの孫</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">
+                <i class="fa-solid fa-clover"></i> PLAYER 17 / MAGOMORI MAGOMO
+            </div>
+            <h1 class="cp-hero-name">孫守 まごも</h1>
+            <span class="cp-hero-en">The Guard Idol & Splatoon Enthusiast</span>
+
+            <div class="cp-chara-desc">
+                「すぺしゃりて」4期生。お守りの付喪神（首のお守りが本体）。
+                年齢は「(10歳)」。スプラトゥーンXP3300を目指す超ガチ勢で、1日8時間プレイも厭わない。初配信での画面配置ミスやコロナ療養中のずんだもん化など、転んでもただでは起きないスーパーポジティブな「みんなの孫」。
+            </div>
+
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">お守りの付喪神</span>
+                <span class="cp-tag cp-tag-primary">スプラXP3000超</span>
+                <span class="cp-tag cp-tag-primary">スーパーポジティブ</span>
+                <span class="cp-tag cp-tag-primary">あざとい孫担当</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">PLAYER PROFILE</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>Basic Stats</h3>
+                    <p>
+                        <strong>種族:</strong> 付喪神<br>
+                        <strong>誕生日:</strong> 4月15日（よい子の日）<br>
+                        <strong>身長:</strong> 146cm<br>
+                        <strong>ファン名:</strong> 祖父母（そふぼ）
+                    </p>
+                </div>
+                <div class="cp-card">
+                    <h3>Snack Time</h3>
+                    <p>
+                        <strong>好物:</strong> ねるねるねるね, ビーフジャーキー<br>
+                        <strong>特技:</strong> かっこいい自慢を遮るOBS事故<br>
+                        <strong>野望:</strong> スプラ大会の主催
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">MISSION LOGS / EPISODES</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>01. 右下囚われの初配信</h3>
+                    <p>XP3000超えの腕前を自慢するはずが、設定ミスで画面右下から動けなくなり、スライドも半見切れ状態に。放送事故を笑いに変えるポジティブさの原点。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>02. スプラ「13連敗」の不屈</h3>
+                    <p>メン限告知前の大事な場面で怒涛の13連敗。普通なら心が折れる地獄の連敗にも「一番負けてる！」と笑い飛ばして潜り続ける鉄のメンタルを持つ。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>03. 同期との「ズボン」黒歴史</h3>
+                    <p>同期との初対面当日、いきなりズボンが破損。駅のトイレで個室に二人で1時間立て篭もるという、インパクト絶大すぎる出会いのエピソード。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>04. 自己肯定感爆上がり動物園</h3>
+                    <p>「孫もちゃん天才だね」と動物たちに自分を褒めちぎらせる動物園をゲーム内に構築。自分の声を駆使して心の健康を守る天才的な手法を披露した。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="cp-footer">
+        © 2026 VTuber Archive Project. Player Archive: Magomori Magomo.
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

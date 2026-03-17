@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鬼ノ める (Meru Onino) — SPECIALITE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            /* 鬼ノめる：バグレッド、チョコレートブラック */
+            --char-color: #ef4444;
+            --char-glow: rgba(239, 68, 68, 0.4);
+            --char-dark: rgba(239, 68, 68, 0.1);
+        }
+
+        .cp-hero-name {
+            color: #ffffff;
+            text-shadow: 0 0 20px rgba(239, 68, 68, 0.6);
+        }
+
+        .cp-section-title::before {
+            content: '\f6de'; /* 鬼（金棒イメージ） */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--char-color);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <div class="cp-bg-letter">MERU</div>
+
+    <nav class="cp-nav">
+        <a href="../../specialite_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> ESCAPE TO INDEX
+        </a>
+        <div class="cp-nav-gen">4TH GEN / バグ鬼</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">
+                <i class="fa-solid fa-skull"></i> PLAYER 14 / MERU ONINO
+            </div>
+            <h1 class="cp-hero-name">鬼ノ める</h1>
+            <span class="cp-hero-en">The Glitch Girl of Oni Heritage</span>
+
+            <div class="cp-chara-desc">
+                「すぺしゃりて」4期生。バグから爆誕した、鬼かわ・鬼強・鬼ノめる。
+                パンクな衣装とアポロチョコ風のクセ毛が特徴。極度の限界オタクであり、学生時代は赤司征十郎へのガチ恋で壁にイラストを貼っていた黒歴史を持つ。滑舌の甘さから一人称が「わし」に聞こえる愛されおばあちゃん。
+            </div>
+
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">バグ産まれの鬼</span>
+                <span class="cp-tag cp-tag-primary">限界オタク</span>
+                <span class="cp-tag cp-tag-primary">滑舌「わし」</span>
+                <span class="cp-tag cp-tag-primary">ベル台パン(上品)</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">PLAYER PROFILE</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>Basic Stats</h3>
+                    <p>
+                        <strong>名前:</strong> 鬼ノ める<br>
+                        <strong>誕生日:</strong> 2月3日（節分）<br>
+                        <strong>年齢:</strong> 10歳（てんさい）<br>
+                        <strong>身長:</strong> 145cm
+                    </p>
+                </div>
+                <div class="cp-card">
+                    <h3>Otaku Habits</h3>
+                    <p>
+                        <strong>教科書:</strong> イナズマイレブン<br>
+                        <strong>天敵:</strong> 映画館（トイレ、じっとできない）<br>
+                        <strong>愛猫:</strong> リビングで自分の配信を聞かせる
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">MISSION LOGS / EPISODES</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>01. 限界オタクの「結婚祈願」</h3>
+                    <p>赤司征十郎にガチ恋し、印刷したイラストを壁に貼って毎日「あっちの世界へ連れて行って」と祈っていた。最近は花宮真も好きという筋金入り。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>02. 寝坊して「即・歯磨き」</h3>
+                    <p>企画の開始数分前に起床。極限のパニック状態で最初にとった行動は「走って歯磨き」だった。焦りの方向性が独特すぎる愛すべきポンコツ。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>03. ミュート忘れの奇声披露</h3>
+                    <p>ARK配信外でサメに遭遇。怖さのあまり一人で絶叫しながら戦っていたが、Discordが繋がっており、他配信にひたすら奇声を垂れ流してしまった。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>04. 上品な「ベル・台パン」</h3>
+                    <p>ゲームで熱くなり床を蹴ると親に怒られるため、ダイソーで卓上ベルを購入。イライラしたら「チーン！」と鳴らすことで上品に台パンを代替する。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="cp-footer">
+        © 2026 VTuber Archive Project. Player Archive: Onino Meru.
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

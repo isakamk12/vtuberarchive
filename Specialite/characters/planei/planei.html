@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>星屑 ぷらね (Planei Hoshikuzu) — SPECIALITE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            /* 星屑ぷらね：グラデーションピンク＆シアン、ビッグバンイエロー */
+            --char-color: #ec4899;
+            --char-glow: rgba(236, 72, 153, 0.4);
+            --char-dark: rgba(236, 72, 153, 0.1);
+        }
+
+        .cp-hero-name {
+            color: #ffffff;
+            text-shadow: 0 0 20px rgba(236, 72, 153, 0.6);
+        }
+
+        .cp-section-title::before {
+            content: '\f0e7'; /* 稲妻・ビッグバン */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--char-color);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <div class="cp-bg-letter">PLANEI</div>
+
+    <nav class="cp-nav">
+        <a href="../../specialite_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> ESCAPE TO INDEX
+        </a>
+        <div class="cp-nav-gen">2ND GEN / 宇宙人侵略者</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">
+                <i class="fa-solid fa-shuttle-space"></i> PLAYER 08 / PLANEI HOSHIKUZU
+            </div>
+            <h1 class="cp-hero-name">星屑 ぷらね</h1>
+            <span class="cp-hero-en">The Big Bang Alien Aggressor</span>
+
+            <div class="cp-chara-desc">
+                「すぺしゃりて」2期生。惑星マロッカンから地球を平和的に侵略しに来た宇宙人。
+                おばあちゃん仕込みの謎の方言を操り、ガンダムやメカ、プラモデルをこよなく愛する。『バトオペ2』のプレイ時間は7000時間に迫るガチ勢であり、耐久配信でも途切れない「ビッグバン」なトーク力が武器。
+            </div>
+
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">宇宙人(侵略者)</span>
+                <span class="cp-tag cp-tag-primary">バトオペS-</span>
+                <span class="cp-tag cp-tag-primary">ガンプラ塗装職人</span>
+                <span class="cp-tag cp-tag-primary">ド根性ビッグバン</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">PLAYER PROFILE</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>Basic Stats</h3>
+                    <p>
+                        <strong>出身:</strong> 惑星マロッカン<br>
+                        <strong>誕生日:</strong> 12月22日<br>
+                        <strong>身長:</strong> 148cm<br>
+                        <strong>方言:</strong> 地球の翻訳機にインストール済み
+                    </p>
+                </div>
+                <div class="cp-card">
+                    <h3>Robot Love</h3>
+                    <p>
+                        <strong>愛機:</strong> ガンダム, メカ全般<br>
+                        <strong>趣味:</strong> 積みプラ100体超、ガンプラ塗装<br>
+                        <strong>座右の銘:</strong> エンターテイナーだからね
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">MISSION LOGS / EPISODES</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>01. バトオペ廃人「S-」の咆哮</h3>
+                    <p>「世界で一番好きなゲーム」はバトオペ2。数千時間の研鑽を積み、最上位ランクS-に到達する腕前。開発者から直接裏話を聞くなど、愛の深さは宇宙規模。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>02. ガンプラ「手元塗装」配信</h3>
+                    <p>宇宙船内のタンスの上まで溢れる100体以上の積みプラ。手元カメラで本格的な塗装配信も行い、「ロボ好きVTuber」の看板に偽りなし。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>03. 折れないビッグバン・ハート</h3>
+                    <p>レトロゲームの全縛りノーセーブ耐久など、10時間を超える極限状態でも「ビッグバン・テンション」を維持し、喋り続けながらクリアするプロ根性。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>04. 自前ゴミ箱・スーツケース</h3>
+                    <p>同期とのオフの際、大きなスーツケースから「マイゴミ箱」を取り出し設置して周囲を爆笑させた。時折マイク設定をミスるお茶目な「ポン」も魅力。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="cp-footer">
+        © 2026 VTuber Archive Project. Player Archive: Hoshikuzu Planei.
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

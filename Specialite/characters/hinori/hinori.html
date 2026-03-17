@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>夏河 ひのり (Hinori Natsukawa) — SPECIALITE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            /* 夏河ひのり：ハイテンションオレンジ、アンバーライオン */
+            --char-color: #fbbf24;
+            --char-glow: rgba(251, 191, 36, 0.4);
+            --char-dark: rgba(251, 191, 36, 0.1);
+        }
+
+        .cp-hero-name {
+            color: #ffffff;
+            text-shadow: 0 0 20px rgba(251, 191, 36, 0.6);
+        }
+
+        .cp-section-title::before {
+            content: '\f2ee'; /* ライオン（ヘッドホンとライオン） */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--char-color);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <div class="cp-bg-letter">HINORI</div>
+
+    <nav class="cp-nav">
+        <a href="../../specialite_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> ESCAPE TO INDEX
+        </a>
+        <div class="cp-nav-gen">3RD GEN / 超ハイテンション</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">
+                <i class="fa-solid fa-bolt"></i> PLAYER 13 / HINORI NATSUKAWA
+            </div>
+            <h1 class="cp-hero-name">夏河 ひのり</h1>
+            <span class="cp-hero-en">The High-Tension "Non-Gal"</span>
+
+            <div class="cp-chara-desc">
+                「すぺしゃりて」3期生。魔天人の【人】担当。とにかく明るくノリの良い超ハイテンション娘。
+                一見「一軍ギャル」だが、本人は頑なに「ひギャル（非ギャル）」を主張。3Dライブを達成するまで歌を封印するというストイックな一面を持ちつつ、麻雀ではコーチが認める豪運で勝ち上がる。
+            </div>
+
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">自称「ひギャル」</span>
+                <span class="cp-tag cp-tag-primary">歌封印の誓い</span>
+                <span class="cp-tag cp-tag-primary">麻雀豪運の覇者</span>
+                <span class="cp-tag cp-tag-primary">コミュ力モンスター</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">PLAYER PROFILE</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>Basic Stats</h3>
+                    <p>
+                        <strong>名前:</strong> 夏河 ひのり<br>
+                        <strong>誕生日:</strong> 7月21日<br>
+                        <strong>身長:</strong> 160cm<br>
+                        <strong>血液型:</strong> B型
+                    </p>
+                </div>
+                <div class="cp-card">
+                    <h3>Favorites</h3>
+                    <p>
+                        <strong>食べ物:</strong> タラスパ<br>
+                        <strong>ゲーム:</strong> APEX, Overwatch2, スト6<br>
+                        <strong>禁忌:</strong> 「夏川さん」呼び（壁を感じるため）
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">MISSION LOGS / EPISODES</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>01. 歌封印！3Dライブへの執念</h3>
+                    <p>「3Dでライブをするまで一切の歌活動をしない」という掟を1年間守り抜いた。3Dお披露目が決定した際、歓喜と共に歌を解禁しファンと喜びを分かち合った。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>02. 初心者からの「麻雀優勝」</h3>
+                    <p>ルールを覚えたてで大会に出場。コーチからも太鼓判を押される豪運を武器に「降りない麻雀」を貫き、並み居る強豪を退けて見事チームを優勝へ導いた。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>03. ストグラ・ヒノチャム伝説</h3>
+                    <p>GTAの世界に降り立ち、持ち前のコミュ力を爆発させた。自身の誕生日をカジノでカウントダウンパーティー化するなど、愛され力の高さを証明した。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>04. 爆走「スクショタイム動画」</h3>
+                    <p>初配信の時間短縮のため、スクショタイムを動画化してラップのリズムで流すという斬新な手法を採用。運営からも「天才」と称賛された演出。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="cp-footer">
+        © 2026 VTuber Archive Project. Player Archive: Natsukawa Hinori.
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

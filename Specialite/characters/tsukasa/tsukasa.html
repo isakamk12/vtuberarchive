@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>領国 つかさ (Tsukasa Ryogoku) — SPECIALITE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            /* 領国つかさ：ロイヤルレッド、ミリタリーゴールド */
+            --char-color: #ef4444;
+            --char-glow: rgba(239, 68, 68, 0.4);
+            --char-dark: rgba(239, 68, 68, 0.1);
+        }
+
+        .cp-hero-name {
+            color: #ffffff;
+            text-shadow: 0 0 20px rgba(239, 68, 68, 0.6);
+        }
+
+        .cp-section-title::before {
+            content: '\f521'; /* 王冠 */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--char-color);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <div class="cp-bg-letter">TSUKASA</div>
+
+    <nav class="cp-nav">
+        <a href="../../specialite_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> ESCAPE TO INDEX
+        </a>
+        <div class="cp-nav-gen">1ST GEN / 最強天才中学生</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">
+                <i class="fa-solid fa-crown"></i> PLAYER 06 / TSUKASA RYOGOKU
+            </div>
+            <h1 class="cp-hero-name">領国 つかさ</h1>
+            <span class="cp-hero-en">The Future King & Genius Student</span>
+
+            <div class="cp-chara-desc">
+                「すぺしゃりて」1期生。「自分が楽しくゲームをして美味しいご飯を食べているだけで許される国（つかキングダム）」の建国を目指す未来の国王。
+                15歳の中学生でありながら、インターネット老人会級の知識を持つ。自己肯定感の高さと圧倒的な自信を武器に、リスナー（両国民）を強引に催眠にかけるなど、王者の風格を漂わせる。
+            </div>
+
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">最強中学生</span>
+                <span class="cp-tag cp-tag-primary">未来の国王</span>
+                <span class="cp-tag cp-tag-primary">ネット老人会員</span>
+                <span class="cp-tag cp-tag-primary">強欲な王</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">PLAYER PROFILE</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>Basic Stats</h3>
+                    <p>
+                        <strong>年齢:</strong> 15歳（中3）<br>
+                        <strong>誕生日:</strong> 8月11日<br>
+                        <strong>身長:</strong> 143cm<br>
+                        <strong>ファン名:</strong> 両国民
+                    </p>
+                </div>
+                <div class="cp-card">
+                    <h3>The Kingdom</h3>
+                    <p>
+                        <strong>国名:</strong> つかキングダム<br>
+                        <strong>目標:</strong> 税率100%（強欲）<br>
+                        <strong>口癖:</strong> 「10分までは遅刻じゃない」
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">MISSION LOGS / EPISODES</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>01. オーディションでの「王手」</h3>
+                    <p>合格前にもかかわらず、自らデザインした軍服の衣装案を運営に提出。圧倒的な自己肯定感で面接官を驚かせ、見事王座を勝ち取った。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>02. 驚愕のネット知識量</h3>
+                    <p>15歳のはずが「ニコ生クルーズ」や「じゃがりこ面接」といった古のミームに精通。リスナーから年齢詐称を疑われるほどの「老人会」知識を誇る。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>03. 全員催眠お披露目</h3>
+                    <p>3Dお披露目では、5円玉を使って視聴者に催眠をかけるという暴挙に。「チャンネル登録したくなる」と強引な宣伝を行い、国威を掲げた。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>04. 王の破天荒な過去</h3>
+                    <p>小学生の時に校長先生をスリッパで叩くなど、幼少期から王としての片鱗を見せる。中学時代は車通学で「お嬢」と呼ばれていた少しマヌケな過去も。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="cp-footer">
+        © 2026 VTuber Archive Project. Player Archive: Ryogoku Tsukasa.
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ミーニャ・スコット (Minya Scott) — SPECIALITE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            /* ミーニャ・スコット：フェアリーピンク、イモータルバイオレット */
+            --char-color: #f9a8d4;
+            --char-glow: rgba(249, 168, 212, 0.4);
+            --char-dark: rgba(249, 168, 212, 0.1);
+        }
+
+        .cp-hero-name {
+            color: #ffffff;
+            text-shadow: 0 0 20px rgba(249, 168, 212, 0.6);
+        }
+
+        .cp-section-title::before {
+            content: '\f1b0'; /* 足跡・猫 */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--char-color);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cp-bg"></div>
+    <div class="cp-bg-letter">MINYA</div>
+
+    <nav class="cp-nav">
+        <a href="../../specialite_index.html" class="cp-back">
+            <i class="fa-solid fa-chevron-left"></i> ESCAPE TO INDEX
+        </a>
+        <div class="cp-nav-gen">1ST GEN / インターネット猫妖精</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">
+                <i class="fa-solid fa-cat"></i> PLAYER 05 / MINYA SCOTT
+            </div>
+            <h1 class="cp-hero-name">ミーニャ・スコット</h1>
+            <span class="cp-hero-en">The "Immortal" Fairy Cat</span>
+
+            <div class="cp-chara-desc">
+                「すぺしゃりて」1期生。妖精の森から配信するインターネット猫妖精。
+                VALORANTでは最高ランク「イモータル」に到達するガチゲーマー。清楚を自称するが、その実態は大食いで冷笑系の陰キャ。ピアノやフルートに精通するお嬢様的な一面を持ちつつ、酒に酔うと5時間号泣しながら同じ話を繰り返す伝説の妖精。
+            </div>
+
+            <div class="cp-tags">
+                <span class="cp-tag cp-tag-primary">猫妖精(328歳)</span>
+                <span class="cp-tag cp-tag-primary">VALOイモータル</span>
+                <span class="cp-tag cp-tag-primary">ドカ食い気絶部</span>
+                <span class="cp-tag cp-tag-primary">冷笑系清楚</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">PLAYER PROFILE</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>Basic Stats</h3>
+                    <p>
+                        <strong>年齢:</strong> 永遠の328歳<br>
+                        <strong>誕生日:</strong> 10月29日<br>
+                        <strong>身長:</strong> 153cm（耳込み）<br>
+                        <strong>ファン名:</strong> ドスコイ
+                    </p>
+                </div>
+                <div class="cp-card">
+                    <h3>Skills & Pets</h3>
+                    <p>
+                        <strong>特技:</strong> ピアノ、フルート、トリマー<br>
+                        <strong>家族:</strong> 猫3匹、トイプードル
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cp-section cp-reveal">
+            <h2 class="cp-section-title">MISSION LOGS / EPISODES</h2>
+            <div class="cp-grid">
+                <div class="cp-card">
+                    <h3>01. ドカ食い気絶事件</h3>
+                    <p>遅刻した際、運営から「ドカ食い気絶ですか？」と真顔で突っ込まれたエピソード。牛丼特盛を平らげるなど、妖精とは思えぬ食への執着を持つ。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>02. トイレで25分待機</h3>
+                    <p>極度の人見知り。同期がいる部屋へ入る勇気がなく、トイレで25分間も前髪を直すフリをしてやり過ごした筋金入りの陰キャ。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>03. 伝説の「5時間号泣」</h3>
+                    <p>泥酔して5時間号泣し続け、同じ話を300回繰り返したメン限配信。規約NGの画面を映していたため、アーカイブごと消滅した真の伝説。</p>
+                </div>
+                <div class="cp-card">
+                    <h3>04. 被害担当・リングコン</h3>
+                    <p>リングフィット配信中、力が強すぎたのかリングコンを物理的に破壊。その後20分の運動だけで全身が痛くなり病院送りになった虚弱な猫。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="cp-footer">
+        © 2026 VTuber Archive Project. Player Archive: Scott Minya.
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>
