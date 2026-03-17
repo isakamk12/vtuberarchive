@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>星乃プラネ (Hoshino Plane) — Star Facet Production</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            /* 星乃プラネ様のイメージカラー：イエロー、水色、ピンク */
+            --char-color: #FDE047;
+            --char-rgb: 253, 224, 71;
+            --accent-cyan: #22D3EE;
+            --accent-pink: #F472B6;
+        }
+
+        .char-section h2::before {
+            content: '\f2f6'; /* 星のアイコン */
+        }
+
+        .episode-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 4px solid var(--char-color);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            transition: all 0.3s ease;
+        }
+
+        .episode-card:hover {
+            background: rgba(255, 255, 255, 0.07);
+            transform: translateX(10px);
+            border-left-color: var(--accent-cyan);
+        }
+
+        .episode-title {
+            color: var(--char-color);
+            font-weight: 800;
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .episode-title i {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .profile-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .profile-table tr {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .profile-table th {
+            text-align: left;
+            padding: 1rem;
+            color: var(--char-color);
+            font-size: 0.9rem;
+            width: 30%;
+        }
+
+        .profile-table td {
+            padding: 1rem;
+            font-size: 1rem;
+            color: #CBD5E1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="char-bg"></div>
+
+    <a href="../../starfacet_index.html" class="char-back">
+        <i class="fa-solid fa-chevron-left"></i> BACK TO STAR FACET
+    </a>
+
+    <header class="char-hero">
+        <div class="char-hero-content">
+            <h1 class="char-name">星乃プラネ</h1>
+            <div class="char-read">HOSHINO PLANE</div>
+            <div class="char-tags">
+                <span class="char-tag">1期生</span>
+                <span class="char-tag">お星さま出身</span>
+                <span class="char-tag">Fカップ天使(自称)</span>
+                <span class="char-tag">撲殺天使</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <!-- Profile Section -->
+        <section class="char-section">
+            <h2>CHARACTER PROFILE</h2>
+            <p>
+                「お星様から生まれた星乃プラネです」という定番の挨拶で始まる、元気いっぱいの女の子。金髪に青い瞳、星やリボンのモチーフ、そして新衣装で追加された獣耳がチャームポイント。
+                明るくよく笑い、配信ではリスナーとプロレスを繰り広げる愛されいじられキャラ。
+            </p>
+            <table class="profile-table">
+                <tr><th>誕生日</th><td>4月25日</td></tr>
+                <tr><th>ミクチャ初配信</th><td>7月1日</td></tr>
+                <tr><th>身長</th><td>148cm</td></tr>
+                <tr><th>ファンネーム</th><td>星の観測隊</td></tr>
+                <tr><th>好きなもの</th><td>星のカービィ、オムライス、チーズフォンデュ、ねるねるねるね</td></tr>
+                <tr><th>イメージカラー</th><td>イエロー、水色、ピンク</td></tr>
+            </table>
+        </section>
+
+        <!-- Episodes Section -->
+        <section class="char-section">
+            <h2>LEGENDARY EPISODES</h2>
+
+            <div class="episode-card">
+                <div class="episode-title"><i class="fa-solid fa-cake-candles"></i> 1. アルミホイル完食事件</div>
+                <p>初めての誕生日配信で、念願のホールケーキを食べていた際、美味しすぎて真ん中のアルミホイルまで一緒に食べてしまった伝説のポンコツエピソード。</p>
+            </div>
+
+            <div class="episode-card">
+                <div class="episode-title"><i class="fa-solid fa-book-open"></i> 2. 独創的な語彙力</div>
+                <p>「魑魅魍魎」を「ビャンビャン麺」と空見したり、「ダンデライオン」を「だんでないよん（たんぽぽがライオンみたいだから）」と解釈するなど、独特すぎる言語センスを誇る。</p>
+            </div>
+
+            <div class="episode-card">
+                <div class="episode-title"><i class="fa-solid fa-hammer"></i> 3. 撲殺天使プラネちゃん</div>
+                <p>「撲殺天使」の字面の可愛さに惹かれて自称し始めるも、意味を知って大焦り。しかし結果的に釘バットをちらつかせる物騒で可愛いキャラが定着した。</p>
+            </div>
+
+            <div class="episode-card">
+                <div class="episode-title"><i class="fa-solid fa-shield-heart"></i> 4. 細胞になりたい</div>
+                <p>「誰かの1番じゃなくてもいい。でも、みんなの細胞になりたい。知らん間にみんなの一部になってやる」という、彼女らしい重くて温かい愛をリスナーに伝えている。</p>
+            </div>
+
+            <div class="episode-card">
+                <div class="episode-title"><i class="fa-solid fa-laptop-code"></i> 5. 自身のデータを消去</div>
+                <p>PC操作が少し苦手で、ファイル整理中に誤って自身のLive2Dデータを削除。プラネちゃん自身がPCの中から消え去り、迷子になってしまうというVTuberならではのハプニングを起こした。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        &copy; 2026 VTuber Archive Project. Star Facet Production Fan Archive.
+    </footer>
+
+    <script>
+        // Reveal animation or other simple logic can be added here
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.char-section');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            sections.forEach(s => {
+                s.style.opacity = '0';
+                s.style.transform = 'translateY(20px)';
+                s.style.transition = 'all 0.6s ease-out';
+                observer.observe(s);
+            });
+        });
+    </script>
+</body>
+
+</html>

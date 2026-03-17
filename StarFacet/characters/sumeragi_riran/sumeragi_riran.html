@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>皇リラン (Sumeragi Riran) — Star Facet Production</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            /* 皇リラン様のイメージカラー：アメジストパープル、シャンパンゴールド */
+            --char-color: #A855F7;
+            --char-rgb: 168, 85, 247;
+            --accent-gold: #FCD34D;
+        }
+
+        .char-section h2::before {
+            content: '\f3a5'; /* 宝石・精霊のイメージ */
+        }
+
+        .episode-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 4px solid var(--char-color);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            transition: all 0.3s ease;
+        }
+
+        .episode-card:hover {
+            background: rgba(255, 255, 255, 0.07);
+            transform: translateX(10px);
+        }
+
+        .episode-title {
+            color: var(--char-color);
+            font-weight: 800;
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .profile-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .profile-table tr {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .profile-table th {
+            text-align: left;
+            padding: 1rem;
+            color: var(--char-color);
+            font-size: 0.9rem;
+            width: 30%;
+        }
+
+        .profile-table td {
+            padding: 1rem;
+            font-size: 1rem;
+            color: #CBD5E1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="char-bg"></div>
+
+    <a href="../../starfacet_index.html" class="char-back">
+        <i class="fa-solid fa-chevron-left"></i> BACK TO STAR FACET
+    </a>
+
+    <header class="char-hero">
+        <div class="char-hero-content">
+            <h1 class="char-name">皇リラン</h1>
+            <div class="char-read">SUMERAGI RIRAN</div>
+            <div class="char-tags">
+                <span class="char-tag">スタファ所属</span>
+                <span class="char-tag">アメジストの精霊</span>
+                <span class="char-tag">FPS元日本3位</span>
+                <span class="char-tag">美意識高め男子</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <!-- Profile Section -->
+        <section class="char-section">
+            <h2>CHARACTER PROFILE</h2>
+            <p>
+                みんなの心に癒しと平穏を届けるアメジストの精霊。
+                落ち着いた声と物腰からは想像もつかないが、FPS元日本3位という凄まじいゲーマー遍歴を持ち、私生活ではキャンプや釣りを愛するアウトドア派。美意識も非常に高く、ネイルやスキンケアも欠かさない。
+            </p>
+            <table class="profile-table">
+                <tr><th>誕生日</th><td>2月22日</td></tr>
+                <tr><th>活動開始</th><td>2023年8月19日</td></tr>
+                <tr><th>ファンネーム</th><td>スメラ</td></tr>
+                <tr><th>好きなこと</th><td>飲酒、キャンプ、魚釣り、メンズメイク</td></tr>
+                <tr><th>ゲーム歴</th><td>R6S日本3位チーム所属</td></tr>
+            </table>
+        </section>
+
+        <!-- Episodes Section -->
+        <section class="char-section">
+            <h2>LEGENDARY EPISODES</h2>
+
+            <div class="episode-card">
+                <div class="episode-title"><i class="fa-solid fa-ghost"></i> 1. 幻のデビュー1時間</div>
+                <p>YouTubeデビュー翌日、1時間以上にわたり熱弁しながらゲームをプレイするも、配信開始ボタンの押し忘れにより一切放送されていなかったという伝説的なやらかしを残した。</p>
+            </div>
+
+            <div class="episode-card">
+                <div class="episode-title"><i class="fa-solid fa-magnifying-glass-location"></i> 2. ミスター発見師の神プレイ</div>
+                <p>GeoGuessrにて、山奥のわずかな看板の文字からピンポイントで場所を特定。誤差わずか17mという神業を披露し「ミスター発見師」の異名をとった。</p>
+            </div>
+
+            <div class="episode-card">
+                <div class="episode-title"><i class="fa-solid fa-beer-mug-empty"></i> 3. 毎日飲酒配信の精霊</div>
+                <p>基本的にお酒を片手に配信しており、自他共に認めるお酒好き。正月には寝起き即飲酒するなど、精霊界でもかなりの酒豪として知られる。</p>
+            </div>
+
+            <div class="episode-card">
+                <div class="episode-title"><i class="fa-solid fa-truck-monster"></i> 4. 精霊の「ボロボロ」運転</div>
+                <p>シミュレーターでトラックを運転する際、縁石乗り上げや横転を連発。あまりの惨状にリスナーから「リアルの運転は控えて」と本気で心配された。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        &copy; 2026 VTuber Archive Project. Star Facet Production Fan Archive.
+    </footer>
+</body>
+
+</html>

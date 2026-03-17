@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>オリカ・ステラ (Olica Stella) — Star Facet Production</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            /* オリカ・ステラ様のイメージカラー：メタリックシルバー、エメラルド、UFOライト */
+            --char-color: #10B981; /* Emerald */
+            --char-rgb: 16, 185, 129;
+            --accent-silver: #94A3B8;
+        }
+
+        .char-section h2::before {
+            content: '\f112'; /* UFO/スペースシップのイメージに近いアイコン */
+        }
+
+        .episode-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 4px solid var(--char-color);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            transition: all 0.3s ease;
+        }
+
+        .episode-card:hover {
+            background: rgba(255, 255, 255, 0.07);
+            transform: translateX(10px);
+            border-left-color: #fff;
+        }
+
+        .episode-title {
+            color: var(--char-color);
+            font-weight: 800;
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .profile-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .profile-table tr {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .profile-table th {
+            text-align: left;
+            padding: 1rem;
+            color: var(--char-color);
+            font-size: 0.9rem;
+            width: 30%;
+        }
+
+        .profile-table td {
+            padding: 1rem;
+            font-size: 1rem;
+            color: #CBD5E1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="char-bg"></div>
+
+    <a href="../../starfacet_index.html" class="char-back">
+        <i class="fa-solid fa-chevron-left"></i> BACK TO STAR FACET
+    </a>
+
+    <header class="char-hero">
+        <div class="char-hero-content">
+            <h1 class="char-name">オリカ・ステラ</h1>
+            <div class="char-read">OLICA STELLA</div>
+            <div class="char-tags">
+                <span class="char-tag">1期生 研修生</span>
+                <span class="char-tag">天秤座出身宇宙人</span>
+                <span class="char-tag">光の老戦士</span>
+                <span class="char-tag">リアクション芸人枠</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <!-- Profile Section -->
+        <section class="char-section">
+            <h2>CHARACTER PROFILE</h2>
+            <p>
+                天秤座の方角からUFOに乗って家族で地球に引っ越してきた宇宙人VTuber。
+                3Dモデル（VRoid）で活動しており、よく笑うゲラな性格。「エンターテイナー」を自称し、3〜5時間の長時間トークもこなす。
+                FF14を10年以上プレイしている「光の老戦士」でもある。
+            </p>
+            <table class="profile-table">
+                <tr><th>所属</th><td>StarFacet 1期生 研修生</td></tr>
+                <tr><th>ファンネーム</th><td>オリカ星団</td></tr>
+                <tr><th>FF14歴</th><td>3600日超（約10年）</td></tr>
+                <tr><th>配信タグ</th><td>#オリライブ</td></tr>
+                <tr><th>飯テロタグ</th><td>#オリカ許して</td></tr>
+                <tr><th>特徴</th><td>倍速再生推奨アーカイブ、虫とホラーが天敵</td></tr>
+            </table>
+        </section>
+
+        <!-- Episodes Section -->
+        <section class="char-section">
+            <h2>LEGENDARY EPISODES</h2>
+
+            <div class="episode-card">
+                <div class="episode-title"><i class="fa-solid fa-chair"></i> 1. 驚愕の「6時間空気椅子」</div>
+                <p>オーディション時代、ギフトへの返礼として「空気椅子」をチャージし続け、累計6時間に到達。その根性は伝説となったが、現在は代償として（？）腰痛に悩む姿がよく見られる。</p>
+            </div>
+
+            <div class="episode-card">
+                <div class="episode-title"><i class="fa-solid fa-gamepad"></i> 2. 光の老戦士の「初めて」</div>
+                <p>FF14を10年以上プレイしているにもかかわらず、配信中に「蒼天のイシュガルド」宿屋の存在を初めて知り驚愕。10年間のプレイスタイルが謎に包まれる瞬間となった。</p>
+            </div>
+
+            <div class="episode-card">
+                <div class="episode-title"><i class="fa-solid fa-bicycle"></i> 3. リアル・ポンコツエピソード</div>
+                <p>自転車のハンドルにかけた傘が前輪に刺さり宙を舞う、台風の日にビル風でゴロゴロ転がる、PCパーツから火が出るなど、現実世界でも漫画のようなハプニングを連発している。</p>
+            </div>
+
+            <div class="episode-card">
+                <div class="episode-title"><i class="fa-solid fa-truck"></i> 4. 運送会社「ボロボ」事件</div>
+                <p>トラック運転ゲームでVolvoを運転するも、事故を連発しすぎて車体が「ボロボロ」に。リスナーから「お前はボルボじゃなくてボロボだ」と改名（？）を迫られた。</p>
+            </div>
+
+            <div class="episode-card">
+                <div class="episode-title"><i class="fa-solid fa-face-sad-tear"></i> 5. 情緒不安定なLoL大会</div>
+                <p>LoLの大会で惨敗し、配信終了後にガチ泣き。エンターテイナーとしての顔の裏にある、ゲームに対する熱すぎる本気度がリスナーの胸を打った。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        &copy; 2026 VTuber Archive Project. Star Facet Production Fan Archive.
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.char-section');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            sections.forEach(s => {
+                s.style.opacity = '0';
+                s.style.transform = 'translateY(20px)';
+                s.style.transition = 'all 0.6s ease-out';
+                observer.observe(s);
+            });
+        });
+    </script>
+</body>
+
+</html>

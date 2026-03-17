@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天凪なぎ (Amanagi Nagi) — Star Facet Production</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            /* 天凪なぎ様のイメージカラー：エンジェルピンク、フェザーホワイト */
+            --char-color: #F472B6;
+            --char-rgb: 244, 114, 182;
+            --accent-soft: #FCE7F3;
+        }
+
+        .char-section h2::before {
+            content: '\f1d8'; /* 羽・天使のイメージ */
+        }
+
+        .episode-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 4px solid var(--char-color);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            transition: all 0.3s ease;
+        }
+
+        .episode-card:hover {
+            background: rgba(255, 255, 255, 0.07);
+            transform: translateX(10px);
+        }
+
+        .episode-title {
+            color: var(--char-color);
+            font-weight: 800;
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .profile-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .profile-table tr {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .profile-table th {
+            text-align: left;
+            padding: 1rem;
+            color: var(--char-color);
+            font-size: 0.9rem;
+            width: 30%;
+        }
+
+        .profile-table td {
+            padding: 1rem;
+            font-size: 1rem;
+            color: #CBD5E1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="char-bg"></div>
+
+    <a href="../../starfacet_index.html" class="char-back">
+        <i class="fa-solid fa-chevron-left"></i> BACK TO STAR FACET
+    </a>
+
+    <header class="char-hero">
+        <div class="char-hero-content">
+            <h1 class="char-name">天凪なぎ</h1>
+            <div class="char-read">AMANAGI NAGI</div>
+            <div class="char-tags">
+                <span class="char-tag">スタファ所属</span>
+                <span class="char-tag">ゆるふわ天使系(潜伏中)</span>
+                <span class="char-tag">おしゃべりクソマシン</span>
+                <span class="char-tag">努力の歌うま天使</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <!-- Profile Section -->
+        <section class="char-section">
+            <h2>CHARACTER PROFILE</h2>
+            <p>
+                「ゆるふわ天使系」を自称し、人間界に潜伏中の天使VTuber。
+                自他共に認める「おしゃべりクソマシン」であり、尽きることのないマシンガントークが最大の武器。
+                当初は父親からもダメ出しされるほどだった歌唱力も、弛まぬ努力によって今では透き通るような美声へと昇華させている。
+            </p>
+            <table class="profile-table">
+                <tr><th>誕生日</th><td>7月9日 / 4月1日</td></tr>
+                <tr><th>ファンネーム</th><td>天凪民</td></tr>
+                <tr><th>推しマーク</th><td>🕊️🫧</td></tr>
+                <tr><th>好きなもの</th><td>10時間睡眠、トマト、フルーツ全般</td></tr>
+                <tr><th>相棒</th><td>ベリーメンダコの鬼龍院</td></tr>
+            </table>
+        </section>
+
+        <!-- Episodes Section -->
+        <section class="char-section">
+            <h2>LEGENDARY EPISODES</h2>
+
+            <div class="episode-card">
+                <div class="episode-title"><i class="fa-solid fa-microphone"></i> 1. 不屈の「おしゃべりクソマシン」</div>
+                <p>無言を嫌い、2時間の予定が気づけば6時間に延長することも珍しくない驚異のトーク力。配信の8割が雑談で構成され、リスナーを飽きさせない「友達感覚」の距離感が魅力。</p>
+            </div>
+
+            <div class="episode-card">
+                <div class="episode-title"><i class="fa-solid fa-face-sad-tear"></i> 2. マイクラ・ガチ泣き伝説</div>
+                <p>極度のホラー・ビビリ。Minecraftのプレイ中、洞窟への落下、エリトラの失敗、エンダーマンの出現と、一日で合計3回もガチ泣きしてしまったピュア（？）な記録を持つ。</p>
+            </div>
+
+            <div class="episode-card">
+                <div class="episode-title"><i class="fa-solid fa-music"></i> 3. パパのダメ出しを乗り越えて</div>
+                <p>幼少期、父親から「鼻歌が不快」とまで言われた音痴を努力で克服。今ではかっこいい低音まで歌いこなす、スタファ屈指の歌うま天使へと成長を遂げた。</p>
+            </div>
+
+            <div class="episode-card">
+                <div class="episode-title"><i class="fa-solid fa-brain"></i> 4. ゆるふわの皮を被った「脳筋」</div>
+                <p>天使のルックスとは裏腹に、ゲームプレイは徹底した「脳筋」スタイル。CPU相手には容赦ない口の悪さを見せることもあるが、コラボ等では気遣いを忘れない本物の天使。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        &copy; 2026 VTuber Archive Project. Star Facet Production Fan Archive.
+    </footer>
+</body>
+
+</html>

@@ -61,8 +61,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const nameEl = card.querySelector('.sf-card-sub');
             if (nameEl) {
                 const nameText = nameEl.textContent.trim().toLowerCase().replace(/ /g, '_');
-                console.log(`Navigating to: characters/${nameText}.html`);
-                // window.location.href = `characters/${nameText}.html`;
+                const targetUrl = `characters/${nameText}/${nameText}.html`;
+                console.log(`Navigating to: ${targetUrl}`);
+                window.location.href = targetUrl;
             }
         });
     });

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定時なゆ (Teiji Nayu) — Star Facet Production</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            /* 定時なゆ様のイメージカラー：社畜ネイビー、ネクタイレッド */
+            --char-color: #3B82F6;
+            --char-rgb: 59, 130, 246;
+            --accent-work: #1E293B;
+        }
+
+        .char-section h2::before {
+            content: '\f64f'; /* オフィスの時計・時間のイメージ */
+        }
+
+        .episode-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 4px solid var(--char-color);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            transition: all 0.3s ease;
+        }
+
+        .episode-card:hover {
+            background: rgba(255, 255, 255, 0.07);
+            transform: translateX(10px);
+        }
+
+        .episode-title {
+            color: var(--char-color);
+            font-weight: 800;
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .profile-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .profile-table tr {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .profile-table th {
+            text-align: left;
+            padding: 1rem;
+            color: var(--char-color);
+            font-size: 0.9rem;
+            width: 30%;
+        }
+
+        .profile-table td {
+            padding: 1rem;
+            font-size: 1rem;
+            color: #CBD5E1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="char-bg"></div>
+
+    <a href="../../starfacet_index.html" class="char-back">
+        <i class="fa-solid fa-chevron-left"></i> BACK TO STAR FACET
+    </a>
+
+    <header class="char-hero">
+        <div class="char-hero-content">
+            <h1 class="char-name">定時なゆ</h1>
+            <div class="char-read">TEIJI NAYU</div>
+            <div class="char-tags">
+                <span class="char-tag">2期生</span>
+                <span class="char-tag">社畜悪魔</span>
+                <span class="char-tag">魔界の大公</span>
+                <span class="char-tag">はよ帰りたい</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <!-- Profile Section -->
+        <section class="char-section">
+            <h2>CHARACTER PROFILE</h2>
+            <p>
+                魔界（のド田舎）出身の悪魔にして、現在は人間界で「社畜」として働く経理担当ライバー。
+                残業、休日出勤を何よりも忌み嫌い、配信を日々のストレス発散と生きがいにしている。
+                お酒とタバコを愛する、ある意味リアリティあふれる「大人な悪魔」。
+            </p>
+            <table class="profile-table">
+                <tr><th>デビュー日</th><td>7月7日</td></tr>
+                <tr><th>誕生日</th><td>12月13日</td></tr>
+                <tr><th>身長</th><td>153cm</td></tr>
+                <tr><th>ファンネーム</th><td>はよ帰りたい</td></tr>
+                <tr><th>好きなこと</th><td>仕事をサボること、猫、お酒、ヤニ休憩</td></tr>
+                <tr><th>嫌いなこと</th><td>残業、休日出勤、ボーナスカット</td></tr>
+            </table>
+        </section>
+
+        <!-- Episodes Section -->
+        <section class="char-section">
+            <h2>LEGENDARY EPISODES</h2>
+
+            <div class="episode-card">
+                <div class="episode-title"><i class="fa-solid fa-briefcase"></i> 1. 鹿の妨害による遅刻</div>
+                <p>魔界（ド田舎）の社宅の玄関前に鹿が陣取り、家から出られなくなって会社を遅刻。上司に写真付きで「こいつがいなくなってから行きます」と連絡した伝説の遅刻理由。</p>
+            </div>
+
+            <div class="episode-card">
+                <div class="episode-title"><i class="fa-solid fa-cat"></i> 2. 愛猫によるキーボード破壊</div>
+                <p>添い寝中の愛猫にキーボードへ逆噴射され、水没・破壊される悲劇に見舞われるも、「今日は多いね」と悟りを開いた慈悲深き飼い主の一面を見せた。</p>
+            </div>
+
+            <div class="episode-card">
+                <div class="episode-title"><i class="fa-solid fa-hand-holding-medical"></i> 3. ノーパン病院事件</div>
+                <p>体調不良で緊急搬送され数日間過ごした後、帰宅して配信を終えてから、ズボンの下に何も履いていなかったことに気づき戦慄。本人は「なゆ君（男性）と仮定して」と必死の弁明を試みた。</p>
+            </div>
+
+            <div class="episode-card">
+                <div class="episode-title"><i class="fa-solid fa-calculator"></i> 4. 経理のヤバい女</div>
+                <p>簿記の資格を持ち、職場で経理を担当。領収書への厳しいチェックから「常に眉間にシワを寄せているヤバい奴」と思われていないか密かに心配している。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        &copy; 2026 VTuber Archive Project. Star Facet Production Fan Archive.
+    </footer>
+</body>
+
+</html>

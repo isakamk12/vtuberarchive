@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天咲スピカ (Amazaki Spica) — Star Facet Production</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            /* 天咲スピカ様のイメージカラー：パールホワイト、スターゴールド */
+            --char-color: #FEF08A;
+            --char-rgb: 254, 240, 138;
+            --accent-pink: #FDA4AF;
+        }
+
+        .char-section h2::before {
+            content: '\f201'; /* 演劇・階段のイメージ */
+        }
+
+        .episode-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 4px solid var(--char-color);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            transition: all 0.3s ease;
+        }
+
+        .episode-card:hover {
+            background: rgba(255, 255, 255, 0.07);
+            transform: translateX(10px);
+        }
+
+        .episode-title {
+            color: var(--char-color);
+            font-weight: 800;
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .profile-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .profile-table tr {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .profile-table th {
+            text-align: left;
+            padding: 1rem;
+            color: var(--char-color);
+            font-size: 0.9rem;
+            width: 30%;
+        }
+
+        .profile-table td {
+            padding: 1rem;
+            font-size: 1rem;
+            color: #CBD5E1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="char-bg"></div>
+
+    <a href="../../starfacet_index.html" class="char-back">
+        <i class="fa-solid fa-chevron-left"></i> BACK TO STAR FACET
+    </a>
+
+    <header class="char-hero">
+        <div class="char-hero-content">
+            <h1 class="char-name">天咲スピカ</h1>
+            <div class="char-read">AMAZAKI SPICA</div>
+            <div class="char-tags">
+                <span class="char-tag">2期生</span>
+                <span class="char-tag">V-ACTOR</span>
+                <span class="char-tag">星の妖精</span>
+                <span class="char-tag">行動力の化身</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <!-- Profile Section -->
+        <section class="char-section">
+            <h2>CHARACTER PROFILE</h2>
+            <p>
+                「お芝居大好きV-ACTOR」を掲げる、スタファ2期生の星の妖精。
+                旧名・天咲ステラから進化を遂げ、本格的な演劇活動をバーチャル空間で推進している。
+                王道アイドルのようなルックスと挨拶を持ちながら、本人は「役者」としての矜持を崩さない。
+            </p>
+            <table class="profile-table">
+                <tr><th>本名</th><td>ステラ・リーブラ・ブルーム</td></tr>
+                <tr><th>デビュー日</th><td>3月29日</td></tr>
+                <tr><th>ファンネーム</th><td>スピラーズ</td></tr>
+                <tr><th>ファンマーク</th><td>＊⭐</td></tr>
+                <tr><th>夢</th><td>3Dでお芝居を日常のエンタメにすること</td></tr>
+            </table>
+        </section>
+
+        <!-- Episodes Section -->
+        <section class="char-section">
+            <h2>LEGENDARY EPISODES</h2>
+
+            <div class="episode-card">
+                <div class="episode-title"><i class="fa-solid fa-masks-theater"></i> 1. 「アイドルじゃねえ！Vアクターだ！」</div>
+                <p>極めてアイドルらしいビジュアルと挨拶を持ちながら、「アイドル扱い」を頑なに否定し「お芝居が中心のVアクター」と主張。仲間からのアイドルいじりに「営業妨害だぞ！」と叫ぶのがお約束。</p>
+            </div>
+
+            <div class="episode-card">
+                <div class="episode-title"><i class="fa-solid fa-users-gear"></i> 2. 「大人だって演劇部」創設</div>
+                <p>「芝居ができる場所がないなら作るか」という軽いノリから、大所帯のコミュニティ『大人だって演劇部』を創設。今では多くの配信者や脚本家が集う、V声劇界の重要拠点となっている。</p>
+            </div>
+
+            <div class="episode-card">
+                <div class="episode-title"><i class="fa-solid fa-fire-extinguisher"></i> 3. 自称「自堕落」の行動力</div>
+                <p>挨拶では「自堕落」と称するが、実際には裏方作業から台本管理、大規模企画の主催までこなす超真面目な努力家。仲間からは「この人が自堕落なら、本当の自堕落などいない」とまで言われる。</p>
+            </div>
+
+            <div class="episode-card">
+                <div class="episode-title"><i class="fa-solid fa-wine-glass"></i> 4. スピリタス99%の酔い上戸</div>
+                <p>お酒が入るとテンションが限界を突破し、深夜にカオスな空間を作り出す。あまりのお酒キャラにDiscord名を「スピリタス99%」にしていた時期もあるほど。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        &copy; 2026 VTuber Archive Project. Star Facet Production Fan Archive.
+    </footer>
+</body>
+
+</html>

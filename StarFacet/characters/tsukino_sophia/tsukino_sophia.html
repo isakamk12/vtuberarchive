@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>月乃ソフィア (Sophia Tukino) — Star Facet Production</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            /* 月乃ソフィア様のイメージカラー：三日月イエロー、ミッドナイトパープル */
+            --char-color: #FDE047;
+            --char-rgb: 253, 224, 71;
+            --accent-purple: #A855F7;
+        }
+
+        .char-section h2::before {
+            content: '\f186'; /* 三日月のアイコン */
+        }
+
+        .episode-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 4px solid var(--accent-purple);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            transition: all 0.3s ease;
+        }
+
+        .episode-card:hover {
+            background: rgba(255, 255, 255, 0.07);
+            transform: translateX(10px);
+            border-left-color: var(--char-color);
+        }
+
+        .episode-title {
+            color: var(--char-color);
+            font-weight: 800;
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .profile-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .profile-table tr {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .profile-table th {
+            text-align: left;
+            padding: 1rem;
+            color: var(--accent-purple);
+            font-size: 0.9rem;
+            width: 30%;
+        }
+
+        .profile-table td {
+            padding: 1rem;
+            font-size: 1rem;
+            color: #CBD5E1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="char-bg"></div>
+
+    <a href="../../starfacet_index.html" class="char-back">
+        <i class="fa-solid fa-chevron-left"></i> BACK TO STAR FACET
+    </a>
+
+    <header class="char-hero">
+        <div class="char-hero-content">
+            <h1 class="char-name">月乃ソフィア</h1>
+            <div class="char-read">SOPHIA TUKINO</div>
+            <div class="char-tags">
+                <span class="char-tag">1期生</span>
+                <span class="char-tag">月の女神</span>
+                <span class="char-tag">絶叫系お姉さん</span>
+                <span class="char-tag">体力おばけ</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <!-- Profile Section -->
+        <section class="char-section">
+            <h2>CHARACTER PROFILE</h2>
+            <p>
+                月に住む「月の女神」で、月のパトロールをして治安を守っている。地球の文化に興味があり、YouTube配信を通して様々なことを学んでいる。
+                自称「絶叫系お姉さん女神VTuber」であり、10時間を超える長時間配信を平然と行うタフネスが持ち味。
+            </p>
+            <table class="profile-table">
+                <tr><th>デビュー日</th><td>2022年9月25日</td></tr>
+                <tr><th>誕生日</th><td>5月29日（肉の日）</td></tr>
+                <tr><th>身長</th><td>163cm</td></tr>
+                <tr><th>バストサイズ</th><td>愛がいっぱいIカップ</td></tr>
+                <tr><th>ファンネーム</th><td>月の従者</td></tr>
+                <tr><th>ファンマーク</th><td>🌠🌙</td></tr>
+                <tr><th>座右の銘</th><td>背水の陣、火事場の馬鹿力</td></tr>
+            </table>
+        </section>
+
+        <!-- Episodes Section -->
+        <section class="char-section">
+            <h2>LEGENDARY EPISODES</h2>
+
+            <div class="episode-card">
+                <div class="episode-title"><i class="fa-solid fa-bullhorn"></i> 1. 複数人騒音勘違い事件</div>
+                <p>深夜の絶叫配信があまりに騒がしく、「複数人が騒いでいる」と近所から苦情の手紙が届く。実際には一人で叫び、笑い、歌っていただけであり、一人で複数人分の騒動を起こせることを証明してしまった。</p>
+            </div>
+
+            <div class="episode-card">
+                <div class="episode-title"><i class="fa-solid fa-bottle-dropper"></i> 2. 「無許可スペシャル」香水</div>
+                <p>事務所に完全無許可で自分のイメージ香水を発注。配信内でリスナーと相談してそのまま「無許可スペシャル」と命名された。後にマネージャーが奔走して商品化へと繋げた。</p>
+            </div>
+
+            <div class="episode-card">
+                <div class="episode-title"><i class="fa-solid fa-moon"></i> 3. 月への攻撃と配信切断の奇跡</div>
+                <p>FF14のストーリー中、月がビーム攻撃を受けた瞬間にリアル機材トラブルで配信が落ちるという奇跡が発生。「月の女神としてダメージを肩代わりした」という見事な伏線回収となった。</p>
+            </div>
+
+            <div class="episode-card">
+                <div class="episode-title"><i class="fa-solid fa-ban"></i> 4. 全コンテンツ出禁措置</div>
+                <p>休止中に「同居人と何かしているのでは」といった度を越した妄想DMを送りつけたリスナーに対し、毅然と「全コンテンツ出禁」を言い渡す。ファンとの境界線を守る女神の厳しさを見せた。</p>
+            </div>
+
+            <div class="episode-card">
+                <div class="episode-title"><i class="fa-solid fa-bed"></i> 5. Windows 95並みの立ち上がり</div>
+                <p>極度の寝起き不良と低血圧を「Windows 95並みに立ち上がりが遅い」と表現。6時間半の遅刻配信も「初手謝罪」からスタートさせるなど、人間味あふれる一面も魅力。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        &copy; 2026 VTuber Archive Project. Star Facet Production Fan Archive.
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.char-section');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            sections.forEach(s => {
+                s.style.opacity = '0';
+                s.style.transform = 'translateY(20px)';
+                s.style.transition = 'all 0.6s ease-out';
+                observer.observe(s);
+            });
+        });
+    </script>
+</body>
+
+</html>

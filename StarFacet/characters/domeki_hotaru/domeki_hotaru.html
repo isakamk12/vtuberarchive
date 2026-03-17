@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百目鬼ほたる (Dōmeki Hotaru) — Star Facet Production</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            /* 百目鬼ほたる様のイメージカラー：クリムゾンレッド、ダークパープル */
+            --char-color: #EF4444;
+            --char-rgb: 239, 68, 68;
+            --accent-dark: #312E81;
+        }
+
+        .char-section h2::before {
+            content: '\f6e3'; /* 鬼・モンスターのイメージ */
+        }
+
+        .episode-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 4px solid var(--char-color);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            transition: all 0.3s ease;
+        }
+
+        .episode-card:hover {
+            background: rgba(255, 255, 255, 0.07);
+            transform: translateX(10px);
+        }
+
+        .episode-title {
+            color: var(--char-color);
+            font-weight: 800;
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .profile-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .profile-table tr {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .profile-table th {
+            text-align: left;
+            padding: 1rem;
+            color: var(--char-color);
+            font-size: 0.9rem;
+            width: 30%;
+        }
+
+        .profile-table td {
+            padding: 1rem;
+            font-size: 1rem;
+            color: #CBD5E1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="char-bg"></div>
+
+    <a href="../../starfacet_index.html" class="char-back">
+        <i class="fa-solid fa-chevron-left"></i> BACK TO STAR FACET
+    </a>
+
+    <header class="char-hero">
+        <div class="char-hero-content">
+            <h1 class="char-name">百目鬼ほたる</h1>
+            <div class="char-read">DOMEKI HOTARU</div>
+            <div class="char-tags">
+                <span class="char-tag">2期生</span>
+                <span class="char-tag">地獄の鬼</span>
+                <span class="char-tag">ゲームクリエイター</span>
+                <span class="char-tag">怠惰な鬼</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <!-- Profile Section -->
+        <section class="char-section">
+            <h2>CHARACTER PROFILE</h2>
+            <p>
+                地獄に住み、閻魔の世話係を（渋々）している鬼の女の子。
+                身長142cmと小柄ながら、ベースなどの大型楽器を操り、独学でゲームを作り上げるクリエイティブな一面を持つ。
+                一方で、自他共に認める「怠惰な引きこもり」であり、そのズボラな生活っぷりはリスナーを戦慄させることも。
+            </p>
+            <table class="profile-table">
+                <tr><th>誕生日</th><td>10月14日</td></tr>
+                <tr><th>年齢</th><td>100歳超（127歳推定）</td></tr>
+                <tr><th>特技</th><td>ゲーム制作（プログラミング）、マルチ楽器演奏</td></tr>
+                <tr><th>好きなもの</th><td>日本酒、レッドブル、可愛い女の子（重要）</td></tr>
+                <tr><th>苦手なもの</th><td>漢字、ホラー、アクションゲーム</td></tr>
+            </table>
+        </section>
+
+        <!-- Episodes Section -->
+        <section class="char-section">
+            <h2>LEGENDARY EPISODES</h2>
+
+            <div class="episode-card">
+                <div class="episode-title"><i class="fa-solid fa-bug"></i> 1. 怠惰の極み：卵放置事件</div>
+                <p>冷蔵庫に「賞味期限が1年半前の卵」を放置したり、お皿を2ヶ月洗わず虫を湧かせたりと、地獄の住人らしい（？）凄まじいズボラエピソードを持つ。</p>
+            </div>
+
+            <div class="episode-card">
+                <div class="episode-title"><i class="fa-solid fa-wind"></i> 2. 伝説の「鼻チーン」事件</div>
+                <p>配信中にミュートを忘れ、マイクの前で思い切り鼻をかむ事故が発生。しかしこれが「助かる命がある」とリスナーに大ウケ。謎の奇跡でチャンネル登録者が増える事態となった。</p>
+            </div>
+
+            <div class="episode-card">
+                <div class="episode-title"><i class="fa-solid fa-heart-crack"></i> 3. 限界オタクの顔</div>
+                <p>可愛い女の子、特にロリっ子が登場すると地獄の鬼から「限界オタク」へ豹変。数々の危険な発言を連発し、直後に「セルフ警察」で自戒するのがお決まり。</p>
+            </div>
+
+            <div class="episode-card">
+                <div class="episode-title"><i class="fa-solid fa-language"></i> 4. 英語力ゼロの異文化交流</div>
+                <p>海外リスナーに対しても「アイム・ジャパニーズ・オニ・ガール！」と謎の勢いで押し切り、片言の英語で明るく強引にコミュニケートする姿が世界中で愛されている。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        &copy; 2026 VTuber Archive Project. Star Facet Production Fan Archive.
+    </footer>
+</body>
+
+</html>

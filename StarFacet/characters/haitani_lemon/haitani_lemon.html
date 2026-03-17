@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>灰谷れもん (Haitani Remon) — Star Facet Production</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            /* 灰谷れもん様のイメージカラー：レモンイエロー、ネオンライム */
+            --char-color: #EAB308;
+            --char-rgb: 234, 179, 8;
+            --accent-lime: #84CC16;
+        }
+
+        .char-section h2::before {
+            content: '\f091'; /* トロフィー・優勝のイメージ */
+        }
+
+        .episode-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 4px solid var(--char-color);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            transition: all 0.3s ease;
+        }
+
+        .episode-card:hover {
+            background: rgba(255, 255, 255, 0.07);
+            transform: translateX(10px);
+        }
+
+        .episode-title {
+            color: var(--char-color);
+            font-weight: 800;
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .profile-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .profile-table tr {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .profile-table th {
+            text-align: left;
+            padding: 1rem;
+            color: var(--char-color);
+            font-size: 0.9rem;
+            width: 30%;
+        }
+
+        .profile-table td {
+            padding: 1rem;
+            font-size: 1rem;
+            color: #CBD5E1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="char-bg"></div>
+
+    <a href="../../starfacet_index.html" class="char-back">
+        <i class="fa-solid fa-chevron-left"></i> BACK TO STAR FACET
+    </a>
+
+    <header class="char-hero">
+        <div class="char-hero-content">
+            <h1 class="char-name">灰谷れもん</h1>
+            <div class="char-read">HAITANI REMON</div>
+            <div class="char-tags">
+                <span class="char-tag">ライバー部門所属</span>
+                <span class="char-tag">おもれー女(自称)</span>
+                <span class="char-tag">マシンガントーク</span>
+                <span class="char-tag">36回払いPCローン</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <!-- Profile Section -->
+        <section class="char-section">
+            <h2>CHARACTER PROFILE</h2>
+            <p>
+                「関西のおもれー女」を自称する、スタファのアイドル芸人枠。
+                レモン星出身を公言し、息継ぎなしのマシンガントークで1時間以上喋り続けられる脅威のトーク力を持つ。
+                現在は36回払いのPCローンを抱えており、「ローンが終わるまで絶対引退しない」という切実かつ強固な意志で活動中。
+            </p>
+            <table class="profile-table">
+                <tr><th>デビュー日</th><td>7月28日（なにわの日）</td></tr>
+                <tr><th>誕生日</th><td>5月21日</td></tr>
+                <tr><th>年齢</th><td>永遠の17歳（お酒は可）</td></tr>
+                <tr><th>ファンネーム</th><td>レモダチ</td></tr>
+                <tr><th>弱点</th><td>滑舌（特に横文字）、極度の人見知り</td></tr>
+            </table>
+        </section>
+
+        <!-- Episodes Section -->
+        <section class="char-section">
+            <h2>LEGENDARY EPISODES</h2>
+
+            <div class="episode-card">
+                <div class="episode-title"><i class="fa-solid fa-credit-card"></i> 1. ローン完済まで引退不可</div>
+                <p>ハイスペックPCを36回ローンで購入。「今のうちに推せばローンが終わるまでの2年間は絶対に辞めないので古参になれます」という唯一無二の活動継続宣言をしている。</p>
+            </div>
+
+            <div class="episode-card">
+                <div class="episode-title"><i class="fa-solid fa-ghost"></i> 2. 硬派な「リスナー管理」</div>
+                <p>「身内ノリ」を防ぐため、収益化するまでは基本的にリスナーの名前を読み上げないという独自の美学を貫く。マシンガントークが途切れない彼女なりの配慮である。</p>
+            </div>
+
+            <div class="episode-card">
+                <div class="episode-title"><i class="fa-solid fa-person-running"></i> 3. パルクール野生児時代</div>
+                <p>幼少期は建物と建物の間を飛び越えたり、2階から飛び降りたりして遊んでいたというガチの野生児。レモン星の重力が軽いせいか、高い身体能力を誇る。</p>
+            </div>
+
+            <div class="episode-card">
+                <div class="episode-title"><i class="fa-solid fa-phone-volume"></i> 4. ポジティブすぎる「有名人」勘違い</div>
+                <p>職場にイタズラ電話がかかってきた際、「個人情報漏れてる！？ついに私も有名人になったのかも！」と一瞬喜んでしまうほど、ポジティブすぎる精神力の持ち主。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        &copy; 2026 VTuber Archive Project. Star Facet Production Fan Archive.
+    </footer>
+</body>
+
+</html>

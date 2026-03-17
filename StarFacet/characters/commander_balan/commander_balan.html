@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>バラン司令官 (Commander Balan) — VTuber Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            /* バラン司令官様のイメージカラー：バラングリーン、ギザギザシルバー */
+            --char-color: #22C55E;
+            --char-rgb: 34, 197, 94;
+            --accent-valan: #064E3B;
+        }
+
+        .char-section h2::before {
+            content: '\f2e7'; /* 食事・お寿司のバランイメージ */
+        }
+
+        .episode-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 4px solid var(--char-color);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            transition: all 0.3s ease;
+        }
+
+        .episode-card:hover {
+            background: rgba(255, 255, 255, 0.07);
+            transform: translateX(10px);
+        }
+
+        .episode-title {
+            color: var(--char-color);
+            font-weight: 800;
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .profile-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .profile-table tr {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .profile-table th {
+            text-align: left;
+            padding: 1rem;
+            color: var(--char-color);
+            font-size: 0.9rem;
+            width: 30%;
+        }
+
+        .profile-table td {
+            padding: 1rem;
+            font-size: 1rem;
+            color: #CBD5E1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="char-bg"></div>
+
+    <a href="../../starfacet_index.html" class="char-back">
+        <i class="fa-solid fa-chevron-left"></i> BACK TO STAR FACET
+    </a>
+
+    <header class="char-hero">
+        <div class="char-hero-content">
+            <h1 class="char-name">バラン司令官</h1>
+            <div class="char-read">COMMANDER BALAN</div>
+            <div class="char-tags">
+                <span class="char-tag">ハマチ戦隊司令官</span>
+                <span class="char-tag">hideガチ勢</span>
+                <span class="char-tag">クリエイター気質</span>
+                <span class="char-tag">昭和・90年代ネタ</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <!-- Profile Section -->
+        <section class="char-section">
+            <h2>CHARACTER PROFILE</h2>
+            <p>
+                「ハマチ戦隊カンブリアン」を率いる司令官。
+                お寿司の「バラン」をモチーフにした外見と、重厚なhide愛を併せ持つ。
+                自らイラスト、動画、ミックスもこなすクリエイターでありながら、配信では見事な方向音痴や金槌（泳げない）といった愛すべきポンコツっぷりを存分に発揮する。
+            </p>
+            <table class="profile-table">
+                <tr><th>デビュー</th><td>2023年3月（歌い手活動開始）</td></tr>
+                <tr><th>モチーフ</th><td>お寿司のバラン</td></tr>
+                <tr><th>好きなもの</th><td>hide、お酒、レトルトカレー、綺麗になっていく動画</td></tr>
+                <tr><th>弱点</th><td>金槌、方向音痴、英語</td></tr>
+            </table>
+        </section>
+
+        <!-- Episodes Section -->
+        <section class="char-section">
+            <h2>LEGENDARY EPISODES</h2>
+
+            <div class="episode-card">
+                <div class="episode-title"><i class="fa-solid fa-guitar"></i> 1. hideへの深すぎる情愛</div>
+                <p>少年時代にZO-3ギターをサイケペイントしようとして「台無し」にした思い出から、自身のラジオ番組『おしえてテルミー！』まで、音楽活動の根底には常にhideへの強いリスペクトがある。</p>
+            </div>
+
+            <div class="episode-card">
+                <div class="episode-title"><i class="fa-solid fa-utensils"></i> 2. 強引すぎる「パスタはミート」</div>
+                <p>ボカロ曲『酔いどれ知らず』の歌ってみたで、最後の英語コーラスが歌えず、「パスタはミートだろ」と連呼して完成させた強引かつクールな神アレンジを持つ。</p>
+            </div>
+
+            <div class="episode-card">
+                <div class="episode-title"><i class="fa-solid fa-magnifying-glass"></i> 3. コアラのマーチ「バラン」捜索</div>
+                <p>自分の名前を探すため、コアラのマーチ2箱を大人買いして開封配信を行うも、マニアックな名前は出るが「バラン」は出ず。最後の1個が「シバタ」で幕を下ろした不運な記録。</p>
+            </div>
+
+            <div class="episode-card">
+                <div class="episode-title"><i class="fa-solid fa-shield-heart"></i> 4. 肉じゃがカレー究極の裏技</div>
+                <p>「レトルトカレーにはチルドの肉じゃがを混ぜろ」という独自の知恵を提唱。和風だしとゴロゴロの具材が至福をもたらすとし、配信で熱弁を振るっている。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        &copy; 2026 VTuber Archive Project. Cambrian Force Support Directory.
+    </footer>
+</body>
+
+</html>

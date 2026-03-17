@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>久賀みなと (Kuga Minato) — VTuber Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            /* 久賀みなと様のイメージカラー：オーシャンブルー、アースグレー */
+            --char-color: #38BDF8;
+            --char-rgb: 56, 189, 248;
+            --accent-earth: #64748B;
+        }
+
+        .char-section h2::before {
+            content: '\f22a'; /* マイク・声のイメージ */
+        }
+
+        .episode-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 4px solid var(--char-color);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            transition: all 0.3s ease;
+        }
+
+        .episode-card:hover {
+            background: rgba(255, 255, 255, 0.07);
+            transform: translateX(10px);
+        }
+
+        .episode-title {
+            color: var(--char-color);
+            font-weight: 800;
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .profile-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .profile-table tr {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .profile-table th {
+            text-align: left;
+            padding: 1rem;
+            color: var(--char-color);
+            font-size: 0.9rem;
+            width: 30%;
+        }
+
+        .profile-table td {
+            padding: 1rem;
+            font-size: 1rem;
+            color: #CBD5E1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="char-bg"></div>
+
+    <a href="../../starfacet_index.html" class="char-back">
+        <i class="fa-solid fa-chevron-left"></i> BACK TO STAR FACET
+    </a>
+
+    <header class="char-hero">
+        <div class="char-hero-content">
+            <h1 class="char-name">久賀みなと</h1>
+            <div class="char-read">KUGA MINATO</div>
+            <div class="char-tags">
+                <span class="char-tag">フリーランス</span>
+                <span class="char-tag">声優</span>
+                <span class="char-tag">極度の方向音痴</span>
+                <span class="char-tag">脳筋ゲーマー</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <!-- Profile Section -->
+        <section class="char-section">
+            <h2>CHARACTER PROFILE</h2>
+            <p>
+                関西弁（大阪出身）で話す、明るくノリの良いお姉さん声優。
+                演技の幅は広く、赤ちゃんからお年寄りまで演じ分けるマルチな実力を持つ一方、配信では「パワープレイ（脳筋）」と「極度の方向音痴」という魅力的なポンコツっぷりを見せる。
+            </p>
+            <table class="profile-table">
+                <tr><th>主な活動</th><td>声声優、ナレーション、ゲーム実況、雑談</td></tr>
+                <tr><th>声質</th><td>20〜30代女性、老若男女、動物などマルチ</td></tr>
+                <tr><th>配信スタイル</th><td>パワープレイ（脳筋）、漁業組合組長</td></tr>
+                <tr><th>出身</th><td>大阪</td></tr>
+            </table>
+        </section>
+
+        <!-- Episodes Section -->
+        <section class="char-section">
+            <h2>LEGENDARY EPISODES</h2>
+
+            <div class="episode-card">
+                <div class="episode-title"><i class="fa-solid fa-map-location-dot"></i> 1. 「迷子の時間」の開幕</div>
+                <p>ゲーム配信では方向音痴が名物。自ら「迷子の時間でございます」と宣言し、同じところをぐるぐる回る姿がリスナーの助けを呼ぶ。</p>
+            </div>
+
+            <div class="episode-card">
+                <div class="episode-title"><i class="fa-solid fa-fist-raised"></i> 2. 生粋の「ゴリラ」プレイ</div>
+                <p>RPG等では魔法や戦術を無視し、「同じボタンを押せば敵はいつか倒れる」という信念のもと物理で殴る。リスナーからの「ゴリラ」いじりに「誰がゴリラや！」のツッコミがセット。</p>
+            </div>
+
+            <div class="episode-card">
+                <div class="episode-title"><i class="fa-solid fa-briefcase"></i> 4. 「ビジネス現実」へ帰還</div>
+                <p>ゲームオーバーになった際、「現実に引き戻される」を「ビジネスに戻される」と言い間違え、主人公がビジネスマンになるシュールな光景をリスナーに想像させた。</p>
+            </div>
+
+            <div class="episode-card">
+                <div class="episode-title"><i class="fa-solid fa-rocket"></i> 3. 驚異の営業力と行動力</div>
+                <p>イラストレーターのTocobaさんに自ら「やりませんか？」と猛アピールし、ボイスコミックの主役を勝ち取るなど、チャンスを自ら掴みに行く情熱の持ち主。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        &copy; 2026 VTuber Archive Project. Kuga Minato Support Directory.
+    </footer>
+</body>
+
+</html>
