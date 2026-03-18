@@ -12,6 +12,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const agencies = [
 
+        // ── 個人勢 ──
+        {
+            name: "個人勢 VTuber",
+            name_en: "Independent VTubers",
+            name_es: "VTubers Independientes",
+            name_zh: "个人势 VTuber",
+            name_ko: "개인세 버츄얼 유튜버",
+            sub: "Independent",
+            filter: "indie",
+            color: "255, 142, 83",
+            icon: "I",
+            url: "IndieVtubers/indie_index.html",
+            tags: ["Agency"],
+            desc: "MyHoloTVはVTuberプロジェクト。アイドル・ゲームが特徴。公式サイトで活動情報が整理されている。",
+            desc_en: "MyHoloTV is a VTuber project. Known for idol and gaming. The site organizes activity information.",
+            desc_es: "MyHoloTV is a proyecto VTuber. Destaca por idol y los juegos. El sitio organiza la información de actividades.",
+            desc_zh: "MyHoloTV是VTuber 项目。以偶像与游戏为特色。官网整理了活动信息。",
+            desc_ko: "마이홀로TV (MyHoloTV)는 VTuber 프로젝트입니다. 아이돌 및 게임이(가) 특징입니다. 공식 사이트에서 활동 정보가 정리되어 있습니다."
+        },
+
         // ── JAPAN (稼働中) ──
 
         {
@@ -1185,7 +1205,7 @@ document.addEventListener('DOMContentLoaded', () => {
             desc_ko: "유럽 시장을 메인 타겟으로 하는 프로젝트입니다. 공식 사이트는 다양한 언어와 문화에 대한 배려가 돋보이며 국제적인 색채가 풍부합니다."
         },
 
-        // ── 調査中（運営状況不明） ──
+        // ── 追加分（内容反映） ──
         {
             name: "うたたねプロダクション",
             name_en: "Utatane Production",
@@ -1197,12 +1217,12 @@ document.addEventListener('DOMContentLoaded', () => {
             color: "180, 140, 255",
             icon: "U",
             url: "UtataneProduction/utatane_index.html",
-            tags: ["調査中"],
-            desc: "現在の運営状況を調査中のため、詳細情報は一時的に非公開としています。",
-            desc_en: "Current operation status is under investigation; detailed info is temporarily unavailable.",
-            desc_es: "El estado de operación actual está bajo investigación; la información detallada no está disponible temporalmente.",
-            desc_zh: "由于运营现状正在确认中，详细信息暂时不对外公开。",
-            desc_ko: "현재 운영 상황을 조사 중이므로 상세 정보는 일시적으로 비공개 상태입니다."
+            tags: ["Agency", "Music", "Creator"],
+            desc: "うたたねプロダクションはVTuberプロダクション。音楽・クリエイター支援が特徴。公式サイトで所属タレントの一覧が確認できる。",
+            desc_en: "Utatane Production is a VTuber production. Known for music and creator support. The site lists the talent roster.",
+            desc_es: "Utatane Production es una producción VTuber. Destaca por la música y apoyo a creadores. El sitio muestra el roster de talentos.",
+            desc_zh: "Utatane Production是VTuber 制作公司。以音乐与创作者支持为特色。官网可查看成员名单。",
+            desc_ko: "우타타네 프로덕션 (Utatane Production)는 VTuber 프로덕션입니다. 음악 및 크리에이터 지원이(가) 특징입니다. 공식 사이트에서 소속 멤버를 확인할 수 있습니다."
         },
         {
             name: "N'sARK",
@@ -1215,12 +1235,12 @@ document.addEventListener('DOMContentLoaded', () => {
             color: "70, 130, 200",
             icon: "N",
             url: "NsARK/nsark_index.html",
-            tags: ["調査中"],
-            desc: "現在の運営状況を調査中のため、詳細情報は一時的に非公開としています。",
-            desc_en: "Current operation status is under investigation; detailed info is temporarily unavailable.",
-            desc_es: "El estado de operación actual está bajo investigación; la información detallada no está disponible temporalmente.",
-            desc_zh: "由于运营现状正在确认中，详细信息暂时不对外公开。",
-            desc_ko: "현재 운영 상황을 조사 중이므로 상세 정보는 일시적으로 비공개 상태입니다."
+            tags: ["Music", "Gaming", "Tech"],
+            desc: "N'sARKはVTuberプロジェクト。音楽・ゲームが特徴。公式サイトで所属タレントの一覧が確認できる。",
+            desc_en: "N'sARK is a VTuber project. Known for music and gaming. The site lists the talent roster.",
+            desc_es: "N'sARK es una proyecto VTuber. Destaca por la música y los juegos. El sitio muestra el roster de talentos.",
+            desc_zh: "N'sARK是VTuber 项目。以音乐与游戏为特色。官网可查看成员名单。",
+            desc_ko: "엔즈아크 (N'sARK)는 VTuber 프로젝트입니다. 음악 및 게임이(가) 특징입니다. 공식 사이트에서 소속 멤버를 확인할 수 있습니다."
         },
         {
             name: "Guild CQ",
@@ -1233,12 +1253,12 @@ document.addEventListener('DOMContentLoaded', () => {
             color: "200, 160, 80",
             icon: "G",
             url: "GuildCQ/guildcq_index.html",
-            tags: ["調査中"],
-            desc: "現在の運営状況を調査中のため、詳細情報は一時的に非公開としています。",
-            desc_en: "Current operation status is under investigation; detailed info is temporarily unavailable.",
-            desc_es: "El estado de operación actual está bajo investigación; la información detallada no está disponible temporalmente.",
-            desc_zh: "由于运营现状正在确认中，详细信息暂时不对外公开。",
-            desc_ko: "현재 운영 상황을 조사 중이므로 상세 정보는 일시적으로 비공개 상태입니다."
+            tags: ["Music", "Gaming", "Worldbuilding"],
+            desc: "Guild CQはVTuberプロジェクト。音楽・ゲームが特徴。公式サイトで世界観や企画背景が語られている。",
+            desc_en: "Guild CQ is a VTuber project. Known for music and gaming. The site highlights lore and project background.",
+            desc_es: "Guild CQ es una proyecto VTuber. Destaca por la música y los juegos. El sitio destaca la historia y el contexto del proyecto.",
+            desc_zh: "Guild CQ是VTuber 项目。以音乐与游戏为特色。官网强调世界观与企划背景。",
+            desc_ko: "길드 CQ (Guild CQ)는 VTuber 프로젝트입니다. 음악 및 게임이(가) 특징입니다. 공식 사이트에서 세계관과 기획 배경을 소개합니다."
         },
         {
             name: "ななはぴ",
@@ -1251,12 +1271,12 @@ document.addEventListener('DOMContentLoaded', () => {
             color: "255, 200, 100",
             icon: "7",
             url: "NanaHapi/nanahapi_index.html",
-            tags: ["調査中"],
-            desc: "現在の運営状況を調査中のため、詳細情報は一時的に非公開としています。",
-            desc_en: "Current operation status is under investigation; detailed info is temporarily unavailable.",
-            desc_es: "El estado de operación actual está bajo investigación; la información detallada no está disponible temporalmente.",
-            desc_zh: "由于运营现状正在确认中，详细信息暂时不对外公开。",
-            desc_ko: "현재 운영 상황을 조사 중이므로 상세 정보는 일시적으로 비공개 상태입니다."
+            tags: ["Agency", "Music", "3D"],
+            desc: "ななはぴはVTuberプロダクション。音楽・3Dが特徴。公式サイトで所属タレントの一覧が確認できる。",
+            desc_en: "NanaHapi is a VTuber production. Known for music and 3D. The site lists the talent roster.",
+            desc_es: "NanaHapi es una producción VTuber. Destaca por la música y 3D. El sitio muestra el roster de talentos.",
+            desc_zh: "NanaHapi是VTuber 制作公司。以音乐与3D为特色。官网可查看成员名单。",
+            desc_ko: "나나하피 (NanaHapi)는 VTuber 프로덕션입니다. 음악 및 3D이(가) 특징입니다. 공식 사이트에서 소속 멤버를 확인할 수 있습니다."
         },
         {
             name: "ねくすとぴあ",
@@ -1269,12 +1289,12 @@ document.addEventListener('DOMContentLoaded', () => {
             color: "100, 160, 255",
             icon: "N",
             url: "Nextopia/nextopia_index.html",
-            tags: ["調査中"],
-            desc: "現在の運営状況を調査中のため、詳細情報は一時的に非公開としています。",
-            desc_en: "Current operation status is under investigation; detailed info is temporarily unavailable.",
-            desc_es: "El estado de operación actual está bajo investigación; la información detallada no está disponible temporalmente.",
-            desc_zh: "由于运营现状正在确认中，详细信息暂时不对外公开。",
-            desc_ko: "현재 운영 상황을 조사 중이므로 상세 정보는 일시적으로 비공개 상태입니다."
+            tags: ["Music", "Corporate"],
+            desc: "ねくすとぴあはVTuberプロジェクト。音楽が特徴。公式サイトで所属タレントの一覧が確認できる。",
+            desc_en: "Nextopia is a VTuber project. Known for music. The site lists the talent roster.",
+            desc_es: "Nextopia es una proyecto VTuber. Destaca por la música. El sitio muestra el roster de talentos.",
+            desc_zh: "Nextopia是VTuber 项目。以音乐为特色。官网可查看成员名单。",
+            desc_ko: "넥스토피아 (Nextopia)는 VTuber 프로젝트입니다. 음악이(가) 특징입니다. 공식 사이트에서 소속 멤버를 확인할 수 있습니다."
         },
         {
             name: "VALTRA",
@@ -1287,12 +1307,12 @@ document.addEventListener('DOMContentLoaded', () => {
             color: "140, 80, 255",
             icon: "V",
             url: "VALTRA/valtra_index.html",
-            tags: ["調査中"],
-            desc: "現在の運営状況を調査中のため、詳細情報は一時的に非公開としています。",
-            desc_en: "Current operation status is under investigation; detailed info is temporarily unavailable.",
-            desc_es: "El estado de operación actual está bajo investigación; la información detallada no está disponible temporalmente.",
-            desc_zh: "由于运营现状正在确认中，详细信息暂时不对外公开。",
-            desc_ko: "현재 운영 상황을 조사 중이므로 상세 정보는 일시적으로 비공개 상태입니다."
+            tags: ["Agency", "Gaming", "Worldbuilding"],
+            desc: "VALTRAはVTuber事務所。ゲーム・世界観が特徴。公式サイトで所属タレントの一覧が確認できる。",
+            desc_en: "VALTRA is a VTuber agency. Known for gaming and worldbuilding. The site lists the talent roster.",
+            desc_es: "VALTRA es una agencia VTuber. Destaca por los juegos y construcción de mundo. El sitio muestra el roster de talentos.",
+            desc_zh: "VALTRA是VTuber 事务所。以游戏与世界观为特色。官网可查看成员名单。",
+            desc_ko: "발트라 (VALTRA)는 VTuber 에이전시입니다. 게임 및 세계관이(가) 특징입니다. 공식 사이트에서 소속 멤버를 확인할 수 있습니다."
         },
         {
             name: "Vebop Project",
@@ -1305,12 +1325,12 @@ document.addEventListener('DOMContentLoaded', () => {
             color: "255, 200, 50",
             icon: "V",
             url: "VebopProject/vebop_index.html",
-            tags: ["調査中"],
-            desc: "現在の運営状況を調査中のため、詳細情報は一時的に非公開としています。",
-            desc_en: "Current operation status is under investigation; detailed info is temporarily unavailable.",
-            desc_es: "El estado de operación actual está bajo investigación; la información detallada no está disponible temporalmente.",
-            desc_zh: "由于运营现状正在确认中，详细信息暂时不对外公开。",
-            desc_ko: "현재 운영 상황을 조사 중이므로 상세 정보는 일시적으로 비공개 상태입니다."
+            tags: ["Music", "Corporate"],
+            desc: "Vebop ProjectはVTuberプロジェクト。音楽が特徴。公式サイトで所属タレントの一覧が確認できる。",
+            desc_en: "Vebop Project is a VTuber project. Known for music. The site lists the talent roster.",
+            desc_es: "Vebop Project es una proyecto VTuber. Destaca por la música. El sitio muestra el roster de talentos.",
+            desc_zh: "Vebop Project是VTuber 项目。以音乐为特色。官网可查看成员名单。",
+            desc_ko: "비밥 프로젝트 (Vebop Project)는 VTuber 프로젝트입니다. 음악이(가) 특징입니다. 공식 사이트에서 소속 멤버를 확인할 수 있습니다."
         },
         {
             name: "Vlash",
@@ -1323,12 +1343,12 @@ document.addEventListener('DOMContentLoaded', () => {
             color: "255, 80, 60",
             icon: "V",
             url: "Vlash/vlash_index.html",
-            tags: ["調査中"],
-            desc: "現在の運営状況を調査中のため、詳細情報は一時的に非公開としています。",
-            desc_en: "Current operation status is under investigation; detailed info is temporarily unavailable.",
-            desc_es: "El estado de operación actual está bajo investigación; la información detallada no está disponible temporalmente.",
-            desc_zh: "由于运营现状正在确认中，详细信息暂时不对外公开。",
-            desc_ko: "현재 운영 상황을 조사 중이므로 상세 정보는 일시적으로 비공개 상태입니다."
+            tags: ["Corporate"],
+            desc: "VlashはVTuberプロジェクト。公式サイトで所属タレントの一覧が確認できる。",
+            desc_en: "Vlash is a VTuber project. The site lists the talent roster.",
+            desc_es: "Vlash es una proyecto VTuber. El sitio muestra el roster de talentos.",
+            desc_zh: "Vlash是VTuber 项目。官网可查看成员名单。",
+            desc_ko: "브래쉬 (Vlash)는 VTuber 프로젝트입니다. 공식 사이트에서 소속 멤버를 확인할 수 있습니다."
         },
         {
             name: "PROMISU",
@@ -1341,12 +1361,12 @@ document.addEventListener('DOMContentLoaded', () => {
             color: "255, 140, 100",
             icon: "P",
             url: "PROMISU/promisu_index.html",
-            tags: ["調査中"],
-            desc: "現在の運営状況を調査中のため、詳細情報は一時的に非公開としています。",
-            desc_en: "Current operation status is under investigation; detailed info is temporarily unavailable.",
-            desc_es: "El estado de operación actual está bajo investigación; la información detallada no está disponible temporalmente.",
-            desc_zh: "由于运营现状正在确认中，详细信息暂时不对外公开。",
-            desc_ko: "현재 운영 상황을 조사 중이므로 상세 정보는 일시적으로 비공개 상태입니다."
+            tags: ["3D", "Multilingual", "Variety"],
+            desc: "PROMISUはグローバルなVTuberプロジェクト。3D・多言語が特徴。公式サイトで所属タレントの一覧が確認できる。",
+            desc_en: "PROMISU is a global VTuber project. Known for 3D and multilingual focus. The site lists the talent roster.",
+            desc_es: "PROMISU es una proyecto VTuber global. Destaca por 3D y enfoque multilingüe. El sitio muestra el roster de talentos.",
+            desc_zh: "PROMISU是全球的VTuber 项目。以3D与多语言为特色。官网可查看成员名单。",
+            desc_ko: "프로미스 (PROMISU)는 글로벌 VTuber 프로젝트입니다. 3D 및 다국어이(가) 특징입니다. 공식 사이트에서 소속 멤버를 확인할 수 있습니다."
         },
         {
             name: "VEXZ",
@@ -1359,12 +1379,12 @@ document.addEventListener('DOMContentLoaded', () => {
             color: "255, 100, 200",
             icon: "V",
             url: "VEXZ/vexz_index.html",
-            tags: ["調査中"],
-            desc: "現在の運営状況を調査中のため、詳細情報は一時的に非公開としています。",
-            desc_en: "Current operation status is under investigation; detailed info is temporarily unavailable.",
-            desc_es: "El estado de operación actual está bajo investigación; la información detallada no está disponible temporalmente.",
-            desc_zh: "由于运营现状正在确认中，详细信息暂时不对外公开。",
-            desc_ko: "현재 운영 상황을 조사 중이므로 상세 정보는 일시적으로 비공개 상태입니다."
+            tags: ["Music", "3D", "Tech"],
+            desc: "VEXZはVTuberプロジェクト。音楽・3Dが特徴。公式サイトで世界観や企画背景が語られている。",
+            desc_en: "VEXZ is a VTuber project. Known for music and 3D. The site highlights lore and project background.",
+            desc_es: "VEXZ es una proyecto VTuber. Destaca por la música y 3D. El sitio destaca la historia y el contexto del proyecto.",
+            desc_zh: "VEXZ是VTuber 项目。以音乐与3D为特色。官网强调世界观与企划背景。",
+            desc_ko: "벡스 (VEXZ)는 VTuber 프로젝트입니다. 음악 및 3D이(가) 특징입니다. 공식 사이트에서 세계관과 기획 배경을 소개합니다."
         },
         {
             name: "bondlive",
@@ -1377,12 +1397,12 @@ document.addEventListener('DOMContentLoaded', () => {
             color: "255, 220, 120",
             icon: "B",
             url: "bondlive/bondlive_index.html",
-            tags: ["調査中"],
-            desc: "現在の運営状況を調査中のため、詳細情報は一時的に非公開としています。",
-            desc_en: "Current operation status is under investigation; detailed info is temporarily unavailable.",
-            desc_es: "El estado de operación actual está bajo investigación; la información detallada no está disponible temporalmente.",
-            desc_zh: "由于运营现状正在确认中，详细信息暂时不对外公开。",
-            desc_ko: "현재 운영 상황을 조사 중이므로 상세 정보는 일시적으로 비공개 상태입니다."
+            tags: ["Agency", "Gaming", "Live"],
+            desc: "bondliveは日本のVTuber事務所。ゲーム・ライブ/イベントが特徴。公式サイトで所属タレントの一覧が確認できる。",
+            desc_en: "bondlive is a Japan-based VTuber agency. Known for gaming and live events. The site lists the talent roster.",
+            desc_es: "bondlive es una agencia VTuber con base en Japón. Destaca por los juegos y eventos en vivo. El sitio muestra el roster de talentos.",
+            desc_zh: "bondlive是日本的VTuber 事务所。以游戏与直播/活动为特色。官网可查看成员名单。",
+            desc_ko: "본드라이브 (bondlive)는 일본 기반의 VTuber 에이전시입니다. 게임 및 라이브/이벤트이(가) 특징입니다. 공식 사이트에서 소속 멤버를 확인할 수 있습니다."
         },
         {
             name: "MAHA5JAPAN",
@@ -1395,12 +1415,12 @@ document.addEventListener('DOMContentLoaded', () => {
             color: "255, 80, 120",
             icon: "M",
             url: "MAHA5JAPAN/maha5_index.html",
-            tags: ["調査中"],
-            desc: "現在の運営状況を調査中のため、詳細情報は一時的に非公開としています。",
-            desc_en: "Current operation status is under investigation; detailed info is temporarily unavailable.",
-            desc_es: "El estado de operación actual está bajo investigación; la información detallada no está disponible temporalmente.",
-            desc_zh: "由于运营现状正在确认中，详细信息暂时不对外公开。",
-            desc_ko: "현재 운영 상황을 조사 중이므로 상세 정보는 일시적으로 비공개 상태입니다."
+            tags: ["Agency", "JP", "Corporate"],
+            desc: "MAHA5JAPANは日本のVTuber事務所。公式サイトで所属タレントの一覧が確認できる。",
+            desc_en: "MAHA5JAPAN is a Japan-based VTuber agency. The site lists the talent roster.",
+            desc_es: "MAHA5JAPAN es una agencia VTuber con base en Japón. El sitio muestra el roster de talentos.",
+            desc_zh: "MAHA5JAPAN是日本的VTuber 事务所。官网可查看成员名单。",
+            desc_ko: "마하판차 재팬 (MAHA5JAPAN)는 일본 기반의 VTuber 에이전시입니다. 공식 사이트에서 소속 멤버를 확인할 수 있습니다."
         },
         {
             name: "MeSTAGE",
@@ -1413,12 +1433,12 @@ document.addEventListener('DOMContentLoaded', () => {
             color: "255, 160, 220",
             icon: "M",
             url: "MeSTAGE/mestage_index.html",
-            tags: ["調査中"],
-            desc: "現在の運営状況を調査中のため、詳細情報は一時的に非公開としています。",
-            desc_en: "Current operation status is under investigation; detailed info is temporarily unavailable.",
-            desc_es: "El estado de operación actual está bajo investigación; la información detallada no está disponible temporalmente.",
-            desc_zh: "由于运营现状正在确认中，详细信息暂时不对外公开。",
-            desc_ko: "현재 운영 상황을 조사 중이므로 상세 정보는 일시적으로 비공개 상태입니다."
+            tags: ["Music", "Esports"],
+            desc: "MeSTAGEはVTuberプロジェクト。音楽・eスポーツが特徴。公式サイトで所属タレントの一覧が確認できる。",
+            desc_en: "MeSTAGE is a VTuber project. Known for music and esports. The site lists the talent roster.",
+            desc_es: "MeSTAGE es una proyecto VTuber. Destaca por la música y los esports. El sitio muestra el roster de talentos.",
+            desc_zh: "MeSTAGE是VTuber 项目。以音乐与电竞为特色。官网可查看成员名单。",
+            desc_ko: "미스테 (MeSTAGE)는 VTuber 프로젝트입니다. 음악 및 e스포츠이(가) 특징입니다. 공식 사이트에서 소속 멤버를 확인할 수 있습니다."
         },
         {
             name: "MicoLiz",
@@ -1431,12 +1451,12 @@ document.addEventListener('DOMContentLoaded', () => {
             color: "200, 100, 255",
             icon: "M",
             url: "MicoLiz/micoliz_index.html",
-            tags: ["調査中"],
-            desc: "現在の運営状況を調査中のため、詳細情報は一時的に非公開としています。",
-            desc_en: "Current operation status is under investigation; detailed info is temporarily unavailable.",
-            desc_es: "El estado de operación actual está bajo investigación; la información detallada no está disponible temporalmente.",
-            desc_zh: "由于运营现状正在确认中，详细信息暂时不对外公开。",
-            desc_ko: "현재 운영 상황을 조사 중이므로 상세 정보는 일시적으로 비공개 상태입니다."
+            tags: ["Worldbuilding"],
+            desc: "MicoLizはVTuberプロジェクト。世界観が特徴。公式サイトで世界観や企画背景が語られている。",
+            desc_en: "MicoLiz is a VTuber project. Known for worldbuilding. The site highlights lore and project background.",
+            desc_es: "MicoLiz es una proyecto VTuber. Destaca por construcción de mundo. El sitio destaca la historia y el contexto del proyecto.",
+            desc_zh: "MicoLiz是VTuber 项目。以世界观为特色。官网强调世界观与企划背景。",
+            desc_ko: "미코리스 (MicoLiz)는 VTuber 프로젝트입니다. 세계관이(가) 특징입니다. 공식 사이트에서 세계관과 기획 배경을 소개합니다."
         },
         {
             name: "MUSUBIME△",
@@ -1449,12 +1469,12 @@ document.addEventListener('DOMContentLoaded', () => {
             color: "160, 255, 200",
             icon: "M",
             url: "MUSUBIME/musubime_index.html",
-            tags: ["調査中"],
-            desc: "現在の運営状況を調査中のため、詳細情報は一時的に非公開としています。",
-            desc_en: "Current operation status is under investigation; detailed info is temporarily unavailable.",
-            desc_es: "El estado de operación actual está bajo investigación; la información detallada no está disponible temporalmente.",
-            desc_zh: "由于运营现状正在确认中，详细信息暂时不对外公开。",
-            desc_ko: "현재 운영 상황을 조사 중이므로 상세 정보는 일시적으로 비공개 상태입니다."
+            tags: ["Gaming", "Tech", "Creator"],
+            desc: "MUSUBIME△はVTuberプロジェクト。ゲーム・技術が特徴。公式サイトで募集・オーディション情報が掲載される。",
+            desc_en: "MUSUBIME△ is a VTuber project. Known for gaming and technology. Recruitment and audition info appears on the site.",
+            desc_es: "MUSUBIME△ es una proyecto VTuber. Destaca por los juegos y la tecnología. El sitio publica información de reclutamiento y audiciones.",
+            desc_zh: "MUSUBIME△是VTuber 项目。以游戏与技术为特色。官网发布招募/甄选信息。",
+            desc_ko: "무스비메 (MUSUBIME△)는 VTuber 프로젝트입니다. 게임 및 기술이(가) 특징입니다. 공식 사이트에 모집/오디션 정보가 올라옵니다."
         },
         {
             name: "UniVIRTUAL",
@@ -1467,12 +1487,12 @@ document.addEventListener('DOMContentLoaded', () => {
             color: "150, 200, 255",
             icon: "U",
             url: "UniVIRTUAL/univirtual_index.html",
-            tags: ["調査中"],
-            desc: "現在の運営状況を調査中のため、詳細情報は一時的に非公開としています。",
-            desc_en: "Current operation status is under investigation; detailed info is temporarily unavailable.",
-            desc_es: "El estado de operación actual está bajo investigación; la información detallada no está disponible temporalmente.",
-            desc_zh: "由于运营现状正在确认中，详细信息暂时不对外公开。",
-            desc_ko: "현재 운영 상황을 조사 중이므로 상세 정보는 일시적으로 비공개 상태입니다."
+            tags: ["Agency", "Music", "Gaming"],
+            desc: "UniVIRTUALはVTuber事務所。音楽・ゲームが特徴。公式サイトに楽曲やディスコグラフィ情報がまとまっている。",
+            desc_en: "UniVIRTUAL is a VTuber agency. Known for music and gaming. Music and discography details are compiled on the site.",
+            desc_es: "UniVIRTUAL es una agencia VTuber. Destaca por la música y los juegos. La música y la discografía están recopiladas en el sitio.",
+            desc_zh: "UniVIRTUAL是VTuber 事务所。以音乐与游戏为特色。官网汇总了音乐与作品信息。",
+            desc_ko: "유니버추얼 (UniVIRTUAL)는 VTuber 에이전시입니다. 음악 및 게임이(가) 특징입니다. 공식 사이트에 음악과 디스코그래피 정보가 정리되어 있습니다."
         },
         {
             name: "ラブボックス",
@@ -1485,12 +1505,12 @@ document.addEventListener('DOMContentLoaded', () => {
             color: "255, 100, 150",
             icon: "L",
             url: "LoveBox/lovebox_index.html",
-            tags: ["調査中"],
-            desc: "現在の運営状況を調査中のため、詳細情報は一時的に非公開としています。",
-            desc_en: "Current operation status is under investigation; detailed info is temporarily unavailable.",
-            desc_es: "El estado de operación actual está bajo investigación; la información detallada no está disponible temporalmente.",
-            desc_zh: "由于运营现状正在确认中，详细信息暂时不对外公开。",
-            desc_ko: "현재 운영 상황을 조사 중이므로 상세 정보는 일시적으로 비공개 상태입니다."
+            tags: ["Agency", "Idol"],
+            desc: "ラブボックスはVTuberプロダクション。アイドルが特徴。公式サイトで所属タレントの一覧が確認できる。",
+            desc_en: "LoveBox is a VTuber production. Known for idol. The site lists the talent roster.",
+            desc_es: "LoveBox es una producción VTuber. Destaca por idol. El sitio muestra el roster de talentos.",
+            desc_zh: "ラブボックス (LoveBox)是VTuber 制作公司。以偶像为特色。官网可查看成员名单。",
+            desc_ko: "러브박스는 VTuber 프로덕션입니다. 아이돌이(가) 특징입니다. 공식 사이트에서 소속 멤버를 확인할 수 있습니다."
         },
         {
             name: "re;BON",
@@ -1503,12 +1523,12 @@ document.addEventListener('DOMContentLoaded', () => {
             color: "255, 140, 180",
             icon: "R",
             url: "reBON/rebon_index.html",
-            tags: ["調査中"],
-            desc: "現在の運営状況を調査中のため、詳細情報は一時的に非公開としています。",
-            desc_en: "Current operation status is under investigation; detailed info is temporarily unavailable.",
-            desc_es: "El estado de operación actual está bajo investigación; la información detallada no está disponible temporalmente.",
-            desc_zh: "由于运营现状正在确认中，详细信息暂时不对外公开。",
-            desc_ko: "현재 운영 상황을 조사 중이므로 상세 정보는 일시적으로 비공개 상태입니다."
+            tags: ["Agency", "Creator", "Corporate"],
+            desc: "re;BONはVTuber事務所。クリエイター支援が特徴。公式サイトで所属タレントの一覧が確認できる。",
+            desc_en: "re;BON is a VTuber agency. Known for creator support. The site lists the talent roster.",
+            desc_es: "re;BON es una agencia VTuber. Destaca por apoyo a creadores. El sitio muestra el roster de talentos.",
+            desc_zh: "re;BON是VTuber 事务所。以创作者支持为特色。官网可查看成员名单。",
+            desc_ko: "리본 (re;BON)는 VTuber 에이전시입니다. 크리에이터 지원이(가) 특징입니다. 공식 사이트에서 소속 멤버를 확인할 수 있습니다."
         },
         {
             name: "Luminaria Production",
@@ -1521,12 +1541,12 @@ document.addEventListener('DOMContentLoaded', () => {
             color: "200, 240, 255",
             icon: "L",
             url: "LuminariaProduction/luminaria_index.html",
-            tags: ["調査中"],
-            desc: "現在の運営状況を調査中のため、詳細情報は一時的に非公開としています。",
-            desc_en: "Current operation status is under investigation; detailed info is temporarily unavailable.",
-            desc_es: "El estado de operación actual está bajo investigación; la información detallada no está disponible temporalmente.",
-            desc_zh: "由于运营现状正在确认中，详细信息暂时不对外公开。",
-            desc_ko: "현재 운영 상황을 조사 중이므로 상세 정보는 일시적으로 비공개 상태입니다."
+            tags: ["Agency", "Music", "Gaming"],
+            desc: "Luminaria ProductionはVTuber事務所。音楽・ゲームが特徴。公式サイトで所属タレントの一覧が確認できる。",
+            desc_en: "Luminaria Production is a VTuber agency. Known for music and gaming. The site lists the talent roster.",
+            desc_es: "Luminaria Production es una agencia VTuber. Destaca por la música y los juegos. El sitio muestra el roster de talentos.",
+            desc_zh: "Luminaria Production是VTuber 事务所。以音乐与游戏为特色。官网可查看成员名单。",
+            desc_ko: "루미나리아 프로덕션 (Luminaria Production)는 VTuber 에이전시입니다. 음악 및 게임이(가) 특징입니다. 공식 사이트에서 소속 멤버를 확인할 수 있습니다."
         },
         {
             name: "Arri Virtual",
@@ -1539,12 +1559,12 @@ document.addEventListener('DOMContentLoaded', () => {
             color: "180, 255, 200",
             icon: "A",
             url: "ArriVirtual/arrivirtual_index.html",
-            tags: ["調査中"],
-            desc: "現在の運営状況を調査中のため、詳細情報は一時的に非公開としています。",
-            desc_en: "Current operation status is under investigation; detailed info is temporarily unavailable.",
-            desc_es: "El estado de operación actual está bajo investigación; la información detallada no está disponible temporalmente.",
-            desc_zh: "由于运营现状正在确认中，详细信息暂时不对外公开。",
-            desc_ko: "현재 운영 상황을 조사 중이므로 상세 정보는 일시적으로 비공개 상태입니다."
+            tags: ["Agency", "Global"],
+            desc: "Arri VirtualはグローバルなVTuber事務所。公式サイトで所属タレントの一覧が確認できる。",
+            desc_en: "Arri Virtual is a global VTuber agency. The site lists the talent roster.",
+            desc_es: "Arri Virtual es una agencia VTuber global. El sitio muestra el roster de talentos.",
+            desc_zh: "Arri Virtual是全球的VTuber 事务所。官网可查看成员名单。",
+            desc_ko: "아리 버추얼 (Arri Virtual)는 글로벌 VTuber 에이전시입니다. 공식 사이트에서 소속 멤버를 확인할 수 있습니다."
         },
         {
             name: "AStars production",
@@ -1557,12 +1577,12 @@ document.addEventListener('DOMContentLoaded', () => {
             color: "255, 230, 80",
             icon: "A",
             url: "AStarsProduction/astars_index.html",
-            tags: ["調査中"],
-            desc: "現在の運営状況を調査中のため、詳細情報は一時的に非公開としています。",
-            desc_en: "Current operation status is under investigation; detailed info is temporarily unavailable.",
-            desc_es: "El estado de operación actual está bajo investigación; la información detallada no está disponible temporalmente.",
-            desc_zh: "由于运营现状正在确认中，详细信息暂时不对外公开。",
-            desc_ko: "현재 운영 상황을 조사 중이므로 상세 정보는 일시적으로 비공개 상태입니다."
+            tags: ["Agency", "Global", "Corporate"],
+            desc: "AStars productionはグローバルなVTuber事務所。公式サイトで所属タレントの一覧が確認できる。",
+            desc_en: "AStars production is a global VTuber agency. The site lists the talent roster.",
+            desc_es: "AStars production es una agencia VTuber global. El sitio muestra el roster de talentos.",
+            desc_zh: "AStars production是全球的VTuber 事务所。官网可查看成员名单。",
+            desc_ko: "에이스타즈 (AStars production)는 글로벌 VTuber 에이전시입니다. 공식 사이트에서 소속 멤버를 확인할 수 있습니다."
         },
         {
             name: "ChromaSHIFT",
@@ -1575,12 +1595,12 @@ document.addEventListener('DOMContentLoaded', () => {
             color: "255, 8, 68",
             icon: "C",
             url: "ChromaSHIFT/chromashift_index.html",
-            tags: ["調査中"],
-            desc: "現在の運営状況を調査中のため、詳細情報は一時的に非公開としています。",
-            desc_en: "Current operation status is under investigation; detailed info is temporarily unavailable.",
-            desc_es: "El estado de operación actual está bajo investigación; la información detallada no está disponible temporalmente.",
-            desc_zh: "由于运营现状正在确认中，详细信息暂时不对外公开。",
-            desc_ko: "현재 운영 상황을 조사 중이므로 상세 정보는 일시적으로 비공개 상태입니다."
+            tags: ["Agency", "Multilingual", "Variety"],
+            desc: "ChromaSHIFTはグローバルなVTuber事務所。多言語・バラエティが特徴。公式サイトで所属タレントの一覧が確認できる。",
+            desc_en: "ChromaSHIFT is a global VTuber agency. Known for multilingual focus and variety content. The site lists the talent roster.",
+            desc_es: "ChromaSHIFT es una agencia VTuber global. Destaca por enfoque multilingüe y contenido variado. El sitio muestra el roster de talentos.",
+            desc_zh: "ChromaSHIFT是全球的VTuber 事务所。以多语言与多样内容为特色。官网可查看成员名单。",
+            desc_ko: "크로마시프트 (ChromaSHIFT)는 글로벌 VTuber 에이전시입니다. 다국어 및 버라이어티이(가) 특징입니다. 공식 사이트에서 소속 멤버를 확인할 수 있습니다."
         },
         {
             name: "PRISM Project",
@@ -1593,12 +1613,12 @@ document.addEventListener('DOMContentLoaded', () => {
             color: "79, 172, 254",
             icon: "P",
             url: "PrismProject/prismproject_index.html",
-            tags: ["調査中"],
-            desc: "現在の運営状況を調査中のため、詳細情報は一時的に非公開としています。",
-            desc_en: "Current operation status is under investigation; detailed info is temporarily unavailable.",
-            desc_es: "El estado de operación actual está bajo investigación; la información detallada no está disponible temporalmente.",
-            desc_zh: "由于运营现状正在确认中，详细信息暂时不对外公开。",
-            desc_ko: "현재 운영 상황을 조사 중이므로 상세 정보는 일시적으로 비공개 상태입니다."
+            tags: ["Agency"],
+            desc: "PRISM ProjectはVTuberプロジェクト。公式サイトで活動情報が整理されている。",
+            desc_en: "PRISM Project is a VTuber project. The site organizes activity information.",
+            desc_es: "PRISM Project es una proyecto VTuber. El sitio organiza la información de actividades.",
+            desc_zh: "PRISM Project是VTuber 项目。官网整理了活动信息。",
+            desc_ko: "프리즘 프로젝트 (PRISM Project)는 VTuber 프로젝트입니다. 공식 사이트에서 활동 정보가 정리되어 있습니다."
         },
         {
             name: "Production Kawaii",
@@ -1611,12 +1631,12 @@ document.addEventListener('DOMContentLoaded', () => {
             color: "255, 154, 158",
             icon: "P",
             url: "ProductionKawaii/productionkawaii_index.html",
-            tags: ["調査中"],
-            desc: "現在の運営状況を調査中のため、詳細情報は一時的に非公開としています。",
-            desc_en: "Current operation status is under investigation; detailed info is temporarily unavailable.",
-            desc_es: "El estado de operación actual está bajo investigación; la información detallada no está disponible temporalmente.",
-            desc_zh: "由于运营现状正在确认中，详细信息暂时不对外公开。",
-            desc_ko: "현재 운영 상황을 조사 중이므로 상세 정보는 일시적으로 비공개 상태입니다."
+            tags: ["Agency", "Music", "Idol"],
+            desc: "Production KawaiiはグローバルなVTuber事務所。音楽・アイドルが特徴。公式サイトで世界観や企画背景が語られている。",
+            desc_en: "Production Kawaii is a global VTuber agency. Known for music and idol. The site highlights lore and project background.",
+            desc_es: "Production Kawaii es una agencia VTuber global. Destaca por la música y idol. El sitio destaca la historia y el contexto del proyecto.",
+            desc_zh: "Production Kawaii是全球的VTuber 事务所。以音乐与偶像为特色。官网强调世界观与企划背景。",
+            desc_ko: "프로덕션 카와이 (Production Kawaii)는 글로벌 VTuber 에이전시입니다. 음악 및 아이돌이(가) 특징입니다. 공식 사이트에서 세계관과 기획 배경을 소개합니다."
         },
         {
             name: "AkioAIR",
@@ -1629,12 +1649,12 @@ document.addEventListener('DOMContentLoaded', () => {
             color: "70, 130, 180",
             icon: "A",
             url: "AkioAIR/akioair_index.html",
-            tags: ["調査中"],
-            desc: "現在の運営状況を調査中のため、詳細情報は一時的に非公開としています。",
-            desc_en: "Current operation status is under investigation; detailed info is temporarily unavailable.",
-            desc_es: "El estado de operación actual está bajo investigación; la información detallada no está disponible temporalmente.",
-            desc_zh: "由于运营现状正在确认中，详细信息暂时不对外公开。",
-            desc_ko: "현재 운영 상황을 조사 중이므로 상세 정보는 일시적으로 비공개 상태입니다."
+            tags: ["Agency", "Music", "Gaming"],
+            desc: "AkioAIRは台湾のVTuber事務所。音楽・ゲームが特徴。公式サイトに楽曲やディスコグラフィ情報がまとまっている。",
+            desc_en: "AkioAIR is a Taiwan-based VTuber agency. Known for music and gaming. Music and discography details are compiled on the site.",
+            desc_es: "AkioAIR es una agencia VTuber con base en Taiwán. Destaca por la música y los juegos. La música y la discografía están recopiladas en el sitio.",
+            desc_zh: "AkioAIR是台湾的VTuber 事务所。以音乐与游戏为特色。官网汇总了音乐与作品信息。",
+            desc_ko: "아키오에어 (AkioAIR)는 대만 기반의 VTuber 에이전시입니다. 음악 및 게임이(가) 특징입니다. 공식 사이트에 음악과 디스코그래피 정보가 정리되어 있습니다."
         },
         {
             name: "CyberLive",
@@ -1647,12 +1667,12 @@ document.addEventListener('DOMContentLoaded', () => {
             color: "0, 255, 255",
             icon: "C",
             url: "CyberLive/cyberlive_index.html",
-            tags: ["調査中"],
-            desc: "現在の運営状況を調査中のため、詳細情報は一時的に非公開としています。",
-            desc_en: "Current operation status is under investigation; detailed info is temporarily unavailable.",
-            desc_es: "El estado de operación actual está bajo investigación; la información detallada no está disponible temporalmente.",
-            desc_zh: "由于运营现状正在确认中，详细信息暂时不对外公开。",
-            desc_ko: "현재 운영 상황을 조사 중이므로 상세 정보는 일시적으로 비공개 상태입니다."
+            tags: ["Agency", "Music", "Idol"],
+            desc: "CyberLiveは台湾のVTuber事務所。音楽・アイドルが特徴。公式サイトに楽曲やディスコグラフィ情報がまとまっている。",
+            desc_en: "CyberLive is a Taiwan-based VTuber agency. Known for music and idol. Music and discography details are compiled on the site.",
+            desc_es: "CyberLive es una agencia VTuber con base en Taiwán. Destaca por la música y idol. La música y la discografía están recopiladas en el sitio.",
+            desc_zh: "CyberLive是台湾的VTuber 事务所。以音乐与偶像为特色。官网汇总了音乐与作品信息。",
+            desc_ko: "사이버라이브 (CyberLive)는 대만 기반의 VTuber 에이전시입니다. 음악 및 아이돌이(가) 특징입니다. 공식 사이트에 음악과 디스코그래피 정보가 정리되어 있습니다."
         },
         {
             name: "Tsunderia",
@@ -1665,12 +1685,12 @@ document.addEventListener('DOMContentLoaded', () => {
             color: "255, 99, 71",
             icon: "T",
             url: "Tsunderia/tsunderia_index.html",
-            tags: ["調査中"],
-            desc: "現在の運営状況を調査中のため、詳細情報は一時的に非公開としています。",
-            desc_en: "Current operation status is under investigation; detailed info is temporarily unavailable.",
-            desc_es: "El estado de operación actual está bajo investigación; la información detallada no está disponible temporalmente.",
-            desc_zh: "由于运营现状正在确认中，详细信息暂时不对外公开。",
-            desc_ko: "현재 운영 상황을 조사 중이므로 상세 정보는 일시적으로 비공개 상태입니다."
+            tags: ["Agency"],
+            desc: "TsunderiaはVTuberプロジェクト。公式サイトで活動情報が整理されている。",
+            desc_en: "Tsunderia is a VTuber project. The site organizes activity information.",
+            desc_es: "Tsunderia es una proyecto VTuber. El sitio organiza la información de actividades.",
+            desc_zh: "Tsunderia是VTuber 项目。官网整理了活动信息。",
+            desc_ko: "츤데리아 (Tsunderia)는 VTuber 프로젝트입니다. 공식 사이트에서 활동 정보가 정리되어 있습니다."
         },
         {
             name: "MyHoloTV",
@@ -1683,38 +1703,19 @@ document.addEventListener('DOMContentLoaded', () => {
             color: "32, 178, 170",
             icon: "M",
             url: "MyHoloTV/myholotv_index.html",
-            tags: ["調査中"],
-            desc: "現在の運営状況を調査中のため、詳細情報は一時的に非公開としています。",
-            desc_en: "Current operation status is under investigation; detailed info is temporarily unavailable.",
-            desc_es: "El estado de operación actual está bajo investigación; la información detallada no está disponible temporalmente.",
-            desc_zh: "由于运营现状正在确认中，详细信息暂时不对外公开。",
-            desc_ko: "현재 운영 상황을 조사 중이므로 상세 정보는 일시적으로 비공개 상태입니다."
+            tags: ["Idol", "Gaming", "Esports"],
+            desc: "MyHoloTVはVTuberプロジェクト。アイドル・ゲームが特徴。公式サイトで活動情報が整理されている。",
+            desc_en: "MyHoloTV is a VTuber project. Known for idol and gaming. The site organizes activity information.",
+            desc_es: "MyHoloTV es una proyecto VTuber. Destaca por idol y los juegos. El sitio organiza la información de actividades.",
+            desc_zh: "MyHoloTV是VTuber 项目。以偶像与游戏为特色。官网整理了活动信息。",
+            desc_ko: "마이홀로TV (MyHoloTV)는 VTuber 프로젝트입니다. 아이돌 및 게임이(가) 특징입니다. 공식 사이트에서 활동 정보가 정리되어 있습니다."
         },
 
-        // ── その他 ──
-        {
-            name: "個人勢 VTuber",
-            name_en: "Independent VTubers",
-            name_es: "VTubers Independientes",
-            name_zh: "个人势 VTuber",
-            name_ko: "개인세 버츄얼 유튜버",
-            sub: "Independent",
-            filter: "indie",
-            color: "255, 142, 83",
-            icon: "I",
-            url: "IndieVtubers/indie_index.html",
-            tags: ["Indie", "Global"],
-            desc: "特定の事務所に所属せず活動するVTuber群。多様なジャンルと配信スタイルが共存している。",
-            desc_en: "A group of VTubers who operate without a specific agency. A wide variety of genres and streaming styles coexist here.",
-            desc_es: "Un grupo de VTubers que operan sin una agencia específica. Aquí coexisten una gran variedad de géneros y estilos de streaming.",
-            desc_zh: "不隶属于特定事务所、独立开展活动的VTuber群体。多样化的领域和直播风格并存于此。",
-            desc_ko: "특정 사무소에 소속되지 않고 활동하는 버츄얼 유튜버 군입니다. 다양한 장르와 방송 스타일이 공존하고 있습니다."
-        }
     ];
 
     const MAX_CARD_TAGS = 5;
     const BLOCKED_TAGS = new Set(['CR-Mafu', 'Coffee']);
-    const INVESTIGATING_TAG = '調査中';
+    const INVESTIGATING_TAG = '整備中';
     const agencyTagTranslations = {
         '3D': { ja: '3D', en: '3D', es: '3D', zh: '3D', ko: '3D' },
         '3D Idol': { ja: '3Dアイドル', en: '3D Idol', es: 'Idol 3D', zh: '3D偶像', ko: '3D 아이돌' },
@@ -1757,7 +1758,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Synth': { ja: 'シンセ', en: 'Synth', es: 'Sinte', zh: '合成器', ko: '신스' },
         'Tech': { ja: '技術', en: 'Tech', es: 'Tecnología', zh: '技术', ko: '기술' },
         'Tokyo': { ja: '東京', en: 'Tokyo', es: 'Tokio', zh: '东京', ko: '도쿄' },
-        'Under Investigation': { ja: '調査中', en: 'Under Investigation', es: 'En investigación', zh: '调查中', ko: '조사 중' },
+        'In Progress': { ja: '整備中', en: 'In Progress', es: 'En progreso', zh: '整理中', ko: '정비 중' },
         'Underground': { ja: 'アンダーグラウンド', en: 'Underground', es: 'Subterráneo', zh: '地下', ko: '언더그라운드' },
         'Variety': { ja: 'バラエティ', en: 'Variety', es: 'Variedad', zh: '综合', ko: '버라이어티' },
         'Virtual Art': { ja: 'バーチャルアート', en: 'Virtual Art', es: 'Arte Virtual', zh: '虚拟艺术', ko: '버추얼 아트' },
@@ -1891,7 +1892,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     if (tag === INVESTIGATING_TAG) {
                         cls += ' tag-chosa';
-                        displayTag = translateAgencyTag('Under Investigation');
+                        displayTag = translateAgencyTag('In Progress');
                     }
                     return `<span class="${cls}">${displayTag}</span>`;
                 }).join('')}
@@ -2246,3 +2247,4 @@ document.addEventListener('DOMContentLoaded', () => {
     setupPenlightTrail(fxLayer);
     setupTouchEffects(fxLayer);
 });
+

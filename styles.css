@@ -775,7 +775,7 @@ body {
     color: #ff6b6b !important;
 }
 
-.card-tag[data-tag="調査中"],
+.card-tag[data-tag="整備中"],
 .tag-chosa {
     background: rgba(255, 180, 0, 0.1) !important;
     border-color: rgba(255, 180, 0, 0.3) !important;
@@ -997,3 +997,4 @@ body {
         scroll-behavior: auto !important;
     }
 }
+
