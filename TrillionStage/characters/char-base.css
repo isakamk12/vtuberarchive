@@ -1,21 +1,23 @@
 /* =====================================================
-   TRILLIONSTAGE — Character Page Base CSS
-   Theme: Galactic Idol Stage / Glitch Minimal
+   TRILLIONSTAGE — Premium Character Page Base CSS
+   Theme: Galactic Idol Stage / High-Density UI
+   Optimized for Desktop with Responsive Mobile Fallback
 ===================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Noto+Sans+JP:wght@400;700;900&family=Space+Grotesk:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Noto+Sans+JP:wght@300;400;700;900&family=Space+Grotesk:wght@300;500;700&display=swap');
 
 :root {
-    --ct-bg: #03040A;
-    --ct-surface: #0F071F;
+    --ct-bg: #020205;
+    --ct-surface: rgba(15, 15, 25, 0.8);
     --ct-accent: #D4AF37;
     --ct-cyan: #00F5FF;
-    --ct-text: #E0E7FF;
+    --ct-text: #E2E8F0;
+    --ct-text-dim: #94A3B8;
+    --ct-border: rgba(255, 255, 255, 0.1);
+    --sidebar-width: 320px;
 }
 
-*,
-*::before,
-*::after {
+*, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -26,118 +28,243 @@ body {
     background: var(--ct-bg);
     color: var(--ct-text);
     font-family: 'Noto Sans JP', sans-serif;
-    line-height: 1.8;
+    line-height: 1.6;
     overflow-x: hidden;
+    background-image: 
+        radial-gradient(circle at 0% 0%, rgba(var(--accent-rgb, 212, 175, 55), 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 100% 100%, rgba(0, 245, 255, 0.05) 0%, transparent 40%);
+    background-attachment: fixed;
 }
 
-/* Stage Overlay */
-.char-bg {
+/* --- Decorative Elements --- */
+.char-bg-name {
     position: fixed;
-    inset: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-10deg);
+    font-family: 'Syncopate', sans-serif;
+    font-size: 20vw;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.02);
+    white-space: nowrap;
     z-index: -1;
     pointer-events: none;
-    background: radial-gradient(circle at 100% 0%, rgba(0, 245, 255, 0.05) 0%, transparent 50%);
+    user-select: none;
 }
 
+/* --- Navigation --- */
 .char-back {
     position: fixed;
-    top: 20px;
-    left: 20px;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
+    top: 30px;
+    left: 30px;
+    z-index: 1000;
     color: #fff;
     text-decoration: none;
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 700;
-    font-size: 0.7rem;
-    z-index: 1000;
-    padding: 10px 20px;
-    background: rgba(26, 11, 46, 0.8);
-    backdrop-filter: blur(10px);
-    border: 1px solid var(--ct-accent);
+    font-size: 0.75rem;
+    padding: 12px 24px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--ct-border);
+    border-left: 4px solid var(--ct-accent);
     text-transform: uppercase;
-    transition: all 0.3s;
+    letter-spacing: 2px;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .char-back:hover {
     background: var(--ct-accent);
     color: #000;
-    transform: translateX(-5px);
+    transform: translateX(10px);
 }
 
+/* --- Hero Section --- */
 .char-hero {
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    padding: 120px 5% 60px;
     text-align: center;
-    padding: 100px 5% 4rem;
     position: relative;
 }
 
-.char-unit {
+.char-unit-badge {
+    display: inline-block;
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 700;
     font-size: 0.8rem;
-    color: var(--ct-cyan);
-    letter-spacing: 5px;
-    margin-bottom: 1rem;
+    color: var(--ct-accent);
+    border: 1px solid var(--ct-accent);
+    padding: 4px 16px;
+    margin-bottom: 1.5rem;
+    letter-spacing: 4px;
     text-transform: uppercase;
-    text-shadow: 0 0 10px var(--ct-cyan);
 }
 
-.char-name {
-    font-family: 'Syncopate', 'Noto Sans JP', sans-serif;
-    font-size: clamp(3rem, 8vw, 5rem);
+.char-name-main {
+    font-family: 'Syncopate', sans-serif;
+    font-size: clamp(3rem, 10vw, 6rem);
     font-weight: 900;
-    color: #fff;
-    line-height: 1;
+    line-height: 0.9;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    background: linear-gradient(to bottom, #fff 40%, rgba(255,255,255,0.4));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.char-container {
-    max-width: 900px;
+.char-catchphrase {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: var(--ct-text-dim);
+    font-style: italic;
+    max-width: 800px;
+    margin: 1rem auto 0;
+}
+
+/* --- Layout Container --- */
+.char-layout {
+    display: grid;
+    grid-template-columns: var(--sidebar-width) 1fr;
+    gap: 40px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 10% 100px;
+    padding: 0 5% 100px;
 }
 
-.char-section {
-    margin-bottom: 5rem;
-    background: rgba(255, 255, 255, 0.02);
-    padding: 4rem;
-    border-radius: 4px;
-    border-top: 2px solid var(--ct-accent);
+/* --- Sidebar (Profile Stats) --- */
+.char-sidebar {
+    position: sticky;
+    top: 100px;
+    height: fit-content;
 }
 
-.char-section h2 {
-    font-family: 'Syncopate', 'Noto Sans JP', sans-serif;
-    font-weight: 700;
-    font-size: 1.4rem;
-    color: #fff;
-    border-bottom: 1px dotted rgba(255, 255, 255, 0.1);
-    padding-bottom: 1.5rem;
-    margin-bottom: 2rem;
+.sidebar-card {
+    background: var(--ct-surface);
+    border: 1px solid var(--ct-border);
+    padding: 2.5rem;
+    backdrop-filter: blur(10px);
+}
+
+.sidebar-card h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    color: var(--ct-accent);
+    letter-spacing: 3px;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
 }
 
-.char-section p,
-.char-section li {
-    font-size: 1.05rem;
-    color: #94a3b8;
-    line-height: 2;
-    margin-bottom: 1.5rem;
-    text-align: justify;
+.sidebar-card h3::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, var(--ct-accent), transparent);
 }
 
-.char-footer {
-    padding: 4rem 5%;
-    text-align: center;
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 0.6rem;
-    color: #333;
-    letter-spacing: 5px;
+.stat-list {
+    list-style: none;
+}
+
+.stat-item {
+    margin-bottom: 1.2rem;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    padding-bottom: 0.5rem;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.65rem;
+    color: var(--ct-text-dim);
     text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.stat-value {
+    display: block;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 700;
+}
+
+/* --- Main Content --- */
+.char-main {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.content-section {
+    background: var(--ct-surface);
+    border: 1px solid var(--ct-border);
+    padding: 3.5rem;
+    backdrop-filter: blur(10px);
+}
+
+.content-section h2 {
+    font-family: 'Syncopate', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.content-section h2::before {
+    content: '';
+    width: 30px;
+    height: 4px;
+    background: var(--ct-accent);
+}
+
+/* --- Episode Cards --- */
+.episode-grid {
+    display: grid;
+    gap: 30px;
+}
+
+.episode-item {
+    padding-left: 20px;
+    border-left: 2px solid var(--ct-accent);
+    transition: all 0.3s;
+}
+
+.episode-item:hover {
+    border-left-width: 6px;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.episode-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.8rem;
+}
+
+.episode-content {
+    color: var(--ct-text-dim);
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1100px) {
+    .char-layout {
+        grid-template-columns: 1fr;
+    }
+    .char-sidebar {
+        position: relative;
+        top: 0;
+    }
+    .char-hero {
+        padding-top: 100px;
+    }
+}
+
+@media (max-width: 600px) {
+    .char-name-main { font-size: 3rem; }
+    .content-section { padding: 2rem; }
+    .char-back { top: 15px; left: 15px; padding: 8px 16px; }
 }

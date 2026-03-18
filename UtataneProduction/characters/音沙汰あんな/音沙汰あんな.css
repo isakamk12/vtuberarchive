@@ -1,0 +1,13 @@
+@import url('../char-base.css');
+
+:root {
+    --char-color: #b48cff; /* Maaji Gold */
+    --char-glow: rgba(255, 209, 102, 0.5);
+    --char-color-soft: rgba(255, 209, 102, 0.15);
+    --char-border: rgba(255, 209, 102, 0.4);
+}
+
+/* Custom Overrides if needed */
+.cp-hero-orb {
+    color: var(--char-color);
+}

@@ -246,6 +246,12 @@ body {
     margin-bottom: 8rem;
 }
 
+.talent-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
 .talent-card {
     background: var(--c-surface);
     padding: 3rem 2rem;

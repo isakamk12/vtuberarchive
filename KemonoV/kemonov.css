@@ -1,43 +1,30 @@
 /* ============================================================
-   けものフレンズVぷろじぇくと — kemonov.css
+   けものフレンズV — kemonov.css
    ============================================================ */
 
-/* ポップで楽しげな雰囲気と、少し素朴な丸ゴシックの組み合わせ */
-@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500&family=M+PLUS+Rounded+1c:wght@400;700;800;900&family=Noto+Sans+JP:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&family=Noto+Sans+JP:wght@400;700;900&display=swap');
 
-/* ─── TOKENS ───────────────────────────────────────────────── */
 :root {
-    /* ジャパリパークを連想させる自然のカラーパレット */
-    --kv-accent: #f4a261;
-    /* 温かみのあるオレンジ/イエロー */
-    --kv-accent-alt: #2a9d8f;
-    /* 葉っぱのグリーン */
-    --kv-accent-glow: rgba(244, 162, 97, 0.4);
-    --kv-accent-soft: rgba(244, 162, 97, 0.15);
+    /* Nature & Wilderness Theme */
+    --kv-accent: #22c55e; /* Leaf Green */
+    --kv-accent-glow: rgba(34, 197, 94, 0.45);
+    --kv-accent-soft: rgba(34, 197, 94, 0.12);
+    --kv-border: rgba(34, 197, 94, 0.3);
 
-    --kv-border: rgba(244, 162, 97, 0.3);
+    /* Animal Group Colors */
+    --kv-color-penguin: #38bdf8; /* Sky Blue */
+    --kv-color-fox: #fb923c;    /* Orange */
+    --kv-color-wolf: #94a3b8;   /* Slate/Silver */
 
-    /* ライトテーマ寄りのナチュラルなベースだが、アーカイブ統一感のためダーク寄りに調整 */
-    --kv-dark: #1a1e16;
-    /* 深い森の緑褐色 */
-    --kv-surface: rgba(255, 255, 255, 0.05);
-    --kv-subtle: rgba(255, 255, 255, 0.1);
-    --kv-text: #fdfcf0;
-    --kv-muted: rgba(253, 252, 240, 0.7);
+    /* Neutrals - Forest Floor to Canopy */
+    --kv-dark: #061008;    /* Deep Forest Shadow */
+    --kv-surface: rgba(20, 40, 25, 0.6);
+    --kv-subtle: rgba(34, 197, 94, 0.15);
+    --kv-text: #ecfdf5;
+    --kv-muted: rgba(236, 253, 245, 0.6);
     --kv-white: #ffffff;
-
-    /* フレンズの動物カテゴリに応じた差し色想定 */
-    --kv-color-beast: #e76f51;
-    /* 猛獣・肉食系 */
-    --kv-color-bird: #4eb5db;
-    /* 鳥・ペンギン系 */
-    --kv-color-small: #f4a261;
-    /* 小動物・草食系 */
-    --kv-color-night: #9d4edd;
-    /* 夜行性・コウモリ系 */
 }
 
-/* ─── RESET ─────────────────────────────────────────────────── */
 * {
     margin: 0;
     padding: 0;
@@ -56,94 +43,72 @@ body {
     overflow-x: hidden;
 }
 
-/* ─── BACKGROUND AND LEAVES ────────────────────────────────── */
-.kv-bg {
+/* ─── BACKGROUND ───────────────────────────────── */
+.uo-bg {
     position: fixed;
     inset: 0;
     z-index: 0;
     pointer-events: none;
-    background: radial-gradient(circle at 50% 100%, #2a3325 0%, #1a1e16 80%);
+    background: linear-gradient(180deg, #061008 0%, #0c2411 100%);
 }
 
-.kv-bg::before {
+.uo-bg::before {
     content: '';
     position: absolute;
     inset: 0;
-    /* サバンナ・ジャングル風のドットパターン */
-    background-image: radial-gradient(var(--kv-accent-soft) 1px, transparent 1px);
-    background-size: 30px 30px;
-    opacity: 0.3;
+    /* Sunbeams through canopy */
+    background:
+        radial-gradient(ellipse at 50% -20%, color-mix(in srgb, var(--kv-accent) 20%, transparent) 0%, transparent 60%),
+        radial-gradient(ellipse at 85% 85%, color-mix(in srgb, var(--kv-accent) 10%, transparent) 0%, transparent 50%);
 }
 
-.kv-leaves {
+/* Floating leaves/particles instead of bubbles */
+.uo-bubbles {
     position: absolute;
     inset: 0;
     overflow: hidden;
 }
 
-.kv-leaves::after,
-.kv-leaves::before {
-    content: '🍃';
+.uo-bubbles::after {
+    content: '';
     position: absolute;
-    font-size: 2rem;
-    opacity: 0.1;
-    filter: drop-shadow(0 0 10px var(--kv-accent-alt));
-    animation: leaf-fall 15s linear infinite;
+    width: 4px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    box-shadow:
+        25vw 15vh 0 2px rgba(34, 197, 94, 0.1),
+        75vw 35vh 0 4px rgba(34, 197, 94, 0.15),
+        45vw 65vh 0 1px rgba(255, 255, 255, 0.1),
+        65vw 85vh 0 3px rgba(34, 197, 94, 0.2),
+        15vw 95vh 0 5px rgba(255, 255, 255, 0.05);
+    animation: leafFloat 30s linear infinite;
 }
 
-.kv-leaves::before {
-    content: '🍂';
-    font-size: 1.5rem;
-    left: 20%;
-    animation: leaf-fall 20s linear infinite 5s;
-}
-
-.kv-leaves::after {
-    left: 80%;
-    animation: leaf-fall 12s linear infinite 2s;
-}
-
-@keyframes leaf-fall {
-    0% {
-        top: -10%;
-        transform: translateX(0) rotate(0deg);
-        opacity: 0;
-    }
-
-    10% {
-        opacity: 0.15;
-    }
-
-    90% {
-        opacity: 0.15;
-    }
-
-    100% {
-        top: 110%;
-        transform: translateX(100px) rotate(360deg);
-        opacity: 0;
-    }
+@keyframes leafFloat {
+    0% { transform: translateY(105vh) rotate(0deg); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
 }
 
 /* ─── NAV ────────────────────────────────────────────────────── */
-.kv-nav {
+.uo-nav {
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    padding: 1.2rem 5vw;
+    padding: 1.1rem 5vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(26, 30, 22, 0.85);
-    backdrop-filter: blur(10px);
-    border-bottom: 2px solid var(--kv-accent-alt);
+    background: rgba(6, 16, 8, 0.85);
+    backdrop-filter: blur(16px);
+    border-bottom: 2px solid var(--kv-subtle);
 }
 
-.kv-nav-back {
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    font-size: 0.85rem;
-    font-weight: 700;
+.uo-nav-back {
+    font-size: 0.82rem;
     letter-spacing: 2px;
     color: var(--kv-muted);
     display: flex;
@@ -152,36 +117,35 @@ body {
     transition: color 0.3s;
 }
 
-.kv-nav-back:hover {
+.uo-nav-back:hover {
     color: var(--kv-accent);
 }
 
-.kv-nav-logo {
+.uo-nav-logo {
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: 1.4rem;
-    font-weight: 900;
+    font-weight: 800;
     letter-spacing: 2px;
     color: var(--kv-white);
 }
 
-.kv-nav-logo span {
+.uo-nav-logo span {
     color: var(--kv-accent);
-    font-size: 1.5rem;
 }
 
-.kv-nav-tag {
-    font-family: 'M PLUS Rounded 1c', sans-serif;
+.uo-nav-tag {
     font-size: 0.8rem;
-    letter-spacing: 2px;
-    color: var(--kv-white);
-    background: var(--kv-accent-alt);
-    padding: 0.2rem 0.8rem;
+    letter-spacing: 1px;
+    color: var(--kv-accent);
+    opacity: 0.9;
+    background: var(--kv-accent-soft);
+    padding: 0.35rem 1rem;
     border-radius: 20px;
-    font-weight: 700;
+    border: 1px solid var(--kv-border);
 }
 
 /* ─── HERO ───────────────────────────────────────────────────── */
-.kv-hero {
+.uo-hero {
     position: relative;
     z-index: 10;
     min-height: 100vh;
@@ -191,106 +155,106 @@ body {
     overflow: hidden;
 }
 
-.kv-hero-bg-text {
+.uo-hero-bg-text {
     position: absolute;
-    right: -5%;
+    right: -2%;
     top: 50%;
     transform: translateY(-50%);
     font-family: 'M PLUS Rounded 1c', sans-serif;
-    font-size: 35vw;
-    font-weight: 900;
+    font-size: 55vw;
+    font-weight: 800;
     line-height: 0.85;
-    color: var(--kv-accent-alt);
+    color: var(--kv-accent);
     opacity: 0.05;
     user-select: none;
     pointer-events: none;
+    letter-spacing: -2vw;
 }
 
-.kv-hero-content {
+.uo-hero-content {
     position: relative;
     z-index: 2;
     max-width: 720px;
 }
 
-.kv-eyebrow {
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    font-size: 0.9rem;
-    letter-spacing: 3px;
+.uo-eyebrow {
+    font-size: 0.8rem;
+    letter-spacing: 4px;
     color: var(--kv-accent);
     margin-bottom: 1.2rem;
-    font-weight: 800;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
+    font-weight: 700;
 }
 
-.kv-eyebrow::before {
-    content: '🎪';
+.uo-eyebrow::before {
+    content: '🍃';
+    font-size: 1.2rem;
 }
 
-.kv-hero-name {
+.uo-hero-name {
     font-family: 'M PLUS Rounded 1c', sans-serif;
-    font-size: clamp(3rem, 7vw, 5rem);
-    font-weight: 900;
-    line-height: 1.2;
+    font-size: clamp(3.2rem, 9vw, 6.5rem);
+    font-weight: 800;
+    line-height: 1;
     color: var(--kv-white);
-    text-shadow: 0 4px 20px var(--kv-accent-glow);
+    text-shadow: 0 4px 25px var(--kv-accent-glow);
     margin-bottom: 0.8rem;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
-.kv-hero-name span {
+.uo-hero-name span {
     color: var(--kv-accent);
-    font-size: 1.2em;
 }
 
-.kv-hero-tagline {
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
-    letter-spacing: 2px;
+.uo-hero-tagline {
+    font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+    letter-spacing: 3px;
     color: var(--kv-text);
     margin-bottom: 2rem;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
     font-weight: 700;
-    border-left: 5px solid var(--kv-accent-alt);
-    padding-left: 1rem;
 }
 
-.kv-hero-concept {
-    font-size: 1rem;
+.uo-hero-concept {
+    font-size: 0.98rem;
     color: var(--kv-muted);
-    line-height: 1.9;
-    background: var(--kv-surface);
-    padding: 2rem;
+    line-height: 2;
     border-radius: 16px;
-    border: 2px dashed var(--kv-border);
+    padding: 1.6rem 2.2rem;
+    background: var(--kv-surface);
+    border: 1px solid var(--kv-border);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
     margin-bottom: 3.5rem;
-    max-width: 650px;
+    max-width: 680px;
+    backdrop-filter: blur(10px);
 }
 
-.kv-hero-stats {
+.uo-hero-stats {
     display: flex;
     gap: 3.5rem;
 }
 
-.kv-stat-value {
+.uo-stat-value {
     font-family: 'M PLUS Rounded 1c', sans-serif;
-    font-size: 2.5rem;
-    font-weight: 900;
+    font-size: 2.2rem;
+    font-weight: 800;
     color: var(--kv-accent);
     line-height: 1;
+    text-shadow: 0 0 15px var(--kv-accent-glow);
 }
 
-.kv-stat-label {
-    font-family: 'M PLUS Rounded 1c', sans-serif;
+.uo-stat-label {
     font-size: 0.75rem;
     letter-spacing: 2px;
-    color: var(--kv-muted);
+    color: var(--kv-text);
     margin-top: 0.6rem;
-    font-weight: 700;
+    opacity: 0.8;
 }
 
 /* ─── CONTAINER ──────────────────────────────────────────────── */
-.kv-container {
+.uo-container {
     position: relative;
     z-index: 10;
     max-width: 1100px;
@@ -299,202 +263,206 @@ body {
 }
 
 /* ─── SECTION HEADER ─────────────────────────────────────────── */
-.kv-section {
+.uo-section {
     margin-bottom: 7rem;
 }
 
-.kv-section-header {
+.uo-section-header {
     display: flex;
     align-items: center;
     gap: 1.5rem;
-    margin-bottom: 3.5rem;
+    margin-bottom: 4rem;
 }
 
-.kv-section-title {
+.uo-section-num {
     font-family: 'M PLUS Rounded 1c', sans-serif;
-    font-size: 1.8rem;
-    font-weight: 900;
+    font-size: 3.2rem;
+    font-weight: 800;
+    color: var(--kv-accent-soft);
+    line-height: 1;
+}
+
+.uo-section-title {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 800;
     color: var(--kv-white);
     letter-spacing: 2px;
 }
 
-.kv-section-title-sub {
-    font-family: 'M PLUS Rounded 1c', sans-serif;
+.uo-section-title-sub {
     font-size: 0.75rem;
-    letter-spacing: 4px;
-    color: var(--kv-accent-alt);
+    letter-spacing: 5px;
+    color: var(--kv-accent);
     display: block;
     margin-top: 0.4rem;
-    font-weight: 700;
 }
 
-.kv-divider {
+.uo-divider {
     flex: 1;
-    height: 4px;
-    background: repeating-linear-gradient(90deg, var(--kv-accent-alt), var(--kv-accent-alt) 10px, transparent 10px, transparent 20px);
-    opacity: 0.5;
+    height: 2px;
+    background: linear-gradient(90deg, var(--kv-subtle), transparent);
     border-radius: 2px;
 }
 
 /* ─── INFO CARDS ─────────────────────────────────────────────── */
-.kv-info-grid {
+.uo-info-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 2rem;
 }
 
-.kv-info-card {
+.uo-info-card {
     background: var(--kv-surface);
-    border: 2px solid var(--kv-subtle);
+    border: 1px solid var(--kv-subtle);
     border-radius: 20px;
     padding: 2.5rem 2rem;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    backdrop-filter: blur(12px);
 }
 
-.kv-info-card:hover {
-    transform: translateY(-8px) scale(1.02);
+.uo-info-card:hover {
+    background: rgba(30, 60, 40, 0.7);
     border-color: var(--kv-accent);
-    background: rgba(244, 162, 97, 0.05);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(34, 197, 94, 0.15);
 }
 
-.kv-info-card h3 {
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    font-size: 1.15rem;
+.uo-info-card h3 {
+    font-size: 1.1rem;
     color: var(--kv-white);
-    margin-bottom: 1.2rem;
-    font-weight: 900;
+    margin-bottom: 1.3rem;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
 }
 
-.kv-info-card p {
-    font-size: 0.95rem;
+.uo-info-card p {
+    font-size: 0.94rem;
+    color: var(--kv-muted);
+    line-height: 1.9;
+}
+
+/* ─── MEMBER GRID ────────────────────────────────────────────── */
+.uo-member-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+    gap: 2.2rem;
+}
+
+.uo-member-card {
+    background: var(--kv-surface);
+    border: 1px solid var(--kv-subtle);
+    border-radius: 20px;
+    padding: 2.2rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(12px);
+}
+
+.uo-member-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: var(--kv-accent);
+    opacity: 0.8;
+}
+
+/* Color variations based on gen/group */
+.uo-member-card.color-penguin::before { background: var(--kv-color-penguin); }
+.uo-member-card.color-fox::before     { background: var(--kv-color-fox); }
+.uo-member-card.color-wolf::before    { background: var(--kv-color-wolf); }
+
+.uo-member-card:hover {
+    border-color: var(--kv-accent);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4), 0 0 25px var(--kv-accent-soft);
+}
+
+.uo-member-name {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--kv-white);
+    display: block;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.uo-member-read {
+    font-size: 0.78rem;
+    color: var(--kv-accent);
+    letter-spacing: 2px;
+    margin-bottom: 1.3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.uo-member-ep {
+    font-size: 0.92rem;
     color: var(--kv-muted);
     line-height: 1.8;
 }
 
-/* ─── MEMBER GRID ────────────────────────────────────────────── */
-.kv-member-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 2rem;
-}
-
-.kv-member-card {
-    background: var(--kv-surface);
-    border: 2px solid var(--kv-subtle);
-    border-radius: 16px;
-    padding: 2rem 1.5rem;
-    position: relative;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    overflow: hidden;
-}
-
-.kv-member-icon {
-    font-size: 2.5rem;
-    color: var(--kv-accent-soft);
-    margin-bottom: 1.5rem;
-    transition: all 0.3s;
-}
-
-.kv-member-card:hover {
-    transform: translateY(-8px);
-    border-color: var(--kv-accent-alt);
-    background: rgba(42, 157, 143, 0.05);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
-}
-
-.kv-member-card:hover .kv-member-icon {
-    color: var(--kv-accent);
-    transform: scale(1.2) rotate(-10deg);
-}
-
-.kv-member-name {
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    font-size: 1.15rem;
-    font-weight: 900;
-    color: var(--kv-white);
-    display: block;
-    margin-bottom: 0.5rem;
-    transition: color 0.3s;
-}
-
-a.kv-member-name:hover {
-    color: var(--kv-accent);
-}
-
-.kv-member-read {
-    font-family: 'Kiwi Maru', serif;
-    font-size: 0.8rem;
-    color: var(--kv-muted);
-}
-
 /* ─── FOOTER ─────────────────────────────────────────────────── */
-.kv-footer {
+.uo-footer {
     position: relative;
     z-index: 10;
-    border-top: 2px dashed var(--kv-subtle);
-    padding: 4rem 5vw;
+    border-top: 1px solid var(--kv-subtle);
+    padding: 5rem 5vw;
     text-align: center;
-    font-size: 0.8rem;
-    color: var(--kv-muted);
+    background: rgba(6, 16, 8, 0.5);
 }
 
-.kv-footer-logo {
+.uo-footer-logo {
     font-family: 'M PLUS Rounded 1c', sans-serif;
-    font-size: 1.4rem;
-    font-weight: 900;
+    font-size: 1.8rem;
+    font-weight: 800;
     letter-spacing: 2px;
     color: var(--kv-white);
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
 }
 
-.kv-footer-logo span {
+.uo-footer-logo span {
     color: var(--kv-accent);
-    font-size: 1.2em;
+}
+
+.uo-footer p {
+    font-size: 0.85rem;
+    color: var(--kv-muted);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
 }
 
 /* ─── REVEAL ANIMATION ───────────────────────────────────────── */
-.kv-reveal {
+.uo-reveal {
     opacity: 0;
-    transform: translateY(30px) scale(0.98);
-    transition: opacity 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275), transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform: translateY(40px);
+    transition: opacity 1s cubic-bezier(0.2, 0.8, 0.2, 1), transform 1s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-.kv-reveal.active {
+.uo-reveal.active {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: translateY(0);
 }
 
 /* ─── RESPONSIVE ─────────────────────────────────────────────── */
 @media (max-width: 900px) {
-    .kv-hero-bg-text {
-        font-size: 45vw;
-    }
-
-    .kv-hero-stats {
-        gap: 2rem;
-    }
+    .uo-hero-bg-text { font-size: 75vw; }
+    .uo-hero-stats { gap: 2.5rem; }
 }
 
 @media (max-width: 600px) {
-    .kv-member-grid {
-        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    }
-
-    .kv-member-card {
-        padding: 1.5rem 1rem;
-    }
-
-    .kv-info-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .kv-hero-name {
-        font-size: 2.8rem;
-    }
+    .uo-member-grid { grid-template-columns: 1fr; }
+    .uo-info-grid { grid-template-columns: 1fr; }
+    .uo-section-num { font-size: 2.8rem; }
+    .uo-hero-concept { padding: 1.4rem; }
 }

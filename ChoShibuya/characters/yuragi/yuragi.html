@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>墓無ゆらぎ (Hakanashi Yuragi) | 超渋谷計画</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../char-base.css">
+    <style>
+        :root {
+            --cs-accent: #60A5FA; /* Ghost Blue */
+            --cs-accent-rgb: 96, 165, 250;
+        }
+
+        .char-bg {
+            background: 
+                radial-gradient(circle at 100% 0%, rgba(var(--cs-accent-rgb), 0.1) 0%, transparent 40%),
+                radial-gradient(circle at 0% 100%, rgba(var(--cs-accent-rgb), 0.05) 0%, transparent 50%);
+        }
+
+        .ghost-float {
+            position: absolute;
+            top: 20%;
+            right: 15%;
+            font-size: 5rem;
+            color: rgba(var(--cs-accent-rgb), 0.1);
+            animation: float 6s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+
+        .profile-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 3rem;
+        }
+
+        .profile-card {
+            background: var(--cs-surface);
+            padding: 2rem;
+            border-left: 4px solid var(--cs-accent);
+        }
+
+        .profile-card h3 {
+            font-size: 0.9rem;
+            color: var(--cs-accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+
+        .episode-list {
+            list-style: none; /* Removed default bullets to use custom ones in char-base or stay clean */
+        }
+
+        .episode-item {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            margin-bottom: 1.5rem;
+            border-radius: 4px;
+        }
+
+        .episode-item h3 {
+            color: #fff;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .episode-item h3::before {
+            content: 'LOG';
+            font-family: 'Major Mono Display', monospace;
+            font-size: 0.6rem;
+            background: var(--cs-accent);
+            color: #000;
+            padding: 2px 6px;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="char-bg"></div>
+    <div class="ghost-float"><i class="fa-solid fa-ghost"></i></div>
+
+    <a href="../../choshibuya_index.html" class="char-back">
+        <i class="fa-solid fa-arrow-left"></i> ESCAPE_TO_STREET
+    </a>
+
+    <header class="char-hero">
+        <div class="char-id">#001</div>
+        <h1 class="char-name">墓無ゆらぎ</h1>
+        <p style="font-family: 'Major Mono Display', monospace; color: #64748B; letter-spacing: 2px;">HAKANASHI YURAGI</p>
+    </header>
+
+    <div class="char-container">
+        <section class="char-section">
+            <h2>STREET PROFILE</h2>
+            <p>
+                お墓もなく、誰も自分のことを覚えていないお化け（浮遊霊）の女の子。生前の記憶が曖昧で、名前だけがぼんやり残っている状態。「何かを思い出したら消えてしまう（成仏してしまう）気がする」という不安定な心を抱えながらも、誰かに覚えていてほしくて配信を始めました。
+            </p>
+            
+            <div class="profile-grid">
+                <div class="profile-card">
+                    <h3>Basic Stats</h3>
+                    <p style="margin-bottom: 0;">
+                        <strong>誕生日:</strong> 7月26日<br>
+                        <strong>身長:</strong> 152cm<br>
+                        <strong>ファン名:</strong> 軋民（きしみん）<br>
+                        <strong>挨拶:</strong> こんばんぎ / おはぎ
+                    </p>
+                </div>
+                <div class="profile-card">
+                    <h3>Favorites</h3>
+                    <p style="margin-bottom: 0;">
+                        <strong>好きなもの:</strong> ホラーゲーム、辛いもの、ゼンレスゾーンゼロ（朝羽晴雅）、BL<br>
+                        <strong>こだわり:</strong> 横から生えているアホ毛
+                    </p>
+                </div>
+            </div>
+            
+            <p>
+                オッドアイが特徴で、右目は生前からの色、左目は死後に宿した白色。初期は予算の都合上「白Tシャツ1枚」でデビューしましたが、ミッション「白T脱出計画」を達成し、現在はゴシックロリータ風の新衣装を纏っています。
+            </p>
+        </section>
+
+        <section class="char-section">
+            <h2>RECORDS / EPISODES</h2>
+            <div class="episode-list">
+                <div class="episode-item">
+                    <h3>致命的な記憶力</h3>
+                    <p>
+                        自他共に認める「記憶力のなさ」。数秒前の話題を忘れるのは日常茶飯事で、脳のローディングで頻繁にフリーズします。同期の甘ノ羽ころもに「このていたらくが」と怒られることもしばしば。
+                    </p>
+                </div>
+                <div class="episode-item">
+                    <h3>内臓マスコットの面談</h3>
+                    <p>
+                        オーディションの面談でテンパった結果、たまたま引き出しにあった「内蔵（心臓）のマスコット」を取り出し、運営に向かって「これ可愛くないですか？」と熱弁してピンチを切り抜けたというとんでもない逸話を持っています。
+                    </p>
+                </div>
+                <div class="episode-item">
+                    <h3>朝羽晴雅への重すぎる愛</h3>
+                    <p>
+                        『ゼンレスゾーンゼロ』の朝羽晴雅にガチ恋しており、関連情報が出るたびに大騒ぎします。「人には人の朝羽晴雅がある」というオタク特有の謎の自制心を見せることも。歌枠リストに89曲も送って運営を引かせた過去もあります。
+                    </p>
+                </div>
+                <div class="episode-item">
+                    <h3>盛大なフラグ回収</h3>
+                    <p>
+                        初配信で「挨拶のあとしばらく待ってから配信を切ろう」と自ら提案したにも関わらず、本番で焦ってブチッと切ってしまうという、見事なフラグ回収で伝説を作りました。
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="char-footer">
+        CHO SHIBUYA X ARCHIVE / HAKANASHI YURAGI
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.char-section, .episode-item');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            sections.forEach(s => {
+                s.style.opacity = '0';
+                s.style.transform = 'translateY(20px)';
+                s.style.transition = 'all 0.6s ease-out';
+                observer.observe(s);
+            });
+        });
+    </script>
+</body>
+
+</html>
