@@ -425,6 +425,45 @@ body {
     text-align: center;
 }
 
+/* Timeline / Episodes */
+.cp-timeline {
+    position: relative;
+    padding-left: 2rem;
+    border-left: 1px solid var(--np-border);
+}
+
+.cp-episode {
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.cp-episode::before {
+    content: '';
+    position: absolute;
+    left: calc(-2rem - 5px);
+    top: 0.5rem;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--char-color);
+    box-shadow: 0 0 10px var(--char-glow);
+}
+
+.cp-episode-title {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    color: var(--np-white);
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+}
+
+.cp-episode p {
+    font-size: 0.95rem;
+    color: var(--np-muted);
+    line-height: 1.8;
+}
+
 /* ============================================================
    FOOTER
    ============================================================ */
