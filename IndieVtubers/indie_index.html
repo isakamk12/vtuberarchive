@@ -12,12 +12,12 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
 <!-- Styles -->
 <link href="indie.css" rel="stylesheet"/>
-<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><style>[v-cloak] { display: none; } </style></head>
-<body><div id="app" v-cloak="">
+</head>
+<body>
 <!-- Ambient Background -->
-<div class="bg-wrap" v-if="!isMobile">
-<div class="bg-orb bg-orb--warm" v-if="!isMobile"></div>
-<div class="bg-orb bg-orb--cool" v-if="!isMobile"></div>
+<div class="bg-wrap">
+<div class="bg-orb bg-orb--warm"></div>
+<div class="bg-orb bg-orb--cool"></div>
 </div>
 <!-- Navigation -->
 <nav class="top-nav">
@@ -89,5 +89,6 @@
 </div>
 <!-- Script -->
 <script src="indie_script.js"></script>
-<div class="mobile-mode-banner" style="background: #ffc83d; color: #000; text-align: center; font-size: 0.85rem; padding: 4px; font-weight: 900; position: fixed; bottom: 0; width: 100%; z-index: 9999; box-shadow: 0 -2px 10px rgba(255, 200, 60, 0.4);" v-if="isMobile">🚀 Mobile Light Mode (Powered by Vue Virtual DOM)</div></div></body>
+<script src="../mobile_optimize.js"></script>
+</body>
 </html>

@@ -11,16 +11,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&amp;family=Nunito:wght@400;600;700;800;900&amp;family=Noto+Sans+JP:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
 <link href="mugenlive.css" rel="stylesheet"/>
-<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><style>[v-cloak] { display: none; } </style></head>
-<body><div id="app" v-cloak="">
-<div class="mu-bg" v-if="!isMobile">
-<div class="mu-bg-blobs" v-if="!isMobile">
+</head>
+<body>
+<div class="mu-bg">
+<div class="mu-bg-blobs">
 <div class="mu-blob mu-blob-pink"></div>
 <div class="mu-blob mu-blob-blue"></div>
 <div class="mu-blob mu-blob-purple"></div>
 </div>
 <div class="mu-danmaku-container" id="mu-danmaku"></div>
-<div class="mu-bg-glass" v-if="!isMobile"></div>
+<div class="mu-bg-glass"></div>
 </div>
 <nav class="mu-nav">
 <a class="mu-nav-back" href="../index.html">
@@ -282,5 +282,6 @@
 <p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with MUGEN LIVE.</p>
 </footer>
 <script src="mugenlive_script.js"></script>
-<div class="mobile-mode-banner" style="background: #ffc83d; color: #000; text-align: center; font-size: 0.85rem; padding: 4px; font-weight: 900; position: fixed; bottom: 0; width: 100%; z-index: 9999; box-shadow: 0 -2px 10px rgba(255, 200, 60, 0.4);" v-if="isMobile">🚀 Mobile Light Mode (Powered by Vue Virtual DOM)</div></div></body>
+<script src="../mobile_optimize.js"></script>
+</body>
 </html>

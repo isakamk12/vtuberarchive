@@ -1,16 +1,6 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const agencyGrid = document.getElementById('agencyGrid');
-    const searchInput = document.getElementById('searchInput');
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const totalAgenciesEl = document.getElementById('totalAgencies');
-    const emptyState = document.getElementById('emptyState');
-    const langSelect = document.getElementById('langSelect');
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+const { createApp, ref, computed, onMounted, onUnmounted } = Vue;
 
-    let currentLang = localStorage.getItem('vt_archive_lang') || 'ja';
-
-    const agencies = [
+const agencies = [
 
         // ── 個人勢 ──
         {
@@ -1713,538 +1703,338 @@ document.addEventListener('DOMContentLoaded', () => {
 
     ];
 
-    const MAX_CARD_TAGS = 5;
-    const BLOCKED_TAGS = new Set(['CR-Mafu', 'Coffee']);
-    const INVESTIGATING_TAG = '整備中';
-    const agencyTagTranslations = {
-        '3D': { ja: '3D', en: '3D', es: '3D', zh: '3D', ko: '3D' },
-        '3D Idol': { ja: '3Dアイドル', en: '3D Idol', es: 'Idol 3D', zh: '3D偶像', ko: '3D 아이돌' },
-        'Agency': { ja: '事務所', en: 'Agency', es: 'Agencia', zh: '事务所', ko: '에이전시' },
-        'Asia': { ja: 'アジア', en: 'Asia', es: 'Asia', zh: '亚洲', ko: '아시아' },
-        'Brave Group': { ja: 'Brave Group', en: 'Brave Group', es: 'Brave Group', zh: 'Brave Group', ko: 'Brave Group' },
-        'Comedy': { ja: 'コメディ', en: 'Comedy', es: 'Comedia', zh: '喜剧', ko: '코미디' },
-        'Corporate': { ja: '企業', en: 'Corporate', es: 'Corporativo', zh: '企业', ko: '기업' },
-        'Creator': { ja: 'クリエイター', en: 'Creator', es: 'Creador', zh: '创作者', ko: '크리에이터' },
-        'CN': { ja: '中国圏', en: 'CN', es: 'CN', zh: '中文', ko: '중국어권' },
-        'Cute': { ja: 'キュート', en: 'Cute', es: 'Cute', zh: '可爱', ko: '큐트' },
-        'EN': { ja: '英語圏', en: 'EN', es: 'EN', zh: '英语', ko: '영어권' },
-        'Esports': { ja: 'eスポーツ', en: 'Esports', es: 'eSports', zh: '电子竞技', ko: 'e스포츠' },
-        'EU': { ja: '欧州', en: 'EU', es: 'EU', zh: '欧洲', ko: '유럽' },
-        'FPS': { ja: 'FPS', en: 'FPS', es: 'FPS', zh: '第一人称射击', ko: 'FPS' },
-        'Gaming': { ja: 'ゲーム', en: 'Gaming', es: 'Gaming', zh: '游戏', ko: '게임' },
-        'Global': { ja: 'グローバル', en: 'Global', es: 'Global', zh: '全球', ko: '글로벌' },
-        'HQ': { ja: '本部', en: 'HQ', es: 'Sede', zh: '总部', ko: '본부' },
-        'Holdings': { ja: '持株会社', en: 'Holdings', es: 'Holding', zh: '控股', ko: '지주사' },
-        'Idol': { ja: 'アイドル', en: 'Idol', es: 'Idol', zh: '偶像', ko: '아이돌' },
-        'Indie': { ja: '個人勢', en: 'Indie', es: 'Indie', zh: '个人势', ko: '인디' },
-        'Individual': { ja: '個人', en: 'Individual', es: 'Individual', zh: '个人', ko: '개인' },
-        'JP': { ja: '日本', en: 'JP', es: 'JP', zh: '日本', ko: '일본' },
-        'KR': { ja: '韓国圏', en: 'KR', es: 'KR', zh: '韩语', ko: '한국어권' },
-        'Legend': { ja: '伝説級', en: 'Legend', es: 'Leyenda', zh: '传奇', ko: '레전드' },
-        'Live': { ja: 'ライブ', en: 'Live', es: 'Directo', zh: '直播', ko: '라이브' },
-        'Manga': { ja: 'マンガ', en: 'Manga', es: 'Manga', zh: '漫画', ko: '만화' },
-        'Media Mix': { ja: 'メディアミックス', en: 'Media Mix', es: 'Media Mix', zh: '多媒体联动', ko: '미디어 믹스' },
-        'Magic': { ja: 'マジック', en: 'Magic', es: 'Magia', zh: '魔法', ko: '마법' },
-        'Multilingual': { ja: '多言語', en: 'Multilingual', es: 'Multilingue', zh: '多语言', ko: '다국어' },
-        'Music': { ja: '音楽', en: 'Music', es: 'Música', zh: '音乐', ko: '음악' },
-        'MY': { ja: 'マレーシア', en: 'MY', es: 'MY', zh: '马来西亚', ko: '말레이시아' },
-        'Pioneer': { ja: '先駆', en: 'Pioneer', es: 'Pionero', zh: '先驱', ko: '개척자' },
-        'Platform': { ja: '配信基盤', en: 'Platform', es: 'Plataforma', zh: '平台', ko: '플랫폼' },
-        'Pop': { ja: 'ポップ', en: 'Pop', es: 'Pop', zh: '流行', ko: '팝' },
-        'Regional': { ja: '地域密着', en: 'Regional', es: 'Regional', zh: '地区', ko: '지역' },
-        'Shorts': { ja: 'ショート動画', en: 'Shorts', es: 'Cortos', zh: '短视频', ko: '쇼츠' },
-        'Sony': { ja: 'ソニー', en: 'Sony', es: 'Sony', zh: '索尼', ko: '소니' },
-        'Streamer': { ja: '配信者', en: 'Streamer', es: 'Streamer', zh: '主播', ko: '스트리머' },
-        'Synth': { ja: 'シンセ', en: 'Synth', es: 'Sinte', zh: '合成器', ko: '신스' },
-        'Tech': { ja: '技術', en: 'Tech', es: 'Tecnología', zh: '技术', ko: '기술' },
-        'Tokyo': { ja: '東京', en: 'Tokyo', es: 'Tokio', zh: '东京', ko: '도쿄' },
-        'In Progress': { ja: '整備中', en: 'In Progress', es: 'En progreso', zh: '整理中', ko: '정비 중' },
-        'Underground': { ja: 'アンダーグラウンド', en: 'Underground', es: 'Subterráneo', zh: '地下', ko: '언더그라운드' },
-        'Variety': { ja: 'バラエティ', en: 'Variety', es: 'Variedad', zh: '综合', ko: '버라이어티' },
-        'Virtual Art': { ja: 'バーチャルアート', en: 'Virtual Art', es: 'Arte Virtual', zh: '虚拟艺术', ko: '버추얼 아트' },
-        'Worldbuilding': { ja: '世界観', en: 'Worldbuilding', es: 'Construcción de mundo', zh: '世界观', ko: '세계관' }
-    };
-    const ALLOWED_AGENCY_TAGS = new Set([
-        ...Object.keys(agencyTagTranslations),
-        INVESTIGATING_TAG,
-        'Defunct'
-    ]);
-    const inferredAgencyTagRules = [
-        { tag: 'Agency', match: (agency, text) => agency.name !== '個人勢 VTuber' && ['major', 'corporate', 'global'].includes(agency.filter) },
-        { tag: 'Corporate', match: (_agency, text) => /持ち株会社|corporate|company/i.test(text) },
-        { tag: 'Holdings', match: (_agency, text) => /持ち株会社|holding company|holdings/i.test(text) },
-        { tag: 'Music', match: (_agency, text) => /音楽|music|singer|discography|song|vsinger/i.test(text) },
-        { tag: 'Idol', match: (_agency, text) => /アイドル|idol/i.test(text) },
-        { tag: 'Comedy', match: (_agency, text) => /コメディ|comedy|お笑い/i.test(text) },
-        { tag: 'Shorts', match: (_agency, text) => /ショート|shorts?/i.test(text) },
-        { tag: 'Variety', match: (_agency, text) => /バラエティ|variety|多様|diverse|diversity/i.test(text) },
-        { tag: 'Gaming', match: (_agency, text) => /ゲーム|gaming|gamer|gameplay|実況/i.test(text) },
-        { tag: 'Esports', match: (_agency, text) => /eスポーツ|esports|tournament|大会|fps/i.test(text) },
-        { tag: '3D', match: (_agency, text) => /3d|xr|vr|モーション/i.test(text) },
-        { tag: 'Tech', match: (_agency, text) => /技術|technology|tech|platform/i.test(text) },
-        { tag: 'Multilingual', match: (_agency, text) => /多言語|multilingual|trilingual|bilingual|language support/i.test(text) },
-        { tag: 'Global', match: (agency, text) => agency.filter === 'global' || /グローバル|global|international|海外/i.test(text) },
-        { tag: 'Regional', match: (_agency, text) => /地域|ご当地|regional|local/i.test(text) },
-        { tag: 'Media Mix', match: (_agency, text) => /メディアミックス|media mix|既存のip|linked with the existing ip/i.test(text) },
-        { tag: 'Virtual Art', match: (_agency, text) => /芸術|artistic|virtual art|アート/i.test(text) },
-        { tag: 'Worldbuilding', match: (_agency, text) => /世界観|物語|storytelling|worldview|narrative/i.test(text) },
-        { tag: 'Creator', match: (_agency, text) => /クリエイター|creator|漫画|manga/i.test(text) },
-        { tag: 'Platform', match: (_agency, text) => /配信プラットフォーム|platform/i.test(text) },
-        { tag: 'Live', match: (_agency, text) => /ライブ|live information|concert/i.test(text) },
-        { tag: 'Pioneer', match: (_agency, text) => /老舗|pioneer|先駆/i.test(text) }
-    ];
+const app = createApp({
+    setup() {
+        const windowWidth = ref(window.innerWidth);
+        const isMobile = computed(() => windowWidth.value <= 768);
+        const currentLang = ref(localStorage.getItem('vt_archive_lang') || 'ja');
+        const filterMode = ref('all');
+        const searchQuery = ref('');
+        const totalAgencies = ref(agencies.length);
+        const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const cleanupFns = [];
 
-    function buildAgencyTagHaystack(agency) {
-        return [
-            agency.name,
-            agency.sub,
-            agency.desc,
-            agency.desc_en,
-            agency.desc_es,
-            agency.desc_zh,
-            agency.desc_ko
-        ]
-            .filter(Boolean)
-            .join(' ')
-            .toLowerCase();
-    }
+        const handleResize = () => { windowWidth.value = window.innerWidth; };
 
-    function translateAgencyTag(tag) {
-        const baseLang = currentLang.split('-')[0];
-        return agencyTagTranslations[tag]?.[baseLang] || agencyTagTranslations[tag]?.[currentLang] || tag;
-    }
-
-    function resolveAgencyTags(agency) {
-        const sourceTags = Array.isArray(agency.tags) ? agency.tags : [];
-        if (sourceTags.includes(INVESTIGATING_TAG)) {
-            return [INVESTIGATING_TAG];
-        }
-
-        const haystack = buildAgencyTagHaystack(agency);
-        const resolved = [];
-        const dropped = [];
-
-        const addTag = (tag) => {
-            if (!tag || resolved.length >= MAX_CARD_TAGS || BLOCKED_TAGS.has(tag) || !ALLOWED_AGENCY_TAGS.has(tag) || resolved.includes(tag)) {
-                if (tag && (BLOCKED_TAGS.has(tag) || !ALLOWED_AGENCY_TAGS.has(tag))) {
-                    dropped.push(tag);
-                }
-                return;
+        onMounted(() => {
+            window.addEventListener('resize', handleResize);
+            const langSelect = document.getElementById('langSelect');
+            if(langSelect) {
+                langSelect.value = currentLang.value;
+                langSelect.addEventListener('change', (e) => {
+                    currentLang.value = e.target.value;
+                    localStorage.setItem('vt_archive_lang', currentLang.value);
+                });
             }
-            resolved.push(tag);
-        };
-
-        sourceTags.forEach(addTag);
-        inferredAgencyTagRules.forEach((rule) => {
-            if (resolved.length < MAX_CARD_TAGS && rule.match(agency, haystack)) {
-                addTag(rule.tag);
+            if (!isMobile.value) {
+                const fx = setupFxLayers();
+                setupCardTilt();
+                setupNavigationTransition(fx ? fx.transitionLayer : null);
+                if (fx && fx.fxLayer) {
+                    setupCursorGlow(fx.fxLayer);
+                    setupPenlightTrail(fx.fxLayer);
+                    setupTouchRipple(fx.fxLayer);
+                }
             }
         });
 
-        if (sourceTags.length > MAX_CARD_TAGS || dropped.length > 0) {
-            console.debug('[tag-debug]', agency.name, {
-                source: sourceTags,
-                resolved,
-                dropped
+        onUnmounted(() => {
+            window.removeEventListener('resize', handleResize);
+            cleanupFns.forEach(fn => {
+                try { fn(); } catch (_e) {}
             });
-        }
+        });
 
-        return resolved.slice(0, MAX_CARD_TAGS);
-    }
+        // Use global translations object from i18n.js
+        const t = (item, field) => {
+            const postfix = currentLang.value === 'ja' ? '' : '_' + currentLang.value.split('-')[0];
+            return item[field + postfix] || item[field] || '';
+        };
 
-    agencies.forEach((agency) => {
-        agency.resolvedTags = resolveAgencyTags(agency);
-    });
+        const filteredAgencies = computed(() => {
+            let results = agencies;
+            if (filterMode.value !== 'all') results = results.filter(item => item.filter === filterMode.value);
+            if (searchQuery.value) {
+                const q = searchQuery.value.toLowerCase();
+                results = results.filter(item =>
+                    item.name.toLowerCase().includes(q) ||
+                    item.sub.toLowerCase().includes(q) ||
+                    (item.desc && item.desc.toLowerCase().includes(q)) ||
+                    (item.resolvedTags && item.resolvedTags.some(tag => tag.toLowerCase().includes(q)))
+                );
+            }
+            totalAgencies.value = results.length;
+            return results;
+        });
 
-    // Total Count Update
-    totalAgenciesEl.textContent = agencies.length;
+        const setFilter = (mode) => { filterMode.value = mode; };
 
-    // Render Function
-    function renderAgencies(data) {
-        agencyGrid.innerHTML = '';
+        
+        const formatTag = (tag) => {
+            if (typeof window.translateAgencyTag === 'function') {
+                if (tag === 'Defunct' && currentLang.value.split('-')[0] === 'ja') return '活動終了';
+                if (tag === 'Investigating') return window.translateAgencyTag('In Progress');
+                return window.translateAgencyTag(tag);
+            }
+            return tag;
+        };
 
-        if (data.length === 0) {
-            emptyState.style.display = 'block';
-            return;
-        }
-
-        emptyState.style.display = 'none';
-
-        data.forEach((agency, index) => {
-            const card = document.createElement('div');
+        const handleCardClick = (agency) => {
             const tags = agency.resolvedTags || [];
-            const isDefunct = tags.includes('Defunct');
-            card.className = `datapanel-card fade-in${isDefunct ? ' card-defunct' : ''}`;
-            card.style.animationDelay = `${index * 0.05}s`;
-            card.style.setProperty('--brand-rgb', agency.color);
+            if (agency.url && agency.url !== '#') {
+                if (typeof window.navigateWithTransition === 'function') {
+                    window.navigateWithTransition(agency.url);
+                } else {
+                    window.location.href = agency.url;
+                }
+            } else if (tags.includes('Investigating')) {
+                const tr = window.translations ? window.translations[currentLang.value] : null;
+                alert(tr && tr.alert_investigating ? tr.alert_investigating : 'Under investigation.');
+            } else {
+                const tr = window.translations ? window.translations[currentLang.value] : null;
+                alert(tr && tr.alert_not_active ? tr.alert_not_active : 'Not ready yet.');
+            }
+        };
 
-            // Build Tags HTML
-            let tagsHTML = '';
-            if (tags.length > 0) {
-                tagsHTML = `<div class="card-tags">
-                    ${tags.map(tag => {
-                    let cls = 'card-tag';
-                    let displayTag = translateAgencyTag(tag);
-
-                    if (tag === 'Defunct') {
-                        cls += ' tag-defunct';
-                        displayTag = (currentLang.split('-')[0] === 'en') ? 'Defunct' : '活動終了';
-                    }
-                    if (tag === INVESTIGATING_TAG) {
-                        cls += ' tag-chosa';
-                        displayTag = translateAgencyTag('In Progress');
-                    }
-                    return `<span class="${cls}">${displayTag}</span>`;
-                }).join('')}
-                </div>`;
+        const setupFxLayers = () => {
+            if (window.innerWidth <= 768) return null;
+            let fxLayer = document.getElementById('fxLayer');
+            if (!fxLayer) {
+                fxLayer = document.createElement('div');
+                fxLayer.className = 'fx-layer';
+                fxLayer.id = 'fxLayer';
+                document.body.appendChild(fxLayer);
+            }
+            if (!document.querySelector('.stage-bg')) {
+                const stageBg = document.createElement('div');
+                stageBg.className = 'stage-bg';
+                stageBg.setAttribute('aria-hidden', 'true');
+                document.body.appendChild(stageBg);
+            }
+            if (!document.getElementById('stageOverlay')) {
+                const stageOverlay = document.createElement('div');
+                stageOverlay.className = 'stage-overlay';
+                stageOverlay.id = 'stageOverlay';
+                stageOverlay.setAttribute('aria-hidden', 'true');
+                document.body.appendChild(stageOverlay);
+            }
+            let transitionLayer = document.getElementById('pageTransition');
+            if (!transitionLayer) {
+                transitionLayer = document.createElement('div');
+                transitionLayer.className = 'page-transition';
+                transitionLayer.id = 'pageTransition';
+                document.body.appendChild(transitionLayer);
             }
 
-            // Resolve Localized Name and Description
-            const baseLang = currentLang.split('-')[0];
-            const localizedName = agency[`name_${baseLang}`] || agency[`name_${currentLang}`];
-            const displayName = localizedName || agency.name;
+            requestAnimationFrame(() => { document.body.classList.add('is-ready'); });
+            return { fxLayer, transitionLayer };
+        };
 
-            const localizedDesc = agency[`desc_${baseLang}`] || agency[`desc_${currentLang}`];
-            const description = localizedDesc || agency.desc;
-            const shortDesc = description
-                ? (description.length > 72 ? description.substring(0, 72) + '…' : description)
-                : '';
+        const setupNavigationTransition = (transitionLayer) => {
+            window.navigateWithTransition = (url) => {
+                if (!url || url === '#') return;
+                if (!transitionLayer) {
+                    window.location.href = url;
+                    return;
+                }
+                transitionLayer.classList.add('is-active');
+                setTimeout(() => {
+                    window.location.href = url;
+                }, 460);
+            };
+        };
 
-            card.innerHTML = `
-                <div class="card-glare"></div>
-                <div class="card-content">
-                    <h3 class="card-title" style="color: rgb(${agency.color})">${displayName}</h3>
-                    <p class="card-sub">${agency.sub}</p>
-                    ${shortDesc ? `<p class="card-desc">${shortDesc}</p>` : ''}
-                </div>
-                ${tagsHTML}
-                <div class="card-watermark">${agency.icon}</div>
-            `;
+        const setupCardTilt = () => {
+            if (!canHover) return;
+            const grid = document.getElementById('agencyGrid');
+            if (!grid || grid.dataset.tiltBound === '1') return;
+            grid.dataset.tiltBound = '1';
 
-            // 3D Tilt (hover only)
-            if (canHover) {
-                let bounds;
-                card.addEventListener('mouseenter', () => {
+            let activeCard = null;
+            let bounds = null;
+
+            const resetCard = (card) => {
+                if (!card) return;
+                card.style.transition = 'transform 0.5s cubic-bezier(0.23, 1, 0.32, 1)';
+                card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+                const glareEl = card.querySelector('.card-glare');
+                if (glareEl) {
+                    glareEl.style.background = 'radial-gradient(circle at 50% 50%, rgba(255,255,255,0), transparent 50%)';
+                }
+            };
+
+            const onMove = (e) => {
+                const card = e.target.closest('.datapanel-card');
+                if (!card) return;
+                if (activeCard !== card) {
+                    resetCard(activeCard);
+                    activeCard = card;
                     bounds = card.getBoundingClientRect();
                     card.style.transition = 'none';
-                });
-                card.addEventListener('mousemove', (e) => {
-                    if (!bounds) bounds = card.getBoundingClientRect();
-                    const calcX = e.clientX - bounds.left - bounds.width / 2;
-                    const calcY = e.clientY - bounds.top - bounds.height / 2;
-                    const intensity = 15;
-                    const rotateX = (calcY / (bounds.height / 2)) * -intensity;
-                    const rotateY = (calcX / (bounds.width / 2)) * intensity;
-                    const glareX = (e.clientX - bounds.left) / bounds.width * 100;
-                    const glareY = (e.clientY - bounds.top) / bounds.height * 100;
-                    const glareEl = card.querySelector('.card-glare');
-                    if (glareEl) glareEl.style.background = `radial-gradient(circle at ${glareX}% ${glareY}%, rgba(255,255,255,0.15), transparent 50%)`;
-                    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
-                });
-                card.addEventListener('mouseleave', () => {
-                    bounds = null;
-                    card.style.transition = 'transform 0.5s cubic-bezier(0.23, 1, 0.32, 1)';
-                    card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
-                    const glareEl = card.querySelector('.card-glare');
-                    if (glareEl) glareEl.style.background = `radial-gradient(circle at 50% 50%, rgba(255,255,255,0.0), transparent 50%)`;
-                });
-            }
-
-            card.addEventListener('pointerdown', () => {
-                card.classList.add('is-pressed');
-            });
-            card.addEventListener('pointerup', () => {
-                card.classList.remove('is-pressed');
-            });
-            card.addEventListener('pointercancel', () => {
-                card.classList.remove('is-pressed');
-            });
-            card.addEventListener('click', () => {
-                if (agency.url && agency.url !== '#') {
-                    navigateWithTransition(agency.url);
-                } else if (tags.includes(INVESTIGATING_TAG)) {
-                    alert(translations[currentLang].alert_investigating);
-                } else {
-                    alert(translations[currentLang].alert_not_active);
                 }
-            });
-
-            agencyGrid.appendChild(card);
-        });
-    }
-
-    // Initial Render
-    renderAgencies(agencies);
-
-    // Filter Logic
-    filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            filterBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            const filterValue = btn.getAttribute('data-filter');
-            const searchTerm = searchInput.value.toLowerCase().trim();
-            filterAndSearch(filterValue, searchTerm);
-        });
-    });
-
-    // Search Logic
-    searchInput.addEventListener('input', (e) => {
-        const searchTerm = e.target.value.toLowerCase().trim();
-        const activeFilter = document.querySelector('.filter-btn.active').getAttribute('data-filter');
-        filterAndSearch(activeFilter, searchTerm);
-    });
-
-    function filterAndSearch(filterMode, query) {
-        let results = agencies;
-        if (filterMode !== 'all') {
-            results = results.filter(item => item.filter === filterMode);
-        }
-        if (query) {
-            results = results.filter(item =>
-                item.name.toLowerCase().includes(query) ||
-                item.sub.toLowerCase().includes(query) ||
-                (item.desc && item.desc.toLowerCase().includes(query)) ||
-                (item.resolvedTags && item.resolvedTags.some(tag => tag.toLowerCase().includes(query)))
-            );
-        }
-        renderAgencies(results);
-    }
-
-    // --- i18n Logic ---
-    function applyTranslations(lang) {
-        currentLang = lang;
-        const t = translations[lang];
-        if (!t) return;
-
-        // Update elements with data-i18n
-        document.querySelectorAll('[data-i18n]').forEach(el => {
-            const key = el.getAttribute('data-i18n');
-            if (t[key]) {
-                // Preserve icon if it exists
-                const icon = el.querySelector('i');
-                if (icon) {
-                    el.innerHTML = '';
-                    el.appendChild(icon);
-                    el.appendChild(document.createTextNode(' ' + t[key]));
-                } else {
-                    el.textContent = t[key];
+                if (!bounds) bounds = card.getBoundingClientRect();
+                const calcX = e.clientX - bounds.left - bounds.width / 2;
+                const calcY = e.clientY - bounds.top - bounds.height / 2;
+                const intensity = 15;
+                const rotateX = (calcY / (bounds.height / 2)) * -intensity;
+                const rotateY = (calcX / (bounds.width / 2)) * intensity;
+                const glareX = ((e.clientX - bounds.left) / bounds.width) * 100;
+                const glareY = ((e.clientY - bounds.top) / bounds.height) * 100;
+                const glareEl = card.querySelector('.card-glare');
+                if (glareEl) {
+                    glareEl.style.background = `radial-gradient(circle at ${glareX}% ${glareY}%, rgba(255,255,255,0.15), transparent 50%)`;
                 }
-            }
-        });
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+            };
 
-        // Update placeholders
-        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-            const key = el.getAttribute('data-i18n-placeholder');
-            if (t[key]) {
-                el.placeholder = t[key];
-            }
-        });
+            const onLeave = () => {
+                resetCard(activeCard);
+                activeCard = null;
+                bounds = null;
+            };
 
-        // Re-render agencies to update descriptions
-        const activeFilter = document.querySelector('.filter-btn.active').getAttribute('data-filter');
-        const searchTerm = searchInput.value.toLowerCase().trim();
-        filterAndSearch(activeFilter, searchTerm);
-    }
-
-    langSelect.value = currentLang;
-    langSelect.addEventListener('change', (e) => {
-        const selectedLang = e.target.value;
-        localStorage.setItem('vt_archive_lang', selectedLang);
-        applyTranslations(selectedLang);
-    });
-
-    // Initial Translation Load
-    applyTranslations(currentLang);
-
-    // --- Interaction Effects & Transitions ---
-    function setupFxLayers() {
-        const fxLayer = document.createElement('div');
-        fxLayer.className = 'fx-layer';
-        fxLayer.id = 'fxLayer';
-        document.body.appendChild(fxLayer);
-
-        const stageBg = document.createElement('div');
-        stageBg.className = 'stage-bg';
-        stageBg.setAttribute('aria-hidden', 'true');
-        document.body.appendChild(stageBg);
-
-        const stageOverlay = document.createElement('div');
-        stageOverlay.className = 'stage-overlay';
-        stageOverlay.setAttribute('aria-hidden', 'true');
-        document.body.appendChild(stageOverlay);
-
-        const transitionLayer = document.createElement('div');
-        transitionLayer.className = 'page-transition';
-        transitionLayer.id = 'pageTransition';
-        document.body.appendChild(transitionLayer);
-
-        requestAnimationFrame(() => {
-            document.body.classList.add('is-ready');
-        });
-
-        return { fxLayer, transitionLayer };
-    }
-
-    function setupCursorGlow(fxLayer) {
-        if (!canHover) return;
-
-        const glow = document.createElement('div');
-        glow.className = 'cursor-glow';
-        fxLayer.appendChild(glow);
-
-        let targetX = window.innerWidth / 2;
-        let targetY = window.innerHeight / 2;
-        let currentX = targetX;
-        let currentY = targetY;
-
-        const speed = 0.22;
-
-        const animate = () => {
-            currentX += (targetX - currentX) * speed;
-            currentY += (targetY - currentY) * speed;
-            glow.style.transform = `translate3d(${currentX}px, ${currentY}px, 0)`;
-            requestAnimationFrame(animate);
-        };
-
-        document.addEventListener('pointermove', (e) => {
-            if (e.pointerType !== 'mouse') return;
-            targetX = e.clientX;
-            targetY = e.clientY;
-            glow.classList.add('is-active');
-        });
-
-        document.addEventListener('pointerleave', () => {
-            glow.classList.remove('is-active');
-        });
-
-        animate();
-    }
-
-    function setupPenlightTrail(fxLayer) {
-        if (prefersReducedMotion) return;
-
-        const canvas = document.createElement('canvas');
-        canvas.className = 'penlight-canvas';
-        fxLayer.appendChild(canvas);
-
-        const ctx = canvas.getContext('2d');
-        let width = 0;
-        let height = 0;
-        let trails = [];
-        let lastTime = performance.now();
-
-        const resize = () => {
-            width = window.innerWidth;
-            height = window.innerHeight;
-            const dpr = Math.min(window.devicePixelRatio || 1, 2);
-            canvas.width = width * dpr;
-            canvas.height = height * dpr;
-            canvas.style.width = `${width}px`;
-            canvas.style.height = `${height}px`;
-            ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-        };
-
-        resize();
-        window.addEventListener('resize', resize);
-
-        const addPoint = (x, y) => {
-            trails.push({
-                x,
-                y,
-                vx: 0,
-                vy: 0,
-                life: 1,
-                width: 1.2
+            grid.addEventListener('mousemove', onMove);
+            grid.addEventListener('mouseleave', onLeave);
+            cleanupFns.push(() => {
+                grid.removeEventListener('mousemove', onMove);
+                grid.removeEventListener('mouseleave', onLeave);
             });
-            if (trails.length > 80) {
-                trails = trails.slice(trails.length - 80);
-            }
         };
 
-        document.addEventListener('pointermove', (e) => {
-            if (e.pointerType !== 'mouse') return;
-            addPoint(e.clientX, e.clientY);
-        });
+        const setupCursorGlow = (fxLayer) => {
+            if (!canHover || !fxLayer) return;
+            const glow = document.createElement('div');
+            glow.className = 'cursor-glow';
+            fxLayer.appendChild(glow);
 
-        document.addEventListener('pointerdown', (e) => {
-            if (e.pointerType !== 'touch') return;
-            addPoint(e.clientX, e.clientY);
-        }, { passive: true });
+            let targetX = window.innerWidth / 2;
+            let targetY = window.innerHeight / 2;
+            let currentX = targetX;
+            let currentY = targetY;
+            let rafId = null;
 
-        const animate = (now) => {
-            const dt = Math.min((now - lastTime) / 16.67, 2);
-            lastTime = now;
+            const animate = () => {
+                currentX += (targetX - currentX) * 0.22;
+                currentY += (targetY - currentY) * 0.22;
+                glow.style.transform = `translate3d(${currentX}px, ${currentY}px, 0)`;
+                rafId = requestAnimationFrame(animate);
+            };
 
-            ctx.clearRect(0, 0, width, height);
-            ctx.globalCompositeOperation = 'lighter';
-            ctx.lineCap = 'round';
-            ctx.lineJoin = 'round';
+            const onMove = (e) => {
+                if (e.pointerType !== 'mouse') return;
+                targetX = e.clientX;
+                targetY = e.clientY;
+                glow.classList.add('is-active');
+            };
+            const onLeave = () => glow.classList.remove('is-active');
 
-            for (let i = 1; i < trails.length; i += 1) {
-                const prev = trails[i - 1];
-                const curr = trails[i];
-                const alpha = Math.min(prev.life, curr.life);
-                ctx.beginPath();
-                ctx.strokeStyle = `rgba(210, 250, 255, ${0.35 * alpha})`;
-                ctx.lineWidth = prev.width;
-                ctx.moveTo(prev.x, prev.y);
-                ctx.lineTo(curr.x, curr.y);
-                ctx.stroke();
-            }
+            document.addEventListener('pointermove', onMove);
+            document.addEventListener('pointerleave', onLeave);
+            animate();
 
-            for (let i = 0; i < trails.length; i += 1) {
-                const p = trails[i];
-                p.life -= 0.03 * dt;
-                p.width = Math.max(0.6, p.width - 0.01 * dt);
-            }
-
-            trails = trails.filter(p => p.life > 0);
-            requestAnimationFrame(animate);
+            cleanupFns.push(() => {
+                document.removeEventListener('pointermove', onMove);
+                document.removeEventListener('pointerleave', onLeave);
+                if (rafId) cancelAnimationFrame(rafId);
+            });
         };
 
-        requestAnimationFrame(animate);
+        const setupPenlightTrail = (fxLayer) => {
+            if (!fxLayer || prefersReducedMotion) return;
+            const canvas = document.createElement('canvas');
+            canvas.className = 'penlight-canvas';
+            fxLayer.appendChild(canvas);
+
+            const ctx = canvas.getContext('2d');
+            if (!ctx) return;
+
+            let width = 0;
+            let height = 0;
+            let trails = [];
+            let lastTime = performance.now();
+            let rafId = null;
+
+            const resize = () => {
+                width = window.innerWidth;
+                height = window.innerHeight;
+                const dpr = Math.min(window.devicePixelRatio || 1, 2);
+                canvas.width = width * dpr;
+                canvas.height = height * dpr;
+                canvas.style.width = `${width}px`;
+                canvas.style.height = `${height}px`;
+                ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+            };
+            resize();
+
+            const addPoint = (x, y) => {
+                trails.push({ x, y, life: 1, width: 1.2 });
+                if (trails.length > 80) trails = trails.slice(trails.length - 80);
+            };
+
+            const onMove = (e) => {
+                if (e.pointerType !== 'mouse') return;
+                addPoint(e.clientX, e.clientY);
+            };
+
+            const animate = (now) => {
+                const dt = Math.min((now - lastTime) / 16.67, 2);
+                lastTime = now;
+                ctx.clearRect(0, 0, width, height);
+                ctx.globalCompositeOperation = 'lighter';
+                ctx.lineCap = 'round';
+                ctx.lineJoin = 'round';
+
+                for (let i = 1; i < trails.length; i += 1) {
+                    const prev = trails[i - 1];
+                    const curr = trails[i];
+                    const alpha = Math.min(prev.life, curr.life);
+                    ctx.beginPath();
+                    ctx.strokeStyle = `rgba(210, 250, 255, ${0.35 * alpha})`;
+                    ctx.lineWidth = prev.width;
+                    ctx.moveTo(prev.x, prev.y);
+                    ctx.lineTo(curr.x, curr.y);
+                    ctx.stroke();
+                }
+                for (let i = 0; i < trails.length; i += 1) {
+                    trails[i].life -= 0.03 * dt;
+                    trails[i].width = Math.max(0.6, trails[i].width - 0.01 * dt);
+                }
+                trails = trails.filter(p => p.life > 0);
+                rafId = requestAnimationFrame(animate);
+            };
+
+            window.addEventListener('resize', resize);
+            document.addEventListener('pointermove', onMove);
+            rafId = requestAnimationFrame(animate);
+
+            cleanupFns.push(() => {
+                window.removeEventListener('resize', resize);
+                document.removeEventListener('pointermove', onMove);
+                if (rafId) cancelAnimationFrame(rafId);
+            });
+        };
+
+        const setupTouchRipple = (fxLayer) => {
+            if (!fxLayer) return;
+            const onPointerDown = (e) => {
+                if (e.pointerType !== 'touch') return;
+                const ripple = document.createElement('div');
+                ripple.className = 'touch-ripple';
+                ripple.style.left = `${e.clientX}px`;
+                ripple.style.top = `${e.clientY}px`;
+                fxLayer.appendChild(ripple);
+                ripple.addEventListener('animationend', () => ripple.remove(), { once: true });
+            };
+            document.addEventListener('pointerdown', onPointerDown, { passive: true });
+            cleanupFns.push(() => document.removeEventListener('pointerdown', onPointerDown));
+        };
+
+        return { isMobile, currentLang, filterMode, searchQuery, filteredAgencies, setFilter, t, totalAgencies, formatTag, handleCardClick };
     }
-
-    function spawnTouchRipple(fxLayer, x, y) {
-        const ripple = document.createElement('div');
-        ripple.className = 'touch-ripple';
-        ripple.style.left = `${x}px`;
-        ripple.style.top = `${y}px`;
-        fxLayer.appendChild(ripple);
-        ripple.addEventListener('animationend', () => {
-            ripple.remove();
-        });
-    }
-
-    function setupTouchEffects(fxLayer) {
-        document.addEventListener('pointerdown', (e) => {
-            if (e.pointerType === 'touch') {
-                spawnTouchRipple(fxLayer, e.clientX, e.clientY);
-            }
-        }, { passive: true });
-    }
-
-    function navigateWithTransition(url) {
-        if (!url) return;
-        if (prefersReducedMotion) {
-            window.location.href = url;
-            return;
-        }
-
-        const layer = document.getElementById('pageTransition');
-        if (layer) {
-            layer.classList.add('is-active');
-            setTimeout(() => {
-                window.location.href = url;
-            }, 720);
-        } else {
-            window.location.href = url;
-        }
-    }
-
-    const { fxLayer } = setupFxLayers();
-    setupCursorGlow(fxLayer);
-    setupPenlightTrail(fxLayer);
-    setupTouchEffects(fxLayer);
 });
 
+// Prepare tags
+agencies.forEach(item => { item.resolvedTags = item.tags || []; });
+
+app.mount('#app');

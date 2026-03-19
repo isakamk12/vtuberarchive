@@ -11,12 +11,12 @@
 <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;900&amp;family=Nunito:ital,wght@0,400;0,700;0,900;1,400;1,700&amp;display=swap" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
 <link href="maha5.css" rel="stylesheet"/>
-<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><style>[v-cloak] { display: none; } </style></head>
-<body><div id="app" v-cloak="">
+</head>
+<body>
 <!-- Dynamic connecting lines in background -->
-<div class="mh-bg" v-if="!isMobile">
+<div class="mh-bg">
 <canvas id="mh-network"></canvas>
-<div class="mh-bg-colors" v-if="!isMobile"></div>
+<div class="mh-bg-colors"></div>
 </div>
 <nav class="mh-nav">
 <a class="mh-nav-back" href="../index.html">
@@ -355,5 +355,6 @@
 <p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with MAHA5.</p>
 </footer>
 <script src="maha5_script.js"></script>
-<div class="mobile-mode-banner" style="background: #ffc83d; color: #000; text-align: center; font-size: 0.85rem; padding: 4px; font-weight: 900; position: fixed; bottom: 0; width: 100%; z-index: 9999; box-shadow: 0 -2px 10px rgba(255, 200, 60, 0.4);" v-if="isMobile">🚀 Mobile Light Mode (Powered by Vue Virtual DOM)</div></div></body>
+<script src="../mobile_optimize.js"></script>
+</body>
 </html>

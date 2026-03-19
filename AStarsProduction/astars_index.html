@@ -11,9 +11,9 @@
 <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&amp;family=Noto+Sans+JP:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
 <link href="astars.css" rel="stylesheet"/>
-<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><style>[v-cloak] { display: none; } </style></head>
-<body><div id="app" v-cloak="">
-<div class="uo-bg" v-if="!isMobile">
+</head>
+<body>
+<div class="uo-bg">
 <!-- Bubbles effect in CSS -->
 <div class="uo-bubbles"></div>
 </div>
@@ -26,7 +26,7 @@
 </nav>
 <!-- HERO -->
 <section class="uo-hero">
-<div class="uo-hero-bg-text" v-if="!isMobile">UO</div>
+<div class="uo-hero-bg-text">UO</div>
 <div class="uo-hero-content">
 <div class="uo-eyebrow">Virtual YouTuber Project</div>
 <h1 class="uo-hero-name">AStars production</h1>
@@ -123,5 +123,6 @@
             });
         });
     </script>
-<div class="mobile-mode-banner" style="background: #ffc83d; color: #000; text-align: center; font-size: 0.85rem; padding: 4px; font-weight: 900; position: fixed; bottom: 0; width: 100%; z-index: 9999; box-shadow: 0 -2px 10px rgba(255, 200, 60, 0.4);" v-if="isMobile">🚀 Mobile Light Mode (Powered by Vue Virtual DOM)</div></div></body>
+<script src="../mobile_optimize.js"></script>
+</body>
 </html>

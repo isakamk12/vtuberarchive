@@ -11,9 +11,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Audiowide&amp;family=Zen+Kaku+Gothic+New:wght@400;500;700;900&amp;family=Noto+Sans+JP:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
 <link href="synthmaniacs.css" rel="stylesheet"/>
-<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><style>[v-cloak] { display: none; } </style></head>
-<body><div id="app" v-cloak="">
-<div class="sm-bg" v-if="!isMobile">
+</head>
+<body>
+<div class="sm-bg">
 <!-- Visualizer & Grid effect in CSS -->
 </div>
 <nav class="sm-nav">
@@ -25,7 +25,7 @@
 </nav>
 <!-- HERO -->
 <section class="sm-hero">
-<div class="sm-hero-bg-text" v-if="!isMobile">LFO</div>
+<div class="sm-hero-bg-text">LFO</div>
 <div class="sm-hero-content">
 <div class="sm-eyebrow">OSC 1 : VTUBER_PROJECT</div>
 <h1 class="sm-hero-name">SYNTH<span>MANIACS</span></h1>
@@ -173,5 +173,6 @@
             reveals.forEach(el => observer.observe(el));
         });
     </script>
-<div class="mobile-mode-banner" style="background: #ffc83d; color: #000; text-align: center; font-size: 0.85rem; padding: 4px; font-weight: 900; position: fixed; bottom: 0; width: 100%; z-index: 9999; box-shadow: 0 -2px 10px rgba(255, 200, 60, 0.4);" v-if="isMobile">🚀 Mobile Light Mode (Powered by Vue Virtual DOM)</div></div></body>
+<script src="../mobile_optimize.js"></script>
+</body>
 </html>

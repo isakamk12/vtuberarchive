@@ -11,14 +11,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&amp;family=Zen+Kaku+Gothic+New:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
 <link href="marblecreators.css" rel="stylesheet"/>
-<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><style>[v-cloak] { display: none; } </style></head>
-<body><div id="app" v-cloak="">
-<div class="mc-bg" v-if="!isMobile">
+</head>
+<body>
+<div class="mc-bg">
 <div class="mc-blob mc-blob-1"></div>
 <div class="mc-blob mc-blob-2"></div>
 <div class="mc-blob mc-blob-3"></div>
 <div class="mc-blob mc-blob-4"></div>
-<div class="mc-bg-glass" v-if="!isMobile"></div>
+<div class="mc-bg-glass"></div>
 </div>
 <nav class="mc-nav">
 <a class="mc-nav-back" href="../index.html">
@@ -128,5 +128,6 @@
 <p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with Marble Creators.</p>
 </footer>
 <script src="marblecreators_script.js"></script>
-<div class="mobile-mode-banner" style="background: #ffc83d; color: #000; text-align: center; font-size: 0.85rem; padding: 4px; font-weight: 900; position: fixed; bottom: 0; width: 100%; z-index: 9999; box-shadow: 0 -2px 10px rgba(255, 200, 60, 0.4);" v-if="isMobile">🚀 Mobile Light Mode (Powered by Vue Virtual DOM)</div></div></body>
+<script src="../mobile_optimize.js"></script>
+</body>
 </html>

@@ -11,11 +11,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500&amp;family=Noto+Sans+JP:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
 <link href="universe.css" rel="stylesheet"/>
-<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><style>[v-cloak] { display: none; } </style></head>
-<body><div id="app" v-cloak="">
-<div class="up-bg" v-if="!isMobile">
-<div class="up-bg-gradient" v-if="!isMobile"></div>
-<div class="up-bg-grid" id="map-grid" v-if="!isMobile"></div>
+</head>
+<body>
+<div class="up-bg">
+<div class="up-bg-gradient"></div>
+<div class="up-bg-grid" id="map-grid"></div>
 <div class="up-lanterns" id="lanterns"></div>
 </div>
 <nav class="up-nav">
@@ -172,5 +172,6 @@
 <p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with Universe Production.</p>
 </footer>
 <script src="universe_script.js"></script>
-<div class="mobile-mode-banner" style="background: #ffc83d; color: #000; text-align: center; font-size: 0.85rem; padding: 4px; font-weight: 900; position: fixed; bottom: 0; width: 100%; z-index: 9999; box-shadow: 0 -2px 10px rgba(255, 200, 60, 0.4);" v-if="isMobile">🚀 Mobile Light Mode (Powered by Vue Virtual DOM)</div></div></body>
+<script src="../mobile_optimize.js"></script>
+</body>
 </html>

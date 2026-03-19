@@ -11,10 +11,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&amp;family=Noto+Sans+JP:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
 <link href="starfacet.css" rel="stylesheet"/>
-<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><style>[v-cloak] { display: none; } </style></head>
-<body><div id="app" v-cloak="">
+</head>
+<body>
 <!-- Stage Background Elements -->
-<div class="sf-bg" v-if="!isMobile">
+<div class="sf-bg">
 <div class="sf-spotlight sf-spot-left"></div>
 <div class="sf-spotlight sf-spot-right"></div>
 <div class="sf-particles" id="sf-particles"></div>
@@ -191,5 +191,6 @@
 </div>
 </footer>
 <script src="starfacet_script.js"></script>
-<div class="mobile-mode-banner" style="background: #ffc83d; color: #000; text-align: center; font-size: 0.85rem; padding: 4px; font-weight: 900; position: fixed; bottom: 0; width: 100%; z-index: 9999; box-shadow: 0 -2px 10px rgba(255, 200, 60, 0.4);" v-if="isMobile">🚀 Mobile Light Mode (Powered by Vue Virtual DOM)</div></div></body>
+<script src="../mobile_optimize.js"></script>
+</body>
 </html>

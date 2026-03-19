@@ -11,10 +11,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&amp;family=Bebas+Neue&amp;family=Noto+Sans+JP:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
 <link href="noripro.css" rel="stylesheet"/>
-<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><style>[v-cloak] { display: none; } </style></head>
-<body><div id="app" v-cloak="">
-<div class="nr-bg" v-if="!isMobile"></div>
-<div class="nr-speed-bg" id="nr-speed-lines" v-if="!isMobile"></div>
+</head>
+<body>
+<div class="nr-bg"></div>
+<div class="nr-speed-bg" id="nr-speed-lines"></div>
 <nav class="nr-nav">
 <a class="nr-nav-back" href="../index.html">
 <i class="fa-solid fa-chevron-left"></i> BACK TO HUB
@@ -24,7 +24,7 @@
 </nav>
 <!-- HERO -->
 <section class="nr-hero nr-reveal">
-<div class="nr-hero-bg-text" v-if="!isMobile">NP</div>
+<div class="nr-hero-bg-text">NP</div>
 <div class="nr-hero-content">
 <div class="nr-eyebrow">Virtual YouTuber Production</div>
 <h1 class="nr-hero-name">のり<span>プロ</span></h1>
@@ -191,5 +191,6 @@
 </footer>
 <script>document.documentElement.classList.remove('no-js');</script>
 <script src="noripro_script.js"></script>
-<div class="mobile-mode-banner" style="background: #ffc83d; color: #000; text-align: center; font-size: 0.85rem; padding: 4px; font-weight: 900; position: fixed; bottom: 0; width: 100%; z-index: 9999; box-shadow: 0 -2px 10px rgba(255, 200, 60, 0.4);" v-if="isMobile">🚀 Mobile Light Mode (Powered by Vue Virtual DOM)</div></div></body>
+<script src="../mobile_optimize.js"></script>
+</body>
 </html>

@@ -11,11 +11,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&amp;family=M+PLUS+Rounded+1c:wght@400;500;700;800&amp;family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
 <link href="projectnebula.css" rel="stylesheet"/>
-<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><style>[v-cloak] { display: none; } </style></head>
-<body><div id="app" v-cloak="">
-<div class="pn-bg" v-if="!isMobile">
-<div class="pn-bg-stars" id="stars" v-if="!isMobile"></div>
-<div class="pn-bg-nebula" v-if="!isMobile"></div>
+</head>
+<body>
+<div class="pn-bg">
+<div class="pn-bg-stars" id="stars"></div>
+<div class="pn-bg-nebula"></div>
 </div>
 <nav class="pn-nav">
 <a class="pn-nav-back" href="../index.html">
@@ -29,7 +29,7 @@
 </nav>
 <!-- HERO -->
 <section class="pn-hero">
-<div class="pn-hero-bg-text" v-if="!isMobile">NEBULA</div>
+<div class="pn-hero-bg-text">NEBULA</div>
 <div class="pn-hero-content">
 <div class="pn-eyebrow">
 <i class="fa-solid fa-sparkles"></i> A STORY OF HOPE
@@ -132,5 +132,6 @@
             reveals.forEach(el => observer.observe(el));
         });
     </script>
-<div class="mobile-mode-banner" style="background: #ffc83d; color: #000; text-align: center; font-size: 0.85rem; padding: 4px; font-weight: 900; position: fixed; bottom: 0; width: 100%; z-index: 9999; box-shadow: 0 -2px 10px rgba(255, 200, 60, 0.4);" v-if="isMobile">🚀 Mobile Light Mode (Powered by Vue Virtual DOM)</div></div></body>
+<script src="../mobile_optimize.js"></script>
+</body>
 </html>
