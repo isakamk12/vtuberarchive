@@ -1,127 +1,116 @@
 <!DOCTYPE html>
+
 <html lang="ja">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luminaria Production | VTuber Archive</title>
-    <meta name="description" content="Luminaria Productionの非公式ファンサイト。Luminaria Productionの所属メンバーや概要をまとめた非公式アーカイブ。">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&family=Noto+Sans+JP:wght@400;700;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="luminaria.css">
-</head>
-
-<body>
-
-    <div class="uo-bg">
-        <!-- Bubbles effect in CSS -->
-        <div class="uo-bubbles"></div>
-    </div>
-
-    <nav class="uo-nav">
-        <a href="../index.html" class="uo-nav-back">
-            <i class="fa-solid fa-chevron-left"></i> BACK TO HUB
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Luminaria Production | VTuber Archive</title>
+<meta content="Luminaria Productionの非公式ファンサイト。Luminaria Productionの所属メンバーや概要をまとめた非公式アーカイブ。" name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&amp;family=Noto+Sans+JP:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="luminaria.css" rel="stylesheet"/>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><style>[v-cloak] { display: none; } </style></head>
+<body><div id="app" v-cloak="">
+<div class="uo-bg" v-if="!isMobile">
+<!-- Bubbles effect in CSS -->
+<div class="uo-bubbles"></div>
+</div>
+<nav class="uo-nav">
+<a class="uo-nav-back" href="../index.html">
+<i class="fa-solid fa-chevron-left"></i> BACK TO HUB
         </a>
-        <div class="uo-nav-logo">Luminaria Production</div>
-        <div class="uo-nav-tag">VTuber Project</div>
-    </nav>
-
-    <!-- HERO -->
-    <section class="uo-hero">
-        <div class="uo-hero-bg-text">UO</div>
-        <div class="uo-hero-content">
-            <div class="uo-eyebrow">Virtual YouTuber Project</div>
-            <h1 class="uo-hero-name">Luminaria Production</h1>
-            <p class="uo-hero-tagline">Luminaria Production アーカイブ</p>
-            <div class="uo-hero-concept">「るみぷろ」の愛称で親しまれる、実力派マネージャー陣が支える事務所。音楽、ゲーム、エンタメの枠を超えた活動を支援。</div>
-            <div class="uo-hero-stats">
-                <div class="uo-stat">
-                    <div class="uo-stat-value">4</div>
-                    <div class="uo-stat-label">MEMBERS</div>
-                </div>
-                <div class="uo-stat">
-                    <div class="uo-stat-value">株式会社エルツリー</div>
-                    <div class="uo-stat-label">OPERATION</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- INFO -->
-    <div class="uo-container">
-        <section class="uo-section uo-reveal">
-            <div class="uo-section-header">
-                <span class="uo-section-num">01</span>
-                <div>
-                    <h2 class="uo-section-title">プロジェクト概要</h2>
-                    <span class="uo-section-title-sub">ABOUT</span>
-                </div>
-                <div class="uo-divider"></div>
-            </div>
-            <div class="uo-info-grid">
-                <div class="uo-info-card">
-                    <h3>✨ 才能の開花</h3>
-                    <p>一人ひとりのタレントが持つ隠れた才能を見出し、バーチャル世界で最も輝ける場所を提供します。</p>
-                </div>
-                <div class="uo-info-card">
-                    <h3>🛡️ 盤石のサポート</h3>
-                    <p>大手事務所での経験豊富なスタッフが、マネジメントから技術面まで多角的にバックアップ。</p>
-                </div>
-                <div class="uo-info-card">
-                    <h3>🌌 新たな世界の開拓</h3>
-                    <p>既存のVTuberの形に囚われず、常に新しい表現や体験を視聴者に提供することを目指しています。</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- ROSTER -->
-        <section class="uo-section uo-reveal">
-            <div class="uo-section-header">
-                <span class="uo-section-num">02</span>
-                <div>
-                    <h2 class="uo-section-title">所属メンバー</h2>
-                    <span class="uo-section-title-sub">MEMBERS</span>
-                </div>
-                <div class="uo-divider"></div>
-            </div>
-
-            <!-- Members -->
-            <div class="uo-member-grid">
-                <div class="uo-member-card" onclick="window.location.href='characters/蒼唯みなと/蒼唯みなと.html'">
-                    <h3 class="uo-member-name">蒼唯みなと</h3>
-                    <div class="uo-member-read">蒼唯みなと</div>
-                    <p class="uo-member-ep">所属メンバー「蒼唯みなと」の個別アーカイブページです。</p>
-                </div>
-                <div class="uo-member-card" onclick="window.location.href='characters/姫守ほたる/姫守ほたる.html'">
-                    <h3 class="uo-member-name">姫守ほたる</h3>
-                    <div class="uo-member-read">姫守ほたる</div>
-                    <p class="uo-member-ep">所属メンバー「姫守ほたる」の個別アーカイブページです。</p>
-                </div>
-                <div class="uo-member-card" onclick="window.location.href='characters/迷宮りんね/迷宮りんね.html'">
-                    <h3 class="uo-member-name">迷宮りんね</h3>
-                    <div class="uo-member-read">迷宮りんね</div>
-                    <p class="uo-member-ep">所属メンバー「迷宮りんね」の個別アーカイブページです。</p>
-                </div>
-                <div class="uo-member-card" onclick="window.location.href='characters/堕天みろ/堕天みろ.html'">
-                    <h3 class="uo-member-name">堕天みろ</h3>
-                    <div class="uo-member-read">堕天みろ</div>
-                    <p class="uo-member-ep">所属メンバー「堕天みろ」の個別アーカイブページです。</p>
-                </div></div>
-        </section>
-    </div>
-
-    <footer class="uo-footer">
-        <div class="uo-footer-logo">Luminaria Production</div>
-        <p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with official management.
+<div class="uo-nav-logo">Luminaria Production</div>
+<div class="uo-nav-tag">VTuber Project</div>
+</nav>
+<!-- HERO -->
+<section class="uo-hero">
+<div class="uo-hero-bg-text" v-if="!isMobile">UO</div>
+<div class="uo-hero-content">
+<div class="uo-eyebrow">Virtual YouTuber Project</div>
+<h1 class="uo-hero-name">Luminaria Production</h1>
+<p class="uo-hero-tagline">Luminaria Production アーカイブ</p>
+<div class="uo-hero-concept">「るみぷろ」の愛称で親しまれる、実力派マネージャー陣が支える事務所。音楽、ゲーム、エンタメの枠を超えた活動を支援。</div>
+<div class="uo-hero-stats">
+<div class="uo-stat">
+<div class="uo-stat-value">4</div>
+<div class="uo-stat-label">MEMBERS</div>
+</div>
+<div class="uo-stat">
+<div class="uo-stat-value">株式会社エルツリー</div>
+<div class="uo-stat-label">OPERATION</div>
+</div>
+</div>
+</div>
+</section>
+<!-- INFO -->
+<div class="uo-container">
+<section class="uo-section uo-reveal">
+<div class="uo-section-header">
+<span class="uo-section-num">01</span>
+<div>
+<h2 class="uo-section-title">プロジェクト概要</h2>
+<span class="uo-section-title-sub">ABOUT</span>
+</div>
+<div class="uo-divider"></div>
+</div>
+<div class="uo-info-grid">
+<div class="uo-info-card">
+<h3>✨ 才能の開花</h3>
+<p>一人ひとりのタレントが持つ隠れた才能を見出し、バーチャル世界で最も輝ける場所を提供します。</p>
+</div>
+<div class="uo-info-card">
+<h3>🛡️ 盤石のサポート</h3>
+<p>大手事務所での経験豊富なスタッフが、マネジメントから技術面まで多角的にバックアップ。</p>
+</div>
+<div class="uo-info-card">
+<h3>🌌 新たな世界の開拓</h3>
+<p>既存のVTuberの形に囚われず、常に新しい表現や体験を視聴者に提供することを目指しています。</p>
+</div>
+</div>
+</section>
+<!-- ROSTER -->
+<section class="uo-section uo-reveal">
+<div class="uo-section-header">
+<span class="uo-section-num">02</span>
+<div>
+<h2 class="uo-section-title">所属メンバー</h2>
+<span class="uo-section-title-sub">MEMBERS</span>
+</div>
+<div class="uo-divider"></div>
+</div>
+<!-- Members -->
+<div class="uo-member-grid">
+<div class="uo-member-card" onclick="window.location.href='characters/蒼唯みなと/蒼唯みなと.html'">
+<h3 class="uo-member-name">蒼唯みなと</h3>
+<div class="uo-member-read">蒼唯みなと</div>
+<p class="uo-member-ep">所属メンバー「蒼唯みなと」の個別アーカイブページです。</p>
+</div>
+<div class="uo-member-card" onclick="window.location.href='characters/姫守ほたる/姫守ほたる.html'">
+<h3 class="uo-member-name">姫守ほたる</h3>
+<div class="uo-member-read">姫守ほたる</div>
+<p class="uo-member-ep">所属メンバー「姫守ほたる」の個別アーカイブページです。</p>
+</div>
+<div class="uo-member-card" onclick="window.location.href='characters/迷宮りんね/迷宮りんね.html'">
+<h3 class="uo-member-name">迷宮りんね</h3>
+<div class="uo-member-read">迷宮りんね</div>
+<p class="uo-member-ep">所属メンバー「迷宮りんね」の個別アーカイブページです。</p>
+</div>
+<div class="uo-member-card" onclick="window.location.href='characters/堕天みろ/堕天みろ.html'">
+<h3 class="uo-member-name">堕天みろ</h3>
+<div class="uo-member-read">堕天みろ</div>
+<p class="uo-member-ep">所属メンバー「堕天みろ」の個別アーカイブページです。</p>
+</div></div>
+</section>
+</div>
+<footer class="uo-footer">
+<div class="uo-footer-logo">Luminaria Production</div>
+<p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with official management.
         </p>
-    </footer>
-
-    <script src="luminaria_script.js"></script>
-    <script>
+</footer>
+<script src="luminaria_script.js"></script>
+<script>
         document.addEventListener('DOMContentLoaded', () => {
             const reveals = document.querySelectorAll('.uo-reveal');
             const observer = new IntersectionObserver((entries) => {
@@ -139,7 +128,5 @@
             });
         });
     </script>
-
-</body>
-
+<div class="mobile-mode-banner" style="background: #ffc83d; color: #000; text-align: center; font-size: 0.85rem; padding: 4px; font-weight: 900; position: fixed; bottom: 0; width: 100%; z-index: 9999; box-shadow: 0 -2px 10px rgba(255, 200, 60, 0.4);" v-if="isMobile">🚀 Mobile Light Mode (Powered by Vue Virtual DOM)</div></div></body>
 </html>

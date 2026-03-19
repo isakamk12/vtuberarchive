@@ -1,172 +1,148 @@
 <!DOCTYPE html>
+
 <html lang="ja">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>まほろば (Mahoroba) | VTuber Archive</title>
-    <meta name="description" content="PRISMO Inc.が運営する個人VTuberグループ「まほろば」の非公式ファンサイト。各VTuberの成長を共に楽しめる心温まる場所。">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;800&family=Noto+Sans+JP:wght@300;400;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="mahoroba.css">
-</head>
-
-<body>
-
-    <div class="mh-bg">
-        <div class="mh-bg-pattern"></div>
-        <div class="mh-film-grain"></div>
-    </div>
-
-    <nav class="mh-nav">
-        <a href="../index.html" class="mh-nav-back">
-            <i class="fa-solid fa-arrow-left"></i> HUB
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>まほろば (Mahoroba) | VTuber Archive</title>
+<meta content="PRISMO Inc.が運営する個人VTuberグループ「まほろば」の非公式ファンサイト。各VTuberの成長を共に楽しめる心温まる場所。" name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;800&amp;family=Noto+Sans+JP:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="mahoroba.css" rel="stylesheet"/>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><style>[v-cloak] { display: none; } </style></head>
+<body><div id="app" v-cloak="">
+<div class="mh-bg" v-if="!isMobile">
+<div class="mh-bg-pattern" v-if="!isMobile"></div>
+<div class="mh-film-grain"></div>
+</div>
+<nav class="mh-nav">
+<a class="mh-nav-back" href="../index.html">
+<i class="fa-solid fa-arrow-left"></i> HUB
         </a>
-        <div class="mh-nav-logo">
-            <span class="mh-logo-mark">雅</span> まほろば
+<div class="mh-nav-logo">
+<span class="mh-logo-mark">雅</span> まほろば
         </div>
-        <div class="mh-nav-tag">MAHOROBA / PRISMO INC.</div>
-    </nav>
-
-    <!-- HERO -->
-    <section class="mh-hero">
-        <div class="mh-hero-content">
-            <div class="mh-hero-title-area">
-                <div class="mh-hero-stamp">素晴らしい場所</div>
-                <h1 class="mh-hero-name">まほろば</h1>
-                <h2 class="mh-hero-subname">MAHOROBA</h2>
-            </div>
-
-            <p class="mh-hero-tagline">“成長を共に楽しめる、<br>心温まる新たな体験”</p>
-            <div class="mh-hero-concept">
-                PRISMO Inc.が運営・サポートする個人VTuberグループ。<br><br>
+<div class="mh-nav-tag">MAHOROBA / PRISMO INC.</div>
+</nav>
+<!-- HERO -->
+<section class="mh-hero">
+<div class="mh-hero-content">
+<div class="mh-hero-title-area">
+<div class="mh-hero-stamp">素晴らしい場所</div>
+<h1 class="mh-hero-name">まほろば</h1>
+<h2 class="mh-hero-subname">MAHOROBA</h2>
+</div>
+<p class="mh-hero-tagline">“成長を共に楽しめる、<br/>心温まる新たな体験”</p>
+<div class="mh-hero-concept">
+                PRISMO Inc.が運営・サポートする個人VTuberグループ。<br/><br/>
                 「まほろば」とは、古語で「素晴らしい場所」「住みやすい場所」を意味する言葉。配信やイベント、デジタルコンテンツを通じてファンと繋がり、所属する多様なVTuber一人ひとりの成長をリスナーと共に分かち合い、見守ることができる、温かく居心地の良い空間を提供しています。
             </div>
-        </div>
-    </section>
-
-    <!-- ROSTER -->
-    <div class="mh-container">
-
-        <section class="mh-section mh-reveal">
-            <div class="mh-section-header">
-                <span class="mh-section-title-en">MEMBER</span>
-                <h2 class="mh-section-title">所属タレント</h2>
-                <div class="mh-divider"></div>
+</div>
+</section>
+<!-- ROSTER -->
+<div class="mh-container">
+<section class="mh-section mh-reveal">
+<div class="mh-section-header">
+<span class="mh-section-title-en">MEMBER</span>
+<h2 class="mh-section-title">所属タレント</h2>
+<div class="mh-divider"></div>
+</div>
+<div class="mh-member-grid">
+<!-- なちゃま -->
+<div class="mh-member-card">
+<div class="mh-card-inner">
+<div class="mh-card-accent"></div>
+<div class="mh-member-icon"><i class="fa-solid fa-fan"></i></div>
+<a class="mh-member-name" href="characters/nachama.html">なちゃま</a>
+<div class="mh-member-read">Nachama</div>
+</div>
+</div>
+<!-- 依澄 しあ -->
+<div class="mh-member-card">
+<div class="mh-card-inner">
+<div class="mh-card-accent"></div>
+<div class="mh-member-icon"><i class="fa-solid fa-cloud"></i></div>
+<a class="mh-member-name" href="characters/shia.html">依澄 しあ</a>
+<div class="mh-member-read">Izumi Shia</div>
+</div>
+</div>
+<!-- 推使 みゅな -->
+<div class="mh-member-card">
+<div class="mh-card-inner">
+<div class="mh-card-accent"></div>
+<div class="mh-member-icon"><i class="fa-solid fa-heart"></i></div>
+<a class="mh-member-name" href="characters/myuna.html">推使 みゅな</a>
+<div class="mh-member-read">Oshitsukai Myuna</div>
+</div>
+</div>
+<!-- しらね いず -->
+<div class="mh-member-card">
+<div class="mh-card-inner">
+<div class="mh-card-accent"></div>
+<div class="mh-member-icon"><i class="fa-solid fa-snowflake"></i></div>
+<a class="mh-member-name" href="characters/izu.html">しらね いず</a>
+<div class="mh-member-read">Shirane Izu</div>
+</div>
+</div>
+<!-- くれない べあ -->
+<div class="mh-member-card">
+<div class="mh-card-inner">
+<div class="mh-card-accent"></div>
+<div class="mh-member-icon"><i class="fa-solid fa-paw"></i></div>
+<a class="mh-member-name" href="characters/bea.html">くれない べあ</a>
+<div class="mh-member-read">Kurenai Bea</div>
+</div>
+</div>
+<!-- 勿忘草 幽冥 -->
+<div class="mh-member-card">
+<div class="mh-card-inner">
+<div class="mh-card-accent"></div>
+<div class="mh-member-icon"><i class="fa-solid fa-seedling"></i></div>
+<a class="mh-member-name" href="characters/yumei.html">勿忘草 幽冥</a>
+<div class="mh-member-read">Wasurenagusa Yumei</div>
+</div>
+</div>
+<!-- 心愛 もか -->
+<div class="mh-member-card">
+<div class="mh-card-inner">
+<div class="mh-card-accent"></div>
+<div class="mh-member-icon"><i class="fa-solid fa-mug-hot"></i></div>
+<a class="mh-member-name" href="characters/moka.html">心愛 もか</a>
+<div class="mh-member-read">Kokoa Moka</div>
+</div>
+</div>
+<!-- 羽姫 しおり -->
+<div class="mh-member-card">
+<div class="mh-card-inner">
+<div class="mh-card-accent"></div>
+<div class="mh-member-icon"><i class="fa-solid fa-feather-pointed"></i></div>
+<a class="mh-member-name" href="characters/shiori.html">羽姫 しおり</a>
+<div class="mh-member-read">Hanehime Shiori</div>
+</div>
+</div>
+<!-- 朱ノ槌 ユウツヅ -->
+<div class="mh-member-card">
+<div class="mh-card-inner">
+<div class="mh-card-accent"></div>
+<div class="mh-member-icon"><i class="fa-solid fa-hammer"></i></div>
+<a class="mh-member-name" href="characters/yutsuzu.html">朱ノ槌 ユウツヅ</a>
+<div class="mh-member-read">Akanotsuchi Yutsuzu</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<footer class="mh-footer">
+<div class="mh-footer-inner">
+<div class="mh-footer-logo">
+<span class="mh-logo-mark">雅</span> まほろば
             </div>
-
-            <div class="mh-member-grid">
-
-                <!-- なちゃま -->
-                <div class="mh-member-card">
-                    <div class="mh-card-inner">
-                        <div class="mh-card-accent"></div>
-                        <div class="mh-member-icon"><i class="fa-solid fa-fan"></i></div>
-                        <a href="characters/nachama.html" class="mh-member-name">なちゃま</a>
-                        <div class="mh-member-read">Nachama</div>
-                    </div>
-                </div>
-
-                <!-- 依澄 しあ -->
-                <div class="mh-member-card">
-                    <div class="mh-card-inner">
-                        <div class="mh-card-accent"></div>
-                        <div class="mh-member-icon"><i class="fa-solid fa-cloud"></i></div>
-                        <a href="characters/shia.html" class="mh-member-name">依澄 しあ</a>
-                        <div class="mh-member-read">Izumi Shia</div>
-                    </div>
-                </div>
-
-                <!-- 推使 みゅな -->
-                <div class="mh-member-card">
-                    <div class="mh-card-inner">
-                        <div class="mh-card-accent"></div>
-                        <div class="mh-member-icon"><i class="fa-solid fa-heart"></i></div>
-                        <a href="characters/myuna.html" class="mh-member-name">推使 みゅな</a>
-                        <div class="mh-member-read">Oshitsukai Myuna</div>
-                    </div>
-                </div>
-
-                <!-- しらね いず -->
-                <div class="mh-member-card">
-                    <div class="mh-card-inner">
-                        <div class="mh-card-accent"></div>
-                        <div class="mh-member-icon"><i class="fa-solid fa-snowflake"></i></div>
-                        <a href="characters/izu.html" class="mh-member-name">しらね いず</a>
-                        <div class="mh-member-read">Shirane Izu</div>
-                    </div>
-                </div>
-
-                <!-- くれない べあ -->
-                <div class="mh-member-card">
-                    <div class="mh-card-inner">
-                        <div class="mh-card-accent"></div>
-                        <div class="mh-member-icon"><i class="fa-solid fa-paw"></i></div>
-                        <a href="characters/bea.html" class="mh-member-name">くれない べあ</a>
-                        <div class="mh-member-read">Kurenai Bea</div>
-                    </div>
-                </div>
-
-                <!-- 勿忘草 幽冥 -->
-                <div class="mh-member-card">
-                    <div class="mh-card-inner">
-                        <div class="mh-card-accent"></div>
-                        <div class="mh-member-icon"><i class="fa-solid fa-seedling"></i></div>
-                        <a href="characters/yumei.html" class="mh-member-name">勿忘草 幽冥</a>
-                        <div class="mh-member-read">Wasurenagusa Yumei</div>
-                    </div>
-                </div>
-
-                <!-- 心愛 もか -->
-                <div class="mh-member-card">
-                    <div class="mh-card-inner">
-                        <div class="mh-card-accent"></div>
-                        <div class="mh-member-icon"><i class="fa-solid fa-mug-hot"></i></div>
-                        <a href="characters/moka.html" class="mh-member-name">心愛 もか</a>
-                        <div class="mh-member-read">Kokoa Moka</div>
-                    </div>
-                </div>
-
-                <!-- 羽姫 しおり -->
-                <div class="mh-member-card">
-                    <div class="mh-card-inner">
-                        <div class="mh-card-accent"></div>
-                        <div class="mh-member-icon"><i class="fa-solid fa-feather-pointed"></i></div>
-                        <a href="characters/shiori.html" class="mh-member-name">羽姫 しおり</a>
-                        <div class="mh-member-read">Hanehime Shiori</div>
-                    </div>
-                </div>
-
-                <!-- 朱ノ槌 ユウツヅ -->
-                <div class="mh-member-card">
-                    <div class="mh-card-inner">
-                        <div class="mh-card-accent"></div>
-                        <div class="mh-member-icon"><i class="fa-solid fa-hammer"></i></div>
-                        <a href="characters/yutsuzu.html" class="mh-member-name">朱ノ槌 ユウツヅ</a>
-                        <div class="mh-member-read">Akanotsuchi Yutsuzu</div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-    </div>
-
-    <footer class="mh-footer">
-        <div class="mh-footer-inner">
-            <div class="mh-footer-logo">
-                <span class="mh-logo-mark">雅</span> まほろば
-            </div>
-            <div class="mh-footer-company">OPERATED BY PRISMO INC.</div>
-            <p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with Mahoroba.</p>
-        </div>
-    </footer>
-
-    <script src="mahoroba_script.js"></script>
-</body>
-
+<div class="mh-footer-company">OPERATED BY PRISMO INC.</div>
+<p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with Mahoroba.</p>
+</div>
+</footer>
+<script src="mahoroba_script.js"></script>
+<div class="mobile-mode-banner" style="background: #ffc83d; color: #000; text-align: center; font-size: 0.85rem; padding: 4px; font-weight: 900; position: fixed; bottom: 0; width: 100%; z-index: 9999; box-shadow: 0 -2px 10px rgba(255, 200, 60, 0.4);" v-if="isMobile">🚀 Mobile Light Mode (Powered by Vue Virtual DOM)</div></div></body>
 </html>

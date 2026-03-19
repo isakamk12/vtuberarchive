@@ -1,138 +1,122 @@
 <!DOCTYPE html>
+
 <html lang="ja">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VBOX (ぶいぼっくす) | VTuber Archive</title>
-    <meta name="description" content="「さぁ、配信という旅に出かけましょう！」あなたと冒険するVTuber事務所「VBOX（ぶいぼっくす）」の非公式ファンサイト。所属タレント一覧。">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Shippori+Mincho:wght@500;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="vbox.css">
-</head>
-
-<body>
-
-    <div class="vb-bg">
-        <div class="vb-bg-map"></div>
-        <div class="vb-bg-vignette"></div>
-    </div>
-
-    <nav class="vb-nav">
-        <a href="../index.html" class="vb-nav-back">
-            <i class="fa-solid fa-compass"></i> BACK TO HUB
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VBOX (ぶいぼっくす) | VTuber Archive</title>
+<meta content="「さぁ、配信という旅に出かけましょう！」あなたと冒険するVTuber事務所「VBOX（ぶいぼっくす）」の非公式ファンサイト。所属タレント一覧。" name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&amp;family=Shippori+Mincho:wght@500;700;800&amp;family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="vbox.css" rel="stylesheet"/>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><style>[v-cloak] { display: none; } </style></head>
+<body><div id="app" v-cloak="">
+<div class="vb-bg" v-if="!isMobile">
+<div class="vb-bg-map" v-if="!isMobile"></div>
+<div class="vb-bg-vignette" v-if="!isMobile"></div>
+</div>
+<nav class="vb-nav">
+<a class="vb-nav-back" href="../index.html">
+<i class="fa-solid fa-compass"></i> BACK TO HUB
         </a>
-        <div class="vb-nav-logo">
-            <i class="fa-solid fa-box-open vb-logo-icon"></i>
+<div class="vb-nav-logo">
+<i class="fa-solid fa-box-open vb-logo-icon"></i>
             VBOX <span>ぶいぼっくす</span>
-        </div>
-        <div class="vb-nav-tag">ADVENTURE VTUBER AGENCY</div>
-    </nav>
-
-    <!-- HERO -->
-    <section class="vb-hero">
-        <div class="vb-hero-bg-text">JOURNEY</div>
-        <div class="vb-hero-content">
-            <div class="vb-eyebrow"><i class="fa-solid fa-map-location-dot"></i> EXPLORE THE UNKNOWN</div>
-            <h1 class="vb-hero-name">VBOX</h1>
-            <p class="vb-hero-tagline">“さぁ、配信という旅に出かけましょう！”</p>
-            <div class="vb-hero-concept">
-                ファンと一緒に未知へと挑戦する「あなたと冒険する事務所」です。<br><br>
+</div>
+<div class="vb-nav-tag">ADVENTURE VTUBER AGENCY</div>
+</nav>
+<!-- HERO -->
+<section class="vb-hero">
+<div class="vb-hero-bg-text" v-if="!isMobile">JOURNEY</div>
+<div class="vb-hero-content">
+<div class="vb-eyebrow"><i class="fa-solid fa-map-location-dot"></i> EXPLORE THE UNKNOWN</div>
+<h1 class="vb-hero-name">VBOX</h1>
+<p class="vb-hero-tagline">“さぁ、配信という旅に出かけましょう！”</p>
+<div class="vb-hero-concept">
+                ファンと一緒に未知へと挑戦する「あなたと冒険する事務所」です。<br/><br/>
                 タレントの個性を最大限に活かし、VTuber事務所で一番「自由」な事務所を目指しています。個性あふれる冒険者たちと共に、エンターテイメントという名の果てしない地図を広げ、新たな世界へと旅立ちましょう。
             </div>
-            <div class="vb-hero-stats">
-                <div class="vb-stat">
-                    <div class="vb-stat-value">5</div>
-                    <div class="vb-stat-label">ADVENTURERS</div>
-                </div>
-                <div class="vb-stat">
-                    <div class="vb-stat-value"><i class="fa-solid fa-feather-pointed vb-stat-icon"></i></div>
-                    <div class="vb-stat-label">FREEDOM</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ROSTER -->
-    <div class="vb-container">
-
-        <section class="vb-section vb-reveal">
-            <div class="vb-section-header">
-                <div>
-                    <h2 class="vb-section-title">所属タレント</h2>
-                    <span class="vb-section-title-sub">Our Adventurers</span>
-                </div>
-                <div class="vb-divider"></div>
-            </div>
-
-            <div class="vb-member-grid">
-                <!-- 土御門ハルト -->
-                <div class="vb-member-card">
-                    <div class="vb-card-frame"></div>
-                    <div class="vb-card-inner">
-                        <div class="vb-member-icon"><i class="fa-solid fa-hat-wizard"></i></div>
-                        <a href="characters/haruto.html" class="vb-member-name">土御門 ハルト</a>
-                        <div class="vb-member-read">Tsuchimikado Haruto</div>
-                    </div>
-                </div>
-
-                <!-- ざざ・ざうる -->
-                <div class="vb-member-card">
-                    <div class="vb-card-frame"></div>
-                    <div class="vb-card-inner">
-                        <div class="vb-member-icon"><i class="fa-solid fa-dragon"></i></div>
-                        <a href="characters/zaza.html" class="vb-member-name">ざざ・ざうる</a>
-                        <div class="vb-member-read">Zaza Zaur</div>
-                    </div>
-                </div>
-
-                <!-- 闇咲とうか -->
-                <div class="vb-member-card">
-                    <div class="vb-card-frame"></div>
-                    <div class="vb-card-inner">
-                        <div class="vb-member-icon"><i class="fa-solid fa-moon"></i></div>
-                        <a href="characters/touka.html" class="vb-member-name">闇咲 とうか</a>
-                        <div class="vb-member-read">Yamisaki Touka</div>
-                    </div>
-                </div>
-
-                <!-- 朧 -->
-                <div class="vb-member-card">
-                    <div class="vb-card-frame"></div>
-                    <div class="vb-card-inner">
-                        <div class="vb-member-icon"><i class="fa-solid fa-smog"></i></div>
-                        <a href="characters/oboro.html" class="vb-member-name">朧</a>
-                        <div class="vb-member-read">Oboro</div>
-                    </div>
-                </div>
-
-                <!-- 天空こはね -->
-                <div class="vb-member-card">
-                    <div class="vb-card-frame"></div>
-                    <div class="vb-card-inner">
-                        <div class="vb-member-icon"><i class="fa-solid fa-cloud"></i></div>
-                        <a href="characters/kohane.html" class="vb-member-name">天空 こはね</a>
-                        <div class="vb-member-read">Tenku Kohane</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </div>
-
-    <footer class="vb-footer">
-        <div class="vb-footer-logo">
-            <i class="fa-solid fa-box-open"></i> VBOX <span>(ぶいぼっくす)</span>
-        </div>
-        <p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with VBOX.</p>
-    </footer>
-
-    <script src="vbox_script.js"></script>
-    <script>
+<div class="vb-hero-stats">
+<div class="vb-stat">
+<div class="vb-stat-value">5</div>
+<div class="vb-stat-label">ADVENTURERS</div>
+</div>
+<div class="vb-stat">
+<div class="vb-stat-value"><i class="fa-solid fa-feather-pointed vb-stat-icon"></i></div>
+<div class="vb-stat-label">FREEDOM</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ROSTER -->
+<div class="vb-container">
+<section class="vb-section vb-reveal">
+<div class="vb-section-header">
+<div>
+<h2 class="vb-section-title">所属タレント</h2>
+<span class="vb-section-title-sub">Our Adventurers</span>
+</div>
+<div class="vb-divider"></div>
+</div>
+<div class="vb-member-grid">
+<!-- 土御門ハルト -->
+<div class="vb-member-card">
+<div class="vb-card-frame"></div>
+<div class="vb-card-inner">
+<div class="vb-member-icon"><i class="fa-solid fa-hat-wizard"></i></div>
+<a class="vb-member-name" href="characters/haruto.html">土御門 ハルト</a>
+<div class="vb-member-read">Tsuchimikado Haruto</div>
+</div>
+</div>
+<!-- ざざ・ざうる -->
+<div class="vb-member-card">
+<div class="vb-card-frame"></div>
+<div class="vb-card-inner">
+<div class="vb-member-icon"><i class="fa-solid fa-dragon"></i></div>
+<a class="vb-member-name" href="characters/zaza.html">ざざ・ざうる</a>
+<div class="vb-member-read">Zaza Zaur</div>
+</div>
+</div>
+<!-- 闇咲とうか -->
+<div class="vb-member-card">
+<div class="vb-card-frame"></div>
+<div class="vb-card-inner">
+<div class="vb-member-icon"><i class="fa-solid fa-moon"></i></div>
+<a class="vb-member-name" href="characters/touka.html">闇咲 とうか</a>
+<div class="vb-member-read">Yamisaki Touka</div>
+</div>
+</div>
+<!-- 朧 -->
+<div class="vb-member-card">
+<div class="vb-card-frame"></div>
+<div class="vb-card-inner">
+<div class="vb-member-icon"><i class="fa-solid fa-smog"></i></div>
+<a class="vb-member-name" href="characters/oboro.html">朧</a>
+<div class="vb-member-read">Oboro</div>
+</div>
+</div>
+<!-- 天空こはね -->
+<div class="vb-member-card">
+<div class="vb-card-frame"></div>
+<div class="vb-card-inner">
+<div class="vb-member-icon"><i class="fa-solid fa-cloud"></i></div>
+<a class="vb-member-name" href="characters/kohane.html">天空 こはね</a>
+<div class="vb-member-read">Tenku Kohane</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<footer class="vb-footer">
+<div class="vb-footer-logo">
+<i class="fa-solid fa-box-open"></i> VBOX <span>(ぶいぼっくす)</span>
+</div>
+<p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with VBOX.</p>
+</footer>
+<script src="vbox_script.js"></script>
+<script>
         document.addEventListener('DOMContentLoaded', () => {
             const reveals = document.querySelectorAll('.vb-reveal');
             const observer = new IntersectionObserver((entries) => {
@@ -145,7 +129,5 @@
             reveals.forEach(el => observer.observe(el));
         });
     </script>
-
-</body>
-
+<div class="mobile-mode-banner" style="background: #ffc83d; color: #000; text-align: center; font-size: 0.85rem; padding: 4px; font-weight: 900; position: fixed; bottom: 0; width: 100%; z-index: 9999; box-shadow: 0 -2px 10px rgba(255, 200, 60, 0.4);" v-if="isMobile">🚀 Mobile Light Mode (Powered by Vue Virtual DOM)</div></div></body>
 </html>

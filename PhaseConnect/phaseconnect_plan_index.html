@@ -1,37 +1,33 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phase Connect (Plan) - VTuber Archive Premium</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="phaseconnect_plan_index.css">
-</head>
-<body>
-    <div class="bg-fx"></div>
-    <nav class="nav">
-        <a href="../index.html" class="nav-brand"><i class="fa-solid fa-layer-group"></i> VT_ARCHIVE</a>
-        <div class="nav-links">
-            <a href="../index.html"><i class="fa-solid fa-home"></i> HOME</a>
-            <a href="#" style="color: var(--c1);"><i class="fa-solid fa-moon"></i> Phase Connect (Plan)</a>
-        </div>
-    </nav>
-    
-    
-
-    <main class="main-content">
-        
-        <div class="sidebar-hero">
-            <h1 class="hero-title" data-text="Phase Connect (Plan)">Phase Connect (Plan)</h1>
-            <p class="hero-subtitle">[ Archive Database ]</p>
-        </div>
-        
-        <div class="content-grid">
-            <article class="card highlight-card">
-                <h2><i class="fa-solid fa-seedling"></i> 運営実績と継続性</h2>
-                <p>本アーカイブでは過去の組織的変遷やトラブルも記録していますが、<strong>最も重要なのは「様々な試練を乗り越え、現在まで運営が継続し、タレントたちが輝き続けている」という事実</strong>です。ファンとの絆や、試行錯誤を通じて培われた運営ノウハウこそが、この機関の真の価値です。</p>
-            </article>
-            <article class="card">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Phase Connect (Plan) - VTuber Archive Premium</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="phaseconnect_plan_index.css" rel="stylesheet"/>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><style>[v-cloak] { display: none; } </style></head>
+<body><div id="app" v-cloak="">
+<div class="bg-fx" v-if="!isMobile"></div>
+<nav class="nav">
+<a class="nav-brand" href="../index.html"><i class="fa-solid fa-layer-group"></i> VT_ARCHIVE</a>
+<div class="nav-links">
+<a href="../index.html"><i class="fa-solid fa-home"></i> HOME</a>
+<a href="#" style="color: var(--c1);"><i class="fa-solid fa-moon"></i> Phase Connect (Plan)</a>
+</div>
+</nav>
+<main class="main-content">
+<div class="sidebar-hero">
+<h1 class="hero-title" data-text="Phase Connect (Plan)">Phase Connect (Plan)</h1>
+<p class="hero-subtitle">[ Archive Database ]</p>
+</div>
+<div class="content-grid">
+<article class="card highlight-card">
+<h2><i class="fa-solid fa-seedling"></i> 運営実績と継続性</h2>
+<p>本アーカイブでは過去の組織的変遷やトラブルも記録していますが、<strong>最も重要なのは「様々な試練を乗り越え、現在まで運営が継続し、タレントたちが輝き続けている」という事実</strong>です。ファンとの絆や、試行錯誤を通じて培われた運営ノウハウこそが、この機関の真の価値です。</p>
+</article>
+<article class="card">
 <h2><i class="fa-solid fa-book-open fa-xs" style="opacity:0.5;"></i> Overview</h2>
 <p>Phase Connectにおける所属タレント、組織構造、および契約状況の包括的調査報告書</p>
 <p>VTuberアーカイブ構築に向けた、カナダ発のバーチャルエンターテインメント企業「Phase Connect（<strong style="color:var(--c1);">フェーズコネクト</strong>）」に関する本報告書は、2021年の設立から2026年3月に至るまでの同社の軌跡、全所属タレントの現況、同期ユニット（<strong style="color:var(--c1);">ジェネレーション</strong>）ごとの契約形態、および運営レーベルの構造を詳細に分析したものである。本稿では、公開情報および内部動向に基づき、同社が提唱する「Sad Girl Company」という特異なブランド戦略と、それに付随する独自のタレントマネジメント手法について、専門的な見地から洞察を提供する。</p>
@@ -161,16 +157,12 @@
 <p>Crazy Phase Connect VTuber Controversy - YouTube, 3月 5, 2026にアクセス、 https://www.youtube.com/watch?v=rWg3Wbogh9U</p>
 <p>Phase Connect's statement on Jelly's recent tweets : r/VirtualYoutubers - Reddit, 3月 5, 2026にアクセス、 https://www.reddit.com/r/VirtualYoutubers/comments/1qwrsvv/phase_connects_statement_on_jellys_recent_tweets/</p>
 </article>
-
-        </div>
-    </main>
-
-    <footer style="text-align:center; padding:4rem; margin-top:5rem; opacity:0.5; font-family:'Playfair Display', sans-serif; letter-spacing:3px; font-size: 0.9rem;">
-        &copy; 2026 VTuber Archive Project - Phase Connect (Plan) Databank.
+</div>
+</main>
+<footer style="text-align:center; padding:4rem; margin-top:5rem; opacity:0.5; font-family:'Playfair Display', sans-serif; letter-spacing:3px; font-size: 0.9rem;">
+        © 2026 VTuber Archive Project - Phase Connect (Plan) Databank.
     </footer>
-
-    
-    <script>
+<script>
         document.addEventListener('DOMContentLoaded', () => {
             const cards = document.querySelectorAll('.card');
             cards.forEach(card => card.classList.add('reveal'));
@@ -186,6 +178,5 @@
             cards.forEach(card => observer.observe(card));
         });
     </script>
-    
-</body>
+<div class="mobile-mode-banner" style="background: #ffc83d; color: #000; text-align: center; font-size: 0.85rem; padding: 4px; font-weight: 900; position: fixed; bottom: 0; width: 100%; z-index: 9999; box-shadow: 0 -2px 10px rgba(255, 200, 60, 0.4);" v-if="isMobile">🚀 Mobile Light Mode (Powered by Vue Virtual DOM)</div></div></body>
 </html>

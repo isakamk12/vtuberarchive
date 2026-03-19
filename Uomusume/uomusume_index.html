@@ -1,127 +1,115 @@
 <!DOCTYPE html>
+
 <html lang="ja">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>うおむすめ | VTuber Archive</title>
-    <meta name="description" content="うおむすめの非公式ファンサイト。魚や釣りをテーマにしたVTuberプロジェクトのキャラクター・概要をまとめたアーカイブ。">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&family=Noto+Sans+JP:wght@400;700;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="uomusume.css">
-</head>
-
-<body>
-
-    <div class="uo-bg">
-        <!-- Bubbles effect in CSS -->
-        <div class="uo-bubbles"></div>
-    </div>
-
-    <nav class="uo-nav">
-        <a href="../index.html" class="uo-nav-back">
-            <i class="fa-solid fa-chevron-left"></i> BACK TO HUB
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>うおむすめ | VTuber Archive</title>
+<meta content="うおむすめの非公式ファンサイト。魚や釣りをテーマにしたVTuberプロジェクトのキャラクター・概要をまとめたアーカイブ。" name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&amp;family=Noto+Sans+JP:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="uomusume.css" rel="stylesheet"/>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><style>[v-cloak] { display: none; } </style></head>
+<body><div id="app" v-cloak="">
+<div class="uo-bg" v-if="!isMobile">
+<!-- Bubbles effect in CSS -->
+<div class="uo-bubbles"></div>
+</div>
+<nav class="uo-nav">
+<a class="uo-nav-back" href="../index.html">
+<i class="fa-solid fa-chevron-left"></i> BACK TO HUB
         </a>
-        <div class="uo-nav-logo">うお<span>むすめ</span></div>
-        <div class="uo-nav-tag">Fish & Fishing VTuber Project</div>
-    </nav>
-
-    <!-- HERO -->
-    <section class="uo-hero">
-        <div class="uo-hero-bg-text">UO</div>
-        <div class="uo-hero-content">
-            <div class="uo-eyebrow">Virtual YouTuber Project</div>
-            <h1 class="uo-hero-name">うお<span>むすめ</span></h1>
-            <p class="uo-hero-tagline">さかなの魅力、もっと身近に。</p>
-            <div class="uo-hero-concept">
+<div class="uo-nav-logo">うお<span>むすめ</span></div>
+<div class="uo-nav-tag">Fish &amp; Fishing VTuber Project</div>
+</nav>
+<!-- HERO -->
+<section class="uo-hero">
+<div class="uo-hero-bg-text" v-if="!isMobile">UO</div>
+<div class="uo-hero-content">
+<div class="uo-eyebrow">Virtual YouTuber Project</div>
+<h1 class="uo-hero-name">うお<span>むすめ</span></h1>
+<p class="uo-hero-tagline">さかなの魅力、もっと身近に。</p>
+<div class="uo-hero-concept">
                 魚や釣りをもっと身近に感じてもらいたいという想いから生まれたVTuberプロジェクト。お魚をモチーフにした女の子たちが、魚の個性や魅力、人とのつながり、環境問題といった未来への課題を楽しく発信。「さかなの日」賛同メンバーとしても活動し、ゲーム化やアニメ化も視野に入れたマルチ展開を目指しています。
             </div>
-            <div class="uo-hero-stats">
-                <div class="uo-stat">
-                    <div class="uo-stat-value">3</div>
-                    <div class="uo-stat-label">MEMBERS</div>
-                </div>
-                <div class="uo-stat">
-                    <div class="uo-stat-value">ASFIDA × G-PLAN</div>
-                    <div class="uo-stat-label">OPERATION</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- INFO -->
-    <div class="uo-container">
-        <section class="uo-section uo-reveal">
-            <div class="uo-section-header">
-                <span class="uo-section-num">01</span>
-                <div>
-                    <h2 class="uo-section-title">プロジェクト概要</h2>
-                    <span class="uo-section-title-sub">ABOUT</span>
-                </div>
-                <div class="uo-divider"></div>
-            </div>
-            <div class="uo-info-grid">
-                <div class="uo-info-card">
-                    <h3>🐟 魚と釣りの魅力発信</h3>
-                    <p>お魚をモチーフにした衣装やキャラクターの女の子たちが、VTuberとしての配信活動を通して、魚の生態や釣りの楽しさをポップに伝えます。</p>
-                </div>
-                <div class="uo-info-card">
-                    <h3>🌊 環境問題と未来への課題</h3>
-                    <p>単なるエンタメにとどまらず、人とのつながりや水産資源・環境問題などもテーマに取り入れ、楽しく学びながら未来を考えるきっかけを提供します。</p>
-                </div>
-                <div class="uo-info-card">
-                    <h3>🤝 共同運営・多角展開</h3>
-                    <p>タレント運営を手掛ける「株式会社ASFIDA」と、キャラクターIP管理や水産分野を担当する「ジー・プラン株式会社」の2社共同。ゲーム化やアニメ化などのマルチメディア展開も視野に入れています。
+<div class="uo-hero-stats">
+<div class="uo-stat">
+<div class="uo-stat-value">3</div>
+<div class="uo-stat-label">MEMBERS</div>
+</div>
+<div class="uo-stat">
+<div class="uo-stat-value">ASFIDA × G-PLAN</div>
+<div class="uo-stat-label">OPERATION</div>
+</div>
+</div>
+</div>
+</section>
+<!-- INFO -->
+<div class="uo-container">
+<section class="uo-section uo-reveal">
+<div class="uo-section-header">
+<span class="uo-section-num">01</span>
+<div>
+<h2 class="uo-section-title">プロジェクト概要</h2>
+<span class="uo-section-title-sub">ABOUT</span>
+</div>
+<div class="uo-divider"></div>
+</div>
+<div class="uo-info-grid">
+<div class="uo-info-card">
+<h3>🐟 魚と釣りの魅力発信</h3>
+<p>お魚をモチーフにした衣装やキャラクターの女の子たちが、VTuberとしての配信活動を通して、魚の生態や釣りの楽しさをポップに伝えます。</p>
+</div>
+<div class="uo-info-card">
+<h3>🌊 環境問題と未来への課題</h3>
+<p>単なるエンタメにとどまらず、人とのつながりや水産資源・環境問題などもテーマに取り入れ、楽しく学びながら未来を考えるきっかけを提供します。</p>
+</div>
+<div class="uo-info-card">
+<h3>🤝 共同運営・多角展開</h3>
+<p>タレント運営を手掛ける「株式会社ASFIDA」と、キャラクターIP管理や水産分野を担当する「ジー・プラン株式会社」の2社共同。ゲーム化やアニメ化などのマルチメディア展開も視野に入れています。
                     </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- ROSTER -->
-        <section class="uo-section uo-reveal">
-            <div class="uo-section-header">
-                <span class="uo-section-num">02</span>
-                <div>
-                    <h2 class="uo-section-title">所属メンバー</h2>
-                    <span class="uo-section-title-sub">MEMBERS</span>
-                </div>
-                <div class="uo-divider"></div>
-            </div>
-
-            <!-- Members -->
-            <div class="uo-member-grid">
-                <div class="uo-member-card uo-color-aji" onclick="window.location.href='characters/maaji/maaji.html'">
-                    <h3 class="uo-member-name">黄金マアジ</h3>
-                    <div class="uo-member-read">Kogane Maaji</div>
-                    <p class="uo-member-ep">「マアジ」をモチーフにしたキャラクター。元気いっぱいで親しみやすい性格。</p>
-                </div>
-                <div class="uo-member-card uo-color-madai" onclick="window.location.href='characters/madai/madai.html'">
-                    <h3 class="uo-member-name">紅波マダイ</h3>
-                    <div class="uo-member-read">Kurenami Madai</div>
-                    <p class="uo-member-ep">「マダイ」をモチーフにしたキャラクター。お祝い事にもぴったりな華やかな存在感。</p>
-                </div>
-                <div class="uo-member-card uo-color-nijimasu" onclick="window.location.href='characters/nijimasu/nijimasu.html'">
-                    <h3 class="uo-member-name">桃川ニジマス</h3>
-                    <div class="uo-member-read">Momokawa Nijimasu</div>
-                    <p class="uo-member-ep">「ニジマス」をモチーフにしたキャラクター。淡水魚代表として川や湖の魅力をアピール。</p>
-                </div>
-            </div>
-
-        </section>
-    </div>
-
-    <footer class="uo-footer">
-        <div class="uo-footer-logo">うお<span>むすめ</span></div>
-        <p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with ASFIDA, G-PLAN or うおむすめ Project.
+</div>
+</div>
+</section>
+<!-- ROSTER -->
+<section class="uo-section uo-reveal">
+<div class="uo-section-header">
+<span class="uo-section-num">02</span>
+<div>
+<h2 class="uo-section-title">所属メンバー</h2>
+<span class="uo-section-title-sub">MEMBERS</span>
+</div>
+<div class="uo-divider"></div>
+</div>
+<!-- Members -->
+<div class="uo-member-grid">
+<div class="uo-member-card uo-color-aji" onclick="window.location.href='characters/maaji/maaji.html'">
+<h3 class="uo-member-name">黄金マアジ</h3>
+<div class="uo-member-read">Kogane Maaji</div>
+<p class="uo-member-ep">「マアジ」をモチーフにしたキャラクター。元気いっぱいで親しみやすい性格。</p>
+</div>
+<div class="uo-member-card uo-color-madai" onclick="window.location.href='characters/madai/madai.html'">
+<h3 class="uo-member-name">紅波マダイ</h3>
+<div class="uo-member-read">Kurenami Madai</div>
+<p class="uo-member-ep">「マダイ」をモチーフにしたキャラクター。お祝い事にもぴったりな華やかな存在感。</p>
+</div>
+<div class="uo-member-card uo-color-nijimasu" onclick="window.location.href='characters/nijimasu/nijimasu.html'">
+<h3 class="uo-member-name">桃川ニジマス</h3>
+<div class="uo-member-read">Momokawa Nijimasu</div>
+<p class="uo-member-ep">「ニジマス」をモチーフにしたキャラクター。淡水魚代表として川や湖の魅力をアピール。</p>
+</div>
+</div>
+</section>
+</div>
+<footer class="uo-footer">
+<div class="uo-footer-logo">うお<span>むすめ</span></div>
+<p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with ASFIDA, G-PLAN or うおむすめ Project.
         </p>
-    </footer>
-
-    <script src="uomusume_script.js"></script>
-    <script>
+</footer>
+<script src="uomusume_script.js"></script>
+<script>
         document.addEventListener('DOMContentLoaded', () => {
             const reveals = document.querySelectorAll('.uo-reveal');
             const observer = new IntersectionObserver((entries) => {
@@ -139,7 +127,5 @@
             });
         });
     </script>
-
-</body>
-
+<div class="mobile-mode-banner" style="background: #ffc83d; color: #000; text-align: center; font-size: 0.85rem; padding: 4px; font-weight: 900; position: fixed; bottom: 0; width: 100%; z-index: 9999; box-shadow: 0 -2px 10px rgba(255, 200, 60, 0.4);" v-if="isMobile">🚀 Mobile Light Mode (Powered by Vue Virtual DOM)</div></div></body>
 </html>

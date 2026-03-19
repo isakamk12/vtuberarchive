@@ -1,199 +1,176 @@
 <!DOCTYPE html>
+
 <html lang="ja">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ユニバースプロダクション (Universe Production) | VTuber Archive</title>
-    <meta name="description" content="ご当地VTuberユニット「Torch's」を展開する「ユニバースプロダクション」の非公式ファンサイト。各地域の公認VTuber一覧。">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500&family=Noto+Sans+JP:wght@400;700;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="universe.css">
-</head>
-
-<body>
-
-    <div class="up-bg">
-        <div class="up-bg-gradient"></div>
-        <div class="up-bg-grid" id="map-grid"></div>
-        <div class="up-lanterns" id="lanterns"></div>
-    </div>
-
-    <nav class="up-nav">
-        <a href="../index.html" class="up-nav-back">
-            <i class="fa-solid fa-angle-left"></i> HUB
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ユニバースプロダクション (Universe Production) | VTuber Archive</title>
+<meta content="ご当地VTuberユニット「Torch's」を展開する「ユニバースプロダクション」の非公式ファンサイト。各地域の公認VTuber一覧。" name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500&amp;family=Noto+Sans+JP:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="universe.css" rel="stylesheet"/>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><style>[v-cloak] { display: none; } </style></head>
+<body><div id="app" v-cloak="">
+<div class="up-bg" v-if="!isMobile">
+<div class="up-bg-gradient" v-if="!isMobile"></div>
+<div class="up-bg-grid" id="map-grid" v-if="!isMobile"></div>
+<div class="up-lanterns" id="lanterns"></div>
+</div>
+<nav class="up-nav">
+<a class="up-nav-back" href="../index.html">
+<i class="fa-solid fa-angle-left"></i> HUB
         </a>
-        <div class="up-nav-logo">
-            <span class="up-logo-icon"><i class="fa-solid fa-fire-flame-curved"></i></span>
+<div class="up-nav-logo">
+<span class="up-logo-icon"><i class="fa-solid fa-fire-flame-curved"></i></span>
             Universe Production
         </div>
-        <div class="up-nav-tag">LOCAL LIGHTS</div>
-    </nav>
-
-    <!-- HERO -->
-    <section class="up-hero">
-        <div class="up-hero-inner">
-            <div class="up-hero-content">
-                <div class="up-eyebrow">
-                    <i class="fa-solid fa-map-location-dot"></i> 地域を照らす、ご当地VTuber事務所
+<div class="up-nav-tag">LOCAL LIGHTS</div>
+</nav>
+<!-- HERO -->
+<section class="up-hero">
+<div class="up-hero-inner">
+<div class="up-hero-content">
+<div class="up-eyebrow">
+<i class="fa-solid fa-map-location-dot"></i> 地域を照らす、ご当地VTuber事務所
                 </div>
-                <h1 class="up-hero-name">ユニバース<br>プロダクション</h1>
-                <p class="up-hero-tagline">“この場所が、きっと好きになる。<br>出会うたび広がる、ご当地の灯り”</p>
-                <div class="up-hero-concept">
-                    <p>各地域の放送局や新聞社と深く連携し、地域に根ざした活動を展開するご当地VTuber事務所。</p>
-                    <p>所属するご当地VTuberユニット「Torch's（トーチズ）」のメンバーたちは、配信活動に留まらず、地元のイベント出演、CM、企業とのタイアップなど、バーチャルの枠を超えて担当地域を全力で盛り上げています。全国各地の魅力を発信し、地元とファンを繋ぐ「灯り」となることを目指しています。
+<h1 class="up-hero-name">ユニバース<br/>プロダクション</h1>
+<p class="up-hero-tagline">“この場所が、きっと好きになる。<br/>出会うたび広がる、ご当地の灯り”</p>
+<div class="up-hero-concept">
+<p>各地域の放送局や新聞社と深く連携し、地域に根ざした活動を展開するご当地VTuber事務所。</p>
+<p>所属するご当地VTuberユニット「Torch's（トーチズ）」のメンバーたちは、配信活動に留まらず、地元のイベント出演、CM、企業とのタイアップなど、バーチャルの枠を超えて担当地域を全力で盛り上げています。全国各地の魅力を発信し、地元とファンを繋ぐ「灯り」となることを目指しています。
                     </p>
-                </div>
-            </div>
-            <div class="up-hero-visual">
-                <div class="up-torch-main">
-                    <div class="up-flame"></div>
-                    <div class="up-flame-core"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ROSTER -->
-    <div class="up-container">
-        <section class="up-section up-reveal">
-            <div class="up-section-header">
-                <div>
-                    <h2 class="up-section-title">Torch's</h2>
-                    <span class="up-section-title-sub">ご当地VTuberユニット</span>
-                </div>
-                <div class="up-divider"></div>
-            </div>
-
-            <div class="up-member-grid">
-
-                <!-- 天晴ほかる -->
-                <div class="up-member-card">
-                    <div class="up-card-glow"></div>
-                    <div class="up-card-border"></div>
-                    <div class="up-card-inner">
-                        <div class="up-member-icon"><i class="fa-solid fa-sun_plant_wilt"></i><i
-                                class="fa-solid fa-sun pe-peach"></i> <!-- Peach proxy --></div>
-                        <div class="up-member-region">
-                            <i class="fa-solid fa-location-dot"></i> 岡山県
+</div>
+</div>
+<div class="up-hero-visual">
+<div class="up-torch-main">
+<div class="up-flame"></div>
+<div class="up-flame-core"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- ROSTER -->
+<div class="up-container">
+<section class="up-section up-reveal">
+<div class="up-section-header">
+<div>
+<h2 class="up-section-title">Torch's</h2>
+<span class="up-section-title-sub">ご当地VTuberユニット</span>
+</div>
+<div class="up-divider"></div>
+</div>
+<div class="up-member-grid">
+<!-- 天晴ほかる -->
+<div class="up-member-card">
+<div class="up-card-glow"></div>
+<div class="up-card-border"></div>
+<div class="up-card-inner">
+<div class="up-member-icon"><i class="fa-solid fa-sun_plant_wilt"></i><i class="fa-solid fa-sun pe-peach"></i> <!-- Peach proxy --></div>
+<div class="up-member-region">
+<i class="fa-solid fa-location-dot"></i> 岡山県
                             <span class="up-member-sponsor">OHK岡山放送公認</span>
-                        </div>
-                        <a href="characters/hokaru.html" class="up-member-name">天晴 ほかる</a>
-                        <div class="up-member-read">Amanohare Hokaru</div>
-                    </div>
-                </div>
-
-                <!-- 日向海フェニカ -->
-                <div class="up-member-card">
-                    <div class="up-card-glow"></div>
-                    <div class="up-card-border"></div>
-                    <div class="up-card-inner">
-                        <div class="up-member-icon"><i class="fa-solid fa-umbrella-beach"></i></div>
-                        <div class="up-member-region">
-                            <i class="fa-solid fa-location-dot"></i> 宮崎県
+</div>
+<a class="up-member-name" href="characters/hokaru.html">天晴 ほかる</a>
+<div class="up-member-read">Amanohare Hokaru</div>
+</div>
+</div>
+<!-- 日向海フェニカ -->
+<div class="up-member-card">
+<div class="up-card-glow"></div>
+<div class="up-card-border"></div>
+<div class="up-card-inner">
+<div class="up-member-icon"><i class="fa-solid fa-umbrella-beach"></i></div>
+<div class="up-member-region">
+<i class="fa-solid fa-location-dot"></i> 宮崎県
                             <span class="up-member-sponsor">MRT宮崎放送公認</span>
-                        </div>
-                        <a href="characters/phoenica.html" class="up-member-name">日向海 フェニカ</a>
-                        <div class="up-member-read">Hinami Phoenica</div>
-                    </div>
-                </div>
-
-                <!-- 房総なの -->
-                <div class="up-member-card">
-                    <div class="up-card-glow"></div>
-                    <div class="up-card-border"></div>
-                    <div class="up-card-inner">
-                        <div class="up-member-icon"><i class="fa-solid fa-peanut"></i><i
-                                class="fa-brands fa-pagelines"></i> <!-- Peanut/Leaf proxy --></div>
-                        <div class="up-member-region">
-                            <i class="fa-solid fa-location-dot"></i> 千葉県
+</div>
+<a class="up-member-name" href="characters/phoenica.html">日向海 フェニカ</a>
+<div class="up-member-read">Hinami Phoenica</div>
+</div>
+</div>
+<!-- 房総なの -->
+<div class="up-member-card">
+<div class="up-card-glow"></div>
+<div class="up-card-border"></div>
+<div class="up-card-inner">
+<div class="up-member-icon"><i class="fa-solid fa-peanut"></i><i class="fa-brands fa-pagelines"></i> <!-- Peanut/Leaf proxy --></div>
+<div class="up-member-region">
+<i class="fa-solid fa-location-dot"></i> 千葉県
                             <span class="up-member-sponsor">チバテレ公認</span>
-                        </div>
-                        <a href="characters/nano.html" class="up-member-name">房総 なの</a>
-                        <div class="up-member-read">Fusafusa Nano</div>
-                    </div>
-                </div>
-
-                <!-- 木乃華サクヤ -->
-                <div class="up-member-card">
-                    <div class="up-card-glow"></div>
-                    <div class="up-card-border"></div>
-                    <div class="up-card-inner">
-                        <div class="up-member-icon"><i class="fa-solid fa-mountain-sun"></i></div>
-                        <div class="up-member-region">
-                            <i class="fa-solid fa-location-dot"></i> 静岡県
+</div>
+<a class="up-member-name" href="characters/nano.html">房総 なの</a>
+<div class="up-member-read">Fusafusa Nano</div>
+</div>
+</div>
+<!-- 木乃華サクヤ -->
+<div class="up-member-card">
+<div class="up-card-glow"></div>
+<div class="up-card-border"></div>
+<div class="up-card-inner">
+<div class="up-member-icon"><i class="fa-solid fa-mountain-sun"></i></div>
+<div class="up-member-region">
+<i class="fa-solid fa-location-dot"></i> 静岡県
                             <span class="up-member-sponsor">静岡新聞SBS公認</span>
-                        </div>
-                        <a href="characters/sakuya.html" class="up-member-name">木乃華 サクヤ</a>
-                        <div class="up-member-read">Konohana Sakuya</div>
-                    </div>
-                </div>
-
-                <!-- 山奈しずく -->
-                <div class="up-member-card">
-                    <div class="up-card-glow"></div>
-                    <div class="up-card-border"></div>
-                    <div class="up-card-inner">
-                        <div class="up-member-icon"><i class="fa-solid fa-droplet"></i></div>
-                        <div class="up-member-region">
-                            <i class="fa-solid fa-location-dot"></i> 山梨県
+</div>
+<a class="up-member-name" href="characters/sakuya.html">木乃華 サクヤ</a>
+<div class="up-member-read">Konohana Sakuya</div>
+</div>
+</div>
+<!-- 山奈しずく -->
+<div class="up-member-card">
+<div class="up-card-glow"></div>
+<div class="up-card-border"></div>
+<div class="up-card-inner">
+<div class="up-member-icon"><i class="fa-solid fa-droplet"></i></div>
+<div class="up-member-region">
+<i class="fa-solid fa-location-dot"></i> 山梨県
                             <span class="up-member-sponsor">UTYテレビ山梨公認</span>
-                        </div>
-                        <a href="characters/shizuku.html" class="up-member-name">山奈 しずく</a>
-                        <div class="up-member-read">Yamana Shizuku</div>
-                    </div>
-                </div>
-
-                <!-- 栃宮るりは -->
-                <div class="up-member-card">
-                    <div class="up-card-glow"></div>
-                    <div class="up-card-border"></div>
-                    <div class="up-card-inner">
-                        <div class="up-member-icon"><i class="fa-solid fa-strawberry"></i><i
-                                class="fa-solid fa-apple-whole"></i> <!-- Strawberry proxy --></div>
-                        <div class="up-member-region">
-                            <i class="fa-solid fa-location-dot"></i> 栃木県
+</div>
+<a class="up-member-name" href="characters/shizuku.html">山奈 しずく</a>
+<div class="up-member-read">Yamana Shizuku</div>
+</div>
+</div>
+<!-- 栃宮るりは -->
+<div class="up-member-card">
+<div class="up-card-glow"></div>
+<div class="up-card-border"></div>
+<div class="up-card-inner">
+<div class="up-member-icon"><i class="fa-solid fa-strawberry"></i><i class="fa-solid fa-apple-whole"></i> <!-- Strawberry proxy --></div>
+<div class="up-member-region">
+<i class="fa-solid fa-location-dot"></i> 栃木県
                             <span class="up-member-sponsor">下野新聞社公認</span>
-                        </div>
-                        <a href="characters/ruriha.html" class="up-member-name">栃宮 るりは</a>
-                        <div class="up-member-read">Tochimiya Ruriha</div>
-                    </div>
-                </div>
-
-                <!-- 歩音ティナ -->
-                <div class="up-member-card">
-                    <div class="up-card-glow"></div>
-                    <div class="up-card-border"></div>
-                    <div class="up-card-inner">
-                        <div class="up-member-icon"><i class="fa-solid fa-music"></i></div>
-                        <div class="up-member-region">
-                            <i class="fa-solid fa-location-dot"></i> 福井県
+</div>
+<a class="up-member-name" href="characters/ruriha.html">栃宮 るりは</a>
+<div class="up-member-read">Tochimiya Ruriha</div>
+</div>
+</div>
+<!-- 歩音ティナ -->
+<div class="up-member-card">
+<div class="up-card-glow"></div>
+<div class="up-card-border"></div>
+<div class="up-card-inner">
+<div class="up-member-icon"><i class="fa-solid fa-music"></i></div>
+<div class="up-member-region">
+<i class="fa-solid fa-location-dot"></i> 福井県
                             <span class="up-member-sponsor">FBC福井放送公認</span>
-                        </div>
-                        <a href="characters/tina.html" class="up-member-name">歩音 ティナ</a>
-                        <div class="up-member-read">Arune Tina</div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-    </div>
-
-    <footer class="up-footer">
-        <div class="up-footer-logo">
-            <span class="up-logo-icon"><i class="fa-solid fa-fire-flame-curved"></i></span>
+</div>
+<a class="up-member-name" href="characters/tina.html">歩音 ティナ</a>
+<div class="up-member-read">Arune Tina</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<footer class="up-footer">
+<div class="up-footer-logo">
+<span class="up-logo-icon"><i class="fa-solid fa-fire-flame-curved"></i></span>
             Universe Production
         </div>
-        <div class="up-footer-company">Spreading Local Lights</div>
-        <p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with Universe Production.</p>
-    </footer>
-
-    <script src="universe_script.js"></script>
-</body>
-
+<div class="up-footer-company">Spreading Local Lights</div>
+<p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with Universe Production.</p>
+</footer>
+<script src="universe_script.js"></script>
+<div class="mobile-mode-banner" style="background: #ffc83d; color: #000; text-align: center; font-size: 0.85rem; padding: 4px; font-weight: 900; position: fixed; bottom: 0; width: 100%; z-index: 9999; box-shadow: 0 -2px 10px rgba(255, 200, 60, 0.4);" v-if="isMobile">🚀 Mobile Light Mode (Powered by Vue Virtual DOM)</div></div></body>
 </html>

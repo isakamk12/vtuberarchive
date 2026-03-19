@@ -1,186 +1,166 @@
 <!DOCTYPE html>
+
 <html lang="ja">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SYNTHMANIACS | VTuber Archive</title>
-    <meta name="description" content="SYNTHMANIACS（シンセマニアクス）の非公式ファンサイト。シンセサイザーVTuberプロジェクトの所属メンバー・概要をまとめたアーカイブ。">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Audiowide&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;700;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="synthmaniacs.css">
-</head>
-
-<body>
-
-    <div class="sm-bg">
-        <!-- Visualizer & Grid effect in CSS -->
-    </div>
-
-    <nav class="sm-nav">
-        <a href="../index.html" class="sm-nav-back">
-            <i class="fa-solid fa-chevron-left"></i> EJECT
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SYNTHMANIACS | VTuber Archive</title>
+<meta content="SYNTHMANIACS（シンセマニアクス）の非公式ファンサイト。シンセサイザーVTuberプロジェクトの所属メンバー・概要をまとめたアーカイブ。" name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&amp;family=Zen+Kaku+Gothic+New:wght@400;500;700;900&amp;family=Noto+Sans+JP:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="synthmaniacs.css" rel="stylesheet"/>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><style>[v-cloak] { display: none; } </style></head>
+<body><div id="app" v-cloak="">
+<div class="sm-bg" v-if="!isMobile">
+<!-- Visualizer & Grid effect in CSS -->
+</div>
+<nav class="sm-nav">
+<a class="sm-nav-back" href="../index.html">
+<i class="fa-solid fa-chevron-left"></i> EJECT
         </a>
-        <div class="sm-nav-logo">SYNTH<span>MANIACS</span></div>
-        <div class="sm-nav-tag">Music VTuber Project</div>
-    </nav>
-
-    <!-- HERO -->
-    <section class="sm-hero">
-        <div class="sm-hero-bg-text">LFO</div>
-        <div class="sm-hero-content">
-            <div class="sm-eyebrow">OSC 1 : VTUBER_PROJECT</div>
-            <h1 class="sm-hero-name">SYNTH<span>MANIACS</span></h1>
-            <p class="sm-hero-tagline">“音楽とシンセが織りなす新しいビート”</p>
-            <div class="sm-hero-concept">
+<div class="sm-nav-logo">SYNTH<span>MANIACS</span></div>
+<div class="sm-nav-tag">Music VTuber Project</div>
+</nav>
+<!-- HERO -->
+<section class="sm-hero">
+<div class="sm-hero-bg-text" v-if="!isMobile">LFO</div>
+<div class="sm-hero-content">
+<div class="sm-eyebrow">OSC 1 : VTUBER_PROJECT</div>
+<h1 class="sm-hero-name">SYNTH<span>MANIACS</span></h1>
+<p class="sm-hero-tagline">“音楽とシンセが織りなす新しいビート”</p>
+<div class="sm-hero-concept">
                 シンセサイザーを活用し、楽曲制作や楽器演奏など、音楽活動を主軸に展開する新規VTuberプロジェクト。白鍵学院、鳴愛高校、尊音メディア高等学校など、異なる学校から集まった個性豊かなメンバーたちが、それぞれの音（個）を重ね合わせて新しいアンサンブルを響かせます。
             </div>
-            <div class="sm-hero-stats">
-                <div class="sm-stat">
-                    <div class="sm-stat-value">6</div>
-                    <div class="sm-stat-label">CHANNELS</div>
-                </div>
-                <div class="sm-stat">
-                    <div class="sm-stat-value">120</div>
-                    <div class="sm-stat-label">BPM (EST.)</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Synthesizer UI Elements Decoration -->
-        <div class="sm-hero-synth-ui">
-            <div class="sm-knob"></div>
-            <div class="sm-knob active"></div>
-            <div class="sm-slider">
-                <div class="sm-slider-track"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- INFO -->
-    <div class="sm-container">
-        <section class="sm-section sm-reveal">
-            <div class="sm-section-header">
-                <div>
-                    <h2 class="sm-section-title">プロジェクト概要</h2>
-                    <span class="sm-section-title-sub">ABOUT PROJECT</span>
-                </div>
-                <div class="sm-divider"></div>
-            </div>
-            <div class="sm-info-grid">
-                <div class="sm-info-card">
-                    <h3>🎹 音楽×バーチャル</h3>
-                    <p>シンセサイザーをはじめとする楽器演奏や楽曲制作を主軸に活動。「音楽」という共通のパッションを持つVTuberたちが活躍するプロジェクトです。</p>
-                </div>
-                <div class="sm-info-card">
-                    <h3>🏫 3つの学校と個性</h3>
-                    <p>白鍵学院（クラシック/アカデミック）、鳴愛高校（ポップス/DJ）、尊音メディア高等学校（DTM/メディア系）という特色ある学校設定が背景にあります。</p>
-                </div>
-                <div class="sm-info-card">
-                    <h3>🎧 セッションと響き合い</h3>
-                    <p>ピアノ、バイオリン、ドラム、DJプレイ、ボーカルなど、多彩な才能を持つメンバー。異なる音色が混ざり合うセッションの楽しさを発信します。</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- ROSTER -->
-        <section class="sm-section sm-reveal">
-            <div class="sm-section-header">
-                <div>
-                    <h2 class="sm-section-title">所属メンバー</h2>
-                    <span class="sm-section-title-sub">MEMBERS / TRACKLIST</span>
-                </div>
-                <div class="sm-divider"></div>
-            </div>
-
-            <!-- Members -->
-            <div class="sm-member-grid">
-
-                <!-- 譜束 ぴあの -->
-                <div class="sm-member-card sm-school-hakken">
-                    <div class="sm-member-school">白鍵学院 3年生</div>
-                    <a href="characters/piano.html" class="sm-member-name">譜束 ぴあの</a>
-                    <div class="sm-member-read">Futaba Piano</div>
-                    <div class="sm-member-tags">
-                        <span class="sm-tag">Piano</span>
-                    </div>
-                    <p class="sm-member-ep">幼少期からピアノを習っており、自分にも人にも厳しい性格。</p>
-                </div>
-
-                <!-- 譜束 いおり -->
-                <div class="sm-member-card sm-school-hakken">
-                    <div class="sm-member-school">白鍵学院 1年生</div>
-                    <a href="characters/iori.html" class="sm-member-name">譜束 いおり</a>
-                    <div class="sm-member-read">Futaba Iori</div>
-                    <div class="sm-member-tags">
-                        <span class="sm-tag">Violin</span>
-                        <span class="sm-tag">Drum</span>
-                    </div>
-                    <p class="sm-member-ep">ぴあのの妹。好奇心旺盛で、バイオリンとドラムが演奏できる。</p>
-                </div>
-
-                <!-- 刻美 りずむ -->
-                <div class="sm-member-card sm-school-mei">
-                    <div class="sm-member-school">鳴愛高校 2年生</div>
-                    <a href="characters/rizumu.html" class="sm-member-name">刻美 りずむ</a>
-                    <div class="sm-member-read">Kizami Rizumu</div>
-                    <div class="sm-member-tags">
-                        <span class="sm-tag">Vocal</span>
-                        <span class="sm-tag">Rhythm</span>
-                    </div>
-                    <p class="sm-member-ep">歌とリズムに乗るのが大好き。「楽しくないと音楽じゃない！」が信条。</p>
-                </div>
-
-                <!-- 波導 らいざ -->
-                <div class="sm-member-card sm-school-mei">
-                    <div class="sm-member-school">鳴愛高校 2年生</div>
-                    <a href="characters/raiza.html" class="sm-member-name">波導 らいざ</a>
-                    <div class="sm-member-read">Namido Raiza</div>
-                    <div class="sm-member-tags">
-                        <span class="sm-tag">DJ</span>
-                    </div>
-                    <p class="sm-member-ep">表は真面目な生徒会だが、裏では妄想がちなコスプレイヤー。DJプレイが基軸。</p>
-                </div>
-
-                <!-- 符洛院 カナデ -->
-                <div class="sm-member-card sm-school-mikoto">
-                    <div class="sm-member-school">尊音メディア高等学校 3年生</div>
-                    <a href="characters/kanade.html" class="sm-member-name">符洛院 カナデ</a>
-                    <div class="sm-member-read">Puraguin Kanade</div>
-                    <div class="sm-member-tags">
-                        <span class="sm-tag">Vocal</span>
-                        <span class="sm-tag">Drum</span>
-                    </div>
-                    <p class="sm-member-ep">謎多き小悪魔職人。特技は歌とドラム。</p>
-                </div>
-
-                <!-- 天空乃 ヒビキ -->
-                <div class="sm-member-card sm-school-mikoto">
-                    <div class="sm-member-school">尊音メディア高等学校 2年生</div>
-                    <a href="characters/hibiki.html" class="sm-member-name">天空乃 ヒビキ</a>
-                    <div class="sm-member-read">Techno Hibiki</div>
-                    <div class="sm-member-tags">
-                        <span class="sm-tag">Vocal</span>
-                    </div>
-                    <p class="sm-member-ep">クールな外見と力強い歌声を持つが、家で猫とぐうたらするのが一番の幸せ。</p>
-                </div>
-
-            </div>
-
-        </section>
-    </div>
-
-    <footer class="sm-footer">
-        <div class="sm-footer-logo">SYNTH<span>MANIACS</span></div>
-        <p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with SYNTHMANIACS Project.</p>
-    </footer>
-
-    <script src="synthmaniacs_script.js"></script>
-    <script>
+<div class="sm-hero-stats">
+<div class="sm-stat">
+<div class="sm-stat-value">6</div>
+<div class="sm-stat-label">CHANNELS</div>
+</div>
+<div class="sm-stat">
+<div class="sm-stat-value">120</div>
+<div class="sm-stat-label">BPM (EST.)</div>
+</div>
+</div>
+</div>
+<!-- Synthesizer UI Elements Decoration -->
+<div class="sm-hero-synth-ui">
+<div class="sm-knob"></div>
+<div class="sm-knob active"></div>
+<div class="sm-slider">
+<div class="sm-slider-track"></div>
+</div>
+</div>
+</section>
+<!-- INFO -->
+<div class="sm-container">
+<section class="sm-section sm-reveal">
+<div class="sm-section-header">
+<div>
+<h2 class="sm-section-title">プロジェクト概要</h2>
+<span class="sm-section-title-sub">ABOUT PROJECT</span>
+</div>
+<div class="sm-divider"></div>
+</div>
+<div class="sm-info-grid">
+<div class="sm-info-card">
+<h3>🎹 音楽×バーチャル</h3>
+<p>シンセサイザーをはじめとする楽器演奏や楽曲制作を主軸に活動。「音楽」という共通のパッションを持つVTuberたちが活躍するプロジェクトです。</p>
+</div>
+<div class="sm-info-card">
+<h3>🏫 3つの学校と個性</h3>
+<p>白鍵学院（クラシック/アカデミック）、鳴愛高校（ポップス/DJ）、尊音メディア高等学校（DTM/メディア系）という特色ある学校設定が背景にあります。</p>
+</div>
+<div class="sm-info-card">
+<h3>🎧 セッションと響き合い</h3>
+<p>ピアノ、バイオリン、ドラム、DJプレイ、ボーカルなど、多彩な才能を持つメンバー。異なる音色が混ざり合うセッションの楽しさを発信します。</p>
+</div>
+</div>
+</section>
+<!-- ROSTER -->
+<section class="sm-section sm-reveal">
+<div class="sm-section-header">
+<div>
+<h2 class="sm-section-title">所属メンバー</h2>
+<span class="sm-section-title-sub">MEMBERS / TRACKLIST</span>
+</div>
+<div class="sm-divider"></div>
+</div>
+<!-- Members -->
+<div class="sm-member-grid">
+<!-- 譜束 ぴあの -->
+<div class="sm-member-card sm-school-hakken">
+<div class="sm-member-school">白鍵学院 3年生</div>
+<a class="sm-member-name" href="characters/piano.html">譜束 ぴあの</a>
+<div class="sm-member-read">Futaba Piano</div>
+<div class="sm-member-tags">
+<span class="sm-tag">Piano</span>
+</div>
+<p class="sm-member-ep">幼少期からピアノを習っており、自分にも人にも厳しい性格。</p>
+</div>
+<!-- 譜束 いおり -->
+<div class="sm-member-card sm-school-hakken">
+<div class="sm-member-school">白鍵学院 1年生</div>
+<a class="sm-member-name" href="characters/iori.html">譜束 いおり</a>
+<div class="sm-member-read">Futaba Iori</div>
+<div class="sm-member-tags">
+<span class="sm-tag">Violin</span>
+<span class="sm-tag">Drum</span>
+</div>
+<p class="sm-member-ep">ぴあのの妹。好奇心旺盛で、バイオリンとドラムが演奏できる。</p>
+</div>
+<!-- 刻美 りずむ -->
+<div class="sm-member-card sm-school-mei">
+<div class="sm-member-school">鳴愛高校 2年生</div>
+<a class="sm-member-name" href="characters/rizumu.html">刻美 りずむ</a>
+<div class="sm-member-read">Kizami Rizumu</div>
+<div class="sm-member-tags">
+<span class="sm-tag">Vocal</span>
+<span class="sm-tag">Rhythm</span>
+</div>
+<p class="sm-member-ep">歌とリズムに乗るのが大好き。「楽しくないと音楽じゃない！」が信条。</p>
+</div>
+<!-- 波導 らいざ -->
+<div class="sm-member-card sm-school-mei">
+<div class="sm-member-school">鳴愛高校 2年生</div>
+<a class="sm-member-name" href="characters/raiza.html">波導 らいざ</a>
+<div class="sm-member-read">Namido Raiza</div>
+<div class="sm-member-tags">
+<span class="sm-tag">DJ</span>
+</div>
+<p class="sm-member-ep">表は真面目な生徒会だが、裏では妄想がちなコスプレイヤー。DJプレイが基軸。</p>
+</div>
+<!-- 符洛院 カナデ -->
+<div class="sm-member-card sm-school-mikoto">
+<div class="sm-member-school">尊音メディア高等学校 3年生</div>
+<a class="sm-member-name" href="characters/kanade.html">符洛院 カナデ</a>
+<div class="sm-member-read">Puraguin Kanade</div>
+<div class="sm-member-tags">
+<span class="sm-tag">Vocal</span>
+<span class="sm-tag">Drum</span>
+</div>
+<p class="sm-member-ep">謎多き小悪魔職人。特技は歌とドラム。</p>
+</div>
+<!-- 天空乃 ヒビキ -->
+<div class="sm-member-card sm-school-mikoto">
+<div class="sm-member-school">尊音メディア高等学校 2年生</div>
+<a class="sm-member-name" href="characters/hibiki.html">天空乃 ヒビキ</a>
+<div class="sm-member-read">Techno Hibiki</div>
+<div class="sm-member-tags">
+<span class="sm-tag">Vocal</span>
+</div>
+<p class="sm-member-ep">クールな外見と力強い歌声を持つが、家で猫とぐうたらするのが一番の幸せ。</p>
+</div>
+</div>
+</section>
+</div>
+<footer class="sm-footer">
+<div class="sm-footer-logo">SYNTH<span>MANIACS</span></div>
+<p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with SYNTHMANIACS Project.</p>
+</footer>
+<script src="synthmaniacs_script.js"></script>
+<script>
         document.addEventListener('DOMContentLoaded', () => {
             const reveals = document.querySelectorAll('.sm-reveal');
             const observer = new IntersectionObserver((entries) => {
@@ -193,7 +173,5 @@
             reveals.forEach(el => observer.observe(el));
         });
     </script>
-
-</body>
-
+<div class="mobile-mode-banner" style="background: #ffc83d; color: #000; text-align: center; font-size: 0.85rem; padding: 4px; font-weight: 900; position: fixed; bottom: 0; width: 100%; z-index: 9999; box-shadow: 0 -2px 10px rgba(255, 200, 60, 0.4);" v-if="isMobile">🚀 Mobile Light Mode (Powered by Vue Virtual DOM)</div></div></body>
 </html>

@@ -1,146 +1,130 @@
 <!DOCTYPE html>
+
 <html lang="ja">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>バルス (Balus) | VTuber Archive</title>
-    <meta name="description" content="xRライブ・モーションキャプチャ等の技術を持つ「バルス株式会社」所属タレントの非公式ファンサイト。銀河アリス、MonsterZ MATE、夜子・バーバンクなど。">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Jura:wght@400;600;700&family=Montserrat:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="balus.css">
-</head>
-
-<body>
-
-    <!-- xR Live Stage Background -->
-    <div class="bl-bg">
-        <div class="bl-bg-grid"></div>
-        <div class="bl-bg-spotlight sl1"></div>
-        <div class="bl-bg-spotlight sl2"></div>
-        <div class="bl-bg-particles"></div>
-    </div>
-
-    <nav class="bl-nav">
-        <a href="../index.html" class="bl-nav-back">
-            <i class="fa-solid fa-chevron-left"></i> SYSTEM_EXIT
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>バルス (Balus) | VTuber Archive</title>
+<meta content="xRライブ・モーションキャプチャ等の技術を持つ「バルス株式会社」所属タレントの非公式ファンサイト。銀河アリス、MonsterZ MATE、夜子・バーバンクなど。" name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Jura:wght@400;600;700&amp;family=Montserrat:wght@400;700;900&amp;family=Noto+Sans+JP:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="balus.css" rel="stylesheet"/>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><style>[v-cloak] { display: none; } </style></head>
+<body><div id="app" v-cloak="">
+<!-- xR Live Stage Background -->
+<div class="bl-bg" v-if="!isMobile">
+<div class="bl-bg-grid" v-if="!isMobile"></div>
+<div class="bl-bg-spotlight sl1" v-if="!isMobile"></div>
+<div class="bl-bg-spotlight sl2" v-if="!isMobile"></div>
+<div class="bl-bg-particles" v-if="!isMobile"></div>
+</div>
+<nav class="bl-nav">
+<a class="bl-nav-back" href="../index.html">
+<i class="fa-solid fa-chevron-left"></i> SYSTEM_EXIT
         </a>
-        <div class="bl-nav-logo">BALUS <span>バルス</span></div>
-        <div class="bl-nav-tag">xR Tech & Entertainment</div>
-    </nav>
-
-    <!-- HERO -->
-    <section class="bl-hero">
-        <div class="bl-hero-bg-text">xR STAGE</div>
-        <div class="bl-hero-content">
-            <div class="bl-eyebrow">
-                <i class="fa-solid fa-vr-cardboard"></i> CREATING THE NEXT DIMENSION
+<div class="bl-nav-logo">BALUS <span>バルス</span></div>
+<div class="bl-nav-tag">xR Tech &amp; Entertainment</div>
+</nav>
+<!-- HERO -->
+<section class="bl-hero">
+<div class="bl-hero-bg-text" v-if="!isMobile">xR STAGE</div>
+<div class="bl-hero-content">
+<div class="bl-eyebrow">
+<i class="fa-solid fa-vr-cardboard"></i> CREATING THE NEXT DIMENSION
             </div>
-            <h1 class="bl-hero-name">BALUS</h1>
-            <p class="bl-hero-tagline">“アーティストとファンが一緒に楽しめる場所を。”</p>
-            <div class="bl-hero-concept">
-                バルス株式会社は、「どこにいても一緒に楽しめる場所を創る」ことをビジョンに掲げるxRエンターテインメント企業です。<br><br>
+<h1 class="bl-hero-name">BALUS</h1>
+<p class="bl-hero-tagline">“アーティストとファンが一緒に楽しめる場所を。”</p>
+<div class="bl-hero-concept">
+                バルス株式会社は、「どこにいても一緒に楽しめる場所を創る」ことをビジョンに掲げるxRエンターテインメント企業です。<br/><br/>
                 自社スタジオでの高精度なモーションキャプチャーやxRライブ配信に加え、イラスト、CG、音楽の制作に至るまで、テクノロジーとクリエイティブを融合させた幅広いコンテンツ展開を行っています。
             </div>
-            <div class="bl-hero-stats">
-                <div class="bl-stat">
-                    <div class="bl-stat-value">xR</div>
-                    <div class="bl-stat-label">LIVE STREAMING</div>
-                </div>
-                <div class="bl-stat">
-                    <div class="bl-stat-value">MOCAP</div>
-                    <div class="bl-stat-label">STUDIO TECH</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- INFO -->
-    <div class="bl-container">
-        <section class="bl-section bl-reveal">
-            <div class="bl-section-header">
-                <div class="bl-header-line"></div>
-                <h2 class="bl-section-title">CORE TECHNOLOGIES</h2>
-                <div class="bl-header-line"></div>
-                <span class="bl-section-title-sub">制作・技術サポート</span>
-            </div>
-            <div class="bl-info-grid">
-                <div class="bl-info-card">
-                    <div class="bl-info-icon"><i class="fa-brands fa-unity"></i></div>
-                    <h3>xRライブ配信</h3>
-                    <p>現実世界とバーチャル空間を融合させるxR（Cross Reality）技術を用いた次世代のライブエンターテインメントを提供します。</p>
-                </div>
-                <div class="bl-info-card">
-                    <div class="bl-info-icon"><i class="fa-solid fa-person-rays"></i></div>
-                    <h3>モーションキャプチャー</h3>
-                    <p>自社スタジオに完備された高品質な設備で、タレントの豊かな表現を超高精度で3Dモデルへ反映させます。</p>
-                </div>
-                <div class="bl-info-card">
-                    <div class="bl-info-icon"><i class="fa-solid fa-pen-nib"></i></div>
-                    <h3>トータルプロデュース</h3>
-                    <p>イラスト、3DCGモデリング、音楽制作から企画立案まで、コンテンツを生み出すための全領域をワンストップでサポート。</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- ROSTER -->
-        <section class="bl-section bl-reveal">
-            <div class="bl-section-header">
-                <div class="bl-header-line"></div>
-                <h2 class="bl-section-title">MANAGEMENT</h2>
-                <div class="bl-header-line"></div>
-                <span class="bl-section-title-sub">所属タレント</span>
-            </div>
-
-            <!-- Members -->
-            <div class="bl-member-list">
-
-                <a href="characters/alice.html" class="bl-member-row">
-                    <div class="bl-member-deco"><i class="fa-solid fa-rocket"></i></div>
-                    <div class="bl-member-info">
-                        <div class="bl-member-read">Ginga Alice</div>
-                        <h3 class="bl-member-name">銀河 アリス</h3>
-                        <p class="bl-member-desc">地球侵略のために宇宙からやってきた侵略宇宙人。「地球人類さんを幸福にするための降伏」を求めています。</p>
-                    </div>
-                    <div class="bl-member-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-                </a>
-
-                <a href="characters/mzm.html" class="bl-member-row">
-                    <div class="bl-member-deco"><i class="fa-solid fa-music"></i></div>
-                    <div class="bl-member-info">
-                        <div class="bl-member-read">MonsterZ MATE</div>
-                        <h3 class="bl-member-name">MonsterZ MATE <span class="bl-unit-sub">（アンジョー & コーサカ）</span></h3>
-                        <p class="bl-member-desc">狼男のアンジョーと吸血鬼のコーサカによる音楽ユニット。日常やオリジナル楽曲を中心に日々投稿しています。</p>
-                    </div>
-                    <div class="bl-member-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-                </a>
-
-                <a href="characters/yako.html" class="bl-member-row">
-                    <div class="bl-member-deco"><i class="fa-solid fa-film"></i></div>
-                    <div class="bl-member-info">
-                        <div class="bl-member-read">Yako Burbank</div>
-                        <h3 class="bl-member-name">夜子・バーバンク</h3>
-                        <p class="bl-member-desc">VTuber初の「映画館公認アンバサダー」。池袋HUMAXシネマズとYouTubeを拠点に、映画の魅力を伝える活動をしています。</p>
-                    </div>
-                    <div class="bl-member-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-                </a>
-
-            </div>
-
-        </section>
-    </div>
-
-    <footer class="bl-footer">
-        <div class="bl-footer-logo">BALUS <span>バルス</span></div>
-        <p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with Balus Inc.</p>
-    </footer>
-
-    <script src="balus_script.js"></script>
-    <script>
+<div class="bl-hero-stats">
+<div class="bl-stat">
+<div class="bl-stat-value">xR</div>
+<div class="bl-stat-label">LIVE STREAMING</div>
+</div>
+<div class="bl-stat">
+<div class="bl-stat-value">MOCAP</div>
+<div class="bl-stat-label">STUDIO TECH</div>
+</div>
+</div>
+</div>
+</section>
+<!-- INFO -->
+<div class="bl-container">
+<section class="bl-section bl-reveal">
+<div class="bl-section-header">
+<div class="bl-header-line"></div>
+<h2 class="bl-section-title">CORE TECHNOLOGIES</h2>
+<div class="bl-header-line"></div>
+<span class="bl-section-title-sub">制作・技術サポート</span>
+</div>
+<div class="bl-info-grid">
+<div class="bl-info-card">
+<div class="bl-info-icon"><i class="fa-brands fa-unity"></i></div>
+<h3>xRライブ配信</h3>
+<p>現実世界とバーチャル空間を融合させるxR（Cross Reality）技術を用いた次世代のライブエンターテインメントを提供します。</p>
+</div>
+<div class="bl-info-card">
+<div class="bl-info-icon"><i class="fa-solid fa-person-rays"></i></div>
+<h3>モーションキャプチャー</h3>
+<p>自社スタジオに完備された高品質な設備で、タレントの豊かな表現を超高精度で3Dモデルへ反映させます。</p>
+</div>
+<div class="bl-info-card">
+<div class="bl-info-icon"><i class="fa-solid fa-pen-nib"></i></div>
+<h3>トータルプロデュース</h3>
+<p>イラスト、3DCGモデリング、音楽制作から企画立案まで、コンテンツを生み出すための全領域をワンストップでサポート。</p>
+</div>
+</div>
+</section>
+<!-- ROSTER -->
+<section class="bl-section bl-reveal">
+<div class="bl-section-header">
+<div class="bl-header-line"></div>
+<h2 class="bl-section-title">MANAGEMENT</h2>
+<div class="bl-header-line"></div>
+<span class="bl-section-title-sub">所属タレント</span>
+</div>
+<!-- Members -->
+<div class="bl-member-list">
+<a class="bl-member-row" href="characters/alice.html">
+<div class="bl-member-deco"><i class="fa-solid fa-rocket"></i></div>
+<div class="bl-member-info">
+<div class="bl-member-read">Ginga Alice</div>
+<h3 class="bl-member-name">銀河 アリス</h3>
+<p class="bl-member-desc">地球侵略のために宇宙からやってきた侵略宇宙人。「地球人類さんを幸福にするための降伏」を求めています。</p>
+</div>
+<div class="bl-member-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+</a>
+<a class="bl-member-row" href="characters/mzm.html">
+<div class="bl-member-deco"><i class="fa-solid fa-music"></i></div>
+<div class="bl-member-info">
+<div class="bl-member-read">MonsterZ MATE</div>
+<h3 class="bl-member-name">MonsterZ MATE <span class="bl-unit-sub">（アンジョー &amp; コーサカ）</span></h3>
+<p class="bl-member-desc">狼男のアンジョーと吸血鬼のコーサカによる音楽ユニット。日常やオリジナル楽曲を中心に日々投稿しています。</p>
+</div>
+<div class="bl-member-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+</a>
+<a class="bl-member-row" href="characters/yako.html">
+<div class="bl-member-deco"><i class="fa-solid fa-film"></i></div>
+<div class="bl-member-info">
+<div class="bl-member-read">Yako Burbank</div>
+<h3 class="bl-member-name">夜子・バーバンク</h3>
+<p class="bl-member-desc">VTuber初の「映画館公認アンバサダー」。池袋HUMAXシネマズとYouTubeを拠点に、映画の魅力を伝える活動をしています。</p>
+</div>
+<div class="bl-member-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+</a>
+</div>
+</section>
+</div>
+<footer class="bl-footer">
+<div class="bl-footer-logo">BALUS <span>バルス</span></div>
+<p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with Balus Inc.</p>
+</footer>
+<script src="balus_script.js"></script>
+<script>
         document.addEventListener('DOMContentLoaded', () => {
             const reveals = document.querySelectorAll('.bl-reveal');
             const observer = new IntersectionObserver((entries) => {
@@ -153,7 +137,5 @@
             reveals.forEach(el => observer.observe(el));
         });
     </script>
-
-</body>
-
+<div class="mobile-mode-banner" style="background: #ffc83d; color: #000; text-align: center; font-size: 0.85rem; padding: 4px; font-weight: 900; position: fixed; bottom: 0; width: 100%; z-index: 9999; box-shadow: 0 -2px 10px rgba(255, 200, 60, 0.4);" v-if="isMobile">🚀 Mobile Light Mode (Powered by Vue Virtual DOM)</div></div></body>
 </html>

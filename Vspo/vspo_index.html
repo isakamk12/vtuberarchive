@@ -1,130 +1,108 @@
 <!DOCTYPE html>
+
 <html lang="ja">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VSPO! CHARACTER SELECT | VTuber Archive</title>
-    <!-- Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600;700&family=Noto+Sans+JP:wght@400;700;900&display=swap"
-        rel="stylesheet">
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Styles -->
-    <link rel="stylesheet" href="vspo.css">
-</head>
-
-<body class="client-theme">
-
-    <!-- Screen Grid & Vignette Overlay for Game Client Feel -->
-    <div class="screen-vignette"></div>
-    <div class="screen-grid"></div>
-
-    <!-- Client Header -->
-    <header class="client-header">
-        <a href="../index.html" class="back-btn">
-            <i class="fa-solid fa-chevron-left"></i> BACK TO HUB
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VSPO! CHARACTER SELECT | VTuber Archive</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600;700&amp;family=Noto+Sans+JP:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<!-- Styles -->
+<link href="vspo.css" rel="stylesheet"/>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><style>[v-cloak] { display: none; } </style></head>
+<body class="client-theme"><div id="app" v-cloak="">
+<!-- Screen Grid & Vignette Overlay for Game Client Feel -->
+<div class="screen-vignette"></div>
+<div class="screen-grid"></div>
+<!-- Client Header -->
+<header class="client-header">
+<a class="back-btn" href="../index.html">
+<i class="fa-solid fa-chevron-left"></i> BACK TO HUB
         </a>
-        <div class="brand">
-            <span class="vspo-logo">VSPO!</span>
-            <span class="sub-text">AGENT SELECTOR</span>
+<div class="brand">
+<span class="vspo-logo">VSPO!</span>
+<span class="sub-text">AGENT SELECTOR</span>
+</div>
+<div class="server-status">
+<span>PING: 14ms</span>
+<span class="dot"></span> ONLINE
         </div>
-        <div class="server-status">
-            <span>PING: 14ms</span>
-            <span class="dot"></span> ONLINE
-        </div>
-    </header>
-
-    <!-- Main Client Area -->
-    <main class="client-area">
-
-        <!-- Left Panel: Character Roster List -->
-        <aside class="roster-panel">
-            <div class="panel-title">
-                <h2>OPERATORS</h2>
-                <div class="unit-tabs">
-                    <button class="tab-btn active" data-filter="all">ALL</button>
-                    <button class="tab-btn" data-filter="lvg">LVG</button>
-                    <button class="tab-btn" data-filter="ibg">IBG</button>
-                    <button class="tab-btn" data-filter="crg">CRG</button>
-                    <button class="tab-btn" data-filter="en">EN</button>
-                </div>
-            </div>
-
-            <div class="agent-list" id="agentList">
-                <!-- Injected via JS -->
-            </div>
-        </aside>
-
-        <!-- Center Panel: Large Character Display -->
-        <section class="display-panel">
-            <div class="glitch-overlay" id="glitchOverlay"></div>
-
-            <div class="hologram-container" id="holoContainer">
-                <div class="character-silhouette" id="charSilhouette"></div>
-                <h1 class="selected-name-bg" id="bgName">SELECT</h1>
-
-                <!-- Center Info Base -->
-                <div class="character-base">
-                    <div class="scanner-line"></div>
-                </div>
-            </div>
-
-            <div class="quick-stats">
-                <div class="stat-bar">
-                    <span>AIM</span>
-                    <div class="bar-outer">
-                        <div class="bar-inner" id="statAim" style="width: 0%"></div>
-                    </div>
-                </div>
-                <div class="stat-bar">
-                    <span>IGL</span>
-                    <div class="bar-outer">
-                        <div class="bar-inner" id="statIgl" style="width: 0%"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Right Panel: Character Specifications -->
-        <aside class="specs-panel">
-            <div class="glitch-box">
-                <div class="record-badge">CONFIDENTIAL RECORD</div>
-
-                <div class="spec-header">
-                    <h2 id="agentName">NO DATA</h2>
-                    <p id="agentUnit" class="unit-label">---</p>
-                </div>
-
-                <div class="spec-block">
-                    <h3><i class="fa-solid fa-fingerprint"></i> PROFILE</h3>
-                    <p id="agentProfile" class="typewriter">Please select an agent from the roster to view their
+</header>
+<!-- Main Client Area -->
+<main class="client-area">
+<!-- Left Panel: Character Roster List -->
+<aside class="roster-panel">
+<div class="panel-title">
+<h2>OPERATORS</h2>
+<div class="unit-tabs">
+<button class="tab-btn active" data-filter="all">ALL</button>
+<button class="tab-btn" data-filter="lvg">LVG</button>
+<button class="tab-btn" data-filter="ibg">IBG</button>
+<button class="tab-btn" data-filter="crg">CRG</button>
+<button class="tab-btn" data-filter="en">EN</button>
+</div>
+</div>
+<div class="agent-list" id="agentList">
+<!-- Injected via JS -->
+</div>
+</aside>
+<!-- Center Panel: Large Character Display -->
+<section class="display-panel">
+<div class="glitch-overlay" id="glitchOverlay"></div>
+<div class="hologram-container" id="holoContainer">
+<div class="character-silhouette" id="charSilhouette"></div>
+<h1 class="selected-name-bg" id="bgName" v-if="!isMobile">SELECT</h1>
+<!-- Center Info Base -->
+<div class="character-base">
+<div class="scanner-line"></div>
+</div>
+</div>
+<div class="quick-stats">
+<div class="stat-bar">
+<span>AIM</span>
+<div class="bar-outer">
+<div class="bar-inner" id="statAim" style="width: 0%"></div>
+</div>
+</div>
+<div class="stat-bar">
+<span>IGL</span>
+<div class="bar-outer">
+<div class="bar-inner" id="statIgl" style="width: 0%"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Right Panel: Character Specifications -->
+<aside class="specs-panel">
+<div class="glitch-box">
+<div class="record-badge">CONFIDENTIAL RECORD</div>
+<div class="spec-header">
+<h2 id="agentName">NO DATA</h2>
+<p class="unit-label" id="agentUnit">---</p>
+</div>
+<div class="spec-block">
+<h3><i class="fa-solid fa-fingerprint"></i> PROFILE</h3>
+<p class="typewriter" id="agentProfile">Please select an agent from the roster to view their
                         detailed specifications and operational history.</p>
-                </div>
-
-                <div class="spec-block">
-                    <h3><i class="fa-solid fa-gamepad"></i> ASSIGNMENTS</h3>
-                    <div class="tag-container" id="agentGames">
-                        <!-- Tags here -->
-                    </div>
-                </div>
-
-                <button class="lock-in-btn" disabled>LOCK IN AGENT</button>
-            </div>
-
-            <!-- Group Info Footer (Game Version/Event Notice) -->
-            <div class="patch-notes">
-                <h3>VIRTUAL eSPORTS PROJECT</h3>
-                <p>Establishing women in eSports. "Gaming Girls can be cute, cool, and skilled." Fostering a profound
+</div>
+<div class="spec-block">
+<h3><i class="fa-solid fa-gamepad"></i> ASSIGNMENTS</h3>
+<div class="tag-container" id="agentGames">
+<!-- Tags here -->
+</div>
+</div>
+<button class="lock-in-btn" disabled="">LOCK IN AGENT</button>
+</div>
+<!-- Group Info Footer (Game Version/Event Notice) -->
+<div class="patch-notes">
+<h3>VIRTUAL eSPORTS PROJECT</h3>
+<p>Establishing women in eSports. "Gaming Girls can be cute, cool, and skilled." Fostering a profound
                     commitment to victory across all deployments.</p>
-            </div>
-        </aside>
-
-    </main>
-
-    <script src="vspo_script.js"></script>
-</body>
-
+</div>
+</aside>
+</main>
+<script src="vspo_script.js"></script>
+<div class="mobile-mode-banner" style="background: #ffc83d; color: #000; text-align: center; font-size: 0.85rem; padding: 4px; font-weight: 900; position: fixed; bottom: 0; width: 100%; z-index: 9999; box-shadow: 0 -2px 10px rgba(255, 200, 60, 0.4);" v-if="isMobile">🚀 Mobile Light Mode (Powered by Vue Virtual DOM)</div></div></body>
 </html>
-

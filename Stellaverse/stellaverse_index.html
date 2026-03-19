@@ -1,127 +1,116 @@
 <!DOCTYPE html>
+
 <html lang="ja">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stellaverse | VTuber Archive</title>
-    <meta name="description" content="Stellaverseの非公式ファンサイト。Stellaverseの所属メンバーや概要をまとめた非公式アーカイブ。">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&family=Noto+Sans+JP:wght@400;700;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="stellaverse.css">
-</head>
-
-<body>
-
-    <div class="uo-bg">
-        <!-- Bubbles effect in CSS -->
-        <div class="uo-bubbles"></div>
-    </div>
-
-    <nav class="uo-nav">
-        <a href="../index.html" class="uo-nav-back">
-            <i class="fa-solid fa-chevron-left"></i> BACK TO HUB
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stellaverse | VTuber Archive</title>
+<meta content="Stellaverseの非公式ファンサイト。Stellaverseの所属メンバーや概要をまとめた非公式アーカイブ。" name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&amp;family=Noto+Sans+JP:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="stellaverse.css" rel="stylesheet"/>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><style>[v-cloak] { display: none; } </style></head>
+<body><div id="app" v-cloak="">
+<div class="uo-bg" v-if="!isMobile">
+<!-- Bubbles effect in CSS -->
+<div class="uo-bubbles"></div>
+</div>
+<nav class="uo-nav">
+<a class="uo-nav-back" href="../index.html">
+<i class="fa-solid fa-chevron-left"></i> BACK TO HUB
         </a>
-        <div class="uo-nav-logo">Stellaverse</div>
-        <div class="uo-nav-tag">VTuber Project</div>
-    </nav>
-
-    <!-- HERO -->
-    <section class="uo-hero">
-        <div class="uo-hero-bg-text">UO</div>
-        <div class="uo-hero-content">
-            <div class="uo-eyebrow">Virtual YouTuber Project</div>
-            <h1 class="uo-hero-name">Stellaverse</h1>
-            <p class="uo-hero-tagline">Stellaverse アーカイブ</p>
-            <div class="uo-hero-concept">時間と空間を超えて集まったアイドルたちが、世界を救うために活動するUS拠点のクリエイティブ・エージェンシー。</div>
-            <div class="uo-hero-stats">
-                <div class="uo-stat">
-                    <div class="uo-stat-value">4</div>
-                    <div class="uo-stat-label">MEMBERS</div>
-                </div>
-                <div class="uo-stat">
-                    <div class="uo-stat-value">Stellar Verse Productions</div>
-                    <div class="uo-stat-label">OPERATION</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- INFO -->
-    <div class="uo-container">
-        <section class="uo-section uo-reveal">
-            <div class="uo-section-header">
-                <span class="uo-section-num">01</span>
-                <div>
-                    <h2 class="uo-section-title">プロジェクト概要</h2>
-                    <span class="uo-section-title-sub">ABOUT</span>
-                </div>
-                <div class="uo-divider"></div>
-            </div>
-            <div class="uo-info-grid">
-                <div class="uo-info-card">
-                    <h3>🌌 無限の可能性</h3>
-                    <p>「Infinium」をはじめ、時空を超えた壮大なコンセプトを持つアイドルたちがユニークな物語を紡ぎます。</p>
-                </div>
-                <div class="uo-info-card">
-                    <h3>🏙️ 徹底したクリエイター支援</h3>
-                    <p>タレントが創作に集中できるよう、技術・宣伝・法務などの強力なサポート体制を構築。</p>
-                </div>
-                <div class="uo-info-card">
-                    <h3>🌟 次世代のアイドル像</h3>
-                    <p>従来のアイドルの枠を超え、SFやファンタジー要素を融合させた新しいスタイルを提案。</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- ROSTER -->
-        <section class="uo-section uo-reveal">
-            <div class="uo-section-header">
-                <span class="uo-section-num">02</span>
-                <div>
-                    <h2 class="uo-section-title">所属メンバー</h2>
-                    <span class="uo-section-title-sub">MEMBERS</span>
-                </div>
-                <div class="uo-divider"></div>
-            </div>
-
-            <!-- Members -->
-            <div class="uo-member-grid">
-                <div class="uo-member-card" onclick="window.location.href='characters/彗月るい/彗月るい.html'">
-                    <h3 class="uo-member-name">彗月るい</h3>
-                    <div class="uo-member-read">彗月るい</div>
-                    <p class="uo-member-ep">所属メンバー「彗月るい」の個別アーカイブページです。</p>
-                </div>
-                <div class="uo-member-card" onclick="window.location.href='characters/狐守れを/狐守れを.html'">
-                    <h3 class="uo-member-name">狐守れを</h3>
-                    <div class="uo-member-read">狐守れを</div>
-                    <p class="uo-member-ep">所属メンバー「狐守れを」の個別アーカイブページです。</p>
-                </div>
-                <div class="uo-member-card" onclick="window.location.href='characters/愛耶夢耶からめ/愛耶夢耶からめ.html'">
-                    <h3 class="uo-member-name">愛耶夢耶からめ</h3>
-                    <div class="uo-member-read">愛耶夢耶からめ</div>
-                    <p class="uo-member-ep">所属メンバー「愛耶夢耶からめ」の個別アーカイブページです。</p>
-                </div>
-                <div class="uo-member-card" onclick="window.location.href='characters/三留エルサ/三留エルサ.html'">
-                    <h3 class="uo-member-name">三留エルサ</h3>
-                    <div class="uo-member-read">三留エルサ</div>
-                    <p class="uo-member-ep">所属メンバー「三留エルサ」の個別アーカイブページです。</p>
-                </div></div>
-        </section>
-    </div>
-
-    <footer class="uo-footer">
-        <div class="uo-footer-logo">Stellaverse</div>
-        <p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with official management.
+<div class="uo-nav-logo">Stellaverse</div>
+<div class="uo-nav-tag">VTuber Project</div>
+</nav>
+<!-- HERO -->
+<section class="uo-hero">
+<div class="uo-hero-bg-text" v-if="!isMobile">UO</div>
+<div class="uo-hero-content">
+<div class="uo-eyebrow">Virtual YouTuber Project</div>
+<h1 class="uo-hero-name">Stellaverse</h1>
+<p class="uo-hero-tagline">Stellaverse アーカイブ</p>
+<div class="uo-hero-concept">時間と空間を超えて集まったアイドルたちが、世界を救うために活動するUS拠点のクリエイティブ・エージェンシー。</div>
+<div class="uo-hero-stats">
+<div class="uo-stat">
+<div class="uo-stat-value">4</div>
+<div class="uo-stat-label">MEMBERS</div>
+</div>
+<div class="uo-stat">
+<div class="uo-stat-value">Stellar Verse Productions</div>
+<div class="uo-stat-label">OPERATION</div>
+</div>
+</div>
+</div>
+</section>
+<!-- INFO -->
+<div class="uo-container">
+<section class="uo-section uo-reveal">
+<div class="uo-section-header">
+<span class="uo-section-num">01</span>
+<div>
+<h2 class="uo-section-title">プロジェクト概要</h2>
+<span class="uo-section-title-sub">ABOUT</span>
+</div>
+<div class="uo-divider"></div>
+</div>
+<div class="uo-info-grid">
+<div class="uo-info-card">
+<h3>🌌 無限の可能性</h3>
+<p>「Infinium」をはじめ、時空を超えた壮大なコンセプトを持つアイドルたちがユニークな物語を紡ぎます。</p>
+</div>
+<div class="uo-info-card">
+<h3>🏙️ 徹底したクリエイター支援</h3>
+<p>タレントが創作に集中できるよう、技術・宣伝・法務などの強力なサポート体制を構築。</p>
+</div>
+<div class="uo-info-card">
+<h3>🌟 次世代のアイドル像</h3>
+<p>従来のアイドルの枠を超え、SFやファンタジー要素を融合させた新しいスタイルを提案。</p>
+</div>
+</div>
+</section>
+<!-- ROSTER -->
+<section class="uo-section uo-reveal">
+<div class="uo-section-header">
+<span class="uo-section-num">02</span>
+<div>
+<h2 class="uo-section-title">所属メンバー</h2>
+<span class="uo-section-title-sub">MEMBERS</span>
+</div>
+<div class="uo-divider"></div>
+</div>
+<!-- Members -->
+<div class="uo-member-grid">
+<div class="uo-member-card" onclick="window.location.href='characters/彗月るい/彗月るい.html'">
+<h3 class="uo-member-name">彗月るい</h3>
+<div class="uo-member-read">彗月るい</div>
+<p class="uo-member-ep">所属メンバー「彗月るい」の個別アーカイブページです。</p>
+</div>
+<div class="uo-member-card" onclick="window.location.href='characters/狐守れを/狐守れを.html'">
+<h3 class="uo-member-name">狐守れを</h3>
+<div class="uo-member-read">狐守れを</div>
+<p class="uo-member-ep">所属メンバー「狐守れを」の個別アーカイブページです。</p>
+</div>
+<div class="uo-member-card" onclick="window.location.href='characters/愛耶夢耶からめ/愛耶夢耶からめ.html'">
+<h3 class="uo-member-name">愛耶夢耶からめ</h3>
+<div class="uo-member-read">愛耶夢耶からめ</div>
+<p class="uo-member-ep">所属メンバー「愛耶夢耶からめ」の個別アーカイブページです。</p>
+</div>
+<div class="uo-member-card" onclick="window.location.href='characters/三留エルサ/三留エルサ.html'">
+<h3 class="uo-member-name">三留エルサ</h3>
+<div class="uo-member-read">三留エルサ</div>
+<p class="uo-member-ep">所属メンバー「三留エルサ」の個別アーカイブページです。</p>
+</div></div>
+</section>
+</div>
+<footer class="uo-footer">
+<div class="uo-footer-logo">Stellaverse</div>
+<p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with official management.
         </p>
-    </footer>
-
-    <script src="stellaverse_script.js"></script>
-    <script>
+</footer>
+<script src="stellaverse_script.js"></script>
+<script>
         document.addEventListener('DOMContentLoaded', () => {
             const reveals = document.querySelectorAll('.uo-reveal');
             const observer = new IntersectionObserver((entries) => {
@@ -139,7 +128,5 @@
             });
         });
     </script>
-
-</body>
-
+<div class="mobile-mode-banner" style="background: #ffc83d; color: #000; text-align: center; font-size: 0.85rem; padding: 4px; font-weight: 900; position: fixed; bottom: 0; width: 100%; z-index: 9999; box-shadow: 0 -2px 10px rgba(255, 200, 60, 0.4);" v-if="isMobile">🚀 Mobile Light Mode (Powered by Vue Virtual DOM)</div></div></body>
 </html>

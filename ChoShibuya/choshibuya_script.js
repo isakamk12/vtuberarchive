@@ -55,3 +55,31 @@ document.addEventListener('DOMContentLoaded', () => {
     // Card Log (Simulating street vibes)
     console.log("%c[CHO SHIBUYA] %cSYSTEM LOADED. ENJOY THE BEAT.", "color: #A855F7; font-weight: bold", "color: #fff");
 });
+
+
+const { createApp, ref, computed, onMounted, onUnmounted } = Vue;
+
+const app = createApp({
+    setup() {
+        const windowWidth = ref(window.innerWidth);
+        const isMobile = computed(() => windowWidth.value <= 768);
+
+        const handleResize = () => {
+            windowWidth.value = window.innerWidth;
+        };
+
+        onMounted(() => {
+            window.addEventListener('resize', handleResize);
+        });
+
+        onUnmounted(() => {
+            window.removeEventListener('resize', handleResize);
+        });
+
+        return {
+            isMobile
+        }
+    }
+});
+
+app.mount('#app');

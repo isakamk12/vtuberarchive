@@ -1,163 +1,142 @@
 <!DOCTYPE html>
+
 <html lang="ja">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>にゃんたじあ！ | VTuber Archive</title>
-    <meta name="description" content="サンリオ×日テレによるVTuberプロジェクト「にゃんたじあ！」の非公式ファンサイト。猫から女の子になったメンバー一覧。">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=M+PLUS+Rounded+1c:wght@400;700;800;900&family=Noto+Sans+JP:wght@400;700;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="nyantasia.css">
-</head>
-
-<body>
-
-    <div class="ny-bg">
-        <div class="ny-bg-stars"></div>
-        <div class="ny-bg-magic"></div>
-    </div>
-
-    <nav class="ny-nav">
-        <a href="../index.html" class="ny-nav-back">
-            <i class="fa-solid fa-home"></i> もどる
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>にゃんたじあ！ | VTuber Archive</title>
+<meta content="サンリオ×日テレによるVTuberプロジェクト「にゃんたじあ！」の非公式ファンサイト。猫から女の子になったメンバー一覧。" name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&amp;family=M+PLUS+Rounded+1c:wght@400;700;800;900&amp;family=Noto+Sans+JP:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="nyantasia.css" rel="stylesheet"/>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><style>[v-cloak] { display: none; } </style></head>
+<body><div id="app" v-cloak="">
+<div class="ny-bg" v-if="!isMobile">
+<div class="ny-bg-stars" v-if="!isMobile"></div>
+<div class="ny-bg-magic" v-if="!isMobile"></div>
+</div>
+<nav class="ny-nav">
+<a class="ny-nav-back" href="../index.html">
+<i class="fa-solid fa-home"></i> もどる
         </a>
-        <div class="ny-nav-logo">にゃんたじあ！ <span>Nyantasia!</span></div>
-        <div class="ny-nav-tag">Sanrio × NTV Project</div>
-    </nav>
-
-    <!-- HERO -->
-    <section class="ny-hero">
-        <div class="ny-hero-bg-text"><i class="fa-solid fa-cat"></i></div>
-        <div class="ny-hero-content">
-            <div class="ny-eyebrow">
-                <i class="fa-solid fa-wand-magic-sparkles"></i> MAGIC & CATS
+<div class="ny-nav-logo">にゃんたじあ！ <span>Nyantasia!</span></div>
+<div class="ny-nav-tag">Sanrio × NTV Project</div>
+</nav>
+<!-- HERO -->
+<section class="ny-hero">
+<div class="ny-hero-bg-text" v-if="!isMobile"><i class="fa-solid fa-cat"></i></div>
+<div class="ny-hero-content">
+<div class="ny-eyebrow">
+<i class="fa-solid fa-wand-magic-sparkles"></i> MAGIC &amp; CATS
             </div>
-            <h1 class="ny-hero-name">にゃんたじあ！</h1>
-            <p class="ny-hero-tagline">“魔法で女の子になった猫たち”</p>
-            <div class="ny-hero-concept">
-                株式会社サンリオと、日本テレビグループの株式会社ClaN Entertainmentが共同運営する新規VTuberプロジェクト。<br><br>
+<h1 class="ny-hero-name">にゃんたじあ！</h1>
+<p class="ny-hero-tagline">“魔法で女の子になった猫たち”</p>
+<div class="ny-hero-concept">
+                株式会社サンリオと、日本テレビグループの株式会社ClaN Entertainmentが共同運営する新規VTuberプロジェクト。<br/><br/>
                 魔法使いの女の子の家に暮らす猫たちが、魔法でVTuberの姿に変身！ゲームプレイや雑談配信を中心に活動し、「オータムボイス」「ウィンターボイス」などの季節ボイスや、誕生日グッズの展開も精力的に行っています。
             </div>
-            <div class="ny-hero-stats">
-                <div class="ny-stat">
-                    <div class="ny-stat-value">8</div>
-                    <div class="ny-stat-label">CATS</div>
-                </div>
-                <div class="ny-stat">
-                    <div class="ny-stat-value">SANRIO</div>
-                    <div class="ny-stat-label">CO-PRODUCE</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- INFO -->
-    <div class="ny-container">
-        <section class="ny-section ny-reveal">
-            <div class="ny-section-header">
-                <div>
-                    <h2 class="ny-section-title">プロジェクトのひみつ</h2>
-                    <span class="ny-section-title-sub">ABOUT PROJECT</span>
-                </div>
-                <div class="ny-divider"></div>
-            </div>
-            <div class="ny-info-grid">
-                <div class="ny-info-card">
-                    <div class="ny-info-icon"><i class="fa-solid fa-cat"></i></div>
-                    <h3>🐾 猫からVTuberへ</h3>
-                    <p>魔法使いの女の子に飼われている猫たちが魔法で変身。それぞれが個性豊かな猫種や性格を持っており、人間界での配信活動を楽しんでいます。</p>
-                </div>
-                <div class="ny-info-card">
-                    <div class="ny-info-icon"><i class="fa-solid fa-ribbon"></i></div>
-                    <h3>🎀 サンリオ×日テレ企画</h3>
-                    <p>サンリオのキャラクタープロデュース力と、日テレグループ（ClaN Entertainment）のVTuber運営ノウハウがタッグを組んだ強力なプロジェクトです。</p>
-                </div>
-                <div class="ny-info-card">
-                    <div class="ny-info-icon"><i class="fa-solid fa-bag-shopping"></i></div>
-                    <h3>🛍️ ボイス＆グッズ展開</h3>
-                    <p>季節ごとに販売されるシチュエーションボイスや、お誕生日に合わせた記念グッズなど、配信外でも楽しめるコンテンツを積極的に発信しています。</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- ROSTER -->
-        <section class="ny-section ny-reveal">
-            <div class="ny-section-header">
-                <div>
-                    <h2 class="ny-section-title">にゃんたじあ！の仲間たち</h2>
-                    <span class="ny-section-title-sub">MEMBERS</span>
-                </div>
-                <div class="ny-divider"></div>
-            </div>
-
-            <!-- Members -->
-            <div class="ny-member-grid">
-
-                <div class="ny-member-card">
-                    <div class="ny-member-deco"><i class="fa-solid fa-paw"></i></div>
-                    <a href="characters/anzu.html" class="ny-member-name">若魔藤 あんず</a>
-                    <div class="ny-member-read">NYAMAFUJI ANZU</div>
-                </div>
-
-                <div class="ny-member-card">
-                    <div class="ny-member-deco"><i class="fa-solid fa-paw"></i></div>
-                    <a href="characters/soda.html" class="ny-member-name">若魔白 ソーダ</a>
-                    <div class="ny-member-read">NYAMASHIRO SODA</div>
-                </div>
-
-                <div class="ny-member-card">
-                    <div class="ny-member-deco"><i class="fa-solid fa-paw"></i></div>
-                    <a href="characters/tart.html" class="ny-member-name">若魔麦 たると</a>
-                    <div class="ny-member-read">NYAMAMUGI TART</div>
-                </div>
-
-                <div class="ny-member-card">
-                    <div class="ny-member-deco"><i class="fa-solid fa-paw"></i></div>
-                    <a href="characters/neon.html" class="ny-member-name">若魔影 ネオン</a>
-                    <div class="ny-member-read">NYAMAKAGE NEON</div>
-                </div>
-
-                <div class="ny-member-card">
-                    <div class="ny-member-deco"><i class="fa-solid fa-paw"></i></div>
-                    <a href="characters/fuwari.html" class="ny-member-name">若魔雲 ふわり</a>
-                    <div class="ny-member-read">NYAMAKUMO FUWARI</div>
-                </div>
-
-                <div class="ny-member-card">
-                    <div class="ny-member-deco"><i class="fa-solid fa-paw"></i></div>
-                    <a href="characters/eru.html" class="ny-member-name">若魔陽 エル</a>
-                    <div class="ny-member-read">NYAMAHARU ERU</div>
-                </div>
-
-                <div class="ny-member-card">
-                    <div class="ny-member-deco"><i class="fa-solid fa-paw"></i></div>
-                    <a href="characters/lutz.html" class="ny-member-name">ニャマシュヴァ・ルッツ</a>
-                    <div class="ny-member-read">NYAMASHUVA LUTZ</div>
-                </div>
-
-                <div class="ny-member-card">
-                    <div class="ny-member-deco"><i class="fa-solid fa-paw"></i></div>
-                    <a href="characters/perle.html" class="ny-member-name">ニャマルベール・ペルル</a>
-                    <div class="ny-member-read">NYAMALBELLE PERLE</div>
-                </div>
-
-            </div>
-
-        </section>
-    </div>
-
-    <footer class="ny-footer">
-        <div class="ny-footer-logo">にゃんたじあ！ <span>Nyantasia!</span></div>
-        <p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with SANRIO or ClaN Entertainment.</p>
-    </footer>
-
-    <script src="nyantasia_script.js"></script>
-    <script>
+<div class="ny-hero-stats">
+<div class="ny-stat">
+<div class="ny-stat-value">8</div>
+<div class="ny-stat-label">CATS</div>
+</div>
+<div class="ny-stat">
+<div class="ny-stat-value">SANRIO</div>
+<div class="ny-stat-label">CO-PRODUCE</div>
+</div>
+</div>
+</div>
+</section>
+<!-- INFO -->
+<div class="ny-container">
+<section class="ny-section ny-reveal">
+<div class="ny-section-header">
+<div>
+<h2 class="ny-section-title">プロジェクトのひみつ</h2>
+<span class="ny-section-title-sub">ABOUT PROJECT</span>
+</div>
+<div class="ny-divider"></div>
+</div>
+<div class="ny-info-grid">
+<div class="ny-info-card">
+<div class="ny-info-icon"><i class="fa-solid fa-cat"></i></div>
+<h3>🐾 猫からVTuberへ</h3>
+<p>魔法使いの女の子に飼われている猫たちが魔法で変身。それぞれが個性豊かな猫種や性格を持っており、人間界での配信活動を楽しんでいます。</p>
+</div>
+<div class="ny-info-card">
+<div class="ny-info-icon"><i class="fa-solid fa-ribbon"></i></div>
+<h3>🎀 サンリオ×日テレ企画</h3>
+<p>サンリオのキャラクタープロデュース力と、日テレグループ（ClaN Entertainment）のVTuber運営ノウハウがタッグを組んだ強力なプロジェクトです。</p>
+</div>
+<div class="ny-info-card">
+<div class="ny-info-icon"><i class="fa-solid fa-bag-shopping"></i></div>
+<h3>🛍️ ボイス＆グッズ展開</h3>
+<p>季節ごとに販売されるシチュエーションボイスや、お誕生日に合わせた記念グッズなど、配信外でも楽しめるコンテンツを積極的に発信しています。</p>
+</div>
+</div>
+</section>
+<!-- ROSTER -->
+<section class="ny-section ny-reveal">
+<div class="ny-section-header">
+<div>
+<h2 class="ny-section-title">にゃんたじあ！の仲間たち</h2>
+<span class="ny-section-title-sub">MEMBERS</span>
+</div>
+<div class="ny-divider"></div>
+</div>
+<!-- Members -->
+<div class="ny-member-grid">
+<div class="ny-member-card">
+<div class="ny-member-deco"><i class="fa-solid fa-paw"></i></div>
+<a class="ny-member-name" href="characters/anzu.html">若魔藤 あんず</a>
+<div class="ny-member-read">NYAMAFUJI ANZU</div>
+</div>
+<div class="ny-member-card">
+<div class="ny-member-deco"><i class="fa-solid fa-paw"></i></div>
+<a class="ny-member-name" href="characters/soda.html">若魔白 ソーダ</a>
+<div class="ny-member-read">NYAMASHIRO SODA</div>
+</div>
+<div class="ny-member-card">
+<div class="ny-member-deco"><i class="fa-solid fa-paw"></i></div>
+<a class="ny-member-name" href="characters/tart.html">若魔麦 たると</a>
+<div class="ny-member-read">NYAMAMUGI TART</div>
+</div>
+<div class="ny-member-card">
+<div class="ny-member-deco"><i class="fa-solid fa-paw"></i></div>
+<a class="ny-member-name" href="characters/neon.html">若魔影 ネオン</a>
+<div class="ny-member-read">NYAMAKAGE NEON</div>
+</div>
+<div class="ny-member-card">
+<div class="ny-member-deco"><i class="fa-solid fa-paw"></i></div>
+<a class="ny-member-name" href="characters/fuwari.html">若魔雲 ふわり</a>
+<div class="ny-member-read">NYAMAKUMO FUWARI</div>
+</div>
+<div class="ny-member-card">
+<div class="ny-member-deco"><i class="fa-solid fa-paw"></i></div>
+<a class="ny-member-name" href="characters/eru.html">若魔陽 エル</a>
+<div class="ny-member-read">NYAMAHARU ERU</div>
+</div>
+<div class="ny-member-card">
+<div class="ny-member-deco"><i class="fa-solid fa-paw"></i></div>
+<a class="ny-member-name" href="characters/lutz.html">ニャマシュヴァ・ルッツ</a>
+<div class="ny-member-read">NYAMASHUVA LUTZ</div>
+</div>
+<div class="ny-member-card">
+<div class="ny-member-deco"><i class="fa-solid fa-paw"></i></div>
+<a class="ny-member-name" href="characters/perle.html">ニャマルベール・ペルル</a>
+<div class="ny-member-read">NYAMALBELLE PERLE</div>
+</div>
+</div>
+</section>
+</div>
+<footer class="ny-footer">
+<div class="ny-footer-logo">にゃんたじあ！ <span>Nyantasia!</span></div>
+<p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with SANRIO or ClaN Entertainment.</p>
+</footer>
+<script src="nyantasia_script.js"></script>
+<script>
         document.addEventListener('DOMContentLoaded', () => {
             const reveals = document.querySelectorAll('.ny-reveal');
             const observer = new IntersectionObserver((entries) => {
@@ -170,7 +149,5 @@
             reveals.forEach(el => observer.observe(el));
         });
     </script>
-
-</body>
-
+<div class="mobile-mode-banner" style="background: #ffc83d; color: #000; text-align: center; font-size: 0.85rem; padding: 4px; font-weight: 900; position: fixed; bottom: 0; width: 100%; z-index: 9999; box-shadow: 0 -2px 10px rgba(255, 200, 60, 0.4);" v-if="isMobile">🚀 Mobile Light Mode (Powered by Vue Virtual DOM)</div></div></body>
 </html>

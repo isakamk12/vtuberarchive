@@ -1,208 +1,182 @@
 <!DOCTYPE html>
+
 <html lang="ja">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProForma Nova | VTuber Archive</title>
-    <meta name="description"
-        content="eスポーツVTuber事務所「ProForma Nova」の非公式ファンサイト。STAR、MOON、METEORの各ユニットに所属するGaming VTuber一覧。">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="proformanova.css">
-</head>
-
-<body>
-
-    <div class="pf-bg">
-        <div class="pf-bg-grid"></div>
-        <div class="pf-bg-glow"></div>
-    </div>
-
-    <nav class="pf-nav">
-        <a href="../index.html" class="pf-nav-back">
-            <i class="fa-solid fa-gamepad"></i> HUB
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ProForma Nova | VTuber Archive</title>
+<meta content="eスポーツVTuber事務所「ProForma Nova」の非公式ファンサイト。STAR、MOON、METEORの各ユニットに所属するGaming VTuber一覧。" name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&amp;family=Noto+Sans+JP:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="proformanova.css" rel="stylesheet"/>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><style>[v-cloak] { display: none; } </style></head>
+<body><div id="app" v-cloak="">
+<div class="pf-bg" v-if="!isMobile">
+<div class="pf-bg-grid" v-if="!isMobile"></div>
+<div class="pf-bg-glow" v-if="!isMobile"></div>
+</div>
+<nav class="pf-nav">
+<a class="pf-nav-back" href="../index.html">
+<i class="fa-solid fa-gamepad"></i> HUB
         </a>
-        <div class="pf-nav-logo">
-            <i class="fa-brands fa-playstation pf-logo-icon"></i> <!-- Proxy for gaming icon -->
+<div class="pf-nav-logo">
+<i class="fa-brands fa-playstation pf-logo-icon"></i> <!-- Proxy for gaming icon -->
             PROFORMA NOVA <span>(プロフォルマ ノヴァ)</span>
-        </div>
-        <div class="pf-nav-tag">ESPORTS VTUBER</div>
-    </nav>
-
-    <!-- HERO -->
-    <section class="pf-hero">
-        <div class="pf-hero-bg-text">GAMING</div>
-        <div class="pf-hero-content">
-            <div class="pf-eyebrow">
-                <i class="fa-solid fa-crosshairs"></i> GAMING VTUBER PROJECT
+</div>
+<div class="pf-nav-tag">ESPORTS VTUBER</div>
+</nav>
+<!-- HERO -->
+<section class="pf-hero">
+<div class="pf-hero-bg-text" v-if="!isMobile">GAMING</div>
+<div class="pf-hero-content">
+<div class="pf-eyebrow">
+<i class="fa-solid fa-crosshairs"></i> GAMING VTUBER PROJECT
             </div>
-            <h1 class="pf-hero-name" data-text="ProForma Nova">ProForma Nova</h1>
-            <p class="pf-hero-tagline">“勝ち負けだけじゃない、心が輝く瞬間をみんなで繋いでいく”</p>
-            <div class="pf-hero-concept">
-                株式会社jig.jpが運営するeスポーツVTuber事務所です。<br><br>
+<h1 class="pf-hero-name" data-text="ProForma Nova">ProForma Nova</h1>
+<p class="pf-hero-tagline">“勝ち負けだけじゃない、心が輝く瞬間をみんなで繋いでいく”</p>
+<div class="pf-hero-concept">
+                株式会社jig.jpが運営するeスポーツVTuber事務所です。<br/><br/>
                 ゲームを通じた「心が輝く瞬間」をリスナーと共有することを掲げ、ゲーム配信や大会出場、各種イベントなど本格的なeスポーツ活動を展開。「STAR」「MOON」「METEOR」の3つのユニットからなる個性豊かなタレントたちが、バーチャル空間の競技シーンを熱く盛り上げます。
             </div>
-            <div class="pf-hero-stats">
-                <div class="pf-stat">
-                    <div class="pf-stat-value">10</div>
-                    <div class="pf-stat-label">PLAYERS</div>
-                </div>
-                <div class="pf-stat">
-                    <div class="pf-stat-value">3</div>
-                    <div class="pf-stat-label">UNITS</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Filter Buttons -->
-    <div class="pf-filters">
-        <button class="pf-filter-btn active" data-filter="all">ALL UNITS</button>
-        <button class="pf-filter-btn" data-filter="star"><i class="fa-solid fa-star"></i> STAR</button>
-        <button class="pf-filter-btn" data-filter="moon"><i class="fa-solid fa-moon"></i> MOON</button>
-        <button class="pf-filter-btn" data-filter="meteor"><i class="fa-solid fa-meteor"></i> METEOR</button>
-    </div>
-
-    <!-- ROSTER -->
-    <div class="pf-container">
-
-        <section class="pf-section pf-reveal">
-            <div class="pf-section-header">
-                <h2 class="pf-section-title">ROSTER</h2>
-                <div class="pf-divider"></div>
-            </div>
-
-            <div class="pf-member-grid" id="rosterGrid">
-
-                <!-- 火乃晴るい -->
-                <div class="pf-member-card" data-unit="star">
-                    <div class="pf-card-glitch"></div>
-                    <div class="pf-unit-badge badge-star"><i class="fa-solid fa-star"></i> STAR</div>
-                    <div class="pf-card-inner">
-                        <div class="pf-member-icon"><i class="fa-solid fa-fire"></i></div>
-                        <a href="characters/rui.html" class="pf-member-name">火乃晴 るい</a>
-                        <div class="pf-member-read">Hinoha Rui</div>
-                    </div>
-                </div>
-
-                <!-- 水透ユウ -->
-                <div class="pf-member-card" data-unit="moon">
-                    <div class="pf-card-glitch"></div>
-                    <div class="pf-unit-badge badge-moon"><i class="fa-solid fa-moon"></i> MOON</div>
-                    <div class="pf-card-inner">
-                        <div class="pf-member-icon"><i class="fa-solid fa-water"></i></div>
-                        <a href="characters/yu.html" class="pf-member-name">水透 ユウ</a>
-                        <div class="pf-member-read">Minato Yu</div>
-                    </div>
-                </div>
-
-                <!-- 銘兎目あう -->
-                <div class="pf-member-card" data-unit="meteor">
-                    <div class="pf-card-glitch"></div>
-                    <div class="pf-unit-badge badge-meteor"><i class="fa-solid fa-meteor"></i> METEOR</div>
-                    <div class="pf-card-inner">
-                        <div class="pf-member-icon"><i class="fa-solid fa-eye"></i></div>
-                        <a href="characters/au.html" class="pf-member-name">銘兎目 あう</a>
-                        <div class="pf-member-read">Metome Au</div>
-                    </div>
-                </div>
-
-                <!-- 李じゅぴ汰 -->
-                <div class="pf-member-card" data-unit="star">
-                    <div class="pf-card-glitch"></div>
-                    <div class="pf-unit-badge badge-star"><i class="fa-solid fa-star"></i> STAR</div>
-                    <div class="pf-card-inner">
-                        <div class="pf-member-icon"><i class="fa-solid fa-gamepad"></i></div>
-                        <a href="characters/jupita.html" class="pf-member-name">李 じゅぴ汰</a>
-                        <div class="pf-member-read">Lee Jupita</div>
-                    </div>
-                </div>
-
-                <!-- 真昼ねる -->
-                <div class="pf-member-card" data-unit="moon">
-                    <div class="pf-card-glitch"></div>
-                    <div class="pf-unit-badge badge-moon"><i class="fa-solid fa-moon"></i> MOON</div>
-                    <div class="pf-card-inner">
-                        <div class="pf-member-icon"><i class="fa-solid fa-sun"></i></div>
-                        <a href="characters/neru.html" class="pf-member-name">真昼 ねる</a>
-                        <div class="pf-member-read">Mahiru Neru</div>
-                    </div>
-                </div>
-
-                <!-- しーはむ -->
-                <div class="pf-member-card" data-unit="meteor">
-                    <div class="pf-card-glitch"></div>
-                    <div class="pf-unit-badge badge-meteor"><i class="fa-solid fa-meteor"></i> METEOR</div>
-                    <div class="pf-card-inner">
-                        <div class="pf-member-icon"><i class="fa-solid fa-headset"></i></div>
-                        <a href="characters/siyham.html" class="pf-member-name">しーはむ</a>
-                        <div class="pf-member-read">Siyham</div>
-                    </div>
-                </div>
-
-                <!-- なかもとおまち -->
-                <div class="pf-member-card" data-unit="star">
-                    <div class="pf-card-glitch"></div>
-                    <div class="pf-unit-badge badge-star"><i class="fa-solid fa-star"></i> STAR</div>
-                    <div class="pf-card-inner">
-                        <div class="pf-member-icon"><i class="fa-solid fa-keyboard"></i></div>
-                        <a href="characters/omachi.html" class="pf-member-name">なかもと おまち</a>
-                        <div class="pf-member-read">Nakamoto Omachi</div>
-                    </div>
-                </div>
-
-                <!-- 月皇ちな -->
-                <div class="pf-member-card" data-unit="moon">
-                    <div class="pf-card-glitch"></div>
-                    <div class="pf-unit-badge badge-moon"><i class="fa-solid fa-moon"></i> MOON</div>
-                    <div class="pf-card-inner">
-                        <div class="pf-member-icon"><i class="fa-solid fa-crown"></i></div>
-                        <a href="characters/china.html" class="pf-member-name">月皇 ちな</a>
-                        <div class="pf-member-read">Tsukigami China</div>
-                    </div>
-                </div>
-
-                <!-- 泡清みる -->
-                <div class="pf-member-card" data-unit="moon">
-                    <div class="pf-card-glitch"></div>
-                    <div class="pf-unit-badge badge-moon"><i class="fa-solid fa-moon"></i> MOON</div>
-                    <div class="pf-card-inner">
-                        <div class="pf-member-icon"><i class="fa-solid fa-soap"></i></div>
-                        <a href="characters/miru.html" class="pf-member-name">泡清 みる</a>
-                        <div class="pf-member-read">Awasuzu Miru</div>
-                    </div>
-                </div>
-
-                <!-- 虎島めら。 -->
-                <div class="pf-member-card" data-unit="meteor">
-                    <div class="pf-card-glitch"></div>
-                    <div class="pf-unit-badge badge-meteor"><i class="fa-solid fa-meteor"></i> METEOR</div>
-                    <div class="pf-card-inner">
-                        <div class="pf-member-icon"><i class="fa-solid fa-tiger"></i></div>
-                        <a href="characters/mera.html" class="pf-member-name">虎島 めら。</a>
-                        <div class="pf-member-read">Kozima Mera</div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-    </div>
-
-    <footer class="pf-footer">
-        <div class="pf-footer-logo">
+<div class="pf-hero-stats">
+<div class="pf-stat">
+<div class="pf-stat-value">10</div>
+<div class="pf-stat-label">PLAYERS</div>
+</div>
+<div class="pf-stat">
+<div class="pf-stat-value">3</div>
+<div class="pf-stat-label">UNITS</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Filter Buttons -->
+<div class="pf-filters">
+<button class="pf-filter-btn active" data-filter="all">ALL UNITS</button>
+<button class="pf-filter-btn" data-filter="star"><i class="fa-solid fa-star"></i> STAR</button>
+<button class="pf-filter-btn" data-filter="moon"><i class="fa-solid fa-moon"></i> MOON</button>
+<button class="pf-filter-btn" data-filter="meteor"><i class="fa-solid fa-meteor"></i> METEOR</button>
+</div>
+<!-- ROSTER -->
+<div class="pf-container">
+<section class="pf-section pf-reveal">
+<div class="pf-section-header">
+<h2 class="pf-section-title">ROSTER</h2>
+<div class="pf-divider"></div>
+</div>
+<div class="pf-member-grid" id="rosterGrid">
+<!-- 火乃晴るい -->
+<div class="pf-member-card" data-unit="star">
+<div class="pf-card-glitch"></div>
+<div class="pf-unit-badge badge-star"><i class="fa-solid fa-star"></i> STAR</div>
+<div class="pf-card-inner">
+<div class="pf-member-icon"><i class="fa-solid fa-fire"></i></div>
+<a class="pf-member-name" href="characters/rui.html">火乃晴 るい</a>
+<div class="pf-member-read">Hinoha Rui</div>
+</div>
+</div>
+<!-- 水透ユウ -->
+<div class="pf-member-card" data-unit="moon">
+<div class="pf-card-glitch"></div>
+<div class="pf-unit-badge badge-moon"><i class="fa-solid fa-moon"></i> MOON</div>
+<div class="pf-card-inner">
+<div class="pf-member-icon"><i class="fa-solid fa-water"></i></div>
+<a class="pf-member-name" href="characters/yu.html">水透 ユウ</a>
+<div class="pf-member-read">Minato Yu</div>
+</div>
+</div>
+<!-- 銘兎目あう -->
+<div class="pf-member-card" data-unit="meteor">
+<div class="pf-card-glitch"></div>
+<div class="pf-unit-badge badge-meteor"><i class="fa-solid fa-meteor"></i> METEOR</div>
+<div class="pf-card-inner">
+<div class="pf-member-icon"><i class="fa-solid fa-eye"></i></div>
+<a class="pf-member-name" href="characters/au.html">銘兎目 あう</a>
+<div class="pf-member-read">Metome Au</div>
+</div>
+</div>
+<!-- 李じゅぴ汰 -->
+<div class="pf-member-card" data-unit="star">
+<div class="pf-card-glitch"></div>
+<div class="pf-unit-badge badge-star"><i class="fa-solid fa-star"></i> STAR</div>
+<div class="pf-card-inner">
+<div class="pf-member-icon"><i class="fa-solid fa-gamepad"></i></div>
+<a class="pf-member-name" href="characters/jupita.html">李 じゅぴ汰</a>
+<div class="pf-member-read">Lee Jupita</div>
+</div>
+</div>
+<!-- 真昼ねる -->
+<div class="pf-member-card" data-unit="moon">
+<div class="pf-card-glitch"></div>
+<div class="pf-unit-badge badge-moon"><i class="fa-solid fa-moon"></i> MOON</div>
+<div class="pf-card-inner">
+<div class="pf-member-icon"><i class="fa-solid fa-sun"></i></div>
+<a class="pf-member-name" href="characters/neru.html">真昼 ねる</a>
+<div class="pf-member-read">Mahiru Neru</div>
+</div>
+</div>
+<!-- しーはむ -->
+<div class="pf-member-card" data-unit="meteor">
+<div class="pf-card-glitch"></div>
+<div class="pf-unit-badge badge-meteor"><i class="fa-solid fa-meteor"></i> METEOR</div>
+<div class="pf-card-inner">
+<div class="pf-member-icon"><i class="fa-solid fa-headset"></i></div>
+<a class="pf-member-name" href="characters/siyham.html">しーはむ</a>
+<div class="pf-member-read">Siyham</div>
+</div>
+</div>
+<!-- なかもとおまち -->
+<div class="pf-member-card" data-unit="star">
+<div class="pf-card-glitch"></div>
+<div class="pf-unit-badge badge-star"><i class="fa-solid fa-star"></i> STAR</div>
+<div class="pf-card-inner">
+<div class="pf-member-icon"><i class="fa-solid fa-keyboard"></i></div>
+<a class="pf-member-name" href="characters/omachi.html">なかもと おまち</a>
+<div class="pf-member-read">Nakamoto Omachi</div>
+</div>
+</div>
+<!-- 月皇ちな -->
+<div class="pf-member-card" data-unit="moon">
+<div class="pf-card-glitch"></div>
+<div class="pf-unit-badge badge-moon"><i class="fa-solid fa-moon"></i> MOON</div>
+<div class="pf-card-inner">
+<div class="pf-member-icon"><i class="fa-solid fa-crown"></i></div>
+<a class="pf-member-name" href="characters/china.html">月皇 ちな</a>
+<div class="pf-member-read">Tsukigami China</div>
+</div>
+</div>
+<!-- 泡清みる -->
+<div class="pf-member-card" data-unit="moon">
+<div class="pf-card-glitch"></div>
+<div class="pf-unit-badge badge-moon"><i class="fa-solid fa-moon"></i> MOON</div>
+<div class="pf-card-inner">
+<div class="pf-member-icon"><i class="fa-solid fa-soap"></i></div>
+<a class="pf-member-name" href="characters/miru.html">泡清 みる</a>
+<div class="pf-member-read">Awasuzu Miru</div>
+</div>
+</div>
+<!-- 虎島めら。 -->
+<div class="pf-member-card" data-unit="meteor">
+<div class="pf-card-glitch"></div>
+<div class="pf-unit-badge badge-meteor"><i class="fa-solid fa-meteor"></i> METEOR</div>
+<div class="pf-card-inner">
+<div class="pf-member-icon"><i class="fa-solid fa-tiger"></i></div>
+<a class="pf-member-name" href="characters/mera.html">虎島 めら。</a>
+<div class="pf-member-read">Kozima Mera</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<footer class="pf-footer">
+<div class="pf-footer-logo">
             PROFORMA NOVA
         </div>
-        <div class="pf-footer-company">ESPORTS VTUBER AGENCY // OPERATED BY JIG.JP</div>
-        <p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with ProForma Nova.</p>
-    </footer>
-
-    <script src="proformanova_script.js"></script>
-</body>
-
+<div class="pf-footer-company">ESPORTS VTUBER AGENCY // OPERATED BY JIG.JP</div>
+<p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with ProForma Nova.</p>
+</footer>
+<script src="proformanova_script.js"></script>
+<div class="mobile-mode-banner" style="background: #ffc83d; color: #000; text-align: center; font-size: 0.85rem; padding: 4px; font-weight: 900; position: fixed; bottom: 0; width: 100%; z-index: 9999; box-shadow: 0 -2px 10px rgba(255, 200, 60, 0.4);" v-if="isMobile">🚀 Mobile Light Mode (Powered by Vue Virtual DOM)</div></div></body>
 </html>

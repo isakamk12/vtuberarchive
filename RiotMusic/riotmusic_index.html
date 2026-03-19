@@ -1,195 +1,170 @@
 <!DOCTYPE html>
+
 <html lang="ja">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RIOT MUSIC - VTuber Archive Premium</title>
-    <link rel="stylesheet" href="riotmusic_index.css">
-</head>
-
-<body>
-
-    <nav class="nav">
-        <a href="../index.html" class="nav-brand">RIOT <span>MUSIC</span></a>
-        <div style="font-family: 'Anton'; font-size: 1.2rem; letter-spacing: 2px; color: rgba(255,255,255,0.5);">ALL
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RIOT MUSIC - VTuber Archive Premium</title>
+<link href="riotmusic_index.css" rel="stylesheet"/>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><style>[v-cloak] { display: none; } </style></head>
+<body><div id="app" v-cloak="">
+<nav class="nav">
+<a class="nav-brand" href="../index.html">RIOT <span>MUSIC</span></a>
+<div style="font-family: 'Anton'; font-size: 1.2rem; letter-spacing: 2px; color: rgba(255,255,255,0.5);">ALL
             ACCESS PASS</div>
-    </nav>
-
-    <header class="hero reveal">
-        <h1 class="hero-title">RIOT OF<br>EMOTIONS</h1>
-        <div class="hero-subtitle">VIRTUAL MUSIC ENTERTAINMENT</div>
-    </header>
-
-    <main class="container">
-
-        <h2 class="section-title reveal" data-text="FESTIVAL LINEUP">FESTIVAL LINEUP</h2>
-
-        <!-- Blitz Wing / Main Artists -->
-        <div class="label-group reveal">
-            <h3 class="label-title"><span>BLITZ WING (MAIN STAGE)</span></h3>
-            <div class="roster-grid">
-                <a href="characters/cocoa.html" class="ticket-card">
-                    <div class="t-stub"><span class="t-tag">VIP</span></div>
-                    <div class="t-main">
-                        <div>
-                            <div class="t-name">道明寺 ここあ</div>
-                            <div class="t-sub">DOMYOJI COCOA</div>
-                        </div>
-                        <div class="t-barcode">*RIOT-001*</div>
-                    </div>
-                </a>
-                <a href="characters/suzuna.html" class="ticket-card">
-                    <div class="t-stub"><span class="t-tag">VIP</span></div>
-                    <div class="t-main">
-                        <div>
-                            <div class="t-name">凪原 涼菜</div>
-                            <div class="t-sub">NAGIHARA SUZUNA</div>
-                        </div>
-                        <div class="t-barcode">*RIOT-002*</div>
-                    </div>
-                </a>
-                <a href="characters/iori.html" class="ticket-card">
-                    <div class="t-stub"><span class="t-tag">VIP</span></div>
-                    <div class="t-main">
-                        <div>
-                            <div class="t-name">松永 依織</div>
-                            <div class="t-sub">MATSUNAGA IORI</div>
-                        </div>
-                        <div class="t-barcode">*RIOT-003*</div>
-                    </div>
-                </a>
-                <a href="characters/miona.html" class="ticket-card">
-                    <div class="t-stub"><span class="t-tag">VIP</span></div>
-                    <div class="t-main">
-                        <div>
-                            <div class="t-name">皇 美緒奈</div>
-                            <div class="t-sub">SUMERAGI MIONA</div>
-                        </div>
-                        <div class="t-barcode">*RIOT-004*</div>
-                    </div>
-                </a>
-                <a href="characters/anko.html" class="ticket-card">
-                    <div class="t-stub"><span class="t-tag">VIP</span></div>
-                    <div class="t-main">
-                        <div>
-                            <div class="t-name">朝倉 杏子</div>
-                            <div class="t-sub">ASAKURA ANKO</div>
-                        </div>
-                        <div class="t-barcode">*RIOT-005*</div>
-                    </div>
-                </a>
-            </div>
-        </div>
-
-        <!-- METEOPOLIS -->
-        <div class="label-group reveal">
-            <h3 class="label-title"><span>METEOPOLIS (NIGHT STAGE)</span></h3>
-            <div class="roster-grid">
-                <a href="characters/mitsuki.html" class="ticket-card"
-                    style="filter: drop-shadow(0 10px 10px rgba(0, 100, 255, 0.3));">
-                    <div class="t-stub" style="border-right-color: #0088ff;"><span class="t-tag"
-                            style="color: #0088ff;">MTP</span></div>
-                    <div class="t-main">
-                        <div>
-                            <div class="t-name">赤星 光希</div>
-                            <div class="t-sub" style="color: #0088ff;">AKAHOSHI MITSUKI</div>
-                        </div>
-                        <div class="t-barcode">*MTP-001*</div>
-                    </div>
-                </a>
-                <a href="characters/asuka.html" class="ticket-card"
-                    style="filter: drop-shadow(0 10px 10px rgba(0, 100, 255, 0.3));">
-                    <div class="t-stub" style="border-right-color: #0088ff;"><span class="t-tag"
-                            style="color: #0088ff;">MTP</span></div>
-                    <div class="t-main">
-                        <div>
-                            <div class="t-name">冴島 飛鳥</div>
-                            <div class="t-sub" style="color: #0088ff;">SAEJIMA ASUKA</div>
-                        </div>
-                        <div class="t-barcode">*MTP-002*</div>
-                    </div>
-                </a>
-            </div>
-        </div>
-
-        <!-- KIGEN-SHO -->
-        <div class="label-group reveal">
-            <h3 class="label-title"><span>KIGEN-SHO RECORD (ACOUSTIC)</span></h3>
-            <div class="roster-grid">
-                <a href="characters/yuka.html" class="ticket-card"
-                    style="filter: drop-shadow(0 10px 10px rgba(255, 200, 0, 0.3));">
-                    <div class="t-stub" style="border-right-color: #ffcc00;"><span class="t-tag"
-                            style="color: #ffcc00;">KGN</span></div>
-                    <div class="t-main">
-                        <div>
-                            <div class="t-name">長瀬 有花</div>
-                            <div class="t-sub" style="color: #ffcc00;">NAGASE YUKA</div>
-                        </div>
-                        <div class="t-barcode">*KGN-001*</div>
-                    </div>
-                </a>
-            </div>
-        </div>
-
-        <!-- NEW GEN -->
-        <div class="label-group reveal">
-            <h3 class="label-title"><span>NEW GEN (OPENING ACTS)</span></h3>
-            <div class="roster-grid">
-                <a href="characters/chise.html" class="ticket-card"
-                    style="filter: drop-shadow(0 10px 10px rgba(100, 255, 100, 0.3));">
-                    <div class="t-stub" style="border-right-color: #00ff88;"><span class="t-tag"
-                            style="color: #00ff88;">NEW</span></div>
-                    <div class="t-main">
-                        <div>
-                            <div class="t-name">伊月 知世</div>
-                            <div class="t-sub" style="color: #00ff88;">ITSUKI CHISE</div>
-                        </div>
-                        <div class="t-barcode">*NEW-001*</div>
-                    </div>
-                </a>
-                <a href="characters/shirase.html" class="ticket-card"
-                    style="filter: drop-shadow(0 10px 10px rgba(100, 255, 100, 0.3));">
-                    <div class="t-stub" style="border-right-color: #00ff88;"><span class="t-tag"
-                            style="color: #00ff88;">NEW</span></div>
-                    <div class="t-main">
-                        <div>
-                            <div class="t-name">白河 しらせ</div>
-                            <div class="t-sub" style="color: #00ff88;">SHIRAKAWA SHIRASE</div>
-                        </div>
-                        <div class="t-barcode">*NEW-002*</div>
-                    </div>
-                </a>
-                <a href="characters/jill.html" class="ticket-card"
-                    style="filter: drop-shadow(0 10px 10px rgba(100, 255, 100, 0.3));">
-                    <div class="t-stub" style="border-right-color: #00ff88;"><span class="t-tag"
-                            style="color: #00ff88;">NEW</span></div>
-                    <div class="t-main">
-                        <div>
-                            <div class="t-name">蜜乃木 ジル</div>
-                            <div class="t-sub" style="color: #00ff88;">JILL MITSUNOKI</div>
-                        </div>
-                        <div class="t-barcode">*NEW-003*</div>
-                    </div>
-                </a>
-                <a href="characters/ranze.html" class="ticket-card"
-                    style="filter: drop-shadow(0 10px 10px rgba(100, 255, 100, 0.3));">
-                    <div class="t-stub" style="border-right-color: #00ff88;"><span class="t-tag"
-                            style="color: #00ff88;">NEW</span></div>
-                    <div class="t-main">
-                        <div>
-                            <div class="t-name">時庭 らんぜ</div>
-                            <div class="t-sub" style="color: #00ff88;">TOKINIWA RANZE</div>
-                        </div>
-                        <div class="t-barcode">*NEW-004*</div>
-                    </div>
-                </a>
-            </div>
-        </div>
-
-    </main>
-
-    <script>
+</nav>
+<header class="hero reveal">
+<h1 class="hero-title">RIOT OF<br/>EMOTIONS</h1>
+<div class="hero-subtitle">VIRTUAL MUSIC ENTERTAINMENT</div>
+</header>
+<main class="container">
+<h2 class="section-title reveal" data-text="FESTIVAL LINEUP">FESTIVAL LINEUP</h2>
+<!-- Blitz Wing / Main Artists -->
+<div class="label-group reveal">
+<h3 class="label-title"><span>BLITZ WING (MAIN STAGE)</span></h3>
+<div class="roster-grid">
+<a class="ticket-card" href="characters/cocoa.html">
+<div class="t-stub"><span class="t-tag">VIP</span></div>
+<div class="t-main">
+<div>
+<div class="t-name">道明寺 ここあ</div>
+<div class="t-sub">DOMYOJI COCOA</div>
+</div>
+<div class="t-barcode">*RIOT-001*</div>
+</div>
+</a>
+<a class="ticket-card" href="characters/suzuna.html">
+<div class="t-stub"><span class="t-tag">VIP</span></div>
+<div class="t-main">
+<div>
+<div class="t-name">凪原 涼菜</div>
+<div class="t-sub">NAGIHARA SUZUNA</div>
+</div>
+<div class="t-barcode">*RIOT-002*</div>
+</div>
+</a>
+<a class="ticket-card" href="characters/iori.html">
+<div class="t-stub"><span class="t-tag">VIP</span></div>
+<div class="t-main">
+<div>
+<div class="t-name">松永 依織</div>
+<div class="t-sub">MATSUNAGA IORI</div>
+</div>
+<div class="t-barcode">*RIOT-003*</div>
+</div>
+</a>
+<a class="ticket-card" href="characters/miona.html">
+<div class="t-stub"><span class="t-tag">VIP</span></div>
+<div class="t-main">
+<div>
+<div class="t-name">皇 美緒奈</div>
+<div class="t-sub">SUMERAGI MIONA</div>
+</div>
+<div class="t-barcode">*RIOT-004*</div>
+</div>
+</a>
+<a class="ticket-card" href="characters/anko.html">
+<div class="t-stub"><span class="t-tag">VIP</span></div>
+<div class="t-main">
+<div>
+<div class="t-name">朝倉 杏子</div>
+<div class="t-sub">ASAKURA ANKO</div>
+</div>
+<div class="t-barcode">*RIOT-005*</div>
+</div>
+</a>
+</div>
+</div>
+<!-- METEOPOLIS -->
+<div class="label-group reveal">
+<h3 class="label-title"><span>METEOPOLIS (NIGHT STAGE)</span></h3>
+<div class="roster-grid">
+<a class="ticket-card" href="characters/mitsuki.html" style="filter: drop-shadow(0 10px 10px rgba(0, 100, 255, 0.3));">
+<div class="t-stub" style="border-right-color: #0088ff;"><span class="t-tag" style="color: #0088ff;">MTP</span></div>
+<div class="t-main">
+<div>
+<div class="t-name">赤星 光希</div>
+<div class="t-sub" style="color: #0088ff;">AKAHOSHI MITSUKI</div>
+</div>
+<div class="t-barcode">*MTP-001*</div>
+</div>
+</a>
+<a class="ticket-card" href="characters/asuka.html" style="filter: drop-shadow(0 10px 10px rgba(0, 100, 255, 0.3));">
+<div class="t-stub" style="border-right-color: #0088ff;"><span class="t-tag" style="color: #0088ff;">MTP</span></div>
+<div class="t-main">
+<div>
+<div class="t-name">冴島 飛鳥</div>
+<div class="t-sub" style="color: #0088ff;">SAEJIMA ASUKA</div>
+</div>
+<div class="t-barcode">*MTP-002*</div>
+</div>
+</a>
+</div>
+</div>
+<!-- KIGEN-SHO -->
+<div class="label-group reveal">
+<h3 class="label-title"><span>KIGEN-SHO RECORD (ACOUSTIC)</span></h3>
+<div class="roster-grid">
+<a class="ticket-card" href="characters/yuka.html" style="filter: drop-shadow(0 10px 10px rgba(255, 200, 0, 0.3));">
+<div class="t-stub" style="border-right-color: #ffcc00;"><span class="t-tag" style="color: #ffcc00;">KGN</span></div>
+<div class="t-main">
+<div>
+<div class="t-name">長瀬 有花</div>
+<div class="t-sub" style="color: #ffcc00;">NAGASE YUKA</div>
+</div>
+<div class="t-barcode">*KGN-001*</div>
+</div>
+</a>
+</div>
+</div>
+<!-- NEW GEN -->
+<div class="label-group reveal">
+<h3 class="label-title"><span>NEW GEN (OPENING ACTS)</span></h3>
+<div class="roster-grid">
+<a class="ticket-card" href="characters/chise.html" style="filter: drop-shadow(0 10px 10px rgba(100, 255, 100, 0.3));">
+<div class="t-stub" style="border-right-color: #00ff88;"><span class="t-tag" style="color: #00ff88;">NEW</span></div>
+<div class="t-main">
+<div>
+<div class="t-name">伊月 知世</div>
+<div class="t-sub" style="color: #00ff88;">ITSUKI CHISE</div>
+</div>
+<div class="t-barcode">*NEW-001*</div>
+</div>
+</a>
+<a class="ticket-card" href="characters/shirase.html" style="filter: drop-shadow(0 10px 10px rgba(100, 255, 100, 0.3));">
+<div class="t-stub" style="border-right-color: #00ff88;"><span class="t-tag" style="color: #00ff88;">NEW</span></div>
+<div class="t-main">
+<div>
+<div class="t-name">白河 しらせ</div>
+<div class="t-sub" style="color: #00ff88;">SHIRAKAWA SHIRASE</div>
+</div>
+<div class="t-barcode">*NEW-002*</div>
+</div>
+</a>
+<a class="ticket-card" href="characters/jill.html" style="filter: drop-shadow(0 10px 10px rgba(100, 255, 100, 0.3));">
+<div class="t-stub" style="border-right-color: #00ff88;"><span class="t-tag" style="color: #00ff88;">NEW</span></div>
+<div class="t-main">
+<div>
+<div class="t-name">蜜乃木 ジル</div>
+<div class="t-sub" style="color: #00ff88;">JILL MITSUNOKI</div>
+</div>
+<div class="t-barcode">*NEW-003*</div>
+</div>
+</a>
+<a class="ticket-card" href="characters/ranze.html" style="filter: drop-shadow(0 10px 10px rgba(100, 255, 100, 0.3));">
+<div class="t-stub" style="border-right-color: #00ff88;"><span class="t-tag" style="color: #00ff88;">NEW</span></div>
+<div class="t-main">
+<div>
+<div class="t-name">時庭 らんぜ</div>
+<div class="t-sub" style="color: #00ff88;">TOKINIWA RANZE</div>
+</div>
+<div class="t-barcode">*NEW-004*</div>
+</div>
+</a>
+</div>
+</div>
+</main>
+<script>
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -199,6 +174,5 @@
         }, { threshold: 0.1 });
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     </script>
-</body>
-
+<div class="mobile-mode-banner" style="background: #ffc83d; color: #000; text-align: center; font-size: 0.85rem; padding: 4px; font-weight: 900; position: fixed; bottom: 0; width: 100%; z-index: 9999; box-shadow: 0 -2px 10px rgba(255, 200, 60, 0.4);" v-if="isMobile">🚀 Mobile Light Mode (Powered by Vue Virtual DOM)</div></div></body>
 </html>

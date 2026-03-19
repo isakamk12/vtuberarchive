@@ -1,414 +1,360 @@
 <!DOCTYPE html>
+
 <html lang="ja">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VEE | VTuber Archive</title>
-    <meta name="description" content="ソニー・ミュージックエンタテインメントが運営するVTuberプロジェクト「VEE」の非公式ファンサイト。現役・卒業メンバー一覧。">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,600;0,800;0,900;1,600&family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="vee.css">
-</head>
-
-<body>
-
-    <div class="vee-bg">
-        <div class="vee-bg-gradient"></div>
-        <div class="vee-bg-noise"></div>
-        <div class="vee-bg-lines"></div>
-    </div>
-
-    <nav class="vee-nav">
-        <a href="../index.html" class="vee-nav-back">
-            <i class="fa-solid fa-arrow-left"></i> BACK
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VEE | VTuber Archive</title>
+<meta content="ソニー・ミュージックエンタテインメントが運営するVTuberプロジェクト「VEE」の非公式ファンサイト。現役・卒業メンバー一覧。" name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,600;0,800;0,900;1,600&amp;family=Noto+Sans+JP:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="vee.css" rel="stylesheet"/>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><style>[v-cloak] { display: none; } </style></head>
+<body><div id="app" v-cloak="">
+<div class="vee-bg" v-if="!isMobile">
+<div class="vee-bg-gradient" v-if="!isMobile"></div>
+<div class="vee-bg-noise" v-if="!isMobile"></div>
+<div class="vee-bg-lines" v-if="!isMobile"></div>
+</div>
+<nav class="vee-nav">
+<a class="vee-nav-back" href="../index.html">
+<i class="fa-solid fa-arrow-left"></i> BACK
         </a>
-        <div class="vee-nav-logo">VEE <span>Virtual Entertainment</span></div>
-        <div class="vee-nav-tag">Sony Music Entertainment</div>
-    </nav>
-
-    <!-- HERO -->
-    <section class="vee-hero">
-        <div class="vee-hero-content">
-            <div class="vee-hero-badges">
-                <span class="vee-badge c-music"><i class="fa-solid fa-music"></i> #MUSIC</span>
-                <span class="vee-badge c-game"><i class="fa-solid fa-gamepad"></i> #GAME</span>
-                <span class="vee-badge c-art"><i class="fa-solid fa-palette"></i> #ART</span>
-                <span class="vee-badge c-talk"><i class="fa-solid fa-microphone"></i> #TALK</span>
-            </div>
-
-            <h1 class="vee-hero-name">VEE</h1>
-            <p class="vee-hero-tagline">BE YOUR VIRTUAL SELF.</p>
-
-            <div class="vee-hero-concept">
-                株式会社ソニー・ミュージックエンタテインメントが運営するVTuberプロジェクト。<br><br>
-                「#トーク」「#ゲーム」「#歌」「#イラスト」「#プログラミング」などなど......多種多様な個性や特技を持つタレントが所属し、それぞれのやりたいことを実現する場となっています。<br>
+<div class="vee-nav-logo">VEE <span>Virtual Entertainment</span></div>
+<div class="vee-nav-tag">Sony Music Entertainment</div>
+</nav>
+<!-- HERO -->
+<section class="vee-hero">
+<div class="vee-hero-content">
+<div class="vee-hero-badges">
+<span class="vee-badge c-music"><i class="fa-solid fa-music"></i> #MUSIC</span>
+<span class="vee-badge c-game"><i class="fa-solid fa-gamepad"></i> #GAME</span>
+<span class="vee-badge c-art"><i class="fa-solid fa-palette"></i> #ART</span>
+<span class="vee-badge c-talk"><i class="fa-solid fa-microphone"></i> #TALK</span>
+</div>
+<h1 class="vee-hero-name">VEE</h1>
+<p class="vee-hero-tagline">BE YOUR VIRTUAL SELF.</p>
+<div class="vee-hero-concept">
+                株式会社ソニー・ミュージックエンタテインメントが運営するVTuberプロジェクト。<br/><br/>
+                「#トーク」「#ゲーム」「#歌」「#イラスト」「#プログラミング」などなど......多種多様な個性や特技を持つタレントが所属し、それぞれのやりたいことを実現する場となっています。<br/>
                 音楽ライブ「Noah's Ark」、VRChatでの単独ライブ、1on1オンラインイベントなど、音楽やイベント領域でも数多くの展開を行っています。
             </div>
-        </div>
-
-        <div class="vee-hero-visual">
-            <div class="vee-hero-circle"></div>
-            <div class="vee-hero-circle delay-1"></div>
-            <div class="vee-hero-circle delay-2"></div>
-        </div>
-    </section>
-
-    <!-- INFO -->
-    <div class="vee-container">
-        <section class="vee-section vee-reveal">
-            <div class="vee-section-header">
-                <h2 class="vee-section-title">PROJECT HIGHLIGHTS <span>プロジェクトの強み</span></h2>
-            </div>
-            <div class="vee-info-grid">
-                <div class="vee-info-card">
-                    <div class="vee-info-icon"><i class="fa-solid fa-compact-disc"></i></div>
-                    <h3>音楽・ライブ展開</h3>
-                    <p>SMEが培ってきたノウハウを活かし、オリジナル楽曲の制作、大型ライブ「Noah's Ark」、VRChat特設ワールドでの単独ライブなどを精力的に開催。</p>
-                </div>
-                <div class="vee-info-card">
-                    <div class="vee-info-icon"><i class="fa-solid fa-tags"></i></div>
-                    <h3>多様な個性のタグ</h3>
-                    <p>所属タレントはそれぞれ独自の「ハッシュタグ（#英語 #作曲 #イラスト等）」を持ち、自身の得意分野や挑戦したいジャンルを自由に発信・活動しています。</p>
-                </div>
-                <div class="vee-info-card">
-                    <div class="vee-info-icon"><i class="fa-solid fa-comments"></i></div>
-                    <h3>1on1等のファンイベント</h3>
-                    <p>タレントとリスナーが1対1で直接コミュニケーションを取れるオンラインイベントなど、ファンとの熱量を高める施策も継続的に実施。</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- ROSTER OVERVIEW -->
-        <section class="vee-section vee-reveal">
-            <div class="vee-section-header">
-                <h2 class="vee-section-title">TALENT ROSTER <span>所属タレント</span></h2>
-            </div>
-
-            <!-- Active Members -->
-            <div class="vee-roster-group">
-                <h3 class="vee-group-title">ACTIVE MEMBERS</h3>
-                <div class="vee-member-grid">
-
-                    <a href="characters/uparu.html" class="vee-member-card">
-                        <div class="vee-member-overlay"></div>
-                        <div class="vee-member-info">
-                            <span class="vee-member-read">ANEW UPARU</span>
-                            <span class="vee-member-name">亞生うぱる</span>
-                        </div>
-                        <i class="fa-solid fa-arrow-right vee-member-arrow"></i>
-                    </a>
-
-                    <a href="characters/linon.html" class="vee-member-card">
-                        <div class="vee-member-overlay"></div>
-                        <div class="vee-member-info">
-                            <span class="vee-member-read">AMAKOMO LINON</span>
-                            <span class="vee-member-name">天籠りのん</span>
-                        </div>
-                        <i class="fa-solid fa-arrow-right vee-member-arrow"></i>
-                    </a>
-
-                    <a href="characters/yae.html" class="vee-member-card">
-                        <div class="vee-member-overlay"></div>
-                        <div class="vee-member-info">
-                            <span class="vee-member-read">AMENIWA YAE</span>
-                            <span class="vee-member-name">雨庭やえ</span>
-                        </div>
-                        <i class="fa-solid fa-arrow-right vee-member-arrow"></i>
-                    </a>
-
-                    <a href="characters/unico.html" class="vee-member-card">
-                        <div class="vee-member-overlay"></div>
-                        <div class="vee-member-info">
-                            <span class="vee-member-read">UKI-UKI UNICO</span>
-                            <span class="vee-member-name">浮々ゆにこ</span>
-                        </div>
-                        <i class="fa-solid fa-arrow-right vee-member-arrow"></i>
-                    </a>
-
-                    <a href="characters/amae.html" class="vee-member-card">
-                        <div class="vee-member-overlay"></div>
-                        <div class="vee-member-info">
-                            <span class="vee-member-read">ERAI AMAE</span>
-                            <span class="vee-member-name">偉雷アマエ</span>
-                        </div>
-                        <i class="fa-solid fa-arrow-right vee-member-arrow"></i>
-                    </a>
-
-                    <a href="characters/mina.html" class="vee-member-card">
-                        <div class="vee-member-overlay"></div>
-                        <div class="vee-member-info">
-                            <span class="vee-member-read">AUDREY MINA</span>
-                            <span class="vee-member-name">桜鳥ミーナ</span>
-                        </div>
-                        <i class="fa-solid fa-arrow-right vee-member-arrow"></i>
-                    </a>
-
-                    <a href="characters/ruki.html" class="vee-member-card">
-                        <div class="vee-member-overlay"></div>
-                        <div class="vee-member-info">
-                            <span class="vee-member-read">OTOKADO RUKI</span>
-                            <span class="vee-member-name">音門るき</span>
-                        </div>
-                        <i class="fa-solid fa-arrow-right vee-member-arrow"></i>
-                    </a>
-
-                    <a href="characters/uno.html" class="vee-member-card">
-                        <div class="vee-member-overlay"></div>
-                        <div class="vee-member-info">
-                            <span class="vee-member-read">KAGASE UNO</span>
-                            <span class="vee-member-name">カガセ・ウノ</span>
-                        </div>
-                        <i class="fa-solid fa-arrow-right vee-member-arrow"></i>
-                    </a>
-
-                    <a href="characters/otoha.html" class="vee-member-card">
-                        <div class="vee-member-overlay"></div>
-                        <div class="vee-member-info">
-                            <span class="vee-member-read">KASHI OTOHA</span>
-                            <span class="vee-member-name">カシ・オトハ</span>
-                        </div>
-                        <i class="fa-solid fa-arrow-right vee-member-arrow"></i>
-                    </a>
-
-                    <a href="characters/momo.html" class="vee-member-card">
-                        <div class="vee-member-overlay"></div>
-                        <div class="vee-member-info">
-                            <span class="vee-member-read">KASHIWAGI MOMO</span>
-                            <span class="vee-member-name">柏木もも</span>
-                        </div>
-                        <i class="fa-solid fa-arrow-right vee-member-arrow"></i>
-                    </a>
-
-                    <a href="characters/deity.html" class="vee-member-card">
-                        <div class="vee-member-overlay"></div>
-                        <div class="vee-member-info">
-                            <span class="vee-member-read">KANRA DEITY</span>
-                            <span class="vee-member-name">甘楽デイティー</span>
-                        </div>
-                        <i class="fa-solid fa-arrow-right vee-member-arrow"></i>
-                    </a>
-
-                    <a href="characters/lui.html" class="vee-member-card">
-                        <div class="vee-member-overlay"></div>
-                        <div class="vee-member-info">
-                            <span class="vee-member-read">GEPPAKU LUI</span>
-                            <span class="vee-member-name">月白 累</span>
-                        </div>
-                        <i class="fa-solid fa-arrow-right vee-member-arrow"></i>
-                    </a>
-
-                    <a href="characters/lira.html" class="vee-member-card">
-                        <div class="vee-member-overlay"></div>
-                        <div class="vee-member-info">
-                            <span class="vee-member-read">KOKUYOU LIRA</span>
-                            <span class="vee-member-name">黒燿リラ</span>
-                        </div>
-                        <i class="fa-solid fa-arrow-right vee-member-arrow"></i>
-                    </a>
-
-                    <a href="characters/sahiro.html" class="vee-member-card">
-                        <div class="vee-member-overlay"></div>
-                        <div class="vee-member-info">
-                            <span class="vee-member-read">HASUMI SAHIRO</span>
-                            <span class="vee-member-name">羽澄さひろ</span>
-                        </div>
-                        <i class="fa-solid fa-arrow-right vee-member-arrow"></i>
-                    </a>
-
-                    <a href="characters/airu.html" class="vee-member-card">
-                        <div class="vee-member-overlay"></div>
-                        <div class="vee-member-info">
-                            <span class="vee-member-read">HINAHOSHI AIRU</span>
-                            <span class="vee-member-name">雛星あいる</span>
-                        </div>
-                        <i class="fa-solid fa-arrow-right vee-member-arrow"></i>
-                    </a>
-
-                    <a href="characters/chihiyo.html" class="vee-member-card">
-                        <div class="vee-member-overlay"></div>
-                        <div class="vee-member-info">
-                            <span class="vee-member-read">HIYORI CHIHIYO</span>
-                            <span class="vee-member-name">日和ちひよ</span>
-                        </div>
-                        <i class="fa-solid fa-arrow-right vee-member-arrow"></i>
-                    </a>
-
-                    <a href="characters/tulsi.html" class="vee-member-card">
-                        <div class="vee-member-overlay"></div>
-                        <div class="vee-member-info">
-                            <span class="vee-member-read">MAOU TULSI</span>
-                            <span class="vee-member-name">魔王トゥルシー</span>
-                        </div>
-                        <i class="fa-solid fa-arrow-right vee-member-arrow"></i>
-                    </a>
-
-                    <a href="characters/nanamona.html" class="vee-member-card">
-                        <div class="vee-member-overlay"></div>
-                        <div class="vee-member-info">
-                            <span class="vee-member-read">MARU NANAMONA</span>
-                            <span class="vee-member-name">マル・ナナモナ</span>
-                        </div>
-                        <i class="fa-solid fa-arrow-right vee-member-arrow"></i>
-                    </a>
-
-                    <a href="characters/minaton.html" class="vee-member-card">
-                        <div class="vee-member-overlay"></div>
-                        <div class="vee-member-info">
-                            <span class="vee-member-read">MINATON.</span>
-                            <span class="vee-member-name">みなとん。</span>
-                        </div>
-                        <i class="fa-solid fa-arrow-right vee-member-arrow"></i>
-                    </a>
-
-                    <a href="characters/an.html" class="vee-member-card">
-                        <div class="vee-member-overlay"></div>
-                        <div class="vee-member-info">
-                            <span class="vee-member-read">MEMEMORI AN</span>
-                            <span class="vee-member-name">芽々守あん</span>
-                        </div>
-                        <i class="fa-solid fa-arrow-right vee-member-arrow"></i>
-                    </a>
-
-                    <a href="characters/sweet.html" class="vee-member-card">
-                        <div class="vee-member-overlay"></div>
-                        <div class="vee-member-info">
-                            <span class="vee-member-read">LUMINOUS SWEET</span>
-                            <span class="vee-member-name">るみなす・すいーと</span>
-                        </div>
-                        <i class="fa-solid fa-arrow-right vee-member-arrow"></i>
-                    </a>
-
-                </div>
-            </div>
-
-            <!-- Graduated / Independent Members -->
-            <div class="vee-roster-group">
-                <h3 class="vee-group-title grad">ALUMNI / GRADUATES <span>卒業・独立・移籍メンバー</span></h3>
-                <div class="vee-member-grid min">
-
-                    <div class="vee-member-card grad">
-                        <div class="vee-member-info">
-                            <span class="vee-member-read">SHINDOUJI AKO</span>
-                            <span class="vee-member-name">神童児丫子</span>
-                        </div>
-                    </div>
-
-                    <div class="vee-member-card grad">
-                        <div class="vee-member-info">
-                            <span class="vee-member-read">SAZANAMI TOA</span>
-                            <span class="vee-member-name">漣とあ</span>
-                        </div>
-                    </div>
-
-                    <div class="vee-member-card grad">
-                        <div class="vee-member-info">
-                            <span class="vee-member-read">URIYONE</span>
-                            <span class="vee-member-name">糶</span>
-                        </div>
-                    </div>
-
-                    <div class="vee-member-card grad">
-                        <div class="vee-member-info">
-                            <span class="vee-member-read">YURIKAWA YUN (独立)</span>
-                            <span class="vee-member-name">ゆりかわゆん</span>
-                        </div>
-                    </div>
-
-                    <div class="vee-member-card grad">
-                        <div class="vee-member-info">
-                            <span class="vee-member-read">KUJO RINGO (独立)</span>
-                            <span class="vee-member-name">九条林檎</span>
-                        </div>
-                    </div>
-
-                    <div class="vee-member-card grad">
-                        <div class="vee-member-info">
-                            <span class="vee-member-read">OSHIRO ITO (独立)</span>
-                            <span class="vee-member-name">白粉いと</span>
-                        </div>
-                    </div>
-
-                    <div class="vee-member-card grad">
-                        <div class="vee-member-info">
-                            <span class="vee-member-read">MEW GARCIA</span>
-                            <span class="vee-member-name">ミュウ・ガルシア</span>
-                        </div>
-                    </div>
-
-                    <div class="vee-member-card grad">
-                        <div class="vee-member-info">
-                            <span class="vee-member-read">HITOSHIRO ITSUKI</span>
-                            <span class="vee-member-name">ヒトシロ・イツキ</span>
-                        </div>
-                    </div>
-
-                    <div class="vee-member-card grad">
-                        <div class="vee-member-info">
-                            <span class="vee-member-read">AOMIYA YOZURI (独立)</span>
-                            <span class="vee-member-name">蒼宮よづり</span>
-                        </div>
-                    </div>
-
-                    <div class="vee-member-card grad">
-                        <div class="vee-member-info">
-                            <span class="vee-member-read">ANSHININ MISA (独立)</span>
-                            <span class="vee-member-name">安心院みさ</span>
-                        </div>
-                    </div>
-
-                    <div class="vee-member-card grad">
-                        <div class="vee-member-info">
-                            <span class="vee-member-read">ALBA SERA (契約終了)</span>
-                            <span class="vee-member-name">アルバ・セラ</span>
-                        </div>
-                    </div>
-
-                    <div class="vee-member-card grad">
-                        <div class="vee-member-info">
-                            <span class="vee-member-read">HISUMI</span>
-                            <span class="vee-member-name">緋墨</span>
-                        </div>
-                    </div>
-
-                    <div class="vee-member-card grad">
-                        <div class="vee-member-info">
-                            <span class="vee-member-read">SYUSETU KOHAKU (移籍)</span>
-                            <span class="vee-member-name">秋雪こはく</span>
-                        </div>
-                    </div>
-
-                    <div class="vee-member-card grad">
-                        <div class="vee-member-info">
-                            <span class="vee-member-read">COTONOHA</span>
-                            <span class="vee-member-name">言のハ</span>
-                        </div>
-                    </div>
-
-                    <div class="vee-member-card grad">
-                        <div class="vee-member-info">
-                            <span class="vee-member-read">KITASHIRAKAWA KAKAPO (独立)</span>
-                            <span class="vee-member-name">北白川かかぽ</span>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-        </section>
-    </div>
-
-    <footer class="vee-footer">
-        <div class="vee-footer-logo">VEE</div>
-        <p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with Sony Music Entertainment Inc.</p>
-    </footer>
-
-    <script src="vee_script.js"></script>
-    <script>
+</div>
+<div class="vee-hero-visual">
+<div class="vee-hero-circle"></div>
+<div class="vee-hero-circle delay-1"></div>
+<div class="vee-hero-circle delay-2"></div>
+</div>
+</section>
+<!-- INFO -->
+<div class="vee-container">
+<section class="vee-section vee-reveal">
+<div class="vee-section-header">
+<h2 class="vee-section-title">PROJECT HIGHLIGHTS <span>プロジェクトの強み</span></h2>
+</div>
+<div class="vee-info-grid">
+<div class="vee-info-card">
+<div class="vee-info-icon"><i class="fa-solid fa-compact-disc"></i></div>
+<h3>音楽・ライブ展開</h3>
+<p>SMEが培ってきたノウハウを活かし、オリジナル楽曲の制作、大型ライブ「Noah's Ark」、VRChat特設ワールドでの単独ライブなどを精力的に開催。</p>
+</div>
+<div class="vee-info-card">
+<div class="vee-info-icon"><i class="fa-solid fa-tags"></i></div>
+<h3>多様な個性のタグ</h3>
+<p>所属タレントはそれぞれ独自の「ハッシュタグ（#英語 #作曲 #イラスト等）」を持ち、自身の得意分野や挑戦したいジャンルを自由に発信・活動しています。</p>
+</div>
+<div class="vee-info-card">
+<div class="vee-info-icon"><i class="fa-solid fa-comments"></i></div>
+<h3>1on1等のファンイベント</h3>
+<p>タレントとリスナーが1対1で直接コミュニケーションを取れるオンラインイベントなど、ファンとの熱量を高める施策も継続的に実施。</p>
+</div>
+</div>
+</section>
+<!-- ROSTER OVERVIEW -->
+<section class="vee-section vee-reveal">
+<div class="vee-section-header">
+<h2 class="vee-section-title">TALENT ROSTER <span>所属タレント</span></h2>
+</div>
+<!-- Active Members -->
+<div class="vee-roster-group">
+<h3 class="vee-group-title">ACTIVE MEMBERS</h3>
+<div class="vee-member-grid">
+<a class="vee-member-card" href="characters/uparu.html">
+<div class="vee-member-overlay"></div>
+<div class="vee-member-info">
+<span class="vee-member-read">ANEW UPARU</span>
+<span class="vee-member-name">亞生うぱる</span>
+</div>
+<i class="fa-solid fa-arrow-right vee-member-arrow"></i>
+</a>
+<a class="vee-member-card" href="characters/linon.html">
+<div class="vee-member-overlay"></div>
+<div class="vee-member-info">
+<span class="vee-member-read">AMAKOMO LINON</span>
+<span class="vee-member-name">天籠りのん</span>
+</div>
+<i class="fa-solid fa-arrow-right vee-member-arrow"></i>
+</a>
+<a class="vee-member-card" href="characters/yae.html">
+<div class="vee-member-overlay"></div>
+<div class="vee-member-info">
+<span class="vee-member-read">AMENIWA YAE</span>
+<span class="vee-member-name">雨庭やえ</span>
+</div>
+<i class="fa-solid fa-arrow-right vee-member-arrow"></i>
+</a>
+<a class="vee-member-card" href="characters/unico.html">
+<div class="vee-member-overlay"></div>
+<div class="vee-member-info">
+<span class="vee-member-read">UKI-UKI UNICO</span>
+<span class="vee-member-name">浮々ゆにこ</span>
+</div>
+<i class="fa-solid fa-arrow-right vee-member-arrow"></i>
+</a>
+<a class="vee-member-card" href="characters/amae.html">
+<div class="vee-member-overlay"></div>
+<div class="vee-member-info">
+<span class="vee-member-read">ERAI AMAE</span>
+<span class="vee-member-name">偉雷アマエ</span>
+</div>
+<i class="fa-solid fa-arrow-right vee-member-arrow"></i>
+</a>
+<a class="vee-member-card" href="characters/mina.html">
+<div class="vee-member-overlay"></div>
+<div class="vee-member-info">
+<span class="vee-member-read">AUDREY MINA</span>
+<span class="vee-member-name">桜鳥ミーナ</span>
+</div>
+<i class="fa-solid fa-arrow-right vee-member-arrow"></i>
+</a>
+<a class="vee-member-card" href="characters/ruki.html">
+<div class="vee-member-overlay"></div>
+<div class="vee-member-info">
+<span class="vee-member-read">OTOKADO RUKI</span>
+<span class="vee-member-name">音門るき</span>
+</div>
+<i class="fa-solid fa-arrow-right vee-member-arrow"></i>
+</a>
+<a class="vee-member-card" href="characters/uno.html">
+<div class="vee-member-overlay"></div>
+<div class="vee-member-info">
+<span class="vee-member-read">KAGASE UNO</span>
+<span class="vee-member-name">カガセ・ウノ</span>
+</div>
+<i class="fa-solid fa-arrow-right vee-member-arrow"></i>
+</a>
+<a class="vee-member-card" href="characters/otoha.html">
+<div class="vee-member-overlay"></div>
+<div class="vee-member-info">
+<span class="vee-member-read">KASHI OTOHA</span>
+<span class="vee-member-name">カシ・オトハ</span>
+</div>
+<i class="fa-solid fa-arrow-right vee-member-arrow"></i>
+</a>
+<a class="vee-member-card" href="characters/momo.html">
+<div class="vee-member-overlay"></div>
+<div class="vee-member-info">
+<span class="vee-member-read">KASHIWAGI MOMO</span>
+<span class="vee-member-name">柏木もも</span>
+</div>
+<i class="fa-solid fa-arrow-right vee-member-arrow"></i>
+</a>
+<a class="vee-member-card" href="characters/deity.html">
+<div class="vee-member-overlay"></div>
+<div class="vee-member-info">
+<span class="vee-member-read">KANRA DEITY</span>
+<span class="vee-member-name">甘楽デイティー</span>
+</div>
+<i class="fa-solid fa-arrow-right vee-member-arrow"></i>
+</a>
+<a class="vee-member-card" href="characters/lui.html">
+<div class="vee-member-overlay"></div>
+<div class="vee-member-info">
+<span class="vee-member-read">GEPPAKU LUI</span>
+<span class="vee-member-name">月白 累</span>
+</div>
+<i class="fa-solid fa-arrow-right vee-member-arrow"></i>
+</a>
+<a class="vee-member-card" href="characters/lira.html">
+<div class="vee-member-overlay"></div>
+<div class="vee-member-info">
+<span class="vee-member-read">KOKUYOU LIRA</span>
+<span class="vee-member-name">黒燿リラ</span>
+</div>
+<i class="fa-solid fa-arrow-right vee-member-arrow"></i>
+</a>
+<a class="vee-member-card" href="characters/sahiro.html">
+<div class="vee-member-overlay"></div>
+<div class="vee-member-info">
+<span class="vee-member-read">HASUMI SAHIRO</span>
+<span class="vee-member-name">羽澄さひろ</span>
+</div>
+<i class="fa-solid fa-arrow-right vee-member-arrow"></i>
+</a>
+<a class="vee-member-card" href="characters/airu.html">
+<div class="vee-member-overlay"></div>
+<div class="vee-member-info">
+<span class="vee-member-read">HINAHOSHI AIRU</span>
+<span class="vee-member-name">雛星あいる</span>
+</div>
+<i class="fa-solid fa-arrow-right vee-member-arrow"></i>
+</a>
+<a class="vee-member-card" href="characters/chihiyo.html">
+<div class="vee-member-overlay"></div>
+<div class="vee-member-info">
+<span class="vee-member-read">HIYORI CHIHIYO</span>
+<span class="vee-member-name">日和ちひよ</span>
+</div>
+<i class="fa-solid fa-arrow-right vee-member-arrow"></i>
+</a>
+<a class="vee-member-card" href="characters/tulsi.html">
+<div class="vee-member-overlay"></div>
+<div class="vee-member-info">
+<span class="vee-member-read">MAOU TULSI</span>
+<span class="vee-member-name">魔王トゥルシー</span>
+</div>
+<i class="fa-solid fa-arrow-right vee-member-arrow"></i>
+</a>
+<a class="vee-member-card" href="characters/nanamona.html">
+<div class="vee-member-overlay"></div>
+<div class="vee-member-info">
+<span class="vee-member-read">MARU NANAMONA</span>
+<span class="vee-member-name">マル・ナナモナ</span>
+</div>
+<i class="fa-solid fa-arrow-right vee-member-arrow"></i>
+</a>
+<a class="vee-member-card" href="characters/minaton.html">
+<div class="vee-member-overlay"></div>
+<div class="vee-member-info">
+<span class="vee-member-read">MINATON.</span>
+<span class="vee-member-name">みなとん。</span>
+</div>
+<i class="fa-solid fa-arrow-right vee-member-arrow"></i>
+</a>
+<a class="vee-member-card" href="characters/an.html">
+<div class="vee-member-overlay"></div>
+<div class="vee-member-info">
+<span class="vee-member-read">MEMEMORI AN</span>
+<span class="vee-member-name">芽々守あん</span>
+</div>
+<i class="fa-solid fa-arrow-right vee-member-arrow"></i>
+</a>
+<a class="vee-member-card" href="characters/sweet.html">
+<div class="vee-member-overlay"></div>
+<div class="vee-member-info">
+<span class="vee-member-read">LUMINOUS SWEET</span>
+<span class="vee-member-name">るみなす・すいーと</span>
+</div>
+<i class="fa-solid fa-arrow-right vee-member-arrow"></i>
+</a>
+</div>
+</div>
+<!-- Graduated / Independent Members -->
+<div class="vee-roster-group">
+<h3 class="vee-group-title grad">ALUMNI / GRADUATES <span>卒業・独立・移籍メンバー</span></h3>
+<div class="vee-member-grid min">
+<div class="vee-member-card grad">
+<div class="vee-member-info">
+<span class="vee-member-read">SHINDOUJI AKO</span>
+<span class="vee-member-name">神童児丫子</span>
+</div>
+</div>
+<div class="vee-member-card grad">
+<div class="vee-member-info">
+<span class="vee-member-read">SAZANAMI TOA</span>
+<span class="vee-member-name">漣とあ</span>
+</div>
+</div>
+<div class="vee-member-card grad">
+<div class="vee-member-info">
+<span class="vee-member-read">URIYONE</span>
+<span class="vee-member-name">糶</span>
+</div>
+</div>
+<div class="vee-member-card grad">
+<div class="vee-member-info">
+<span class="vee-member-read">YURIKAWA YUN (独立)</span>
+<span class="vee-member-name">ゆりかわゆん</span>
+</div>
+</div>
+<div class="vee-member-card grad">
+<div class="vee-member-info">
+<span class="vee-member-read">KUJO RINGO (独立)</span>
+<span class="vee-member-name">九条林檎</span>
+</div>
+</div>
+<div class="vee-member-card grad">
+<div class="vee-member-info">
+<span class="vee-member-read">OSHIRO ITO (独立)</span>
+<span class="vee-member-name">白粉いと</span>
+</div>
+</div>
+<div class="vee-member-card grad">
+<div class="vee-member-info">
+<span class="vee-member-read">MEW GARCIA</span>
+<span class="vee-member-name">ミュウ・ガルシア</span>
+</div>
+</div>
+<div class="vee-member-card grad">
+<div class="vee-member-info">
+<span class="vee-member-read">HITOSHIRO ITSUKI</span>
+<span class="vee-member-name">ヒトシロ・イツキ</span>
+</div>
+</div>
+<div class="vee-member-card grad">
+<div class="vee-member-info">
+<span class="vee-member-read">AOMIYA YOZURI (独立)</span>
+<span class="vee-member-name">蒼宮よづり</span>
+</div>
+</div>
+<div class="vee-member-card grad">
+<div class="vee-member-info">
+<span class="vee-member-read">ANSHININ MISA (独立)</span>
+<span class="vee-member-name">安心院みさ</span>
+</div>
+</div>
+<div class="vee-member-card grad">
+<div class="vee-member-info">
+<span class="vee-member-read">ALBA SERA (契約終了)</span>
+<span class="vee-member-name">アルバ・セラ</span>
+</div>
+</div>
+<div class="vee-member-card grad">
+<div class="vee-member-info">
+<span class="vee-member-read">HISUMI</span>
+<span class="vee-member-name">緋墨</span>
+</div>
+</div>
+<div class="vee-member-card grad">
+<div class="vee-member-info">
+<span class="vee-member-read">SYUSETU KOHAKU (移籍)</span>
+<span class="vee-member-name">秋雪こはく</span>
+</div>
+</div>
+<div class="vee-member-card grad">
+<div class="vee-member-info">
+<span class="vee-member-read">COTONOHA</span>
+<span class="vee-member-name">言のハ</span>
+</div>
+</div>
+<div class="vee-member-card grad">
+<div class="vee-member-info">
+<span class="vee-member-read">KITASHIRAKAWA KAKAPO (独立)</span>
+<span class="vee-member-name">北白川かかぽ</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<footer class="vee-footer">
+<div class="vee-footer-logo">VEE</div>
+<p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with Sony Music Entertainment Inc.</p>
+</footer>
+<script src="vee_script.js"></script>
+<script>
         document.addEventListener('DOMContentLoaded', () => {
             const reveals = document.querySelectorAll('.vee-reveal, .vee-member-card');
             const observer = new IntersectionObserver((entries) => {
@@ -421,7 +367,5 @@
             reveals.forEach(el => observer.observe(el));
         });
     </script>
-
-</body>
-
+<div class="mobile-mode-banner" style="background: #ffc83d; color: #000; text-align: center; font-size: 0.85rem; padding: 4px; font-weight: 900; position: fixed; bottom: 0; width: 100%; z-index: 9999; box-shadow: 0 -2px 10px rgba(255, 200, 60, 0.4);" v-if="isMobile">🚀 Mobile Light Mode (Powered by Vue Virtual DOM)</div></div></body>
 </html>

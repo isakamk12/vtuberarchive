@@ -1,154 +1,140 @@
 <!DOCTYPE html>
+
 <html lang="ja">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>vα-liv (ヴイアライヴ) | VTuber Archive</title>
-    <meta name="description" content="THE IDOLM@STERのVTuberプロジェクト「vα-liv (ヴイアライヴ)」の非公式ファンサイト。所属アイドル・概要をまとめたアーカイブ。">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,700;0,900;1,700&family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="valiv.css">
-</head>
-
-<body>
-
-    <div class="vl-bg">
-        <div class="vl-bg-gradient"></div>
-        <div class="vl-bg-stars"></div>
-        <div class="vl-bg-spotlight sl-left"></div>
-        <div class="vl-bg-spotlight sl-right"></div>
-    </div>
-
-    <nav class="vl-nav">
-        <a href="../index.html" class="vl-nav-back">
-            <i class="fa-solid fa-chevron-left"></i> BACK TO HUB
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>vα-liv (ヴイアライヴ) | VTuber Archive</title>
+<meta content="THE IDOLM@STERのVTuberプロジェクト「vα-liv (ヴイアライヴ)」の非公式ファンサイト。所属アイドル・概要をまとめたアーカイブ。" name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,700;0,900;1,700&amp;family=Noto+Sans+JP:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="valiv.css" rel="stylesheet"/>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><style>[v-cloak] { display: none; } </style></head>
+<body><div id="app" v-cloak="">
+<div class="vl-bg" v-if="!isMobile">
+<div class="vl-bg-gradient" v-if="!isMobile"></div>
+<div class="vl-bg-stars" v-if="!isMobile"></div>
+<div class="vl-bg-spotlight sl-left" v-if="!isMobile"></div>
+<div class="vl-bg-spotlight sl-right" v-if="!isMobile"></div>
+</div>
+<nav class="vl-nav">
+<a class="vl-nav-back" href="../index.html">
+<i class="fa-solid fa-chevron-left"></i> BACK TO HUB
         </a>
-        <div class="vl-nav-logo">vα-liv <span>(ヴイアライヴ)</span></div>
-        <div class="vl-nav-tag">“THE IDOLM@STER” VTuber Project</div>
-    </nav>
-
-    <!-- HERO -->
-    <section class="vl-hero">
-        <div class="vl-hero-bg-text">IDOL</div>
-        <div class="vl-hero-content">
-            <div class="vl-eyebrow"><i class="fa-solid fa-microphone-lines"></i> THE IDOLM@STER FRANCHISE</div>
-            <h1 class="vl-hero-name">vα-liv</h1>
-            <p class="vl-hero-tagline">“アイドルマスターから生まれた、新しいバーチャルアイドルのカタチ”</p>
-            <div class="vl-hero-concept">
-                バンダイナムコエンターテインメントが展開する「アイドルマスター」シリーズのブランドの一つとして誕生したVTuber（バーチャルアイドル）プロジェクト。<br><br>
+<div class="vl-nav-logo">vα-liv <span>(ヴイアライヴ)</span></div>
+<div class="vl-nav-tag">“THE IDOLM@STER” VTuber Project</div>
+</nav>
+<!-- HERO -->
+<section class="vl-hero">
+<div class="vl-hero-bg-text" v-if="!isMobile">IDOL</div>
+<div class="vl-hero-content">
+<div class="vl-eyebrow"><i class="fa-solid fa-microphone-lines"></i> THE IDOLM@STER FRANCHISE</div>
+<h1 class="vl-hero-name">vα-liv</h1>
+<p class="vl-hero-tagline">“アイドルマスターから生まれた、新しいバーチャルアイドルのカタチ”</p>
+<div class="vl-hero-concept">
+                バンダイナムコエンターテインメントが展開する「アイドルマスター」シリーズのブランドの一つとして誕生したVTuber（バーチャルアイドル）プロジェクト。<br/><br/>
                 YouTubeでの配信活動を中心に、オリジナル楽曲のリリース、大型ライブイベント（876 PRODUCTION
                 FESなど）の開催、グッズ展開など、アイドルとして幅広いエンターテインメント活動を日々お届けしています。プロデューサー（視聴者）と共に成長する、「アイマス」ならではの体験がここにあります。
             </div>
-            <div class="vl-hero-stats">
-                <div class="vl-stat">
-                    <div class="vl-stat-value">3</div>
-                    <div class="vl-stat-label">IDOLS</div>
-                </div>
-                <div class="vl-stat">
-                    <div class="vl-stat-value">NAMCO</div>
-                    <div class="vl-stat-label">PRODUCE</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- INFO -->
-    <div class="vl-container">
-        <section class="vl-section vl-reveal">
-            <div class="vl-section-header">
-                <span class="vl-section-num">01</span>
-                <div>
-                    <h2 class="vl-section-title">プロジェクト概要</h2>
-                    <span class="vl-section-title-sub">ABOUT THE PROJECT</span>
-                </div>
-                <!-- Idolmaster symbolic divider -->
-                <div class="vl-divider"></div>
-            </div>
-            <div class="vl-info-grid">
-                <div class="vl-info-card">
-                    <div class="vl-info-icon"><i class="fa-solid fa-star"></i></div>
-                    <h3>🌟 アイマス × VTuber</h3>
-                    <p>長年愛されるアイドルマスターシリーズの遺伝子を受け継ぎ、リスナーがプロデューサーとして彼女たちの活動を直接応援し、共に成長していく物語を体験できます。</p>
-                </div>
-                <div class="vl-info-card">
-                    <div class="vl-info-icon"><i class="fa-solid fa-music"></i></div>
-                    <h3>🎶 楽曲とライブ</h3>
-                    <p>オリジナル楽曲はもちろん、「876 PRODUCTION FES」などで披露される本格的な3Dライブパフォーマンスは、まさにアイマスの系譜を感じさせる高いクオリティを誇ります。</p>
-                </div>
-                <div class="vl-info-card">
-                    <div class="vl-info-icon"><i class="fa-solid fa-tv"></i></div>
-                    <h3>📺 配信中心の展開</h3>
-                    <p>ゲーム実況、歌枠、雑談など、VTuberならではのリアルタイムな双方向コミュニケーションを重視し、日々の配信からアイドルの新たな一面を発見できます。</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- ROSTER -->
-        <section class="vl-section vl-reveal">
-            <div class="vl-section-header">
-                <span class="vl-section-num">02</span>
-                <div>
-                    <h2 class="vl-section-title">所属アイドル</h2>
-                    <span class="vl-section-title-sub">PROJECT IDOLS</span>
-                </div>
-                <div class="vl-divider"></div>
-            </div>
-
-            <!-- Members -->
-            <div class="vl-member-grid">
-                <!-- 宇宙 -->
-                <div class="vl-member-card vl-color-cosmo">
-                    <div class="vl-member-bg"></div>
-                    <div class="vl-member-content">
-                        <div class="vl-member-header">
-                            <a href="characters/cosmo.html" class="vl-member-name">上水流 宇宙</a>
-                            <div class="vl-member-read">Cosmo Kamizuru</div>
-                        </div>
-                        <p class="vl-member-ep">「宇宙」と書いて「こすも」と読む。アイドルという夢に向かって、ひたむきにステップを踏み続ける努力家。</p>
-                    </div>
-                </div>
-
-                <!-- 愛夏 -->
-                <div class="vl-member-card vl-color-manaka">
-                    <div class="vl-member-bg"></div>
-                    <div class="vl-member-content">
-                        <div class="vl-member-header">
-                            <a href="characters/manaka.html" class="vl-member-name">灯里 愛夏</a>
-                            <div class="vl-member-read">Manaka Tomori</div>
-                        </div>
-                        <p class="vl-member-ep">周囲を明るく照らすような笑顔とポジティブなパワーが魅力。周りを巻き込む元気さはトップクラス。</p>
-                    </div>
-                </div>
-
-                <!-- レトラ -->
-                <div class="vl-member-card vl-color-letora">
-                    <div class="vl-member-bg"></div>
-                    <div class="vl-member-content">
-                        <div class="vl-member-header">
-                            <a href="characters/letora.html" class="vl-member-name">レトラ</a>
-                            <div class="vl-member-read">Sara Letora Oliveira Utagawa</div>
-                        </div>
-                        <p class="vl-member-ep">歌唱力に定評があり、スタイリッシュなパフォーマンスで魅了する。ちょっぴりクールに見えて情熱的。</p>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-    </div>
-
-    <footer class="vl-footer">
-        <div class="vl-footer-logo">vα-liv <span>(ヴイアライヴ)</span></div>
-        <p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with Bandai Namco Entertainment. THE
-            IDOLM@STER™& ©Bandai Namco Entertainment Inc.</p>
-    </footer>
-
-    <script src="valiv_script.js"></script>
-    <script>
+<div class="vl-hero-stats">
+<div class="vl-stat">
+<div class="vl-stat-value">3</div>
+<div class="vl-stat-label">IDOLS</div>
+</div>
+<div class="vl-stat">
+<div class="vl-stat-value">NAMCO</div>
+<div class="vl-stat-label">PRODUCE</div>
+</div>
+</div>
+</div>
+</section>
+<!-- INFO -->
+<div class="vl-container">
+<section class="vl-section vl-reveal">
+<div class="vl-section-header">
+<span class="vl-section-num">01</span>
+<div>
+<h2 class="vl-section-title">プロジェクト概要</h2>
+<span class="vl-section-title-sub">ABOUT THE PROJECT</span>
+</div>
+<!-- Idolmaster symbolic divider -->
+<div class="vl-divider"></div>
+</div>
+<div class="vl-info-grid">
+<div class="vl-info-card">
+<div class="vl-info-icon"><i class="fa-solid fa-star"></i></div>
+<h3>🌟 アイマス × VTuber</h3>
+<p>長年愛されるアイドルマスターシリーズの遺伝子を受け継ぎ、リスナーがプロデューサーとして彼女たちの活動を直接応援し、共に成長していく物語を体験できます。</p>
+</div>
+<div class="vl-info-card">
+<div class="vl-info-icon"><i class="fa-solid fa-music"></i></div>
+<h3>🎶 楽曲とライブ</h3>
+<p>オリジナル楽曲はもちろん、「876 PRODUCTION FES」などで披露される本格的な3Dライブパフォーマンスは、まさにアイマスの系譜を感じさせる高いクオリティを誇ります。</p>
+</div>
+<div class="vl-info-card">
+<div class="vl-info-icon"><i class="fa-solid fa-tv"></i></div>
+<h3>📺 配信中心の展開</h3>
+<p>ゲーム実況、歌枠、雑談など、VTuberならではのリアルタイムな双方向コミュニケーションを重視し、日々の配信からアイドルの新たな一面を発見できます。</p>
+</div>
+</div>
+</section>
+<!-- ROSTER -->
+<section class="vl-section vl-reveal">
+<div class="vl-section-header">
+<span class="vl-section-num">02</span>
+<div>
+<h2 class="vl-section-title">所属アイドル</h2>
+<span class="vl-section-title-sub">PROJECT IDOLS</span>
+</div>
+<div class="vl-divider"></div>
+</div>
+<!-- Members -->
+<div class="vl-member-grid">
+<!-- 宇宙 -->
+<div class="vl-member-card vl-color-cosmo">
+<div class="vl-member-bg" v-if="!isMobile"></div>
+<div class="vl-member-content">
+<div class="vl-member-header">
+<a class="vl-member-name" href="characters/cosmo.html">上水流 宇宙</a>
+<div class="vl-member-read">Cosmo Kamizuru</div>
+</div>
+<p class="vl-member-ep">「宇宙」と書いて「こすも」と読む。アイドルという夢に向かって、ひたむきにステップを踏み続ける努力家。</p>
+</div>
+</div>
+<!-- 愛夏 -->
+<div class="vl-member-card vl-color-manaka">
+<div class="vl-member-bg" v-if="!isMobile"></div>
+<div class="vl-member-content">
+<div class="vl-member-header">
+<a class="vl-member-name" href="characters/manaka.html">灯里 愛夏</a>
+<div class="vl-member-read">Manaka Tomori</div>
+</div>
+<p class="vl-member-ep">周囲を明るく照らすような笑顔とポジティブなパワーが魅力。周りを巻き込む元気さはトップクラス。</p>
+</div>
+</div>
+<!-- レトラ -->
+<div class="vl-member-card vl-color-letora">
+<div class="vl-member-bg" v-if="!isMobile"></div>
+<div class="vl-member-content">
+<div class="vl-member-header">
+<a class="vl-member-name" href="characters/letora.html">レトラ</a>
+<div class="vl-member-read">Sara Letora Oliveira Utagawa</div>
+</div>
+<p class="vl-member-ep">歌唱力に定評があり、スタイリッシュなパフォーマンスで魅了する。ちょっぴりクールに見えて情熱的。</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+<footer class="vl-footer">
+<div class="vl-footer-logo">vα-liv <span>(ヴイアライヴ)</span></div>
+<p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with Bandai Namco Entertainment. THE
+            IDOLM@STER™&amp; ©Bandai Namco Entertainment Inc.</p>
+</footer>
+<script src="valiv_script.js"></script>
+<script>
         document.addEventListener('DOMContentLoaded', () => {
             const reveals = document.querySelectorAll('.vl-reveal');
             const observer = new IntersectionObserver((entries) => {
@@ -161,7 +147,5 @@
             reveals.forEach(el => observer.observe(el));
         });
     </script>
-
-</body>
-
+<div class="mobile-mode-banner" style="background: #ffc83d; color: #000; text-align: center; font-size: 0.85rem; padding: 4px; font-weight: 900; position: fixed; bottom: 0; width: 100%; z-index: 9999; box-shadow: 0 -2px 10px rgba(255, 200, 60, 0.4);" v-if="isMobile">🚀 Mobile Light Mode (Powered by Vue Virtual DOM)</div></div></body>
 </html>

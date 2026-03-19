@@ -1,489 +1,471 @@
 <!DOCTYPE html>
+
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AKA Virtual | VTuber Archive</title>
-    <meta name="description"
-        content="Global VTuber Agency 'AKA Virtual' unofficial fan archive. Featuring multilingual talents like Akemi Nekomachi, Juliana Shafira, and more.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Jura:wght@400;500;600;700&family=Rajdhani:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="akavirtual.css">
-</head>
-
-<body>
-
-    <div class="ak-bg">
-        <canvas id="ak-hex-canvas"></canvas>
-        <div class="ak-bg-overlay"></div>
-    </div>
-
-    <nav class="ak-nav">
-        <a href="../index.html" class="ak-nav-back">
-            <i class="fa-solid fa-angle-left"></i> SYSTEM.RETURN()
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AKA Virtual | VTuber Archive</title>
+<meta content="Global VTuber Agency 'AKA Virtual' unofficial fan archive. Featuring multilingual talents like Akemi Nekomachi, Juliana Shafira, and more." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Jura:wght@400;500;600;700&amp;family=Rajdhani:wght@400;500;600;700&amp;family=Noto+Sans+JP:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="akavirtual.css" rel="stylesheet"/>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><style>[v-cloak] { display: none; } </style></head>
+<body><div id="app" v-cloak="">
+<div class="ak-bg" v-if="!isMobile">
+<canvas id="ak-hex-canvas"></canvas>
+<div class="ak-bg-overlay" v-if="!isMobile"></div>
+</div>
+<nav class="ak-nav">
+<a class="ak-nav-back" href="../index.html">
+<i class="fa-solid fa-angle-left"></i> SYSTEM.RETURN()
         </a>
-        <div class="ak-nav-logo">
+<div class="ak-nav-logo">
             AKA <span class="ak-text-cyan">VIRTUAL</span>
-        </div>
-        <div class="ak-nav-lang">
-            <span class="ak-lang-chip active">EN</span>
-            <span class="ak-lang-chip">ID</span>
-            <span class="ak-lang-chip">JP</span>
-        </div>
-    </nav>
-
-    <!-- HERO -->
-    <section class="ak-hero">
-        <div class="ak-hero-inner">
-            <div class="ak-hero-content">
-                <div class="ak-eyebrow">
-                    <span class="ak-glitch" data-text="MISSION: NEW STORIES">MISSION: NEW STORIES</span>
-                </div>
-                <h1 class="ak-hero-title">
-                    <span class="ak-text-red">AKA</span>
-                    <br>VIRTUAL
+</div>
+<div class="ak-nav-lang">
+<span class="ak-lang-chip active">EN</span>
+<span class="ak-lang-chip">ID</span>
+<span class="ak-lang-chip">JP</span>
+</div>
+</nav>
+<!-- HERO -->
+<section class="ak-hero">
+<div class="ak-hero-inner">
+<div class="ak-hero-content">
+<div class="ak-eyebrow">
+<span class="ak-glitch" data-text="MISSION: NEW STORIES">MISSION: NEW STORIES</span>
+</div>
+<h1 class="ak-hero-title">
+<span class="ak-text-red">AKA</span>
+<br/>VIRTUAL
                 </h1>
-                <p class="ak-hero-tagline">Technology + 1mm of Inspiration.</p>
-
-                <div class="ak-hero-concept">
-                    <div class="ak-concept-line"></div>
-                    <p>「テクノロジーと1mmのひらめきで新しいストーリーを描き続ける」をミッションに掲げ、日本のコンテンツやキャラクターを世界中に展開している企業・エージェント。</p>
-                    <p>所属タレントの多くが英語（EN）とインドネシア語（ID）の両方を話すマルチリンガルであり、インドネシア語圏を中心にグローバルなファンに向けて配信を行っています。</p>
-
-                    <div class="ak-tech-stats">
-                        <div class="ak-stat">
-                            <span class="ak-stat-value">MULTI</span>
-                            <span class="ak-stat-label">Language Support</span>
-                        </div>
-                        <div class="ak-stat">
-                            <span class="ak-stat-value">GLOBAL</span>
-                            <span class="ak-stat-label">Audience Reach</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="ak-hero-visual">
-                <div class="ak-holo-globe">
-                    <div class="ak-globe-ring ak-ring-1"></div>
-                    <div class="ak-globe-ring ak-ring-2"></div>
-                    <div class="ak-globe-ring ak-ring-3"></div>
-                    <div class="ak-globe-core"><i class="fa-solid fa-earth-asia"></i></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ROSTER CONTAINER -->
-    <div class="ak-container">
-
-        <div class="ak-section-header">
-            <h2 class="ak-section-title">DATABASE // <span class="ak-text-cyan">TALENT ROSTER</span></h2>
-            <div class="ak-divider"></div>
-        </div>
-
-        <!-- All Talents Unified -->
-        <section class="ak-section ak-reveal">
-            <h3 class="ak-subsection-title"><i class="fa-solid fa-database"></i> TALENT DATABASE</h3>
-            <div class="ak-member-grid ak-featured-grid">
-
-                <!-- Airi Cordelia -->
-                <div class="ak-member-card">
-                    <div class="ak-card-scanline"></div>
-                    <div class="ak-card-inner">
-                        <div class="ak-card-tech-corner"></div>
-                        <div class="ak-member-lang"><span class="ak-tag">ID</span><span class="ak-tag">EN</span><span class="ak-tag">JP</span></div>
-                        <div class="ak-member-icon"><i class="fa-solid fa-fish-fins"></i></div>
-                        <div class="ak-member-info">
-                            <a href="characters/airi/airi.html" class="ak-member-name">Airi Cordelia</a>
-                            <div class="ak-member-read">アイリ・コルデリア</div>
-                            <div class="ak-member-desc">歌うことやゲーム（Apexや音ゲー）が大好き。自称「内向的だが仲良くなるとよく喋る」性格で、リスナーと冗談を言い合うフランクな関係を築いている。時には少し毒舌（...</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Akemi Nekomachi -->
-                <div class="ak-member-card">
-                    <div class="ak-card-scanline"></div>
-                    <div class="ak-card-inner">
-                        <div class="ak-card-tech-corner"></div>
-                        <div class="ak-member-lang"><span class="ak-tag">ID</span><span class="ak-tag">EN</span><span class="ak-tag">JP</span><span class="ak-tag">JV</span></div>
-                        <div class="ak-member-icon"><i class="fa-solid fa-cat"></i></div>
-                        <div class="ak-member-info">
-                            <a href="characters/akemi/akemi.html" class="ak-member-name">Akemi Nekomachi</a>
-                            <div class="ak-member-read">猫町アケミ</div>
-                            <div class="ak-member-desc">自称「スーパーヴィラン」を名乗り、ファンとの遠慮のないやり取り（プロレス）を楽しむ。しかし、悩み相談では論理的で前向きな解決策を提示する「頼れるパパ」としての一...</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Alona Driad -->
-                <div class="ak-member-card">
-                    <div class="ak-card-scanline"></div>
-                    <div class="ak-card-inner">
-                        <div class="ak-card-tech-corner"></div>
-                        <div class="ak-member-lang"><span class="ak-tag">ID</span></div>
-                        <div class="ak-member-icon"><i class="fa-solid fa-music"></i></div>
-                        <div class="ak-member-info">
-                            <a href="characters/alona/alona.html" class="ak-member-name">Alona Driad</a>
-                            <div class="ak-member-read">アロナ・ドリアド</div>
-                            <div class="ak-member-desc">「一番歌が上手い森の妖精」を自称する。おてんばで楽観的な性格で、食べることと歌うことが大好き。アニメ『呪術廻戦』の五条悟をこよなく愛する一面も。</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Amarynn -->
-                <div class="ak-member-card">
-                    <div class="ak-card-scanline"></div>
-                    <div class="ak-card-inner">
-                        <div class="ak-card-tech-corner"></div>
-                        <div class="ak-member-lang"><span class="ak-tag">ID</span><span class="ak-tag">EN</span><span class="ak-tag">JP</span></div>
-                        <div class="ak-member-icon"><i class="fa-solid fa-user-astronaut"></i></div>
-                        <div class="ak-member-info">
-                            <a href="characters/amarynn/amarynn.html" class="ak-member-name">Amarynn</a>
-                            <div class="ak-member-read">アマリン</div>
-                            <div class="ak-member-desc">「空から落ちてきた天使、そしてあなたの心に落ちる、AKA Virtualのアマリンです」。眠っている間に空から落ちてしまい、そのまま人間界に留まることを決めた天...</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Amaya Miyu -->
-                <div class="ak-member-card">
-                    <div class="ak-card-scanline"></div>
-                    <div class="ak-card-inner">
-                        <div class="ak-card-tech-corner"></div>
-                        <div class="ak-member-lang"><span class="ak-tag">ID</span><span class="ak-tag">EN</span><span class="ak-tag">JP</span><span class="ak-tag ak-tag-alert">GRADUATED</span></div>
-                        <div class="ak-member-icon"><i class="fa-solid fa-cat"></i></div>
-                        <div class="ak-member-info">
-                            <a href="characters/amaya/amaya.html" class="ak-member-name">Amaya Miyu</a>
-                            <div class="ak-member-read">アマヤ・ミユ</div>
-                            <div class="ak-member-desc">猫のお母さんに育てられ、猫のように振る舞うこともできるウサギの少女。現在はドイツに居住。自称「AKA一清楚なウサギ」だが、リスナーからは「中身おじさん」「ゴリラ...</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Ave Kanehoshii -->
-                <div class="ak-member-card">
-                    <div class="ak-card-scanline"></div>
-                    <div class="ak-card-inner">
-                        <div class="ak-card-tech-corner"></div>
-                        <div class="ak-member-lang"><span class="ak-tag">ID</span><span class="ak-tag">EN</span></div>
-                        <div class="ak-member-icon"><i class="fa-solid fa-user-astronaut"></i></div>
-                        <div class="ak-member-info">
-                            <a href="characters/ave/ave.html" class="ak-member-name">Ave Kanehoshii</a>
-                            <div class="ak-member-read">アヴェ・カネホシイ</div>
-                            <div class="ak-member-desc">自身を「Gembel（放浪者）のサムライ」と称し、ボロボロの服に身を包む独特なスタイルのVTuber。ふざけた言動とは裏腹に、作詞・作曲・編曲から動画編集、デザ...</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Caerula Aki -->
-                <div class="ak-member-card">
-                    <div class="ak-card-scanline"></div>
-                    <div class="ak-card-inner">
-                        <div class="ak-card-tech-corner"></div>
-                        <div class="ak-member-lang"><span class="ak-tag">ID</span><span class="ak-tag">EN</span><span class="ak-tag">JP</span></div>
-                        <div class="ak-member-icon"><i class="fa-solid fa-user-astronaut"></i></div>
-                        <div class="ak-member-info">
-                            <a href="characters/caerula/caerula.html" class="ak-member-name">Caerula Aki</a>
-                            <div class="ak-member-read">カエルラ・愛姫</div>
-                            <div class="ak-member-desc">AKA Virtualの1期生。赤髪ツインテールが特徴の「世界一番可愛いJK」。清楚をかなぐり捨てた、ストレートで飾らない言葉遣いと、限界を知らないZ世代らしい...</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Frederett -->
-                <div class="ak-member-card">
-                    <div class="ak-card-scanline"></div>
-                    <div class="ak-card-inner">
-                        <div class="ak-card-tech-corner"></div>
-                        <div class="ak-member-lang"><span class="ak-tag">ID</span><span class="ak-tag">EN</span></div>
-                        <div class="ak-member-icon"><i class="fa-solid fa-user-astronaut"></i></div>
-                        <div class="ak-member-info">
-                            <a href="characters/frederett/frederett.html" class="ak-member-name">Frederett</a>
-                            <div class="ak-member-read">フレデレット</div>
-                            <div class="ak-member-desc">「フレ（Fre）」の愛称で親しまれる、才能豊かなイラストレーター兼VTuber。自身の活動だけでなく、数多のVTuberのモデルを手掛ける「ママ（キャラクターデ...</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Gingitsune Gehenna -->
-                <div class="ak-member-card">
-                    <div class="ak-card-scanline"></div>
-                    <div class="ak-card-inner">
-                        <div class="ak-card-tech-corner"></div>
-                        <div class="ak-member-lang"><span class="ak-tag">ID</span><span class="ak-tag">EN</span><span class="ak-tag">JP</span><span class="ak-tag ak-tag-alert" title="2025.12">INDEPENDENT</span></div>
-                        <div class="ak-member-icon"><i class="fa-solid fa-brands fa-firefox-browser"></i></div>
-                        <div class="ak-member-info">
-                            <a href="characters/gehenna/gehenna.html" class="ak-member-name">Gingitsune Gehenna</a>
-                            <div class="ak-member-read">ギンギツネ・ゲヘナ</div>
-                            <div class="ak-member-desc">人体実験により「半人半狐」となってしまった悲劇の過去を持つ銀の狐。失われた記憶を探すため、情報を集めやすい「ホストクラブ」のホストとして活動している。落ち着いた...</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Gema Gathika -->
-                <div class="ak-member-card">
-                    <div class="ak-card-scanline"></div>
-                    <div class="ak-card-inner">
-                        <div class="ak-card-tech-corner"></div>
-                        <div class="ak-member-lang"><span class="ak-tag">EN</span></div>
-                        <div class="ak-member-icon"><i class="fa-solid fa-dog"></i></div>
-                        <div class="ak-member-info">
-                            <a href="characters/gema/gema.html" class="ak-member-name">Gema Gathika</a>
-                            <div class="ak-member-read">ゲマ・ガティカ</div>
-                            <div class="ak-member-desc">現在は5人組ユニット「MagniV」のリーダー兼メインボーカルとして活動。指を鳴らすだけで性別を切り替えられる能力を持っていたが、2024年のリブランディング以...</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Harris Caine -->
-                <div class="ak-member-card">
-                    <div class="ak-card-scanline"></div>
-                    <div class="ak-card-inner">
-                        <div class="ak-card-tech-corner"></div>
-                        <div class="ak-member-lang"><span class="ak-tag">ID</span><span class="ak-tag">EN</span><span class="ak-tag ak-tag-alert" title="2025.12">INDEPENDENT</span></div>
-                        <div class="ak-member-icon"><i class="fa-solid fa-user-astronaut"></i></div>
-                        <div class="ak-member-info">
-                            <a href="characters/harris/harris.html" class="ak-member-name">Harris Caine</a>
-                            <div class="ak-member-read">ハリス・ケイン</div>
-                            <div class="ak-member-desc">SOL4CEのリーダー的存在。仕事のないフリーランス探偵から、迷える魂を救う刑務所「Scarlet Sanctum」の看守へと転身。182cmの高身長とダークな...</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Juliana Shafira -->
-                <div class="ak-member-card">
-                    <div class="ak-card-scanline"></div>
-                    <div class="ak-card-inner">
-                        <div class="ak-card-tech-corner"></div>
-                        <div class="ak-member-lang"><span class="ak-tag">EN</span><span class="ak-tag">JV</span></div>
-                        <div class="ak-member-icon"><i class="fa-solid fa-user-astronaut"></i></div>
-                        <div class="ak-member-info">
-                            <a href="characters/juliana/juliana.html" class="ak-member-name">Juliana Shafira</a>
-                            <div class="ak-member-read">ジュリアナ・シャフィラ</div>
-                            <div class="ak-member-desc">自称「最もフレンドリーなVTuber」。しかし、実際には重度の内向的（イントロバート）で、エネルギーが切れるとタントラムを起こすこともある。闇の魔女としての設定...</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Kichi Himiya -->
-                <div class="ak-member-card">
-                    <div class="ak-card-scanline"></div>
-                    <div class="ak-card-inner">
-                        <div class="ak-card-tech-corner"></div>
-                        <div class="ak-member-lang"><span class="ak-tag">ID</span><span class="ak-tag">EN</span></div>
-                        <div class="ak-member-icon"><i class="fa-solid fa-star"></i></div>
-                        <div class="ak-member-info">
-                            <a href="characters/kichi/kichi.html" class="ak-member-name">Kichi Himiya</a>
-                            <div class="ak-member-read">緋宮キチ</div>
-                            <div class="ak-member-desc">地獄出身の鬼VTuber。圧倒的な歌唱力を持ち、ボカロ曲やアニソンのカバーを数多く投稿している。ファッションへの関心が非常に高く、自身の3Dモデルの衣装デザイン...</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Lala Alberich -->
-                <div class="ak-member-card">
-                    <div class="ak-card-scanline"></div>
-                    <div class="ak-card-inner">
-                        <div class="ak-card-tech-corner"></div>
-                        <div class="ak-member-lang"><span class="ak-tag">ID</span><span class="ak-tag">EN</span><span class="ak-tag">JP</span><span class="ak-tag ak-tag-alert">GRADUATED</span></div>
-                        <div class="ak-member-icon"><i class="fa-solid fa-cat"></i></div>
-                        <div class="ak-member-info">
-                            <a href="characters/lala/lala.html" class="ak-member-name">Lala Alberich</a>
-                            <div class="ak-member-read">ララ・アルベリヒ</div>
-                            <div class="ak-member-desc">かつては「野蛮（Barbar）」だったが、心を入れ替えておとなしくなったオレンジ色の猫のVTuber。頬の傷はその頃の名残。カエルを異常なほど愛し、配信ではコー...</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Lilian Grimmxandra -->
-                <div class="ak-member-card">
-                    <div class="ak-card-scanline"></div>
-                    <div class="ak-card-inner">
-                        <div class="ak-card-tech-corner"></div>
-                        <div class="ak-member-lang"><span class="ak-tag">ID</span><span class="ak-tag">EN</span></div>
-                        <div class="ak-member-icon"><i class="fa-solid fa-skull"></i></div>
-                        <div class="ak-member-info">
-                            <a href="characters/lilian/lilian.html" class="ak-member-name">Lilian Grimmxandra</a>
-                            <div class="ak-member-read">リリアン・グリムザンドラ</div>
-                            <div class="ak-member-desc">悪いヤツを逮捕する、異世界から来たバーチャル警察官。白髪ショートと緑の瞳が特徴。自称「資本主義者」で、投げ銭を「Pungli（ワイロ）」と呼び、リスナーとのコミ...</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Mai -->
-                <div class="ak-member-card">
-                    <div class="ak-card-scanline"></div>
-                    <div class="ak-card-inner">
-                        <div class="ak-card-tech-corner"></div>
-                        <div class="ak-member-lang"><span class="ak-tag">ID</span><span class="ak-tag">EN</span><span class="ak-tag">JP</span></div>
-                        <div class="ak-member-icon"><i class="fa-solid fa-user-astronaut"></i></div>
-                        <div class="ak-member-info">
-                            <a href="characters/mai/mai.html" class="ak-member-name">Mai</a>
-                            <div class="ak-member-read">マイ</div>
-                            <div class="ak-member-desc">ドリームランドからやってきたウサギの女の子。人間の悪い夢を食べて良い夢に変える「バク」でもある。エネルギッシュでカオティックな配信スタイルを持ち、多国語を操るマ...</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Mikazuki Arion -->
-                <div class="ak-member-card">
-                    <div class="ak-card-scanline"></div>
-                    <div class="ak-card-inner">
-                        <div class="ak-card-tech-corner"></div>
-                        <div class="ak-member-lang"><span class="ak-tag">ID</span><span class="ak-tag">EN</span><span class="ak-tag ak-tag-alert" title="2025.12">INDEPENDENT</span></div>
-                        <div class="ak-member-icon"><i class="fa-solid fa-moon"></i></div>
-                        <div class="ak-member-info">
-                            <a href="characters/mikazuki/mikazuki.html" class="ak-member-name">Mikazuki Arion</a>
-                            <div class="ak-member-read">三日月 アリオン</div>
-                            <div class="ak-member-desc">異世界から来た原初の悪魔でありながら、人間界では「首相」として政務をこなすVTuber。188cmの長身と低音イケボを活かし、シチュエーションASMRやRPでは...</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- MiU -->
-                <div class="ak-member-card">
-                    <div class="ak-card-scanline"></div>
-                    <div class="ak-card-inner">
-                        <div class="ak-card-tech-corner"></div>
-                        <div class="ak-member-lang"><span class="ak-tag">ID</span><span class="ak-tag">EN</span><span class="ak-tag ak-tag-alert" title="Channel Suspended">IN PREPARATION</span></div>
-                        <div class="ak-member-icon"><i class="fa-solid fa-user-astronaut"></i></div>
-                        <div class="ak-member-info">
-                            <a href="characters/miu/miu.html" class="ak-member-name">MiU</a>
-                            <div class="ak-member-read">ミュウ</div>
-                            <div class="ak-member-desc">動物園で寂しがっていたところ、神様によって人間に変えてもらった外交的なパンダ。しかし人間界の生活費が高いことに気づき、資金を稼ぐためにVTuberとなった。小柄...</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Kiraboshi Miya -->
-                <div class="ak-member-card">
-                    <div class="ak-card-scanline"></div>
-                    <div class="ak-card-inner">
-                        <div class="ak-card-tech-corner"></div>
-                        <div class="ak-member-lang"><span class="ak-tag">EN</span><span class="ak-tag">JP</span></div>
-                        <div class="ak-member-icon"><i class="fa-solid fa-star"></i></div>
-                        <div class="ak-member-info">
-                            <a href="characters/miya/miya.html" class="ak-member-name">Kiraboshi Miya</a>
-                            <div class="ak-member-read">綺羅星ミヤ</div>
-                            <div class="ak-member-desc">宇宙の星として生まれ、世界から「悪意（Toxicity）」を取り除く使命を持つVシンガー。普段は叔母の経営する「Cadence Cafe and Bar」でバリ...</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Reinanda Rea -->
-                <div class="ak-member-card">
-                    <div class="ak-card-scanline"></div>
-                    <div class="ak-card-inner">
-                        <div class="ak-card-tech-corner"></div>
-                        <div class="ak-member-lang"><span class="ak-tag">ID</span><span class="ak-tag">EN</span></div>
-                        <div class="ak-member-icon"><i class="fa-solid fa-cat"></i></div>
-                        <div class="ak-member-info">
-                            <a href="characters/rea/rea.html" class="ak-member-name">Reinanda Rea</a>
-                            <div class="ak-member-read">レイナンダ・レア</div>
-                            <div class="ak-member-desc">架空の店舗「Rea Market」の看板娘レジ係。元々は野良猫だったが、恩返しのために店を立ち上げた。落ち着いた低音ボイスが魅力で、お姉さん的な雰囲気を持つ一方...</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Todoroki Reika -->
-                <div class="ak-member-card">
-                    <div class="ak-card-scanline"></div>
-                    <div class="ak-card-inner">
-                        <div class="ak-card-tech-corner"></div>
-                        <div class="ak-member-lang"><span class="ak-tag">ID</span><span class="ak-tag">EN</span></div>
-                        <div class="ak-member-icon"><i class="fa-solid fa-user-astronaut"></i></div>
-                        <div class="ak-member-info">
-                            <a href="characters/reika/reika.html" class="ak-member-name">Todoroki Reika</a>
-                            <div class="ak-member-read">轟れいか</div>
-                            <div class="ak-member-desc">東京を拠点に活動するワーカーホリックなプロメカニック。孤児院育ちで、親代わりのジョーから技術とラーメン作りを教わった。自身のショップの隣で激辛ラーメン店も営む。...</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Selia Aisnith -->
-                <div class="ak-member-card">
-                    <div class="ak-card-scanline"></div>
-                    <div class="ak-card-inner">
-                        <div class="ak-card-tech-corner"></div>
-                        <div class="ak-member-lang"><span class="ak-tag">ID</span><span class="ak-tag">EN</span></div>
-                        <div class="ak-member-icon"><i class="fa-solid fa-user-astronaut"></i></div>
-                        <div class="ak-member-info">
-                            <a href="characters/selia/selia.html" class="ak-member-name">Selia Aisnith</a>
-                            <div class="ak-member-read">セリア・アイスニス</div>
-                            <div class="ak-member-desc">自身を「コンテンツクリエイター」と定義し、本業では企業のプロジェクトマネージャーとして働く兼業ストリーマー。170cmの高身長を持ちながら、仲間内では「おチビ」...</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Chimana Shion -->
-                <div class="ak-member-card">
-                    <div class="ak-card-scanline"></div>
-                    <div class="ak-card-inner">
-                        <div class="ak-card-tech-corner"></div>
-                        <div class="ak-member-lang"><span class="ak-tag">ID</span><span class="ak-tag">EN</span></div>
-                        <div class="ak-member-icon"><i class="fa-solid fa-skull"></i></div>
-                        <div class="ak-member-info">
-                            <a href="characters/shion/shion.html" class="ak-member-name">Chimana Shion</a>
-                            <div class="ak-member-read">小魂子しおね</div>
-                            <div class="ak-member-desc">「世界一可愛い暗殺系VTuber」を自称する16歳。驚いた時に叫び声に濁音がつくのが特徴。アークナイツや原神に100万円以上課金するガチの重課金ゲーマーで、脳筋...</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Souta Izumi -->
-                <div class="ak-member-card">
-                    <div class="ak-card-scanline"></div>
-                    <div class="ak-card-inner">
-                        <div class="ak-card-tech-corner"></div>
-                        <div class="ak-member-lang"><span class="ak-tag">ID</span><span class="ak-tag">EN</span><span class="ak-tag ak-tag-alert" title="2025.12">INDEPENDENT</span></div>
-                        <div class="ak-member-icon"><i class="fa-solid fa-user-astronaut"></i></div>
-                        <div class="ak-member-info">
-                            <a href="characters/souta/souta.html" class="ak-member-name">Souta Izumi</a>
-                            <div class="ak-member-read">ソウタ・イズミ</div>
-                            <div class="ak-member-desc">INDIEからAKA所属となり、「SOL4CE」のメンバーとして再デビュー。175cmのスタイルでY2Kファッションを着こなす。すぐに拗ねたり怒ったりする感情豊...</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Starr -->
-                <div class="ak-member-card">
-                    <div class="ak-card-scanline"></div>
-                    <div class="ak-card-inner">
-                        <div class="ak-card-tech-corner"></div>
-                        <div class="ak-member-lang"><span class="ak-tag">EN</span></div>
-                        <div class="ak-member-icon"><i class="fa-solid fa-star"></i></div>
-                        <div class="ak-member-info">
-                            <a href="characters/starr/starr.html" class="ak-member-name">Starr</a>
-                            <div class="ak-member-read">スター</div>
-                            <div class="ak-member-desc">ニューヨークを拠点とする、辛口かつユーモアに溢れる「ゴシップクイーン」。セレブの噂話から最新のエンタメニュースまでを網羅し、独自の視点でぶった斬る。自称フーディ...</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Tekitou -->
-                <div class="ak-member-card">
-                    <div class="ak-card-scanline"></div>
-                    <div class="ak-card-inner">
-                        <div class="ak-card-tech-corner"></div>
-                        <div class="ak-member-lang"><span class="ak-tag">EN</span><span class="ak-tag">JP</span><span class="ak-tag">JV</span></div>
-                        <div class="ak-member-icon"><i class="fa-solid fa-user-astronaut"></i></div>
-                        <div class="ak-member-info">
-                            <a href="characters/tekitou/tekitou.html" class="ak-member-name">Tekitou</a>
-                            <div class="ak-member-read">テキトー</div>
-                            <div class="ak-member-desc">頭に巨大なドーナツを乗せた、AKAの「最高ミーム責任者（CMO）」。東京から世界へ向けて、ADHD気味のハイテンションな思考回路でカオスな配信を届ける。ファン（...</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Velary Lusticia -->
-                <div class="ak-member-card">
-                    <div class="ak-card-scanline"></div>
-                    <div class="ak-card-inner">
-                        <div class="ak-card-tech-corner"></div>
-                        <div class="ak-member-lang"><span class="ak-tag">ID</span><span class="ak-tag">EN</span><span class="ak-tag ak-tag-alert" title="2024.05">GRADUATED</span></div>
-                        <div class="ak-member-icon"><i class="fa-solid fa-cat"></i></div>
-                        <div class="ak-member-info">
-                            <a href="characters/velary/velary.html" class="ak-member-name">Velary Lusticia</a>
-                            <div class="ak-member-read">フェラリ・ルスティシア</div>
-                            <div class="ak-member-desc">サキュバスの任務を果たせず、地獄を追放された「失敗したサキュバス（succubus gagal）」。紫色の髪と尻尾が特徴。大学卒業と現実での就職に伴い、2024...</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </div>
-
-    <footer class="ak-footer">
-        <div class="ak-footer-logo">
+<p class="ak-hero-tagline">Technology + 1mm of Inspiration.</p>
+<div class="ak-hero-concept">
+<div class="ak-concept-line"></div>
+<p>「テクノロジーと1mmのひらめきで新しいストーリーを描き続ける」をミッションに掲げ、日本のコンテンツやキャラクターを世界中に展開している企業・エージェント。</p>
+<p>所属タレントの多くが英語（EN）とインドネシア語（ID）の両方を話すマルチリンガルであり、インドネシア語圏を中心にグローバルなファンに向けて配信を行っています。</p>
+<div class="ak-tech-stats">
+<div class="ak-stat">
+<span class="ak-stat-value">MULTI</span>
+<span class="ak-stat-label">Language Support</span>
+</div>
+<div class="ak-stat">
+<span class="ak-stat-value">GLOBAL</span>
+<span class="ak-stat-label">Audience Reach</span>
+</div>
+</div>
+</div>
+</div>
+<div class="ak-hero-visual">
+<div class="ak-holo-globe">
+<div class="ak-globe-ring ak-ring-1"></div>
+<div class="ak-globe-ring ak-ring-2"></div>
+<div class="ak-globe-ring ak-ring-3"></div>
+<div class="ak-globe-core"><i class="fa-solid fa-earth-asia"></i></div>
+</div>
+</div>
+</div>
+</section>
+<!-- ROSTER CONTAINER -->
+<div class="ak-container">
+<div class="ak-section-header">
+<h2 class="ak-section-title">DATABASE // <span class="ak-text-cyan">TALENT ROSTER</span></h2>
+<div class="ak-divider"></div>
+</div>
+<!-- All Talents Unified -->
+<section class="ak-section ak-reveal">
+<h3 class="ak-subsection-title"><i class="fa-solid fa-database"></i> TALENT DATABASE</h3>
+<div class="ak-member-grid ak-featured-grid">
+<!-- Airi Cordelia -->
+<div class="ak-member-card">
+<div class="ak-card-scanline"></div>
+<div class="ak-card-inner">
+<div class="ak-card-tech-corner"></div>
+<div class="ak-member-lang"><span class="ak-tag">ID</span><span class="ak-tag">EN</span><span class="ak-tag">JP</span></div>
+<div class="ak-member-icon"><i class="fa-solid fa-fish-fins"></i></div>
+<div class="ak-member-info">
+<a class="ak-member-name" href="characters/airi/airi.html">Airi Cordelia</a>
+<div class="ak-member-read">アイリ・コルデリア</div>
+<div class="ak-member-desc">歌うことやゲーム（Apexや音ゲー）が大好き。自称「内向的だが仲良くなるとよく喋る」性格で、リスナーと冗談を言い合うフランクな関係を築いている。時には少し毒舌（...</div>
+</div>
+</div>
+</div>
+<!-- Akemi Nekomachi -->
+<div class="ak-member-card">
+<div class="ak-card-scanline"></div>
+<div class="ak-card-inner">
+<div class="ak-card-tech-corner"></div>
+<div class="ak-member-lang"><span class="ak-tag">ID</span><span class="ak-tag">EN</span><span class="ak-tag">JP</span><span class="ak-tag">JV</span></div>
+<div class="ak-member-icon"><i class="fa-solid fa-cat"></i></div>
+<div class="ak-member-info">
+<a class="ak-member-name" href="characters/akemi/akemi.html">Akemi Nekomachi</a>
+<div class="ak-member-read">猫町アケミ</div>
+<div class="ak-member-desc">自称「スーパーヴィラン」を名乗り、ファンとの遠慮のないやり取り（プロレス）を楽しむ。しかし、悩み相談では論理的で前向きな解決策を提示する「頼れるパパ」としての一...</div>
+</div>
+</div>
+</div>
+<!-- Alona Driad -->
+<div class="ak-member-card">
+<div class="ak-card-scanline"></div>
+<div class="ak-card-inner">
+<div class="ak-card-tech-corner"></div>
+<div class="ak-member-lang"><span class="ak-tag">ID</span></div>
+<div class="ak-member-icon"><i class="fa-solid fa-music"></i></div>
+<div class="ak-member-info">
+<a class="ak-member-name" href="characters/alona/alona.html">Alona Driad</a>
+<div class="ak-member-read">アロナ・ドリアド</div>
+<div class="ak-member-desc">「一番歌が上手い森の妖精」を自称する。おてんばで楽観的な性格で、食べることと歌うことが大好き。アニメ『呪術廻戦』の五条悟をこよなく愛する一面も。</div>
+</div>
+</div>
+</div>
+<!-- Amarynn -->
+<div class="ak-member-card">
+<div class="ak-card-scanline"></div>
+<div class="ak-card-inner">
+<div class="ak-card-tech-corner"></div>
+<div class="ak-member-lang"><span class="ak-tag">ID</span><span class="ak-tag">EN</span><span class="ak-tag">JP</span></div>
+<div class="ak-member-icon"><i class="fa-solid fa-user-astronaut"></i></div>
+<div class="ak-member-info">
+<a class="ak-member-name" href="characters/amarynn/amarynn.html">Amarynn</a>
+<div class="ak-member-read">アマリン</div>
+<div class="ak-member-desc">「空から落ちてきた天使、そしてあなたの心に落ちる、AKA Virtualのアマリンです」。眠っている間に空から落ちてしまい、そのまま人間界に留まることを決めた天...</div>
+</div>
+</div>
+</div>
+<!-- Amaya Miyu -->
+<div class="ak-member-card">
+<div class="ak-card-scanline"></div>
+<div class="ak-card-inner">
+<div class="ak-card-tech-corner"></div>
+<div class="ak-member-lang"><span class="ak-tag">ID</span><span class="ak-tag">EN</span><span class="ak-tag">JP</span><span class="ak-tag ak-tag-alert">GRADUATED</span></div>
+<div class="ak-member-icon"><i class="fa-solid fa-cat"></i></div>
+<div class="ak-member-info">
+<a class="ak-member-name" href="characters/amaya/amaya.html">Amaya Miyu</a>
+<div class="ak-member-read">アマヤ・ミユ</div>
+<div class="ak-member-desc">猫のお母さんに育てられ、猫のように振る舞うこともできるウサギの少女。現在はドイツに居住。自称「AKA一清楚なウサギ」だが、リスナーからは「中身おじさん」「ゴリラ...</div>
+</div>
+</div>
+</div>
+<!-- Ave Kanehoshii -->
+<div class="ak-member-card">
+<div class="ak-card-scanline"></div>
+<div class="ak-card-inner">
+<div class="ak-card-tech-corner"></div>
+<div class="ak-member-lang"><span class="ak-tag">ID</span><span class="ak-tag">EN</span></div>
+<div class="ak-member-icon"><i class="fa-solid fa-user-astronaut"></i></div>
+<div class="ak-member-info">
+<a class="ak-member-name" href="characters/ave/ave.html">Ave Kanehoshii</a>
+<div class="ak-member-read">アヴェ・カネホシイ</div>
+<div class="ak-member-desc">自身を「Gembel（放浪者）のサムライ」と称し、ボロボロの服に身を包む独特なスタイルのVTuber。ふざけた言動とは裏腹に、作詞・作曲・編曲から動画編集、デザ...</div>
+</div>
+</div>
+</div>
+<!-- Caerula Aki -->
+<div class="ak-member-card">
+<div class="ak-card-scanline"></div>
+<div class="ak-card-inner">
+<div class="ak-card-tech-corner"></div>
+<div class="ak-member-lang"><span class="ak-tag">ID</span><span class="ak-tag">EN</span><span class="ak-tag">JP</span></div>
+<div class="ak-member-icon"><i class="fa-solid fa-user-astronaut"></i></div>
+<div class="ak-member-info">
+<a class="ak-member-name" href="characters/caerula/caerula.html">Caerula Aki</a>
+<div class="ak-member-read">カエルラ・愛姫</div>
+<div class="ak-member-desc">AKA Virtualの1期生。赤髪ツインテールが特徴の「世界一番可愛いJK」。清楚をかなぐり捨てた、ストレートで飾らない言葉遣いと、限界を知らないZ世代らしい...</div>
+</div>
+</div>
+</div>
+<!-- Frederett -->
+<div class="ak-member-card">
+<div class="ak-card-scanline"></div>
+<div class="ak-card-inner">
+<div class="ak-card-tech-corner"></div>
+<div class="ak-member-lang"><span class="ak-tag">ID</span><span class="ak-tag">EN</span></div>
+<div class="ak-member-icon"><i class="fa-solid fa-user-astronaut"></i></div>
+<div class="ak-member-info">
+<a class="ak-member-name" href="characters/frederett/frederett.html">Frederett</a>
+<div class="ak-member-read">フレデレット</div>
+<div class="ak-member-desc">「フレ（Fre）」の愛称で親しまれる、才能豊かなイラストレーター兼VTuber。自身の活動だけでなく、数多のVTuberのモデルを手掛ける「ママ（キャラクターデ...</div>
+</div>
+</div>
+</div>
+<!-- Gingitsune Gehenna -->
+<div class="ak-member-card">
+<div class="ak-card-scanline"></div>
+<div class="ak-card-inner">
+<div class="ak-card-tech-corner"></div>
+<div class="ak-member-lang"><span class="ak-tag">ID</span><span class="ak-tag">EN</span><span class="ak-tag">JP</span><span class="ak-tag ak-tag-alert" title="2025.12">INDEPENDENT</span></div>
+<div class="ak-member-icon"><i class="fa-solid fa-brands fa-firefox-browser"></i></div>
+<div class="ak-member-info">
+<a class="ak-member-name" href="characters/gehenna/gehenna.html">Gingitsune Gehenna</a>
+<div class="ak-member-read">ギンギツネ・ゲヘナ</div>
+<div class="ak-member-desc">人体実験により「半人半狐」となってしまった悲劇の過去を持つ銀の狐。失われた記憶を探すため、情報を集めやすい「ホストクラブ」のホストとして活動している。落ち着いた...</div>
+</div>
+</div>
+</div>
+<!-- Gema Gathika -->
+<div class="ak-member-card">
+<div class="ak-card-scanline"></div>
+<div class="ak-card-inner">
+<div class="ak-card-tech-corner"></div>
+<div class="ak-member-lang"><span class="ak-tag">EN</span></div>
+<div class="ak-member-icon"><i class="fa-solid fa-dog"></i></div>
+<div class="ak-member-info">
+<a class="ak-member-name" href="characters/gema/gema.html">Gema Gathika</a>
+<div class="ak-member-read">ゲマ・ガティカ</div>
+<div class="ak-member-desc">現在は5人組ユニット「MagniV」のリーダー兼メインボーカルとして活動。指を鳴らすだけで性別を切り替えられる能力を持っていたが、2024年のリブランディング以...</div>
+</div>
+</div>
+</div>
+<!-- Harris Caine -->
+<div class="ak-member-card">
+<div class="ak-card-scanline"></div>
+<div class="ak-card-inner">
+<div class="ak-card-tech-corner"></div>
+<div class="ak-member-lang"><span class="ak-tag">ID</span><span class="ak-tag">EN</span><span class="ak-tag ak-tag-alert" title="2025.12">INDEPENDENT</span></div>
+<div class="ak-member-icon"><i class="fa-solid fa-user-astronaut"></i></div>
+<div class="ak-member-info">
+<a class="ak-member-name" href="characters/harris/harris.html">Harris Caine</a>
+<div class="ak-member-read">ハリス・ケイン</div>
+<div class="ak-member-desc">SOL4CEのリーダー的存在。仕事のないフリーランス探偵から、迷える魂を救う刑務所「Scarlet Sanctum」の看守へと転身。182cmの高身長とダークな...</div>
+</div>
+</div>
+</div>
+<!-- Juliana Shafira -->
+<div class="ak-member-card">
+<div class="ak-card-scanline"></div>
+<div class="ak-card-inner">
+<div class="ak-card-tech-corner"></div>
+<div class="ak-member-lang"><span class="ak-tag">EN</span><span class="ak-tag">JV</span></div>
+<div class="ak-member-icon"><i class="fa-solid fa-user-astronaut"></i></div>
+<div class="ak-member-info">
+<a class="ak-member-name" href="characters/juliana/juliana.html">Juliana Shafira</a>
+<div class="ak-member-read">ジュリアナ・シャフィラ</div>
+<div class="ak-member-desc">自称「最もフレンドリーなVTuber」。しかし、実際には重度の内向的（イントロバート）で、エネルギーが切れるとタントラムを起こすこともある。闇の魔女としての設定...</div>
+</div>
+</div>
+</div>
+<!-- Kichi Himiya -->
+<div class="ak-member-card">
+<div class="ak-card-scanline"></div>
+<div class="ak-card-inner">
+<div class="ak-card-tech-corner"></div>
+<div class="ak-member-lang"><span class="ak-tag">ID</span><span class="ak-tag">EN</span></div>
+<div class="ak-member-icon"><i class="fa-solid fa-star"></i></div>
+<div class="ak-member-info">
+<a class="ak-member-name" href="characters/kichi/kichi.html">Kichi Himiya</a>
+<div class="ak-member-read">緋宮キチ</div>
+<div class="ak-member-desc">地獄出身の鬼VTuber。圧倒的な歌唱力を持ち、ボカロ曲やアニソンのカバーを数多く投稿している。ファッションへの関心が非常に高く、自身の3Dモデルの衣装デザイン...</div>
+</div>
+</div>
+</div>
+<!-- Lala Alberich -->
+<div class="ak-member-card">
+<div class="ak-card-scanline"></div>
+<div class="ak-card-inner">
+<div class="ak-card-tech-corner"></div>
+<div class="ak-member-lang"><span class="ak-tag">ID</span><span class="ak-tag">EN</span><span class="ak-tag">JP</span><span class="ak-tag ak-tag-alert">GRADUATED</span></div>
+<div class="ak-member-icon"><i class="fa-solid fa-cat"></i></div>
+<div class="ak-member-info">
+<a class="ak-member-name" href="characters/lala/lala.html">Lala Alberich</a>
+<div class="ak-member-read">ララ・アルベリヒ</div>
+<div class="ak-member-desc">かつては「野蛮（Barbar）」だったが、心を入れ替えておとなしくなったオレンジ色の猫のVTuber。頬の傷はその頃の名残。カエルを異常なほど愛し、配信ではコー...</div>
+</div>
+</div>
+</div>
+<!-- Lilian Grimmxandra -->
+<div class="ak-member-card">
+<div class="ak-card-scanline"></div>
+<div class="ak-card-inner">
+<div class="ak-card-tech-corner"></div>
+<div class="ak-member-lang"><span class="ak-tag">ID</span><span class="ak-tag">EN</span></div>
+<div class="ak-member-icon"><i class="fa-solid fa-skull"></i></div>
+<div class="ak-member-info">
+<a class="ak-member-name" href="characters/lilian/lilian.html">Lilian Grimmxandra</a>
+<div class="ak-member-read">リリアン・グリムザンドラ</div>
+<div class="ak-member-desc">悪いヤツを逮捕する、異世界から来たバーチャル警察官。白髪ショートと緑の瞳が特徴。自称「資本主義者」で、投げ銭を「Pungli（ワイロ）」と呼び、リスナーとのコミ...</div>
+</div>
+</div>
+</div>
+<!-- Mai -->
+<div class="ak-member-card">
+<div class="ak-card-scanline"></div>
+<div class="ak-card-inner">
+<div class="ak-card-tech-corner"></div>
+<div class="ak-member-lang"><span class="ak-tag">ID</span><span class="ak-tag">EN</span><span class="ak-tag">JP</span></div>
+<div class="ak-member-icon"><i class="fa-solid fa-user-astronaut"></i></div>
+<div class="ak-member-info">
+<a class="ak-member-name" href="characters/mai/mai.html">Mai</a>
+<div class="ak-member-read">マイ</div>
+<div class="ak-member-desc">ドリームランドからやってきたウサギの女の子。人間の悪い夢を食べて良い夢に変える「バク」でもある。エネルギッシュでカオティックな配信スタイルを持ち、多国語を操るマ...</div>
+</div>
+</div>
+</div>
+<!-- Mikazuki Arion -->
+<div class="ak-member-card">
+<div class="ak-card-scanline"></div>
+<div class="ak-card-inner">
+<div class="ak-card-tech-corner"></div>
+<div class="ak-member-lang"><span class="ak-tag">ID</span><span class="ak-tag">EN</span><span class="ak-tag ak-tag-alert" title="2025.12">INDEPENDENT</span></div>
+<div class="ak-member-icon"><i class="fa-solid fa-moon"></i></div>
+<div class="ak-member-info">
+<a class="ak-member-name" href="characters/mikazuki/mikazuki.html">Mikazuki Arion</a>
+<div class="ak-member-read">三日月 アリオン</div>
+<div class="ak-member-desc">異世界から来た原初の悪魔でありながら、人間界では「首相」として政務をこなすVTuber。188cmの長身と低音イケボを活かし、シチュエーションASMRやRPでは...</div>
+</div>
+</div>
+</div>
+<!-- MiU -->
+<div class="ak-member-card">
+<div class="ak-card-scanline"></div>
+<div class="ak-card-inner">
+<div class="ak-card-tech-corner"></div>
+<div class="ak-member-lang"><span class="ak-tag">ID</span><span class="ak-tag">EN</span><span class="ak-tag ak-tag-alert" title="Channel Suspended">IN PREPARATION</span></div>
+<div class="ak-member-icon"><i class="fa-solid fa-user-astronaut"></i></div>
+<div class="ak-member-info">
+<a class="ak-member-name" href="characters/miu/miu.html">MiU</a>
+<div class="ak-member-read">ミュウ</div>
+<div class="ak-member-desc">動物園で寂しがっていたところ、神様によって人間に変えてもらった外交的なパンダ。しかし人間界の生活費が高いことに気づき、資金を稼ぐためにVTuberとなった。小柄...</div>
+</div>
+</div>
+</div>
+<!-- Kiraboshi Miya -->
+<div class="ak-member-card">
+<div class="ak-card-scanline"></div>
+<div class="ak-card-inner">
+<div class="ak-card-tech-corner"></div>
+<div class="ak-member-lang"><span class="ak-tag">EN</span><span class="ak-tag">JP</span></div>
+<div class="ak-member-icon"><i class="fa-solid fa-star"></i></div>
+<div class="ak-member-info">
+<a class="ak-member-name" href="characters/miya/miya.html">Kiraboshi Miya</a>
+<div class="ak-member-read">綺羅星ミヤ</div>
+<div class="ak-member-desc">宇宙の星として生まれ、世界から「悪意（Toxicity）」を取り除く使命を持つVシンガー。普段は叔母の経営する「Cadence Cafe and Bar」でバリ...</div>
+</div>
+</div>
+</div>
+<!-- Reinanda Rea -->
+<div class="ak-member-card">
+<div class="ak-card-scanline"></div>
+<div class="ak-card-inner">
+<div class="ak-card-tech-corner"></div>
+<div class="ak-member-lang"><span class="ak-tag">ID</span><span class="ak-tag">EN</span></div>
+<div class="ak-member-icon"><i class="fa-solid fa-cat"></i></div>
+<div class="ak-member-info">
+<a class="ak-member-name" href="characters/rea/rea.html">Reinanda Rea</a>
+<div class="ak-member-read">レイナンダ・レア</div>
+<div class="ak-member-desc">架空の店舗「Rea Market」の看板娘レジ係。元々は野良猫だったが、恩返しのために店を立ち上げた。落ち着いた低音ボイスが魅力で、お姉さん的な雰囲気を持つ一方...</div>
+</div>
+</div>
+</div>
+<!-- Todoroki Reika -->
+<div class="ak-member-card">
+<div class="ak-card-scanline"></div>
+<div class="ak-card-inner">
+<div class="ak-card-tech-corner"></div>
+<div class="ak-member-lang"><span class="ak-tag">ID</span><span class="ak-tag">EN</span></div>
+<div class="ak-member-icon"><i class="fa-solid fa-user-astronaut"></i></div>
+<div class="ak-member-info">
+<a class="ak-member-name" href="characters/reika/reika.html">Todoroki Reika</a>
+<div class="ak-member-read">轟れいか</div>
+<div class="ak-member-desc">東京を拠点に活動するワーカーホリックなプロメカニック。孤児院育ちで、親代わりのジョーから技術とラーメン作りを教わった。自身のショップの隣で激辛ラーメン店も営む。...</div>
+</div>
+</div>
+</div>
+<!-- Selia Aisnith -->
+<div class="ak-member-card">
+<div class="ak-card-scanline"></div>
+<div class="ak-card-inner">
+<div class="ak-card-tech-corner"></div>
+<div class="ak-member-lang"><span class="ak-tag">ID</span><span class="ak-tag">EN</span></div>
+<div class="ak-member-icon"><i class="fa-solid fa-user-astronaut"></i></div>
+<div class="ak-member-info">
+<a class="ak-member-name" href="characters/selia/selia.html">Selia Aisnith</a>
+<div class="ak-member-read">セリア・アイスニス</div>
+<div class="ak-member-desc">自身を「コンテンツクリエイター」と定義し、本業では企業のプロジェクトマネージャーとして働く兼業ストリーマー。170cmの高身長を持ちながら、仲間内では「おチビ」...</div>
+</div>
+</div>
+</div>
+<!-- Chimana Shion -->
+<div class="ak-member-card">
+<div class="ak-card-scanline"></div>
+<div class="ak-card-inner">
+<div class="ak-card-tech-corner"></div>
+<div class="ak-member-lang"><span class="ak-tag">ID</span><span class="ak-tag">EN</span></div>
+<div class="ak-member-icon"><i class="fa-solid fa-skull"></i></div>
+<div class="ak-member-info">
+<a class="ak-member-name" href="characters/shion/shion.html">Chimana Shion</a>
+<div class="ak-member-read">小魂子しおね</div>
+<div class="ak-member-desc">「世界一可愛い暗殺系VTuber」を自称する16歳。驚いた時に叫び声に濁音がつくのが特徴。アークナイツや原神に100万円以上課金するガチの重課金ゲーマーで、脳筋...</div>
+</div>
+</div>
+</div>
+<!-- Souta Izumi -->
+<div class="ak-member-card">
+<div class="ak-card-scanline"></div>
+<div class="ak-card-inner">
+<div class="ak-card-tech-corner"></div>
+<div class="ak-member-lang"><span class="ak-tag">ID</span><span class="ak-tag">EN</span><span class="ak-tag ak-tag-alert" title="2025.12">INDEPENDENT</span></div>
+<div class="ak-member-icon"><i class="fa-solid fa-user-astronaut"></i></div>
+<div class="ak-member-info">
+<a class="ak-member-name" href="characters/souta/souta.html">Souta Izumi</a>
+<div class="ak-member-read">ソウタ・イズミ</div>
+<div class="ak-member-desc">INDIEからAKA所属となり、「SOL4CE」のメンバーとして再デビュー。175cmのスタイルでY2Kファッションを着こなす。すぐに拗ねたり怒ったりする感情豊...</div>
+</div>
+</div>
+</div>
+<!-- Starr -->
+<div class="ak-member-card">
+<div class="ak-card-scanline"></div>
+<div class="ak-card-inner">
+<div class="ak-card-tech-corner"></div>
+<div class="ak-member-lang"><span class="ak-tag">EN</span></div>
+<div class="ak-member-icon"><i class="fa-solid fa-star"></i></div>
+<div class="ak-member-info">
+<a class="ak-member-name" href="characters/starr/starr.html">Starr</a>
+<div class="ak-member-read">スター</div>
+<div class="ak-member-desc">ニューヨークを拠点とする、辛口かつユーモアに溢れる「ゴシップクイーン」。セレブの噂話から最新のエンタメニュースまでを網羅し、独自の視点でぶった斬る。自称フーディ...</div>
+</div>
+</div>
+</div>
+<!-- Tekitou -->
+<div class="ak-member-card">
+<div class="ak-card-scanline"></div>
+<div class="ak-card-inner">
+<div class="ak-card-tech-corner"></div>
+<div class="ak-member-lang"><span class="ak-tag">EN</span><span class="ak-tag">JP</span><span class="ak-tag">JV</span></div>
+<div class="ak-member-icon"><i class="fa-solid fa-user-astronaut"></i></div>
+<div class="ak-member-info">
+<a class="ak-member-name" href="characters/tekitou/tekitou.html">Tekitou</a>
+<div class="ak-member-read">テキトー</div>
+<div class="ak-member-desc">頭に巨大なドーナツを乗せた、AKAの「最高ミーム責任者（CMO）」。東京から世界へ向けて、ADHD気味のハイテンションな思考回路でカオスな配信を届ける。ファン（...</div>
+</div>
+</div>
+</div>
+<!-- Velary Lusticia -->
+<div class="ak-member-card">
+<div class="ak-card-scanline"></div>
+<div class="ak-card-inner">
+<div class="ak-card-tech-corner"></div>
+<div class="ak-member-lang"><span class="ak-tag">ID</span><span class="ak-tag">EN</span><span class="ak-tag ak-tag-alert" title="2024.05">GRADUATED</span></div>
+<div class="ak-member-icon"><i class="fa-solid fa-cat"></i></div>
+<div class="ak-member-info">
+<a class="ak-member-name" href="characters/velary/velary.html">Velary Lusticia</a>
+<div class="ak-member-read">フェラリ・ルスティシア</div>
+<div class="ak-member-desc">サキュバスの任務を果たせず、地獄を追放された「失敗したサキュバス（succubus gagal）」。紫色の髪と尻尾が特徴。大学卒業と現実での就職に伴い、2024...</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<footer class="ak-footer">
+<div class="ak-footer-logo">
             AKA <span class="ak-text-cyan">VIRTUAL</span>
-        </div>
-        <div class="ak-footer-company">SYS.ADMIN // NEW STORIES DEPLOYMENT</div>
-        <p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with AKA Virtual.</p>
-    </footer>
-
-    <script src="akavirtual_script.js"></script>
-</body>
-
+</div>
+<div class="ak-footer-company">SYS.ADMIN // NEW STORIES DEPLOYMENT</div>
+<p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with AKA Virtual.</p>
+</footer>
+<script src="akavirtual_script.js"></script>
+<div class="mobile-mode-banner" style="background: #ffc83d; color: #000; text-align: center; font-size: 0.85rem; padding: 4px; font-weight: 900; position: fixed; bottom: 0; width: 100%; z-index: 9999; box-shadow: 0 -2px 10px rgba(255, 200, 60, 0.4);" v-if="isMobile">🚀 Mobile Light Mode (Powered by Vue Virtual DOM)</div></div></body>
 </html>

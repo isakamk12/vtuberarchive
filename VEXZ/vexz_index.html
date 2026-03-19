@@ -1,127 +1,116 @@
 <!DOCTYPE html>
+
 <html lang="ja">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VEXZ | VTuber Archive</title>
-    <meta name="description" content="VEXZの非公式ファンサイト。VEXZの所属メンバーや概要をまとめた非公式アーカイブ。">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&family=Noto+Sans+JP:wght@400;700;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="vexz.css">
-</head>
-
-<body>
-
-    <div class="uo-bg">
-        <!-- Bubbles effect in CSS -->
-        <div class="uo-bubbles"></div>
-    </div>
-
-    <nav class="uo-nav">
-        <a href="../index.html" class="uo-nav-back">
-            <i class="fa-solid fa-chevron-left"></i> BACK TO HUB
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VEXZ | VTuber Archive</title>
+<meta content="VEXZの非公式ファンサイト。VEXZの所属メンバーや概要をまとめた非公式アーカイブ。" name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&amp;family=Noto+Sans+JP:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="vexz.css" rel="stylesheet"/>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><style>[v-cloak] { display: none; } </style></head>
+<body><div id="app" v-cloak="">
+<div class="uo-bg" v-if="!isMobile">
+<!-- Bubbles effect in CSS -->
+<div class="uo-bubbles"></div>
+</div>
+<nav class="uo-nav">
+<a class="uo-nav-back" href="../index.html">
+<i class="fa-solid fa-chevron-left"></i> BACK TO HUB
         </a>
-        <div class="uo-nav-logo">VEXZ</div>
-        <div class="uo-nav-tag">VTuber Project</div>
-    </nav>
-
-    <!-- HERO -->
-    <section class="uo-hero">
-        <div class="uo-hero-bg-text">UO</div>
-        <div class="uo-hero-content">
-            <div class="uo-eyebrow">Virtual YouTuber Project</div>
-            <h1 class="uo-hero-name">VEXZ</h1>
-            <p class="uo-hero-tagline">VEXZ アーカイブ</p>
-            <div class="uo-hero-concept">バーチャルアーティストのプロデュースに特化した企業。音楽フェス「Life Like a Live!」の主催など、シーンの牽引を担っています。</div>
-            <div class="uo-hero-stats">
-                <div class="uo-stat">
-                    <div class="uo-stat-value">4</div>
-                    <div class="uo-stat-label">MEMBERS</div>
-                </div>
-                <div class="uo-stat">
-                    <div class="uo-stat-value">株式会社VEXZ</div>
-                    <div class="uo-stat-label">OPERATION</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- INFO -->
-    <div class="uo-container">
-        <section class="uo-section uo-reveal">
-            <div class="uo-section-header">
-                <span class="uo-section-num">01</span>
-                <div>
-                    <h2 class="uo-section-title">プロジェクト概要</h2>
-                    <span class="uo-section-title-sub">ABOUT</span>
-                </div>
-                <div class="uo-divider"></div>
-            </div>
-            <div class="uo-info-grid">
-                <div class="uo-info-card">
-                    <h3>💃 アーティスト性</h3>
-                    <p>「歌って踊って変身する」を体現する「まりなす」など、高いパフォーマンス力を誇るアーティストが所属。</p>
-                </div>
-                <div class="uo-info-card">
-                    <h3>🌓 幻想的な世界観</h3>
-                    <p>双子ユニット「LiLYPSE」のように、独特で深みのあるストーリーと音楽性を融合させた活動を展開。</p>
-                </div>
-                <div class="uo-info-card">
-                    <h3>🏟️ ライブ制作のプロ</h3>
-                    <p>最新のモーションキャプチャや演出技術を駆使し、圧倒的な没入感のバーチャルライブを創り上げます。</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- ROSTER -->
-        <section class="uo-section uo-reveal">
-            <div class="uo-section-header">
-                <span class="uo-section-num">02</span>
-                <div>
-                    <h2 class="uo-section-title">所属メンバー</h2>
-                    <span class="uo-section-title-sub">MEMBERS</span>
-                </div>
-                <div class="uo-divider"></div>
-            </div>
-
-            <!-- Members -->
-            <div class="uo-member-grid">
-                <div class="uo-member-card" onclick="window.location.href='characters/燈舞りん/燈舞りん.html'">
-                    <h3 class="uo-member-name">燈舞りん</h3>
-                    <div class="uo-member-read">燈舞りん</div>
-                    <p class="uo-member-ep">所属メンバー「燈舞りん」の個別アーカイブページです。</p>
-                </div>
-                <div class="uo-member-card" onclick="window.location.href='characters/鈴鳴すばる/鈴鳴すばる.html'">
-                    <h3 class="uo-member-name">鈴鳴すばる</h3>
-                    <div class="uo-member-read">鈴鳴すばる</div>
-                    <p class="uo-member-ep">所属メンバー「鈴鳴すばる」の個別アーカイブページです。</p>
-                </div>
-                <div class="uo-member-card" onclick="window.location.href='characters/暁みかど/暁みかど.html'">
-                    <h3 class="uo-member-name">暁みかど</h3>
-                    <div class="uo-member-read">暁みかど</div>
-                    <p class="uo-member-ep">所属メンバー「暁みかど」の個別アーカイブページです。</p>
-                </div>
-                <div class="uo-member-card" onclick="window.location.href='characters/暁おぼろ/暁おぼろ.html'">
-                    <h3 class="uo-member-name">暁おぼろ</h3>
-                    <div class="uo-member-read">暁おぼろ</div>
-                    <p class="uo-member-ep">所属メンバー「暁おぼろ」の個別アーカイブページです。</p>
-                </div></div>
-        </section>
-    </div>
-
-    <footer class="uo-footer">
-        <div class="uo-footer-logo">VEXZ</div>
-        <p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with official management.
+<div class="uo-nav-logo">VEXZ</div>
+<div class="uo-nav-tag">VTuber Project</div>
+</nav>
+<!-- HERO -->
+<section class="uo-hero">
+<div class="uo-hero-bg-text" v-if="!isMobile">UO</div>
+<div class="uo-hero-content">
+<div class="uo-eyebrow">Virtual YouTuber Project</div>
+<h1 class="uo-hero-name">VEXZ</h1>
+<p class="uo-hero-tagline">VEXZ アーカイブ</p>
+<div class="uo-hero-concept">バーチャルアーティストのプロデュースに特化した企業。音楽フェス「Life Like a Live!」の主催など、シーンの牽引を担っています。</div>
+<div class="uo-hero-stats">
+<div class="uo-stat">
+<div class="uo-stat-value">4</div>
+<div class="uo-stat-label">MEMBERS</div>
+</div>
+<div class="uo-stat">
+<div class="uo-stat-value">株式会社VEXZ</div>
+<div class="uo-stat-label">OPERATION</div>
+</div>
+</div>
+</div>
+</section>
+<!-- INFO -->
+<div class="uo-container">
+<section class="uo-section uo-reveal">
+<div class="uo-section-header">
+<span class="uo-section-num">01</span>
+<div>
+<h2 class="uo-section-title">プロジェクト概要</h2>
+<span class="uo-section-title-sub">ABOUT</span>
+</div>
+<div class="uo-divider"></div>
+</div>
+<div class="uo-info-grid">
+<div class="uo-info-card">
+<h3>💃 アーティスト性</h3>
+<p>「歌って踊って変身する」を体現する「まりなす」など、高いパフォーマンス力を誇るアーティストが所属。</p>
+</div>
+<div class="uo-info-card">
+<h3>🌓 幻想的な世界観</h3>
+<p>双子ユニット「LiLYPSE」のように、独特で深みのあるストーリーと音楽性を融合させた活動を展開。</p>
+</div>
+<div class="uo-info-card">
+<h3>🏟️ ライブ制作のプロ</h3>
+<p>最新のモーションキャプチャや演出技術を駆使し、圧倒的な没入感のバーチャルライブを創り上げます。</p>
+</div>
+</div>
+</section>
+<!-- ROSTER -->
+<section class="uo-section uo-reveal">
+<div class="uo-section-header">
+<span class="uo-section-num">02</span>
+<div>
+<h2 class="uo-section-title">所属メンバー</h2>
+<span class="uo-section-title-sub">MEMBERS</span>
+</div>
+<div class="uo-divider"></div>
+</div>
+<!-- Members -->
+<div class="uo-member-grid">
+<div class="uo-member-card" onclick="window.location.href='characters/燈舞りん/燈舞りん.html'">
+<h3 class="uo-member-name">燈舞りん</h3>
+<div class="uo-member-read">燈舞りん</div>
+<p class="uo-member-ep">所属メンバー「燈舞りん」の個別アーカイブページです。</p>
+</div>
+<div class="uo-member-card" onclick="window.location.href='characters/鈴鳴すばる/鈴鳴すばる.html'">
+<h3 class="uo-member-name">鈴鳴すばる</h3>
+<div class="uo-member-read">鈴鳴すばる</div>
+<p class="uo-member-ep">所属メンバー「鈴鳴すばる」の個別アーカイブページです。</p>
+</div>
+<div class="uo-member-card" onclick="window.location.href='characters/暁みかど/暁みかど.html'">
+<h3 class="uo-member-name">暁みかど</h3>
+<div class="uo-member-read">暁みかど</div>
+<p class="uo-member-ep">所属メンバー「暁みかど」の個別アーカイブページです。</p>
+</div>
+<div class="uo-member-card" onclick="window.location.href='characters/暁おぼろ/暁おぼろ.html'">
+<h3 class="uo-member-name">暁おぼろ</h3>
+<div class="uo-member-read">暁おぼろ</div>
+<p class="uo-member-ep">所属メンバー「暁おぼろ」の個別アーカイブページです。</p>
+</div></div>
+</section>
+</div>
+<footer class="uo-footer">
+<div class="uo-footer-logo">VEXZ</div>
+<p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with official management.
         </p>
-    </footer>
-
-    <script src="vexz_script.js"></script>
-    <script>
+</footer>
+<script src="vexz_script.js"></script>
+<script>
         document.addEventListener('DOMContentLoaded', () => {
             const reveals = document.querySelectorAll('.uo-reveal');
             const observer = new IntersectionObserver((entries) => {
@@ -139,7 +128,5 @@
             });
         });
     </script>
-
-</body>
-
+<div class="mobile-mode-banner" style="background: #ffc83d; color: #000; text-align: center; font-size: 0.85rem; padding: 4px; font-weight: 900; position: fixed; bottom: 0; width: 100%; z-index: 9999; box-shadow: 0 -2px 10px rgba(255, 200, 60, 0.4);" v-if="isMobile">🚀 Mobile Light Mode (Powered by Vue Virtual DOM)</div></div></body>
 </html>

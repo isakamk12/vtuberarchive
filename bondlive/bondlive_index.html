@@ -1,137 +1,126 @@
 <!DOCTYPE html>
+
 <html lang="ja">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>bondlive | VTuber Archive</title>
-    <meta name="description" content="bondliveの非公式ファンサイト。bondliveの所属メンバーや概要をまとめた非公式アーカイブ。">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&family=Noto+Sans+JP:wght@400;700;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="bondlive.css">
-</head>
-
-<body>
-
-    <div class="uo-bg">
-        <!-- Bubbles effect in CSS -->
-        <div class="uo-bubbles"></div>
-    </div>
-
-    <nav class="uo-nav">
-        <a href="../index.html" class="uo-nav-back">
-            <i class="fa-solid fa-chevron-left"></i> BACK TO HUB
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>bondlive | VTuber Archive</title>
+<meta content="bondliveの非公式ファンサイト。bondliveの所属メンバーや概要をまとめた非公式アーカイブ。" name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&amp;family=Noto+Sans+JP:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="bondlive.css" rel="stylesheet"/>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><style>[v-cloak] { display: none; } </style></head>
+<body><div id="app" v-cloak="">
+<div class="uo-bg" v-if="!isMobile">
+<!-- Bubbles effect in CSS -->
+<div class="uo-bubbles"></div>
+</div>
+<nav class="uo-nav">
+<a class="uo-nav-back" href="../index.html">
+<i class="fa-solid fa-chevron-left"></i> BACK TO HUB
         </a>
-        <div class="uo-nav-logo">bondlive</div>
-        <div class="uo-nav-tag">VTuber Project</div>
-    </nav>
-
-    <!-- HERO -->
-    <section class="uo-hero">
-        <div class="uo-hero-bg-text">UO</div>
-        <div class="uo-hero-content">
-            <div class="uo-eyebrow">Virtual YouTuber Project</div>
-            <h1 class="uo-hero-name">bondlive</h1>
-            <p class="uo-hero-tagline">bondlive アーカイブ</p>
-            <div class="uo-hero-concept">配信者、事務所、視聴者の三者の「絆」を大切にし、日本から世界へエンタメを通じて喜びを提供することを目指しています。</div>
-            <div class="uo-hero-stats">
-                <div class="uo-stat">
-                    <div class="uo-stat-value">6</div>
-                    <div class="uo-stat-label">MEMBERS</div>
-                </div>
-                <div class="uo-stat">
-                    <div class="uo-stat-value">ボンド株式会社</div>
-                    <div class="uo-stat-label">OPERATION</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- INFO -->
-    <div class="uo-container">
-        <section class="uo-section uo-reveal">
-            <div class="uo-section-header">
-                <span class="uo-section-num">01</span>
-                <div>
-                    <h2 class="uo-section-title">プロジェクト概要</h2>
-                    <span class="uo-section-title-sub">ABOUT</span>
-                </div>
-                <div class="uo-divider"></div>
-            </div>
-            <div class="uo-info-grid">
-                <div class="uo-info-card">
-                    <h3>🤝 確かなる絆</h3>
-                    <p>「健全なコミュニケーション」を土台に、信頼関係に基づいたアットホームかつプロフェッショナルな運営を行っています。</p>
-                </div>
-                <div class="uo-info-card">
-                    <h3>🎮 ゲームからのステップアップ</h3>
-                    <p>ゲーム実況者のステップアップレーベルとして発足し、多彩な才能を持つタレントを輩出しています。</p>
-                </div>
-                <div class="uo-info-card">
-                    <h3>🐕 ユニークなマスコット</h3>
-                    <p>看板犬の「ワンチ」とともに、世界中に新しいエンターテインメントの形を提案し続けています。</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- ROSTER -->
-        <section class="uo-section uo-reveal">
-            <div class="uo-section-header">
-                <span class="uo-section-num">02</span>
-                <div>
-                    <h2 class="uo-section-title">所属メンバー</h2>
-                    <span class="uo-section-title-sub">MEMBERS</span>
-                </div>
-                <div class="uo-divider"></div>
-            </div>
-
-            <!-- Members -->
-            <div class="uo-member-grid">
-                <div class="uo-member-card" onclick="window.location.href='characters/未明いのり/未明いのり.html'">
-                    <h3 class="uo-member-name">未明いのり</h3>
-                    <div class="uo-member-read">未明いのり</div>
-                    <p class="uo-member-ep">所属メンバー「未明いのり」の個別アーカイブページです。</p>
-                </div>
-                <div class="uo-member-card" onclick="window.location.href='characters/氷山りお/氷山りお.html'">
-                    <h3 class="uo-member-name">氷山りお</h3>
-                    <div class="uo-member-read">氷山りお</div>
-                    <p class="uo-member-ep">所属メンバー「氷山りお」の個別アーカイブページです。</p>
-                </div>
-                <div class="uo-member-card" onclick="window.location.href='characters/リア・フォルティーノ/リア・フォルティーノ.html'">
-                    <h3 class="uo-member-name">リア・フォルティーノ</h3>
-                    <div class="uo-member-read">リア・フォルティーノ</div>
-                    <p class="uo-member-ep">所属メンバー「リア・フォルティーノ」の個別アーカイブページです。</p>
-                </div>
-                <div class="uo-member-card" onclick="window.location.href='characters/ラジェット・ティグリス/ラジェット・ティグリス.html'">
-                    <h3 class="uo-member-name">ラジェット・ティグリス</h3>
-                    <div class="uo-member-read">ラジェット・ティグリス</div>
-                    <p class="uo-member-ep">所属メンバー「ラジェット・ティグリス」の個別アーカイブページです。</p>
-                </div>
-                <div class="uo-member-card" onclick="window.location.href='characters/茶入ロマン/茶入ロマン.html'">
-                    <h3 class="uo-member-name">茶入ロマン</h3>
-                    <div class="uo-member-read">茶入ロマン</div>
-                    <p class="uo-member-ep">所属メンバー「茶入ロマン」の個別アーカイブページです。</p>
-                </div>
-                <div class="uo-member-card" onclick="window.location.href='characters/白鼬かなで/白鼬かなで.html'">
-                    <h3 class="uo-member-name">白鼬かなで</h3>
-                    <div class="uo-member-read">白鼬かなで</div>
-                    <p class="uo-member-ep">所属メンバー「白鼬かなで」の個別アーカイブページです。</p>
-                </div></div>
-        </section>
-    </div>
-
-    <footer class="uo-footer">
-        <div class="uo-footer-logo">bondlive</div>
-        <p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with official management.
+<div class="uo-nav-logo">bondlive</div>
+<div class="uo-nav-tag">VTuber Project</div>
+</nav>
+<!-- HERO -->
+<section class="uo-hero">
+<div class="uo-hero-bg-text" v-if="!isMobile">UO</div>
+<div class="uo-hero-content">
+<div class="uo-eyebrow">Virtual YouTuber Project</div>
+<h1 class="uo-hero-name">bondlive</h1>
+<p class="uo-hero-tagline">bondlive アーカイブ</p>
+<div class="uo-hero-concept">配信者、事務所、視聴者の三者の「絆」を大切にし、日本から世界へエンタメを通じて喜びを提供することを目指しています。</div>
+<div class="uo-hero-stats">
+<div class="uo-stat">
+<div class="uo-stat-value">6</div>
+<div class="uo-stat-label">MEMBERS</div>
+</div>
+<div class="uo-stat">
+<div class="uo-stat-value">ボンド株式会社</div>
+<div class="uo-stat-label">OPERATION</div>
+</div>
+</div>
+</div>
+</section>
+<!-- INFO -->
+<div class="uo-container">
+<section class="uo-section uo-reveal">
+<div class="uo-section-header">
+<span class="uo-section-num">01</span>
+<div>
+<h2 class="uo-section-title">プロジェクト概要</h2>
+<span class="uo-section-title-sub">ABOUT</span>
+</div>
+<div class="uo-divider"></div>
+</div>
+<div class="uo-info-grid">
+<div class="uo-info-card">
+<h3>🤝 確かなる絆</h3>
+<p>「健全なコミュニケーション」を土台に、信頼関係に基づいたアットホームかつプロフェッショナルな運営を行っています。</p>
+</div>
+<div class="uo-info-card">
+<h3>🎮 ゲームからのステップアップ</h3>
+<p>ゲーム実況者のステップアップレーベルとして発足し、多彩な才能を持つタレントを輩出しています。</p>
+</div>
+<div class="uo-info-card">
+<h3>🐕 ユニークなマスコット</h3>
+<p>看板犬の「ワンチ」とともに、世界中に新しいエンターテインメントの形を提案し続けています。</p>
+</div>
+</div>
+</section>
+<!-- ROSTER -->
+<section class="uo-section uo-reveal">
+<div class="uo-section-header">
+<span class="uo-section-num">02</span>
+<div>
+<h2 class="uo-section-title">所属メンバー</h2>
+<span class="uo-section-title-sub">MEMBERS</span>
+</div>
+<div class="uo-divider"></div>
+</div>
+<!-- Members -->
+<div class="uo-member-grid">
+<div class="uo-member-card" onclick="window.location.href='characters/未明いのり/未明いのり.html'">
+<h3 class="uo-member-name">未明いのり</h3>
+<div class="uo-member-read">未明いのり</div>
+<p class="uo-member-ep">所属メンバー「未明いのり」の個別アーカイブページです。</p>
+</div>
+<div class="uo-member-card" onclick="window.location.href='characters/氷山りお/氷山りお.html'">
+<h3 class="uo-member-name">氷山りお</h3>
+<div class="uo-member-read">氷山りお</div>
+<p class="uo-member-ep">所属メンバー「氷山りお」の個別アーカイブページです。</p>
+</div>
+<div class="uo-member-card" onclick="window.location.href='characters/リア・フォルティーノ/リア・フォルティーノ.html'">
+<h3 class="uo-member-name">リア・フォルティーノ</h3>
+<div class="uo-member-read">リア・フォルティーノ</div>
+<p class="uo-member-ep">所属メンバー「リア・フォルティーノ」の個別アーカイブページです。</p>
+</div>
+<div class="uo-member-card" onclick="window.location.href='characters/ラジェット・ティグリス/ラジェット・ティグリス.html'">
+<h3 class="uo-member-name">ラジェット・ティグリス</h3>
+<div class="uo-member-read">ラジェット・ティグリス</div>
+<p class="uo-member-ep">所属メンバー「ラジェット・ティグリス」の個別アーカイブページです。</p>
+</div>
+<div class="uo-member-card" onclick="window.location.href='characters/茶入ロマン/茶入ロマン.html'">
+<h3 class="uo-member-name">茶入ロマン</h3>
+<div class="uo-member-read">茶入ロマン</div>
+<p class="uo-member-ep">所属メンバー「茶入ロマン」の個別アーカイブページです。</p>
+</div>
+<div class="uo-member-card" onclick="window.location.href='characters/白鼬かなで/白鼬かなで.html'">
+<h3 class="uo-member-name">白鼬かなで</h3>
+<div class="uo-member-read">白鼬かなで</div>
+<p class="uo-member-ep">所属メンバー「白鼬かなで」の個別アーカイブページです。</p>
+</div></div>
+</section>
+</div>
+<footer class="uo-footer">
+<div class="uo-footer-logo">bondlive</div>
+<p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with official management.
         </p>
-    </footer>
-
-    <script src="bondlive_script.js"></script>
-    <script>
+</footer>
+<script src="bondlive_script.js"></script>
+<script>
         document.addEventListener('DOMContentLoaded', () => {
             const reveals = document.querySelectorAll('.uo-reveal');
             const observer = new IntersectionObserver((entries) => {
@@ -149,7 +138,5 @@
             });
         });
     </script>
-
-</body>
-
+<div class="mobile-mode-banner" style="background: #ffc83d; color: #000; text-align: center; font-size: 0.85rem; padding: 4px; font-weight: 900; position: fixed; bottom: 0; width: 100%; z-index: 9999; box-shadow: 0 -2px 10px rgba(255, 200, 60, 0.4);" v-if="isMobile">🚀 Mobile Light Mode (Powered by Vue Virtual DOM)</div></div></body>
 </html>

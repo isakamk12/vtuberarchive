@@ -1,127 +1,116 @@
 <!DOCTYPE html>
+
 <html lang="ja">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PROMISU | VTuber Archive</title>
-    <meta name="description" content="PROMISUの非公式ファンサイト。PROMISUの所属メンバーや概要をまとめた非公式アーカイブ。">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&family=Noto+Sans+JP:wght@400;700;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="promisu.css">
-</head>
-
-<body>
-
-    <div class="uo-bg">
-        <!-- Bubbles effect in CSS -->
-        <div class="uo-bubbles"></div>
-    </div>
-
-    <nav class="uo-nav">
-        <a href="../index.html" class="uo-nav-back">
-            <i class="fa-solid fa-chevron-left"></i> BACK TO HUB
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PROMISU | VTuber Archive</title>
+<meta content="PROMISUの非公式ファンサイト。PROMISUの所属メンバーや概要をまとめた非公式アーカイブ。" name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&amp;family=Noto+Sans+JP:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="promisu.css" rel="stylesheet"/>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><style>[v-cloak] { display: none; } </style></head>
+<body><div id="app" v-cloak="">
+<div class="uo-bg" v-if="!isMobile">
+<!-- Bubbles effect in CSS -->
+<div class="uo-bubbles"></div>
+</div>
+<nav class="uo-nav">
+<a class="uo-nav-back" href="../index.html">
+<i class="fa-solid fa-chevron-left"></i> BACK TO HUB
         </a>
-        <div class="uo-nav-logo">PROMISU</div>
-        <div class="uo-nav-tag">VTuber Project</div>
-    </nav>
-
-    <!-- HERO -->
-    <section class="uo-hero">
-        <div class="uo-hero-bg-text">UO</div>
-        <div class="uo-hero-content">
-            <div class="uo-eyebrow">Virtual YouTuber Project</div>
-            <h1 class="uo-hero-name">PROMISU</h1>
-            <p class="uo-hero-tagline">PROMISU アーカイブ</p>
-            <div class="uo-hero-concept">タレント自身の「好きなこと」や「モチベーション」をテーマにした活動を支援。日本から世界へ、多様な魅力を発信します。</div>
-            <div class="uo-hero-stats">
-                <div class="uo-stat">
-                    <div class="uo-stat-value">4</div>
-                    <div class="uo-stat-label">MEMBERS</div>
-                </div>
-                <div class="uo-stat">
-                    <div class="uo-stat-value">Aru Labs Pte. Ltd.</div>
-                    <div class="uo-stat-label">OPERATION</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- INFO -->
-    <div class="uo-container">
-        <section class="uo-section uo-reveal">
-            <div class="uo-section-header">
-                <span class="uo-section-num">01</span>
-                <div>
-                    <h2 class="uo-section-title">プロジェクト概要</h2>
-                    <span class="uo-section-title-sub">ABOUT</span>
-                </div>
-                <div class="uo-divider"></div>
-            </div>
-            <div class="uo-info-grid">
-                <div class="uo-info-card">
-                    <h3>💜 個性の尊重</h3>
-                    <p>タレント一人ひとりの「好き」を活動の原動力とし、それぞれの個性が輝くコンテンツ作りをサポート。</p>
-                </div>
-                <div class="uo-info-card">
-                    <h3>🌏 グローバル展開</h3>
-                    <p>韓国と日本を拠点に、英語圏（PROMISU EN）を含む世界中のファンへ感動を届けることを目指しています。</p>
-                </div>
-                <div class="uo-info-card">
-                    <h3>🎥 手厚い制作支援</h3>
-                    <p>高品質なLive2Dや配信機材、音声作品の制作など、クリエイティブ面を全面的にバックアップ。</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- ROSTER -->
-        <section class="uo-section uo-reveal">
-            <div class="uo-section-header">
-                <span class="uo-section-num">02</span>
-                <div>
-                    <h2 class="uo-section-title">所属メンバー</h2>
-                    <span class="uo-section-title-sub">MEMBERS</span>
-                </div>
-                <div class="uo-divider"></div>
-            </div>
-
-            <!-- Members -->
-            <div class="uo-member-grid">
-                <div class="uo-member-card" onclick="window.location.href='characters/セラ/セラ.html'">
-                    <h3 class="uo-member-name">セラ</h3>
-                    <div class="uo-member-read">セラ</div>
-                    <p class="uo-member-ep">所属メンバー「セラ」の個別アーカイブページです。</p>
-                </div>
-                <div class="uo-member-card" onclick="window.location.href='characters/月花/月花.html'">
-                    <h3 class="uo-member-name">月花</h3>
-                    <div class="uo-member-read">月花</div>
-                    <p class="uo-member-ep">所属メンバー「月花」の個別アーカイブページです。</p>
-                </div>
-                <div class="uo-member-card" onclick="window.location.href='characters/千歳みおん/千歳みおん.html'">
-                    <h3 class="uo-member-name">千歳みおん</h3>
-                    <div class="uo-member-read">千歳みおん</div>
-                    <p class="uo-member-ep">所属メンバー「千歳みおん」の個別アーカイブページです。</p>
-                </div>
-                <div class="uo-member-card" onclick="window.location.href='characters/ライム/ライム.html'">
-                    <h3 class="uo-member-name">ライム</h3>
-                    <div class="uo-member-read">ライム</div>
-                    <p class="uo-member-ep">所属メンバー「ライム」の個別アーカイブページです。</p>
-                </div></div>
-        </section>
-    </div>
-
-    <footer class="uo-footer">
-        <div class="uo-footer-logo">PROMISU</div>
-        <p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with official management.
+<div class="uo-nav-logo">PROMISU</div>
+<div class="uo-nav-tag">VTuber Project</div>
+</nav>
+<!-- HERO -->
+<section class="uo-hero">
+<div class="uo-hero-bg-text" v-if="!isMobile">UO</div>
+<div class="uo-hero-content">
+<div class="uo-eyebrow">Virtual YouTuber Project</div>
+<h1 class="uo-hero-name">PROMISU</h1>
+<p class="uo-hero-tagline">PROMISU アーカイブ</p>
+<div class="uo-hero-concept">タレント自身の「好きなこと」や「モチベーション」をテーマにした活動を支援。日本から世界へ、多様な魅力を発信します。</div>
+<div class="uo-hero-stats">
+<div class="uo-stat">
+<div class="uo-stat-value">4</div>
+<div class="uo-stat-label">MEMBERS</div>
+</div>
+<div class="uo-stat">
+<div class="uo-stat-value">Aru Labs Pte. Ltd.</div>
+<div class="uo-stat-label">OPERATION</div>
+</div>
+</div>
+</div>
+</section>
+<!-- INFO -->
+<div class="uo-container">
+<section class="uo-section uo-reveal">
+<div class="uo-section-header">
+<span class="uo-section-num">01</span>
+<div>
+<h2 class="uo-section-title">プロジェクト概要</h2>
+<span class="uo-section-title-sub">ABOUT</span>
+</div>
+<div class="uo-divider"></div>
+</div>
+<div class="uo-info-grid">
+<div class="uo-info-card">
+<h3>💜 個性の尊重</h3>
+<p>タレント一人ひとりの「好き」を活動の原動力とし、それぞれの個性が輝くコンテンツ作りをサポート。</p>
+</div>
+<div class="uo-info-card">
+<h3>🌏 グローバル展開</h3>
+<p>韓国と日本を拠点に、英語圏（PROMISU EN）を含む世界中のファンへ感動を届けることを目指しています。</p>
+</div>
+<div class="uo-info-card">
+<h3>🎥 手厚い制作支援</h3>
+<p>高品質なLive2Dや配信機材、音声作品の制作など、クリエイティブ面を全面的にバックアップ。</p>
+</div>
+</div>
+</section>
+<!-- ROSTER -->
+<section class="uo-section uo-reveal">
+<div class="uo-section-header">
+<span class="uo-section-num">02</span>
+<div>
+<h2 class="uo-section-title">所属メンバー</h2>
+<span class="uo-section-title-sub">MEMBERS</span>
+</div>
+<div class="uo-divider"></div>
+</div>
+<!-- Members -->
+<div class="uo-member-grid">
+<div class="uo-member-card" onclick="window.location.href='characters/セラ/セラ.html'">
+<h3 class="uo-member-name">セラ</h3>
+<div class="uo-member-read">セラ</div>
+<p class="uo-member-ep">所属メンバー「セラ」の個別アーカイブページです。</p>
+</div>
+<div class="uo-member-card" onclick="window.location.href='characters/月花/月花.html'">
+<h3 class="uo-member-name">月花</h3>
+<div class="uo-member-read">月花</div>
+<p class="uo-member-ep">所属メンバー「月花」の個別アーカイブページです。</p>
+</div>
+<div class="uo-member-card" onclick="window.location.href='characters/千歳みおん/千歳みおん.html'">
+<h3 class="uo-member-name">千歳みおん</h3>
+<div class="uo-member-read">千歳みおん</div>
+<p class="uo-member-ep">所属メンバー「千歳みおん」の個別アーカイブページです。</p>
+</div>
+<div class="uo-member-card" onclick="window.location.href='characters/ライム/ライム.html'">
+<h3 class="uo-member-name">ライム</h3>
+<div class="uo-member-read">ライム</div>
+<p class="uo-member-ep">所属メンバー「ライム」の個別アーカイブページです。</p>
+</div></div>
+</section>
+</div>
+<footer class="uo-footer">
+<div class="uo-footer-logo">PROMISU</div>
+<p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with official management.
         </p>
-    </footer>
-
-    <script src="promisu_script.js"></script>
-    <script>
+</footer>
+<script src="promisu_script.js"></script>
+<script>
         document.addEventListener('DOMContentLoaded', () => {
             const reveals = document.querySelectorAll('.uo-reveal');
             const observer = new IntersectionObserver((entries) => {
@@ -139,7 +128,5 @@
             });
         });
     </script>
-
-</body>
-
+<div class="mobile-mode-banner" style="background: #ffc83d; color: #000; text-align: center; font-size: 0.85rem; padding: 4px; font-weight: 900; position: fixed; bottom: 0; width: 100%; z-index: 9999; box-shadow: 0 -2px 10px rgba(255, 200, 60, 0.4);" v-if="isMobile">🚀 Mobile Light Mode (Powered by Vue Virtual DOM)</div></div></body>
 </html>

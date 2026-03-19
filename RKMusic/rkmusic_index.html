@@ -1,227 +1,215 @@
 <!DOCTYPE html>
+
 <html lang="ja">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RK Music | VTuber Archive</title>
-    <meta name="description" content="RK Musicの非公式ファンサイト。所属アーティスト・概要をまとめたアーカイブ。">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Noto+Sans+JP:wght@400;700;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="rkmusic.css">
-</head>
-
-<body>
-
-    <div class="rk-bg"></div>
-
-    <nav class="rk-nav">
-        <a href="../index.html" class="rk-nav-back">
-            <i class="fa-solid fa-chevron-left"></i> BACK TO HUB
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RK Music | VTuber Archive</title>
+<meta content="RK Musicの非公式ファンサイト。所属アーティスト・概要をまとめたアーカイブ。" name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&amp;family=Noto+Sans+JP:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="rkmusic.css" rel="stylesheet"/>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><style>[v-cloak] { display: none; } </style></head>
+<body><div id="app" v-cloak="">
+<div class="rk-bg" v-if="!isMobile"></div>
+<nav class="rk-nav">
+<a class="rk-nav-back" href="../index.html">
+<i class="fa-solid fa-chevron-left"></i> BACK TO HUB
         </a>
-        <div class="rk-nav-logo">RK<span>Music</span></div>
-        <div class="rk-nav-tag">Virtual Artist Production</div>
-    </nav>
-
-    <header class="rk-hero">
-        <div class="rk-hero-bg-text">RK</div>
-        <div class="rk-hero-content">
-            <div class="rk-eyebrow">Virtual Artist Production</div>
-            <h1 class="rk-hero-name">RK<span>Music</span></h1>
-            <p class="rk-hero-tagline">We Create the Future Artist.</p>
-            <div class="rk-hero-actions">
-                <a href="#about" class="rk-hero-link rk-hero-link-primary">ABOUT RK MUSIC</a>
-                <a href="#artists" class="rk-hero-link">ARTIST ROSTER</a>
-            </div>
-            <div class="rk-hero-concept">
+<div class="rk-nav-logo">RK<span>Music</span></div>
+<div class="rk-nav-tag">Virtual Artist Production</div>
+</nav>
+<header class="rk-hero">
+<div class="rk-hero-bg-text" v-if="!isMobile">RK</div>
+<div class="rk-hero-content">
+<div class="rk-eyebrow">Virtual Artist Production</div>
+<h1 class="rk-hero-name">RK<span>Music</span></h1>
+<p class="rk-hero-tagline">We Create the Future Artist.</p>
+<div class="rk-hero-actions">
+<a class="rk-hero-link rk-hero-link-primary" href="#about">ABOUT RK MUSIC</a>
+<a class="rk-hero-link" href="#artists">ARTIST ROSTER</a>
+</div>
+<div class="rk-hero-concept">
                 VSingerをはじめとした次世代のバーチャルアーティストをプロデュース。バーチャルアーティストの果てしなく広がる可能性を通じて人々の気持ちを突き動かし、<strong>「感動を超える感動」</strong>を世界に届け続けることを目指す音楽を中心としたプロダクションです。
             </div>
-            <div class="rk-hero-stats">
-                <div class="rk-stat">
-                    <div class="rk-stat-value">15</div>
-                    <div class="rk-stat-label">ARTISTS / GROUPS</div>
-                </div>
-                <div class="rk-stat">
-                    <div class="rk-stat-value">Music</div>
-                    <div class="rk-stat-label">FOCUS</div>
-                </div>
-            </div>
-            <div class="rk-hero-scroll">SCROLL TO ARCHIVE</div>
-        </div>
-    </header>
-
-    <div class="rk-container">
-        <section id="about" class="rk-section rk-reveal">
-            <div class="rk-section-header">
-                <span class="rk-section-num">01</span>
-                <div>
-                    <h2 class="rk-section-title">プロダクション概要</h2>
-                    <span class="rk-section-title-sub">ABOUT</span>
-                </div>
-                <div class="rk-divider"></div>
-            </div>
-            <div class="rk-info-grid">
-                <div class="rk-info-card">
-                    <h3>🎤 We Create the Future Artist.</h3>
-                    <p>VSinger（バーチャルシンガー）など、音楽を主軸に活動する次世代のバーチャルアーティストを多数プロデュース。「感動を超える感動」を生み出します。</p>
-                </div>
-                <div class="rk-info-card">
-                    <h3>🎧 個性豊かな音楽性</h3>
-                    <p>ロックからエレクトロ、ポップスまで、それぞれのアーティストが持つ独自の世界観と歌声を、クオリティの高いオリジナル楽曲やカバーを通じて世界へ発信します。</p>
-                </div>
-                <div class="rk-info-card">
-                    <h3>🎶 LIVE UNION プロジェクト</h3>
-                    <p>音楽を軸に活動するバーチャルタレントを支援する特設音楽プロジェクト「LIVE UNION」を展開。より広い活躍のステージを提供します。</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="artists" class="rk-section rk-reveal">
-            <div class="rk-section-header">
-                <span class="rk-section-num">02</span>
-                <div>
-                    <h2 class="rk-section-title">所属アーティスト</h2>
-                    <span class="rk-section-title-sub">ARTIST ROSTER</span>
-                </div>
-                <div class="rk-divider"></div>
-            </div>
-
-            <h3 class="rk-group-title">🎵 LIVE UNION <span class="rk-unit-badge">Music Project</span></h3>
-            <div class="rk-member-grid">
-                <div class="rk-member-card">
-                    <a href="characters/ruri/ruri.html" class="rk-member-name">焔魔るり</a>
-                    <div class="rk-member-read">Enma Ruri</div>
-                    <p class="rk-member-ep">力強くエモーショナルな歌声が特徴的。</p>
-                </div>
-                <div class="rk-member-card">
-                    <a href="characters/hachi/hachi.html" class="rk-member-name">HACHI</a>
-                    <div class="rk-member-read">Hachi</div>
-                    <p class="rk-member-ep">透明感と表現力に満ちた歌声で多くのリスナーを魅了する歌姫。</p>
-                </div>
-                <div class="rk-member-card">
-                    <a href="characters/toto/toto.html" class="rk-member-name">瀬戸乃とと</a>
-                    <div class="rk-member-read">Setono Toto</div>
-                    <p class="rk-member-ep">リスナーに寄り添う温かな歌声の持ち主。</p>
-                </div>
-                <div class="rk-member-card">
-                    <a href="characters/nagi/nagi.html" class="rk-member-name">水瀬 凪</a>
-                    <div class="rk-member-read">Minase Nagi</div>
-                    <p class="rk-member-ep">心地よく響く伸びやかなボーカルが魅力。</p>
-                </div>
-            </div>
-
-            <h3 class="rk-group-title">🎙️ Artists & Groups</h3>
-            <div class="rk-member-grid">
-                <div class="rk-member-card">
-                    <a href="characters/kmnz/kmnz.html" class="rk-member-name">KMNZ</a>
-                    <div class="rk-member-read">ケモノズ</div>
-                    <p class="rk-member-ep">ストリートカルチャー色を強く押し出したバーチャルガールズデュオ。</p>
-                </div>
-                <div class="rk-member-card">
-                    <a href="characters/vesperbell/vesperbell.html" class="rk-member-name">VESPERBELL</a>
-                    <div class="rk-member-read">ヴェスパーベル</div>
-                    <p class="rk-member-ep">パワフルなボーカルとロックな世界観で圧倒的なパフォーマンスを見せるユニット。</p>
-                </div>
-                <div class="rk-member-card">
-                    <a href="characters/culua/culua.html" class="rk-member-name">CULUA</a>
-                    <div class="rk-member-read">クルア</div>
-                    <p class="rk-member-ep">多彩な歌声で魅了するソロアーティスト。</p>
-                </div>
-                <div class="rk-member-card">
-                    <a href="characters/neun/neun.html" class="rk-member-name">NEUN</a>
-                    <div class="rk-member-read">ノイン</div>
-                    <p class="rk-member-ep">独特の空気感と楽曲センスを持つVSinger。</p>
-                </div>
-                <div class="rk-member-card">
-                    <a href="characters/meda/meda.html" class="rk-member-name">MEDA</a>
-                    <div class="rk-member-read">メダ</div>
-                    <p class="rk-member-ep">リスナーの心に刺さる歌声を持つ実力派。</p>
-                </div>
-                <div class="rk-member-card">
-                    <a href="characters/cona/cona.html" class="rk-member-name">CONA</a>
-                    <div class="rk-member-read">コナ</div>
-                    <p class="rk-member-ep">スタイリッシュな表現で注目を集めるアーティスト。</p>
-                </div>
-                <div class="rk-member-card">
-                    <a href="characters/imi/imi.html" class="rk-member-name">IMI</a>
-                    <div class="rk-member-read">イミ</div>
-                    <p class="rk-member-ep">アーティスティックな独自の世界を展開。</p>
-                </div>
-                <div class="rk-member-card">
-                    <a href="characters/xiden/xiden.html" class="rk-member-name">XIDEN</a>
-                    <div class="rk-member-read">ジデン</div>
-                    <p class="rk-member-ep">クールな歌声と存在感でファンを魅了する。</p>
-                </div>
-                <div class="rk-member-card">
-                    <a href="characters/yono/yono.html" class="rk-member-name">ヨノ</a>
-                    <div class="rk-member-read">Yono</div>
-                    <p class="rk-member-ep">エモーショナルな楽曲アプローチが得意。</p>
-                </div>
-                <div class="rk-member-card is-graduated">
-                    <a href="characters/memesia/memesia.html" class="rk-member-name">MEMESIA <span class="rk-graduated-badge">Graduated</span></a>
-                    <div class="rk-member-read">ミメシア</div>
-                    <p class="rk-member-ep">独自の世界観を拡張し続けるプロジェクト。</p>
-                </div>
-                <div class="rk-member-card">
-                    <a href="characters/lewne/lewne.html" class="rk-member-name">LEWNE</a>
-                    <div class="rk-member-read">ルネ</div>
-                    <p class="rk-member-ep">透き通るような表現力を武器とする。</p>
-                </div>
-                <div class="rk-member-card">
-                    <a href="characters/hao/hao.html" class="rk-member-name">羽緒</a>
-                    <div class="rk-member-read">Hao</div>
-                    <p class="rk-member-ep">繊細な感情を歌に乗せる気鋭のシンガー。</p>
-                </div>
-                <div class="rk-member-card">
-                    <a href="characters/cil/cil.html" class="rk-member-name">Cil</a>
-                    <div class="rk-member-read">シル</div>
-                    <p class="rk-member-ep">ポップからダークな曲調まで幅広く歌いこなす。</p>
-                </div>
-                <div class="rk-member-card">
-                    <a href="characters/mikage/mikage.html" class="rk-member-name">深影</a>
-                    <div class="rk-member-read">Mikage</div>
-                    <p class="rk-member-ep">深い表現力で楽曲の世界へ聞き手を誘う。</p>
-                </div>
-                <div class="rk-member-card">
-                    <a href="characters/wouca/wouca.html" class="rk-member-name">wouca</a>
-                    <div class="rk-member-read">ウォカ</div>
-                    <p class="rk-member-ep">「人生を謳歌しようぜ」を掲げる明るいゲラ。カメラフリーズすら伝説に変える表現者。</p>
-                </div>
-                <div class="rk-member-card is-graduated">
-                    <a href="#" class="rk-member-name">aMatsuka <span class="rk-graduated-badge">Graduated</span></a>
-                    <div class="rk-member-read">天塚あまね</div>
-                    <p class="rk-member-ep">RK Music初期を支えたバーチャルシンガー。</p>
-                </div>
-                <div class="rk-member-card is-graduated">
-                    <a href="#" class="rk-member-name">Kyoka Shino <span class="rk-graduated-badge">Graduated</span></a>
-                    <div class="rk-member-read">志乃響華</div>
-                    <p class="rk-member-ep">心に響く繊細な歌声を持つアーティスト。</p>
-                </div>
-                <div class="rk-member-card is-graduated">
-                    <a href="#" class="rk-member-name">Kano Himitsu <span class="rk-graduated-badge">Graduated</span></a>
-                    <div class="rk-member-read">鹿乃ひみつ</div>
-                    <p class="rk-member-ep">独特の世界観でファンを魅了したシンガー。</p>
-                </div>
-                <div class="rk-member-card is-graduated">
-                    <a href="#" class="rk-member-name">LIZ <span class="rk-graduated-badge">Graduated</span></a>
-                    <div class="rk-member-read">リズ</div>
-                    <p class="rk-member-ep">KMNZプロジェクトの初期メンバーとして活動。</p>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <footer class="rk-footer">
-        <div class="rk-footer-logo">RK<span>Music</span></div>
-        <p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with RK Music.</p>
-    </footer>
-
-    <script src="rkmusic_script.js"></script>
-    <script>
+<div class="rk-hero-stats">
+<div class="rk-stat">
+<div class="rk-stat-value">15</div>
+<div class="rk-stat-label">ARTISTS / GROUPS</div>
+</div>
+<div class="rk-stat">
+<div class="rk-stat-value">Music</div>
+<div class="rk-stat-label">FOCUS</div>
+</div>
+</div>
+<div class="rk-hero-scroll">SCROLL TO ARCHIVE</div>
+</div>
+</header>
+<div class="rk-container">
+<section class="rk-section rk-reveal" id="about">
+<div class="rk-section-header">
+<span class="rk-section-num">01</span>
+<div>
+<h2 class="rk-section-title">プロダクション概要</h2>
+<span class="rk-section-title-sub">ABOUT</span>
+</div>
+<div class="rk-divider"></div>
+</div>
+<div class="rk-info-grid">
+<div class="rk-info-card">
+<h3>🎤 We Create the Future Artist.</h3>
+<p>VSinger（バーチャルシンガー）など、音楽を主軸に活動する次世代のバーチャルアーティストを多数プロデュース。「感動を超える感動」を生み出します。</p>
+</div>
+<div class="rk-info-card">
+<h3>🎧 個性豊かな音楽性</h3>
+<p>ロックからエレクトロ、ポップスまで、それぞれのアーティストが持つ独自の世界観と歌声を、クオリティの高いオリジナル楽曲やカバーを通じて世界へ発信します。</p>
+</div>
+<div class="rk-info-card">
+<h3>🎶 LIVE UNION プロジェクト</h3>
+<p>音楽を軸に活動するバーチャルタレントを支援する特設音楽プロジェクト「LIVE UNION」を展開。より広い活躍のステージを提供します。</p>
+</div>
+</div>
+</section>
+<section class="rk-section rk-reveal" id="artists">
+<div class="rk-section-header">
+<span class="rk-section-num">02</span>
+<div>
+<h2 class="rk-section-title">所属アーティスト</h2>
+<span class="rk-section-title-sub">ARTIST ROSTER</span>
+</div>
+<div class="rk-divider"></div>
+</div>
+<h3 class="rk-group-title">🎵 LIVE UNION <span class="rk-unit-badge">Music Project</span></h3>
+<div class="rk-member-grid">
+<div class="rk-member-card">
+<a class="rk-member-name" href="characters/ruri/ruri.html">焔魔るり</a>
+<div class="rk-member-read">Enma Ruri</div>
+<p class="rk-member-ep">力強くエモーショナルな歌声が特徴的。</p>
+</div>
+<div class="rk-member-card">
+<a class="rk-member-name" href="characters/hachi/hachi.html">HACHI</a>
+<div class="rk-member-read">Hachi</div>
+<p class="rk-member-ep">透明感と表現力に満ちた歌声で多くのリスナーを魅了する歌姫。</p>
+</div>
+<div class="rk-member-card">
+<a class="rk-member-name" href="characters/toto/toto.html">瀬戸乃とと</a>
+<div class="rk-member-read">Setono Toto</div>
+<p class="rk-member-ep">リスナーに寄り添う温かな歌声の持ち主。</p>
+</div>
+<div class="rk-member-card">
+<a class="rk-member-name" href="characters/nagi/nagi.html">水瀬 凪</a>
+<div class="rk-member-read">Minase Nagi</div>
+<p class="rk-member-ep">心地よく響く伸びやかなボーカルが魅力。</p>
+</div>
+</div>
+<h3 class="rk-group-title">🎙️ Artists &amp; Groups</h3>
+<div class="rk-member-grid">
+<div class="rk-member-card">
+<a class="rk-member-name" href="characters/kmnz/kmnz.html">KMNZ</a>
+<div class="rk-member-read">ケモノズ</div>
+<p class="rk-member-ep">ストリートカルチャー色を強く押し出したバーチャルガールズデュオ。</p>
+</div>
+<div class="rk-member-card">
+<a class="rk-member-name" href="characters/vesperbell/vesperbell.html">VESPERBELL</a>
+<div class="rk-member-read">ヴェスパーベル</div>
+<p class="rk-member-ep">パワフルなボーカルとロックな世界観で圧倒的なパフォーマンスを見せるユニット。</p>
+</div>
+<div class="rk-member-card">
+<a class="rk-member-name" href="characters/culua/culua.html">CULUA</a>
+<div class="rk-member-read">クルア</div>
+<p class="rk-member-ep">多彩な歌声で魅了するソロアーティスト。</p>
+</div>
+<div class="rk-member-card">
+<a class="rk-member-name" href="characters/neun/neun.html">NEUN</a>
+<div class="rk-member-read">ノイン</div>
+<p class="rk-member-ep">独特の空気感と楽曲センスを持つVSinger。</p>
+</div>
+<div class="rk-member-card">
+<a class="rk-member-name" href="characters/meda/meda.html">MEDA</a>
+<div class="rk-member-read">メダ</div>
+<p class="rk-member-ep">リスナーの心に刺さる歌声を持つ実力派。</p>
+</div>
+<div class="rk-member-card">
+<a class="rk-member-name" href="characters/cona/cona.html">CONA</a>
+<div class="rk-member-read">コナ</div>
+<p class="rk-member-ep">スタイリッシュな表現で注目を集めるアーティスト。</p>
+</div>
+<div class="rk-member-card">
+<a class="rk-member-name" href="characters/imi/imi.html">IMI</a>
+<div class="rk-member-read">イミ</div>
+<p class="rk-member-ep">アーティスティックな独自の世界を展開。</p>
+</div>
+<div class="rk-member-card">
+<a class="rk-member-name" href="characters/xiden/xiden.html">XIDEN</a>
+<div class="rk-member-read">ジデン</div>
+<p class="rk-member-ep">クールな歌声と存在感でファンを魅了する。</p>
+</div>
+<div class="rk-member-card">
+<a class="rk-member-name" href="characters/yono/yono.html">ヨノ</a>
+<div class="rk-member-read">Yono</div>
+<p class="rk-member-ep">エモーショナルな楽曲アプローチが得意。</p>
+</div>
+<div class="rk-member-card is-graduated">
+<a class="rk-member-name" href="characters/memesia/memesia.html">MEMESIA <span class="rk-graduated-badge">Graduated</span></a>
+<div class="rk-member-read">ミメシア</div>
+<p class="rk-member-ep">独自の世界観を拡張し続けるプロジェクト。</p>
+</div>
+<div class="rk-member-card">
+<a class="rk-member-name" href="characters/lewne/lewne.html">LEWNE</a>
+<div class="rk-member-read">ルネ</div>
+<p class="rk-member-ep">透き通るような表現力を武器とする。</p>
+</div>
+<div class="rk-member-card">
+<a class="rk-member-name" href="characters/hao/hao.html">羽緒</a>
+<div class="rk-member-read">Hao</div>
+<p class="rk-member-ep">繊細な感情を歌に乗せる気鋭のシンガー。</p>
+</div>
+<div class="rk-member-card">
+<a class="rk-member-name" href="characters/cil/cil.html">Cil</a>
+<div class="rk-member-read">シル</div>
+<p class="rk-member-ep">ポップからダークな曲調まで幅広く歌いこなす。</p>
+</div>
+<div class="rk-member-card">
+<a class="rk-member-name" href="characters/mikage/mikage.html">深影</a>
+<div class="rk-member-read">Mikage</div>
+<p class="rk-member-ep">深い表現力で楽曲の世界へ聞き手を誘う。</p>
+</div>
+<div class="rk-member-card">
+<a class="rk-member-name" href="characters/wouca/wouca.html">wouca</a>
+<div class="rk-member-read">ウォカ</div>
+<p class="rk-member-ep">「人生を謳歌しようぜ」を掲げる明るいゲラ。カメラフリーズすら伝説に変える表現者。</p>
+</div>
+<div class="rk-member-card is-graduated">
+<a class="rk-member-name" href="#">aMatsuka <span class="rk-graduated-badge">Graduated</span></a>
+<div class="rk-member-read">天塚あまね</div>
+<p class="rk-member-ep">RK Music初期を支えたバーチャルシンガー。</p>
+</div>
+<div class="rk-member-card is-graduated">
+<a class="rk-member-name" href="#">Kyoka Shino <span class="rk-graduated-badge">Graduated</span></a>
+<div class="rk-member-read">志乃響華</div>
+<p class="rk-member-ep">心に響く繊細な歌声を持つアーティスト。</p>
+</div>
+<div class="rk-member-card is-graduated">
+<a class="rk-member-name" href="#">Kano Himitsu <span class="rk-graduated-badge">Graduated</span></a>
+<div class="rk-member-read">鹿乃ひみつ</div>
+<p class="rk-member-ep">独特の世界観でファンを魅了したシンガー。</p>
+</div>
+<div class="rk-member-card is-graduated">
+<a class="rk-member-name" href="#">LIZ <span class="rk-graduated-badge">Graduated</span></a>
+<div class="rk-member-read">リズ</div>
+<p class="rk-member-ep">KMNZプロジェクトの初期メンバーとして活動。</p>
+</div>
+</div>
+</section>
+</div>
+<footer class="rk-footer">
+<div class="rk-footer-logo">RK<span>Music</span></div>
+<p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with RK Music.</p>
+</footer>
+<script src="rkmusic_script.js"></script>
+<script>
         document.addEventListener('DOMContentLoaded', () => {
             const reveals = document.querySelectorAll('.rk-reveal');
             const observer = new IntersectionObserver((entries) => {
@@ -234,7 +222,5 @@
             reveals.forEach(el => observer.observe(el));
         });
     </script>
-
-</body>
-
+<div class="mobile-mode-banner" style="background: #ffc83d; color: #000; text-align: center; font-size: 0.85rem; padding: 4px; font-weight: 900; position: fixed; bottom: 0; width: 100%; z-index: 9999; box-shadow: 0 -2px 10px rgba(255, 200, 60, 0.4);" v-if="isMobile">🚀 Mobile Light Mode (Powered by Vue Virtual DOM)</div></div></body>
 </html>

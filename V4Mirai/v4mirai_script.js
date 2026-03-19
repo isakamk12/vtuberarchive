@@ -34,3 +34,31 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.backgroundPosition = `0 ${scrolled * 0.2}px`;
     });
 });
+
+
+const { createApp, ref, computed, onMounted, onUnmounted } = Vue;
+
+const app = createApp({
+    setup() {
+        const windowWidth = ref(window.innerWidth);
+        const isMobile = computed(() => windowWidth.value <= 768);
+
+        const handleResize = () => {
+            windowWidth.value = window.innerWidth;
+        };
+
+        onMounted(() => {
+            window.addEventListener('resize', handleResize);
+        });
+
+        onUnmounted(() => {
+            window.removeEventListener('resize', handleResize);
+        });
+
+        return {
+            isMobile
+        }
+    }
+});
+
+app.mount('#app');

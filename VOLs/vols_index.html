@@ -1,227 +1,197 @@
 <!DOCTYPE html>
+
 <html lang="ja">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VOLs | VTuber Archive</title>
-    <meta name="description" content="VOLs — CRAZIA Pte. Ltd.が運営するシンガポール発、フィリピン拠点のeスポーツ特化型次世代VTuberプロダクション">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="vols.css">
-</head>
-
-<body>
-
-    <!-- Cyber Background -->
-    <div class="vols-bg">
-        <div class="vols-grid"></div>
-        <div class="vols-scanlines"></div>
-    </div>
-
-    <!-- Navigation -->
-    <nav class="vols-nav">
-        <a href="../index.html" class="vols-nav-back" data-text="OMNI-HUB">
-            <i class="fa-solid fa-arrow-left"></i> OMNI-HUB
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VOLs | VTuber Archive</title>
+<meta content="VOLs — CRAZIA Pte. Ltd.が運営するシンガポール発、フィリピン拠点のeスポーツ特化型次世代VTuberプロダクション" name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&amp;family=Noto+Sans+JP:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="vols.css" rel="stylesheet"/>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><style>[v-cloak] { display: none; } </style></head>
+<body><div id="app" v-cloak="">
+<!-- Cyber Background -->
+<div class="vols-bg" v-if="!isMobile">
+<div class="vols-grid"></div>
+<div class="vols-scanlines"></div>
+</div>
+<!-- Navigation -->
+<nav class="vols-nav">
+<a class="vols-nav-back" data-text="OMNI-HUB" href="../index.html">
+<i class="fa-solid fa-arrow-left"></i> OMNI-HUB
         </a>
-        <div class="vols-nav-logo">
-            <span class="vols-glitch-text" data-text="VOLs">VOLs</span>
-        </div>
-        <div class="vols-nav-tags">
-            <span class="vols-badge">SEA REGION</span>
-            <span class="vols-badge highlight">ESPORTS NEXT-GEN</span>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header class="vols-hero">
-        <div class="vols-hero-inner">
-            <div class="vols-hero-content vols-reveal">
-                <div class="vols-subtitle">
-                    <i class="fa-solid fa-globe vols-icon-accent"></i> CRAZIA Pte. Ltd. (Singapore)
+<div class="vols-nav-logo">
+<span class="vols-glitch-text" data-text="VOLs">VOLs</span>
+</div>
+<div class="vols-nav-tags">
+<span class="vols-badge">SEA REGION</span>
+<span class="vols-badge highlight">ESPORTS NEXT-GEN</span>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="vols-hero">
+<div class="vols-hero-inner">
+<div class="vols-hero-content vols-reveal">
+<div class="vols-subtitle">
+<i class="fa-solid fa-globe vols-icon-accent"></i> CRAZIA Pte. Ltd. (Singapore)
                 </div>
-                <h1 class="vols-title"><span class="vols-glitch-text" data-text="CONNECTING">CONNECTING</span><br><span
-                        class="vols-text-gradient">ASIA TO THE WORLD.</span></h1>
-                <p class="vols-desc">
-                    シンガポールに拠点を置く「CRAZIA Pte. Ltd.」が設立した次世代型VTuberプロダクション。<br>
+<h1 class="vols-title"><span class="vols-glitch-text" data-text="CONNECTING">CONNECTING</span><br/><span class="vols-text-gradient">ASIA TO THE WORLD.</span></h1>
+<p class="vols-desc">
+                    シンガポールに拠点を置く「CRAZIA Pte. Ltd.」が設立した次世代型VTuberプロダクション。<br/>
                     eスポーツに特化した配信やイベントに注力し、日本のアニメカルチャーと東南アジア（SEA）市場を繋ぐ架け橋となることを目指しています。最初の活動拠点としてフィリピンを選定し、グローバル規模での熱狂を生み出します。
                 </p>
-                <div class="vols-stat-bar">
-                    <div class="vols-stat"><span class="vols-stat-val">2023.02</span><span
-                            class="vols-stat-lbl">Established</span></div>
-                    <div class="vols-stat"><span class="vols-stat-val">Philippines</span><span
-                            class="vols-stat-lbl">Primary Base</span></div>
-                    <div class="vols-stat"><span class="vols-stat-val">eSports</span><span class="vols-stat-lbl">Core
+<div class="vols-stat-bar">
+<div class="vols-stat"><span class="vols-stat-val">2023.02</span><span class="vols-stat-lbl">Established</span></div>
+<div class="vols-stat"><span class="vols-stat-val">Philippines</span><span class="vols-stat-lbl">Primary Base</span></div>
+<div class="vols-stat"><span class="vols-stat-val">eSports</span><span class="vols-stat-lbl">Core
                             Focus</span></div>
-                </div>
-            </div>
-            <div class="vols-hero-visual vols-reveal" style="transition-delay: 0.2s;">
-                <div class="vols-hexagon-wrapper">
-                    <div class="vols-hexagon hex-1"></div>
-                    <div class="vols-hexagon hex-2"></div>
-                    <div class="vols-hexagon hex-3"></div>
-                    <div class="vols-cyber-core"><i class="fa-solid fa-gamepad"></i></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="vols-scroll-indicator">
-            <span>Scroll to Enter</span>
-            <i class="fa-solid fa-chevron-down"></i>
-        </div>
-    </header>
-
-    <!-- Roster Section -->
-    <main class="vols-main">
-        <div class="vols-section-header vols-reveal">
-            <div class="vols-section-tag">ARCHIVES: ACTIVE & LOGS</div>
-            <h2 class="vols-section-title">TALENT ROSTER</h2>
-            <div class="vols-divider"></div>
-        </div>
-
-        <!-- Gen 1 -->
-        <h3 class="vols-gen-title vols-reveal">v1.0 // 1期生 (2023.06)</h3>
-        <div class="vols-roster-grid">
-
-            <div class="vols-card active vols-reveal">
-                <div class="vols-card-corner top-left"></div>
-                <div class="vols-card-corner bottom-right"></div>
-                <div class="vols-card-inner">
-                    <div class="vols-pfp-box"><i class="fa-solid fa-rabbit"></i></div>
-                    <h4 class="vols-card-name">白兎みくみ</h4>
-                    <p class="vols-card-sub">Mikumi Shirato</p>
-                    <span class="vols-status status-active">ACTIVE</span>
-                </div>
-            </div>
-
-            <div class="vols-card active vols-reveal" style="transition-delay: 0.1s;">
-                <div class="vols-card-corner top-left"></div>
-                <div class="vols-card-corner bottom-right"></div>
-                <div class="vols-card-inner">
-                    <div class="vols-pfp-box"><i class="fa-solid fa-music"></i></div>
-                    <h4 class="vols-card-name">アリア・シンセ</h4>
-                    <p class="vols-card-sub">Aria Synth</p>
-                    <span class="vols-status status-active">ACTIVE</span>
-                </div>
-            </div>
-
-            <div class="vols-card graduated vols-reveal" style="transition-delay: 0.2s;">
-                <div class="vols-card-corner top-left"></div>
-                <div class="vols-card-corner bottom-right"></div>
-                <div class="vols-card-inner">
-                    <div class="vols-pfp-box"><i class="fa-brands fa-firefox"></i></div>
-                    <h4 class="vols-card-name">天狐そらら</h4>
-                    <p class="vols-card-sub">Sorara Tenko</p>
-                    <span class="vols-status status-term">TERMINATED (2023.07)</span>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Gen 1.5 -->
-        <h3 class="vols-gen-title vols-reveal" style="margin-top: 4rem;">v1.5 // 1.5期生</h3>
-        <div class="vols-roster-grid">
-
-            <div class="vols-card active vols-reveal">
-                <div class="vols-card-corner top-left"></div>
-                <div class="vols-card-corner bottom-right"></div>
-                <div class="vols-card-inner">
-                    <div class="vols-pfp-box"><i class="fa-solid fa-moon"></i></div>
-                    <h4 class="vols-card-name">繭乃 A. シャルロット</h4>
-                    <p class="vols-card-sub">Mayuno A. Charlotte</p>
-                    <span class="vols-status status-active">ACTIVE</span>
-                </div>
-            </div>
-
-            <div class="vols-card active vols-reveal" style="transition-delay: 0.1s;">
-                <div class="vols-card-corner top-left"></div>
-                <div class="vols-card-corner bottom-right"></div>
-                <div class="vols-card-inner">
-                    <div class="vols-pfp-box"><i class="fa-solid fa-cat"></i></div>
-                    <h4 class="vols-card-name">アンジー・キャット</h4>
-                    <p class="vols-card-sub">Angie Cat</p>
-                    <span class="vols-status status-active">ACTIVE</span>
-                </div>
-            </div>
-
-            <div class="vols-card graduated vols-reveal" style="transition-delay: 0.2s;">
-                <div class="vols-card-corner top-left"></div>
-                <div class="vols-card-corner bottom-right"></div>
-                <div class="vols-card-inner">
-                    <div class="vols-pfp-box"><i class="fa-solid fa-water"></i></div>
-                    <h4 class="vols-card-name">深凪月 マナ</h4>
-                    <p class="vols-card-sub">Mana Minatsuki</p>
-                    <span class="vols-status status-grad">GRADUATED</span>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Gen 2 -->
-        <h3 class="vols-gen-title vols-reveal" style="margin-top: 4rem;">v2.0 // 2期生 (2024.12)</h3>
-        <div class="vols-roster-grid">
-
-            <div class="vols-card active vols-reveal">
-                <div class="vols-card-corner top-left"></div>
-                <div class="vols-card-corner bottom-right"></div>
-                <div class="vols-card-inner">
-                    <div class="vols-pfp-box"><i class="fa-solid fa-scroll"></i></div>
-                    <h4 class="vols-card-name">九ノ井 千里</h4>
-                    <p class="vols-card-sub">Senri Kunoi</p>
-                    <span class="vols-status status-active">ACTIVE</span>
-                </div>
-            </div>
-
-            <div class="vols-card active vols-reveal" style="transition-delay: 0.1s;">
-                <div class="vols-card-corner top-left"></div>
-                <div class="vols-card-corner bottom-right"></div>
-                <div class="vols-card-inner">
-                    <div class="vols-pfp-box"><i class="fa-solid fa-heart"></i></div>
-                    <h4 class="vols-card-name">ヴィオラ・ヴァイスハート</h4>
-                    <p class="vols-card-sub">Viola Weissheart</p>
-                    <span class="vols-status status-active">ACTIVE</span>
-                </div>
-            </div>
-
-            <div class="vols-card graduated vols-reveal" style="transition-delay: 0.2s;">
-                <div class="vols-card-corner top-left"></div>
-                <div class="vols-card-corner bottom-right"></div>
-                <div class="vols-card-inner">
-                    <div class="vols-pfp-box"><i class="fa-solid fa-clover"></i></div>
-                    <h4 class="vols-card-name">アドラ・フォーチュン</h4>
-                    <p class="vols-card-sub">Adora Fortune</p>
-                    <span class="vols-status status-grad">GRADUATED</span>
-                </div>
-            </div>
-
-        </div>
-    </main>
-
-    <!-- Map Focus Section -->
-    <section class="vols-focus vols-reveal">
-        <div class="vols-focus-inner">
-            <h2 class="vols-focus-title">Southeast Asia Hub</h2>
-            <p class="vols-focus-desc">
+</div>
+</div>
+<div class="vols-hero-visual vols-reveal" style="transition-delay: 0.2s;">
+<div class="vols-hexagon-wrapper">
+<div class="vols-hexagon hex-1"></div>
+<div class="vols-hexagon hex-2"></div>
+<div class="vols-hexagon hex-3"></div>
+<div class="vols-cyber-core"><i class="fa-solid fa-gamepad"></i></div>
+</div>
+</div>
+</div>
+<div class="vols-scroll-indicator">
+<span>Scroll to Enter</span>
+<i class="fa-solid fa-chevron-down"></i>
+</div>
+</header>
+<!-- Roster Section -->
+<main class="vols-main">
+<div class="vols-section-header vols-reveal">
+<div class="vols-section-tag">ARCHIVES: ACTIVE &amp; LOGS</div>
+<h2 class="vols-section-title">TALENT ROSTER</h2>
+<div class="vols-divider"></div>
+</div>
+<!-- Gen 1 -->
+<h3 class="vols-gen-title vols-reveal">v1.0 // 1期生 (2023.06)</h3>
+<div class="vols-roster-grid">
+<div class="vols-card active vols-reveal">
+<div class="vols-card-corner top-left"></div>
+<div class="vols-card-corner bottom-right"></div>
+<div class="vols-card-inner">
+<div class="vols-pfp-box"><i class="fa-solid fa-rabbit"></i></div>
+<h4 class="vols-card-name">白兎みくみ</h4>
+<p class="vols-card-sub">Mikumi Shirato</p>
+<span class="vols-status status-active">ACTIVE</span>
+</div>
+</div>
+<div class="vols-card active vols-reveal" style="transition-delay: 0.1s;">
+<div class="vols-card-corner top-left"></div>
+<div class="vols-card-corner bottom-right"></div>
+<div class="vols-card-inner">
+<div class="vols-pfp-box"><i class="fa-solid fa-music"></i></div>
+<h4 class="vols-card-name">アリア・シンセ</h4>
+<p class="vols-card-sub">Aria Synth</p>
+<span class="vols-status status-active">ACTIVE</span>
+</div>
+</div>
+<div class="vols-card graduated vols-reveal" style="transition-delay: 0.2s;">
+<div class="vols-card-corner top-left"></div>
+<div class="vols-card-corner bottom-right"></div>
+<div class="vols-card-inner">
+<div class="vols-pfp-box"><i class="fa-brands fa-firefox"></i></div>
+<h4 class="vols-card-name">天狐そらら</h4>
+<p class="vols-card-sub">Sorara Tenko</p>
+<span class="vols-status status-term">TERMINATED (2023.07)</span>
+</div>
+</div>
+</div>
+<!-- Gen 1.5 -->
+<h3 class="vols-gen-title vols-reveal" style="margin-top: 4rem;">v1.5 // 1.5期生</h3>
+<div class="vols-roster-grid">
+<div class="vols-card active vols-reveal">
+<div class="vols-card-corner top-left"></div>
+<div class="vols-card-corner bottom-right"></div>
+<div class="vols-card-inner">
+<div class="vols-pfp-box"><i class="fa-solid fa-moon"></i></div>
+<h4 class="vols-card-name">繭乃 A. シャルロット</h4>
+<p class="vols-card-sub">Mayuno A. Charlotte</p>
+<span class="vols-status status-active">ACTIVE</span>
+</div>
+</div>
+<div class="vols-card active vols-reveal" style="transition-delay: 0.1s;">
+<div class="vols-card-corner top-left"></div>
+<div class="vols-card-corner bottom-right"></div>
+<div class="vols-card-inner">
+<div class="vols-pfp-box"><i class="fa-solid fa-cat"></i></div>
+<h4 class="vols-card-name">アンジー・キャット</h4>
+<p class="vols-card-sub">Angie Cat</p>
+<span class="vols-status status-active">ACTIVE</span>
+</div>
+</div>
+<div class="vols-card graduated vols-reveal" style="transition-delay: 0.2s;">
+<div class="vols-card-corner top-left"></div>
+<div class="vols-card-corner bottom-right"></div>
+<div class="vols-card-inner">
+<div class="vols-pfp-box"><i class="fa-solid fa-water"></i></div>
+<h4 class="vols-card-name">深凪月 マナ</h4>
+<p class="vols-card-sub">Mana Minatsuki</p>
+<span class="vols-status status-grad">GRADUATED</span>
+</div>
+</div>
+</div>
+<!-- Gen 2 -->
+<h3 class="vols-gen-title vols-reveal" style="margin-top: 4rem;">v2.0 // 2期生 (2024.12)</h3>
+<div class="vols-roster-grid">
+<div class="vols-card active vols-reveal">
+<div class="vols-card-corner top-left"></div>
+<div class="vols-card-corner bottom-right"></div>
+<div class="vols-card-inner">
+<div class="vols-pfp-box"><i class="fa-solid fa-scroll"></i></div>
+<h4 class="vols-card-name">九ノ井 千里</h4>
+<p class="vols-card-sub">Senri Kunoi</p>
+<span class="vols-status status-active">ACTIVE</span>
+</div>
+</div>
+<div class="vols-card active vols-reveal" style="transition-delay: 0.1s;">
+<div class="vols-card-corner top-left"></div>
+<div class="vols-card-corner bottom-right"></div>
+<div class="vols-card-inner">
+<div class="vols-pfp-box"><i class="fa-solid fa-heart"></i></div>
+<h4 class="vols-card-name">ヴィオラ・ヴァイスハート</h4>
+<p class="vols-card-sub">Viola Weissheart</p>
+<span class="vols-status status-active">ACTIVE</span>
+</div>
+</div>
+<div class="vols-card graduated vols-reveal" style="transition-delay: 0.2s;">
+<div class="vols-card-corner top-left"></div>
+<div class="vols-card-corner bottom-right"></div>
+<div class="vols-card-inner">
+<div class="vols-pfp-box"><i class="fa-solid fa-clover"></i></div>
+<h4 class="vols-card-name">アドラ・フォーチュン</h4>
+<p class="vols-card-sub">Adora Fortune</p>
+<span class="vols-status status-grad">GRADUATED</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Map Focus Section -->
+<section class="vols-focus vols-reveal">
+<div class="vols-focus-inner">
+<h2 class="vols-focus-title">Southeast Asia Hub</h2>
+<p class="vols-focus-desc">
                 東南アジア（SEA）競技シーンの中心地として、ゲームへの情熱と活気に満ちたコミュニティを持つフィリピンを最初の拠点としています。日本のアニメーション文化を取り入れた独自のデザインと、競技性の高いライブストリーミングを融合し、SEAから世界へ繋がる新たなカルチャーハブを構築します。
             </p>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="vols-footer">
-        <div class="vols-footer-content">
-            <div class="vols-footer-logo">VOLs SYSTEM <span class="vols-glitch-text" data-text="OFFLINE">OFFLINE</span>
-            </div>
-            <p class="vols-footer-copy">© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with VOLs
+</div>
+</section>
+<!-- Footer -->
+<footer class="vols-footer">
+<div class="vols-footer-content">
+<div class="vols-footer-logo">VOLs SYSTEM <span class="vols-glitch-text" data-text="OFFLINE">OFFLINE</span>
+</div>
+<p class="vols-footer-copy">© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with VOLs
                 / CRAZIA Pte. Ltd.</p>
-        </div>
-    </footer>
-
-    <script src="vols_script.js"></script>
-</body>
-
+</div>
+</footer>
+<script src="vols_script.js"></script>
+<div class="mobile-mode-banner" style="background: #ffc83d; color: #000; text-align: center; font-size: 0.85rem; padding: 4px; font-weight: 900; position: fixed; bottom: 0; width: 100%; z-index: 9999; box-shadow: 0 -2px 10px rgba(255, 200, 60, 0.4);" v-if="isMobile">🚀 Mobile Light Mode (Powered by Vue Virtual DOM)</div></div></body>
 </html>

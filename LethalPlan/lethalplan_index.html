@@ -1,196 +1,170 @@
 <!DOCTYPE html>
+
 <html lang="ja">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>りーさるぷらん (Lethal Plan) | VTuber Archive</title>
-    <meta name="description"
-        content="KADOKAWA Game Linkageが運営する格ゲー枠VTuberグループ「りーさるぷらん」の非公式ファンサイト。星鳳ともりらを始めとする1期生・2期生一覧。">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600;700&family=Noto+Sans+JP:wght@400;700;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="lethalplan.css">
-</head>
-
-<body>
-
-    <div class="lp-bg">
-        <div class="lp-bg-scanlines"></div>
-        <div class="lp-bg-grid"></div>
-        <div class="lp-bg-vignette"></div>
-    </div>
-
-    <nav class="lp-nav">
-        <a href="../index.html" class="lp-nav-back">
-            <i class="fa-solid fa-caret-left"></i> BACK TO SELECT
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>りーさるぷらん (Lethal Plan) | VTuber Archive</title>
+<meta content="KADOKAWA Game Linkageが運営する格ゲー枠VTuberグループ「りーさるぷらん」の非公式ファンサイト。星鳳ともりらを始めとする1期生・2期生一覧。" name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600;700&amp;family=Noto+Sans+JP:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="lethalplan.css" rel="stylesheet"/>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><style>[v-cloak] { display: none; } </style></head>
+<body><div id="app" v-cloak="">
+<div class="lp-bg" v-if="!isMobile">
+<div class="lp-bg-scanlines" v-if="!isMobile"></div>
+<div class="lp-bg-grid" v-if="!isMobile"></div>
+<div class="lp-bg-vignette" v-if="!isMobile"></div>
+</div>
+<nav class="lp-nav">
+<a class="lp-nav-back" href="../index.html">
+<i class="fa-solid fa-caret-left"></i> BACK TO SELECT
         </a>
-        <div class="lp-nav-logo">
-            <span class="lp-glitch" data-text="LETHAL">LETHAL</span> PLAN
+<div class="lp-nav-logo">
+<span class="lp-glitch" data-text="LETHAL">LETHAL</span> PLAN
         </div>
-        <div class="lp-nav-tag">FGC VTUBER GROUP</div>
-    </nav>
-
-    <!-- HERO -->
-    <section class="lp-hero">
-        <div class="lp-hero-screen">
-            <div class="lp-hero-content">
-                <div class="lp-eyebrow">
-                    <i class="fa-solid fa-gamepad"></i> KADOKAWA Game Linkage
+<div class="lp-nav-tag">FGC VTUBER GROUP</div>
+</nav>
+<!-- HERO -->
+<section class="lp-hero">
+<div class="lp-hero-screen">
+<div class="lp-hero-content">
+<div class="lp-eyebrow">
+<i class="fa-solid fa-gamepad"></i> KADOKAWA Game Linkage
                 </div>
-                <h1 class="lp-hero-name"><span class="lp-text-red">LETHAL</span> PLAN</h1>
-                <h2 class="lp-hero-subname">りーさるぷらん</h2>
-
-                <div class="lp-hero-concept">
-                    <p class="lp-concept-highlight">HERE COMES A NEW CHALLENGER!</p>
-                    <p>「格闘ゲームを全力で楽しみ、その魅力を伝える」をコンセプトに活動する、格闘ゲーム特化型のVTuberグループ。</p>
-                    <p>配信者として自由に楽しく、そして格闘ゲームに真剣に取り組みながら、格ゲーシーンやゲーム業界全体の熱気をさらに加速させることを目指しています。カプコン公式プロリーグのパブリックビューイングや『スト6』オンライン大会なども主催し、シーンの最前線で戦い続けています。
+<h1 class="lp-hero-name"><span class="lp-text-red">LETHAL</span> PLAN</h1>
+<h2 class="lp-hero-subname">りーさるぷらん</h2>
+<div class="lp-hero-concept">
+<p class="lp-concept-highlight">HERE COMES A NEW CHALLENGER!</p>
+<p>「格闘ゲームを全力で楽しみ、その魅力を伝える」をコンセプトに活動する、格闘ゲーム特化型のVTuberグループ。</p>
+<p>配信者として自由に楽しく、そして格闘ゲームに真剣に取り組みながら、格ゲーシーンやゲーム業界全体の熱気をさらに加速させることを目指しています。カプコン公式プロリーグのパブリックビューイングや『スト6』オンライン大会なども主催し、シーンの最前線で戦い続けています。
                     </p>
-                </div>
-            </div>
-            <!-- Decorative UI Elements imitating a fighting game screen -->
-            <div class="lp-ui-top-left">1P</div>
-            <div class="lp-ui-top-right">2P</div>
-            <div class="lp-ui-bottom-center">INSERT COIN</div>
-            <div class="lp-health-bars">
-                <div class="lp-health-bar lp-hb-left"></div>
-                <div class="lp-vs-icon">VS</div>
-                <div class="lp-health-bar lp-hb-right"></div>
-            </div>
+</div>
+</div>
+<!-- Decorative UI Elements imitating a fighting game screen -->
+<div class="lp-ui-top-left">1P</div>
+<div class="lp-ui-top-right">2P</div>
+<div class="lp-ui-bottom-center">INSERT COIN</div>
+<div class="lp-health-bars">
+<div class="lp-health-bar lp-hb-left"></div>
+<div class="lp-vs-icon">VS</div>
+<div class="lp-health-bar lp-hb-right"></div>
+</div>
+</div>
+</section>
+<!-- ROSTER / CHARACTER SELECT -->
+<div class="lp-container">
+<div class="lp-select-title">
+<h2>SELECT YOUR FIGHTER</h2>
+</div>
+<!-- 1期生 -->
+<section class="lp-section lp-reveal">
+<div class="lp-section-header">
+<h3 class="lp-section-title">ORIGINAL ROSTER <span class="lp-gen-tag">[1ST GEN]</span></h3>
+<div class="lp-divider"></div>
+</div>
+<div class="lp-member-grid">
+<!-- 星鳳ともり -->
+<div class="lp-member-card">
+<div class="lp-card-border-effect"></div>
+<div class="lp-card-inner">
+<div class="lp-player-tag">1P</div>
+<div class="lp-member-icon"><i class="fa-solid fa-star"></i><i class="fa-solid fa-fire"></i>
+</div>
+<div class="lp-member-info">
+<a class="lp-member-name" href="characters/tomori.html">星鳳 ともり</a>
+<div class="lp-member-read">Hoshioh Tomori</div>
+<div class="lp-fighter-type">JURI Main</div>
+</div>
+</div>
+</div>
+<!-- 蒼輪ちなみ -->
+<div class="lp-member-card">
+<div class="lp-card-border-effect"></div>
+<div class="lp-card-inner">
+<div class="lp-player-tag">2P</div>
+<div class="lp-member-icon"><i class="fa-solid fa-syringe"></i></div>
+<div class="lp-member-info">
+<a class="lp-member-name" href="characters/chinami.html">蒼輪 ちなみ</a>
+<div class="lp-member-read">Sowa Chinami</div>
+<div class="lp-fighter-type">Ex-Nurse</div>
+</div>
+</div>
+</div>
+<!-- 天宿なげき -->
+<div class="lp-member-card">
+<div class="lp-card-border-effect"></div>
+<div class="lp-card-inner">
+<div class="lp-player-tag">3P</div>
+<div class="lp-member-icon"><i class="fa-solid fa-bug"></i></div>
+<div class="lp-member-info">
+<a class="lp-member-name" href="characters/nageki.html">天宿 なげき</a>
+<div class="lp-member-read">Amayadori Nageki</div>
+<div class="lp-fighter-type">Bug Lover</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 2期生 -->
+<section class="lp-section lp-reveal">
+<div class="lp-section-header">
+<h3 class="lp-section-title">NEW CHALLENGERS <span class="lp-gen-tag">[2ND GEN]</span></h3>
+<div class="lp-divider lp-divider-alt"></div>
+</div>
+<div class="lp-member-grid">
+<!-- 珍珠花こまり -->
+<div class="lp-member-card lp-card-new">
+<div class="lp-card-border-effect"></div>
+<div class="lp-card-inner">
+<div class="lp-player-tag">4P</div>
+<div class="lp-member-icon"><i class="fa-solid fa-seedling"></i></div>
+<div class="lp-member-info">
+<a class="lp-member-name" href="characters/komari.html">珍珠花 こまり</a>
+<div class="lp-member-read">Yukiyanagi Komari</div>
+<div class="lp-fighter-type">Non-human</div>
+</div>
+</div>
+</div>
+<!-- 御夜眠ねるね -->
+<div class="lp-member-card lp-card-new">
+<div class="lp-card-border-effect"></div>
+<div class="lp-card-inner">
+<div class="lp-player-tag">5P</div>
+<div class="lp-member-icon"><i class="fa-solid fa-bed"></i></div>
+<div class="lp-member-info">
+<a class="lp-member-name" href="characters/nerune.html">御夜眠 ねるね</a>
+<div class="lp-member-read">Oyasumi Nerune</div>
+<div class="lp-fighter-type">Non-human</div>
+</div>
+</div>
+</div>
+<!-- 救堕える -->
+<div class="lp-member-card lp-card-new lp-card-graduating">
+<div class="lp-card-border-effect"></div>
+<div class="lp-card-inner">
+<div class="lp-player-tag">6P</div>
+<div class="lp-member-icon"><i class="fa-solid fa-biohazard"></i></div>
+<div class="lp-member-info">
+<a class="lp-member-name" href="characters/eru.html">救堕 える</a>
+<div class="lp-member-read">Sukuida Eru</div>
+<div class="lp-fighter-type">Graduating '26.3</div>
+</div>
+<div class="lp-grad-notice">※2026年3月卒業予定</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<footer class="lp-footer">
+<div class="lp-footer-logo">
+<span class="lp-glitch" data-text="LETHAL">LETHAL</span> PLAN
         </div>
-    </section>
-
-    <!-- ROSTER / CHARACTER SELECT -->
-    <div class="lp-container">
-
-        <div class="lp-select-title">
-            <h2>SELECT YOUR FIGHTER</h2>
-        </div>
-
-        <!-- 1期生 -->
-        <section class="lp-section lp-reveal">
-            <div class="lp-section-header">
-                <h3 class="lp-section-title">ORIGINAL ROSTER <span class="lp-gen-tag">[1ST GEN]</span></h3>
-                <div class="lp-divider"></div>
-            </div>
-
-            <div class="lp-member-grid">
-
-                <!-- 星鳳ともり -->
-                <div class="lp-member-card">
-                    <div class="lp-card-border-effect"></div>
-                    <div class="lp-card-inner">
-                        <div class="lp-player-tag">1P</div>
-                        <div class="lp-member-icon"><i class="fa-solid fa-star"></i><i class="fa-solid fa-fire"></i>
-                        </div>
-                        <div class="lp-member-info">
-                            <a href="characters/tomori.html" class="lp-member-name">星鳳 ともり</a>
-                            <div class="lp-member-read">Hoshioh Tomori</div>
-                            <div class="lp-fighter-type">JURI Main</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 蒼輪ちなみ -->
-                <div class="lp-member-card">
-                    <div class="lp-card-border-effect"></div>
-                    <div class="lp-card-inner">
-                        <div class="lp-player-tag">2P</div>
-                        <div class="lp-member-icon"><i class="fa-solid fa-syringe"></i></div>
-                        <div class="lp-member-info">
-                            <a href="characters/chinami.html" class="lp-member-name">蒼輪 ちなみ</a>
-                            <div class="lp-member-read">Sowa Chinami</div>
-                            <div class="lp-fighter-type">Ex-Nurse</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 天宿なげき -->
-                <div class="lp-member-card">
-                    <div class="lp-card-border-effect"></div>
-                    <div class="lp-card-inner">
-                        <div class="lp-player-tag">3P</div>
-                        <div class="lp-member-icon"><i class="fa-solid fa-bug"></i></div>
-                        <div class="lp-member-info">
-                            <a href="characters/nageki.html" class="lp-member-name">天宿 なげき</a>
-                            <div class="lp-member-read">Amayadori Nageki</div>
-                            <div class="lp-fighter-type">Bug Lover</div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- 2期生 -->
-        <section class="lp-section lp-reveal">
-            <div class="lp-section-header">
-                <h3 class="lp-section-title">NEW CHALLENGERS <span class="lp-gen-tag">[2ND GEN]</span></h3>
-                <div class="lp-divider lp-divider-alt"></div>
-            </div>
-
-            <div class="lp-member-grid">
-
-                <!-- 珍珠花こまり -->
-                <div class="lp-member-card lp-card-new">
-                    <div class="lp-card-border-effect"></div>
-                    <div class="lp-card-inner">
-                        <div class="lp-player-tag">4P</div>
-                        <div class="lp-member-icon"><i class="fa-solid fa-seedling"></i></div>
-                        <div class="lp-member-info">
-                            <a href="characters/komari.html" class="lp-member-name">珍珠花 こまり</a>
-                            <div class="lp-member-read">Yukiyanagi Komari</div>
-                            <div class="lp-fighter-type">Non-human</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 御夜眠ねるね -->
-                <div class="lp-member-card lp-card-new">
-                    <div class="lp-card-border-effect"></div>
-                    <div class="lp-card-inner">
-                        <div class="lp-player-tag">5P</div>
-                        <div class="lp-member-icon"><i class="fa-solid fa-bed"></i></div>
-                        <div class="lp-member-info">
-                            <a href="characters/nerune.html" class="lp-member-name">御夜眠 ねるね</a>
-                            <div class="lp-member-read">Oyasumi Nerune</div>
-                            <div class="lp-fighter-type">Non-human</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 救堕える -->
-                <div class="lp-member-card lp-card-new lp-card-graduating">
-                    <div class="lp-card-border-effect"></div>
-                    <div class="lp-card-inner">
-                        <div class="lp-player-tag">6P</div>
-                        <div class="lp-member-icon"><i class="fa-solid fa-biohazard"></i></div>
-                        <div class="lp-member-info">
-                            <a href="characters/eru.html" class="lp-member-name">救堕 える</a>
-                            <div class="lp-member-read">Sukuida Eru</div>
-                            <div class="lp-fighter-type">Graduating '26.3</div>
-                        </div>
-                        <div class="lp-grad-notice">※2026年3月卒業予定</div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-    </div>
-
-    <footer class="lp-footer">
-        <div class="lp-footer-logo">
-            <span class="lp-glitch" data-text="LETHAL">LETHAL</span> PLAN
-        </div>
-        <div class="lp-footer-company">KADOKAWA Game Linkage</div>
-        <p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with Lethal Plan.</p>
-    </footer>
-
-    <script src="lethalplan_script.js"></script>
-</body>
-
+<div class="lp-footer-company">KADOKAWA Game Linkage</div>
+<p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with Lethal Plan.</p>
+</footer>
+<script src="lethalplan_script.js"></script>
+<div class="mobile-mode-banner" style="background: #ffc83d; color: #000; text-align: center; font-size: 0.85rem; padding: 4px; font-weight: 900; position: fixed; bottom: 0; width: 100%; z-index: 9999; box-shadow: 0 -2px 10px rgba(255, 200, 60, 0.4);" v-if="isMobile">🚀 Mobile Light Mode (Powered by Vue Virtual DOM)</div></div></body>
 </html>

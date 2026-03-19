@@ -1,186 +1,166 @@
 <!DOCTYPE html>
+
 <html lang="ja">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ENILIS | VTuber Archive</title>
-    <meta name="description" content="ENILIS — Brave Groupの子会社として、VTuber「ゆにれいど！」とVLiverプロジェクトを展開するIPプロデュース企業">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700;900&family=Cinzel:wght@700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="enilis.css">
-</head>
-
-<body>
-
-    <!-- Prism Background -->
-    <div class="enilis-bg">
-        <div class="prism-shard shard-1"></div>
-        <div class="prism-shard shard-2"></div>
-        <div class="prism-shard shard-3"></div>
-        <div class="prism-overlay"></div>
-    </div>
-
-    <!-- Navigation -->
-    <nav class="enilis-nav">
-        <a href="../index.html" class="enilis-nav-back">
-            <i class="fa-solid fa-chevron-left"></i> ARCHIVE HUB
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ENILIS | VTuber Archive</title>
+<meta content="ENILIS — Brave Groupの子会社として、VTuber「ゆにれいど！」とVLiverプロジェクトを展開するIPプロデュース企業" name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&amp;family=Noto+Sans+JP:wght@400;500;700;900&amp;family=Cinzel:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="enilis.css" rel="stylesheet"/>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><style>[v-cloak] { display: none; } </style></head>
+<body><div id="app" v-cloak="">
+<!-- Prism Background -->
+<div class="enilis-bg" v-if="!isMobile">
+<div class="prism-shard shard-1"></div>
+<div class="prism-shard shard-2"></div>
+<div class="prism-shard shard-3"></div>
+<div class="prism-overlay"></div>
+</div>
+<!-- Navigation -->
+<nav class="enilis-nav">
+<a class="enilis-nav-back" href="../index.html">
+<i class="fa-solid fa-chevron-left"></i> ARCHIVE HUB
         </a>
-        <div class="enilis-nav-logo">ENILIS</div>
-        <div class="enilis-nav-links">
-            <a href="#uniraid">UNIRAID!</a>
-            <a href="#vliver">VLIVER PROJECT</a>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header class="enilis-hero">
-        <div class="enilis-hero-content enilis-reveal">
-            <div class="enilis-hero-label">BRAVE GROUP SUBSIDIARY</div>
-            <h1 class="enilis-main-title">MULTI-PRISM<br><span class="text-accent">NEXUS</span></h1>
-            <p class="enilis-hero-desc">
-                2023年4月にBrave groupの100%子会社として設立。<br>
+<div class="enilis-nav-logo">ENILIS</div>
+<div class="enilis-nav-links">
+<a href="#uniraid">UNIRAID!</a>
+<a href="#vliver">VLIVER PROJECT</a>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="enilis-hero">
+<div class="enilis-hero-content enilis-reveal">
+<div class="enilis-hero-label">BRAVE GROUP SUBSIDIARY</div>
+<h1 class="enilis-main-title">MULTI-PRISM<br/><span class="text-accent">NEXUS</span></h1>
+<p class="enilis-hero-desc">
+                2023年4月にBrave groupの100%子会社として設立。<br/>
                 異世界ファンタジー×共創型VTuberプロジェクト「ゆにれいど！」と、200名以上のライバーを擁する「ENILIS VLiver
                 Project」の両軸で、次世代のバーチャルタレントシーンを多角的にプロデュースしています。
             </p>
-            <div class="enilis-hero-stats">
-                <div class="enilis-stat">
-                    <span class="stat-num">200+</span>
-                    <span class="stat-label">Affiliated Talents</span>
-                </div>
-                <div class="enilis-stat">
-                    <span class="stat-num">3</span>
-                    <span class="stat-label">Uniraid! Guilds</span>
-                </div>
-                <div class="enilis-stat">
-                    <span class="stat-num">Brave</span>
-                    <span class="stat-label">Group Member</span>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Main Content -->
-    <main class="enilis-container">
-
-        <!-- Uniraid Section -->
-        <section id="uniraid" class="section-group enilis-reveal">
-            <div class="section-header">
-                <h2 class="section-title"><i class="fa-solid fa-shield-halved"></i> ゆにれいど！ (UNIRAID!)</h2>
-                <p class="section-subtitle">異世界×VTuber 共創型プロジェクト</p>
-            </div>
-
-            <div class="uniraid-intro">
+<div class="enilis-hero-stats">
+<div class="enilis-stat">
+<span class="stat-num">200+</span>
+<span class="stat-label">Affiliated Talents</span>
+</div>
+<div class="enilis-stat">
+<span class="stat-num">3</span>
+<span class="stat-label">Uniraid! Guilds</span>
+</div>
+<div class="enilis-stat">
+<span class="stat-num">Brave</span>
+<span class="stat-label">Group Member</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="enilis-container">
+<!-- Uniraid Section -->
+<section class="section-group enilis-reveal" id="uniraid">
+<div class="section-header">
+<h2 class="section-title"><i class="fa-solid fa-shield-halved"></i> ゆにれいど！ (UNIRAID!)</h2>
+<p class="section-subtitle">異世界×VTuber 共創型プロジェクト</p>
+</div>
+<div class="uniraid-intro">
                 「世界中の人々と一緒に夢を見る」ことをコンセプトにした異世界ファンタジープロジェクト。これまでに3つのギルドがデビュー。
             </div>
-
-            <div class="guild-grid">
-                <div class="guild-card">
-                    <div class="guild-icon"><i class="fa-solid fa-tree"></i></div>
-                    <h3 class="guild-name">EINS (アインス)</h3>
-                    <p class="guild-desc">大自然に囲まれた王国を拠点。2024年4月デビュー。</p>
-                </div>
-                <div class="guild-card">
-                    <div class="guild-icon"><i class="fa-solid fa-leaf"></i></div>
-                    <h3 class="guild-name">ZWEI (ツヴァイ)</h3>
-                    <p class="guild-desc">世界樹を救うための旅路。2024年11月デビュー。</p>
-                </div>
-                <div class="guild-card">
-                    <div class="guild-icon"><i class="fa-solid fa-city"></i></div>
-                    <h3 class="guild-name">LIEMEL (リーメル)</h3>
-                    <p class="guild-desc">雲の上に浮かぶ天空都市が拠点。2025年8月デビュー。</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- VLiver Section -->
-        <section id="vliver" class="section-group enilis-reveal">
-            <div class="section-header">
-                <h2 class="section-title"><i class="fa-solid fa-microphone-lines"></i> ENILIS VLiver Project</h2>
-                <p class="section-subtitle">IRIAMを主軸とした巨大VLiver連合</p>
-            </div>
-
-            <div class="vliver-tabs">
-                <button class="tab-btn active" data-target="brossom">brossom</button>
-                <button class="tab-btn" data-target="lelomo">LELOMO</button>
-                <button class="tab-btn" data-target="synthe">SYNTHE</button>
-            </div>
-
-            <div class="vliver-roster-container">
-                <!-- brossom -->
-                <div id="brossom" class="roster-panel active">
-                    <div class="label-desc">旧brossom株式会社。2025年4月に吸収合併され、ENILISへ。</div>
-                    <div class="talent-list">
-                        <span>安喰ヨハネ</span> <span>一ヶ原小春</span> <span>いとしのみぃみ</span> <span>紺藤るりな</span>
-                        <span>紫呂あまく</span> <span>電羽電斗</span> <span>久遠季生</span> <span>海月雪</span> <span>王城宵</span>
-                    </div>
-                </div>
-
-                <!-- LELOMO -->
-                <div id="lelomo" class="roster-panel">
-                    <div class="label-desc"> HareVare、Libon等を統合した大型レーベル。</div>
-                    <div class="talent-list">
-                        <span>愛橋エール</span> <span>藍華雪</span> <span>愛羽ルヴィ</span> <span>青乃さわ</span> <span>暁ロコ</span>
-                        <span>甘井ステラ</span> <span>絢星ねね</span> <span>一色華蓮</span> <span>出雲ゼン</span> <span>壱万屋にぃの</span>
-                        <span>イリハ・ルミノス</span> <span>海月雪</span> <span>王城宵</span> <span>音代らむ</span> <span>音羽ティナ</span>
-                        <span>朧月しゅな</span> <span>灰麗珈</span> <span>菓熊りま</span>
-                    </div>
-                </div>
-
-                <!-- SYNTHE -->
-                <div id="synthe" class="roster-panel">
-                    <div class="label-desc">クリエイティブとシナジーを重視したレーベル。</div>
-                    <div class="talent-list">
-                        <span>緋屋ヨウ</span> <span>想創鉄音</span> <span>折鶴仙</span> <span>楓葉楽</span> <span>霞鳳レイリン</span>
-                        <span>風嶺イブキ</span> <span>烏丸冥</span> <span>岸夜秋刃</span> <span>グリナス・アルヴァリオ</span>
-                        <span>紅乃なずむ</span>
-                        <span>黒呑珈琲</span> <span>狡喰蕉雲</span> <span>幸唖鈴</span> <span>サファニエル・ヴォイドール</span>
-                        <span>己時みこと</span>
-                        <span>四季音晴</span> <span>芝居士虎雅</span> <span>城崎ナイト</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- History/Corporate -->
-        <section class="section-group enilis-reveal">
-            <div class="corp-info">
-                <h3><i class="fa-solid fa-briefcase"></i> CORPORATE RECORD</h3>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="time">2023.04</div>
-                        <div class="event">ENILIS株式会社 設立。</div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="time">2025.04</div>
-                        <div class="event">MateReal社・brossom社を吸収合併。</div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="time">2025.05</div>
-                        <div class="event">「ENILIS VLiver Project」始動（6レーベル統合）。</div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="time">2026.01</div>
-                        <div class="event">「Palette Project」についてjig.jpとの共同運営体制へ移行。</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="enilis-footer">
-        <div class="footer-inner">
-            <div class="footer-logo">ENILIS <span class="accent">NEXUS</span></div>
-            <p>© 2026 VTuber Archive Project. Unofficial Information Hub.</p>
-        </div>
-    </footer>
-
-    <script src="enilis_script.js"></script>
-</body>
-
+<div class="guild-grid">
+<div class="guild-card">
+<div class="guild-icon"><i class="fa-solid fa-tree"></i></div>
+<h3 class="guild-name">EINS (アインス)</h3>
+<p class="guild-desc">大自然に囲まれた王国を拠点。2024年4月デビュー。</p>
+</div>
+<div class="guild-card">
+<div class="guild-icon"><i class="fa-solid fa-leaf"></i></div>
+<h3 class="guild-name">ZWEI (ツヴァイ)</h3>
+<p class="guild-desc">世界樹を救うための旅路。2024年11月デビュー。</p>
+</div>
+<div class="guild-card">
+<div class="guild-icon"><i class="fa-solid fa-city"></i></div>
+<h3 class="guild-name">LIEMEL (リーメル)</h3>
+<p class="guild-desc">雲の上に浮かぶ天空都市が拠点。2025年8月デビュー。</p>
+</div>
+</div>
+</section>
+<!-- VLiver Section -->
+<section class="section-group enilis-reveal" id="vliver">
+<div class="section-header">
+<h2 class="section-title"><i class="fa-solid fa-microphone-lines"></i> ENILIS VLiver Project</h2>
+<p class="section-subtitle">IRIAMを主軸とした巨大VLiver連合</p>
+</div>
+<div class="vliver-tabs">
+<button class="tab-btn active" data-target="brossom">brossom</button>
+<button class="tab-btn" data-target="lelomo">LELOMO</button>
+<button class="tab-btn" data-target="synthe">SYNTHE</button>
+</div>
+<div class="vliver-roster-container">
+<!-- brossom -->
+<div class="roster-panel active" id="brossom">
+<div class="label-desc">旧brossom株式会社。2025年4月に吸収合併され、ENILISへ。</div>
+<div class="talent-list">
+<span>安喰ヨハネ</span> <span>一ヶ原小春</span> <span>いとしのみぃみ</span> <span>紺藤るりな</span>
+<span>紫呂あまく</span> <span>電羽電斗</span> <span>久遠季生</span> <span>海月雪</span> <span>王城宵</span>
+</div>
+</div>
+<!-- LELOMO -->
+<div class="roster-panel" id="lelomo">
+<div class="label-desc"> HareVare、Libon等を統合した大型レーベル。</div>
+<div class="talent-list">
+<span>愛橋エール</span> <span>藍華雪</span> <span>愛羽ルヴィ</span> <span>青乃さわ</span> <span>暁ロコ</span>
+<span>甘井ステラ</span> <span>絢星ねね</span> <span>一色華蓮</span> <span>出雲ゼン</span> <span>壱万屋にぃの</span>
+<span>イリハ・ルミノス</span> <span>海月雪</span> <span>王城宵</span> <span>音代らむ</span> <span>音羽ティナ</span>
+<span>朧月しゅな</span> <span>灰麗珈</span> <span>菓熊りま</span>
+</div>
+</div>
+<!-- SYNTHE -->
+<div class="roster-panel" id="synthe">
+<div class="label-desc">クリエイティブとシナジーを重視したレーベル。</div>
+<div class="talent-list">
+<span>緋屋ヨウ</span> <span>想創鉄音</span> <span>折鶴仙</span> <span>楓葉楽</span> <span>霞鳳レイリン</span>
+<span>風嶺イブキ</span> <span>烏丸冥</span> <span>岸夜秋刃</span> <span>グリナス・アルヴァリオ</span>
+<span>紅乃なずむ</span>
+<span>黒呑珈琲</span> <span>狡喰蕉雲</span> <span>幸唖鈴</span> <span>サファニエル・ヴォイドール</span>
+<span>己時みこと</span>
+<span>四季音晴</span> <span>芝居士虎雅</span> <span>城崎ナイト</span>
+</div>
+</div>
+</div>
+</section>
+<!-- History/Corporate -->
+<section class="section-group enilis-reveal">
+<div class="corp-info">
+<h3><i class="fa-solid fa-briefcase"></i> CORPORATE RECORD</h3>
+<div class="timeline">
+<div class="timeline-item">
+<div class="time">2023.04</div>
+<div class="event">ENILIS株式会社 設立。</div>
+</div>
+<div class="timeline-item">
+<div class="time">2025.04</div>
+<div class="event">MateReal社・brossom社を吸収合併。</div>
+</div>
+<div class="timeline-item">
+<div class="time">2025.05</div>
+<div class="event">「ENILIS VLiver Project」始動（6レーベル統合）。</div>
+</div>
+<div class="timeline-item">
+<div class="time">2026.01</div>
+<div class="event">「Palette Project」についてjig.jpとの共同運営体制へ移行。</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="enilis-footer">
+<div class="footer-inner">
+<div class="footer-logo">ENILIS <span class="accent">NEXUS</span></div>
+<p>© 2026 VTuber Archive Project. Unofficial Information Hub.</p>
+</div>
+</footer>
+<script src="enilis_script.js"></script>
+<div class="mobile-mode-banner" style="background: #ffc83d; color: #000; text-align: center; font-size: 0.85rem; padding: 4px; font-weight: 900; position: fixed; bottom: 0; width: 100%; z-index: 9999; box-shadow: 0 -2px 10px rgba(255, 200, 60, 0.4);" v-if="isMobile">🚀 Mobile Light Mode (Powered by Vue Virtual DOM)</div></div></body>
 </html>

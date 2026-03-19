@@ -1,234 +1,210 @@
 <!DOCTYPE html>
+
 <html lang="ja">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Varium (ぶいありうむっ！) | VTuber Archive</title>
-    <meta name="description"
-        content="「CUTE × DREAM」「かわいいのその先へ」をコンセプトに掲げるアイドルVTuber事務所「Varium（ぶいありうむっ！）」の非公式ファンサイト。所属タレント・卒業生の一覧。">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=M+PLUS+Rounded+1c:wght@400;700;800;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="varium.css">
-</head>
-
-<body>
-
-    <div class="va-bg">
-        <div class="va-bg-shape va-shape-1"></div>
-        <div class="va-bg-shape va-shape-2"></div>
-        <div class="va-bg-shape va-shape-3"></div>
-        <div class="va-bg-particles"></div>
-    </div>
-
-    <nav class="va-nav">
-        <a href="../index.html" class="va-nav-back">
-            <i class="fa-solid fa-cookie-bite"></i> BACK TO HUB
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Varium (ぶいありうむっ！) | VTuber Archive</title>
+<meta content="「CUTE × DREAM」「かわいいのその先へ」をコンセプトに掲げるアイドルVTuber事務所「Varium（ぶいありうむっ！）」の非公式ファンサイト。所属タレント・卒業生の一覧。" name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&amp;family=M+PLUS+Rounded+1c:wght@400;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="varium.css" rel="stylesheet"/>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><style>[v-cloak] { display: none; } </style></head>
+<body><div id="app" v-cloak="">
+<div class="va-bg" v-if="!isMobile">
+<div class="va-bg-shape va-shape-1" v-if="!isMobile"></div>
+<div class="va-bg-shape va-shape-2" v-if="!isMobile"></div>
+<div class="va-bg-shape va-shape-3" v-if="!isMobile"></div>
+<div class="va-bg-particles" v-if="!isMobile"></div>
+</div>
+<nav class="va-nav">
+<a class="va-nav-back" href="../index.html">
+<i class="fa-solid fa-cookie-bite"></i> BACK TO HUB
         </a>
-        <div class="va-nav-logo">
-            <img src="https://ui-avatars.com/api/?name=V&background=ffb6c1&color=fff&rounded=true&font-size=0.6"
-                alt="Icon" class="va-nav-icon">
+<div class="va-nav-logo">
+<img alt="Icon" class="va-nav-icon" src="https://ui-avatars.com/api/?name=V&amp;background=ffb6c1&amp;color=fff&amp;rounded=true&amp;font-size=0.6"/>
             Varium <span>(ぶいありうむっ！)</span>
-        </div>
-        <div class="va-nav-tag">“CUTE × DREAM” Idol VTuber Agency</div>
-    </nav>
-
-    <!-- HERO -->
-    <section class="va-hero">
-        <div class="va-hero-bg-text">DREAM</div>
-        <div class="va-hero-content">
-            <div class="va-eyebrow"><i class="fa-solid fa-heart"></i> CUTE × DREAM</div>
-            <h1 class="va-hero-name">Varium</h1>
-            <p class="va-hero-tagline">“かわいいのその先へ”</p>
-            <div class="va-hero-concept">
-                「CUTE × DREAM」をコンセプトに掲げる、あなたの日常を彩るアイドルVTuber事務所。<br><br>
+</div>
+<div class="va-nav-tag">“CUTE × DREAM” Idol VTuber Agency</div>
+</nav>
+<!-- HERO -->
+<section class="va-hero">
+<div class="va-hero-bg-text" v-if="!isMobile">DREAM</div>
+<div class="va-hero-content">
+<div class="va-eyebrow"><i class="fa-solid fa-heart"></i> CUTE × DREAM</div>
+<h1 class="va-hero-name">Varium</h1>
+<p class="va-hero-tagline">“かわいいのその先へ”</p>
+<div class="va-hero-concept">
+                「CUTE × DREAM」をコンセプトに掲げる、あなたの日常を彩るアイドルVTuber事務所。<br/><br/>
                 YouTubeやX（旧Twitter）などのプラットフォームにて、生放送や動画投稿を中心に活動を展開。個性豊かな「かわいい」を持ったタレントたちが、プロデューサー（ファン）と一緒に夢のような日常と「かわいいのその先」を目指して駆け抜けています。
             </div>
-            <div class="va-hero-stats">
-                <div class="va-stat">
-                    <div class="va-stat-value">11</div>
-                    <div class="va-stat-label">ACTIVE IDOLS</div>
-                </div>
-                <div class="va-stat">
-                    <div class="va-stat-value"><i class="fa-solid fa-ribbon va-stat-icon"></i></div>
-                    <div class="va-stat-label">KAWAII</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ROSTER ACTIVE -->
-    <div class="va-container">
-        <section class="va-section va-reveal">
-            <div class="va-section-header">
-                <div>
-                    <h2 class="va-section-title">所属タレント</h2>
-                    <span class="va-section-title-sub">Active Members</span>
-                </div>
-                <div class="va-divider"></div>
-            </div>
-
-            <!-- Members Grid -->
-            <div class="va-member-grid">
-                <!-- 狛犬うめ -->
-                <div class="va-member-card">
-                    <div class="va-card-inner">
-                        <div class="va-member-icon"><i class="fa-solid fa-dog"></i></div>
-                        <a href="characters/ume.html" class="va-member-name">狛犬うめ</a>
-                        <div class="va-member-read">Komainu Ume</div>
-                    </div>
-                </div>
-
-                <!-- 涼月すい -->
-                <div class="va-member-card">
-                    <div class="va-card-inner">
-                        <div class="va-member-icon"><i class="fa-solid fa-moon"></i></div>
-                        <a href="characters/sui.html" class="va-member-name">涼月すい</a>
-                        <div class="va-member-read">Suzutsuki Sui</div>
-                    </div>
-                </div>
-
-                <!-- 綿宮あひる -->
-                <div class="va-member-card">
-                    <div class="va-card-inner">
-                        <div class="va-member-icon"><i class="fa-solid fa-feather"></i></div>
-                        <a href="characters/ahiru.html" class="va-member-name">綿宮あひる</a>
-                        <div class="va-member-read">Watamiya Ahiru</div>
-                    </div>
-                </div>
-
-                <!-- 飴望にぃな -->
-                <div class="va-member-card">
-                    <div class="va-card-inner">
-                        <div class="va-member-icon"><i class="fa-solid fa-candy-cane"></i></div>
-                        <a href="characters/niina.html" class="va-member-name">飴望にぃな</a>
-                        <div class="va-member-read">Amo Niina</div>
-                    </div>
-                </div>
-
-                <!-- セレナーデ・オックスブラッド -->
-                <div class="va-member-card">
-                    <div class="va-card-inner">
-                        <div class="va-member-icon"><i class="fa-solid fa-crown"></i></div>
-                        <a href="characters/serenade.html" class="va-member-name">セレナーデ<br>・オックスブラッド</a>
-                        <div class="va-member-read">Serenade Oxblood</div>
-                    </div>
-                </div>
-
-                <!-- 海汐もるふ -->
-                <div class="va-member-card">
-                    <div class="va-card-inner">
-                        <div class="va-member-icon"><i class="fa-solid fa-water"></i></div>
-                        <a href="characters/morph.html" class="va-member-name">海汐もるふ</a>
-                        <div class="va-member-read">Umishio Morph</div>
-                    </div>
-                </div>
-
-                <!-- 紫電ライム -->
-                <div class="va-member-card">
-                    <div class="va-card-inner">
-                        <div class="va-member-icon"><i class="fa-solid fa-bolt"></i></div>
-                        <a href="characters/lime.html" class="va-member-name">紫電ライム</a>
-                        <div class="va-member-read">Shiden Lime</div>
-                    </div>
-                </div>
-
-                <!-- 透乃おと -->
-                <div class="va-member-card">
-                    <div class="va-card-inner">
-                        <div class="va-member-icon"><i class="fa-solid fa-music"></i></div>
-                        <a href="characters/oto.html" class="va-member-name">透乃おと</a>
-                        <div class="va-member-read">Yukino Oto</div>
-                    </div>
-                </div>
-
-                <!-- ルナ・ゴールドレイン -->
-                <div class="va-member-card">
-                    <div class="va-card-inner">
-                        <div class="va-member-icon"><i class="fa-solid fa-cloud-showers-heavy"></i></div>
-                        <a href="characters/luna.html" class="va-member-name">ルナ<br>・ゴールドレイン</a>
-                        <div class="va-member-read">Luna Goldrain</div>
-                    </div>
-                </div>
-
-                <!-- 綺音れむ -->
-                <div class="va-member-card">
-                    <div class="va-card-inner">
-                        <div class="va-member-icon"><i class="fa-solid fa-bed"></i></div>
-                        <a href="characters/remu.html" class="va-member-name">綺音れむ</a>
-                        <div class="va-member-read">Ayane Remu</div>
-                    </div>
-                </div>
-
-                <!-- 兎ノ花ののち -->
-                <div class="va-member-card">
-                    <div class="va-card-inner">
-                        <div class="va-member-icon"><i class="fa-solid fa-carrot"></i></div>
-                        <a href="characters/nonochi.html" class="va-member-name">兎ノ花ののち</a>
-                        <div class="va-member-read">Unohana Nonochi</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ALUMNI -->
-        <section class="va-section va-reveal">
-            <div class="va-section-header">
-                <div>
-                    <h2 class="va-section-title">卒業生</h2>
-                    <span class="va-section-title-sub">Alumni Members</span>
-                </div>
-                <div class="va-divider"></div>
-            </div>
-
-            <!-- Alumni Grid -->
-            <div class="va-member-grid va-alumni-grid">
-                <!-- ルイズ・プリエール -->
-                <div class="va-member-card muted">
-                    <div class="va-card-inner">
-                        <a href="characters/louise.html" class="va-member-name">ルイズ<br>・プリエール</a>
-                        <div class="va-member-read">Louise Priere</div>
-                    </div>
-                </div>
-                <!-- 月宵あび -->
-                <div class="va-member-card muted">
-                    <div class="va-card-inner">
-                        <a href="characters/abi.html" class="va-member-name">月宵あび</a>
-                        <div class="va-member-read">Tsukiyoi Abi</div>
-                    </div>
-                </div>
-                <!-- 白星あわわ -->
-                <div class="va-member-card muted">
-                    <div class="va-card-inner">
-                        <a href="characters/awawa.html" class="va-member-name">白星あわわ</a>
-                        <div class="va-member-read">Shiraboshi Awawa</div>
-                    </div>
-                </div>
-                <!-- 七瀬える -->
-                <div class="va-member-card muted">
-                    <div class="va-card-inner">
-                        <a href="characters/eru.html" class="va-member-name">七瀬える</a>
-                        <div class="va-member-read">Nanase Eru</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <footer class="va-footer">
-        <div class="va-footer-logo">
+<div class="va-hero-stats">
+<div class="va-stat">
+<div class="va-stat-value">11</div>
+<div class="va-stat-label">ACTIVE IDOLS</div>
+</div>
+<div class="va-stat">
+<div class="va-stat-value"><i class="fa-solid fa-ribbon va-stat-icon"></i></div>
+<div class="va-stat-label">KAWAII</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ROSTER ACTIVE -->
+<div class="va-container">
+<section class="va-section va-reveal">
+<div class="va-section-header">
+<div>
+<h2 class="va-section-title">所属タレント</h2>
+<span class="va-section-title-sub">Active Members</span>
+</div>
+<div class="va-divider"></div>
+</div>
+<!-- Members Grid -->
+<div class="va-member-grid">
+<!-- 狛犬うめ -->
+<div class="va-member-card">
+<div class="va-card-inner">
+<div class="va-member-icon"><i class="fa-solid fa-dog"></i></div>
+<a class="va-member-name" href="characters/ume.html">狛犬うめ</a>
+<div class="va-member-read">Komainu Ume</div>
+</div>
+</div>
+<!-- 涼月すい -->
+<div class="va-member-card">
+<div class="va-card-inner">
+<div class="va-member-icon"><i class="fa-solid fa-moon"></i></div>
+<a class="va-member-name" href="characters/sui.html">涼月すい</a>
+<div class="va-member-read">Suzutsuki Sui</div>
+</div>
+</div>
+<!-- 綿宮あひる -->
+<div class="va-member-card">
+<div class="va-card-inner">
+<div class="va-member-icon"><i class="fa-solid fa-feather"></i></div>
+<a class="va-member-name" href="characters/ahiru.html">綿宮あひる</a>
+<div class="va-member-read">Watamiya Ahiru</div>
+</div>
+</div>
+<!-- 飴望にぃな -->
+<div class="va-member-card">
+<div class="va-card-inner">
+<div class="va-member-icon"><i class="fa-solid fa-candy-cane"></i></div>
+<a class="va-member-name" href="characters/niina.html">飴望にぃな</a>
+<div class="va-member-read">Amo Niina</div>
+</div>
+</div>
+<!-- セレナーデ・オックスブラッド -->
+<div class="va-member-card">
+<div class="va-card-inner">
+<div class="va-member-icon"><i class="fa-solid fa-crown"></i></div>
+<a class="va-member-name" href="characters/serenade.html">セレナーデ<br/>・オックスブラッド</a>
+<div class="va-member-read">Serenade Oxblood</div>
+</div>
+</div>
+<!-- 海汐もるふ -->
+<div class="va-member-card">
+<div class="va-card-inner">
+<div class="va-member-icon"><i class="fa-solid fa-water"></i></div>
+<a class="va-member-name" href="characters/morph.html">海汐もるふ</a>
+<div class="va-member-read">Umishio Morph</div>
+</div>
+</div>
+<!-- 紫電ライム -->
+<div class="va-member-card">
+<div class="va-card-inner">
+<div class="va-member-icon"><i class="fa-solid fa-bolt"></i></div>
+<a class="va-member-name" href="characters/lime.html">紫電ライム</a>
+<div class="va-member-read">Shiden Lime</div>
+</div>
+</div>
+<!-- 透乃おと -->
+<div class="va-member-card">
+<div class="va-card-inner">
+<div class="va-member-icon"><i class="fa-solid fa-music"></i></div>
+<a class="va-member-name" href="characters/oto.html">透乃おと</a>
+<div class="va-member-read">Yukino Oto</div>
+</div>
+</div>
+<!-- ルナ・ゴールドレイン -->
+<div class="va-member-card">
+<div class="va-card-inner">
+<div class="va-member-icon"><i class="fa-solid fa-cloud-showers-heavy"></i></div>
+<a class="va-member-name" href="characters/luna.html">ルナ<br/>・ゴールドレイン</a>
+<div class="va-member-read">Luna Goldrain</div>
+</div>
+</div>
+<!-- 綺音れむ -->
+<div class="va-member-card">
+<div class="va-card-inner">
+<div class="va-member-icon"><i class="fa-solid fa-bed"></i></div>
+<a class="va-member-name" href="characters/remu.html">綺音れむ</a>
+<div class="va-member-read">Ayane Remu</div>
+</div>
+</div>
+<!-- 兎ノ花ののち -->
+<div class="va-member-card">
+<div class="va-card-inner">
+<div class="va-member-icon"><i class="fa-solid fa-carrot"></i></div>
+<a class="va-member-name" href="characters/nonochi.html">兎ノ花ののち</a>
+<div class="va-member-read">Unohana Nonochi</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ALUMNI -->
+<section class="va-section va-reveal">
+<div class="va-section-header">
+<div>
+<h2 class="va-section-title">卒業生</h2>
+<span class="va-section-title-sub">Alumni Members</span>
+</div>
+<div class="va-divider"></div>
+</div>
+<!-- Alumni Grid -->
+<div class="va-member-grid va-alumni-grid">
+<!-- ルイズ・プリエール -->
+<div class="va-member-card muted">
+<div class="va-card-inner">
+<a class="va-member-name" href="characters/louise.html">ルイズ<br/>・プリエール</a>
+<div class="va-member-read">Louise Priere</div>
+</div>
+</div>
+<!-- 月宵あび -->
+<div class="va-member-card muted">
+<div class="va-card-inner">
+<a class="va-member-name" href="characters/abi.html">月宵あび</a>
+<div class="va-member-read">Tsukiyoi Abi</div>
+</div>
+</div>
+<!-- 白星あわわ -->
+<div class="va-member-card muted">
+<div class="va-card-inner">
+<a class="va-member-name" href="characters/awawa.html">白星あわわ</a>
+<div class="va-member-read">Shiraboshi Awawa</div>
+</div>
+</div>
+<!-- 七瀬える -->
+<div class="va-member-card muted">
+<div class="va-card-inner">
+<a class="va-member-name" href="characters/eru.html">七瀬える</a>
+<div class="va-member-read">Nanase Eru</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<footer class="va-footer">
+<div class="va-footer-logo">
             Varium <span>(ぶいありうむっ！)</span>
-        </div>
-        <div class="va-footer-concept">CUTE × DREAM</div>
-        <p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with Varium.</p>
-    </footer>
-
-    <script src="varium_script.js"></script>
-    <script>
+</div>
+<div class="va-footer-concept">CUTE × DREAM</div>
+<p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with Varium.</p>
+</footer>
+<script src="varium_script.js"></script>
+<script>
         document.addEventListener('DOMContentLoaded', () => {
             const reveals = document.querySelectorAll('.va-reveal');
             const observer = new IntersectionObserver((entries) => {
@@ -241,7 +217,5 @@
             reveals.forEach(el => observer.observe(el));
         });
     </script>
-
-</body>
-
+<div class="mobile-mode-banner" style="background: #ffc83d; color: #000; text-align: center; font-size: 0.85rem; padding: 4px; font-weight: 900; position: fixed; bottom: 0; width: 100%; z-index: 9999; box-shadow: 0 -2px 10px rgba(255, 200, 60, 0.4);" v-if="isMobile">🚀 Mobile Light Mode (Powered by Vue Virtual DOM)</div></div></body>
 </html>

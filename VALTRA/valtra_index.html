@@ -1,132 +1,121 @@
 <!DOCTYPE html>
+
 <html lang="ja">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VALTRA | VTuber Archive</title>
-    <meta name="description" content="VALTRAの非公式ファンサイト。VALTRAの所属メンバーや概要をまとめた非公式アーカイブ。">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&family=Noto+Sans+JP:wght@400;700;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="valtra.css">
-</head>
-
-<body>
-
-    <div class="uo-bg">
-        <!-- Bubbles effect in CSS -->
-        <div class="uo-bubbles"></div>
-    </div>
-
-    <nav class="uo-nav">
-        <a href="../index.html" class="uo-nav-back">
-            <i class="fa-solid fa-chevron-left"></i> BACK TO HUB
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VALTRA | VTuber Archive</title>
+<meta content="VALTRAの非公式ファンサイト。VALTRAの所属メンバーや概要をまとめた非公式アーカイブ。" name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&amp;family=Noto+Sans+JP:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="valtra.css" rel="stylesheet"/>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><style>[v-cloak] { display: none; } </style></head>
+<body><div id="app" v-cloak="">
+<div class="uo-bg" v-if="!isMobile">
+<!-- Bubbles effect in CSS -->
+<div class="uo-bubbles"></div>
+</div>
+<nav class="uo-nav">
+<a class="uo-nav-back" href="../index.html">
+<i class="fa-solid fa-chevron-left"></i> BACK TO HUB
         </a>
-        <div class="uo-nav-logo">VALTRA</div>
-        <div class="uo-nav-tag">VTuber Project</div>
-    </nav>
-
-    <!-- HERO -->
-    <section class="uo-hero">
-        <div class="uo-hero-bg-text">UO</div>
-        <div class="uo-hero-content">
-            <div class="uo-eyebrow">Virtual YouTuber Project</div>
-            <h1 class="uo-hero-name">VALTRA</h1>
-            <p class="uo-hero-tagline">VALTRA アーカイブ</p>
-            <div class="uo-hero-concept">「VALOR(勇気)」と「ULTRA(限界を超える)」を冠し、挑戦者の物語を紡ぐVTuber事務所。タレントが持つ個性を最大限に引き出し、輝きを世界に届けます。</div>
-            <div class="uo-hero-stats">
-                <div class="uo-stat">
-                    <div class="uo-stat-value">5</div>
-                    <div class="uo-stat-label">MEMBERS</div>
-                </div>
-                <div class="uo-stat">
-                    <div class="uo-stat-value">株式会社GSC</div>
-                    <div class="uo-stat-label">OPERATION</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- INFO -->
-    <div class="uo-container">
-        <section class="uo-section uo-reveal">
-            <div class="uo-section-header">
-                <span class="uo-section-num">01</span>
-                <div>
-                    <h2 class="uo-section-title">プロジェクト概要</h2>
-                    <span class="uo-section-title-sub">ABOUT</span>
-                </div>
-                <div class="uo-divider"></div>
-            </div>
-            <div class="uo-info-grid">
-                <div class="uo-info-card">
-                    <h3>⚔️ 限界への挑戦</h3>
-                    <p>「勇気を持って限界を超える」をコンセプトに、新しい自分を見つけ出す挑戦者の物語を応援しています。</p>
-                </div>
-                <div class="uo-info-card">
-                    <h3>🎮 ゲーム特化ユニット</h3>
-                    <p>ゲームに特化したユニット「ぴこぴこはっかーず!!!」など、ジャンルに特化した活動も展開しています。</p>
-                </div>
-                <div class="uo-info-card">
-                    <h3>🤝 共に歩む成長</h3>
-                    <p>事務所とファンが一体となり、タレントがVTuberとして成長していくプロセスを大切にしています。</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- ROSTER -->
-        <section class="uo-section uo-reveal">
-            <div class="uo-section-header">
-                <span class="uo-section-num">02</span>
-                <div>
-                    <h2 class="uo-section-title">所属メンバー</h2>
-                    <span class="uo-section-title-sub">MEMBERS</span>
-                </div>
-                <div class="uo-divider"></div>
-            </div>
-
-            <!-- Members -->
-            <div class="uo-member-grid">
-                <div class="uo-member-card" onclick="window.location.href='characters/アイザック・ダ・ヴィンチ/アイザック・ダ・ヴィンチ.html'">
-                    <h3 class="uo-member-name">アイザック・ダ・ヴィンチ</h3>
-                    <div class="uo-member-read">アイザック・ダ・ヴィンチ</div>
-                    <p class="uo-member-ep">所属メンバー「アイザック・ダ・ヴィンチ」の個別アーカイブページです。</p>
-                </div>
-                <div class="uo-member-card" onclick="window.location.href='characters/憂月こはね/憂月こはね.html'">
-                    <h3 class="uo-member-name">憂月こはね</h3>
-                    <div class="uo-member-read">憂月こはね</div>
-                    <p class="uo-member-ep">所属メンバー「憂月こはね」の個別アーカイブページです。</p>
-                </div>
-                <div class="uo-member-card" onclick="window.location.href='characters/青馬ひすみ/青馬ひすみ.html'">
-                    <h3 class="uo-member-name">青馬ひすみ</h3>
-                    <div class="uo-member-read">青馬ひすみ</div>
-                    <p class="uo-member-ep">所属メンバー「青馬ひすみ」の個別アーカイブページです。</p>
-                </div>
-                <div class="uo-member-card" onclick="window.location.href='characters/火売のほ/火売のほ.html'">
-                    <h3 class="uo-member-name">火売のほ</h3>
-                    <div class="uo-member-read">火売のほ</div>
-                    <p class="uo-member-ep">所属メンバー「火売のほ」の個別アーカイブページです。</p>
-                </div>
-                <div class="uo-member-card" onclick="window.location.href='characters/虎鐘ねおん/虎鐘ねおん.html'">
-                    <h3 class="uo-member-name">虎鐘ねおん</h3>
-                    <div class="uo-member-read">虎鐘ねおん</div>
-                    <p class="uo-member-ep">所属メンバー「虎鐘ねおん」の個別アーカイブページです。</p>
-                </div></div>
-        </section>
-    </div>
-
-    <footer class="uo-footer">
-        <div class="uo-footer-logo">VALTRA</div>
-        <p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with official management.
+<div class="uo-nav-logo">VALTRA</div>
+<div class="uo-nav-tag">VTuber Project</div>
+</nav>
+<!-- HERO -->
+<section class="uo-hero">
+<div class="uo-hero-bg-text" v-if="!isMobile">UO</div>
+<div class="uo-hero-content">
+<div class="uo-eyebrow">Virtual YouTuber Project</div>
+<h1 class="uo-hero-name">VALTRA</h1>
+<p class="uo-hero-tagline">VALTRA アーカイブ</p>
+<div class="uo-hero-concept">「VALOR(勇気)」と「ULTRA(限界を超える)」を冠し、挑戦者の物語を紡ぐVTuber事務所。タレントが持つ個性を最大限に引き出し、輝きを世界に届けます。</div>
+<div class="uo-hero-stats">
+<div class="uo-stat">
+<div class="uo-stat-value">5</div>
+<div class="uo-stat-label">MEMBERS</div>
+</div>
+<div class="uo-stat">
+<div class="uo-stat-value">株式会社GSC</div>
+<div class="uo-stat-label">OPERATION</div>
+</div>
+</div>
+</div>
+</section>
+<!-- INFO -->
+<div class="uo-container">
+<section class="uo-section uo-reveal">
+<div class="uo-section-header">
+<span class="uo-section-num">01</span>
+<div>
+<h2 class="uo-section-title">プロジェクト概要</h2>
+<span class="uo-section-title-sub">ABOUT</span>
+</div>
+<div class="uo-divider"></div>
+</div>
+<div class="uo-info-grid">
+<div class="uo-info-card">
+<h3>⚔️ 限界への挑戦</h3>
+<p>「勇気を持って限界を超える」をコンセプトに、新しい自分を見つけ出す挑戦者の物語を応援しています。</p>
+</div>
+<div class="uo-info-card">
+<h3>🎮 ゲーム特化ユニット</h3>
+<p>ゲームに特化したユニット「ぴこぴこはっかーず!!!」など、ジャンルに特化した活動も展開しています。</p>
+</div>
+<div class="uo-info-card">
+<h3>🤝 共に歩む成長</h3>
+<p>事務所とファンが一体となり、タレントがVTuberとして成長していくプロセスを大切にしています。</p>
+</div>
+</div>
+</section>
+<!-- ROSTER -->
+<section class="uo-section uo-reveal">
+<div class="uo-section-header">
+<span class="uo-section-num">02</span>
+<div>
+<h2 class="uo-section-title">所属メンバー</h2>
+<span class="uo-section-title-sub">MEMBERS</span>
+</div>
+<div class="uo-divider"></div>
+</div>
+<!-- Members -->
+<div class="uo-member-grid">
+<div class="uo-member-card" onclick="window.location.href='characters/アイザック・ダ・ヴィンチ/アイザック・ダ・ヴィンチ.html'">
+<h3 class="uo-member-name">アイザック・ダ・ヴィンチ</h3>
+<div class="uo-member-read">アイザック・ダ・ヴィンチ</div>
+<p class="uo-member-ep">所属メンバー「アイザック・ダ・ヴィンチ」の個別アーカイブページです。</p>
+</div>
+<div class="uo-member-card" onclick="window.location.href='characters/憂月こはね/憂月こはね.html'">
+<h3 class="uo-member-name">憂月こはね</h3>
+<div class="uo-member-read">憂月こはね</div>
+<p class="uo-member-ep">所属メンバー「憂月こはね」の個別アーカイブページです。</p>
+</div>
+<div class="uo-member-card" onclick="window.location.href='characters/青馬ひすみ/青馬ひすみ.html'">
+<h3 class="uo-member-name">青馬ひすみ</h3>
+<div class="uo-member-read">青馬ひすみ</div>
+<p class="uo-member-ep">所属メンバー「青馬ひすみ」の個別アーカイブページです。</p>
+</div>
+<div class="uo-member-card" onclick="window.location.href='characters/火売のほ/火売のほ.html'">
+<h3 class="uo-member-name">火売のほ</h3>
+<div class="uo-member-read">火売のほ</div>
+<p class="uo-member-ep">所属メンバー「火売のほ」の個別アーカイブページです。</p>
+</div>
+<div class="uo-member-card" onclick="window.location.href='characters/虎鐘ねおん/虎鐘ねおん.html'">
+<h3 class="uo-member-name">虎鐘ねおん</h3>
+<div class="uo-member-read">虎鐘ねおん</div>
+<p class="uo-member-ep">所属メンバー「虎鐘ねおん」の個別アーカイブページです。</p>
+</div></div>
+</section>
+</div>
+<footer class="uo-footer">
+<div class="uo-footer-logo">VALTRA</div>
+<p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with official management.
         </p>
-    </footer>
-
-    <script src="valtra_script.js"></script>
-    <script>
+</footer>
+<script src="valtra_script.js"></script>
+<script>
         document.addEventListener('DOMContentLoaded', () => {
             const reveals = document.querySelectorAll('.uo-reveal');
             const observer = new IntersectionObserver((entries) => {
@@ -144,7 +133,5 @@
             });
         });
     </script>
-
-</body>
-
+<div class="mobile-mode-banner" style="background: #ffc83d; color: #000; text-align: center; font-size: 0.85rem; padding: 4px; font-weight: 900; position: fixed; bottom: 0; width: 100%; z-index: 9999; box-shadow: 0 -2px 10px rgba(255, 200, 60, 0.4);" v-if="isMobile">🚀 Mobile Light Mode (Powered by Vue Virtual DOM)</div></div></body>
 </html>

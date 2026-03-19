@@ -1,157 +1,146 @@
 <!DOCTYPE html>
+
 <html lang="ja">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vlash | VTuber Archive</title>
-    <meta name="description" content="Vlashの非公式ファンサイト。Vlashの所属メンバーや概要をまとめた非公式アーカイブ。">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&family=Noto+Sans+JP:wght@400;700;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="vlash.css">
-</head>
-
-<body>
-
-    <div class="uo-bg">
-        <!-- Bubbles effect in CSS -->
-        <div class="uo-bubbles"></div>
-    </div>
-
-    <nav class="uo-nav">
-        <a href="../index.html" class="uo-nav-back">
-            <i class="fa-solid fa-chevron-left"></i> BACK TO HUB
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vlash | VTuber Archive</title>
+<meta content="Vlashの非公式ファンサイト。Vlashの所属メンバーや概要をまとめた非公式アーカイブ。" name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&amp;family=Noto+Sans+JP:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="vlash.css" rel="stylesheet"/>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><style>[v-cloak] { display: none; } </style></head>
+<body><div id="app" v-cloak="">
+<div class="uo-bg" v-if="!isMobile">
+<!-- Bubbles effect in CSS -->
+<div class="uo-bubbles"></div>
+</div>
+<nav class="uo-nav">
+<a class="uo-nav-back" href="../index.html">
+<i class="fa-solid fa-chevron-left"></i> BACK TO HUB
         </a>
-        <div class="uo-nav-logo">Vlash</div>
-        <div class="uo-nav-tag">VTuber Project</div>
-    </nav>
-
-    <!-- HERO -->
-    <section class="uo-hero">
-        <div class="uo-hero-bg-text">UO</div>
-        <div class="uo-hero-content">
-            <div class="uo-eyebrow">Virtual YouTuber Project</div>
-            <h1 class="uo-hero-name">Vlash</h1>
-            <p class="uo-hero-tagline">Vlash アーカイブ</p>
-            <div class="uo-hero-concept">「VTuber × リアル × ○○」をコンセプトに掲げ、バーチャルとリアルの両軸で活動を展開するプロジェクトです。</div>
-            <div class="uo-hero-stats">
-                <div class="uo-stat">
-                    <div class="uo-stat-value">10</div>
-                    <div class="uo-stat-label">MEMBERS</div>
-                </div>
-                <div class="uo-stat">
-                    <div class="uo-stat-value">株式会社ENILIS (Brave group)</div>
-                    <div class="uo-stat-label">OPERATION</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- INFO -->
-    <div class="uo-container">
-        <section class="uo-section uo-reveal">
-            <div class="uo-section-header">
-                <span class="uo-section-num">01</span>
-                <div>
-                    <h2 class="uo-section-title">プロジェクト概要</h2>
-                    <span class="uo-section-title-sub">ABOUT</span>
-                </div>
-                <div class="uo-divider"></div>
-            </div>
-            <div class="uo-info-grid">
-                <div class="uo-info-card">
-                    <h3>🌐 バーチャル×リアル</h3>
-                    <p>画面の中だけに留まらず、リアルイベントや企画を通じて、より自由度の高いエンターテインメントを提供。</p>
-                </div>
-                <div class="uo-info-card">
-                    <h3>🎨 自由な表現の追求</h3>
-                    <p>「もっと自由なエンタメを」を体現するため、タレント主導の企画や新しい表現手法に挑戦し続けています。</p>
-                </div>
-                <div class="uo-info-card">
-                    <h3>🤝 次のステージへ</h3>
-                    <p>プロジェクト終了後も、メンバーはそれぞれの個性を活かし、更なる成長を目指して活動を継続しています。</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- ROSTER -->
-        <section class="uo-section uo-reveal">
-            <div class="uo-section-header">
-                <span class="uo-section-num">02</span>
-                <div>
-                    <h2 class="uo-section-title">所属メンバー</h2>
-                    <span class="uo-section-title-sub">MEMBERS</span>
-                </div>
-                <div class="uo-divider"></div>
-            </div>
-
-            <!-- Members -->
-            <div class="uo-member-grid">
-                <div class="uo-member-card" onclick="window.location.href='characters/月皇ちな/月皇ちな.html'">
-                    <h3 class="uo-member-name">月皇ちな</h3>
-                    <div class="uo-member-read">月皇ちな</div>
-                    <p class="uo-member-ep">所属メンバー「月皇ちな」の個別アーカイブページです。</p>
-                </div>
-                <div class="uo-member-card" onclick="window.location.href='characters/日向りま/日向りま.html'">
-                    <h3 class="uo-member-name">日向りま</h3>
-                    <div class="uo-member-read">日向りま</div>
-                    <p class="uo-member-ep">所属メンバー「日向りま」の個別アーカイブページです。</p>
-                </div>
-                <div class="uo-member-card" onclick="window.location.href='characters/虎島めら。/虎島めら。.html'">
-                    <h3 class="uo-member-name">虎島めら。</h3>
-                    <div class="uo-member-read">虎島めら。</div>
-                    <p class="uo-member-ep">所属メンバー「虎島めら。」の個別アーカイブページです。</p>
-                </div>
-                <div class="uo-member-card" onclick="window.location.href='characters/九衣よな/九衣よな.html'">
-                    <h3 class="uo-member-name">九衣よな</h3>
-                    <div class="uo-member-read">九衣よな</div>
-                    <p class="uo-member-ep">所属メンバー「九衣よな」の個別アーカイブページです。</p>
-                </div>
-                <div class="uo-member-card" onclick="window.location.href='characters/心出結/心出結.html'">
-                    <h3 class="uo-member-name">心出結</h3>
-                    <div class="uo-member-read">心出結</div>
-                    <p class="uo-member-ep">所属メンバー「心出結」の個別アーカイブページです。</p>
-                </div>
-                <div class="uo-member-card" onclick="window.location.href='characters/泡清みる/泡清みる.html'">
-                    <h3 class="uo-member-name">泡清みる</h3>
-                    <div class="uo-member-read">泡清みる</div>
-                    <p class="uo-member-ep">所属メンバー「泡清みる」の個別アーカイブページです。</p>
-                </div>
-                <div class="uo-member-card" onclick="window.location.href='characters/神谷ねこ/神谷ねこ.html'">
-                    <h3 class="uo-member-name">神谷ねこ</h3>
-                    <div class="uo-member-read">神谷ねこ</div>
-                    <p class="uo-member-ep">所属メンバー「神谷ねこ」の個別アーカイブページです。</p>
-                </div>
-                <div class="uo-member-card" onclick="window.location.href='characters/星宮ちょこ/星宮ちょこ.html'">
-                    <h3 class="uo-member-name">星宮ちょこ</h3>
-                    <div class="uo-member-read">星宮ちょこ</div>
-                    <p class="uo-member-ep">所属メンバー「星宮ちょこ」の個別アーカイブページです。</p>
-                </div>
-                <div class="uo-member-card" onclick="window.location.href='characters/鏡愛しゅくり/鏡愛しゅくり.html'">
-                    <h3 class="uo-member-name">鏡愛しゅくり</h3>
-                    <div class="uo-member-read">鏡愛しゅくり</div>
-                    <p class="uo-member-ep">所属メンバー「鏡愛しゅくり」の個別アーカイブページです。</p>
-                </div>
-                <div class="uo-member-card" onclick="window.location.href='characters/天野みか/天野みか.html'">
-                    <h3 class="uo-member-name">天野みか</h3>
-                    <div class="uo-member-read">天野みか</div>
-                    <p class="uo-member-ep">所属メンバー「天野みか」の個別アーカイブページです。</p>
-                </div></div>
-        </section>
-    </div>
-
-    <footer class="uo-footer">
-        <div class="uo-footer-logo">Vlash</div>
-        <p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with official management.
+<div class="uo-nav-logo">Vlash</div>
+<div class="uo-nav-tag">VTuber Project</div>
+</nav>
+<!-- HERO -->
+<section class="uo-hero">
+<div class="uo-hero-bg-text" v-if="!isMobile">UO</div>
+<div class="uo-hero-content">
+<div class="uo-eyebrow">Virtual YouTuber Project</div>
+<h1 class="uo-hero-name">Vlash</h1>
+<p class="uo-hero-tagline">Vlash アーカイブ</p>
+<div class="uo-hero-concept">「VTuber × リアル × ○○」をコンセプトに掲げ、バーチャルとリアルの両軸で活動を展開するプロジェクトです。</div>
+<div class="uo-hero-stats">
+<div class="uo-stat">
+<div class="uo-stat-value">10</div>
+<div class="uo-stat-label">MEMBERS</div>
+</div>
+<div class="uo-stat">
+<div class="uo-stat-value">株式会社ENILIS (Brave group)</div>
+<div class="uo-stat-label">OPERATION</div>
+</div>
+</div>
+</div>
+</section>
+<!-- INFO -->
+<div class="uo-container">
+<section class="uo-section uo-reveal">
+<div class="uo-section-header">
+<span class="uo-section-num">01</span>
+<div>
+<h2 class="uo-section-title">プロジェクト概要</h2>
+<span class="uo-section-title-sub">ABOUT</span>
+</div>
+<div class="uo-divider"></div>
+</div>
+<div class="uo-info-grid">
+<div class="uo-info-card">
+<h3>🌐 バーチャル×リアル</h3>
+<p>画面の中だけに留まらず、リアルイベントや企画を通じて、より自由度の高いエンターテインメントを提供。</p>
+</div>
+<div class="uo-info-card">
+<h3>🎨 自由な表現の追求</h3>
+<p>「もっと自由なエンタメを」を体現するため、タレント主導の企画や新しい表現手法に挑戦し続けています。</p>
+</div>
+<div class="uo-info-card">
+<h3>🤝 次のステージへ</h3>
+<p>プロジェクト終了後も、メンバーはそれぞれの個性を活かし、更なる成長を目指して活動を継続しています。</p>
+</div>
+</div>
+</section>
+<!-- ROSTER -->
+<section class="uo-section uo-reveal">
+<div class="uo-section-header">
+<span class="uo-section-num">02</span>
+<div>
+<h2 class="uo-section-title">所属メンバー</h2>
+<span class="uo-section-title-sub">MEMBERS</span>
+</div>
+<div class="uo-divider"></div>
+</div>
+<!-- Members -->
+<div class="uo-member-grid">
+<div class="uo-member-card" onclick="window.location.href='characters/月皇ちな/月皇ちな.html'">
+<h3 class="uo-member-name">月皇ちな</h3>
+<div class="uo-member-read">月皇ちな</div>
+<p class="uo-member-ep">所属メンバー「月皇ちな」の個別アーカイブページです。</p>
+</div>
+<div class="uo-member-card" onclick="window.location.href='characters/日向りま/日向りま.html'">
+<h3 class="uo-member-name">日向りま</h3>
+<div class="uo-member-read">日向りま</div>
+<p class="uo-member-ep">所属メンバー「日向りま」の個別アーカイブページです。</p>
+</div>
+<div class="uo-member-card" onclick="window.location.href='characters/虎島めら。/虎島めら。.html'">
+<h3 class="uo-member-name">虎島めら。</h3>
+<div class="uo-member-read">虎島めら。</div>
+<p class="uo-member-ep">所属メンバー「虎島めら。」の個別アーカイブページです。</p>
+</div>
+<div class="uo-member-card" onclick="window.location.href='characters/九衣よな/九衣よな.html'">
+<h3 class="uo-member-name">九衣よな</h3>
+<div class="uo-member-read">九衣よな</div>
+<p class="uo-member-ep">所属メンバー「九衣よな」の個別アーカイブページです。</p>
+</div>
+<div class="uo-member-card" onclick="window.location.href='characters/心出結/心出結.html'">
+<h3 class="uo-member-name">心出結</h3>
+<div class="uo-member-read">心出結</div>
+<p class="uo-member-ep">所属メンバー「心出結」の個別アーカイブページです。</p>
+</div>
+<div class="uo-member-card" onclick="window.location.href='characters/泡清みる/泡清みる.html'">
+<h3 class="uo-member-name">泡清みる</h3>
+<div class="uo-member-read">泡清みる</div>
+<p class="uo-member-ep">所属メンバー「泡清みる」の個別アーカイブページです。</p>
+</div>
+<div class="uo-member-card" onclick="window.location.href='characters/神谷ねこ/神谷ねこ.html'">
+<h3 class="uo-member-name">神谷ねこ</h3>
+<div class="uo-member-read">神谷ねこ</div>
+<p class="uo-member-ep">所属メンバー「神谷ねこ」の個別アーカイブページです。</p>
+</div>
+<div class="uo-member-card" onclick="window.location.href='characters/星宮ちょこ/星宮ちょこ.html'">
+<h3 class="uo-member-name">星宮ちょこ</h3>
+<div class="uo-member-read">星宮ちょこ</div>
+<p class="uo-member-ep">所属メンバー「星宮ちょこ」の個別アーカイブページです。</p>
+</div>
+<div class="uo-member-card" onclick="window.location.href='characters/鏡愛しゅくり/鏡愛しゅくり.html'">
+<h3 class="uo-member-name">鏡愛しゅくり</h3>
+<div class="uo-member-read">鏡愛しゅくり</div>
+<p class="uo-member-ep">所属メンバー「鏡愛しゅくり」の個別アーカイブページです。</p>
+</div>
+<div class="uo-member-card" onclick="window.location.href='characters/天野みか/天野みか.html'">
+<h3 class="uo-member-name">天野みか</h3>
+<div class="uo-member-read">天野みか</div>
+<p class="uo-member-ep">所属メンバー「天野みか」の個別アーカイブページです。</p>
+</div></div>
+</section>
+</div>
+<footer class="uo-footer">
+<div class="uo-footer-logo">Vlash</div>
+<p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with official management.
         </p>
-    </footer>
-
-    <script src="vlash_script.js"></script>
-    <script>
+</footer>
+<script src="vlash_script.js"></script>
+<script>
         document.addEventListener('DOMContentLoaded', () => {
             const reveals = document.querySelectorAll('.uo-reveal');
             const observer = new IntersectionObserver((entries) => {
@@ -169,7 +158,5 @@
             });
         });
     </script>
-
-</body>
-
+<div class="mobile-mode-banner" style="background: #ffc83d; color: #000; text-align: center; font-size: 0.85rem; padding: 4px; font-weight: 900; position: fixed; bottom: 0; width: 100%; z-index: 9999; box-shadow: 0 -2px 10px rgba(255, 200, 60, 0.4);" v-if="isMobile">🚀 Mobile Light Mode (Powered by Vue Virtual DOM)</div></div></body>
 </html>

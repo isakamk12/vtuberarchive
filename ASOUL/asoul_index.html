@@ -1,261 +1,224 @@
 <!DOCTYPE html>
+
 <html lang="ja">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A-SOUL - VTuber Archive Premium</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="asoul_index.css">
-</head>
-
-<body>
-    <div class="bg-fx"></div>
-    <nav class="nav">
-        <a href="../index.html" class="nav-brand"><i class="fa-solid fa-layer-group"></i> VT_ARCHIVE</a>
-        <div class="nav-links">
-            <a href="../index.html"><i class="fa-solid fa-home"></i> HOME</a>
-            <a href="#" style="color: var(--c1);"><i class="fa-solid fa-music"></i> A-SOUL</a>
-        </div>
-    </nav>
-
-
-    <header class="hero">
-        <h1 class="hero-title" data-text="A-SOUL">A-SOUL</h1>
-        <p class="hero-subtitle">[ Archive Database ]</p>
-    </header>
-
-
-    <main class="main-content">
-
-        <div class="content-grid">
-            <article class="card highlight-card">
-                <h2><i class="fa-solid fa-seedling"></i> 運営実績と継続性</h2>
-                <p>本アーカイブでは過去の組織的変遷やトラブルも記録していますが、<strong>最も重要なのは「様々な試練を乗り越え、現在まで運営が継続し、タレントたちが輝き続けている」という事実</strong>です。ファンとの絆や、試行錯誤を通じて培われた運営ノウハウこそが、この機関の真の価値です。
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>A-SOUL - VTuber Archive Premium</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="asoul_index.css" rel="stylesheet"/>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><style>[v-cloak] { display: none; } </style></head>
+<body><div id="app" v-cloak="">
+<div class="bg-fx" v-if="!isMobile"></div>
+<nav class="nav">
+<a class="nav-brand" href="../index.html"><i class="fa-solid fa-layer-group"></i> VT_ARCHIVE</a>
+<div class="nav-links">
+<a href="../index.html"><i class="fa-solid fa-home"></i> HOME</a>
+<a href="#" style="color: var(--c1);"><i class="fa-solid fa-music"></i> A-SOUL</a>
+</div>
+</nav>
+<header class="hero">
+<h1 class="hero-title" data-text="A-SOUL">A-SOUL</h1>
+<p class="hero-subtitle">[ Archive Database ]</p>
+</header>
+<main class="main-content">
+<div class="content-grid">
+<article class="card highlight-card">
+<h2><i class="fa-solid fa-seedling"></i> 運営実績と継続性</h2>
+<p>本アーカイブでは過去の組織的変遷やトラブルも記録していますが、<strong>最も重要なのは「様々な試練を乗り越え、現在まで運営が継続し、タレントたちが輝き続けている」という事実</strong>です。ファンとの絆や、試行錯誤を通じて培われた運営ノウハウこそが、この機関の真の価値です。
                 </p>
-            </article>
-            <article class="card">
-                <h2><i class="fa-solid fa-book-open fa-xs" style="opacity:0.5;"></i> Overview</h2>
-                <p>A-SOUL バーチャルアイドル・プロジェクトにおけるタレント管理、契約構造、および2026年に向けた運営戦略の包括的分析報告書</p>
-                <p>序論：次世代エンターテインメントとしてのA-SOULの定義</p>
-                <p>A-SOULは、中国のエンターテインメント大手である楽華娯楽（<strong style="color:var(--c1);">Yuehua
+</article>
+<article class="card">
+<h2><i class="fa-solid fa-book-open fa-xs" style="opacity:0.5;"></i> Overview</h2>
+<p>A-SOUL バーチャルアイドル・プロジェクトにおけるタレント管理、契約構造、および2026年に向けた運営戦略の包括的分析報告書</p>
+<p>序論：次世代エンターテインメントとしてのA-SOULの定義</p>
+<p>A-SOULは、中国のエンターテインメント大手である楽華娯楽（<strong style="color:var(--c1);">Yuehua
                         Entertainment</strong>）と、テクノロジー界の巨人であるバイトダンス（<strong style="color:var(--c1);">ByteDance /
-                        字節跳動</strong>）の戦略的提携によって2020年に産声を上げたバーチャルアイドルグループである 1。このプロジェクトは、単なるVTuber（<strong
-                        style="color:var(--c1);">バーチャルユーチューバー</strong>）の枠組みを超え、伝統的なアイドル育成モデルと最先端のリアルタイム・モーションキャプチャ技術、そして広大なプラットフォーム・エコシステムを融合させた「バーチャルアイドル」のプロトタイプとして設計された。
+                        字節跳動</strong>）の戦略的提携によって2020年に産声を上げたバーチャルアイドルグループである 1。このプロジェクトは、単なるVTuber（<strong style="color:var(--c1);">バーチャルユーチューバー</strong>）の枠組みを超え、伝統的なアイドル育成モデルと最先端のリアルタイム・モーションキャプチャ技術、そして広大なプラットフォーム・エコシステムを融合させた「バーチャルアイドル」のプロトタイプとして設計された。
                 </p>
-                <p>このプロジェクトの核心は、キャラクターの背後に存在する「中之人（<strong
-                        style="color:var(--c1);">中の人/演者</strong>）」が、ダンス、歌唱、トークにおいて専門的な訓練を受けたプロフェッショナルであるという点にある
-                    3。彼女たちは、バイトダンス傘下のゲームブランド「朝夕光年（<strong
-                        style="color:var(--c1);">Nuverse</strong>）」が提供する高度なレンダリング技術とモーションキャプチャ装置を介して、仮想都市「枝江（<strong
-                        style="color:var(--c1);">Zhi-Jiang</strong>）」に住むキャラクターとしてファンと交流する
-                    1。しかし、その成功の軌跡は決して平坦なものではなく、2022年の「珈楽（<strong
-                        style="color:var(--c1);">Carol</strong>）」の離脱や、2024年の運営権の完全移譲など、契約構造とタレント管理の在り方を問われる重大な局面を幾度も経験してきた
+<p>このプロジェクトの核心は、キャラクターの背後に存在する「中之人（<strong style="color:var(--c1);">中の人/演者</strong>）」が、ダンス、歌唱、トークにおいて専門的な訓練を受けたプロフェッショナルであるという点にある
+                    3。彼女たちは、バイトダンス傘下のゲームブランド「朝夕光年（<strong style="color:var(--c1);">Nuverse</strong>）」が提供する高度なレンダリング技術とモーションキャプチャ装置を介して、仮想都市「枝江（<strong style="color:var(--c1);">Zhi-Jiang</strong>）」に住むキャラクターとしてファンと交流する
+                    1。しかし、その成功の軌跡は決して平坦なものではなく、2022年の「珈楽（<strong style="color:var(--c1);">Carol</strong>）」の離脱や、2024年の運営権の完全移譲など、契約構造とタレント管理の在り方を問われる重大な局面を幾度も経験してきた
                     2。</p>
-                <p>本報告書では、A-SOUL所属タレントの個別契約状況、グループの構造的変遷、および運営主体である楽華娯楽が2026年に向けて展開する広範なタレントパイプラインとの相関関係について、業界分析の視点から詳述する。
+<p>本報告書では、A-SOUL所属タレントの個別契約状況、グループの構造的変遷、および運営主体である楽華娯楽が2026年に向けて展開する広範なタレントパイプラインとの相関関係について、業界分析の視点から詳述する。
                 </p>
-            </article>
-            <article class="card">
-                <h2><i class="fa-solid fa-music fa-xs" style="opacity:0.5;"></i> 第1章：A-SOULの組織構造と運営体制の変遷</h2>
-                <p>A-SOULの運営は、その歴史において二つの明確なフェーズに分かれる。この変遷を理解することは、現在のタレントの契約状況を把握する上で不可欠である。</p>
-            </article>
-            <article class="card">
-                <h2><i class="fa-solid fa-music fa-xs" style="opacity:0.5;"></i> 1.1 第1フェーズ：共同運営と技術的優位性（2020年 - 2024年4月）
+</article>
+<article class="card">
+<h2><i class="fa-solid fa-music fa-xs" style="opacity:0.5;"></i> 第1章：A-SOULの組織構造と運営体制の変遷</h2>
+<p>A-SOULの運営は、その歴史において二つの明確なフェーズに分かれる。この変遷を理解することは、現在のタレントの契約状況を把握する上で不可欠である。</p>
+</article>
+<article class="card">
+<h2><i class="fa-solid fa-music fa-xs" style="opacity:0.5;"></i> 1.1 第1フェーズ：共同運営と技術的優位性（2020年 - 2024年4月）
                 </h2>
-                <p>初期のA-SOULは、楽華娯楽が「タレントの選抜、訓練、コンテンツ制作」を、バイトダンス（<strong
-                        style="color:var(--c1);">朝夕光年</strong>）が「技術提供、プラットフォーム運用、資金提供」を分担する形で運営されていた 1。この時期、タレント（<strong
-                        style="color:var(--c1);">演者</strong>）は実質的に朝夕光年の技術チームと楽華娯楽のマネジメントチームの両方の影響下にあった。</p>
-                <p>技術プラットフォーム: バイトダンスは、VRデバイス「PICO」との連携を深め、仮想空間での没入型コンサートを実施するなど、技術面での差別化を図った 4。</p>
-                <p>マネジメント: 楽華娯楽の韓国および中国におけるアイドル育成ノウハウが投入され、従来のVTuberとは一線を画す高いパフォーマンス能力が維持された。</p>
-            </article>
-            <article class="card">
-                <h2><i class="fa-solid fa-music fa-xs" style="opacity:0.5;"></i> 1.2 第2フェーズ：楽華娯楽による完全垂直統合（2024年4月 - 現在）
+<p>初期のA-SOULは、楽華娯楽が「タレントの選抜、訓練、コンテンツ制作」を、バイトダンス（<strong style="color:var(--c1);">朝夕光年</strong>）が「技術提供、プラットフォーム運用、資金提供」を分担する形で運営されていた 1。この時期、タレント（<strong style="color:var(--c1);">演者</strong>）は実質的に朝夕光年の技術チームと楽華娯楽のマネジメントチームの両方の影響下にあった。</p>
+<p>技術プラットフォーム: バイトダンスは、VRデバイス「PICO」との連携を深め、仮想空間での没入型コンサートを実施するなど、技術面での差別化を図った 4。</p>
+<p>マネジメント: 楽華娯楽の韓国および中国におけるアイドル育成ノウハウが投入され、従来のVTuberとは一線を画す高いパフォーマンス能力が維持された。</p>
+</article>
+<article class="card">
+<h2><i class="fa-solid fa-music fa-xs" style="opacity:0.5;"></i> 1.2 第2フェーズ：楽華娯楽による完全垂直統合（2024年4月 - 現在）
                 </h2>
-                <p>2024年4月、バイトダンスがゲーム・バーチャルコンテンツ事業の戦略的縮小を決定したことに伴い、A-SOULのIP（<strong
-                        style="color:var(--c1);">知的財産</strong>）および運営権の全てが楽華娯楽に関連する「枝江娯楽（<strong
-                        style="color:var(--c1);">Zhijiang Entertainment</strong>）」へと完全に譲渡された
+<p>2024年4月、バイトダンスがゲーム・バーチャルコンテンツ事業の戦略的縮小を決定したことに伴い、A-SOULのIP（<strong style="color:var(--c1);">知的財産</strong>）および運営権の全てが楽華娯楽に関連する「枝江娯楽（<strong style="color:var(--c1);">Zhijiang Entertainment</strong>）」へと完全に譲渡された
                     2。この移譲は、プロジェクトの性質を「技術実験」から「純粋な芸能ビジネス」へと変貌させた。</p>
-                <p>この際、既存のタレント（<strong
-                        style="color:var(--c1);">演者</strong>）との契約も再交渉され、プロジェクトの継続性とタレント個人のキャリア形成の間で重要な選択が行われた 2。</p>
-            </article>
-            <article class="card">
-                <h2><i class="fa-solid fa-music fa-xs" style="opacity:0.5;"></i> 第2章：所属メンバーの個別分析と契約ステータス</h2>
-                <p>A-SOULは当初、向晩（<strong style="color:var(--c1);">Ava</strong>）、貝拉（<strong
-                        style="color:var(--c1);">Bella</strong>）、珈楽（<strong
-                        style="color:var(--c1);">Carol</strong>）、嘉然（<strong
-                        style="color:var(--c1);">Diana</strong>）、乃琳（<strong
-                        style="color:var(--c1);">Eileen</strong>）の5名で構成されていた 1。2026年に向けた現時点での各メンバーの詳細な状況は以下の通りである。</p>
-            </article>
-            <article class="card">
-                <h2><i class="fa-solid fa-music fa-xs" style="opacity:0.5;"></i> 2.1 現役メンバー：活動継続と新契約の締結</h2>
-                <p>2024年の運営権移譲を経て、現在もA-SOULとして活動しているのは嘉然、貝拉、乃琳の3名である。彼女たちは楽華娯楽（<strong
-                        style="color:var(--c1);">枝江娯楽</strong>）との間で新たな契約を結び、バーチャルアイドルとしての活動を継続している 2。</p>
-            </article>
-            <article class="card">
-                <h2><i class="fa-solid fa-music fa-xs" style="opacity:0.5;"></i> 2.2 活動終了メンバー：契約満了と離脱の背景</h2>
-                <p>グループの勢いに影を落としたのは、主力メンバーの離脱であった。これらはバーチャルアイドル業界における労働問題や、タレントの個人的なキャリア選択を浮き彫りにした。</p>
-                <p>珈楽（<strong style="color:var(--c1);">Carol</strong>）の事例は、中国のバーチャルアイドル市場におけるタレントの権利保護意識を高める契機となった
-                    5。一方、向晩（<strong
-                        style="color:var(--c1);">Ava</strong>）の離脱は、運営体制の変化に伴う「卒業」という形をとっており、バーチャルキャラクターとしてのIPは存続しつつも、特定の演者との関係を清算する形となった
+<p>この際、既存のタレント（<strong style="color:var(--c1);">演者</strong>）との契約も再交渉され、プロジェクトの継続性とタレント個人のキャリア形成の間で重要な選択が行われた 2。</p>
+</article>
+<article class="card">
+<h2><i class="fa-solid fa-music fa-xs" style="opacity:0.5;"></i> 第2章：所属メンバーの個別分析と契約ステータス</h2>
+<p>A-SOULは当初、向晩（<strong style="color:var(--c1);">Ava</strong>）、貝拉（<strong style="color:var(--c1);">Bella</strong>）、珈楽（<strong style="color:var(--c1);">Carol</strong>）、嘉然（<strong style="color:var(--c1);">Diana</strong>）、乃琳（<strong style="color:var(--c1);">Eileen</strong>）の5名で構成されていた 1。2026年に向けた現時点での各メンバーの詳細な状況は以下の通りである。</p>
+</article>
+<article class="card">
+<h2><i class="fa-solid fa-music fa-xs" style="opacity:0.5;"></i> 2.1 現役メンバー：活動継続と新契約の締結</h2>
+<p>2024年の運営権移譲を経て、現在もA-SOULとして活動しているのは嘉然、貝拉、乃琳の3名である。彼女たちは楽華娯楽（<strong style="color:var(--c1);">枝江娯楽</strong>）との間で新たな契約を結び、バーチャルアイドルとしての活動を継続している 2。</p>
+</article>
+<article class="card">
+<h2><i class="fa-solid fa-music fa-xs" style="opacity:0.5;"></i> 2.2 活動終了メンバー：契約満了と離脱の背景</h2>
+<p>グループの勢いに影を落としたのは、主力メンバーの離脱であった。これらはバーチャルアイドル業界における労働問題や、タレントの個人的なキャリア選択を浮き彫りにした。</p>
+<p>珈楽（<strong style="color:var(--c1);">Carol</strong>）の事例は、中国のバーチャルアイドル市場におけるタレントの権利保護意識を高める契機となった
+                    5。一方、向晩（<strong style="color:var(--c1);">Ava</strong>）の離脱は、運営体制の変化に伴う「卒業」という形をとっており、バーチャルキャラクターとしてのIPは存続しつつも、特定の演者との関係を清算する形となった
                     2。</p>
-            </article>
-            <article class="card">
-                <h2><i class="fa-solid fa-music fa-xs" style="opacity:0.5;"></i> 第3章：音楽レーベルと制作ユニットの構造</h2>
-                <p>A-SOULの音楽活動は、楽華娯楽が持つグローバルな音楽制作ネットワークに支えられている。その制作プロセスは、従来のアイドルの楽曲制作と変わらぬ高いクオリティコントロールが行われている。</p>
-            </article>
-            <article class="card">
-                <h2><i class="fa-solid fa-music fa-xs" style="opacity:0.5;"></i> 3.1 音楽レーベル：楽華円娯（Yuehua Music）</h2>
-                <p>A-SOULの主なレコードレーベルは「楽華円娯（<strong style="color:var(--c1);">Yuehua
+</article>
+<article class="card">
+<h2><i class="fa-solid fa-music fa-xs" style="opacity:0.5;"></i> 第3章：音楽レーベルと制作ユニットの構造</h2>
+<p>A-SOULの音楽活動は、楽華娯楽が持つグローバルな音楽制作ネットワークに支えられている。その制作プロセスは、従来のアイドルの楽曲制作と変わらぬ高いクオリティコントロールが行われている。</p>
+</article>
+<article class="card">
+<h2><i class="fa-solid fa-music fa-xs" style="opacity:0.5;"></i> 3.1 音楽レーベル：楽華円娯（Yuehua Music）</h2>
+<p>A-SOULの主なレコードレーベルは「楽華円娯（<strong style="color:var(--c1);">Yuehua
                         Rounder</strong>）」であり、楽曲の出版と配信、著作権管理を行っている
                     1。このレーベルは、楽華娯楽傘下の主要アーティストと同じ基盤を使用しており、マーケティングやプロモーションにおいても同社のリソースが活用されている。</p>
-            </article>
-            <article class="card">
-                <h2><i class="fa-solid fa-music fa-xs" style="opacity:0.5;"></i> 3.2 楽曲制作における主要クリエイターとユニット</h2>
-                <p>A-SOULの楽曲は、韓国のK-POPプロデューサーや日本のコンポーザー、そして欧米のソングライターを含む多国籍なチームによって制作されている。これは、A-SOULをグローバル基準のアイドルとして位置づける楽華娯楽の戦略の表れである
+</article>
+<article class="card">
+<h2><i class="fa-solid fa-music fa-xs" style="opacity:0.5;"></i> 3.2 楽曲制作における主要クリエイターとユニット</h2>
+<p>A-SOULの楽曲は、韓国のK-POPプロデューサーや日本のコンポーザー、そして欧米のソングライターを含む多国籍なチームによって制作されている。これは、A-SOULをグローバル基準のアイドルとして位置づける楽華娯楽の戦略の表れである
                     1。</p>
-                <p>このように、特定の社内クリエイターに限定せず、幅広い外部ユニットと協力する体制は、楽曲の多様性と鮮度を保つ要因となっている 7。</p>
-            </article>
-            <article class="card">
-                <h2><i class="fa-solid fa-music fa-xs" style="opacity:0.5;"></i> 第4章：2026年に向けた楽華娯楽の戦略的展望</h2>
-                <p>2026年は、楽華娯楽にとってA-SOULの継続的な運営だけでなく、実在のタレントとバーチャルタレントを統合した巨大なエンターテインメント・ポートフォリオを完成させる重要な年になると予測される。</p>
-            </article>
-            <article class="card">
-                <h2><i class="fa-solid fa-music fa-xs" style="opacity:0.5;"></i> 4.1 新規ボーイズグループ（Yuehua NBG）との相関</h2>
-                <p>楽華娯楽は、2026年に「ZEROBASEONE（<strong
-                        style="color:var(--c1);">ZB1</strong>）」の活動終了に伴い、所属メンバーであるジャン・ハオ（<strong
-                        style="color:var(--c1);">Zhang Hao</strong>）、リッキー（<strong
-                        style="color:var(--c1);">Ricky</strong>）、キム・ギュビン（<strong style="color:var(--c1);">Kim
+<p>このように、特定の社内クリエイターに限定せず、幅広い外部ユニットと協力する体制は、楽曲の多様性と鮮度を保つ要因となっている 7。</p>
+</article>
+<article class="card">
+<h2><i class="fa-solid fa-music fa-xs" style="opacity:0.5;"></i> 第4章：2026年に向けた楽華娯楽の戦略的展望</h2>
+<p>2026年は、楽華娯楽にとってA-SOULの継続的な運営だけでなく、実在のタレントとバーチャルタレントを統合した巨大なエンターテインメント・ポートフォリオを完成させる重要な年になると予測される。</p>
+</article>
+<article class="card">
+<h2><i class="fa-solid fa-music fa-xs" style="opacity:0.5;"></i> 4.1 新規ボーイズグループ（Yuehua NBG）との相関</h2>
+<p>楽華娯楽は、2026年に「ZEROBASEONE（<strong style="color:var(--c1);">ZB1</strong>）」の活動終了に伴い、所属メンバーであるジャン・ハオ（<strong style="color:var(--c1);">Zhang Hao</strong>）、リッキー（<strong style="color:var(--c1);">Ricky</strong>）、キム・ギュビン（<strong style="color:var(--c1);">Kim
                         Gyuvin</strong>）、ハン・ユジン（<strong style="color:var(--c1);">Han
                         Yujin</strong>）らを軸とした新グループのデビューを計画していると噂されている 9。</p>
-                <p>リソースの共有: A-SOULで培われたバーチャル演出技術（<strong
-                        style="color:var(--c1);">ホログラム、モーションキャプチャのライブ応用</strong>）は、実在のボーイズグループのステージ演出や、メタバース内でのファンミーティングに転用される可能性がある。
+<p>リソースの共有: A-SOULで培われたバーチャル演出技術（<strong style="color:var(--c1);">ホログラム、モーションキャプチャのライブ応用</strong>）は、実在のボーイズグループのステージ演出や、メタバース内でのファンミーティングに転用される可能性がある。
                 </p>
-                <p>ジャン・ハオのソロ活動とバーチャル展開:
+<p>ジャン・ハオのソロ活動とバーチャル展開:
                     ジャン・ハオのような個人での圧倒的な集客力を持つタレントを、バーチャルキャラクター化してA-SOULとコラボレーションさせるなどの、IPのクロスオーバー戦略も十分に考えられる 12。</p>
-            </article>
-            <article class="card">
-                <h2><i class="fa-solid fa-music fa-xs" style="opacity:0.5;"></i> 4.2 2026年の市場競争におけるA-SOULの役割</h2>
-                <p>2026年のアイドル市場は、SMエンタテインメントの新グループや「Boys Planet 2」系のグループなど、強力な競合がひしめく「激戦区」になると見られている
+</article>
+<article class="card">
+<h2><i class="fa-solid fa-music fa-xs" style="opacity:0.5;"></i> 4.2 2026年の市場競争におけるA-SOULの役割</h2>
+<p>2026年のアイドル市場は、SMエンタテインメントの新グループや「Boys Planet 2」系のグループなど、強力な競合がひしめく「激戦区」になると見られている
                     11。この中で、A-SOULは以下の独自の価値を提供する。</p>
-                <p>不滅のIP: 演者の交代や卒業はあれど、キャラクターとしてのA-SOULはブランドとして不滅であり、長期的なアーカイブとライセンスビジネスが可能である 5。</p>
-                <p>プラットフォームの深化: バイトダンスからの離脱後も、Bilibili等の既存プラットフォームとの協力関係を維持し、コミュニティ重視の運営を続けることで、安定した収益源を確保する 3。</p>
-                <p>グローバル展開の加速: 楽曲制作における国際的な連携を強化し、中国国内のみならず、東南アジアや日本、欧米市場への進出を模索する 8。</p>
-            </article>
-            <article class="card">
-                <h2><i class="fa-solid fa-music fa-xs" style="opacity:0.5;"></i> 第5章：バーチャルタレント管理におけるリスクと教訓</h2>
-                <p>A-SOULの歴史は、成功と同じくらい多くの「教訓」を業界に提供してきた。今後のアーカイブ構築において、これらのリスク要因を記録しておくことは重要である。</p>
-            </article>
-            <article class="card">
-                <h2><i class="fa-solid fa-music fa-xs" style="opacity:0.5;"></i> 5.1 「中之人」の待遇とアイデンティティ問題</h2>
-                <p>2022年の珈楽（<strong
-                        style="color:var(--c1);">Carol</strong>）離脱事件は、バーチャルアイドルの背後にいる演者が、過酷な労働環境や低賃金にさらされているという懸念をファンに抱かせた
-                    4。これは、企業がIP（<strong
-                        style="color:var(--c1);">キャラクター</strong>）の所有権を主張する一方で、その「魂」である演者を軽視した場合、ブランド全体が崩壊するリスク（<strong
-                        style="color:var(--c1);">塌房</strong>）があることを示した。</p>
-                <p>5.2 プライバシー保護と「開盒（<strong style="color:var(--c1);">Doxing</strong>）」</p>
-                <p>A-SOULのメンバーは、インターネット上での人肉捜索（<strong
-                        style="color:var(--c1);">Doxing</strong>）によって演者の素顔やプライバシーが暴かれる「開盒」の被害に頻繁に遭遇してきた
+<p>不滅のIP: 演者の交代や卒業はあれど、キャラクターとしてのA-SOULはブランドとして不滅であり、長期的なアーカイブとライセンスビジネスが可能である 5。</p>
+<p>プラットフォームの深化: バイトダンスからの離脱後も、Bilibili等の既存プラットフォームとの協力関係を維持し、コミュニティ重視の運営を続けることで、安定した収益源を確保する 3。</p>
+<p>グローバル展開の加速: 楽曲制作における国際的な連携を強化し、中国国内のみならず、東南アジアや日本、欧米市場への進出を模索する 8。</p>
+</article>
+<article class="card">
+<h2><i class="fa-solid fa-music fa-xs" style="opacity:0.5;"></i> 第5章：バーチャルタレント管理におけるリスクと教訓</h2>
+<p>A-SOULの歴史は、成功と同じくらい多くの「教訓」を業界に提供してきた。今後のアーカイブ構築において、これらのリスク要因を記録しておくことは重要である。</p>
+</article>
+<article class="card">
+<h2><i class="fa-solid fa-music fa-xs" style="opacity:0.5;"></i> 5.1 「中之人」の待遇とアイデンティティ問題</h2>
+<p>2022年の珈楽（<strong style="color:var(--c1);">Carol</strong>）離脱事件は、バーチャルアイドルの背後にいる演者が、過酷な労働環境や低賃金にさらされているという懸念をファンに抱かせた
+                    4。これは、企業がIP（<strong style="color:var(--c1);">キャラクター</strong>）の所有権を主張する一方で、その「魂」である演者を軽視した場合、ブランド全体が崩壊するリスク（<strong style="color:var(--c1);">塌房</strong>）があることを示した。</p>
+<p>5.2 プライバシー保護と「開盒（<strong style="color:var(--c1);">Doxing</strong>）」</p>
+<p>A-SOULのメンバーは、インターネット上での人肉捜索（<strong style="color:var(--c1);">Doxing</strong>）によって演者の素顔やプライバシーが暴かれる「開盒」の被害に頻繁に遭遇してきた
                     4。これは契約上の秘密保持義務を困難にするだけでなく、演者の精神的健康に深刻なダメージを与える。楽華娯楽は、新契約においてこれらのセキュリティ対策とタレントのメンタルケアを強化することが求められている。
                 </p>
-            </article>
-            <article class="card">
-                <h2><i class="fa-solid fa-music fa-xs" style="opacity:0.5;"></i> 第6章：A-SOULアーカイブのための技術的・法的構成</h2>
-                <p>アーカイブを構築するにあたり、以下の要素を構造化されたデータとして保持することを推奨する。</p>
-            </article>
-            <article class="card">
-                <h2><i class="fa-solid fa-music fa-xs" style="opacity:0.5;"></i> 6.1 所属タレントと契約情報の構造化</h2>
-            </article>
-            <article class="card">
-                <h2><i class="fa-solid fa-music fa-xs" style="opacity:0.5;"></i> 6.2 レーベルおよび外部パートナーとの連携</h2>
-                <p>A-SOULは単体で活動しているのではなく、広範なビジネスエコシステムの一部である。</p>
-                <p>唱片公司（<strong style="color:var(--c1);">レコード会社</strong>）: 楽華円娯。楽曲の企画、制作、マーケティングを統括 1。</p>
-                <p>配信プラットフォーム: Bilibili、Douyin（<strong
-                        style="color:var(--c1);">TikTok中国版</strong>）。技術的インフラとユーザーコミュニティを提供。</p>
-                <p>技術ベンダー: 旧朝夕光年チーム、および現在の社内R&D部門。モーションキャプチャ技術の保守と改善。</p>
-                <p>結論：バーチャルアイドルの永続性とアーカイブの意義</p>
-                <p>A-SOULの事例を詳細に調査した結果、バーチャルアイドルの運営は、伝統的な芸能プロダクションの機能（<strong
-                        style="color:var(--c1);">A&R、タレント開発、法務、マーケティング</strong>）と、高度なテクノロジー企業の機能が分かちがたく結びついたものであることが再確認された
+</article>
+<article class="card">
+<h2><i class="fa-solid fa-music fa-xs" style="opacity:0.5;"></i> 第6章：A-SOULアーカイブのための技術的・法的構成</h2>
+<p>アーカイブを構築するにあたり、以下の要素を構造化されたデータとして保持することを推奨する。</p>
+</article>
+<article class="card">
+<h2><i class="fa-solid fa-music fa-xs" style="opacity:0.5;"></i> 6.1 所属タレントと契約情報の構造化</h2>
+</article>
+<article class="card">
+<h2><i class="fa-solid fa-music fa-xs" style="opacity:0.5;"></i> 6.2 レーベルおよび外部パートナーとの連携</h2>
+<p>A-SOULは単体で活動しているのではなく、広範なビジネスエコシステムの一部である。</p>
+<p>唱片公司（<strong style="color:var(--c1);">レコード会社</strong>）: 楽華円娯。楽曲の企画、制作、マーケティングを統括 1。</p>
+<p>配信プラットフォーム: Bilibili、Douyin（<strong style="color:var(--c1);">TikTok中国版</strong>）。技術的インフラとユーザーコミュニティを提供。</p>
+<p>技術ベンダー: 旧朝夕光年チーム、および現在の社内R&amp;D部門。モーションキャプチャ技術の保守と改善。</p>
+<p>結論：バーチャルアイドルの永続性とアーカイブの意義</p>
+<p>A-SOULの事例を詳細に調査した結果、バーチャルアイドルの運営は、伝統的な芸能プロダクションの機能（<strong style="color:var(--c1);">A&amp;R、タレント開発、法務、マーケティング</strong>）と、高度なテクノロジー企業の機能が分かちがたく結びついたものであることが再確認された
                     14。</p>
-                <p>2024年の向晩の卒業と運営の完全移管は、プロジェクトにとって一つの時代の終わりを意味するが、同時に楽華娯楽による「バーチャルアイドルの産業化」という新しい章の始まりでもある
+<p>2024年の向晩の卒業と運営の完全移管は、プロジェクトにとって一つの時代の終わりを意味するが、同時に楽華娯楽による「バーチャルアイドルの産業化」という新しい章の始まりでもある
                     2。2026年に向けて、A-SOULは嘉然、貝拉、乃琳の3名を中心に、実在のアイドルグループ（<strong style="color:var(--c1);">Yuehua
                         NBG等</strong>）と相互に影響を与え合いながら、エンターテインメントの新しい境界線を定義し続けるだろう。</p>
-                <p>アーカイブ構築担当者にとっては、単なる配信内容の記録に留まらず、本報告書で示したような契約構造の変化、企業間の権利移譲、そして演者の交代という「バーチャルとリアルの狭間」で起きるダイナミズムを詳細に記述することが、歴史的価値を持つアーカイブ作成に繋がるのである。A-SOULというプロジェクトは、まさに「魂」が入れ替わり、形態が変わっても存続し続ける「ブランドとしてのアイドル」の先駆的なモデルケースであり、その全容を把握することは、次世代のVTuber運営にとっても極めて有益な知見となるはずである。
+<p>アーカイブ構築担当者にとっては、単なる配信内容の記録に留まらず、本報告書で示したような契約構造の変化、企業間の権利移譲、そして演者の交代という「バーチャルとリアルの狭間」で起きるダイナミズムを詳細に記述することが、歴史的価値を持つアーカイブ作成に繋がるのである。A-SOULというプロジェクトは、まさに「魂」が入れ替わり、形態が変わっても存続し続ける「ブランドとしてのアイドル」の先駆的なモデルケースであり、その全容を把握することは、次世代のVTuber運営にとっても極めて有益な知見となるはずである。
                 </p>
-            </article>
-            <article class="card">
-                <h2><i class="fa-solid fa-music fa-xs" style="opacity:0.5;"></i> 引用文献</h2>
-                <p>A-SOUL - 维基百科，自由的百科全书, 3月 5, 2026にアクセス、 https://zh.wikipedia.org/zh-cn/A-SOUL</p>
-                <p>A-SOUL - 維基百科，自由的百科全書, 3月 5, 2026にアクセス、 https://zh.wikipedia.org/zh-tw/A-SOUL</p>
-                <p>【特写】A-SOUL虚拟主播休眠后，一个年轻粉丝群体的抗争与失落 - 界面新闻, 3月 5, 2026にアクセス、
+</article>
+<article class="card">
+<h2><i class="fa-solid fa-music fa-xs" style="opacity:0.5;"></i> 引用文献</h2>
+<p>A-SOUL - 维基百科，自由的百科全书, 3月 5, 2026にアクセス、 https://zh.wikipedia.org/zh-cn/A-SOUL</p>
+<p>A-SOUL - 維基百科，自由的百科全書, 3月 5, 2026にアクセス、 https://zh.wikipedia.org/zh-tw/A-SOUL</p>
+<p>【特写】A-SOUL虚拟主播休眠后，一个年轻粉丝群体的抗争与失落 - 界面新闻, 3月 5, 2026にアクセス、
                     https://www.jiemian.com/article/7523239.html</p>
-                <p>乐华3000万收购A-SOUL，被撕碎的虚拟偶像梦却难弥补 - 维科号, 3月 5, 2026にアクセス、 https://mp.ofweek.com/ce/a156714697407</p>
-                <p>从偶像代表到一朝散场，虚拟女团塌房记 - 澎湃新闻, 3月 5, 2026にアクセス、 https://www.thepaper.cn/newsDetail_forward_18099420</p>
-                <p>A-SOUL成员嘉然、乃琳实力吸粉，展现自身含金量 - 凤凰网, 3月 5, 2026にアクセス、 https://i.ifeng.com/c/8H3AjPsAMyl</p>
-                <p>UTA - TINYVOICE PRODUCTION, 3月 5, 2026にアクセス、 https://www.tinyvoice.com/works/?category=uta</p>
-                <p>アフターソウル、「最低のふたり」を配信開始 - THE MAGAZINE, 3月 5, 2026にアクセス、
+<p>乐华3000万收购A-SOUL，被撕碎的虚拟偶像梦却难弥补 - 维科号, 3月 5, 2026にアクセス、 https://mp.ofweek.com/ce/a156714697407</p>
+<p>从偶像代表到一朝散场，虚拟女团塌房记 - 澎湃新闻, 3月 5, 2026にアクセス、 https://www.thepaper.cn/newsDetail_forward_18099420</p>
+<p>A-SOUL成员嘉然、乃琳实力吸粉，展现自身含金量 - 凤凰网, 3月 5, 2026にアクセス、 https://i.ifeng.com/c/8H3AjPsAMyl</p>
+<p>UTA - TINYVOICE PRODUCTION, 3月 5, 2026にアクセス、 https://www.tinyvoice.com/works/?category=uta</p>
+<p>アフターソウル、「最低のふたり」を配信開始 - THE MAGAZINE, 3月 5, 2026にアクセス、
                     https://magazine.tunecore.co.jp/newrelease/626685/</p>
-                <p>Predictions for Yuehua's new boy group members : r/zerobaseone - Reddit, 3月 5, 2026にアクセス、
+<p>Predictions for Yuehua's new boy group members : r/zerobaseone - Reddit, 3月 5, 2026にアクセス、
                     https://www.reddit.com/r/zerobaseone/comments/1pherhk/predictions_for_yuehuas_new_boy_group_members/
                 </p>
-                <p>Yuehua New Boy Group 2026 Member Predictions : r/kpopthoughts - Reddit, 3月 5, 2026にアクセス、
+<p>Yuehua New Boy Group 2026 Member Predictions : r/kpopthoughts - Reddit, 3月 5, 2026にアクセス、
                     https://www.reddit.com/r/kpopthoughts/comments/1pk5mhi/yuehua_new_boy_group_2026_member_predictions/
                 </p>
-                <p>New Yuehua Boy Group Information (2026 debut) : r/kpopthoughts - Reddit, 3月 5, 2026にアクセス、
+<p>New Yuehua Boy Group Information (2026 debut) : r/kpopthoughts - Reddit, 3月 5, 2026にアクセス、
                     https://www.reddit.com/r/kpopthoughts/comments/1mzarbi/new_yuehua_boy_group_information_2026_debut/
                 </p>
-                <p>yuehua's future plans : r/ZhangHao - Reddit, 3月 5, 2026にアクセス、
+<p>yuehua's future plans : r/ZhangHao - Reddit, 3月 5, 2026にアクセス、
                     https://www.reddit.com/r/ZhangHao/comments/1q814s1/yuehuas_future_plans/</p>
-                <p>A-SOUL乃琳、贝拉超高人气，引领虚拟偶像新势力, 3月 5, 2026にアクセス、 https://i.ifeng.com/c/8H1lLIcqHDv</p>
-                <p>Organization of a Record Label - How Record Labels Work | HowStuffWorks - Entertainment, 3月 5,
+<p>A-SOUL乃琳、贝拉超高人气，引领虚拟偶像新势力, 3月 5, 2026にアクセス、 https://i.ifeng.com/c/8H1lLIcqHDv</p>
+<p>Organization of a Record Label - How Record Labels Work | HowStuffWorks - Entertainment, 3月 5,
                     2026にアクセス、 https://entertainment.howstuffworks.com/record-label1.htm</p>
-                <p>What Is a Record Label: A Comprehensive Guide - Mogul, 3月 5, 2026にアクセス、
+<p>What Is a Record Label: A Comprehensive Guide - Mogul, 3月 5, 2026にアクセス、
                     https://www.usemogul.com/post/what-is-a-record-label-a-comprehensive-guide</p>
-            </article>
-
-            <article class="card roster-section">
-                <h2><i class="fa-solid fa-users"></i> TALENT ROSTER</h2>
-                <div class="member-grid">
-                    <a href="characters/bella.html" class="member-card">
-                        <span class="member-name">BELLA</span>
-                        <span class="member-en">貝拉 (ベラ)</span>
-                        <p class="member-status">リーダー、ダンス担当。高いダンススキルを持ち、グループを牽引する存在。</p>
-                        <div class="member-tags">
-                            <span class="member-tag">Leader</span>
-                            <span class="member-tag">Dancer</span>
-                            <span class="member-tag">Cancer</span>
-                        </div>
-                    </a>
-                    <a href="characters/diana.html" class="member-card">
-                        <span class="member-name">DIANA</span>
-                        <span class="member-en">嘉然 (ダイアナ)</span>
-                        <p class="member-status">かわいい担当。愛らしいキャラクターで、ファンとの交流を大切にする中心的人気メンバー。</p>
-                        <div class="member-tags">
-                            <span class="member-tag">Cute</span>
-                            <span class="member-tag">Idol</span>
-                            <span class="member-tag">Pisces</span>
-                        </div>
-                    </a>
-                    <a href="characters/eileen.html" class="member-card">
-                        <span class="member-name">EILEEN</span>
-                        <span class="member-en">乃琳 (アイリーン)</span>
-                        <p class="member-status">お姉ちゃん担当。MCを務めることが多く、トーク進行や知識の共有が得意。</p>
-                        <div class="member-tags">
-                            <span class="member-tag">MC</span>
-                            <span class="member-tag">Knowledge</span>
-                            <span class="member-tag">Leo</span>
-                        </div>
-                    </a>
-                </div>
-            </article>
-        </div>
-    </main>
-
-    <footer
-        style="text-align:center; padding:4rem; margin-top:5rem; opacity:0.5; font-family:'Montserrat', sans-serif; letter-spacing:3px; font-size: 0.9rem;">
-        &copy; 2026 VTuber Archive Project - A-SOUL Databank.
+</article>
+<article class="card roster-section">
+<h2><i class="fa-solid fa-users"></i> TALENT ROSTER</h2>
+<div class="member-grid">
+<a class="member-card" href="characters/bella.html">
+<span class="member-name">BELLA</span>
+<span class="member-en">貝拉 (ベラ)</span>
+<p class="member-status">リーダー、ダンス担当。高いダンススキルを持ち、グループを牽引する存在。</p>
+<div class="member-tags">
+<span class="member-tag">Leader</span>
+<span class="member-tag">Dancer</span>
+<span class="member-tag">Cancer</span>
+</div>
+</a>
+<a class="member-card" href="characters/diana.html">
+<span class="member-name">DIANA</span>
+<span class="member-en">嘉然 (ダイアナ)</span>
+<p class="member-status">かわいい担当。愛らしいキャラクターで、ファンとの交流を大切にする中心的人気メンバー。</p>
+<div class="member-tags">
+<span class="member-tag">Cute</span>
+<span class="member-tag">Idol</span>
+<span class="member-tag">Pisces</span>
+</div>
+</a>
+<a class="member-card" href="characters/eileen.html">
+<span class="member-name">EILEEN</span>
+<span class="member-en">乃琳 (アイリーン)</span>
+<p class="member-status">お姉ちゃん担当。MCを務めることが多く、トーク進行や知識の共有が得意。</p>
+<div class="member-tags">
+<span class="member-tag">MC</span>
+<span class="member-tag">Knowledge</span>
+<span class="member-tag">Leo</span>
+</div>
+</a>
+</div>
+</article>
+</div>
+</main>
+<footer style="text-align:center; padding:4rem; margin-top:5rem; opacity:0.5; font-family:'Montserrat', sans-serif; letter-spacing:3px; font-size: 0.9rem;">
+        © 2026 VTuber Archive Project - A-SOUL Databank.
     </footer>
-
-
-    <script>
+<script>
         document.addEventListener('DOMContentLoaded', () => {
             const cards = document.querySelectorAll('.card');
             cards.forEach(card => card.classList.add('reveal'));
@@ -271,7 +234,5 @@
             cards.forEach(card => observer.observe(card));
         });
     </script>
-
-</body>
-
+<div class="mobile-mode-banner" style="background: #ffc83d; color: #000; text-align: center; font-size: 0.85rem; padding: 4px; font-weight: 900; position: fixed; bottom: 0; width: 100%; z-index: 9999; box-shadow: 0 -2px 10px rgba(255, 200, 60, 0.4);" v-if="isMobile">🚀 Mobile Light Mode (Powered by Vue Virtual DOM)</div></div></body>
 </html>

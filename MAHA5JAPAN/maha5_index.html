@@ -1,132 +1,121 @@
 <!DOCTYPE html>
+
 <html lang="ja">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MAHA5JAPAN | VTuber Archive</title>
-    <meta name="description" content="MAHA5JAPANの非公式ファンサイト。MAHA5JAPANの所属メンバーや概要をまとめた非公式アーカイブ。">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&family=Noto+Sans+JP:wght@400;700;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="maha5.css">
-</head>
-
-<body>
-
-    <div class="uo-bg">
-        <!-- Bubbles effect in CSS -->
-        <div class="uo-bubbles"></div>
-    </div>
-
-    <nav class="uo-nav">
-        <a href="../index.html" class="uo-nav-back">
-            <i class="fa-solid fa-chevron-left"></i> BACK TO HUB
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MAHA5JAPAN | VTuber Archive</title>
+<meta content="MAHA5JAPANの非公式ファンサイト。MAHA5JAPANの所属メンバーや概要をまとめた非公式アーカイブ。" name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&amp;family=Noto+Sans+JP:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="maha5.css" rel="stylesheet"/>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><style>[v-cloak] { display: none; } </style></head>
+<body><div id="app" v-cloak="">
+<div class="uo-bg" v-if="!isMobile">
+<!-- Bubbles effect in CSS -->
+<div class="uo-bubbles"></div>
+</div>
+<nav class="uo-nav">
+<a class="uo-nav-back" href="../index.html">
+<i class="fa-solid fa-chevron-left"></i> BACK TO HUB
         </a>
-        <div class="uo-nav-logo">MAHA5JAPAN</div>
-        <div class="uo-nav-tag">VTuber Project</div>
-    </nav>
-
-    <!-- HERO -->
-    <section class="uo-hero">
-        <div class="uo-hero-bg-text">UO</div>
-        <div class="uo-hero-content">
-            <div class="uo-eyebrow">Virtual YouTuber Project</div>
-            <h1 class="uo-hero-name">MAHA5JAPAN</h1>
-            <p class="uo-hero-tagline">MAHA5JAPAN アーカイブ</p>
-            <div class="uo-hero-concept">インドネシア最大手のMAHA5の日本支部。アニメやオタク文化を通じた国際交流をコンセプトに、20名以上のライバーが活動中。</div>
-            <div class="uo-hero-stats">
-                <div class="uo-stat">
-                    <div class="uo-stat-value">5</div>
-                    <div class="uo-stat-label">MEMBERS</div>
-                </div>
-                <div class="uo-stat">
-                    <div class="uo-stat-value">株式会社レントラックス</div>
-                    <div class="uo-stat-label">OPERATION</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- INFO -->
-    <div class="uo-container">
-        <section class="uo-section uo-reveal">
-            <div class="uo-section-header">
-                <span class="uo-section-num">01</span>
-                <div>
-                    <h2 class="uo-section-title">プロジェクト概要</h2>
-                    <span class="uo-section-title-sub">ABOUT</span>
-                </div>
-                <div class="uo-divider"></div>
-            </div>
-            <div class="uo-info-grid">
-                <div class="uo-info-card">
-                    <h3>🇮🇩 国際的なバックボーン</h3>
-                    <p>インドネシアでの圧倒的なノウハウを活かし、日本、インドネシア、そして世界を繋ぐ活動を展開。</p>
-                </div>
-                <div class="uo-info-card">
-                    <h3>🌈 多彩な個性</h3>
-                    <p>所属ノルマを設けず、ライバー一人ひとりの得意ジャンルやスタイルを最大限に尊重した運営を行っています。</p>
-                </div>
-                <div class="uo-info-card">
-                    <h3>🤝 プロプロからの移籍</h3>
-                    <p>他事務所からの移籍ユニットも加わり、より層の厚いエンターテインメント・グループへと進化しています。</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- ROSTER -->
-        <section class="uo-section uo-reveal">
-            <div class="uo-section-header">
-                <span class="uo-section-num">02</span>
-                <div>
-                    <h2 class="uo-section-title">所属メンバー</h2>
-                    <span class="uo-section-title-sub">MEMBERS</span>
-                </div>
-                <div class="uo-divider"></div>
-            </div>
-
-            <!-- Members -->
-            <div class="uo-member-grid">
-                <div class="uo-member-card" onclick="window.location.href='characters/緋撃燐/緋撃燐.html'">
-                    <h3 class="uo-member-name">緋撃燐</h3>
-                    <div class="uo-member-read">緋撃燐</div>
-                    <p class="uo-member-ep">所属メンバー「緋撃燐」の個別アーカイブページです。</p>
-                </div>
-                <div class="uo-member-card" onclick="window.location.href='characters/面椿no9/面椿no9.html'">
-                    <h3 class="uo-member-name">面椿No.9</h3>
-                    <div class="uo-member-read">面椿No.9</div>
-                    <p class="uo-member-ep">所属メンバー「面椿No.9」の個別アーカイブページです。</p>
-                </div>
-                <div class="uo-member-card" onclick="window.location.href='characters/雅桜おみ/雅桜おみ.html'">
-                    <h3 class="uo-member-name">雅桜おみ</h3>
-                    <div class="uo-member-read">雅桜おみ</div>
-                    <p class="uo-member-ep">所属メンバー「雅桜おみ」の個別アーカイブページです。</p>
-                </div>
-                <div class="uo-member-card" onclick="window.location.href='characters/音成モカ/音成モカ.html'">
-                    <h3 class="uo-member-name">音成モカ</h3>
-                    <div class="uo-member-read">音成モカ</div>
-                    <p class="uo-member-ep">所属メンバー「音成モカ」の個別アーカイブページです。</p>
-                </div>
-                <div class="uo-member-card" onclick="window.location.href='characters/海月ゆる/海月ゆる.html'">
-                    <h3 class="uo-member-name">海月ゆる</h3>
-                    <div class="uo-member-read">海月ゆる</div>
-                    <p class="uo-member-ep">所属メンバー「海月ゆる」の個別アーカイブページです。</p>
-                </div></div>
-        </section>
-    </div>
-
-    <footer class="uo-footer">
-        <div class="uo-footer-logo">MAHA5JAPAN</div>
-        <p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with official management.
+<div class="uo-nav-logo">MAHA5JAPAN</div>
+<div class="uo-nav-tag">VTuber Project</div>
+</nav>
+<!-- HERO -->
+<section class="uo-hero">
+<div class="uo-hero-bg-text" v-if="!isMobile">UO</div>
+<div class="uo-hero-content">
+<div class="uo-eyebrow">Virtual YouTuber Project</div>
+<h1 class="uo-hero-name">MAHA5JAPAN</h1>
+<p class="uo-hero-tagline">MAHA5JAPAN アーカイブ</p>
+<div class="uo-hero-concept">インドネシア最大手のMAHA5の日本支部。アニメやオタク文化を通じた国際交流をコンセプトに、20名以上のライバーが活動中。</div>
+<div class="uo-hero-stats">
+<div class="uo-stat">
+<div class="uo-stat-value">5</div>
+<div class="uo-stat-label">MEMBERS</div>
+</div>
+<div class="uo-stat">
+<div class="uo-stat-value">株式会社レントラックス</div>
+<div class="uo-stat-label">OPERATION</div>
+</div>
+</div>
+</div>
+</section>
+<!-- INFO -->
+<div class="uo-container">
+<section class="uo-section uo-reveal">
+<div class="uo-section-header">
+<span class="uo-section-num">01</span>
+<div>
+<h2 class="uo-section-title">プロジェクト概要</h2>
+<span class="uo-section-title-sub">ABOUT</span>
+</div>
+<div class="uo-divider"></div>
+</div>
+<div class="uo-info-grid">
+<div class="uo-info-card">
+<h3>🇮🇩 国際的なバックボーン</h3>
+<p>インドネシアでの圧倒的なノウハウを活かし、日本、インドネシア、そして世界を繋ぐ活動を展開。</p>
+</div>
+<div class="uo-info-card">
+<h3>🌈 多彩な個性</h3>
+<p>所属ノルマを設けず、ライバー一人ひとりの得意ジャンルやスタイルを最大限に尊重した運営を行っています。</p>
+</div>
+<div class="uo-info-card">
+<h3>🤝 プロプロからの移籍</h3>
+<p>他事務所からの移籍ユニットも加わり、より層の厚いエンターテインメント・グループへと進化しています。</p>
+</div>
+</div>
+</section>
+<!-- ROSTER -->
+<section class="uo-section uo-reveal">
+<div class="uo-section-header">
+<span class="uo-section-num">02</span>
+<div>
+<h2 class="uo-section-title">所属メンバー</h2>
+<span class="uo-section-title-sub">MEMBERS</span>
+</div>
+<div class="uo-divider"></div>
+</div>
+<!-- Members -->
+<div class="uo-member-grid">
+<div class="uo-member-card" onclick="window.location.href='characters/緋撃燐/緋撃燐.html'">
+<h3 class="uo-member-name">緋撃燐</h3>
+<div class="uo-member-read">緋撃燐</div>
+<p class="uo-member-ep">所属メンバー「緋撃燐」の個別アーカイブページです。</p>
+</div>
+<div class="uo-member-card" onclick="window.location.href='characters/面椿no9/面椿no9.html'">
+<h3 class="uo-member-name">面椿No.9</h3>
+<div class="uo-member-read">面椿No.9</div>
+<p class="uo-member-ep">所属メンバー「面椿No.9」の個別アーカイブページです。</p>
+</div>
+<div class="uo-member-card" onclick="window.location.href='characters/雅桜おみ/雅桜おみ.html'">
+<h3 class="uo-member-name">雅桜おみ</h3>
+<div class="uo-member-read">雅桜おみ</div>
+<p class="uo-member-ep">所属メンバー「雅桜おみ」の個別アーカイブページです。</p>
+</div>
+<div class="uo-member-card" onclick="window.location.href='characters/音成モカ/音成モカ.html'">
+<h3 class="uo-member-name">音成モカ</h3>
+<div class="uo-member-read">音成モカ</div>
+<p class="uo-member-ep">所属メンバー「音成モカ」の個別アーカイブページです。</p>
+</div>
+<div class="uo-member-card" onclick="window.location.href='characters/海月ゆる/海月ゆる.html'">
+<h3 class="uo-member-name">海月ゆる</h3>
+<div class="uo-member-read">海月ゆる</div>
+<p class="uo-member-ep">所属メンバー「海月ゆる」の個別アーカイブページです。</p>
+</div></div>
+</section>
+</div>
+<footer class="uo-footer">
+<div class="uo-footer-logo">MAHA5JAPAN</div>
+<p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with official management.
         </p>
-    </footer>
-
-    <script src="maha5_script.js"></script>
-    <script>
+</footer>
+<script src="maha5_script.js"></script>
+<script>
         document.addEventListener('DOMContentLoaded', () => {
             const reveals = document.querySelectorAll('.uo-reveal');
             const observer = new IntersectionObserver((entries) => {
@@ -144,7 +133,5 @@
             });
         });
     </script>
-
-</body>
-
+<div class="mobile-mode-banner" style="background: #ffc83d; color: #000; text-align: center; font-size: 0.85rem; padding: 4px; font-weight: 900; position: fixed; bottom: 0; width: 100%; z-index: 9999; box-shadow: 0 -2px 10px rgba(255, 200, 60, 0.4);" v-if="isMobile">🚀 Mobile Light Mode (Powered by Vue Virtual DOM)</div></div></body>
 </html>

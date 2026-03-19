@@ -1,168 +1,148 @@
 <!DOCTYPE html>
+
 <html lang="ja">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VRegion | VTuber Archive</title>
-    <meta name="description" content="地方創生を主目的としたVTuber事務所「VRegion」の非公式ファンサイト。各地域の魅力をお届けする所属タレント一覧。">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="vregion.css">
-</head>
-
-<body>
-
-    <div class="vr-bg">
-        <div class="vr-bg-pattern"></div>
-        <div class="vr-bg-gradient"></div>
-    </div>
-
-    <nav class="vr-nav">
-        <a href="../index.html" class="vr-nav-back">
-            <i class="fa-solid fa-train"></i> HUB
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VRegion | VTuber Archive</title>
+<meta content="地方創生を主目的としたVTuber事務所「VRegion」の非公式ファンサイト。各地域の魅力をお届けする所属タレント一覧。" name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;700;900&amp;family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="vregion.css" rel="stylesheet"/>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><style>[v-cloak] { display: none; } </style></head>
+<body><div id="app" v-cloak="">
+<div class="vr-bg" v-if="!isMobile">
+<div class="vr-bg-pattern" v-if="!isMobile"></div>
+<div class="vr-bg-gradient" v-if="!isMobile"></div>
+</div>
+<nav class="vr-nav">
+<a class="vr-nav-back" href="../index.html">
+<i class="fa-solid fa-train"></i> HUB
         </a>
-        <div class="vr-nav-logo">
-            <i class="fa-solid fa-mountain-sun vr-logo-icon"></i>
+<div class="vr-nav-logo">
+<i class="fa-solid fa-mountain-sun vr-logo-icon"></i>
             VRegion <span>地方創生VTuber</span>
-        </div>
-        <div class="vr-nav-tag">LOCAL REVITALIZATION</div>
-    </nav>
-
-    <!-- HERO -->
-    <section class="vr-hero">
-        <div class="vr-map-nodes">
-            <div class="vr-node node-kanto" style="top: 65%; left: 62%;"></div>
-            <div class="vr-node node-chubu" style="top: 55%; left: 55%;"></div>
-            <div class="vr-node node-kansai" style="top: 62%; left: 48%;"></div>
-            <div class="vr-node node-chugoku" style="top: 60%; left: 40%;"></div>
-            <div class="vr-node node-shikoku" style="top: 70%; left: 42%;"></div>
-        </div>
-        <div class="vr-hero-bg-text">LOCAL</div>
-        <div class="vr-hero-content">
-            <div class="vr-eyebrow"><i class="fa-solid fa-map-pin"></i> DISCOVER JAPAN</div>
-            <h1 class="vr-hero-name">VRegion</h1>
-            <p class="vr-hero-tagline">“バーチャルの力で、地域の魅力を全国へ”</p>
-            <div class="vr-hero-concept">
-                地方創生を主目的としたVTuber事務所です。<br><br>
+</div>
+<div class="vr-nav-tag">LOCAL REVITALIZATION</div>
+</nav>
+<!-- HERO -->
+<section class="vr-hero">
+<div class="vr-map-nodes">
+<div class="vr-node node-kanto" style="top: 65%; left: 62%;"></div>
+<div class="vr-node node-chubu" style="top: 55%; left: 55%;"></div>
+<div class="vr-node node-kansai" style="top: 62%; left: 48%;"></div>
+<div class="vr-node node-chugoku" style="top: 60%; left: 40%;"></div>
+<div class="vr-node node-shikoku" style="top: 70%; left: 42%;"></div>
+</div>
+<div class="vr-hero-bg-text" v-if="!isMobile">LOCAL</div>
+<div class="vr-hero-content">
+<div class="vr-eyebrow"><i class="fa-solid fa-map-pin"></i> DISCOVER JAPAN</div>
+<h1 class="vr-hero-name">VRegion</h1>
+<p class="vr-hero-tagline">“バーチャルの力で、地域の魅力を全国へ”</p>
+<div class="vr-hero-concept">
+                地方創生を主目的としたVTuber事務所です。<br/><br/>
                 担当地域を深く愛する個性豊かなバーチャルタレントたちが、日々のライブ配信や動画などを通して、各都道府県の観光地、特産品、歴史、そして地元のあたたかさをお届けします。画面の向こう側の「新しいふるさと」を見つけに行きませんか。
             </div>
-            <div class="vr-hero-stats">
-                <div class="vr-stat">
-                    <div class="vr-stat-value">7</div>
-                    <div class="vr-stat-label">PREFECTURES</div>
-                </div>
-                <div class="vr-stat">
-                    <div class="vr-stat-value"><i class="fa-solid fa-leaf vr-stat-icon"></i></div>
-                    <div class="vr-stat-label">NATURE & CULTURE</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ROSTER -->
-    <div class="vr-container">
-
-        <section class="vr-section vr-reveal">
-            <div class="vr-section-header">
-                <div>
-                    <h2 class="vr-section-title">所属タレント</h2>
-                    <span class="vr-section-title-sub">Local Ambassadors</span>
-                </div>
-                <div class="vr-divider"></div>
-            </div>
-
-            <div class="vr-member-grid">
-
-                <!-- 桃源龍 くぐい (神奈川) -->
-                <div class="vr-member-card">
-                    <div class="vr-pref-tag vr-color-kanto">神奈川県</div>
-                    <div class="vr-card-inner">
-                        <div class="vr-member-icon"><i class="fa-solid fa-dragon"></i></div>
-                        <a href="characters/kugui.html" class="vr-member-name">桃源龍 くぐい</a>
-                        <div class="vr-member-read">Tougenryu Kugui</div>
-                    </div>
-                </div>
-
-                <!-- 幸魂 天 (埼玉) -->
-                <div class="vr-member-card">
-                    <div class="vr-pref-tag vr-color-kanto">埼玉県</div>
-                    <div class="vr-card-inner">
-                        <div class="vr-member-icon"><i class="fa-solid fa-bowl-food"></i></div>
-                        <a href="characters/ten.html" class="vr-member-name">幸魂 天</a>
-                        <div class="vr-member-read">Sachitama Ten</div>
-                    </div>
-                </div>
-
-                <!-- 白雪 ほたる (富山) -->
-                <div class="vr-member-card">
-                    <div class="vr-pref-tag vr-color-chubu">富山県</div>
-                    <div class="vr-card-inner">
-                        <div class="vr-member-icon"><i class="fa-solid fa-snowflake"></i></div>
-                        <a href="characters/hotaru.html" class="vr-member-name">白雪 ほたる</a>
-                        <div class="vr-member-read">Shirayuki Hotaru</div>
-                    </div>
-                </div>
-
-                <!-- 三ツ矢凪 (広島) -->
-                <div class="vr-member-card">
-                    <div class="vr-pref-tag vr-color-chugoku">広島県</div>
-                    <div class="vr-card-inner">
-                        <div class="vr-member-icon"><i class="fa-brands fa-envira"></i></div>
-                        <a href="characters/nagi.html" class="vr-member-name">三ツ矢 凪</a>
-                        <div class="vr-member-read">Mitsuya Nagi</div>
-                    </div>
-                </div>
-
-                <!-- 夢成夏月 (山口) -->
-                <div class="vr-member-card">
-                    <div class="vr-pref-tag vr-color-chugoku">山口県</div>
-                    <div class="vr-card-inner">
-                        <div class="vr-member-icon"><i class="fa-solid fa-moon"></i></div>
-                        <a href="characters/natsuki.html" class="vr-member-name">夢成 夏月</a>
-                        <div class="vr-member-read">Yumenari Natsuki</div>
-                    </div>
-                </div>
-
-                <!-- 天ノ守露 (大阪) -->
-                <div class="vr-member-card">
-                    <div class="vr-pref-tag vr-color-kansai">大阪府</div>
-                    <div class="vr-card-inner">
-                        <div class="vr-member-icon"><i class="fa-solid fa-droplet"></i></div>
-                        <a href="characters/tsuyu.html" class="vr-member-name">天ノ守 露</a>
-                        <div class="vr-member-read">Amanomori Tsuyu</div>
-                    </div>
-                </div>
-
-                <!-- 猫目詩 (愛媛) -->
-                <div class="vr-member-card">
-                    <div class="vr-pref-tag vr-color-shikoku">愛媛県</div>
-                    <div class="vr-card-inner">
-                        <div class="vr-member-icon"><i class="fa-solid fa-cat"></i></div>
-                        <a href="characters/uta.html" class="vr-member-name">猫目 詩</a>
-                        <div class="vr-member-read">Nekome Uta</div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-    </div>
-
-    <footer class="vr-footer">
-        <div class="vr-footer-logo">
-            <i class="fa-solid fa-mountain-sun"></i> VRegion <span>(地方創生VTuber)</span>
-        </div>
-        <div class="vr-footer-concept">LOCAL REVITALIZATION</div>
-        <p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with VRegion.</p>
-    </footer>
-
-    <script src="vregion_script.js"></script>
-    <script>
+<div class="vr-hero-stats">
+<div class="vr-stat">
+<div class="vr-stat-value">7</div>
+<div class="vr-stat-label">PREFECTURES</div>
+</div>
+<div class="vr-stat">
+<div class="vr-stat-value"><i class="fa-solid fa-leaf vr-stat-icon"></i></div>
+<div class="vr-stat-label">NATURE &amp; CULTURE</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ROSTER -->
+<div class="vr-container">
+<section class="vr-section vr-reveal">
+<div class="vr-section-header">
+<div>
+<h2 class="vr-section-title">所属タレント</h2>
+<span class="vr-section-title-sub">Local Ambassadors</span>
+</div>
+<div class="vr-divider"></div>
+</div>
+<div class="vr-member-grid">
+<!-- 桃源龍 くぐい (神奈川) -->
+<div class="vr-member-card">
+<div class="vr-pref-tag vr-color-kanto">神奈川県</div>
+<div class="vr-card-inner">
+<div class="vr-member-icon"><i class="fa-solid fa-dragon"></i></div>
+<a class="vr-member-name" href="characters/kugui.html">桃源龍 くぐい</a>
+<div class="vr-member-read">Tougenryu Kugui</div>
+</div>
+</div>
+<!-- 幸魂 天 (埼玉) -->
+<div class="vr-member-card">
+<div class="vr-pref-tag vr-color-kanto">埼玉県</div>
+<div class="vr-card-inner">
+<div class="vr-member-icon"><i class="fa-solid fa-bowl-food"></i></div>
+<a class="vr-member-name" href="characters/ten.html">幸魂 天</a>
+<div class="vr-member-read">Sachitama Ten</div>
+</div>
+</div>
+<!-- 白雪 ほたる (富山) -->
+<div class="vr-member-card">
+<div class="vr-pref-tag vr-color-chubu">富山県</div>
+<div class="vr-card-inner">
+<div class="vr-member-icon"><i class="fa-solid fa-snowflake"></i></div>
+<a class="vr-member-name" href="characters/hotaru.html">白雪 ほたる</a>
+<div class="vr-member-read">Shirayuki Hotaru</div>
+</div>
+</div>
+<!-- 三ツ矢凪 (広島) -->
+<div class="vr-member-card">
+<div class="vr-pref-tag vr-color-chugoku">広島県</div>
+<div class="vr-card-inner">
+<div class="vr-member-icon"><i class="fa-brands fa-envira"></i></div>
+<a class="vr-member-name" href="characters/nagi.html">三ツ矢 凪</a>
+<div class="vr-member-read">Mitsuya Nagi</div>
+</div>
+</div>
+<!-- 夢成夏月 (山口) -->
+<div class="vr-member-card">
+<div class="vr-pref-tag vr-color-chugoku">山口県</div>
+<div class="vr-card-inner">
+<div class="vr-member-icon"><i class="fa-solid fa-moon"></i></div>
+<a class="vr-member-name" href="characters/natsuki.html">夢成 夏月</a>
+<div class="vr-member-read">Yumenari Natsuki</div>
+</div>
+</div>
+<!-- 天ノ守露 (大阪) -->
+<div class="vr-member-card">
+<div class="vr-pref-tag vr-color-kansai">大阪府</div>
+<div class="vr-card-inner">
+<div class="vr-member-icon"><i class="fa-solid fa-droplet"></i></div>
+<a class="vr-member-name" href="characters/tsuyu.html">天ノ守 露</a>
+<div class="vr-member-read">Amanomori Tsuyu</div>
+</div>
+</div>
+<!-- 猫目詩 (愛媛) -->
+<div class="vr-member-card">
+<div class="vr-pref-tag vr-color-shikoku">愛媛県</div>
+<div class="vr-card-inner">
+<div class="vr-member-icon"><i class="fa-solid fa-cat"></i></div>
+<a class="vr-member-name" href="characters/uta.html">猫目 詩</a>
+<div class="vr-member-read">Nekome Uta</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<footer class="vr-footer">
+<div class="vr-footer-logo">
+<i class="fa-solid fa-mountain-sun"></i> VRegion <span>(地方創生VTuber)</span>
+</div>
+<div class="vr-footer-concept">LOCAL REVITALIZATION</div>
+<p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with VRegion.</p>
+</footer>
+<script src="vregion_script.js"></script>
+<script>
         document.addEventListener('DOMContentLoaded', () => {
             const reveals = document.querySelectorAll('.vr-reveal');
             const observer = new IntersectionObserver((entries) => {
@@ -175,7 +155,5 @@
             reveals.forEach(el => observer.observe(el));
         });
     </script>
-
-</body>
-
+<div class="mobile-mode-banner" style="background: #ffc83d; color: #000; text-align: center; font-size: 0.85rem; padding: 4px; font-weight: 900; position: fixed; bottom: 0; width: 100%; z-index: 9999; box-shadow: 0 -2px 10px rgba(255, 200, 60, 0.4);" v-if="isMobile">🚀 Mobile Light Mode (Powered by Vue Virtual DOM)</div></div></body>
 </html>

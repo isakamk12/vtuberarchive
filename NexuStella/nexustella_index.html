@@ -1,495 +1,429 @@
 <!DOCTYPE html>
+
 <html lang="ja">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NexuStella（ネクサステラ） | VTuber Archive</title>
-    <meta name="description" content="新しい輝きで感動を届けるVライバープロダクション「NexuStella」の非公式ファンサイト。所属タレント一覧。">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="nexustella.css">
-</head>
-
-<body>
-
-    <div class="nx-bg">
-        <div class="nx-bg-stars"></div>
-        <div class="nx-bg-nebula"></div>
-        <div class="nx-bg-flare"></div>
-    </div>
-
-    <nav class="nx-nav">
-        <a href="../index.html" class="nx-nav-back">
-            <i class="fa-solid fa-angle-left"></i> BACK TO ARCHIVE
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NexuStella（ネクサステラ） | VTuber Archive</title>
+<meta content="新しい輝きで感動を届けるVライバープロダクション「NexuStella」の非公式ファンサイト。所属タレント一覧。" name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;800&amp;family=Noto+Sans+JP:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="nexustella.css" rel="stylesheet"/>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><style>[v-cloak] { display: none; } </style></head>
+<body><div id="app" v-cloak="">
+<div class="nx-bg" v-if="!isMobile">
+<div class="nx-bg-stars" v-if="!isMobile"></div>
+<div class="nx-bg-nebula" v-if="!isMobile"></div>
+<div class="nx-bg-flare" v-if="!isMobile"></div>
+</div>
+<nav class="nx-nav">
+<a class="nx-nav-back" href="../index.html">
+<i class="fa-solid fa-angle-left"></i> BACK TO ARCHIVE
         </a>
-        <div class="nx-nav-logo">
-            <i class="fa-solid fa-star nx-logo-icon"></i>
+<div class="nx-nav-logo">
+<i class="fa-solid fa-star nx-logo-icon"></i>
             NexuStella <span>ネクサステラ</span>
-        </div>
-        <div class="nx-nav-tag">V-Liver Production</div>
-    </nav>
-
-    <!-- HERO -->
-    <section class="nx-hero">
-        <div class="nx-hero-bg-text">SHINE NEW</div>
-        <div class="nx-hero-content">
-            <div class="nx-eyebrow">
-                <i class="fa-solid fa-sparkles"></i> A NEW BRILLIANCE
+</div>
+<div class="nx-nav-tag">V-Liver Production</div>
+</nav>
+<!-- HERO -->
+<section class="nx-hero">
+<div class="nx-hero-bg-text" v-if="!isMobile">SHINE NEW</div>
+<div class="nx-hero-content">
+<div class="nx-eyebrow">
+<i class="fa-solid fa-sparkles"></i> A NEW BRILLIANCE
             </div>
-            <h1 class="nx-hero-name">NexuStella</h1>
-            <p class="nx-hero-tagline">「新しい輝き」で、感動を届ける。</p>
-            <div class="nx-hero-concept">
-                武士来舞をはじめとする様々なコンセプトを持つグループやプロジェクトを内包する、<br>
-                巨大なVライバープロダクション。<br><br>
+<h1 class="nx-hero-name">NexuStella</h1>
+<p class="nx-hero-tagline">「新しい輝き」で、感動を届ける。</p>
+<div class="nx-hero-concept">
+                武士来舞をはじめとする様々なコンセプトを持つグループやプロジェクトを内包する、<br/>
+                巨大なVライバープロダクション。<br/><br/>
                 V-iii、ぽらりすぱれっと、GanGun Girls、NexuStella
                 Colorfulなど、数多くのタレント（Artist）が所属し、日々新たな輝きを放ちながらファンに感動とエンターテインメントを提供し続けています。
             </div>
-            <div class="nx-hero-stats">
-                <div class="nx-stat">
-                    <div class="nx-stat-value">69</div>
-                    <div class="nx-stat-label">ARTISTS</div>
-                </div>
-                <div class="nx-stat">
-                    <div class="nx-stat-value">5+</div>
-                    <div class="nx-stat-label">GROUPS</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ROSTER -->
-    <div class="nx-container">
-        <section class="nx-section nx-reveal">
-            <div class="nx-section-header">
-                <div>
-                    <h2 class="nx-section-title">ARTIST ROSTER</h2>
-                    <span class="nx-section-title-sub">所属タレント一覧</span>
-                </div>
-                <div class="nx-divider"></div>
-            </div>
-
-            <!-- BUSHILIVE -->
-            <div class="nx-group">
-                <div class="nx-group-header">
-                    <h3 class="nx-group-title">武士来舞 <span>BUSHILIVE</span></h3>
-                </div>
-                <div class="nx-member-grid">
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div>
-                        <div class="nx-member-icon"><i class="fa-brands fa-fort-awesome"></i></div><a
-                            href="characters/hiori.html" class="nx-member-name">火織 信華</a>
-                        <div class="nx-member-read">Hiori Nobuka</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div>
-                        <div class="nx-member-icon"><i class="fa-brands fa-fort-awesome"></i></div><a
-                            href="characters/momohane.html" class="nx-member-name">桃羽ひでまる</a>
-                        <div class="nx-member-read">Momohane Hidemaru</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div>
-                        <div class="nx-member-icon"><i class="fa-brands fa-fort-awesome"></i></div><a
-                            href="characters/seimonten.html" class="nx-member-name">青門天 雀</a>
-                        <div class="nx-member-read">Seimonten Saku</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- GanGun Girls -->
-            <div class="nx-group">
-                <div class="nx-group-header">
-                    <h3 class="nx-group-title">GanGun Girls</h3>
-                </div>
-                <div class="nx-member-grid">
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div>
-                        <div class="nx-member-icon"><i class="fa-solid fa-crosshairs"></i></div><a
-                            href="characters/kunashiki.html" class="nx-member-name">久那式 リン</a>
-                        <div class="nx-member-read">Kunashiki Lin</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div>
-                        <div class="nx-member-icon"><i class="fa-solid fa-crosshairs"></i></div><a
-                            href="characters/tsukinari.html" class="nx-member-name">月成 るくす</a>
-                        <div class="nx-member-read">Tsukinari Lux</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div>
-                        <div class="nx-member-icon"><i class="fa-solid fa-crosshairs"></i></div><a
-                            href="characters/ayasaki.html" class="nx-member-name">妖崎 ゆう</a>
-                        <div class="nx-member-read">Ayasaki Yuu</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div>
-                        <div class="nx-member-icon"><i class="fa-solid fa-crosshairs"></i></div><a
-                            href="characters/berrycute.html" class="nx-member-name">べりぃきゅーと</a>
-                        <div class="nx-member-read">Berry Cute</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div>
-                        <div class="nx-member-icon"><i class="fa-solid fa-crosshairs"></i></div><a
-                            href="characters/fuuki.html" class="nx-member-name">風輝 みちる</a>
-                        <div class="nx-member-read">Fuuki Michiru</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div>
-                        <div class="nx-member-icon"><i class="fa-solid fa-crosshairs"></i></div><a
-                            href="characters/nanahoshi.html" class="nx-member-name">ナナホシ ナナ</a>
-                        <div class="nx-member-read">Nanahoshi Nana</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- NexuStella Colorful -->
-            <div class="nx-group">
-                <div class="nx-group-header">
-                    <h3 class="nx-group-title">NexuStella Colorful</h3>
-                </div>
-                <div class="nx-member-grid scale">
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/akane.html" class="nx-member-name">茜
+<div class="nx-hero-stats">
+<div class="nx-stat">
+<div class="nx-stat-value">69</div>
+<div class="nx-stat-label">ARTISTS</div>
+</div>
+<div class="nx-stat">
+<div class="nx-stat-value">5+</div>
+<div class="nx-stat-label">GROUPS</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ROSTER -->
+<div class="nx-container">
+<section class="nx-section nx-reveal">
+<div class="nx-section-header">
+<div>
+<h2 class="nx-section-title">ARTIST ROSTER</h2>
+<span class="nx-section-title-sub">所属タレント一覧</span>
+</div>
+<div class="nx-divider"></div>
+</div>
+<!-- BUSHILIVE -->
+<div class="nx-group">
+<div class="nx-group-header">
+<h3 class="nx-group-title">武士来舞 <span>BUSHILIVE</span></h3>
+</div>
+<div class="nx-member-grid">
+<div class="nx-member-card">
+<div class="nx-member-holo"></div>
+<div class="nx-member-icon"><i class="fa-brands fa-fort-awesome"></i></div><a class="nx-member-name" href="characters/hiori.html">火織 信華</a>
+<div class="nx-member-read">Hiori Nobuka</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div>
+<div class="nx-member-icon"><i class="fa-brands fa-fort-awesome"></i></div><a class="nx-member-name" href="characters/momohane.html">桃羽ひでまる</a>
+<div class="nx-member-read">Momohane Hidemaru</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div>
+<div class="nx-member-icon"><i class="fa-brands fa-fort-awesome"></i></div><a class="nx-member-name" href="characters/seimonten.html">青門天 雀</a>
+<div class="nx-member-read">Seimonten Saku</div>
+</div>
+</div>
+</div>
+<!-- GanGun Girls -->
+<div class="nx-group">
+<div class="nx-group-header">
+<h3 class="nx-group-title">GanGun Girls</h3>
+</div>
+<div class="nx-member-grid">
+<div class="nx-member-card">
+<div class="nx-member-holo"></div>
+<div class="nx-member-icon"><i class="fa-solid fa-crosshairs"></i></div><a class="nx-member-name" href="characters/kunashiki.html">久那式 リン</a>
+<div class="nx-member-read">Kunashiki Lin</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div>
+<div class="nx-member-icon"><i class="fa-solid fa-crosshairs"></i></div><a class="nx-member-name" href="characters/tsukinari.html">月成 るくす</a>
+<div class="nx-member-read">Tsukinari Lux</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div>
+<div class="nx-member-icon"><i class="fa-solid fa-crosshairs"></i></div><a class="nx-member-name" href="characters/ayasaki.html">妖崎 ゆう</a>
+<div class="nx-member-read">Ayasaki Yuu</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div>
+<div class="nx-member-icon"><i class="fa-solid fa-crosshairs"></i></div><a class="nx-member-name" href="characters/berrycute.html">べりぃきゅーと</a>
+<div class="nx-member-read">Berry Cute</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div>
+<div class="nx-member-icon"><i class="fa-solid fa-crosshairs"></i></div><a class="nx-member-name" href="characters/fuuki.html">風輝 みちる</a>
+<div class="nx-member-read">Fuuki Michiru</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div>
+<div class="nx-member-icon"><i class="fa-solid fa-crosshairs"></i></div><a class="nx-member-name" href="characters/nanahoshi.html">ナナホシ ナナ</a>
+<div class="nx-member-read">Nanahoshi Nana</div>
+</div>
+</div>
+</div>
+<!-- NexuStella Colorful -->
+<div class="nx-group">
+<div class="nx-group-header">
+<h3 class="nx-group-title">NexuStella Colorful</h3>
+</div>
+<div class="nx-member-grid scale">
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/akane.html">茜
                             あすか</a>
-                        <div class="nx-member-read">Akane Asuka</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/asui.html" class="nx-member-name">蛙水
+<div class="nx-member-read">Akane Asuka</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/asui.html">蛙水
                             一護</a>
-                        <div class="nx-member-read">Asui Ichigo</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/ayaki.html" class="nx-member-name">彩輝
+<div class="nx-member-read">Asui Ichigo</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/ayaki.html">彩輝
                             星藍</a>
-                        <div class="nx-member-read">Ayaki Seira</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/anyuu.html" class="nx-member-name">闇熊
+<div class="nx-member-read">Ayaki Seira</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/anyuu.html">闇熊
                             れりあ</a>
-                        <div class="nx-member-read">Anyuu Reria</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/utage.html" class="nx-member-name">奏樺
+<div class="nx-member-read">Anyuu Reria</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/utage.html">奏樺
                             ロイ</a>
-                        <div class="nx-member-read">Utage Roi</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/eden.html" class="nx-member-name">楽園エマ</a>
-                        <div class="nx-member-read">Eden Ema</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/osaka.html" class="nx-member-name">逢坂
+<div class="nx-member-read">Utage Roi</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/eden.html">楽園エマ</a>
+<div class="nx-member-read">Eden Ema</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/osaka.html">逢坂
                             らぶら</a>
-                        <div class="nx-member-read">Osaka Labra</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/osore.html" class="nx-member-name">恐
+<div class="nx-member-read">Osaka Labra</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/osore.html">恐
                             竜哉</a>
-                        <div class="nx-member-read">Osore Tatsuya</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/kashima.html"
-                            class="nx-member-name">鹿島あかり</a>
-                        <div class="nx-member-read">Kashima Akari</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/karasuba.html" class="nx-member-name">鴉羽
+<div class="nx-member-read">Osore Tatsuya</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/kashima.html">鹿島あかり</a>
+<div class="nx-member-read">Kashima Akari</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/karasuba.html">鴉羽
                             米丸</a>
-                        <div class="nx-member-read">Karasuba Komemaru</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/kisaragi.html" class="nx-member-name">如月
+<div class="nx-member-read">Karasuba Komemaru</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/kisaragi.html">如月
                             海結</a>
-                        <div class="nx-member-read">Kisaragi Myu</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/kyuketsu.html" class="nx-member-name">吸血
+<div class="nx-member-read">Kisaragi Myu</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/kyuketsu.html">吸血
                             きあり</a>
-                        <div class="nx-member-read">Kyuketsu Kiari</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/kumazawa.html" class="nx-member-name">くま沢
+<div class="nx-member-read">Kyuketsu Kiari</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/kumazawa.html">くま沢
                             のの</a>
-                        <div class="nx-member-read">Kumazawa Nono</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/seiin.html" class="nx-member-name">静院
+<div class="nx-member-read">Kumazawa Nono</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/seiin.html">静院
                             正宗</a>
-                        <div class="nx-member-read">Seiin Masamune</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/narumi.html" class="nx-member-name">鳴海
+<div class="nx-member-read">Seiin Masamune</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/narumi.html">鳴海
                             豹真</a>
-                        <div class="nx-member-read">Narumi Hyouma</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/hanazono.html" class="nx-member-name">花園
+<div class="nx-member-read">Narumi Hyouma</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/hanazono.html">花園
                             みんと</a>
-                        <div class="nx-member-read">Hanazono Minto</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/haneboshi.html" class="nx-member-name">羽星
+<div class="nx-member-read">Hanazono Minto</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/haneboshi.html">羽星
                             のあ</a>
-                        <div class="nx-member-read">Haneboshi Noah</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/haruno.html" class="nx-member-name">春野
+<div class="nx-member-read">Haneboshi Noah</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/haruno.html">春野
                             咲也</a>
-                        <div class="nx-member-read">Haruno Sakuya</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/hareno.html" class="nx-member-name">晴野
+<div class="nx-member-read">Haruno Sakuya</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/hareno.html">晴野
                             うる</a>
-                        <div class="nx-member-read">Hareno Uru</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/hyouka.html" class="nx-member-name">氷菓
+<div class="nx-member-read">Hareno Uru</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/hyouka.html">氷菓
                             ちの</a>
-                        <div class="nx-member-read">Hyouka Chino</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/prototype_neo.html"
-                            class="nx-member-name">Prototype_NEO</a>
-                        <div class="nx-member-read">Prototype_NEO</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- V-iii -->
-            <div class="nx-group">
-                <div class="nx-group-header">
-                    <h3 class="nx-group-title">V-iii</h3>
-                </div>
-                <div class="nx-member-grid scale">
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/aogase.html"
-                            class="nx-member-name">蒼ヶ瀬ソラネ</a>
-                        <div class="nx-member-read">Aogase Sorane</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/aoki.html"
-                            class="nx-member-name">青木カーキ</a>
-                        <div class="nx-member-read">Aoki Kaki</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/amanomikado.html"
-                            class="nx-member-name">天ノ帝リノ</a>
-                        <div class="nx-member-read">Amanomikado Rino</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/kagerou.html"
-                            class="nx-member-name">影狼アイト</a>
-                        <div class="nx-member-read">Kagerou Aito</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/shirasaki.html"
-                            class="nx-member-name">白咲スノー</a>
-                        <div class="nx-member-read">Shirasaki Snow</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/doumeki.html"
-                            class="nx-member-name">百目鬼ユエン</a>
-                        <div class="nx-member-read">Doumeki Yuen</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/nanahikari.html"
-                            class="nx-member-name">七光える</a>
-                        <div class="nx-member-read">Nanahikari Eru</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/harii.html"
-                            class="nx-member-name">針井トウタ</a>
-                        <div class="nx-member-read">Harii Touta</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/hidama.html"
-                            class="nx-member-name">陽珠リノハ</a>
-                        <div class="nx-member-read">Hidama Rinoha</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/fusei.html"
-                            class="nx-member-name">風聲ルリ</a>
-                        <div class="nx-member-read">Fusei Ruri</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/hoshimori.html"
-                            class="nx-member-name">星守ミライ</a>
-                        <div class="nx-member-read">Hoshimori Mirai</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/mitsuki.html"
-                            class="nx-member-name">美月ユキノ</a>
-                        <div class="nx-member-read">Mitsuki Yukino</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/momohana.html"
-                            class="nx-member-name">桃花スイ</a>
-                        <div class="nx-member-read">Momohana Sui</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/yuzuki.html"
-                            class="nx-member-name">結月さみぃ</a>
-                        <div class="nx-member-read">yuzuki samii</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/yokagura.html"
-                            class="nx-member-name">夜神楽ビャッコ</a>
-                        <div class="nx-member-read">Yokagura Byakko</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/yonozuki.html"
-                            class="nx-member-name">夜ノ月メフィ</a>
-                        <div class="nx-member-read">Yonozuki Mefi</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ぽらりすぱれっと -->
-            <div class="nx-group">
-                <div class="nx-group-header">
-                    <h3 class="nx-group-title">ぽらりすぱれっと <span>Polaris Palette</span></h3>
-                </div>
-                <div class="nx-member-grid scale">
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/otomi.html"
-                            class="nx-member-name">音海かなで</a>
-                        <div class="nx-member-read">Otomi Kanade</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/asagiri.html"
-                            class="nx-member-name">朝霧陽斗</a>
-                        <div class="nx-member-read">Asagiri Haruto</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/amase.html"
-                            class="nx-member-name">天瀬アメイズ</a>
-                        <div class="nx-member-read">Amase Ameizu</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/wellseinheit.html"
-                            class="nx-member-name">WellsEinheit</a>
-                        <div class="nx-member-read">WellsEinheit</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/ogami.html"
-                            class="nx-member-name">大狼あらん</a>
-                        <div class="nx-member-read">Ogami Aran</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/karasuno.html"
-                            class="nx-member-name">鴉乃アカリ</a>
-                        <div class="nx-member-read">Karasuno Akari</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/kumakoi.html"
-                            class="nx-member-name">熊恋べりぃ</a>
-                        <div class="nx-member-read">Kumakoi Beryi</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/kurokage.html"
-                            class="nx-member-name">黒鹿毛ミア</a>
-                        <div class="nx-member-read">Kurokage Mia</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/koakuma.html"
-                            class="nx-member-name">小悪魔デビル</a>
-                        <div class="nx-member-read">Koakuma Devil</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/kogami.html"
-                            class="nx-member-name">倖女神シエリ</a>
-                        <div class="nx-member-read">Kogami Cheri</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/shira.html"
-                            class="nx-member-name">紫蘭ポン</a>
-                        <div class="nx-member-read">Shira Pon</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/suzuki.html"
-                            class="nx-member-name">鈴木シンイチ</a>
-                        <div class="nx-member-read">Suzuki Shinichi</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/chakori.html"
-                            class="nx-member-name">茶氷グレ</a>
-                        <div class="nx-member-read">Chakori Gure</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/tukiame.html"
-                            class="nx-member-name">月雨セイカ</a>
-                        <div class="nx-member-read">Tukiame Seika</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/tsuyuri.html"
-                            class="nx-member-name">栗花落いろ</a>
-                        <div class="nx-member-read">Tsuyuri Iro</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/tenba.html"
-                            class="nx-member-name">天羽のら</a>
-                        <div class="nx-member-read">Tenba Nora</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/tokiro.html"
-                            class="nx-member-name">時路ワタル</a>
-                        <div class="nx-member-read">Tokiro Wataru</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/nekoma.html"
-                            class="nx-member-name">猫魔ゆる</a>
-                        <div class="nx-member-read">Nekoma Yuru</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/nekomomo.html"
-                            class="nx-member-name">猫桃愛薇</a>
-                        <div class="nx-member-read">Nekomomo Aibi</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/hoshimitsu.html"
-                            class="nx-member-name">星蜜クマ</a>
-                        <div class="nx-member-read">Hoshimitsu Kuma</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/yamamura.html"
-                            class="nx-member-name">山村タケシ</a>
-                        <div class="nx-member-read">Yamamura Takeshi</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Solo Artist -->
-            <div class="nx-group">
-                <div class="nx-group-header">
-                    <h3 class="nx-group-title">Solo Artist</h3>
-                </div>
-                <div class="nx-member-grid scale">
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/hatagami.html"
-                            class="nx-member-name">旗神好牙</a>
-                        <div class="nx-member-read">Hatagami Koga</div>
-                    </div>
-                    <div class="nx-member-card">
-                        <div class="nx-member-holo"></div><a href="characters/nekomu.html"
-                            class="nx-member-name">猫夢ねむ</a>
-                        <div class="nx-member-read">Nekomu Nemu</div>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-    </div>
-
-    <footer class="nx-footer">
-        <div class="nx-footer-logo">NexuStella <span>ネクサステラ</span></div>
-        <p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with NexuStella Production.</p>
-    </footer>
-
-    <script src="nexustella_script.js"></script>
-    <script>
+<div class="nx-member-read">Hyouka Chino</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/prototype_neo.html">Prototype_NEO</a>
+<div class="nx-member-read">Prototype_NEO</div>
+</div>
+</div>
+</div>
+<!-- V-iii -->
+<div class="nx-group">
+<div class="nx-group-header">
+<h3 class="nx-group-title">V-iii</h3>
+</div>
+<div class="nx-member-grid scale">
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/aogase.html">蒼ヶ瀬ソラネ</a>
+<div class="nx-member-read">Aogase Sorane</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/aoki.html">青木カーキ</a>
+<div class="nx-member-read">Aoki Kaki</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/amanomikado.html">天ノ帝リノ</a>
+<div class="nx-member-read">Amanomikado Rino</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/kagerou.html">影狼アイト</a>
+<div class="nx-member-read">Kagerou Aito</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/shirasaki.html">白咲スノー</a>
+<div class="nx-member-read">Shirasaki Snow</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/doumeki.html">百目鬼ユエン</a>
+<div class="nx-member-read">Doumeki Yuen</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/nanahikari.html">七光える</a>
+<div class="nx-member-read">Nanahikari Eru</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/harii.html">針井トウタ</a>
+<div class="nx-member-read">Harii Touta</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/hidama.html">陽珠リノハ</a>
+<div class="nx-member-read">Hidama Rinoha</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/fusei.html">風聲ルリ</a>
+<div class="nx-member-read">Fusei Ruri</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/hoshimori.html">星守ミライ</a>
+<div class="nx-member-read">Hoshimori Mirai</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/mitsuki.html">美月ユキノ</a>
+<div class="nx-member-read">Mitsuki Yukino</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/momohana.html">桃花スイ</a>
+<div class="nx-member-read">Momohana Sui</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/yuzuki.html">結月さみぃ</a>
+<div class="nx-member-read">yuzuki samii</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/yokagura.html">夜神楽ビャッコ</a>
+<div class="nx-member-read">Yokagura Byakko</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/yonozuki.html">夜ノ月メフィ</a>
+<div class="nx-member-read">Yonozuki Mefi</div>
+</div>
+</div>
+</div>
+<!-- ぽらりすぱれっと -->
+<div class="nx-group">
+<div class="nx-group-header">
+<h3 class="nx-group-title">ぽらりすぱれっと <span>Polaris Palette</span></h3>
+</div>
+<div class="nx-member-grid scale">
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/otomi.html">音海かなで</a>
+<div class="nx-member-read">Otomi Kanade</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/asagiri.html">朝霧陽斗</a>
+<div class="nx-member-read">Asagiri Haruto</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/amase.html">天瀬アメイズ</a>
+<div class="nx-member-read">Amase Ameizu</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/wellseinheit.html">WellsEinheit</a>
+<div class="nx-member-read">WellsEinheit</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/ogami.html">大狼あらん</a>
+<div class="nx-member-read">Ogami Aran</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/karasuno.html">鴉乃アカリ</a>
+<div class="nx-member-read">Karasuno Akari</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/kumakoi.html">熊恋べりぃ</a>
+<div class="nx-member-read">Kumakoi Beryi</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/kurokage.html">黒鹿毛ミア</a>
+<div class="nx-member-read">Kurokage Mia</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/koakuma.html">小悪魔デビル</a>
+<div class="nx-member-read">Koakuma Devil</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/kogami.html">倖女神シエリ</a>
+<div class="nx-member-read">Kogami Cheri</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/shira.html">紫蘭ポン</a>
+<div class="nx-member-read">Shira Pon</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/suzuki.html">鈴木シンイチ</a>
+<div class="nx-member-read">Suzuki Shinichi</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/chakori.html">茶氷グレ</a>
+<div class="nx-member-read">Chakori Gure</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/tukiame.html">月雨セイカ</a>
+<div class="nx-member-read">Tukiame Seika</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/tsuyuri.html">栗花落いろ</a>
+<div class="nx-member-read">Tsuyuri Iro</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/tenba.html">天羽のら</a>
+<div class="nx-member-read">Tenba Nora</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/tokiro.html">時路ワタル</a>
+<div class="nx-member-read">Tokiro Wataru</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/nekoma.html">猫魔ゆる</a>
+<div class="nx-member-read">Nekoma Yuru</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/nekomomo.html">猫桃愛薇</a>
+<div class="nx-member-read">Nekomomo Aibi</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/hoshimitsu.html">星蜜クマ</a>
+<div class="nx-member-read">Hoshimitsu Kuma</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/yamamura.html">山村タケシ</a>
+<div class="nx-member-read">Yamamura Takeshi</div>
+</div>
+</div>
+</div>
+<!-- Solo Artist -->
+<div class="nx-group">
+<div class="nx-group-header">
+<h3 class="nx-group-title">Solo Artist</h3>
+</div>
+<div class="nx-member-grid scale">
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/hatagami.html">旗神好牙</a>
+<div class="nx-member-read">Hatagami Koga</div>
+</div>
+<div class="nx-member-card">
+<div class="nx-member-holo"></div><a class="nx-member-name" href="characters/nekomu.html">猫夢ねむ</a>
+<div class="nx-member-read">Nekomu Nemu</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<footer class="nx-footer">
+<div class="nx-footer-logo">NexuStella <span>ネクサステラ</span></div>
+<p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with NexuStella Production.</p>
+</footer>
+<script src="nexustella_script.js"></script>
+<script>
         document.addEventListener('DOMContentLoaded', () => {
             const reveals = document.querySelectorAll('.nx-reveal, .nx-group-header, .nx-member-card');
             const observer = new IntersectionObserver((entries) => {
@@ -502,7 +436,5 @@
             reveals.forEach(el => observer.observe(el));
         });
     </script>
-
-</body>
-
+<div class="mobile-mode-banner" style="background: #ffc83d; color: #000; text-align: center; font-size: 0.85rem; padding: 4px; font-weight: 900; position: fixed; bottom: 0; width: 100%; z-index: 9999; box-shadow: 0 -2px 10px rgba(255, 200, 60, 0.4);" v-if="isMobile">🚀 Mobile Light Mode (Powered by Vue Virtual DOM)</div></div></body>
 </html>

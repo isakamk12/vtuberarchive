@@ -1,104 +1,93 @@
 <!DOCTYPE html>
+
 <html lang="ja">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>個人勢 VTuber Archive | Independent</title>
-    <meta name="description" content="個人勢VTuberの総合アーカイブ。クリエイター、シンガー、エンターテイナー、技術者、ゲーマーなど37名の独立系VTuberを網羅。">
-    <!-- Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;600&family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
-        rel="stylesheet">
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Styles -->
-    <link rel="stylesheet" href="indie.css">
-</head>
-
-<body>
-    <!-- Ambient Background -->
-    <div class="bg-wrap">
-        <div class="bg-orb bg-orb--warm"></div>
-        <div class="bg-orb bg-orb--cool"></div>
-    </div>
-
-    <!-- Navigation -->
-    <nav class="top-nav">
-        <a href="../index.html" class="nav-back" id="navBack">
-            <i class="fa-solid fa-chevron-left"></i>
-            <span>AKASHIC</span>
-        </a>
-        <div class="nav-brand">
-            <i class="fa-solid fa-fire-flame-curved"></i>
-            <span>INDIE ARCHIVE</span>
-        </div>
-        <div class="nav-search">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" id="searchInput" placeholder="名前・タグで検索...">
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="hero-badge">INDEPENDENT SECTOR</div>
-        <h1 class="hero-title">個人勢 VTuber</h1>
-        <p class="hero-sub">自由を選んだ表現者たち ── 企業に属さず、己の力で道を切り拓く</p>
-        <div
-            style="font-size: 0.85rem; color: rgba(255,255,255,0.7); margin-top: 15px; margin-bottom: 25px; line-height: 1.6; background: rgba(0,0,0,0.3); padding: 15px; border-radius: 8px; border-left: 3px solid rgba(255,255,255,0.2);">
-            <p style="margin: 0 0 5px 0;">※ Vtuberの判定基準に関しては決めかねていますが、それにより削除・変更等の可能性もあるのでご注意ください。</p>
-            <p style="margin: 0;">※ 基本的に登録者等を基準にはしていません、基本的に全て記録予定です。</p>
-        </div>
-        <div class="hero-stats">
-            <div class="stat">
-                <span class="stat-val" id="totalCount">0</span>
-                <span class="stat-lbl">ARCHIVED</span>
-            </div>
-            <div class="stat">
-                <span class="stat-val" id="filteredCount">0</span>
-                <span class="stat-lbl">DISPLAYED</span>
-            </div>
-        </div>
-    </header>
-
-    <!-- Category Filters -->
-    <div class="filter-bar" id="filterBar">
-        <button class="filter-btn active" data-filter="all">
-            <i class="fa-solid fa-layer-group"></i> ALL
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>個人勢 VTuber Archive | Independent</title>
+<meta content="個人勢VTuberの総合アーカイブ。クリエイター、シンガー、エンターテイナー、技術者、ゲーマーなど37名の独立系VTuberを網羅。" name="description"/>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&amp;family=Inter:wght@300;400;600&amp;family=Noto+Sans+JP:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<!-- Styles -->
+<link href="indie.css" rel="stylesheet"/>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><style>[v-cloak] { display: none; } </style></head>
+<body><div id="app" v-cloak="">
+<!-- Ambient Background -->
+<div class="bg-wrap" v-if="!isMobile">
+<div class="bg-orb bg-orb--warm" v-if="!isMobile"></div>
+<div class="bg-orb bg-orb--cool" v-if="!isMobile"></div>
+</div>
+<!-- Navigation -->
+<nav class="top-nav">
+<a class="nav-back" href="../index.html" id="navBack">
+<i class="fa-solid fa-chevron-left"></i>
+<span>AKASHIC</span>
+</a>
+<div class="nav-brand">
+<i class="fa-solid fa-fire-flame-curved"></i>
+<span>INDIE ARCHIVE</span>
+</div>
+<div class="nav-search">
+<i class="fa-solid fa-magnifying-glass"></i>
+<input id="searchInput" placeholder="名前・タグで検索..." type="text"/>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="hero">
+<div class="hero-badge">INDEPENDENT SECTOR</div>
+<h1 class="hero-title">個人勢 VTuber</h1>
+<p class="hero-sub">自由を選んだ表現者たち ── 企業に属さず、己の力で道を切り拓く</p>
+<div style="font-size: 0.85rem; color: rgba(255,255,255,0.7); margin-top: 15px; margin-bottom: 25px; line-height: 1.6; background: rgba(0,0,0,0.3); padding: 15px; border-radius: 8px; border-left: 3px solid rgba(255,255,255,0.2);">
+<p style="margin: 0 0 5px 0;">※ Vtuberの判定基準に関しては決めかねていますが、それにより削除・変更等の可能性もあるのでご注意ください。</p>
+<p style="margin: 0;">※ 基本的に登録者等を基準にはしていません、基本的に全て記録予定です。</p>
+</div>
+<div class="hero-stats">
+<div class="stat">
+<span class="stat-val" id="totalCount">0</span>
+<span class="stat-lbl">ARCHIVED</span>
+</div>
+<div class="stat">
+<span class="stat-val" id="filteredCount">0</span>
+<span class="stat-lbl">DISPLAYED</span>
+</div>
+</div>
+</header>
+<!-- Category Filters -->
+<div class="filter-bar" id="filterBar">
+<button class="filter-btn active" data-filter="all">
+<i class="fa-solid fa-layer-group"></i> ALL
         </button>
-        <button class="filter-btn" data-filter="creator">
-            <i class="fa-solid fa-palette"></i> クリエイター
+<button class="filter-btn" data-filter="creator">
+<i class="fa-solid fa-palette"></i> クリエイター
         </button>
-        <button class="filter-btn" data-filter="music">
-            <i class="fa-solid fa-music"></i> 音楽
+<button class="filter-btn" data-filter="music">
+<i class="fa-solid fa-music"></i> 音楽
         </button>
-        <button class="filter-btn" data-filter="entertainment">
-            <i class="fa-solid fa-masks-theater"></i> エンタメ
+<button class="filter-btn" data-filter="entertainment">
+<i class="fa-solid fa-masks-theater"></i> エンタメ
         </button>
-        <button class="filter-btn" data-filter="gaming">
-            <i class="fa-solid fa-gamepad"></i> ゲーム
+<button class="filter-btn" data-filter="gaming">
+<i class="fa-solid fa-gamepad"></i> ゲーム
         </button>
-        <button class="filter-btn" data-filter="tech">
-            <i class="fa-solid fa-microchip"></i> テクノロジー
+<button class="filter-btn" data-filter="tech">
+<i class="fa-solid fa-microchip"></i> テクノロジー
         </button>
-        <button class="filter-btn" data-filter="global">
-            <i class="fa-solid fa-globe"></i> グローバル
+<button class="filter-btn" data-filter="global">
+<i class="fa-solid fa-globe"></i> グローバル
         </button>
-    </div>
-
-    <!-- VTuber Card Grid -->
-    <main class="grid-wrap" id="vtuberGrid">
-        <!-- Cards injected via JS -->
-    </main>
-
-    <!-- Empty State -->
-    <div class="empty-state" id="emptyState" style="display: none;">
-        <i class="fa-solid fa-ghost"></i>
-        <p>該当するVTuberが見つかりません</p>
-    </div>
-
-    <!-- Script -->
-    <script src="indie_script.js"></script>
-</body>
-
+</div>
+<!-- VTuber Card Grid -->
+<main class="grid-wrap" id="vtuberGrid">
+<!-- Cards injected via JS -->
+</main>
+<!-- Empty State -->
+<div class="empty-state" id="emptyState" style="display: none;">
+<i class="fa-solid fa-ghost"></i>
+<p>該当するVTuberが見つかりません</p>
+</div>
+<!-- Script -->
+<script src="indie_script.js"></script>
+<div class="mobile-mode-banner" style="background: #ffc83d; color: #000; text-align: center; font-size: 0.85rem; padding: 4px; font-weight: 900; position: fixed; bottom: 0; width: 100%; z-index: 9999; box-shadow: 0 -2px 10px rgba(255, 200, 60, 0.4);" v-if="isMobile">🚀 Mobile Light Mode (Powered by Vue Virtual DOM)</div></div></body>
 </html>

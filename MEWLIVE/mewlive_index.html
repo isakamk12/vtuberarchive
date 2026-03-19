@@ -1,238 +1,212 @@
 <!DOCTYPE html>
+
 <html lang="ja">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MEWLIVE (ミューライブ) | VTuber Archive</title>
-    <meta name="description" content="バンダイナムコミュージックライブが運営する音楽特化型VTuber事務所「MEWLIVE」の非公式ファンサイト。">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Noto+Sans+JP:wght@300;400;700;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="mewlive.css">
-</head>
-
-<body>
-
-    <div class="ml-bg">
-        <div class="ml-bg-gradient"></div>
-        <div class="ml-bg-grid"></div>
-        <div class="ml-soundwaves" id="bg-soundwaves"></div>
-    </div>
-
-    <nav class="ml-nav">
-        <a href="../index.html" class="ml-nav-back">
-            <i class="fa-solid fa-angle-left"></i> HUB
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MEWLIVE (ミューライブ) | VTuber Archive</title>
+<meta content="バンダイナムコミュージックライブが運営する音楽特化型VTuber事務所「MEWLIVE」の非公式ファンサイト。" name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&amp;family=Noto+Sans+JP:wght@300;400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="mewlive.css" rel="stylesheet"/>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><style>[v-cloak] { display: none; } </style></head>
+<body><div id="app" v-cloak="">
+<div class="ml-bg" v-if="!isMobile">
+<div class="ml-bg-gradient" v-if="!isMobile"></div>
+<div class="ml-bg-grid" v-if="!isMobile"></div>
+<div class="ml-soundwaves" id="bg-soundwaves"></div>
+</div>
+<nav class="ml-nav">
+<a class="ml-nav-back" href="../index.html">
+<i class="fa-solid fa-angle-left"></i> HUB
         </a>
-        <div class="ml-nav-logo">
+<div class="ml-nav-logo">
             MEW<span class="ml-logo-accent">LIVE</span>
-        </div>
-        <div class="ml-nav-tag">MUSIC LIVE STAGE</div>
-    </nav>
-
-    <!-- HERO -->
-    <section class="ml-hero">
-        <div class="ml-hero-inner">
-            <div class="ml-hero-content">
-                <div class="ml-eyebrow">
-                    <i class="fa-solid fa-music"></i> BANDAI NAMCO MUSIC LIVE
+</div>
+<div class="ml-nav-tag">MUSIC LIVE STAGE</div>
+</nav>
+<!-- HERO -->
+<section class="ml-hero">
+<div class="ml-hero-inner">
+<div class="ml-hero-content">
+<div class="ml-eyebrow">
+<i class="fa-solid fa-music"></i> BANDAI NAMCO MUSIC LIVE
                 </div>
-                <h1 class="ml-hero-name">MEWLIVE</h1>
-                <p class="ml-hero-tagline">“音楽が、バーチャルを加速する”</p>
-                <div class="ml-hero-concept">
-                    <p>株式会社バンダイナムコミュージックライブが立ち上げた、音楽特化型のVTuber（バーチャルYouTuber）プロダクション。</p>
-                    <p>音楽会社ならではの強力なバックアップ体制を活かし、オリジナル楽曲の高頻度なリリースや、ハイクオリティな3Dライブなど、VTuberの「音楽展開」に圧倒的な強みを持ちます。次世代のバーチャルミュージックシーンを牽引する、多彩な才能が集まっています。
+<h1 class="ml-hero-name">MEWLIVE</h1>
+<p class="ml-hero-tagline">“音楽が、バーチャルを加速する”</p>
+<div class="ml-hero-concept">
+<p>株式会社バンダイナムコミュージックライブが立ち上げた、音楽特化型のVTuber（バーチャルYouTuber）プロダクション。</p>
+<p>音楽会社ならではの強力なバックアップ体制を活かし、オリジナル楽曲の高頻度なリリースや、ハイクオリティな3Dライブなど、VTuberの「音楽展開」に圧倒的な強みを持ちます。次世代のバーチャルミュージックシーンを牽引する、多彩な才能が集まっています。
                     </p>
-                </div>
-
-                <div class="ml-hero-visualizer" id="hero-visualizer">
-                    <!-- Bars injected by JS -->
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ROSTER -->
-    <div class="ml-container">
-
-        <!-- 0期生 -->
-        <section class="ml-section ml-reveal">
-            <div class="ml-section-header">
-                <div>
-                    <h2 class="ml-section-title">0th GEN</h2>
-                    <span class="ml-section-title-sub">0期生</span>
-                </div>
-                <div class="ml-divider"></div>
-            </div>
-
-            <div class="ml-member-grid">
-                <!-- 我王むすび -->
-                <div class="ml-member-card">
-                    <div class="ml-card-inner">
-                        <div class="ml-member-icon"><i class="fa-solid fa-link"></i></div>
-                        <div class="ml-member-info">
-                            <a href="characters/musubi.html" class="ml-member-name">我王 むすび</a>
-                            <div class="ml-member-read">Gaou Musubi</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 熊乃ベアトリーチェ -->
-                <div class="ml-member-card">
-                    <div class="ml-card-inner">
-                        <div class="ml-member-icon"><i class="fa-solid fa-shield-cat"></i></div> <!-- Bear/Cat proxy -->
-                        <div class="ml-member-info">
-                            <a href="characters/beartrice.html" class="ml-member-name">熊乃 ベアトリーチェ</a>
-                            <div class="ml-member-read">Kumano BearTrice</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 1期生 -->
-        <section class="ml-section ml-reveal">
-            <div class="ml-section-header">
-                <div>
-                    <h2 class="ml-section-title">1st GEN</h2>
-                    <span class="ml-section-title-sub">1期生</span>
-                </div>
-                <div class="ml-divider"></div>
-            </div>
-
-            <div class="ml-member-grid">
-                <!-- ユノ・ミハナダ -->
-                <div class="ml-member-card">
-                    <div class="ml-card-inner">
-                        <div class="ml-member-icon"><i class="fa-solid fa-water"></i></div>
-                        <div class="ml-member-info">
-                            <a href="characters/yuno.html" class="ml-member-name">ユノ・ミハナダ</a>
-                            <div class="ml-member-read">Yuno Mihanada</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 夜羽咲クロネ -->
-                <div class="ml-member-card">
-                    <div class="ml-card-inner">
-                        <div class="ml-member-icon"><i class="fa-solid fa-feather-pointed"></i></div>
-                        <div class="ml-member-info">
-                            <a href="characters/kurone.html" class="ml-member-name">夜羽咲 クロネ</a>
-                            <div class="ml-member-read">Yousagi Kurone</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 月魅暁りりか -->
-                <div class="ml-member-card">
-                    <div class="ml-card-inner">
-                        <div class="ml-member-icon"><i class="fa-solid fa-moon"></i></div>
-                        <div class="ml-member-info">
-                            <a href="characters/ririka.html" class="ml-member-name">月魅暁 りりか</a>
-                            <div class="ml-member-read">Tsukimia Ririka</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 2期生 -->
-        <section class="ml-section ml-reveal">
-            <div class="ml-section-header">
-                <div>
-                    <h2 class="ml-section-title">2nd GEN</h2>
-                    <span class="ml-section-title-sub">2期生</span>
-                </div>
-                <div class="ml-divider"></div>
-            </div>
-
-            <div class="ml-member-grid">
-                <!-- 氷猫みう -->
-                <div class="ml-member-card">
-                    <div class="ml-card-inner">
-                        <div class="ml-member-icon"><i class="fa-solid fa-snowflake"></i></div>
-                        <div class="ml-member-info">
-                            <a href="characters/miu.html" class="ml-member-name">氷猫 みう</a>
-                            <div class="ml-member-read">Koneko Miu</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 闇依ろいろ -->
-                <div class="ml-member-card">
-                    <div class="ml-card-inner">
-                        <div class="ml-member-icon"><i class="fa-solid fa-cloud-moon"></i></div>
-                        <div class="ml-member-info">
-                            <a href="characters/roiro.html" class="ml-member-name">闇依 ろいろ</a>
-                            <div class="ml-member-read">Yamiyori Roiro</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 温々ねむみ -->
-                <div class="ml-member-card">
-                    <div class="ml-card-inner">
-                        <div class="ml-member-icon"><i class="fa-solid fa-bed"></i></div>
-                        <div class="ml-member-info">
-                            <a href="characters/nemumi.html" class="ml-member-name">温々 ねむみ</a>
-                            <div class="ml-member-read">Nukunuku Nemumi</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- MEWLIVE UNIVERSE -->
-        <section class="ml-section ml-reveal">
-            <div class="ml-section-header">
-                <div>
-                    <h2 class="ml-section-title ml-text-gradient">UNIVERSE</h2>
-                    <span class="ml-section-title-sub">MEWLIVE UNIVERSE</span>
-                </div>
-                <div class="ml-divider ml-divider-universe"></div>
-            </div>
-
-            <div class="ml-member-grid ml-universe-grid">
-                <!-- SZNO -->
-                <div class="ml-member-card ml-universe-card">
-                    <div class="ml-card-inner">
-                        <div class="ml-member-icon"><i class="fa-solid fa-bolt"></i></div>
-                        <div class="ml-member-info">
-                            <a href="characters/szno.html" class="ml-member-name">SZNO</a>
-                            <div class="ml-member-read">SZNO</div>
-                            <div class="ml-unit-tag">Vocalist</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Reφilm -->
-                <div class="ml-member-card ml-universe-card">
-                    <div class="ml-card-inner">
-                        <div class="ml-member-icon"><i class="fa-solid fa-film"></i></div>
-                        <div class="ml-member-info">
-                            <a href="characters/refilm.html" class="ml-member-name">Reφilm</a>
-                            <div class="ml-member-read">レフィルム</div>
-                            <div class="ml-unit-tag">Male Unit</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </div>
-
-    <footer class="ml-footer">
-        <div class="ml-footer-logo">
+</div>
+<div class="ml-hero-visualizer" id="hero-visualizer">
+<!-- Bars injected by JS -->
+</div>
+</div>
+</div>
+</section>
+<!-- ROSTER -->
+<div class="ml-container">
+<!-- 0期生 -->
+<section class="ml-section ml-reveal">
+<div class="ml-section-header">
+<div>
+<h2 class="ml-section-title">0th GEN</h2>
+<span class="ml-section-title-sub">0期生</span>
+</div>
+<div class="ml-divider"></div>
+</div>
+<div class="ml-member-grid">
+<!-- 我王むすび -->
+<div class="ml-member-card">
+<div class="ml-card-inner">
+<div class="ml-member-icon"><i class="fa-solid fa-link"></i></div>
+<div class="ml-member-info">
+<a class="ml-member-name" href="characters/musubi.html">我王 むすび</a>
+<div class="ml-member-read">Gaou Musubi</div>
+</div>
+</div>
+</div>
+<!-- 熊乃ベアトリーチェ -->
+<div class="ml-member-card">
+<div class="ml-card-inner">
+<div class="ml-member-icon"><i class="fa-solid fa-shield-cat"></i></div> <!-- Bear/Cat proxy -->
+<div class="ml-member-info">
+<a class="ml-member-name" href="characters/beartrice.html">熊乃 ベアトリーチェ</a>
+<div class="ml-member-read">Kumano BearTrice</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 1期生 -->
+<section class="ml-section ml-reveal">
+<div class="ml-section-header">
+<div>
+<h2 class="ml-section-title">1st GEN</h2>
+<span class="ml-section-title-sub">1期生</span>
+</div>
+<div class="ml-divider"></div>
+</div>
+<div class="ml-member-grid">
+<!-- ユノ・ミハナダ -->
+<div class="ml-member-card">
+<div class="ml-card-inner">
+<div class="ml-member-icon"><i class="fa-solid fa-water"></i></div>
+<div class="ml-member-info">
+<a class="ml-member-name" href="characters/yuno.html">ユノ・ミハナダ</a>
+<div class="ml-member-read">Yuno Mihanada</div>
+</div>
+</div>
+</div>
+<!-- 夜羽咲クロネ -->
+<div class="ml-member-card">
+<div class="ml-card-inner">
+<div class="ml-member-icon"><i class="fa-solid fa-feather-pointed"></i></div>
+<div class="ml-member-info">
+<a class="ml-member-name" href="characters/kurone.html">夜羽咲 クロネ</a>
+<div class="ml-member-read">Yousagi Kurone</div>
+</div>
+</div>
+</div>
+<!-- 月魅暁りりか -->
+<div class="ml-member-card">
+<div class="ml-card-inner">
+<div class="ml-member-icon"><i class="fa-solid fa-moon"></i></div>
+<div class="ml-member-info">
+<a class="ml-member-name" href="characters/ririka.html">月魅暁 りりか</a>
+<div class="ml-member-read">Tsukimia Ririka</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 2期生 -->
+<section class="ml-section ml-reveal">
+<div class="ml-section-header">
+<div>
+<h2 class="ml-section-title">2nd GEN</h2>
+<span class="ml-section-title-sub">2期生</span>
+</div>
+<div class="ml-divider"></div>
+</div>
+<div class="ml-member-grid">
+<!-- 氷猫みう -->
+<div class="ml-member-card">
+<div class="ml-card-inner">
+<div class="ml-member-icon"><i class="fa-solid fa-snowflake"></i></div>
+<div class="ml-member-info">
+<a class="ml-member-name" href="characters/miu.html">氷猫 みう</a>
+<div class="ml-member-read">Koneko Miu</div>
+</div>
+</div>
+</div>
+<!-- 闇依ろいろ -->
+<div class="ml-member-card">
+<div class="ml-card-inner">
+<div class="ml-member-icon"><i class="fa-solid fa-cloud-moon"></i></div>
+<div class="ml-member-info">
+<a class="ml-member-name" href="characters/roiro.html">闇依 ろいろ</a>
+<div class="ml-member-read">Yamiyori Roiro</div>
+</div>
+</div>
+</div>
+<!-- 温々ねむみ -->
+<div class="ml-member-card">
+<div class="ml-card-inner">
+<div class="ml-member-icon"><i class="fa-solid fa-bed"></i></div>
+<div class="ml-member-info">
+<a class="ml-member-name" href="characters/nemumi.html">温々 ねむみ</a>
+<div class="ml-member-read">Nukunuku Nemumi</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- MEWLIVE UNIVERSE -->
+<section class="ml-section ml-reveal">
+<div class="ml-section-header">
+<div>
+<h2 class="ml-section-title ml-text-gradient">UNIVERSE</h2>
+<span class="ml-section-title-sub">MEWLIVE UNIVERSE</span>
+</div>
+<div class="ml-divider ml-divider-universe"></div>
+</div>
+<div class="ml-member-grid ml-universe-grid">
+<!-- SZNO -->
+<div class="ml-member-card ml-universe-card">
+<div class="ml-card-inner">
+<div class="ml-member-icon"><i class="fa-solid fa-bolt"></i></div>
+<div class="ml-member-info">
+<a class="ml-member-name" href="characters/szno.html">SZNO</a>
+<div class="ml-member-read">SZNO</div>
+<div class="ml-unit-tag">Vocalist</div>
+</div>
+</div>
+</div>
+<!-- Reφilm -->
+<div class="ml-member-card ml-universe-card">
+<div class="ml-card-inner">
+<div class="ml-member-icon"><i class="fa-solid fa-film"></i></div>
+<div class="ml-member-info">
+<a class="ml-member-name" href="characters/refilm.html">Reφilm</a>
+<div class="ml-member-read">レフィルム</div>
+<div class="ml-unit-tag">Male Unit</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<footer class="ml-footer">
+<div class="ml-footer-logo">
             MEW<span class="ml-logo-accent">LIVE</span>
-        </div>
-        <div class="ml-footer-company">Bandai Namco Music Live Inc.</div>
-        <p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with MEWLIVE.</p>
-    </footer>
-
-    <script src="mewlive_script.js"></script>
-</body>
-
+</div>
+<div class="ml-footer-company">Bandai Namco Music Live Inc.</div>
+<p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with MEWLIVE.</p>
+</footer>
+<script src="mewlive_script.js"></script>
+<div class="mobile-mode-banner" style="background: #ffc83d; color: #000; text-align: center; font-size: 0.85rem; padding: 4px; font-weight: 900; position: fixed; bottom: 0; width: 100%; z-index: 9999; box-shadow: 0 -2px 10px rgba(255, 200, 60, 0.4);" v-if="isMobile">🚀 Mobile Light Mode (Powered by Vue Virtual DOM)</div></div></body>
 </html>

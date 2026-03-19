@@ -1,249 +1,232 @@
 <!DOCTYPE html>
+
 <html lang="ja">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRILLIONSTAGE | VTuber Archive</title>
-    <meta name="description" content="TRILLIONSTAGE — 2022年設立のアイドルVTuber事務所。異世界から『アイドルの卵』を発掘し、コンプレックスを武器に変えるプロダクション。">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Noto+Sans+JP:wght@400;700;900&family=Space+Grotesk:wght@300;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="trillionstage.css">
-</head>
-
-<body>
-
-    <!-- Galactic Stage Background -->
-    <div class="stage-bg">
-        <div class="stars"></div>
-        <div class="glitch-overlay"></div>
-        <div class="stage-spotlight-container">
-            <div class="spotlight sl-1"></div>
-            <div class="spotlight sl-2"></div>
-        </div>
-        <div class="stage-lights"></div>
-    </div>
-
-    <!-- Navigation -->
-    <nav class="stage-nav">
-        <a href="../index.html" class="nav-back"><i class="fa-solid fa-house"></i> OMNI-HUB</a>
-        <div class="nav-logo">TRILLIONSTAGE</div>
-        <div class="nav-links">
-            <a href="#roster">ROSTER</a>
-            <a href="#episodes">EPISODES</a>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header class="stage-hero">
-        <div class="hero-content stage-reveal">
-            <div class="hero-badge">OFFICIAL ARCHIVE</div>
-            <h1 class="hero-title">CONCOMPLEX<br><span class="glitch-title" data-text="IS WEAPON.">IS WEAPON.</span>
-            </h1>
-            <p class="hero-desc">
-                2022年8月設立。「コンプレックスは最大の武器だ」を掲げ、あらゆる異世界から「アイドルの卵」を発掘。<br>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TRILLIONSTAGE | VTuber Archive</title>
+<meta content="TRILLIONSTAGE — 2022年設立のアイドルVTuber事務所。異世界から『アイドルの卵』を発掘し、コンプレックスを武器に変えるプロダクション。" name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&amp;family=Noto+Sans+JP:wght@400;700;900&amp;family=Space+Grotesk:wght@300;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="trillionstage.css" rel="stylesheet"/>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><style>[v-cloak] { display: none; } </style></head>
+<body><div id="app" v-cloak="">
+<!-- Galactic Stage Background -->
+<div class="stage-bg" v-if="!isMobile">
+<div class="stars"></div>
+<div class="glitch-overlay"></div>
+<div class="stage-spotlight-container">
+<div class="spotlight sl-1"></div>
+<div class="spotlight sl-2"></div>
+</div>
+<div class="stage-lights"></div>
+</div>
+<!-- Navigation -->
+<nav class="stage-nav">
+<a class="nav-back" href="../index.html"><i class="fa-solid fa-house"></i> OMNI-HUB</a>
+<div class="nav-logo">TRILLIONSTAGE</div>
+<div class="nav-links">
+<a href="#roster">ROSTER</a>
+<a href="#episodes">EPISODES</a>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="stage-hero">
+<div class="hero-content stage-reveal">
+<div class="hero-badge">OFFICIAL ARCHIVE</div>
+<h1 class="hero-title">CONCOMPLEX<br/><span class="glitch-title" data-text="IS WEAPON.">IS WEAPON.</span>
+</h1>
+<p class="hero-desc">
+                2022年8月設立。「コンプレックスは最大の武器だ」を掲げ、あらゆる異世界から「アイドルの卵」を発掘。<br/>
                 個性豊かで少し訳ありな少女たちを、ボカロ界のレジェンド「囚人P」氏らが全力でプロデュースするアイドルVTuber事務所です。
             </p>
-            <div class="hero-producers">
-                <div class="producer">
-                    <span class="label">Executive Producer</span>
-                    <span class="name">囚人P (猫ロ眠)</span>
-                </div>
-                <div class="producer">
-                    <span class="label">Executive Advisor</span>
-                    <span class="name">竹下和広 (エルシャダイ)</span>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Roster Grid -->
-    <main id="roster" class="stage-container">
-
-        <!-- 1st Gen -->
-        <div class="unit-block stage-reveal">
-            <div class="unit-header">
-                <h2 class="unit-title">1st GEN // INITIAL STAGE</h2>
-                <div class="unit-line"></div>
-            </div>
-            <div class="talent-grid">
-                <a href="characters/rei/rei.html" class="talent-card-link">
-                    <div class="talent-card">
-                        <h3 class="name">好狐星 レイ</h3>
-                        <p class="sub">Sukoboshi Rei</p>
-                        <p class="desc">尻尾が8本しかない落ちこぼれ九尾系ギャルアイドル。</p>
-                    </div>
-                </a>
-                <a href="characters/myu/myu.html" class="talent-card-link">
-                    <div class="talent-card">
-                        <h3 class="name">羽愛兎 みゅう</h3>
-                        <p class="sub">Haatono Mew</p>
-                        <p class="desc">1億年後の不思議の国から人参につられてやってきた白うさぎ。</p>
-                    </div>
-                </a>
-                <a href="characters/mikuru/mikuru.html" class="talent-card-link">
-                    <div class="talent-card">
-                        <h3 class="name">咲蝶 みくる</h3>
-                        <p class="sub">Sakitcho Mikuru</p>
-                        <p class="desc">全長2センチの羽虫界から来たミクロアイドル。</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-
-        <!-- 1.5 Gen -->
-        <div class="unit-block stage-reveal">
-            <div class="unit-header">
-                <h2 class="unit-title">1.5th GEN // 電脳無職旅団</h2>
-                <div class="unit-line color-unemployed"></div>
-            </div>
-            <div class="talent-grid">
-                <a href="characters/nina/nina.html" class="talent-card-link">
-                    <div class="talent-card">
-                        <h3 class="name">七峰 ニナ</h3>
-                        <p class="sub">Nanamine Nina</p>
-                        <p class="desc">「かわいい子のヒモ」が夢の酒カスゲーマーアイドル。</p>
-                    </div>
-                </a>
-                <a href="characters/suina/suina.html" class="talent-card-link">
-                    <div class="talent-card">
-                        <h3 class="name">白瀬 スイナ</h3>
-                        <p class="sub">Shirase Suina</p>
-                        <p class="desc">軍隊を辞めてニートをしていた追放系元・王国騎士。</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-
-        <!-- 2nd Gen -->
-        <div class="unit-block stage-reveal">
-            <div class="unit-header">
-                <h2 class="unit-title">2nd GEN // 人類滅亡部</h2>
-                <div class="unit-line color-extinction"></div>
-            </div>
-            <div class="talent-grid">
-                <a href="characters/viv/viv.html" class="talent-card-link">
-                    <div class="talent-card">
-                        <h3 class="name">ヴィヴ・シルヴィ</h3>
-                        <p class="sub">ViV Silvey</p>
-                        <p class="desc">6200万歳のクリスタルドラゴンにして絶対王者のVsinger。</p>
-                    </div>
-                </a>
-                <a href="characters/tobari/tobari.html" class="talent-card-link">
-                    <div class="talent-card">
-                        <h3 class="name">猫滅刃 とばり</h3>
-                        <p class="sub">Nya-horoba Tobari</p>
-                        <p class="desc">宇宙の始まりを切り開いた伝説の刀の化身（ポンコツ）。</p>
-                    </div>
-                </a>
-                <a href="characters/abyss/abyss.html" class="talent-card-link">
-                    <div class="talent-card">
-                        <h3 class="name">アビス・ソング・S</h3>
-                        <p class="sub">Abyss Song Syndrome</p>
-                        <p class="desc">「人類全稚魚化」を目論むファビュラスな巨大クラーケン。</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-
-        <!-- 3rd Gen -->
-        <div class="unit-block stage-reveal">
-            <div class="unit-header">
-                <h2 class="unit-title">3rd GEN // 堕落学院</h2>
-                <div class="unit-line color-heresy"></div>
-            </div>
-            <div class="talent-grid">
-                <a href="characters/horobi/horobi.html" class="talent-card-link">
-                    <div class="talent-card">
-                        <h3 class="name">ホロビ・M・オイル</h3>
-                        <p class="sub">Horobi Madnight Oil</p>
-                        <p class="desc">会社が倒産してVTuberになった不憫可愛いフェンリル。</p>
-                    </div>
-                </a>
-                <a href="characters/aegis/aegis.html" class="talent-card-link">
-                    <div class="talent-card">
-                        <h3 class="name">七天八十院アエギス</h3>
-                        <p class="sub">Shichitenbattoin Aegis</p>
-                        <p class="desc">登録者13万人からの復活を遂げた音大首席オペラVsinger。</p>
-                    </div>
-                </a>
-                <a href="characters/ututsu/ututsu.html" class="talent-card-link">
-                    <div class="talent-card">
-                        <h3 class="name">虚囁</h3>
-                        <p class="sub">Ututsu</p>
-                        <p class="desc">伝説の「耳奥ハムハム」でYahoo!ニュースに載ったASMRの化身。</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-
-        <!-- 4th Gen -->
-        <div class="unit-block stage-reveal">
-            <div class="unit-header">
-                <h2 class="unit-title">4th GEN // 秘密結社 白撃会</h2>
-                <div class="unit-line color-secret"></div>
-            </div>
-            <div class="talent-grid">
-                <a href="characters/pino/pino.html" class="talent-card-link">
-                    <div class="talent-card">
-                        <h3 class="name">ぴぴぴ ぴの</h3>
-                        <p class="sub">Pipipi Pino</p>
-                        <p class="desc">元ホームレスで愛が重すぎるホワイトフェニックスお嬢様。</p>
-                    </div>
-                </a>
-                <a href="characters/reone/reone.html" class="talent-card-link">
-                    <div class="talent-card">
-                        <h3 class="name">リオネ・クレイジーゼリー</h3>
-                        <p class="sub">Reone Crazy Jelly</p>
-                        <p class="desc">内臓が23個ない不老不死の対社会人型兵器ミュータント。</p>
-                    </div>
-                </a>
-                <a href="characters/siren/siren.html" class="talent-card-link">
-                    <div class="talent-card">
-                        <h3 class="name">サイレン=サテライト</h3>
-                        <p class="sub">Siren=Satellite</p>
-                        <p class="desc">地球の衛星軌道上から監視を行う監視官Vsinger。</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-
-        <!-- Episodes -->
-        <section id="episodes" class="episode-section stage-reveal">
-            <h2 class="section-title">CASE LOGS</h2>
-            <div class="episode-container">
-                <div class="episode-card">
-                    <div class="epi-tag">RECORD</div>
-                    <h4>音大首席Vsingerの衝撃</h4>
-                    <p>3期生「七天八十院アエギス」が初配信で最大同接7,500人を記録。その圧倒的な実力で業界を震撼させた。</p>
-                </div>
-                <div class="episode-card">
-                    <div class="epi-tag">WARNING</div>
-                    <h4>「耳ハムハム」に関する謝罪</h4>
-                    <p>YouTube BANに伴う謝罪文にて、「耳ナメナメの危険性は伝えていたが、耳ハムハムについては伝えていなかった」という迷文を公開。</p>
-                </div>
-                <div class="episode-card">
-                    <div class="epi-tag">EVENT</div>
-                    <h4>デビュー2時間の反乱</h4>
-                    <p>4期生がデビュー2時間で活動方針を変更。運営による異例の「公開警告」を交えたエンタメ展開が話題に。</p>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="stage-footer">
-        <div class="footer-inner">
-            <div class="footer-logo">TRILLIONSTAGE <span class="accent-text">INF.</span></div>
-            <p>© 2026 VTuber Archive Project. Supported by CosmicCreators.</p>
-        </div>
-    </footer>
-
-    <script src="trillionstage_script.js"></script>
-</body>
-
+<div class="hero-producers">
+<div class="producer">
+<span class="label">Executive Producer</span>
+<span class="name">囚人P (猫ロ眠)</span>
+</div>
+<div class="producer">
+<span class="label">Executive Advisor</span>
+<span class="name">竹下和広 (エルシャダイ)</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Roster Grid -->
+<main class="stage-container" id="roster">
+<!-- 1st Gen -->
+<div class="unit-block stage-reveal">
+<div class="unit-header">
+<h2 class="unit-title">1st GEN // INITIAL STAGE</h2>
+<div class="unit-line"></div>
+</div>
+<div class="talent-grid">
+<a class="talent-card-link" href="characters/rei/rei.html">
+<div class="talent-card">
+<h3 class="name">好狐星 レイ</h3>
+<p class="sub">Sukoboshi Rei</p>
+<p class="desc">尻尾が8本しかない落ちこぼれ九尾系ギャルアイドル。</p>
+</div>
+</a>
+<a class="talent-card-link" href="characters/myu/myu.html">
+<div class="talent-card">
+<h3 class="name">羽愛兎 みゅう</h3>
+<p class="sub">Haatono Mew</p>
+<p class="desc">1億年後の不思議の国から人参につられてやってきた白うさぎ。</p>
+</div>
+</a>
+<a class="talent-card-link" href="characters/mikuru/mikuru.html">
+<div class="talent-card">
+<h3 class="name">咲蝶 みくる</h3>
+<p class="sub">Sakitcho Mikuru</p>
+<p class="desc">全長2センチの羽虫界から来たミクロアイドル。</p>
+</div>
+</a>
+</div>
+</div>
+<!-- 1.5 Gen -->
+<div class="unit-block stage-reveal">
+<div class="unit-header">
+<h2 class="unit-title">1.5th GEN // 電脳無職旅団</h2>
+<div class="unit-line color-unemployed"></div>
+</div>
+<div class="talent-grid">
+<a class="talent-card-link" href="characters/nina/nina.html">
+<div class="talent-card">
+<h3 class="name">七峰 ニナ</h3>
+<p class="sub">Nanamine Nina</p>
+<p class="desc">「かわいい子のヒモ」が夢の酒カスゲーマーアイドル。</p>
+</div>
+</a>
+<a class="talent-card-link" href="characters/suina/suina.html">
+<div class="talent-card">
+<h3 class="name">白瀬 スイナ</h3>
+<p class="sub">Shirase Suina</p>
+<p class="desc">軍隊を辞めてニートをしていた追放系元・王国騎士。</p>
+</div>
+</a>
+</div>
+</div>
+<!-- 2nd Gen -->
+<div class="unit-block stage-reveal">
+<div class="unit-header">
+<h2 class="unit-title">2nd GEN // 人類滅亡部</h2>
+<div class="unit-line color-extinction"></div>
+</div>
+<div class="talent-grid">
+<a class="talent-card-link" href="characters/viv/viv.html">
+<div class="talent-card">
+<h3 class="name">ヴィヴ・シルヴィ</h3>
+<p class="sub">ViV Silvey</p>
+<p class="desc">6200万歳のクリスタルドラゴンにして絶対王者のVsinger。</p>
+</div>
+</a>
+<a class="talent-card-link" href="characters/tobari/tobari.html">
+<div class="talent-card">
+<h3 class="name">猫滅刃 とばり</h3>
+<p class="sub">Nya-horoba Tobari</p>
+<p class="desc">宇宙の始まりを切り開いた伝説の刀の化身（ポンコツ）。</p>
+</div>
+</a>
+<a class="talent-card-link" href="characters/abyss/abyss.html">
+<div class="talent-card">
+<h3 class="name">アビス・ソング・S</h3>
+<p class="sub">Abyss Song Syndrome</p>
+<p class="desc">「人類全稚魚化」を目論むファビュラスな巨大クラーケン。</p>
+</div>
+</a>
+</div>
+</div>
+<!-- 3rd Gen -->
+<div class="unit-block stage-reveal">
+<div class="unit-header">
+<h2 class="unit-title">3rd GEN // 堕落学院</h2>
+<div class="unit-line color-heresy"></div>
+</div>
+<div class="talent-grid">
+<a class="talent-card-link" href="characters/horobi/horobi.html">
+<div class="talent-card">
+<h3 class="name">ホロビ・M・オイル</h3>
+<p class="sub">Horobi Madnight Oil</p>
+<p class="desc">会社が倒産してVTuberになった不憫可愛いフェンリル。</p>
+</div>
+</a>
+<a class="talent-card-link" href="characters/aegis/aegis.html">
+<div class="talent-card">
+<h3 class="name">七天八十院アエギス</h3>
+<p class="sub">Shichitenbattoin Aegis</p>
+<p class="desc">登録者13万人からの復活を遂げた音大首席オペラVsinger。</p>
+</div>
+</a>
+<a class="talent-card-link" href="characters/ututsu/ututsu.html">
+<div class="talent-card">
+<h3 class="name">虚囁</h3>
+<p class="sub">Ututsu</p>
+<p class="desc">伝説の「耳奥ハムハム」でYahoo!ニュースに載ったASMRの化身。</p>
+</div>
+</a>
+</div>
+</div>
+<!-- 4th Gen -->
+<div class="unit-block stage-reveal">
+<div class="unit-header">
+<h2 class="unit-title">4th GEN // 秘密結社 白撃会</h2>
+<div class="unit-line color-secret"></div>
+</div>
+<div class="talent-grid">
+<a class="talent-card-link" href="characters/pino/pino.html">
+<div class="talent-card">
+<h3 class="name">ぴぴぴ ぴの</h3>
+<p class="sub">Pipipi Pino</p>
+<p class="desc">元ホームレスで愛が重すぎるホワイトフェニックスお嬢様。</p>
+</div>
+</a>
+<a class="talent-card-link" href="characters/reone/reone.html">
+<div class="talent-card">
+<h3 class="name">リオネ・クレイジーゼリー</h3>
+<p class="sub">Reone Crazy Jelly</p>
+<p class="desc">内臓が23個ない不老不死の対社会人型兵器ミュータント。</p>
+</div>
+</a>
+<a class="talent-card-link" href="characters/siren/siren.html">
+<div class="talent-card">
+<h3 class="name">サイレン=サテライト</h3>
+<p class="sub">Siren=Satellite</p>
+<p class="desc">地球の衛星軌道上から監視を行う監視官Vsinger。</p>
+</div>
+</a>
+</div>
+</div>
+<!-- Episodes -->
+<section class="episode-section stage-reveal" id="episodes">
+<h2 class="section-title">CASE LOGS</h2>
+<div class="episode-container">
+<div class="episode-card">
+<div class="epi-tag">RECORD</div>
+<h4>音大首席Vsingerの衝撃</h4>
+<p>3期生「七天八十院アエギス」が初配信で最大同接7,500人を記録。その圧倒的な実力で業界を震撼させた。</p>
+</div>
+<div class="episode-card">
+<div class="epi-tag">WARNING</div>
+<h4>「耳ハムハム」に関する謝罪</h4>
+<p>YouTube BANに伴う謝罪文にて、「耳ナメナメの危険性は伝えていたが、耳ハムハムについては伝えていなかった」という迷文を公開。</p>
+</div>
+<div class="episode-card">
+<div class="epi-tag">EVENT</div>
+<h4>デビュー2時間の反乱</h4>
+<p>4期生がデビュー2時間で活動方針を変更。運営による異例の「公開警告」を交えたエンタメ展開が話題に。</p>
+</div>
+</div>
+</section>
+</main>
+<footer class="stage-footer">
+<div class="footer-inner">
+<div class="footer-logo">TRILLIONSTAGE <span class="accent-text">INF.</span></div>
+<p>© 2026 VTuber Archive Project. Supported by CosmicCreators.</p>
+</div>
+</footer>
+<script src="trillionstage_script.js"></script>
+<div class="mobile-mode-banner" style="background: #ffc83d; color: #000; text-align: center; font-size: 0.85rem; padding: 4px; font-weight: 900; position: fixed; bottom: 0; width: 100%; z-index: 9999; box-shadow: 0 -2px 10px rgba(255, 200, 60, 0.4);" v-if="isMobile">🚀 Mobile Light Mode (Powered by Vue Virtual DOM)</div></div></body>
 </html>

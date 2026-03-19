@@ -1,358 +1,330 @@
 <!DOCTYPE html>
+
 <html lang="ja">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Palette Project - VTuber Archive Premium</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="paletteproject_index.css">
-</head>
-
-<body>
-    <div class="bg-fx"></div>
-    <nav class="nav">
-        <a href="../index.html" class="nav-brand"><i class="fa-solid fa-layer-group"></i> VT_ARCHIVE</a>
-        <div class="nav-links">
-            <a href="../index.html"><i class="fa-solid fa-home"></i> HOME</a>
-            <a href="#" style="color: var(--c1);"><i class="fa-solid fa-palette"></i> Palette Project</a>
-        </div>
-    </nav>
-
-
-
-    <main class="main-content">
-
-        <div class="hero">
-            <h1 class="hero-title">Palette Project</h1>
-            <p class="hero-subtitle">Vivid Stream Archive</p>
-        </div>
-
-        <nav class="unit-nav reveal">
-            <div class="unit-pill" data-filter="all">All Talents</div>
-            <div class="unit-pill routeheart" data-filter="routeheart"><i class="fa-solid fa-heart"></i> RouteHeart
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Palette Project - VTuber Archive Premium</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="paletteproject_index.css" rel="stylesheet"/>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><style>[v-cloak] { display: none; } </style></head>
+<body><div id="app" v-cloak="">
+<div class="bg-fx" v-if="!isMobile"></div>
+<nav class="nav">
+<a class="nav-brand" href="../index.html"><i class="fa-solid fa-layer-group"></i> VT_ARCHIVE</a>
+<div class="nav-links">
+<a href="../index.html"><i class="fa-solid fa-home"></i> HOME</a>
+<a href="#" style="color: var(--c1);"><i class="fa-solid fa-palette"></i> Palette Project</a>
+</div>
+</nav>
+<main class="main-content">
+<div class="hero">
+<h1 class="hero-title">Palette Project</h1>
+<p class="hero-subtitle">Vivid Stream Archive</p>
+</div>
+<nav class="unit-nav reveal">
+<div class="unit-pill" data-filter="all">All Talents</div>
+<div class="unit-pill routeheart" data-filter="routeheart"><i class="fa-solid fa-heart"></i> RouteHeart
             </div>
-            <div class="unit-pill regalilia" data-filter="regalilia"><i class="fa-solid fa-crown"></i> REGALILIA</div>
-            <div class="unit-pill sputrip" data-filter="sputrip"><i class="fa-solid fa-rocket"></i> Sputrip</div>
-            <div class="unit-pill trainee" data-filter="trainee"><i class="fa-solid fa-seedling"></i> Trainee</div>
-        </nav>
-
-        <section class="gen-group reveal">
-            <h2 class="category-title">Regular Members</h2>
-            <div class="roster-grid">
-                <!-- Sputrip -->
-                <a href="characters/clara.html" class="member-card sputrip">
-                    <div class="m-avatar"><i class="fa-solid fa-rocket"></i></div>
-                    <span class="m-name">暁月 クララ</span>
-                    <span class="m-sub">Akatsuki Clara</span>
-                    <span class="m-rank">1st Gen / Sputrip</span>
-                </a>
-                <a href="characters/kaname.html" class="member-card sputrip">
-                    <div class="m-avatar"><i class="fa-solid fa-rocket"></i></div>
-                    <span class="m-name">常磐 カナメ</span>
-                    <span class="m-sub">Tokiwa Kaname</span>
-                    <span class="m-rank">2nd Gen / Sputrip</span>
-                </a>
-                <a href="characters/hanon.html" class="member-card sputrip">
-                    <div class="m-avatar"><i class="fa-solid fa-rocket"></i></div>
-                    <span class="m-name">香鳴 ハノン</span>
-                    <span class="m-sub">Kanari Hanon</span>
-                    <span class="m-rank">4th Gen / Sputrip</span>
-                </a>
-
-                <!-- RouteHeart -->
-                <a href="characters/rona.html" class="member-card routeheart">
-                    <div class="m-avatar"><i class="fa-solid fa-heart"></i></div>
-                    <span class="m-name">七海 ロナ</span>
-                    <span class="m-sub">Nanami Rona</span>
-                    <span class="m-rank">1st Gen / RouteHeart</span>
-                </a>
-                <a href="characters/kotoha.html" class="member-card routeheart">
-                    <div class="m-avatar"><i class="fa-solid fa-heart"></i></div>
-                    <span class="m-name">藤宮 コトハ</span>
-                    <span class="m-sub">Fujimiya Kotoha</span>
-                    <span class="m-rank">2nd Gen / RouteHeart</span>
-                </a>
-
-                <!-- REGALILIA -->
-                <a href="characters/kyouka.html" class="member-card regalilia">
-                    <div class="m-avatar"><i class="fa-solid fa-crown"></i></div>
-                    <span class="m-name">江波 キョウカ</span>
-                    <span class="m-sub">Enami Kyouka</span>
-                    <span class="m-rank">3rd Gen / REGALILIA</span>
-                </a>
-                <a href="characters/ayumu.html" class="member-card regalilia">
-                    <div class="m-avatar"><i class="fa-solid fa-crown"></i></div>
-                    <span class="m-name">鬼多見 アユム</span>
-                    <span class="m-sub">Kitami Ayumu</span>
-                    <span class="m-rank">4th Gen / REGALILIA</span>
-                </a>
-
-                <!-- Promoted -->
-                <a href="characters/maharo.html" class="member-card sputrip">
-                    <div class="m-avatar"><i class="fa-solid fa-star"></i></div>
-                    <span class="m-name">夏渚 まはろ</span>
-                    <span class="m-sub">Sanagi Maharo</span>
-                    <span class="m-rank">5th Gen (Promoted)</span>
-                </a>
-            </div>
-        </section>
-
-        <section class="gen-group reveal">
-            <h2 class="category-title">Research Members</h2>
-            <div class="roster-grid">
-                <!-- Trainees -->
-                <a href="characters/anela.html" class="member-card trainee">
-                    <div class="m-avatar"><i class="fa-solid fa-seedling"></i></div>
-                    <span class="m-name">愛染 アネラ</span>
-                    <span class="m-sub">Aizen Anela</span>
-                    <span class="m-rank">5th Gen Trainee</span>
-                </a>
-                <a href="characters/ao.html" class="member-card trainee">
-                    <div class="m-avatar"><i class="fa-solid fa-seedling"></i></div>
-                    <span class="m-name">月宮 あお</span>
-                    <span class="m-sub">Tsukimiya Ao</span>
-                    <span class="m-rank">5th Gen Trainee</span>
-                </a>
-                <a href="characters/koko.html" class="member-card trainee">
-                    <div class="m-avatar"><i class="fa-solid fa-seedling"></i></div>
-                    <span class="m-name">日本晴 ここ</span>
-                    <span class="m-sub">Nihonbare Koko</span>
-                    <span class="m-rank">5th Gen Trainee</span>
-                </a>
-                <a href="characters/naru.html" class="member-card trainee">
-                    <div class="m-avatar"><i class="fa-solid fa-seedling"></i></div>
-                    <span class="m-name">六連星 なる</span>
-                    <span class="m-sub">Mutsuraboshi Naru</span>
-                    <span class="m-rank">5th Gen Trainee</span>
-                </a>
-                <a href="characters/gabu.html" class="member-card trainee">
-                    <div class="m-avatar"><i class="fa-solid fa-seedling"></i></div>
-                    <span class="m-name">鎖乙女 がぶ</span>
-                    <span class="m-sub">Saotome Gabu</span>
-                    <span class="m-rank">6th Gen Trainee</span>
-                </a>
-                <a href="characters/ruka.html" class="member-card trainee">
-                    <div class="m-avatar"><i class="fa-solid fa-seedling"></i></div>
-                    <span class="m-name">彩音 るか</span>
-                    <span class="m-sub">Ayane Ruka</span>
-                    <span class="m-rank">6th Gen Trainee</span>
-                </a>
-                <a href="characters/rime.html" class="member-card trainee">
-                    <div class="m-avatar"><i class="fa-solid fa-seedling"></i></div>
-                    <span class="m-name">変幻 リメ</span>
-                    <span class="m-sub">Hengen Rime</span>
-                    <span class="m-rank">6th Gen Trainee</span>
-                </a>
-            </div>
-        </section>
-        <article class="card">
-            <h2><i class="fa-solid fa-book-open fa-xs" style="opacity:0.5;"></i> Overview</h2>
-            <p>バーチャルアイドル・マネジメントにおける組織構造とタレント変遷の多角的考察：Palette Projectを事例としたアーカイブ構築報告書</p>
-            <p>バーチャルタレント（<strong
-                    style="color:var(--c1);">VTuber</strong>）産業が成熟期を迎える中で、単なるライブ配信の枠を超え、音楽性とパフォーマンスに特化した「バーチャルアイドル」という独自のカテゴリーが確立されている。その象徴的な存在の一つである「Palette
-                Project（<strong
-                    style="color:var(--c1);">以下、パレプロ</strong>）」は、2018年の発足以来、数々の組織改編と運営母体の変遷を経て、現在の高度に洗練されたマルチユニット体制を構築するに至った。本報告書は、パレプロのアーカイブ構築を目的とし、所属タレントの契約状況、世代別の構成、所属ユニットおよびレーベルの変遷、さらには運営母体の資本移動に伴う戦略的転換について、提供された研究資料に基づき包括的に分析するものである。
+<div class="unit-pill regalilia" data-filter="regalilia"><i class="fa-solid fa-crown"></i> REGALILIA</div>
+<div class="unit-pill sputrip" data-filter="sputrip"><i class="fa-solid fa-rocket"></i> Sputrip</div>
+<div class="unit-pill trainee" data-filter="trainee"><i class="fa-solid fa-seedling"></i> Trainee</div>
+</nav>
+<section class="gen-group reveal">
+<h2 class="category-title">Regular Members</h2>
+<div class="roster-grid">
+<!-- Sputrip -->
+<a class="member-card sputrip" href="characters/clara.html">
+<div class="m-avatar"><i class="fa-solid fa-rocket"></i></div>
+<span class="m-name">暁月 クララ</span>
+<span class="m-sub">Akatsuki Clara</span>
+<span class="m-rank">1st Gen / Sputrip</span>
+</a>
+<a class="member-card sputrip" href="characters/kaname.html">
+<div class="m-avatar"><i class="fa-solid fa-rocket"></i></div>
+<span class="m-name">常磐 カナメ</span>
+<span class="m-sub">Tokiwa Kaname</span>
+<span class="m-rank">2nd Gen / Sputrip</span>
+</a>
+<a class="member-card sputrip" href="characters/hanon.html">
+<div class="m-avatar"><i class="fa-solid fa-rocket"></i></div>
+<span class="m-name">香鳴 ハノン</span>
+<span class="m-sub">Kanari Hanon</span>
+<span class="m-rank">4th Gen / Sputrip</span>
+</a>
+<!-- RouteHeart -->
+<a class="member-card routeheart" href="characters/rona.html">
+<div class="m-avatar"><i class="fa-solid fa-heart"></i></div>
+<span class="m-name">七海 ロナ</span>
+<span class="m-sub">Nanami Rona</span>
+<span class="m-rank">1st Gen / RouteHeart</span>
+</a>
+<a class="member-card routeheart" href="characters/kotoha.html">
+<div class="m-avatar"><i class="fa-solid fa-heart"></i></div>
+<span class="m-name">藤宮 コトハ</span>
+<span class="m-sub">Fujimiya Kotoha</span>
+<span class="m-rank">2nd Gen / RouteHeart</span>
+</a>
+<!-- REGALILIA -->
+<a class="member-card regalilia" href="characters/kyouka.html">
+<div class="m-avatar"><i class="fa-solid fa-crown"></i></div>
+<span class="m-name">江波 キョウカ</span>
+<span class="m-sub">Enami Kyouka</span>
+<span class="m-rank">3rd Gen / REGALILIA</span>
+</a>
+<a class="member-card regalilia" href="characters/ayumu.html">
+<div class="m-avatar"><i class="fa-solid fa-crown"></i></div>
+<span class="m-name">鬼多見 アユム</span>
+<span class="m-sub">Kitami Ayumu</span>
+<span class="m-rank">4th Gen / REGALILIA</span>
+</a>
+<!-- Promoted -->
+<a class="member-card sputrip" href="characters/maharo.html">
+<div class="m-avatar"><i class="fa-solid fa-star"></i></div>
+<span class="m-name">夏渚 まはろ</span>
+<span class="m-sub">Sanagi Maharo</span>
+<span class="m-rank">5th Gen (Promoted)</span>
+</a>
+</div>
+</section>
+<section class="gen-group reveal">
+<h2 class="category-title">Research Members</h2>
+<div class="roster-grid">
+<!-- Trainees -->
+<a class="member-card trainee" href="characters/anela.html">
+<div class="m-avatar"><i class="fa-solid fa-seedling"></i></div>
+<span class="m-name">愛染 アネラ</span>
+<span class="m-sub">Aizen Anela</span>
+<span class="m-rank">5th Gen Trainee</span>
+</a>
+<a class="member-card trainee" href="characters/ao.html">
+<div class="m-avatar"><i class="fa-solid fa-seedling"></i></div>
+<span class="m-name">月宮 あお</span>
+<span class="m-sub">Tsukimiya Ao</span>
+<span class="m-rank">5th Gen Trainee</span>
+</a>
+<a class="member-card trainee" href="characters/koko.html">
+<div class="m-avatar"><i class="fa-solid fa-seedling"></i></div>
+<span class="m-name">日本晴 ここ</span>
+<span class="m-sub">Nihonbare Koko</span>
+<span class="m-rank">5th Gen Trainee</span>
+</a>
+<a class="member-card trainee" href="characters/naru.html">
+<div class="m-avatar"><i class="fa-solid fa-seedling"></i></div>
+<span class="m-name">六連星 なる</span>
+<span class="m-sub">Mutsuraboshi Naru</span>
+<span class="m-rank">5th Gen Trainee</span>
+</a>
+<a class="member-card trainee" href="characters/gabu.html">
+<div class="m-avatar"><i class="fa-solid fa-seedling"></i></div>
+<span class="m-name">鎖乙女 がぶ</span>
+<span class="m-sub">Saotome Gabu</span>
+<span class="m-rank">6th Gen Trainee</span>
+</a>
+<a class="member-card trainee" href="characters/ruka.html">
+<div class="m-avatar"><i class="fa-solid fa-seedling"></i></div>
+<span class="m-name">彩音 るか</span>
+<span class="m-sub">Ayane Ruka</span>
+<span class="m-rank">6th Gen Trainee</span>
+</a>
+<a class="member-card trainee" href="characters/rime.html">
+<div class="m-avatar"><i class="fa-solid fa-seedling"></i></div>
+<span class="m-name">変幻 リメ</span>
+<span class="m-sub">Hengen Rime</span>
+<span class="m-rank">6th Gen Trainee</span>
+</a>
+</div>
+</section>
+<article class="card">
+<h2><i class="fa-solid fa-book-open fa-xs" style="opacity:0.5;"></i> Overview</h2>
+<p>バーチャルアイドル・マネジメントにおける組織構造とタレント変遷の多角的考察：Palette Projectを事例としたアーカイブ構築報告書</p>
+<p>バーチャルタレント（<strong style="color:var(--c1);">VTuber</strong>）産業が成熟期を迎える中で、単なるライブ配信の枠を超え、音楽性とパフォーマンスに特化した「バーチャルアイドル」という独自のカテゴリーが確立されている。その象徴的な存在の一つである「Palette
+                Project（<strong style="color:var(--c1);">以下、パレプロ</strong>）」は、2018年の発足以来、数々の組織改編と運営母体の変遷を経て、現在の高度に洗練されたマルチユニット体制を構築するに至った。本報告書は、パレプロのアーカイブ構築を目的とし、所属タレントの契約状況、世代別の構成、所属ユニットおよびレーベルの変遷、さらには運営母体の資本移動に伴う戦略的転換について、提供された研究資料に基づき包括的に分析するものである。
             </p>
-        </article>
-        <article class="card">
-            <h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> 第一章 運営母体の変遷と資本構造の動態</h2>
-            <p>Palette
+</article>
+<article class="card">
+<h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> 第一章 運営母体の変遷と資本構造の動態</h2>
+<p>Palette
                 Projectの歴史は、日本のVTuber業界における合従連衡の歴史そのものであるといっても過言ではない。その運営母体は、初期のベンチャー体制から、業界大手による買収、そして上場企業による共同運営へと、そのフェーズを劇的に変化させてきた
                 1。</p>
-            <p>創業期：MateReal株式会社による基盤構築</p>
-            <p>パレプロの源流は、MateReal株式会社によって設立されたプロジェクトに遡る。当初は、バーチャルアイドルの可能性を模索する小規模なマネジメント体制からスタートし、2019年9月に正式に「Palette
+<p>創業期：MateReal株式会社による基盤構築</p>
+<p>パレプロの源流は、MateReal株式会社によって設立されたプロジェクトに遡る。当初は、バーチャルアイドルの可能性を模索する小規模なマネジメント体制からスタートし、2019年9月に正式に「Palette
                 Project」としての活動を開始した
                 1。この時期、運営は「メンバーそれぞれの色、ファンの皆さん一人ひとりの色。新しいキャンバスに虹を描くようにストーリーをあなたと一緒につくっていきたい」というコンセプトを掲げ、個々のタレントの個性を尊重するアイドルグループの形成を目指していた
                 1。</p>
-            <p>拡大期：株式会社Brave groupへの参入と組織のプロフェッショナル化</p>
-            <p>2022年6月、パレプロにとって大きな転換点が訪れる。運営会社であるMateReal株式会社が、株式会社Brave groupのM&Aによって完全子会社となったのである 1。Brave
+<p>拡大期：株式会社Brave groupへの参入と組織のプロフェッショナル化</p>
+<p>2022年6月、パレプロにとって大きな転換点が訪れる。運営会社であるMateReal株式会社が、株式会社Brave groupのM&amp;Aによって完全子会社となったのである 1。Brave
                 groupは、複数のVTuberプロジェクトを傘下に収める業界のリーディングカンパニーであり、この統合によりパレプロは、より強固な財務基盤と広範なマーケティングリソースを享受することとなった。この時期に行われた「パレプロリスタート」は、コンテンツの質的向上と、組織としての継続性を担保するための戦略的リブランディングであったと分析できる
                 1。</p>
-            <p>再編期：株式会社ENILISへの吸収とjig.jpとの共同運営</p>
-            <p>2025年4月、Brave group内の経営効率化とプロデュース機能の特化を目的として、MateReal株式会社は同グループ内の株式会社ENILISに吸収合併された
+<p>再編期：株式会社ENILISへの吸収とjig.jpとの共同運営</p>
+<p>2025年4月、Brave group内の経営効率化とプロデュース機能の特化を目的として、MateReal株式会社は同グループ内の株式会社ENILISに吸収合併された
                 1。ENILISは「もっと自由なエンタメを」という理念のもと、バーチャルタレントの自由な自己表現とマネジメントの両立を追求する法人であり、パレプロの運営ノウハウはここに集約された 3。</p>
-            <p>さらに、2026年1月12日には、運営母体を株式会社jig.jpへ移管し、ENILISとの共同運営体制へ移行することが発表された
+<p>さらに、2026年1月12日には、運営母体を株式会社jig.jpへ移管し、ENILISとの共同運営体制へ移行することが発表された
                 2。jig.jpは、ライブ配信事業「ふわっち」やバーチャル音楽ライブ配信「topia」を展開する企業であり、パレプロの活動基盤を拡張するための強力なパートナーシップが構築された
                 2。この提携は、既存の運営ノウハウを継続しつつ、上場企業であるjig.jpの投資能力とプラットフォーム連携を活用するという、極めて合理的な経営判断に基づいている 3。</p>
-        </article>
-        <article class="card">
-            <h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> 第二章 ユニット別組織構造と音楽的ジャンルの定義</h2>
-            <p>パレプロの最大の特徴は、単一のグループとしてではなく、音楽ジャンルごとに特化した複数の内部ユニットによって構成されている点にある。この戦略は、多様化するファンの嗜好に対応し、各メンバーの歌唱特性やパフォーマンススタイルを最適化するためのものである
+</article>
+<article class="card">
+<h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> 第二章 ユニット別組織構造と音楽的ジャンルの定義</h2>
+<p>パレプロの最大の特徴は、単一のグループとしてではなく、音楽ジャンルごとに特化した複数の内部ユニットによって構成されている点にある。この戦略は、多様化するファンの嗜好に対応し、各メンバーの歌唱特性やパフォーマンススタイルを最適化するためのものである
                 1。</p>
-        </article>
-        <article class="card">
-            <h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> ユニット構成とジャンル特性</h2>
-        </article>
-        <article class="card">
-            <h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> 1</h2>
-        </article>
-        <article class="card">
-            <h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> ユニット別の活動意義と再編の歴史</h2>
-            <p>パレプロ発足前には、暁月クララ、七海ロナ、遠坂ユラの3名による「Alt!!（<strong
-                    style="color:var(--c1);">アルト！！</strong>）」というユニットが存在していたが、これがプロジェクトの原点となっている
-                1。その後、VOCALOID系の楽曲を扱う「Altimate!!」へと発展し、七海ロナ、藤宮コトハ、神菜コハネの体制で活動していたが、神菜の卒業に伴い、2023年3月8日に「RouteHeart（<strong
-                    style="color:var(--c1);">ルートハート</strong>）」として再出発した経緯がある 1。</p>
-            <p>REGALILIA（<strong
-                    style="color:var(--c1);">レガリリア</strong>）は、江波キョウカと鬼多見アユムという、歌唱力に定評のあるメンバーを配することで、アイドルという枠組みを超えた音楽的挑戦を続けている
-                1。一方でSputrip（<strong
-                    style="color:var(--c1);">スプートリップ</strong>）は、暁月、常磐、香鳴の3名が、近年再評価の著しいシティ・ポップというジャンルをバーチャル空間で体現しており、ターゲット層の拡大に寄与している
+</article>
+<article class="card">
+<h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> ユニット構成とジャンル特性</h2>
+</article>
+<article class="card">
+<h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> 1</h2>
+</article>
+<article class="card">
+<h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> ユニット別の活動意義と再編の歴史</h2>
+<p>パレプロ発足前には、暁月クララ、七海ロナ、遠坂ユラの3名による「Alt!!（<strong style="color:var(--c1);">アルト！！</strong>）」というユニットが存在していたが、これがプロジェクトの原点となっている
+                1。その後、VOCALOID系の楽曲を扱う「Altimate!!」へと発展し、七海ロナ、藤宮コトハ、神菜コハネの体制で活動していたが、神菜の卒業に伴い、2023年3月8日に「RouteHeart（<strong style="color:var(--c1);">ルートハート</strong>）」として再出発した経緯がある 1。</p>
+<p>REGALILIA（<strong style="color:var(--c1);">レガリリア</strong>）は、江波キョウカと鬼多見アユムという、歌唱力に定評のあるメンバーを配することで、アイドルという枠組みを超えた音楽的挑戦を続けている
+                1。一方でSputrip（<strong style="color:var(--c1);">スプートリップ</strong>）は、暁月、常磐、香鳴の3名が、近年再評価の著しいシティ・ポップというジャンルをバーチャル空間で体現しており、ターゲット層の拡大に寄与している
                 1。</p>
-        </article>
-        <article class="card">
-            <h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> 第三章 所属タレントの現況と契約・世代ステータス</h2>
-            <p>パレプロにおけるタレントの管理は、加入時期に基づく「期生」という概念と、能力開発を目的とした「研究生」制度によって体系化されている。これにより、組織の代謝と継続的な成長が図られている 9。</p>
-        </article>
-        <article class="card">
-            <h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> 正規メンバーの包括的データ</h2>
-            <p>正規メンバーは、現在もプロジェクトの中核を担い、各ユニットでの活動に加え、個人のYouTubeチャンネルやSNSを通じた発信を精力的に行っている 8。</p>
-        </article>
-        <article class="card">
-            <h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> 1</h2>
-            <p>1期生：暁月クララと七海ロナの先駆的役割</p>
-            <p>1期生の2名は、パレプロの歴史そのものを象徴する存在である。暁月クララは、名古屋市プリン町出身という独創的な設定を維持しつつ、ASMRや演技といった多才なスキルでファンを魅了している
+</article>
+<article class="card">
+<h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> 第三章 所属タレントの現況と契約・世代ステータス</h2>
+<p>パレプロにおけるタレントの管理は、加入時期に基づく「期生」という概念と、能力開発を目的とした「研究生」制度によって体系化されている。これにより、組織の代謝と継続的な成長が図られている 9。</p>
+</article>
+<article class="card">
+<h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> 正規メンバーの包括的データ</h2>
+<p>正規メンバーは、現在もプロジェクトの中核を担い、各ユニットでの活動に加え、個人のYouTubeチャンネルやSNSを通じた発信を精力的に行っている 8。</p>
+</article>
+<article class="card">
+<h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> 1</h2>
+<p>1期生：暁月クララと七海ロナの先駆的役割</p>
+<p>1期生の2名は、パレプロの歴史そのものを象徴する存在である。暁月クララは、名古屋市プリン町出身という独創的な設定を維持しつつ、ASMRや演技といった多才なスキルでファンを魅了している
                 8。一方、七海ロナは、高い歌唱力と「長時間睡眠」を好むマイペースなキャラクターのギャップが支持されており、RouteHeartの中心として王道アイドル路線を牽引している
                 1。両名とも、2018年のデビュー以来、数々の困難を乗り越えて活動を継続しており、後進の模範となっている 1。</p>
-            <p>2期生：藤宮コトハと常磐カナメによる層の厚み</p>
-            <p>2019年に加入した2期生は、グループに新たな活力を注入した。藤宮コトハは沖縄県出身で、UFOキャッチャーを特技とするなど親しみやすいキャラクターを持ち、RouteHeartにおいて七海ロナとの良好なコンビネーションを見せている
+<p>2期生：藤宮コトハと常磐カナメによる層の厚み</p>
+<p>2019年に加入した2期生は、グループに新たな活力を注入した。藤宮コトハは沖縄県出身で、UFOキャッチャーを特技とするなど親しみやすいキャラクターを持ち、RouteHeartにおいて七海ロナとの良好なコンビネーションを見せている
                 8。常磐カナメは「天才児」の異名を持ち、読書やラジオといった文化的な趣味を通じて、Sputripの洗練されたイメージを補完している 8。</p>
-            <p>3期生・4期生：専門性の深化</p>
-            <p>3期生の江波キョウカは、広島県出身で、アニメやソーシャルゲーム、ミニチュア模型といった多岐にわたる趣味を持ち、その知見をREGALILIAのダークで重厚な世界観に投影している
-                8。4期生の鬼多見アユムと香鳴ハノンは、それぞれメタル（<strong style="color:var(--c1);">REGALILIA</strong>）とシティ・ポップ（<strong
-                    style="color:var(--c1);">Sputrip</strong>）という対照的なユニットに配属され、プロジェクトの表現の幅を極大化させた
+<p>3期生・4期生：専門性の深化</p>
+<p>3期生の江波キョウカは、広島県出身で、アニメやソーシャルゲーム、ミニチュア模型といった多岐にわたる趣味を持ち、その知見をREGALILIAのダークで重厚な世界観に投影している
+                8。4期生の鬼多見アユムと香鳴ハノンは、それぞれメタル（<strong style="color:var(--c1);">REGALILIA</strong>）とシティ・ポップ（<strong style="color:var(--c1);">Sputrip</strong>）という対照的なユニットに配属され、プロジェクトの表現の幅を極大化させた
                 1。特に香鳴ハノンは、2026年に初のソロワンマンライブを控えるなど、個人の飛躍も目覚ましい 1。</p>
-        </article>
-        <article class="card">
-            <h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> 第四章 研究生制度の構造と昇格・卒業の軌跡</h2>
-            <p>パレプロの持続可能性を支える重要な仕組みが、2024年以降に本格化した「研究生制度」である。これは、次世代のタレントを育成し、実力が認められた者を正規メンバーへ昇格させるキャリアパスを提示するものである
+</article>
+<article class="card">
+<h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> 第四章 研究生制度の構造と昇格・卒業の軌跡</h2>
+<p>パレプロの持続可能性を支える重要な仕組みが、2024年以降に本格化した「研究生制度」である。これは、次世代のタレントを育成し、実力が認められた者を正規メンバーへ昇格させるキャリアパスを提示するものである
                 9。</p>
-        </article>
-        <article class="card">
-            <h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> 研究生世代の変遷と現状</h2>
-            <p>研究生は加入時期により5期、6期と分類されており、正規メンバー昇格後はそれぞれの期生として扱われる 9。</p>
-        </article>
-        <article class="card">
-            <h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> 1</h2>
-        </article>
-        <article class="card">
-            <h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> 研究生における昇格プロセスの成功例</h2>
-            <p>夏渚まはろの事例は、研究生制度の有効性を証明するものである。2025年の「パレプロ感謝祭2025」において、他の研究生と共にオフラインイベントへの初参加を果たし、ファンとの直接的な交流を通じて支持を固めた
+</article>
+<article class="card">
+<h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> 研究生世代の変遷と現状</h2>
+<p>研究生は加入時期により5期、6期と分類されており、正規メンバー昇格後はそれぞれの期生として扱われる 9。</p>
+</article>
+<article class="card">
+<h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> 1</h2>
+</article>
+<article class="card">
+<h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> 研究生における昇格プロセスの成功例</h2>
+<p>夏渚まはろの事例は、研究生制度の有効性を証明するものである。2025年の「パレプロ感謝祭2025」において、他の研究生と共にオフラインイベントへの初参加を果たし、ファンとの直接的な交流を通じて支持を固めた
                 10。その努力が認められ、2026年2月には正規メンバーへの昇格と3D制作が決定しており、研究生からのステップアップという成功モデルを確立した 1。</p>
-        </article>
-        <article class="card">
-            <h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> 卒業メンバーと契約の終了</h2>
-            <p>アイドルグループの宿命として、新たな挑戦や個人的な理由により、プロジェクトを離れるタレントも少なくない。過去には、パレプロ発足前からのメンバーであった遠坂ユラや、Altimate!!の主力であった神菜コハネなどが卒業している
+</article>
+<article class="card">
+<h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> 卒業メンバーと契約の終了</h2>
+<p>アイドルグループの宿命として、新たな挑戦や個人的な理由により、プロジェクトを離れるタレントも少なくない。過去には、パレプロ発足前からのメンバーであった遠坂ユラや、Altimate!!の主力であった神菜コハネなどが卒業している
                 1。また、研究生の中からも、彩音るかや鎖乙女がぶ、月宮あお、六連星なる、日本晴ここらが活動を終了している
                 1。これらの契約終了は、公式サイトや公式SNSを通じて適宜報告されており、アーカイブ構築においては「卒業生」というステータスで管理されるべき重要なデータである 1。</p>
-        </article>
-        <article class="card">
-            <h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> 第五章 音楽制作とレーベル戦略の多角的分析</h2>
-            <p>パレプロの音楽活動は、単なるキャラクターソングの枠に留まらず、音楽シーン全体への訴求を目指した本格的なものである。そのリリース戦略は、特定のレーベルに依存しすぎない柔軟な体制を特徴としている 1。
+</article>
+<article class="card">
+<h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> 第五章 音楽制作とレーベル戦略の多角的分析</h2>
+<p>パレプロの音楽活動は、単なるキャラクターソングの枠に留まらず、音楽シーン全体への訴求を目指した本格的なものである。そのリリース戦略は、特定のレーベルに依存しすぎない柔軟な体制を特徴としている 1。
             </p>
-        </article>
-        <article class="card">
-            <h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> 所属レーベルとリリース形式</h2>
-            <p>多くの楽曲は、プロジェクト独自の「Palette Project」名義、あるいはユニット名義でのデジタル配信を中心としているが、特定の共同制作においては外部レーベルとの連携も見られる 1。</p>
-            <p>Zooo record: 2023年4月に発売された共同作品『ColoriAge』（<strong style="color:var(--c1);">えのぐ、Palette
+</article>
+<article class="card">
+<h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> 所属レーベルとリリース形式</h2>
+<p>多くの楽曲は、プロジェクト独自の「Palette Project」名義、あるいはユニット名義でのデジタル配信を中心としているが、特定の共同制作においては外部レーベルとの連携も見られる 1。</p>
+<p>Zooo record: 2023年4月に発売された共同作品『ColoriAge』（<strong style="color:var(--c1);">えのぐ、Palette
                     Project、釣鐘ふうり、柚子花</strong>）のリリース時に使用されたレーベルである 1。</p>
-            <p>デジタル配信主導: 近年の11th〜13thシングルは、ミュージックビデオの公開と共にデジタルプラットフォームで世界配信されており、特定の物理媒体用レーベルを介さないスピード感のある展開を行っている
+<p>デジタル配信主導: 近年の11th〜13thシングルは、ミュージックビデオの公開と共にデジタルプラットフォームで世界配信されており、特定の物理媒体用レーベルを介さないスピード感のある展開を行っている
                 1。</p>
-        </article>
-        <article class="card">
-            <h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> ディスコグラフィの進化と市場へのインパクト</h2>
-            <p>パレプロの楽曲は、各ユニットのジャンル性を反映しており、ファン層を多層的に構築している。</p>
-            <p>11th Single『Own other side』: 2024年頃のリリース。プロジェクトの転換期を象徴する楽曲 1。</p>
-            <p>12th Single『ハレバレパレット』: 2025年頃のリリース。グループ全体の調和を強調した楽曲 1。</p>
-            <p>13th Single『Current Location of Youth』: 2026年初頭の最新リリース。若さと成長をテーマにした意欲作 1。</p>
-        </article>
-        <article class="card">
-            <h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> 1</h2>
-            <p>これらの楽曲は、YouTube上の公式チャンネル（<strong
-                    style="color:var(--c1);">@PaletteProject</strong>）にて1.4K本以上の動画とともに公開されており、39.4K人の登録者に対して継続的なリーチを行っている
+</article>
+<article class="card">
+<h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> ディスコグラフィの進化と市場へのインパクト</h2>
+<p>パレプロの楽曲は、各ユニットのジャンル性を反映しており、ファン層を多層的に構築している。</p>
+<p>11th Single『Own other side』: 2024年頃のリリース。プロジェクトの転換期を象徴する楽曲 1。</p>
+<p>12th Single『ハレバレパレット』: 2025年頃のリリース。グループ全体の調和を強調した楽曲 1。</p>
+<p>13th Single『Current Location of Youth』: 2026年初頭の最新リリース。若さと成長をテーマにした意欲作 1。</p>
+</article>
+<article class="card">
+<h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> 1</h2>
+<p>これらの楽曲は、YouTube上の公式チャンネル（<strong style="color:var(--c1);">@PaletteProject</strong>）にて1.4K本以上の動画とともに公開されており、39.4K人の登録者に対して継続的なリーチを行っている
                 1。</p>
-        </article>
-        <article class="card">
-            <h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> 第六章 運営ノウハウと最新の研修生・新人戦略</h2>
-            <p>2024年11月以降の情報に基づくと、パレプロは「研究生」という枠組みをさらに細分化し、より組織的な新人育成を試みている。ENILISおよびjig.jpとの新体制下では、個々のタレントのSNSマネジメントも強化されている
+</article>
+<article class="card">
+<h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> 第六章 運営ノウハウと最新の研修生・新人戦略</h2>
+<p>2024年11月以降の情報に基づくと、パレプロは「研究生」という枠組みをさらに細分化し、より組織的な新人育成を試みている。ENILISおよびjig.jpとの新体制下では、個々のタレントのSNSマネジメントも強化されている
                 8。</p>
-        </article>
-        <article class="card">
-            <h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> 最新の研究生候補とその特性</h2>
-        </article>
-        <article class="card">
-            <h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> 8</h2>
-            <p>これらの候補者は、専用のYouTubeチャンネル（<strong style="color:var(--c1);">@parepro_kenkyusei</strong>）や公式Xアカウント（<strong
-                    style="color:var(--c1);">@parepro_kenkyu</strong>）を通じて、デビュー前から熱心なファンベースを形成している
+</article>
+<article class="card">
+<h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> 最新の研究生候補とその特性</h2>
+</article>
+<article class="card">
+<h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> 8</h2>
+<p>これらの候補者は、専用のYouTubeチャンネル（<strong style="color:var(--c1);">@parepro_kenkyusei</strong>）や公式Xアカウント（<strong style="color:var(--c1);">@parepro_kenkyu</strong>）を通じて、デビュー前から熱心なファンベースを形成している
                 8。正規メンバーを目指す彼女たちの活動は、既存メンバーにとっても刺激となり、プロジェクト全体に健全な競争意識をもたらしている。</p>
-        </article>
-        <article class="card">
-            <h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> 第七章 将来展望と戦略的インサイト</h2>
-            <p>jig.jpへの運営移管とENILISとの共同運営は、パレプロが「バーチャルアイドルのプラットフォーム化」を目指していることを示唆している。これまでの経緯と現在の構成を俯瞰すると、以下の3つの戦略的動向が読み取れる。
+</article>
+<article class="card">
+<h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> 第七章 将来展望と戦略的インサイト</h2>
+<p>jig.jpへの運営移管とENILISとの共同運営は、パレプロが「バーチャルアイドルのプラットフォーム化」を目指していることを示唆している。これまでの経緯と現在の構成を俯瞰すると、以下の3つの戦略的動向が読み取れる。
             </p>
-        </article>
-        <article class="card">
-            <h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> 資本とノウハウのハイブリッド運営</h2>
-            <p>jig.jpの持つ上場企業としての資金調達力と、ライブ配信・音楽配信サービスとのインフラ連携は、タレントの露出機会を飛躍的に増加させる可能性がある。一方で、ENILIS（<strong
-                    style="color:var(--c1);">旧MateRealの血脈</strong>）が持つVTuber特有のマネジメントノウハウを維持することで、技術革新とタレントの精神的ケアの両立を図っている
-                2。これは、買収によって創業時の文化が失われる「M&Aの失敗」を回避するための、高度な緩衝策である。</p>
-        </article>
-        <article class="card">
-            <h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> ジャンル特化による「ニッチ・トップ」の集積</h2>
-            <p>RouteHeart、REGALILIA、Sputripという異なる音楽性は、それぞれがニッチな市場でトップを目指す「ポートフォリオ戦略」として機能している。ファンは一つのユニットを入り口として、プロジェクト全体を回遊する仕組み（<strong
-                    style="color:var(--c1);">パレプロEX等の全体企画</strong>）により、LTV（<strong
-                    style="color:var(--c1);">顧客生涯価値</strong>）を高めている
+</article>
+<article class="card">
+<h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> 資本とノウハウのハイブリッド運営</h2>
+<p>jig.jpの持つ上場企業としての資金調達力と、ライブ配信・音楽配信サービスとのインフラ連携は、タレントの露出機会を飛躍的に増加させる可能性がある。一方で、ENILIS（<strong style="color:var(--c1);">旧MateRealの血脈</strong>）が持つVTuber特有のマネジメントノウハウを維持することで、技術革新とタレントの精神的ケアの両立を図っている
+                2。これは、買収によって創業時の文化が失われる「M&amp;Aの失敗」を回避するための、高度な緩衝策である。</p>
+</article>
+<article class="card">
+<h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> ジャンル特化による「ニッチ・トップ」の集積</h2>
+<p>RouteHeart、REGALILIA、Sputripという異なる音楽性は、それぞれがニッチな市場でトップを目指す「ポートフォリオ戦略」として機能している。ファンは一つのユニットを入り口として、プロジェクト全体を回遊する仕組み（<strong style="color:var(--c1);">パレプロEX等の全体企画</strong>）により、LTV（<strong style="color:var(--c1);">顧客生涯価値</strong>）を高めている
                 1。このマルチユニット体制は、特定のジャンルの流行り廃りに左右されないリスク分散としても機能している。</p>
-        </article>
-        <article class="card">
-            <h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> キャリアパスの透明化によるタレント獲得競争への優位性</h2>
-            <p>研究生制度から正規メンバーへの昇格経路を明確に示したことは、新たな才能を獲得する上での強力な武器となる。夏渚まはろの昇格成功例は、オーディション応募者に対して「実力があれば必ず道が開ける」という強いメッセージを発信している
+</article>
+<article class="card">
+<h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> キャリアパスの透明化によるタレント獲得競争への優位性</h2>
+<p>研究生制度から正規メンバーへの昇格経路を明確に示したことは、新たな才能を獲得する上での強力な武器となる。夏渚まはろの昇格成功例は、オーディション応募者に対して「実力があれば必ず道が開ける」という強いメッセージを発信している
                 1。これは、数多あるVTuber事務所の中で、パレプロを「自己実現の場」として差別化する要因となっている。</p>
-        </article>
-        <article class="card">
-            <h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> 結論</h2>
-            <p>Palette
+</article>
+<article class="card">
+<h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> 結論</h2>
+<p>Palette
                 Projectのアーカイブ構築にあたって留意すべき点は、同グループが単なるタレントの集合体ではなく、経営母体の変遷とともに進化し続ける「動的なエコシステム」であるという事実である。暁月クララ、七海ロナといった創業メンバーの契約継続、世代間のスムーズな移行、そしてジャンル別のユニット戦略は、すべてが緻密な計算に基づいている。
             </p>
-            <p>今後は、jig.jpとの連携による新たなイベント展開や、研究生たちのさらなる昇格、そして卒業生たちが残した足跡を含めた包括的なデータベースとしてのアーカイブが、パレプロの歴史を次世代へ繋ぐ鍵となるであろう。本報告書で提示したデータと分析が、その構築における強固な基盤となることを確信している。
+<p>今後は、jig.jpとの連携による新たなイベント展開や、研究生たちのさらなる昇格、そして卒業生たちが残した足跡を含めた包括的なデータベースとしてのアーカイブが、パレプロの歴史を次世代へ繋ぐ鍵となるであろう。本報告書で提示したデータと分析が、その構築における強固な基盤となることを確信している。
             </p>
-        </article>
-        <article class="card">
-            <h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> 1</h2>
-        </article>
-        <article class="card">
-            <h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> 引用文献</h2>
-            <p>Palette Project - Wikipedia, 3月 5, 2026にアクセス、 https://ja.wikipedia.org/wiki/Palette_Project</p>
-            <p>jig.jp 、VTuberプロジェクト「Palette Project」の運営に参画｜プレスリリース, 3月 5, 2026にアクセス、
+</article>
+<article class="card">
+<h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> 1</h2>
+</article>
+<article class="card">
+<h2><i class="fa-solid fa-palette fa-xs" style="opacity:0.5;"></i> 引用文献</h2>
+<p>Palette Project - Wikipedia, 3月 5, 2026にアクセス、 https://ja.wikipedia.org/wiki/Palette_Project</p>
+<p>jig.jp 、VTuberプロジェクト「Palette Project」の運営に参画｜プレスリリース, 3月 5, 2026にアクセス、
                 https://www.jig.jp/news/press/20260113_01</p>
-            <p>バーチャルアイドルグループ「Palette Project」をjig.jpに移管し、ENILISとの共同運営体制へ - News | 株式会社Brave group, 3月 5, 2026にアクセス、
+<p>バーチャルアイドルグループ「Palette Project」をjig.jpに移管し、ENILISとの共同運営体制へ - News | 株式会社Brave group, 3月 5, 2026にアクセス、
                 https://bravegroup.co.jp/news/10943/</p>
-            <p>【Palette Project】事業移管ならびに、運営体制変更に関するお知らせ | News(ニュース) - ENILIS, 3月 5, 2026にアクセス、
+<p>【Palette Project】事業移管ならびに、運営体制変更に関するお知らせ | News(ニュース) - ENILIS, 3月 5, 2026にアクセス、
                 https://enilis.co.jp/news/214/</p>
-            <p>ENILISがHareVareとbrossomを統合し、「ENILIS VLiver Project」を始動！ - PR TIMES, 3月 5, 2026にアクセス、
+<p>ENILISがHareVareとbrossomを統合し、「ENILIS VLiver Project」を始動！ - PR TIMES, 3月 5, 2026にアクセス、
                 https://prtimes.jp/main/html/rd/p/000000496.000044525.html</p>
-            <p>Palette Project 運営母体が株式会社jig.jpへ移管 2社によるダブル運営体制にシフトへ | PANORA, 3月 5, 2026にアクセス、
+<p>Palette Project 運営母体が株式会社jig.jpへ移管 2社によるダブル運営体制にシフトへ | PANORA, 3月 5, 2026にアクセス、
                 https://panora.tokyo/archives/129503</p>
-            <p>MEMBERメンバー - Palette Project（<strong style="color:var(--c1);">パレプロ</strong>）公式サイト, 3月 5, 2026にアクセス、
+<p>MEMBERメンバー - Palette Project（<strong style="color:var(--c1);">パレプロ</strong>）公式サイト, 3月 5, 2026にアクセス、
                 https://paletteproject.jp/en/member/</p>
-            <p>Palette Project（<strong style="color:var(--c1);">パレプロ</strong>）公式サイト, 3月 5, 2026にアクセス、
+<p>Palette Project（<strong style="color:var(--c1);">パレプロ</strong>）公式サイト, 3月 5, 2026にアクセス、
                 https://paletteproject.jp/member/</p>
-            <p>デビュー時期に応じた呼び方に関して - Palette Project（<strong style="color:var(--c1);">パレプロ</strong>）公式サイト, 3月 5,
+<p>デビュー時期に応じた呼び方に関して - Palette Project（<strong style="color:var(--c1);">パレプロ</strong>）公式サイト, 3月 5,
                 2026にアクセス、 https://paletteproject.jp/designation_by_debut_date/</p>
-            <p>今年は研究生を含め総勢14名が参加！バーチャルアイドル「Palette ..., 3月 5, 2026にアクセス、 https://bravegroup.co.jp/news/9287/</p>
-            <p>Palette Project、研究生として6名デビュー決定！2024年5月17日(金)20時より順次活動開始, 3月 5, 2026にアクセス、
+<p>今年は研究生を含め総勢14名が参加！バーチャルアイドル「Palette ..., 3月 5, 2026にアクセス、 https://bravegroup.co.jp/news/9287/</p>
+<p>Palette Project、研究生として6名デビュー決定！2024年5月17日(金)20時より順次活動開始, 3月 5, 2026にアクセス、
                 https://bravegroup.co.jp/news/5994/</p>
-        </article>
+</article>
 
-        </div>
-    </main>
-
-    <footer
-        style="text-align:center; padding:4rem; margin-top:5rem; opacity:0.5; font-family:'M PLUS Rounded 1c', sans-serif; letter-spacing:3px; font-size: 0.9rem;">
-        &copy; 2026 VTuber Archive Project - Palette Project Databank.
+</main>
+<footer style="text-align:center; padding:4rem; margin-top:5rem; opacity:0.5; font-family:'M PLUS Rounded 1c', sans-serif; letter-spacing:3px; font-size: 0.9rem;">
+        © 2026 VTuber Archive Project - Palette Project Databank.
     </footer>
-
-
-    <script>
+<script>
         document.addEventListener('DOMContentLoaded', () => {
             const cards = document.querySelectorAll('.card, .hero, .unit-nav, .gen-group');
             cards.forEach(card => card.classList.add('reveal'));
@@ -391,7 +363,5 @@
             });
         });
     </script>
-
-</body>
-
+<div class="mobile-mode-banner" style="background: #ffc83d; color: #000; text-align: center; font-size: 0.85rem; padding: 4px; font-weight: 900; position: fixed; bottom: 0; width: 100%; z-index: 9999; box-shadow: 0 -2px 10px rgba(255, 200, 60, 0.4);" v-if="isMobile">🚀 Mobile Light Mode (Powered by Vue Virtual DOM)</div></div></body>
 </html>

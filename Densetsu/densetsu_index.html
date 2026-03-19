@@ -1,160 +1,138 @@
 <!DOCTYPE html>
+
 <html lang="ja">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Densetsu.EXE | VTuber Archive</title>
-    <meta name="description"
-        content="海外向けVTuberアイドルユニット「Densetsu.EXE」の非公式ファンサイト。ミント・ファントーム、フィービー・チャン、ヴィクトリア・ローマンのプロフィール。">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Noto+Sans+JP:wght@400;700;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="densetsu.css">
-</head>
-
-<body>
-
-    <div class="dx-bg">
-        <div class="dx-bg-grid"></div>
-        <div class="dx-bg-gradient"></div>
-        <div class="dx-particles" id="dx-particles"></div>
-    </div>
-
-    <nav class="dx-nav">
-        <a href="../index.html" class="dx-nav-back">
-            <i class="fa-solid fa-chevron-left"></i> cd ..
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Densetsu.EXE | VTuber Archive</title>
+<meta content="海外向けVTuberアイドルユニット「Densetsu.EXE」の非公式ファンサイト。ミント・ファントーム、フィービー・チャン、ヴィクトリア・ローマンのプロフィール。" name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&amp;family=Orbitron:wght@400;700;900&amp;family=Noto+Sans+JP:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="densetsu.css" rel="stylesheet"/>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><style>[v-cloak] { display: none; } </style></head>
+<body><div id="app" v-cloak="">
+<div class="dx-bg" v-if="!isMobile">
+<div class="dx-bg-grid" v-if="!isMobile"></div>
+<div class="dx-bg-gradient" v-if="!isMobile"></div>
+<div class="dx-particles" id="dx-particles"></div>
+</div>
+<nav class="dx-nav">
+<a class="dx-nav-back" href="../index.html">
+<i class="fa-solid fa-chevron-left"></i> cd ..
         </a>
-        <div class="dx-nav-logo">
-            <span class="dx-glow-text">Densetsu</span><span class="dx-ext">.EXE</span>
-        </div>
-        <div class="dx-nav-tag">SYS.STATUS: ONLINE</div>
-    </nav>
-
-    <!-- HERO -->
-    <section class="dx-hero">
-        <div class="dx-hero-inner">
-            <div class="dx-hero-content">
-                <div class="dx-terminal-header">
-                    <span class="dx-term-dot dx-dot-r"></span>
-                    <span class="dx-term-dot dx-dot-y"></span>
-                    <span class="dx-term-dot dx-dot-g"></span>
-                    <div class="dx-term-title">bash - densetsu_exe</div>
-                </div>
-                <div class="dx-terminal-body">
-                    <p class="dx-cmd"><span class="dx-prompt">$</span> ./init_unit.sh --name "Densetsu.EXE"</p>
-                    <p class="dx-sysout">Loading modules... OK.</p>
-                    <p class="dx-sysout">Bypassing legacy protocols... OK.</p>
-                    <p class="dx-sysout">Establishing independent connection... <span class="dx-success">SUCCESS</span>
-                    </p>
-
-                    <h1 class="dx-hero-name">DENSETSU<span class="dx-ext">.EXE</span></h1>
-
-                    <div class="dx-hero-concept">
-                        <p class="dx-highlight-text">&gt; VTuber Idol Unit / Independent Agency</p>
-                        <p>2025年11月21日に結成・デビューした海外向けVTuberアイドルユニット。<br>
+<div class="dx-nav-logo">
+<span class="dx-glow-text">Densetsu</span><span class="dx-ext">.EXE</span>
+</div>
+<div class="dx-nav-tag">SYS.STATUS: ONLINE</div>
+</nav>
+<!-- HERO -->
+<section class="dx-hero">
+<div class="dx-hero-inner">
+<div class="dx-hero-content">
+<div class="dx-terminal-header">
+<span class="dx-term-dot dx-dot-r"></span>
+<span class="dx-term-dot dx-dot-y"></span>
+<span class="dx-term-dot dx-dot-g"></span>
+<div class="dx-term-title">bash - densetsu_exe</div>
+</div>
+<div class="dx-terminal-body">
+<p class="dx-cmd"><span class="dx-prompt">$</span> ./init_unit.sh --name "Densetsu.EXE"</p>
+<p class="dx-sysout">Loading modules... OK.</p>
+<p class="dx-sysout">Bypassing legacy protocols... OK.</p>
+<p class="dx-sysout">Establishing independent connection... <span class="dx-success">SUCCESS</span>
+</p>
+<h1 class="dx-hero-name">DENSETSU<span class="dx-ext">.EXE</span></h1>
+<div class="dx-hero-concept">
+<p class="dx-highlight-text">&gt; VTuber Idol Unit / Independent Agency</p>
+<p>2025年11月21日に結成・デビューした海外向けVTuberアイドルユニット。<br/>
                             従来の企業主導型VTuber事務所とは異なり、タレントの活動支援やサポートに特化したエージェンシー形式を採用。マネージャーを務めるAndrew "Steiner"
                             Hodgson氏によって設立されました。</p>
-                        <p class="dx-history-note">
-                            <i class="fa-solid fa-triangle-exclamation"></i> <strong>SYSTEM LOG:</strong>
+<p class="dx-history-note">
+<i class="fa-solid fa-triangle-exclamation"></i> <strong>SYSTEM LOG:</strong>
                             当初、大手事務所「VShojo」のオーディションに合格しデビュー予定でしたが、同事務所の事実上の活動停止を受け計画が白紙に。しかし、3人は事務所との関係を断ち切り、共に活動を続けることを選択。独自のユニットとして再スタートを切り、見事デビューを果たしました。
                         </p>
-                    </div>
-                    <p class="dx-cmd dx-typewriter"><span class="dx-prompt">$</span> <span id="typing-text"></span><span
-                            class="dx-cursor">_</span></p>
-                </div>
-            </div>
-
-            <div class="dx-hero-visual">
-                <div class="dx-cyber-circle">
-                    <div class="dx-circle-inner"></div>
-                    <div class="dx-circle-core">
-                        <i class="fa-solid fa-microchip"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ROSTER -->
-    <div class="dx-container">
-
-        <section class="dx-section dx-reveal">
-            <div class="dx-section-header">
-                <h2 class="dx-section-title">/EXECUTIVES/TALENTS/</h2>
-                <div class="dx-divider"></div>
-            </div>
-
-            <div class="dx-member-grid">
-
-                <!-- Mint Fantome -->
-                <div class="dx-member-card dx-card-mint">
-                    <div class="dx-card-border-glow"></div>
-                    <div class="dx-card-inner">
-                        <div class="dx-sys-tag">IDX: 001</div>
-                        <div class="dx-member-icon"><i class="fa-solid fa-ghost"></i></div>
-                        <div class="dx-member-info">
-                            <a href="characters/mint.html" class="dx-member-name">Mint Fantôme</a>
-                            <div class="dx-member-read">ミント・ファントーム</div>
-                            <div class="dx-member-desc">
-                                <span class="dx-concept-tag">CONCEPT</span> オタクの幽霊メイド
+</div>
+<p class="dx-cmd dx-typewriter"><span class="dx-prompt">$</span> <span id="typing-text"></span><span class="dx-cursor">_</span></p>
+</div>
+</div>
+<div class="dx-hero-visual">
+<div class="dx-cyber-circle">
+<div class="dx-circle-inner"></div>
+<div class="dx-circle-core">
+<i class="fa-solid fa-microchip"></i>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ROSTER -->
+<div class="dx-container">
+<section class="dx-section dx-reveal">
+<div class="dx-section-header">
+<h2 class="dx-section-title">/EXECUTIVES/TALENTS/</h2>
+<div class="dx-divider"></div>
+</div>
+<div class="dx-member-grid">
+<!-- Mint Fantome -->
+<div class="dx-member-card dx-card-mint">
+<div class="dx-card-border-glow"></div>
+<div class="dx-card-inner">
+<div class="dx-sys-tag">IDX: 001</div>
+<div class="dx-member-icon"><i class="fa-solid fa-ghost"></i></div>
+<div class="dx-member-info">
+<a class="dx-member-name" href="characters/mint.html">Mint Fantôme</a>
+<div class="dx-member-read">ミント・ファントーム</div>
+<div class="dx-member-desc">
+<span class="dx-concept-tag">CONCEPT</span> オタクの幽霊メイド
                             </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Phoebe Chan -->
-                <div class="dx-member-card dx-card-phoebe">
-                    <div class="dx-card-border-glow"></div>
-                    <div class="dx-card-inner">
-                        <div class="dx-sys-tag">IDX: 002</div>
-                        <div class="dx-member-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-                        <div class="dx-member-info">
-                            <a href="characters/phoebe.html" class="dx-member-name">Phoebe Chan</a>
-                            <div class="dx-member-read">フィービー・チャン</div>
-                            <div class="dx-member-desc">
-                                <span class="dx-concept-tag">CONCEPT</span> おとぎ話のアイドル<br>
-                                <span class="dx-veteran-tag">※YouTuber歴10年以上</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Victoria Roman -->
-                <div class="dx-member-card dx-card-victoria">
-                    <div class="dx-card-border-glow"></div>
-                    <div class="dx-card-inner">
-                        <div class="dx-sys-tag">IDX: 003</div>
-                        <div class="dx-member-icon"><i class="fa-brands fa-space-awesome"></i></div>
-                        <!-- Arcade/Yokai proxy -->
-                        <div class="dx-member-info">
-                            <a href="characters/victoria.html" class="dx-member-name">Victoria Roman</a>
-                            <div class="dx-member-read">ヴィクトリア・ローマン</div>
-                            <div class="dx-member-desc">
-                                <span class="dx-concept-tag">CONCEPT</span> 妖怪の姫<br>
+</div>
+</div>
+</div>
+<!-- Phoebe Chan -->
+<div class="dx-member-card dx-card-phoebe">
+<div class="dx-card-border-glow"></div>
+<div class="dx-card-inner">
+<div class="dx-sys-tag">IDX: 002</div>
+<div class="dx-member-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+<div class="dx-member-info">
+<a class="dx-member-name" href="characters/phoebe.html">Phoebe Chan</a>
+<div class="dx-member-read">フィービー・チャン</div>
+<div class="dx-member-desc">
+<span class="dx-concept-tag">CONCEPT</span> おとぎ話のアイドル<br/>
+<span class="dx-veteran-tag">※YouTuber歴10年以上</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Victoria Roman -->
+<div class="dx-member-card dx-card-victoria">
+<div class="dx-card-border-glow"></div>
+<div class="dx-card-inner">
+<div class="dx-sys-tag">IDX: 003</div>
+<div class="dx-member-icon"><i class="fa-brands fa-space-awesome"></i></div>
+<!-- Arcade/Yokai proxy -->
+<div class="dx-member-info">
+<a class="dx-member-name" href="characters/victoria.html">Victoria Roman</a>
+<div class="dx-member-read">ヴィクトリア・ローマン</div>
+<div class="dx-member-desc">
+<span class="dx-concept-tag">CONCEPT</span> 妖怪の姫<br/>
                                 アーケードゲームを取り入れた世界観。
                             </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-    </div>
-
-    <footer class="dx-footer">
-        <div class="dx-footer-logo">
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<footer class="dx-footer">
+<div class="dx-footer-logo">
             Densetsu<span class="dx-ext">.EXE</span>
-        </div>
-        <div class="dx-footer-company">SYS.ADMIN: STEINER</div>
-        <p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with Densetsu.EXE.</p>
-    </footer>
-
-    <script src="densetsu_script.js"></script>
-</body>
-
+</div>
+<div class="dx-footer-company">SYS.ADMIN: STEINER</div>
+<p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with Densetsu.EXE.</p>
+</footer>
+<script src="densetsu_script.js"></script>
+<div class="mobile-mode-banner" style="background: #ffc83d; color: #000; text-align: center; font-size: 0.85rem; padding: 4px; font-weight: 900; position: fixed; bottom: 0; width: 100%; z-index: 9999; box-shadow: 0 -2px 10px rgba(255, 200, 60, 0.4);" v-if="isMobile">🚀 Mobile Light Mode (Powered by Vue Virtual DOM)</div></div></body>
 </html>
