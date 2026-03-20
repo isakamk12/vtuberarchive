@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鳴海 豹真 — NexuStella</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #d97706;
+            --char-glow: #d977068c;
+            --char-color-soft: #d9770614;
+            --char-border: #d977064d;
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg">
+        <div class="cp-bg-stars"></div>
+        <div class="cp-bg-aurora"></div>
+    </div>
+    
+    <nav class="cp-nav">
+        <a href="../nexustella_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO NEXUSTELLA</a>
+        <span class="cp-nav-gen">NexuStella Colorful</span>
+    </nav>
+
+    <section class="cp-hero">
+        <div class="cp-hero-motif"><i class="fa-solid fa-bolt"></i></div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">
+                <i class="fa-solid fa-star"></i> NEXUSTELLA // NexuStella Colorful
+            </div>
+            <h1 class="cp-hero-name">鳴海 豹真</h1>
+            <p class="cp-chara-desc">アザラシを愛する会社員。ストイックな筋トレ配信でリスナーの肉体を強化。</p>
+            <div class="cp-tags">
+                <span class="cp-tag">#アザラシ愛</span>
+<span class="cp-tag">#筋肉親衛隊</span>
+<span class="cp-tag">#筋トレ実況</span>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="cp-section cp-reveal">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3><i class="fa-solid fa-address-card"></i> 基本情報</h3>
+                <p><strong>誕生日:</strong> 3月22日</p>
+                <p><strong>所属ユニット:</strong> NexuStella Colorful</p>
+            </div>
+            <div class="cp-card">
+                <h3><i class="fa-solid fa-heart"></i> タレント紹介</h3>
+                <p>3月22日生まれ。#なるみん筋肉親衛隊 を率いるリーダー。アザラシ好きが公式化。</p>
+            </div>
+            <div class="cp-card">
+                <h3><i class="fa-solid fa-users"></i> ファンデータ</h3>
+                <p><strong>ファンマーク:</strong> 🦭💪</p>
+                <p><strong>ファンネーム:</strong> なるみん筋肉親衛隊</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="cp-section cp-reveal">
+        <h2 class="cp-section-title">HISTORY & EPISODES</h2>
+        <div class="cp-timeline">
+            <div class="cp-episode"><div class="cp-episode-title">腕立て伏せ1000回配信</div><p>リスナーと一緒に汗を流し、全員で「筋肉の輝き」を証明した伝説的回。</p></div>
+<div class="cp-episode"><div class="cp-episode-title">アザラシカフェ 聖地巡礼雑談</div><p>自身のアザラシ愛を爆発させ、マニアック過ぎる知識でリスナーを圧倒。</p></div>
+
+        </div>
+    </div>
+
+    <footer class="cp-footer">
+        <p>© 2026 NexuStella Fan Archive — 非公式ファンサイト</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) entry.target.classList.add('active');
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

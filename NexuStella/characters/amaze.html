@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天瀬アメイズ — NexuStella</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #fcd34d;
+            --char-glow: #fcd34d8c;
+            --char-color-soft: #fcd34d14;
+            --char-border: #fcd34d4d;
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg">
+        <div class="cp-bg-stars"></div>
+        <div class="cp-bg-aurora"></div>
+    </div>
+    
+    <nav class="cp-nav">
+        <a href="../nexustella_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO NEXUSTELLA</a>
+        <span class="cp-nav-gen">ぽらりすぱれっと</span>
+    </nav>
+
+    <section class="cp-hero">
+        <div class="cp-hero-motif"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">
+                <i class="fa-solid fa-star"></i> NEXUSTELLA // ぽらりすぱれっと
+            </div>
+            <h1 class="cp-hero-name">天瀬アメイズ</h1>
+            <p class="cp-chara-desc">アイドル級の美貌を持つが、極度の無気力。やる気はないが配信継続力は天才的。</p>
+            <div class="cp-tags">
+                <span class="cp-tag">#無気力天才</span>
+<span class="cp-tag">#スマホゲーマー</span>
+<span class="cp-tag">#やる気のなさ</span>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="cp-section cp-reveal">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3><i class="fa-solid fa-address-card"></i> 基本情報</h3>
+                <p><strong>誕生日:</strong> 12月22日</p>
+                <p><strong>所属ユニット:</strong> ぽらりすぱれっと</p>
+            </div>
+            <div class="cp-card">
+                <h3><i class="fa-solid fa-heart"></i> タレント紹介</h3>
+                <p>12月22日生まれ。リスナーを脱力させる「毒抜きトーク」が、ストレス社会の現代人に刺さる。</p>
+            </div>
+            <div class="cp-card">
+                <h3><i class="fa-solid fa-users"></i> ファンデータ</h3>
+                <p><strong>ファンマーク:</strong> ✨📱</p>
+                <p><strong>ファンネーム:</strong> アメイジング団</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="cp-section cp-reveal">
+        <h2 class="cp-section-title">HISTORY & EPISODES</h2>
+        <div class="cp-timeline">
+            <div class="cp-episode"><div class="cp-episode-title">「寝ながら」実況 2.0</div><p>本当に寝ている（？）間の寝返り数だけでイベントランクインし、伝説の無気力記録へ。</p></div>
+<div class="cp-episode"><div class="cp-episode-title">スマホFPS ガチ対決</div><p>無気力ながら、指先の反射速度だけでランカーを圧倒。「本気のアメイズ」を見せ話題に。</p></div>
+
+        </div>
+    </div>
+
+    <footer class="cp-footer">
+        <p>© 2026 NexuStella Fan Archive — 非公式ファンサイト</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) entry.target.classList.add('active');
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>闇熊 れりあ — NexuStella</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #1e293b;
+            --char-glow: #1e293b8c;
+            --char-color-soft: #1e293b14;
+            --char-border: #1e293b4d;
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg">
+        <div class="cp-bg-stars"></div>
+        <div class="cp-bg-aurora"></div>
+    </div>
+    
+    <nav class="cp-nav">
+        <a href="../nexustella_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO NEXUSTELLA</a>
+        <span class="cp-nav-gen">NexuStella Colorful</span>
+    </nav>
+
+    <section class="cp-hero">
+        <div class="cp-hero-motif"><i class="fa-solid fa-bear"></i></div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">
+                <i class="fa-solid fa-star"></i> NEXUSTELLA // NexuStella Colorful
+            </div>
+            <h1 class="cp-hero-name">闇熊 れりあ</h1>
+            <p class="cp-chara-desc">人懐っこいタスマニアデビルの女の子。クールな見た目だが非常にフレンドリー。</p>
+            <div class="cp-tags">
+                <span class="cp-tag">#タスマニアデビル</span>
+<span class="cp-tag">#人懐っこい</span>
+<span class="cp-tag">#10月組</span>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="cp-section cp-reveal">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3><i class="fa-solid fa-address-card"></i> 基本情報</h3>
+                <p><strong>誕生日:</strong> 10月11日</p>
+                <p><strong>所属ユニット:</strong> NexuStella Colorful</p>
+            </div>
+            <div class="cp-card">
+                <h3><i class="fa-solid fa-heart"></i> タレント紹介</h3>
+                <p>結成初期からのメンバー。野生的な直感と都会的なセンスを併せ持つ。</p>
+            </div>
+            <div class="cp-card">
+                <h3><i class="fa-solid fa-users"></i> ファンデータ</h3>
+                <p><strong>ファンマーク:</strong> 🐾🖤</p>
+                <p><strong>ファンネーム:</strong> れりあ親衛隊</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="cp-section cp-reveal">
+        <h2 class="cp-section-title">HISTORY & EPISODES</h2>
+        <div class="cp-timeline">
+            <div class="cp-episode"><div class="cp-episode-title">1日警察署長イベント(仮想)</div><p>リスナーのマナー定着プロジェクトで「鬼教官」ならぬ「人懐っこい警察官」を熱演。</p></div>
+<div class="cp-episode"><div class="cp-episode-title">G-Starter 統合記念配信</div><p>旧プロジェクトからNexuStellaへの移行を支えた功労者としてファンに感謝を伝えた。</p></div>
+
+        </div>
+    </div>
+
+    <footer class="cp-footer">
+        <p>© 2026 NexuStella Fan Archive — 非公式ファンサイト</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) entry.target.classList.add('active');
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

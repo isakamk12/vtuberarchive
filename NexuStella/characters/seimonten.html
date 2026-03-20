@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>青門天 雀 — NexuStella</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #3b82f6;
+            --char-glow: #3b82f68c;
+            --char-color-soft: #3b82f614;
+            --char-border: #3b82f64d;
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg">
+        <div class="cp-bg-stars"></div>
+        <div class="cp-bg-aurora"></div>
+    </div>
+    
+    <nav class="cp-nav">
+        <a href="../nexustella_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO NEXUSTELLA</a>
+        <span class="cp-nav-gen">武士来舞 (BUSHILIVE)</span>
+    </nav>
+
+    <section class="cp-hero">
+        <div class="cp-hero-motif"><i class="fa-solid fa-brain"></i></div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">
+                <i class="fa-solid fa-star"></i> NEXUSTELLA // 武士来舞 (BUSHILIVE)
+            </div>
+            <h1 class="cp-hero-name">青門天 雀</h1>
+            <p class="cp-chara-desc">青色担当の知的軍師。真面目だが底抜けに明るい性格で、企画やMCの要として活躍。</p>
+            <div class="cp-tags">
+                <span class="cp-tag">#天才参謀</span>
+<span class="cp-tag">#ねくすてカタログMC</span>
+<span class="cp-tag">#NIKKE配信</span>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="cp-section cp-reveal">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3><i class="fa-solid fa-address-card"></i> 基本情報</h3>
+                <p><strong>誕生日:</strong> 10月10日</p>
+                <p><strong>所属ユニット:</strong> 武士来舞 (BUSHILIVE)</p>
+            </div>
+            <div class="cp-card">
+                <h3><i class="fa-solid fa-heart"></i> タレント紹介</h3>
+                <p>新番組『ねくすてカタログ！』のメインMCを務め、公式コラボカクテルも発売。</p>
+            </div>
+            <div class="cp-card">
+                <h3><i class="fa-solid fa-users"></i> ファンデータ</h3>
+                <p><strong>ファンマーク:</strong> 🐦💙</p>
+                <p><strong>ファンネーム:</strong> 雀聖候補</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="cp-section cp-reveal">
+        <h2 class="cp-section-title">HISTORY & EPISODES</h2>
+        <div class="cp-timeline">
+            <div class="cp-episode"><div class="cp-episode-title">ねくすてカタログ！メインMC就任</div><p>NexuStella初の企業コラボ番組で安定した進行を見せ、全ユニットの魅力を紹介。</p></div>
+<div class="cp-episode"><div class="cp-episode-title">17LIVE公式コラボカクテル販売</div><p>自身のカラーを冠したオリジナルカクテルが渋谷の店舗で期間限定販売された。</p></div>
+
+        </div>
+    </div>
+
+    <footer class="cp-footer">
+        <p>© 2026 NexuStella Fan Archive — 非公式ファンサイト</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) entry.target.classList.add('active');
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

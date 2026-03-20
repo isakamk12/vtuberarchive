@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>熊恋べりぃ — NexuStella</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #78350f;
+            --char-glow: #78350f8c;
+            --char-color-soft: #78350f14;
+            --char-border: #78350f4d;
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg">
+        <div class="cp-bg-stars"></div>
+        <div class="cp-bg-aurora"></div>
+    </div>
+    
+    <nav class="cp-nav">
+        <a href="../nexustella_index.html" class="cp-back"><i class="fa-solid fa-chevron-left"></i> BACK TO NEXUSTELLA</a>
+        <span class="cp-nav-gen">ぽらりすぱれっと</span>
+    </nav>
+
+    <section class="cp-hero">
+        <div class="cp-hero-motif"><i class="fa-solid fa-bear"></i></div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">
+                <i class="fa-solid fa-star"></i> NEXUSTELLA // ぽらりすぱれっと
+            </div>
+            <h1 class="cp-hero-name">熊恋べりぃ</h1>
+            <p class="cp-chara-desc">極度の寂しがり屋な熊の女の子。甘いものと可愛いものへの執着心は右に出る者がいない。</p>
+            <div class="cp-tags">
+                <span class="cp-tag">#寂しがり熊</span>
+<span class="cp-tag">#甘いもの中毒</span>
+<span class="cp-tag">#10月組</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="cp-section cp-reveal">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3><i class="fa-solid fa-address-card"></i> 基本情報</h3>
+                <p><strong>誕生日:</strong> 10月11日</p>
+                <p><strong>所属ユニット:</strong> ぽらりすぱれっと</p>
+            </div>
+            <div class="cp-card">
+                <h3><i class="fa-solid fa-heart"></i> タレント紹介</h3>
+                <p>10月11日生まれ。ぬいぐるみに囲まれたふわふわな空間から、等身大の女の子らしい悩みを吐露。甘いものを食べる咀嚼音（？）配信も一部で人気。</p>
+            </div>
+            <div class="cp-card">
+                <h3><i class="fa-solid fa-users"></i> ファンデータ</h3>
+                <p><strong>ファンマーク:</strong> 🧸🍩</p>
+                <p><strong>ファンネーム:</strong> べりぃの抱っこ紐</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="cp-section cp-reveal">
+        <h2 class="cp-section-title">HISTORY & EPISODES</h2>
+        <div class="cp-timeline">
+            <div class="cp-episode"><div class="cp-episode-title">Archive Creation 2026</div><p>2026年のNexuStella公式アーカイブ化に伴い、詳細な活動記録を統合中。多くのリスナーに「新しい輝き」を届け続けている。</p></div>
+        </div>
+    </div>
+
+    <footer class="cp-footer">
+        <p>© 2026 NexuStella Fan Archive — 非公式ファンサイト</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.cp-reveal');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) entry.target.classList.add('active');
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
