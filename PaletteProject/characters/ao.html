@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,37 +7,33 @@
     <link rel="stylesheet" href="char-base.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
-<body>
+<body class="inactive">
     <div class="bg-fx"></div>
     <nav class="nav">
         <a href="../paletteproject_index.html" class="nav-brand">PALETTE PROJECT ARCHIVE</a>
     </nav>
-
     <header class="hero">
         <h1 class="hero-name">月宮 あお</h1>
         <p class="hero-subtitle">Tsukimiya Ao</p>
     </header>
-
     <main class="container">
         <section class="section reveal">
-            <h2 class="section-title">PROFILE</h2>
+            <h2 class="section-title">ARCHIVE PROFILE</h2>
             <div class="profile-card">
                 <div class="data-grid">
-                    <div class="data-item"><span class="label">Gen</span><span class="value">5期研究生</span></div>
-                    <div class="data-item"><span class="label">Role</span><span class="value">Trainee</span></div>
+                    <div class="data-item"><span class="label">Status</span><span class="value">契約終了 (Inactive)</span></div>
+                    <div class="data-item"><span class="label">Generation</span><span class="value">5期研究生</span></div>
+                    <div class="data-item"><span class="label">Activity Period</span><span class="value">2024 - 2025</span></div>
                 </div>
             </div>
-        </section>
-
-        <section class="section reveal">
-            <h2 class="section-title">DESCRIPTION</h2>
-            <div class="description">
-                <p>パレプロの5期研究生。透明感のある佇まいと、真摯に活動に取り組む姿勢が支持されている。研究生チャンネルでの活動を通じ、ファンとの絆を深めながら夢に向かって歩み続けている。</p>
+            <div class="description-card reveal">
+                <p>パレプロの5期研究生として活動。研究生としての期間中、多くのファンに支えられながらアイドルとしての研鑽を積んだ。現在は活動を終了しており、本ページはアーカイブとして保存されている。</p>
             </div>
         </section>
     </main>
-
+    <footer style="text-align:center; padding:4rem; opacity:0.3; font-size:0.8rem;">
+        © 2026 VTuber Archive Project - Palette Project Databank.
+    </footer>
     <script>
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -48,5 +43,4 @@
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     </script>
 </body>
-
 </html>

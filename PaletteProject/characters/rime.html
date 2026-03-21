@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,37 +7,33 @@
     <link rel="stylesheet" href="char-base.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
-<body>
+<body class="trainee">
     <div class="bg-fx"></div>
     <nav class="nav">
         <a href="../paletteproject_index.html" class="nav-brand">PALETTE PROJECT ARCHIVE</a>
     </nav>
-
     <header class="hero">
         <h1 class="hero-name">変幻 リメ</h1>
         <p class="hero-subtitle">Hengen Rime</p>
     </header>
-
     <main class="container">
         <section class="section reveal">
             <h2 class="section-title">PROFILE</h2>
             <div class="profile-card">
                 <div class="data-grid">
-                    <div class="data-item"><span class="label">Gen</span><span class="value">6期研究生</span></div>
-                    <div class="data-item"><span class="label">Role</span><span class="value">Trainee</span></div>
+                    <div class="data-item"><span class="label">Status</span><span class="value">研究生 (Trainee)</span></div>
+                    <div class="data-item"><span class="label">Generation</span><span class="value">6期生</span></div>
+                    <div class="data-item"><span class="label">Oshi Mark</span><span class="value">🎭✨</span></div>
                 </div>
             </div>
-        </section>
-
-        <section class="section reveal">
-            <h2 class="section-title">DESCRIPTION</h2>
-            <div class="description">
-                <p>パレプロの6期研究生。「変幻」の名の通り、多彩な表現の可能性を秘める。自身のスタイルを模索しながら、研究生としての活動を通じて真価を発揮していく。</p>
+            <div class="description-card reveal">
+                <p>パレプロの6期研究生。変幻自在なパフォーマンスを目指し、新たなステージへと挑戦を続けている。フレッシュな感性と情熱で、プロジェクトに新しい風を吹き込む次世代の逸材。</p>
             </div>
         </section>
     </main>
-
+    <footer style="text-align:center; padding:4rem; opacity:0.3; font-size:0.8rem;">
+        © 2026 VTuber Archive Project - Palette Project Databank.
+    </footer>
     <script>
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -48,5 +43,4 @@
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     </script>
 </body>
-
 </html>

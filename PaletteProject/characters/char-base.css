@@ -112,6 +112,7 @@ body {
     border: 1px solid var(--border);
     border-radius: 24px;
     padding: 3rem;
+    margin-bottom: 2rem;
 }
 
 .data-grid {
@@ -135,12 +136,61 @@ body {
     font-weight: 700;
 }
 
+/* Episodes */
+.episode-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.episode-card {
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.episode-card:hover {
+    transform: translateX(10px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--c1);
+}
+
+.episode-title {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    color: var(--c1);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.episode-text {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.8;
+}
+
 /* Description */
 .description {
     font-size: 1.1rem;
     color: rgba(255, 255, 255, 0.8);
     line-height: 2;
 }
+
+/* Unit Accents */
+body.routeheart { --accent: #ff00cc; --c1: #ff00cc; }
+body.regalilia { --accent: #ffcc00; --c1: #ffcc00; }
+body.sputrip { --accent: #00f2fe; --c1: #00f2fe; }
+body.inactive { --accent: #7f8c8d; --c1: #7f8c8d; filter: grayscale(0.2); }
+body.inactive .bg-fx { opacity: 0.3; }
+body.inactive .hero-name { filter: grayscale(1) opacity(0.7); }
+
+.episode-title i { opacity: 0.5; font-size: 0.9em; }
 
 /* Animations */
 .reveal {

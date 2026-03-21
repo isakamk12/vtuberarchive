@@ -350,6 +350,17 @@ body {
     --unit-color: #a4b0be;
 }
 
+.member-card.inactive {
+    --unit-color: #7f8c8d;
+    opacity: 0.8;
+    filter: grayscale(0.5);
+}
+
+.member-card.inactive:hover {
+    filter: grayscale(0);
+    opacity: 1;
+}
+
 /* "Liquid" hover effect from the bottom */
 .member-card::before {
     content: '';
