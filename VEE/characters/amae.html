@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>偉雷アマエ | VEE Archive</title>
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #ffcc00;
+            --char-glow: rgba(255, 204, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../vee_index.html" class="cp-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK TO ARCHIVE
+        </a>
+        <div class="cp-nav-gen">Dev-b</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-motif"></div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">VEE 第2弾 / Dev-b</div>
+            <h1 class="cp-hero-name">偉雷アマエ</h1>
+            <span class="cp-hero-en">ERAI AMAE</span>
+            <div class="cp-chara-desc">
+                「えらいぞ偉雷ｯｯｯ！ 雷の使い手！偉雷アマエだよ～ｯｯｯ！！」<br><br>
+                生まれたときからオッドアイで、自分には「雷」の不思議な力があると信じ込んでいる普通の女の子。未だ能力が発動したところを見た者はいないが、本人はその日を待ちわびている。無邪気で甘え上手な「VEEの妹枠」として親しまれているが、本人は「お姉さん」であることに強いこだわりを持つ。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag">#雷使い(自称)</span>
+                <span class="cp-tag">#オッドアイ</span>
+                <span class="cp-tag">#ライフガード</span>
+                <span class="cp-tag">#アイドルオタク</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">IDENTIFIER</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>PROFILE</h3>
+                <p><strong>DEBUT</strong>: 2022年10月24日</p>
+                <p><strong>EYES</strong>: オッドアイ (天然)</p>
+                <p><strong>PET</strong>: ぶか (リスナーの声が聞ける)</p>
+                <p><strong>FAVORITE</strong>: ライフガード (毎日1本)</p>
+            </div>
+            <div class="cp-card">
+                <h3>COMMUNITY</h3>
+                <p><strong>FAN NAME</strong>: アマエ隊</p>
+                <p><strong>MARK</strong>: 🧡⚡</p>
+                <p><strong>MAMMA</strong>: 久賀フーナ</p>
+            </div>
+            <div class="cp-card">
+                <h3>VIBES</h3>
+                <p><strong>TYPE</strong>: 妹属性(本人は否定)</p>
+                <p><strong>DREAM</strong>: 能力発動、アイドル</p>
+                <p><strong>WEAKNESS</strong>: ホラーゲーム</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">RECORDS & EPISODES</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>伝説の「アマエ誤録」</h3>
+                <p>英語や漢字が苦手で「Thunder」を「チュンダー」と誤読。これがきっかけで初オリ曲『ちゅんだーＣＨＵ♡意報』が誕生した。他にも「ウェブポンルーム」や「ななたいし（七対子）」など愛すべき言い間違いが多い。</p>
+            </div>
+            <div class="cp-card">
+                <h3>実家の仏壇のアマエグッズ</h3>
+                <p>お父様が配信活動を熱心に応援しており、グッズを実家の仏壇に飾っている（通称：噂の仏壇）。一方で弟さんには「カラオケ店員をしている」と嘘をついており、今でも信じられているという対照的なエピソードを持つ。</p>
+            </div>
+            <div class="cp-card">
+                <h3>真の雷使いへの覚醒</h3>
+                <p>マイクラ配信中、雷雨の中でトライデントを使い自らの手で雷を落とすことに成功。「これぞ真の雷使いか！」と大興奮し、自称ではなく本物の雷使いであることを（ゲーム内で）証明してみせた。</p>
+            </div>
+            <div class="cp-card">
+                <h3>ガチすぎる女児アニオタク</h3>
+                <p>『アイカツ！』や『プリティーリズム』をこよなく愛し、聖地巡礼や推し活に励んでいたガチオタク。ファンからの応援広告やメッセージには非常に涙もろく、手書きの画像でお返しをするなどファン想いな一面も。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <div class="cp-footer-logo">VEE / VTuber Archive</div>
+        <p>© 2026 VTuber Archive Project. Data provided by official records.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal-active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.cp-card, .cp-section-title').forEach(el => {
+            el.classList.add('reveal-item');
+            observer.observe(el);
+        });
+    </script>
+    <style>
+        .reveal-item {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+        .reveal-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雛星あいる | VEE Archive</title>
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #ffff00;
+            --char-glow: rgba(255, 255, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../vee_index.html" class="cp-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK TO ARCHIVE
+        </a>
+        <div class="cp-nav-gen">Dev-a</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-motif"></div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">VEE 第1弾 / Dev-a</div>
+            <h1 class="cp-hero-name">雛星あいる</h1>
+            <span class="cp-hero-en">HINAHOSHI AIRU</span>
+            <div class="cp-chara-desc">
+                「いるのだいるいる☆」<br><br>
+                地球侵略の下調べを依頼され、遠い星からやってきた異星人のはかせ。……のはずだったが、地球が気に入ったらしく、目的放棄のゲーム三昧ですっかり満喫中。地球を救う物語の主人公になることを夢見る、愛すべきポンコツ天才はかせ。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag">#異星人</span>
+                <span class="cp-tag">#はかせ</span>
+                <span class="cp-tag">#圧倒的地球人</span>
+                <span class="cp-tag">#耐久ゲーマー</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">IDENTIFIER</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>PROFILE</h3>
+                <p><strong>BIRTHDAY</strong>: 9月16日 (118歳)</p>
+                <p><strong>HEIGHT</strong>: 151cm (実身長 136cm)</p>
+                <p><strong>SKILL</strong>: 無限時間起きていられる</p>
+                <p><strong>COLOR</strong>: イエロー</p>
+            </div>
+            <div class="cp-card">
+                <h3>COMMUNITY</h3>
+                <p><strong>FAN NAME</strong>: 地球人</p>
+                <p><strong>MARK</strong>: 〽</p>
+                <p><strong>ILLUST</strong>: ∴(ちゃばたけ)</p>
+            </div>
+            <div class="cp-card">
+                <h3>VIBES</h3>
+                <p><strong>LIKE</strong>: ドーナツ、バームクーヘン、空想</p>
+                <p><strong>DREAM</strong>: 地球を救う物語の主人公</p>
+                <p><strong>HABIT</strong>: 心に暗示をかける (私は壺がうまい)</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">RECORDS & EPISODES</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>リスナー＝「地球人」への愛</h3>
+                <p>「地球人が応援してくれているから何度だって立ち上がる」と断言。耐久配信中に見せるリスナーへの深い信頼と感謝の言葉は、普段の奔放な姿とのギャップで多くの「地球人」を惹きつけている。</p>
+            </div>
+            <div class="cp-card">
+                <h3>折れない心の耐久ゲーマー</h3>
+                <p>『Only Up!』等の高難易度ゲームで落下しても「実質ここが地上」と悟りを開く。暗示をかけながらのプレイや、独自の格言を残しながらの12時間耐久など、異星人（？）らしいド根性を見せつける。</p>
+            </div>
+            <div class="cp-card">
+                <h3>ポンコツ「はかせ」の日常</h3>
+                <p>性格診断で「地味」「無責任」なアイドル向きではないという結果に大ダメージを受ける。掃除が苦手で、配信での片付け企画では「ゴミがなくなっただけで世界が広くなった！」と子供のように喜んだ。</p>
+            </div>
+            <div class="cp-card">
+                <h3>情熱の「オムライス研究」</h3>
+                <p>1ヶ月毎日オムライスを食べ続け、「オムライスに限っては研究しまくった」と語るほどの情熱。同期の偉雷アマエとは「エライ組」を結成し、時に友情、時にガチの煽り合いを繰り広げている。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <div class="cp-footer-logo">VEE / VTuber Archive</div>
+        <p>© 2026 VTuber Archive Project. Data provided by official records.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal-active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.cp-card, .cp-section-title').forEach(el => {
+            el.classList.add('reveal-item');
+            observer.observe(el);
+        });
+    </script>
+    <style>
+        .reveal-item {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+        .reveal-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</body>
+</html>

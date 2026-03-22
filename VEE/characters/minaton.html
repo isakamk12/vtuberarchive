@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>みなとん。 | VEE Archive</title>
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #ff4d4d;
+            --char-glow: rgba(255, 77, 77, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../vee_index.html" class="cp-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK TO ARCHIVE
+        </a>
+        <div class="cp-nav-gen">VEE</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-motif"></div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">VEE 2025年デビュー</div>
+            <h1 class="cp-hero-name">みなとん。</h1>
+            <span class="cp-hero-en">MINATON.</span>
+            <div class="cp-chara-desc">
+                「音楽の力で君にパワーを」<br><br>
+                バーチャル病院に勤める作曲ドクター。現実世界でも本物の医師として働く異色の「女医VTuber」。作詞・作曲・歌唱を一人でこなす圧倒的なクリエイティヴ能力を持ちつつ、配信ではお酒片手に「酒クズ・ポンコツ」な素顔を晒すギャップの塊。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag">#女医</span>
+                <span class="cp-tag">#作曲ドクター</span>
+                <span class="cp-tag">#モルモットン</span>
+                <span class="cp-tag">#酒クズ</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">IDENTIFIER</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>PROFILE</h3>
+                <p><strong>BIRTHDAY</strong>: 3月7日</p>
+                <p><strong>HEIGHT</strong>: 153cm (ヒール込160cm)</p>
+                <p><strong>BLOOD</strong>: AB型</p>
+                <p><strong>SKILL</strong>: 作曲、お歌、早起き</p>
+            </div>
+            <div class="cp-card">
+                <h3>COMMUNITY</h3>
+                <p><strong>FAN NAME</strong>: モルモットン</p>
+                <p><strong>MARK</strong>: 💉🎧</p>
+                <p><strong>HABIT</strong>: 泥酔配信、クレカ公開未遂</p>
+            </div>
+            <div class="cp-card">
+                <h3>VIBES</h3>
+                <p><strong>LIKE</strong>: ヨガ、日本酒、スーパー銭湯</p>
+                <p><strong>TARGET</strong>: コンビニ・ファミレス放送</p>
+                <p><strong>DREAM</strong>: 大規模3Dライブ開催</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">RECORDS & EPISODES</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>ガチ「女医」によるリアルな悲哀</h3>
+                <p>初配信で「本物の医者」であることを公表。合コン等で職業を明かすと男が敬語になり、フェードアウトされてしまう切ない経験を持つ。外来中にアニメ声すぎて副院長に怒られた伝説も。</p>
+            </div>
+            <div class="cp-card">
+                <h3>数多の泥酔＆やらかし伝説</h3>
+                <p>日本酒を愛するがゆえ、酔って配信中にクレジットカードを曬しそうになったり、酔った勢いで病院長の尻を叩きながらポールダンスをさせた等、ドクターらしからぬ（？）豪快なやらかしが絶えない。</p>
+            </div>
+            <div class="cp-card">
+                <h3>「お兄ちゃん起きてよ」誤爆事件</h3>
+                <p>自分用のシチュエーションボイスを確認のためにLINEのキープメモに送るつもりが、誤って企業の人に送信。エモい作曲家としての顔が、一瞬で粉々に砕け散った衝撃の放送事故。</p>
+            </div>
+            <div class="cp-card">
+                <h3>超ストイックな「過労入院」</h3>
+                <p>医者の勤務、ショート動画、作曲、リアルライブ。限界まで詰め込みすぎて過労で1週間入院。退院後に2歳の姪を抱いてぎっくり腰になるなど、満身創痍で「被験体」に勇気と笑いを与え続けている。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <div class="cp-footer-logo">VEE / VTuber Archive</div>
+        <p>© 2026 VTuber Archive Project. Data provided by official records.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal-active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.cp-card, .cp-section-title').forEach(el => {
+            el.classList.add('reveal-item');
+            observer.observe(el);
+        });
+    </script>
+    <style>
+        .reveal-item {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+        .reveal-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</body>
+</html>

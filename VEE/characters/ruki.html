@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音門るき | VEE Archive</title>
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #ff4d4d;
+            --char-glow: rgba(255, 77, 77, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../vee_index.html" class="cp-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK TO ARCHIVE
+        </a>
+        <div class="cp-nav-gen">Dev-a</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-motif"></div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">VEE 第1弾 / Dev-a</div>
+            <h1 class="cp-hero-name">音門るき</h1>
+            <span class="cp-hero-en">OTOKADO RUKI</span>
+            <div class="cp-chara-desc">
+                「今日は失敗しちゃったけど、諦めなければなんとかなるよね！」<br><br>
+                お人好しすぎて悪魔学校を退学になった落ちこぼれ悪魔。人類滅亡の思い出作りに人間界へ来たが、滅ばなかったのでそのまま定住。VEEのビタミン・清楚担当（自称）として、誰かに元気を届けるために配信活動を行っている。韓国語が堪能なグローバル悪魔でもある。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag">#悪魔</span>
+                <span class="cp-tag">#ビタミン担当</span>
+                <span class="cp-tag">#韓国語</span>
+                <span class="cp-tag">#築地組</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">IDENTIFIER</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>PROFILE</h3>
+                <p><strong>BIRTHDAY</strong>: 8月3日 (1359歳)</p>
+                <p><strong>HEIGHT</strong>: 166.6cm (輪っか・ヒール込)</p>
+                <p><strong>SKILL</strong>: 韓国語(ネイティブ)、イラスト、歌</p>
+                <p><strong>COLOR</strong>: レッド</p>
+            </div>
+            <div class="cp-card">
+                <h3>COMMUNITY</h3>
+                <p><strong>FAN NAME</strong>: 魔にあっく</p>
+                <p><strong>MARK</strong>: 💝🦁</p>
+                <p><strong>ILLUST</strong>: にじはしそら</p>
+            </div>
+            <div class="cp-card">
+                <h3>VIBES</h3>
+                <p><strong>LIKE</strong>: 歌、ゲーム、コスメ、漫画</p>
+                <p><strong>DREAM</strong>: 誰かに元気を届ける、大会場ライブ</p>
+                <p><strong>TAG</strong>: #デーモンストレーション</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">RECORDS & EPISODES</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>グローバルな語学力</h3>
+                <p>韓国への留学経験があり、韓国語が非常に流暢。韓国のリスナー（韓国ニキ）からも「韓国人レベル」と絶賛される。語学習得のきっかけはAPEXに誘ってくれた韓国の友人。配信では3か国語を織り交ぜることもある。</p>
+            </div>
+            <div class="cp-card">
+                <h3>「〇門一家」との日常</h3>
+                <p>実家暮らしで家族仲が良く、パパ門が良かれと思って防音室のドアを全開にし、深夜にるきが青ざめるなどの珍事も。お風呂でもスマホをジップロックに入れて大熱唱するほど、歌うことが生活の一部となっている。</p>
+            </div>
+            <div class="cp-card">
+                <h3>VEEの宣伝隊長</h3>
+                <p>事務所メンバーへの愛が深く、配信中に隙あらば他メンバーの魅力をオタク特有の早口で熱弁し、宣伝して回っている。同期の魔王トゥルシーとは「魚（サバとツナ）繋がり」で『築地組』を結成し、仲良くプロレス中。</p>
+            </div>
+            <div class="cp-card">
+                <h3>不撓不屈のポンコツ魂</h3>
+                <p>初配信の準備に泣きながら4時間かけたり、マイクラで「ラーメン屋を作る」と奮闘したりと、一生懸命ゆえのポンコツさが愛されている。「喉がやめてと言うまで歌い続ける」タフな歌枠でリスナーにビタミンを届ける。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <div class="cp-footer-logo">VEE / VTuber Archive</div>
+        <p>© 2026 VTuber Archive Project. Data provided by official records.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal-active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.cp-card, .cp-section-title').forEach(el => {
+            el.classList.add('reveal-item');
+            observer.observe(el);
+        });
+    </script>
+    <style>
+        .reveal-item {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+        .reveal-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</body>
+</html>

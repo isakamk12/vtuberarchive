@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>柏木もも | VEE Archive</title>
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #ff91a4;
+            --char-glow: rgba(255, 145, 164, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../vee_index.html" class="cp-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK TO ARCHIVE
+        </a>
+        <div class="cp-nav-gen">VEE</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-motif"></div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">VEE 2025年デビュー</div>
+            <h1 class="cp-hero-name">柏木もも</h1>
+            <span class="cp-hero-en">KASHIWAGI MOMO</span>
+            <div class="cp-chara-desc">
+                「鬼を倒すための仲間になって欲しいですっ！」<br><br>
+                桃から生まれた、猫耳が生えた「新世代の令和の桃太郎」。鬼を倒すために上京するも、都会の誘惑に負けゲーム廃人化。崖っぷち生活から脱却し、鬼退治の仲間を増やすべく配信を始めた。イラストからモデリングまで自作する努力家のセルフ受肉クリエイター。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag">#桃太郎</span>
+                <span class="cp-tag">#セルフ受肉</span>
+                <span class="cp-tag">#APEXマスター</span>
+                <span class="cp-tag">#任せロリ</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">IDENTIFIER</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>PROFILE</h3>
+                <p><strong>BIRTHDAY</strong>: 6月29日</p>
+                <p><strong>HEIGHT</strong>: 142cm (耳含み)</p>
+                <p><strong>AGE</strong>: 22歳 (精神年齢6歳)</p>
+                <p><strong>BLOOD</strong>: AB型</p>
+            </div>
+            <div class="cp-card">
+                <h3>COMMUNITY</h3>
+                <p><strong>FAN NAME</strong>: ももっこ軍</p>
+                <p><strong>MARK</strong>: 🍑🌱</p>
+                <p><strong>ILLUST</strong>: 自分自身</p>
+            </div>
+            <div class="cp-card">
+                <h3>VIBES</h3>
+                <p><strong>TYPE</strong>: 圧倒的ボケ、努力家</p>
+                <p><strong>SKILL</strong>: 歌、FPS (APEX 7000h+)</p>
+                <p><strong>HABIT</strong>: 親父ギャグ (ももに任せロリ！)</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">RECORDS & EPISODES</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>努力のセルフ受肉クリエイター</h3>
+                <p>キャラデザからLive2Dパーツ分けまで自前。「登録者1万人でデビュー」企画を掲げ、怒涛のショート動画投稿でわずか3ヶ月で達成した。動画編集に6時間かけるなど、クリエイターとしての執念は随一。</p>
+            </div>
+            <div class="cp-card">
+                <h3>APEXガチ勢の快挙</h3>
+                <p>プレイ時間7000時間超、マスターランク到達経験者。デビュー直前の「えぺまつり外伝」にマスター枠で参戦し、いきなり初優勝を飾るという、桃太郎らしい（？）武勇伝を引っ提げてVEEへ加入した。</p>
+            </div>
+            <div class="cp-card">
+                <h3>愛すべきポンコツ桃太郎</h3>
+                <p>自分の初配信を振り返る配信中、画面端が見切れていることに後で気づいたり、YouTubeプレミアム未加入のため自分の配信に広告が流れるなど、期待を裏切らないポンコツぶりでリスナー（仲間）を癒している。</p>
+            </div>
+            <div class="cp-card">
+                <h3>「怪力ゴリラ」と呼ばれた過去</h3>
+                <p>中学生時代、あまりのモテ期に女子トイレに逃げ込むほどだったが、当時のあだ名はなぜか「怪力ゴリラ」。現在は「精神年齢6歳」として赤ちゃん姿に変身することもあり、そのギャップがファンの心を掴んで離さない。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <div class="cp-footer-logo">VEE / VTuber Archive</div>
+        <p>© 2026 VTuber Archive Project. Data provided by official records.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal-active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.cp-card, .cp-section-title').forEach(el => {
+            el.classList.add('reveal-item');
+            observer.observe(el);
+        });
+    </script>
+    <style>
+        .reveal-item {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+        .reveal-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>月白 累 | VEE Archive</title>
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #646484;
+            --char-glow: rgba(100, 100, 132, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../vee_index.html" class="cp-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK TO ARCHIVE
+        </a>
+        <div class="cp-nav-gen">Dev-e / E:clips</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-motif"></div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">VEE 第5弾 / Dev-e</div>
+            <h1 class="cp-hero-name">月白 累</h1>
+            <span class="cp-hero-en">GEPPAKU LUI</span>
+            <div class="cp-chara-desc">
+                「私は、病に生かされている。」<br><br>
+                “デジタルツールを通さなければ他者から認識されない”「消失」の病を患う、孤児院「箱庭」の少女。歌っている間だけは世界に存在が証明されると信じ、消えゆく運命に抗うように祈りを込めて歌い続ける。喋ることは苦手だが、その歌声は圧倒的な音域と美しさを誇る。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag">#4オクターブ</span>
+                <span class="cp-tag">#消失の病</span>
+                <span class="cp-tag">#箱庭</span>
+                <span class="cp-tag">#軍隊リスナー</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">IDENTIFIER</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>PROFILE</h3>
+                <p><strong>BIRTHDAY</strong>: 12月10日</p>
+                <p><strong>HEIGHT</strong>: 153cm</p>
+                <p><strong>SKILL</strong>: 4オクターブの音域、かき氷</p>
+                <p><strong>COLOR</strong>: #646484 (月白)</p>
+            </div>
+            <div class="cp-card">
+                <h3>COMMUNITY</h3>
+                <p><strong>FAN NAME</strong>: 囚人 / 燃料 (愛称)</p>
+                <p><strong>MARK</strong>: 🌫🖌</p>
+                <p><strong>VIBE</strong>: 体育会系軍隊リスナー</p>
+            </div>
+            <div class="cp-card">
+                <h3>HABITS</h3>
+                <p><strong>LIKE</strong>: 芸術表現、オムライス、猫</p>
+                <p><strong>DREAM</strong>: 歌を遺し、存在を証明すること</p>
+                <p><strong>ASMR</strong>: 高速タイピング音</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">RECORDS & EPISODES</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>驚異の「4オクターブ」の歌声</h3>
+                <p>公式には3オクターブとあるが、楽曲公開時の分析で実際には約4オクターブの音域があることが判明。低音から高音までを自由自在に操るその技術力は、スタッフからも一目置かれている。</p>
+            </div>
+            <div class="cp-card">
+                <h3>無言の台パンと物理的解決</h3>
+                <p>喋るのが苦手で配信中も無口になりがちだが、機材が不調な際に「叩けば直る」と結構強めに台を叩いて直した伝説を持つ。リスナーからは、そのシュールな挙動も含めて「指揮官」として慕われている。</p>
+            </div>
+            <div class="cp-card">
+                <h3>不憫すぎる「かき氷破壊」</h3>
+                <p>収益化後に手に入れたかき氷器で「最強のかき氷」を作るのが夢だったが、翌年の配信直前にかき氷器を破壊してしまうというポンコツ不憫な一面も。意外と不器用で可愛らしい素顔が垣間見える。</p>
+            </div>
+            <div class="cp-card">
+                <h3>同期への「重すぎる」塩対応</h3>
+                <p>同期の雨庭やえや黒燿リラから溺愛されているが、全力疾走で逃げたりスルーしたりの塩対応。しかし、本人のいないところでは「いないと考えたらやだな」と漏らすなど、深い信頼と愛情を抱いている。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <div class="cp-footer-logo">VEE / VTuber Archive</div>
+        <p>© 2026 VTuber Archive Project. Data provided by official records.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal-active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.cp-card, .cp-section-title').forEach(el => {
+            el.classList.add('reveal-item');
+            observer.observe(el);
+        });
+    </script>
+    <style>
+        .reveal-item {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+        .reveal-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</body>
+</html>

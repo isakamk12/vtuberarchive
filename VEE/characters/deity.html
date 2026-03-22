@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>甘楽デイティー | VEE Archive</title>
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #BBF2FF;
+            --char-glow: rgba(187, 242, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../vee_index.html" class="cp-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK TO ARCHIVE
+        </a>
+        <div class="cp-nav-gen">Dev-F</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-motif"></div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">VEE 第4弾 / Dev-F</div>
+            <h1 class="cp-hero-name">甘楽デイティー</h1>
+            <span class="cp-hero-en">KANRA DEITY</span>
+            <div class="cp-chara-desc">
+                「歌の神」を自称する、フランス出身のマルチリンガル少女。圧倒的な歌唱力と重厚な歌声を持つ一方で、配信では「喧嘩の神」「うつの神」「無職の神」など、様々な不名誉な（？）肩書きが増殖中。飾らない性格と大きなガハハ笑いがリスナーに愛されている。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag">#歌の神</span>
+                <span class="cp-tag">#マルチリンガル</span>
+                <span class="cp-tag">#パリジェンヌ</span>
+                <span class="cp-tag">#ヒロアカオタク</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">IDENTIFIER</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>PROFILE</h3>
+                <p><strong>BIRTHDAY</strong>: 10月29日 (21歳)</p>
+                <p><strong>HEIGHT</strong>: 172cm (ブーツ込)</p>
+                <p><strong>LANG</strong>: 仏(母語)・英・日・西</p>
+                <p><strong>COLOR</strong>: 水色 (#BBF2FF)</p>
+            </div>
+            <div class="cp-card">
+                <h3>COMMUNITY</h3>
+                <p><strong>FAN NAME</strong>: デイティスト</p>
+                <p><strong>MARK</strong>: 🪬🩵</p>
+                <p><strong>GREETING</strong>: グッデー (Good day)</p>
+            </div>
+            <div class="cp-card">
+                <h3>VIBES</h3>
+                <p><strong>LIKE</strong>: ヒロアカ、爆豪勝己、物間寧人</p>
+                <p><strong>DREAM</strong>: 日本武道館ライブ</p>
+                <p><strong>HABIT</strong>: ガハハ笑い、漢字耐久での闇堕ち</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">RECORDS & EPISODES</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>漢字耐久で「うつの神」へ</h3>
+                <p>日本語の漢字が苦手ながら「全て書き終わるまで終われない」地獄の耐久。長時間作業で精神が削れ、画面いっぱいに「鬱」と書いて黙り込んでしまう。その姿から「うつの神」という二つ名が定着した。</p>
+            </div>
+            <div class="cp-card">
+                <h3>初対面への「殺すぞ」</h3>
+                <p>『GTA』Vスト鯖にて、ギャングの面接に落ちた際、他の不採用者が礼儀正しく返す中、デイティーだけが「殺すぞ お前 死ね」と過激なメッセージを送信。初対面の参加者たちに強烈なインパクトを残した。</p>
+            </div>
+            <div class="cp-card">
+                <h3>名言「ヒカリニイクシヌ」</h3>
+                <p>同期とのホラーゲームコラボ中、誘蛾灯の光を「光に行くと死ぬ」という意味深かつシンプルなカタコトで表現。その語感の良さと即落ち2コマのような面白さがメンバーとリスナーのツボに入り、伝説となった。</p>
+            </div>
+            <div class="cp-card">
+                <h3>即興で作詞した「レッレッル」</h3>
+                <p>初オリ曲『レッテル』の作詞依頼が伝わっておらず、レコーディング当日にパニック。しかし数分で韻を踏んだ歌詞を書き上げ、クリエイター陣を驚愕させた。「私天才！」と自画自賛する姿も彼女らしい。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <div class="cp-footer-logo">VEE / VTuber Archive</div>
+        <p>© 2026 VTuber Archive Project. Data provided by official records.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal-active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.cp-card, .cp-section-title').forEach(el => {
+            el.classList.add('reveal-item');
+            observer.observe(el);
+        });
+    </script>
+    <style>
+        .reveal-item {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+        .reveal-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</body>
+</html>

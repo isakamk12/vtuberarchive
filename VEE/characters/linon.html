@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天籠りのん | VEE Archive</title>
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #ff69b4;
+            --char-glow: rgba(255, 105, 180, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../vee_index.html" class="cp-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK TO ARCHIVE
+        </a>
+        <div class="cp-nav-gen">Dev-F</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-motif"></div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">VEE 第6弾 / Dev-F</div>
+            <h1 class="cp-hero-name">天籠りのん</h1>
+            <span class="cp-hero-en">AMAKOMO LINON</span>
+            <div class="cp-chara-desc">
+                VSinger志望のエセ不良少女。その実態は、可愛いもの好きでちょっとものぐさなただの引き籠り。他人に舐められやすいのを気にして不良に擬態しているが、あまり上手くいっていない。歌うことが好きだが外には出たくないので、おうちで活動できるバーチャルタレントに惹かれてVEEに応募した。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag">#VSinger</span>
+                <span class="cp-tag">#ハイトーン</span>
+                <span class="cp-tag">#麻雀</span>
+                <span class="cp-tag">#雀聖</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">IDENTIFIER</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>PROFILE</h3>
+                <p><strong>DEBUT</strong>: 2023年8月12日</p>
+                <p><strong>HEIGHT</strong>: 145cm (ブーツ無し)</p>
+                <p><strong>HOBBY</strong>: 麻雀 (不良っぽいかもという動機)</p>
+                <p><strong>COLOR</strong>: ピンク</p>
+            </div>
+            <div class="cp-card">
+                <h3>COMMUNITY</h3>
+                <p><strong>FAN NAME</strong>: 天籠親衛隊</p>
+                <p><strong>MARK</strong>: 🎀🏳</p>
+                <p><strong>GREETING</strong>: こんこも</p>
+            </div>
+            <div class="cp-card">
+                <h3>SKILLS</h3>
+                <p><strong>VOCAL</strong>: ロックなハイトーン系</p>
+                <p><strong>DANCE</strong>: 得意</p>
+                <p><strong>GAME</strong>: 麻雀 (雀魂 雀聖)</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">RECORDS & EPISODES</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>負けず嫌いなVSinger</h3>
+                <p>オリジナル曲『虚無虚無です。』では、クリエイター陣に対し「伝えたい事はない」と正直に伝えた結果、デスボやラップを盛り込んだ超高難易度の楽曲が誕生。「難しいから歌えない」を許せない性格で、見事に歌いこなした。</p>
+            </div>
+            <div class="cp-card">
+                <h3>『雀聖』公認プレイヤー</h3>
+                <p>Mリーガー瑞原明奈プロに直弾判し「絶対雀聖計画」を始動。努力の末に『雀魂』で雀聖昇段を果たし、涙の感謝を伝えた。現在は念願の「雀魂公認プレイヤー」に就任し、ソニーの看板を背負って打ち続けている。</p>
+            </div>
+            <div class="cp-card">
+                <h3>不良になりきれない真面目さ</h3>
+                <p>ホラゲで特大の悲鳴を上げながら半泣きになったり、初凸待ちでガチガチのコミュ障を発揮したりと「不良設定」が迷子になりがち。周囲からは「根が真面目でお姉さんなところがある」とバレている。</p>
+            </div>
+            <div class="cp-card">
+                <h3>愛され「ちびっこリーダー」</h3>
+                <p>145cmの低身長をいじられ、同期からは「盛ってるよね？」と言われる始末。リスナーとの「カツアゲ」プロレスは定番。舐められないように厚底を履くなど、健気な努力（？）を続けている。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <div class="cp-footer-logo">VEE / VTuber Archive</div>
+        <p>© 2026 VTuber Archive Project. Data provided by official records.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal-active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.cp-card, .cp-section-title').forEach(el => {
+            el.classList.add('reveal-item');
+            observer.observe(el);
+        });
+    </script>
+    <style>
+        .reveal-item {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+        .reveal-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</body>
+</html>

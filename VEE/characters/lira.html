@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黒燿リラ | VEE Archive</title>
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #ad2a3e;
+            --char-glow: rgba(173, 42, 62, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../vee_index.html" class="cp-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK TO ARCHIVE
+        </a>
+        <div class="cp-nav-gen">Dev-e / E:clips</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-motif"></div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">VEE 第5弾 / Dev-e</div>
+            <h1 class="cp-hero-name">黒燿リラ</h1>
+            <span class="cp-hero-en">KOKUYOU LIRA</span>
+            <div class="cp-chara-desc">
+                ドラゴンの谷「セグレタリア」のサラマンダー一族。罰として壁に穴の開いたボロ屋に住まわされている。人間界のサッカー（ACミラン）に魅了され、熱狂的な「ミラニスタ」に。低く落ち着いた「僕っ娘」ボイスと、感情豊かな喚き声のギャップが愛されるバーテンダー。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag">#サラマンダー</span>
+                <span class="cp-tag">#ミラニスタ</span>
+                <span class="cp-tag">#格ゲー修練</span>
+                <span class="cp-tag">#コロッケパン姉さん</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">IDENTIFIER</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>PROFILE</h3>
+                <p><strong>BIRTHDAY</strong>: 11月7日</p>
+                <p><strong>HEIGHT</strong>: 185cm (角・ヒール込)</p>
+                <p><strong>SKILL</strong>: バーテンダー、サッカー解説</p>
+                <p><strong>COLOR</strong>: #ad2a3e</p>
+            </div>
+            <div class="cp-card">
+                <h3>COMMUNITY</h3>
+                <p><strong>FAN NAME</strong>: リラニスタ</p>
+                <p><strong>MARK</strong>: 🐉🔥</p>
+                <p><strong>ILLUST</strong>: 遠坂あさぎ</p>
+            </div>
+            <div class="cp-card">
+                <h3>VIBES</h3>
+                <p><strong>LIKE</strong>: ACミラン、スト6、ミニドラゴン</p>
+                <p><strong>DREAM</strong>: 庭付き一戸建てに住むこと</p>
+                <p><strong>HABIT</strong>: 尻尾の炎で体温調節</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">RECORDS & EPISODES</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>「声が好きランキング最下位」からの涙</h3>
+                <p>公式番組での結果にショックを受けるも、直後に「高評価1000耐久」を開始。わずか3時間で達成し、ファンからの愛に涙した。「もらったファンレターで何度も泣いた」と語る、ファンとの絆はVEE随一。</p>
+            </div>
+            <div class="cp-card">
+                <h3>ストイックすぎる「格ゲー修練」</h3>
+                <p>『ストリートファイター6』に大熱中。12時間の長時間配信や、キーボード・レバーレスでのコマンド練習をひたすら繰り返す。プロからのコーチングを真摯に吸収する姿は「格ゲーマー」そのもの。</p>
+            </div>
+            <div class="cp-card">
+                <h3>サラマンダーなのに「夏が苦手」</h3>
+                <p>火の精霊だが汗をかけない体質のため熱中症になりやすく、夏は大の苦手。スタジオ収録ではスタッフ総出で「冷やしリラ」が行われるという、弱点すら愛される看板娘（？）エピソード。</p>
+            </div>
+            <div class="cp-card">
+                <h3>突然の「コロッケパン姉さん」襲名</h3>
+                <p>朝活中にお昼として数年ぶりにコロッケパンを食べただけでリスナーにいじり倒され、勝手に命名。アイデンティティの危機を叫ぶも、リスナーの連携プレイにより大爆笑の神回となった。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <div class="cp-footer-logo">VEE / VTuber Archive</div>
+        <p>© 2026 VTuber Archive Project. Data provided by official records.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal-active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.cp-card, .cp-section-title').forEach(el => {
+            el.classList.add('reveal-item');
+            observer.observe(el);
+        });
+    </script>
+    <style>
+        .reveal-item {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+        .reveal-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>芽々守あん | VEE Archive</title>
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #D9394E;
+            --char-glow: rgba(217, 57, 78, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../vee_index.html" class="cp-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK TO ARCHIVE
+        </a>
+        <div class="cp-nav-gen">Dev-g</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-motif"></div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">VEE 第7弾 / Dev-g</div>
+            <h1 class="cp-hero-name">芽々守あん</h1>
+            <span class="cp-hero-en">MEMEMORI AN</span>
+            <div class="cp-chara-desc">
+                「この紋章の前にひれ伏しなさい！」<br><br>
+                異国の地「ヴァニルス」からやってきた、落ちぶれた女王一族の末裔。マウントを取るのが大好きだが、どこか不憫でいじらしい留学生。煽り耐性の無さとASMRでの圧倒的な才能、そして「限界学生」としての等身大の姿がリスナーを惹きつけてやまない。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag">#女王の末裔</span>
+                <span class="cp-tag">#不憫カワ</span>
+                <span class="cp-tag">#ASMRの神</span>
+                <span class="cp-tag">#バニラ酢</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">IDENTIFIER</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>PROFILE</h3>
+                <p><strong>BIRTHDAY</strong>: 6月30日</p>
+                <p><strong>HEIGHT</strong>: 155cm (ブーツ込)</p>
+                <p><strong>AGE</strong>: 18歳 (自称永遠の16歳)</p>
+                <p><strong>COLOR</strong>: チェリーレッド (#D9394E)</p>
+            </div>
+            <div class="cp-card">
+                <h3>COMMUNITY</h3>
+                <p><strong>FAN NAME</strong>: めめもりすと</p>
+                <p><strong>MARK</strong>: 👁🗨❤</p>
+                <p><strong>ILLUST</strong>: ひさぎ</p>
+            </div>
+            <div class="cp-card">
+                <h3>VIBES</h3>
+                <p><strong>LIKE</strong>: お菓子の家、アニメ、雑談</p>
+                <p><strong>DREAM</strong>: 全世界芽々守化計画</p>
+                <p><strong>HABIT</strong>: 面白おかしく煽られる (orz)</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">RECORDS & EPISODES</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>祖国が「生バニラ酢」になる悲劇</h3>
+                <p>出身国「ヴァニルス」をバニラ酢といじられ、ハッシュタグも「#生バニラ酢」に。挙句の果てに登録者1万人記念でバニラアイスに酢をかけて食べる実食を行い、「バニラ酢女王」の座を不動のものとした。</p>
+            </div>
+            <div class="cp-card">
+                <h3>ガチの「限界学生」ゆえの病み</h3>
+                <p>テスト当日に財布を忘れ「留年するかもしれない」と本気で数日間病んでログアウト。最終的には先生からのレポート再試験という先生特権（？）を使い、ギリギリで単位を勝ち取った不憫な学生生活。</p>
+            </div>
+            <div class="cp-card">
+                <h3>ASMRでの圧倒的大躍進</h3>
+                <p>雑談メインから方向転換したASMRで才能が開花。「ASMRなんて…」という葛藤を乗り越え、特に「罵倒・メスガキ系」でリスナーを虜に。直後の雑談で恥ずかしがるギャップも彼女の最大の武器。</p>
+            </div>
+            <div class="cp-card">
+                <h3>周りに愛される「お世話され気質」</h3>
+                <p>バイトでレジ操作を間違え返金騒動を起こす世間知らず。だが不登校時代に毎日来てくれた先生への感謝を語るなど、真っ直ぐな心を持つ。「先生がいなければVTuberをやっていなかった」という話は涙を誘った。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <div class="cp-footer-logo">VEE / VTuber Archive</div>
+        <p>© 2026 VTuber Archive Project. Data provided by official records.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal-active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.cp-card, .cp-section-title').forEach(el => {
+            el.classList.add('reveal-item');
+            observer.observe(el);
+        });
+    </script>
+    <style>
+        .reveal-item {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+        .reveal-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</body>
+</html>

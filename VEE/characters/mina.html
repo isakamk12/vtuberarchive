@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>桜鳥ミーナ | VEE Archive</title>
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #ffb7c5;
+            --char-glow: rgba(255, 183, 197, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../vee_index.html" class="cp-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK TO ARCHIVE
+        </a>
+        <div class="cp-nav-gen">Dev-a</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-motif"></div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">VEE 第1弾 / Dev-a</div>
+            <h1 class="cp-hero-name">桜鳥ミーナ</h1>
+            <span class="cp-hero-en">AUDREY MINA</span>
+            <div class="cp-chara-desc">
+                「癒しと耐久の聖魔法使い」<br><br>
+                元いた世界では魔王も倒した宮廷魔導士。こちらの世界のヲタク文化にハマり移住したが、魔力が足りず社畜（会社員）として働きながら活動する「兼業VTuber」。ホラーやレトロゲームのクリア耐久配信をこよなく愛し、ギネス記録を持つほどの驚異的な精神力と体力を持つ。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag">#聖魔法使い</span>
+                <span class="cp-tag">#耐久配信</span>
+                <span class="cp-tag">#ギネス世界記録</span>
+                <span class="cp-tag">#兼業VTuber</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">IDENTIFIER</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>PROFILE</h3>
+                <p><strong>BIRTHDAY</strong>: 3月17日 (1000歳over)</p>
+                <p><strong>HEIGHT</strong>: 164cm (靴込み)</p>
+                <p><strong>HABIT</strong>: 壁に向かって74時間トーク</p>
+                <p><strong>COLOR</strong>: 桜色 (Sakura Pink)</p>
+            </div>
+            <div class="cp-card">
+                <h3>COMMUNITY</h3>
+                <p><strong>FAN NAME</strong>: 使い魔さん (黒猫)</p>
+                <p><strong>MARK</strong>: 🌸🧙‍♀️</p>
+                <p><strong>SPECIAL</strong>: 完全広告オフ配信</p>
+            </div>
+            <div class="cp-card">
+                <h3>VIBES</h3>
+                <p><strong>LIKE</strong>: ゾンビ、もつ煮、ビール</p>
+                <p><strong>TYPE</strong>: 超絶ビビリ、極度の方向音痴</p>
+                <p><strong>VOICE</strong>: ワライカワセミ似の笑い声</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">RECORDS & EPISODES</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>ソロ耐久ギネス世界記録</h3>
+                <p>2025年5月2日、VTuber史上初となるソロ耐久配信のギネス記録（60時間超）を達成。挑戦中は冷やし中華を1分で早食いするなど時間を徹底節約。普段は「灼熱の防音室（40度超）」で命懸けの配信を連打している。</p>
+            </div>
+            <div class="cp-card">
+                <h3>壁に向かって74時間喋る怪談</h3>
+                <p>幼少期から「壁に向かって喋る」癖があり、有給休暇を使って74時間一人で喋り続け、世界が回り出したためストップしたという狂気の伝説を持つ。病院に連れて行かれそうになったこともあるが、本人は大真面目。</p>
+            </div>
+            <div class="cp-card">
+                <h3>独特すぎる身体能力と体質</h3>
+                <p>独特の笑い声がワライカワセミに酷似しており、職場の後輩に身バレしそうになった。霊媒体質で「100人くらい霊を連れている」と言われるが、「家賃払ってくれるなら大丈夫」とポジティブに捉えている。</p>
+            </div>
+            <div class="cp-card">
+                <h3>多芸すぎる宴会芸</h3>
+                <p>ピアノ・歌・左足タンバリン・頭の鈴を同時演奏する一人オーケストラが可能。現在は「両方の鼻の穴で別々のリコーダーを吹く」練習を1年半も続けている。ゾンビ愛が強いが、プレイ中は叫び回り迷子になる。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <div class="cp-footer-logo">VEE / VTuber Archive</div>
+        <p>© 2026 VTuber Archive Project. Data provided by official records.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal-active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.cp-card, .cp-section-title').forEach(el => {
+            el.classList.add('reveal-item');
+            observer.observe(el);
+        });
+    </script>
+    <style>
+        .reveal-item {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+        .reveal-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</body>
+</html>

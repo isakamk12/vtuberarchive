@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>マル・ナナモナ | VEE Archive</title>
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #ffaa4f;
+            --char-glow: rgba(255, 170, 79, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../vee_index.html" class="cp-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK TO ARCHIVE
+        </a>
+        <div class="cp-nav-gen">VEE (ex-VERSEⁿ)</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-motif"></div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">VEE 移籍メンバー / ex-VERSEⁿ</div>
+            <h1 class="cp-hero-name">マル・ナナモナ</h1>
+            <span class="cp-hero-en">MARU NANAMONA</span>
+            <div class="cp-chara-desc">
+                「ぽかぽかするね～」<br><br>
+                マルチリンガルなぽかぽかひつじVTuber。人見知りだが友人想いで心優しい少女。のんびりとした雰囲気に反して、英語・フランス語・韓国語を操る才女。一方でマイペースで独特の感性を持ち、時に周囲を置いてけぼりにするシュールな一面も。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag">#羊</span>
+                <span class="cp-tag">#マルチリンガル</span>
+                <span class="cp-tag">#俊足の風</span>
+                <span class="cp-tag">#ぽかぽか</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">IDENTIFIER</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>PROFILE</h3>
+                <p><strong>BIRTHDAY</strong>: 7月3日デビュー</p>
+                <p><strong>HEIGHT</strong>: 154cm</p>
+                <p><strong>SKILL</strong>: 英・仏・韓、50m走(7.0秒)</p>
+                <p><strong>COLOR</strong>: オレンジ (#ffaa4f)</p>
+            </div>
+            <div class="cp-card">
+                <h3>COMMUNITY</h3>
+                <p><strong>FAN NAME</strong>: 友牧民</p>
+                <p><strong>MARK</strong>: 🧶🐏</p>
+                <p><strong>ILLUST</strong>: フカヒレ (新) / 赤坂アカ (初)</p>
+            </div>
+            <div class="cp-card">
+                <h3>VIBES</h3>
+                <p><strong>LIKE</strong>: 映画、チョコミント、お昼寝</p>
+                <p><strong>DREAM</strong>: 地球を抱きしめるくらい大きくなる</p>
+                <p><strong>HABIT</strong>: へんてこな落とし物の記録</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">RECORDS & EPISODES</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>俊足の「風」と呼ばれた過去</h3>
+                <p>おっとりした外見に反し、50m走7.0秒という驚異の俊足。かつて学校で「風」と呼ばれていた伝説を持ち、「『風になる』が流れた時はおはこだと思ってください」と語るギャップが魅力。</p>
+            </div>
+            <div class="cp-card">
+                <h3>初配信「逆さまポインター」事件</h3>
+                <p>記念すべき初配信。見やすいようにと自作した名入りポインターが、最後の最後まで「逆さま」になっていたことに気づかなかった。羊らしい（？）天然さとポンコツさが露呈した伝説のシーン。</p>
+            </div>
+            <div class="cp-card">
+                <h3>狂気の「呼び込み君」耐久</h3>
+                <p>「休日応援ソング」としてスーパーのBGMを8時間流し続ける耐久を実施。休憩中にゼリーを盛大にこぼして焦るなど、耐久のシュールさと相まってリスナーに強烈なインパクトを残した。</p>
+            </div>
+            <div class="cp-card">
+                <h3>カオスな動物園の創造主</h3>
+                <p>自分の声を録音して動物園を作るゲームで、「うちうんち食べたの」等のシュールなボイスを動物たちに大合唱させる狂気の世界を創造。独特の感性が爆発した神回として語り継がれている。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <div class="cp-footer-logo">VEE / VTuber Archive</div>
+        <p>© 2026 VTuber Archive Project. Data provided by official records.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal-active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.cp-card, .cp-section-title').forEach(el => {
+            el.classList.add('reveal-item');
+            observer.observe(el);
+        });
+    </script>
+    <style>
+        .reveal-item {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+        .reveal-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</body>
+</html>

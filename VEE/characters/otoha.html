@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>カシ・オトハ | VEE Archive</title>
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #ff66cc;
+            --char-glow: rgba(255, 102, 204, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../vee_index.html" class="cp-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK TO ARCHIVE
+        </a>
+        <div class="cp-nav-gen">VEE (ex-VERSEⁿ)</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-motif"></div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">VEE 移籍メンバー / ex-VERSEⁿ</div>
+            <h1 class="cp-hero-name">カシ・オトハ</h1>
+            <span class="cp-hero-en">KASHI OTOHA</span>
+            <div class="cp-chara-desc">
+                「君に寄り添える音楽を」<br><br>
+                飄々としているが、誰よりも思慮深い少女。ピンクのショートヘアと眼鏡、1本の角が特徴的。音楽に助けられて生きてきた自身の経験から、誰かの心に寄り添う歌を歌う。「弾き語りVシンガー」として、等身大の感情を世界に届けている。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag">#弾き語り</span>
+                <span class="cp-tag">#アコースティック</span>
+                <span class="cp-tag">#VALORANT</span>
+                <span class="cp-tag">#クリアメガネ</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">IDENTIFIER</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>PROFILE</h3>
+                <p><strong>BIRTHDAY</strong>: 8月27日</p>
+                <p><strong>HEIGHT</strong>: 160cm</p>
+                <p><strong>SKILL</strong>: ギター、1人行動</p>
+                <p><strong>COLOR</strong>: ピンク系</p>
+            </div>
+            <div class="cp-card">
+                <h3>COMMUNITY</h3>
+                <p><strong>FAN NAME</strong>: ツノ民</p>
+                <p><strong>MARK</strong>: 🎧👾</p>
+                <p><strong>QUOTE</strong>: 「そばにいるよ」</p>
+            </div>
+            <div class="cp-card">
+                <h3>VIBES</h3>
+                <p><strong>TYPE</strong>: 陽キャ、コミュ力おばけ</p>
+                <p><strong>DREAM</strong>: 3D有観客・アコギライブ</p>
+                <p><strong>PET</strong>: サボテン×5 (富士・鷹・茄子など)</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">RECORDS & EPISODES</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>音楽への「寄り添う」想い</h3>
+                <p>看板曲『anthology』に込められた「シンドくても、大丈夫になるまで一緒にいよう」という想い。自分が音楽に助けられたからこそ、次は自分がみんなを支えたいという強い意志を持って活動している。</p>
+            </div>
+            <div class="cp-card">
+                <h3>「弾き語り」への誇り</h3>
+                <p>独学で始めたギター。初めて弾けた曲は『からくりピエロ』。睡眠導入としても定評のある弾き語り配信だが、本人は「弾き語りVシンガーとして名を広めたい」と熱い野心を燃やしている。</p>
+            </div>
+            <div class="cp-card">
+                <h3>自称清楚のポンコツハプニング</h3>
+                <p>「清楚担当」を自称するが、初配信でマイクがオフだと思い込み、裏で全力熱唱していた音声がそのまま流れるという盛大なミスを犯す。温かい飲み物を買いたいのに冷たいのを買うなど、愛すべき抜けっぷり。</p>
+            </div>
+            <div class="cp-card">
+                <h3>ナチュラル陽キャの距離感</h3>
+                <p>初対面の相手を質問攻めにしてすぐに打ち解ける「コミュ力おばけ」だが、なぜか「2度目まして」の方が苦手。VALORANTでも負けず嫌いで、キルを取るためにマウスを新調しデスマッチに励む一面も。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <div class="cp-footer-logo">VEE / VTuber Archive</div>
+        <p>© 2026 VTuber Archive Project. Data provided by official records.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal-active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.cp-card, .cp-section-title').forEach(el => {
+            el.classList.add('reveal-item');
+            observer.observe(el);
+        });
+    </script>
+    <style>
+        .reveal-item {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+        .reveal-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>カガセ・ウノ | VEE Archive</title>
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #ffd34f;
+            --char-glow: rgba(255, 211, 79, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../vee_index.html" class="cp-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK TO ARCHIVE
+        </a>
+        <div class="cp-nav-gen">VEE (ex-VERSEⁿ)</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-motif"></div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">VEE 移籍メンバー / ex-VERSEⁿ</div>
+            <h1 class="cp-hero-name">カガセ・ウノ</h1>
+            <span class="cp-hero-en">KAGASE UNO</span>
+            <div class="cp-chara-desc">
+                「おからたち～おからじゃないたち～～」<br><br>
+                頭にねじれたドラゴンの角が生えている、明るく無邪気で自由奔放な少女。厄介ごとにもすぐ首をつっこむムードメーカーだが、実は場の雰囲気に敏感なポリシーの持ち主。死にゲーやFPSを好むガチゲーマーであり、リスナー（おからたち）とのプロレスをこよなく愛する。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag">#ドラゴン</span>
+                <span class="cp-tag">#ガチゲーマー</span>
+                <span class="cp-tag">#LoL廃人</span>
+                <span class="cp-tag">#長時間配信</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">IDENTIFIER</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>PROFILE</h3>
+                <p><strong>BIRTHDAY</strong>: 3月12日</p>
+                <p><strong>HEIGHT</strong>: 150cm (角なし)</p>
+                <p><strong>HOBBY</strong>: 星、バイク、高難度ゲーム</p>
+                <p><strong>COLOR</strong>: イエロー (#ffd34f)</p>
+            </div>
+            <div class="cp-card">
+                <h3>COMMUNITY</h3>
+                <p><strong>FAN NAME</strong>: おからたち</p>
+                <p><strong>MARK</strong>: 🐉💛</p>
+                <p><strong>ILLUST</strong>: しゅがお</p>
+            </div>
+            <div class="cp-card">
+                <h3>VIBES</h3>
+                <p><strong>TYPE</strong>: 寂しがり屋、人見知り(外部)</p>
+                <p><strong>DREAM</strong>: 有観客ソロイベント</p>
+                <p><strong>FEAT</strong>: 漢字が激弱 (おんどくはっぴょうかい)</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">RECORDS & EPISODES</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>LoLシーズン1からのガチ勢</h3>
+                <p>デビュー当初は隠していたが、実は『League of Legends』をシーズン1からプレイしている筋金入りのガチ勢。VEE移籍後にカミングアウトし、「一番の芯の部分を隠してたからスッキリした」と本音を漏らした。</p>
+            </div>
+            <div class="cp-card">
+                <h3>時間感覚がバグる長時間配信</h3>
+                <p>30分のつもりが気づけばお昼（12時間超）になっていることもザラ。『アークナイツ』のストーリー読み配信では8時間を超えても「やめる気しなかった」と語るなど、圧倒的なスタミナとゲーム愛を誇る。</p>
+            </div>
+            <div class="cp-card">
+                <h3>『Jump King』で見せた涙</h3>
+                <p>誕生日前日に「おめでとうと言われたい」と挑んだ10時間耐久。過酷な道中に心が折れそうになりながら、「自分で自分を肯定してあげよう」と涙ながらに語り、限界まで戦い抜く姿は多くのファンの胸を打った。</p>
+            </div>
+            <div class="cp-card">
+                <h3>リスナーへの「激重」な愛</h3>
+                <p>配信外ではエゴサやアーカイブのコメント巡回が日課。「配信終わった後、無になると寂しい」と漏らし、普段コメントしないサイレントリスナーが最後に挨拶してくれるだけで「愛じゃん」と大喜びする寂しがり屋。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <div class="cp-footer-logo">VEE / VTuber Archive</div>
+        <p>© 2026 VTuber Archive Project. Data provided by official records.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal-active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.cp-card, .cp-section-title').forEach(el => {
+            el.classList.add('reveal-item');
+            observer.observe(el);
+        });
+    </script>
+    <style>
+        .reveal-item {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+        .reveal-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</body>
+</html>

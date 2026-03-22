@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮々ゆにこ | VEE Archive</title>
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #ffe49e;
+            --char-glow: rgba(255, 228, 158, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../vee_index.html" class="cp-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK TO ARCHIVE
+        </a>
+        <div class="cp-nav-gen">Dev-g</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-motif"></div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">VEE 第7弾 / Dev-g</div>
+            <h1 class="cp-hero-name">浮々ゆにこ</h1>
+            <span class="cp-hero-en">UKI-UKI UNICO</span>
+            <div class="cp-chara-desc">
+                「つくって、うきうき！……ですっ！」<br><br>
+                幻獣世界のSEであり週末発明家。UnityとC#を駆使し、配信画面やシステムを自作してしまうクリエイター気質のユニコーンの獣人。極度の「クソ雑魚メンタル」で、心が折れると角も一緒に折れてしまうため、角が短いのがコンプレックス。時代を創る発明を企んでいる。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag">#エンジニア</span>
+                <span class="cp-tag">#Unity</span>
+                <span class="cp-tag">#自作システム</span>
+                <span class="cp-tag">#マッドサイエンティスト</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">IDENTIFIER</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>PROFILE</h3>
+                <p><strong>BIRTHDAY</strong>: 7月20日 (101歳)</p>
+                <p><strong>HEIGHT</strong>: 140cm</p>
+                <p><strong>RACE</strong>: ユニコーンの獣人</p>
+                <p><strong>COLOR</strong>: #ffe49e (イエロー)</p>
+            </div>
+            <div class="cp-card">
+                <h3>COMMUNITY</h3>
+                <p><strong>FAN NAME</strong>: 秘密結社ユニコラボ</p>
+                <p><strong>MARK</strong>: 🦄🛠</p>
+                <p><strong>ILLUST</strong>: 荻pote</p>
+            </div>
+            <div class="cp-card">
+                <h3>SKILLS</h3>
+                <p><strong>ENGINEER</strong>: C# / Unity / 開発全般</p>
+                <p><strong>CREATIVE</strong>: 動画編集、ギミック制作</p>
+                <p><strong>PASSION</strong>: 宝塚歌劇団 (星組推し)</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">RECORDS & EPISODES</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>狂気の自作システム</h3>
+                <p>初配信では「視聴者をデジタル世界に閉じ込めバイオポットに吸い込む」システムを披露。収益化配信ではリスナーのコメとスパチャを火力に変換してたこ焼きを焼く装置を自作するなど、技術力の無駄遣い（褒め言葉）が光る。</p>
+            </div>
+            <div class="cp-card">
+                <h3>首に電流のデスゲーム</h3>
+                <p>100歳の誕生日配信にて、NGワードを言うと自作装置から自分の首に電流が流れるデスゲームを敢行。先輩たちから容赦なくNGワードを引き出され、本気で悶絶しながら配信する姿に「どうして自分をいじめるの？」とツッコミが入った。</p>
+            </div>
+            <div class="cp-card">
+                <h3>斜め上のASMRと奇行</h3>
+                <p>カブの種をマイクに降らせて川のせせらぎを表現したり、梵天で耳の中にイチゴを植え付け育てるシチュエーションASMRなど、独自の狂気路線を開拓。プライベートでは冷凍の生豚肉を食べて生死を彷徨うポンコツな一面も。</p>
+            </div>
+            <div class="cp-card">
+                <h3>宝塚への重すぎる愛</h3>
+                <p>大の宝塚ファン。勝ち取ったSS席のチケットが公演中止で紙屑になった際の悲痛な叫びはファンの涙を誘った。本職のエンジニアを集めた「ユニコラボ」を結成し、VTuberの枠を超えたハードウェア開発も企んでいる。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <div class="cp-footer-logo">VEE / VTuber Archive</div>
+        <p>© 2026 VTuber Archive Project. Data provided by official records.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal-active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.cp-card, .cp-section-title').forEach(el => {
+            el.classList.add('reveal-item');
+            observer.observe(el);
+        });
+    </script>
+    <style>
+        .reveal-item {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+        .reveal-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</body>
+</html>

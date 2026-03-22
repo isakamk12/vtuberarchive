@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日和ちひよ | VEE Archive</title>
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #ffff00;
+            --char-glow: rgba(255, 255, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../vee_index.html" class="cp-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK TO ARCHIVE
+        </a>
+        <div class="cp-nav-gen">Dev-b</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-motif"></div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">VEE 第2弾 / Dev-b</div>
+            <h1 class="cp-hero-name">日和ちひよ</h1>
+            <span class="cp-hero-en">HIYORI CHIHIYO</span>
+            <div class="cp-chara-desc">
+                「キミの手であたためて♡」<br><br>
+                人間のアイドルに憧れ、ひよこの国から家出してきたひよっこアイドル。135cmの小柄な体と「ははは！」と明るく笑う笑顔がトレードマーク。自称「ロリじゃない」を貫いているが、周囲からは愛され妹キャラとして認識されている。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag">#ひよっこアイドル</span>
+                <span class="cp-tag">#ロリじゃない(自称)</span>
+                <span class="cp-tag">#関係性オタク</span>
+                <span class="cp-tag">#松ぼっくり</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">IDENTIFIER</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>PROFILE</h3>
+                <p><strong>BIRTHDAY</strong>: 6月27日デビュー</p>
+                <p><strong>HEIGHT</strong>: 135cm (フード込)</p>
+                <p><strong>AGE</strong>: ひよこ年齢17歳</p>
+                <p><strong>COLOR</strong>: イエロー</p>
+            </div>
+            <div class="cp-card">
+                <h3>COMMUNITY</h3>
+                <p><strong>FAN NAME</strong>: 黄身くん / 黄身ちゃん</p>
+                <p><strong>MARK</strong>: 🐣🎊</p>
+                <p><strong>ILLUST</strong>: ぱん</p>
+            </div>
+            <div class="cp-card">
+                <h3>VIBES</h3>
+                <p><strong>LIKE</strong>: 黄色いもの、オムライス、プリン</p>
+                <p><strong>DREAM</strong>: 理想のアイドルになる</p>
+                <p><strong>HABIT</strong>: イマジナリー配信 (独り言配信)</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">RECORDS & EPISODES</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>「ロリじゃない！」の攻防</h3>
+                <p>初配信の第一声が「アタイ…ロリじゃない！」。しかし、生みの親のぱんママから「生まれた時は手のひらサイズだった」と暴露され、正式に（？）ロリ認定。抗いきれない運命にタジタジになる姿が恒例。</p>
+            </div>
+            <div class="cp-card">
+                <h3>筋金入りの「関係性オタク」</h3>
+                <p>乙女ゲームの関係性について語り出すと止まらない。かつてのバイト先のバックヤードで、スマホの光量MAXの状態でソシャゲのSSRキャラの顔面を上司に見られ、オタクであることが完全露呈した悲しき過去も。</p>
+            </div>
+            <div class="cp-card">
+                <h3>伝説の汚部屋（お部屋）事情</h3>
+                <p>「清掃好き」を自称していたが、実際は床に12本以上のペットボトルが転がる汚部屋住まい。雛星あいるとの掃除配信では「ペットボトルと一緒に寝ている」など、生々しすぎるお部屋事情が次々と発覚した。</p>
+            </div>
+            <div class="cp-card">
+                <h3>ひよこの国のたまご事情</h3>
+                <p>好物は「オムライス」と「プリン」。リスナーからの「共食い」ツッコミに対し、「無精卵を食べるのはひよこの国でも一般的。命の宿るラブたまごちゃんは絶対に食べない」と、独自の生命倫理を熱弁した。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <div class="cp-footer-logo">VEE / VTuber Archive</div>
+        <p>© 2026 VTuber Archive Project. Data provided by official records.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal-active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.cp-card, .cp-section-title').forEach(el => {
+            el.classList.add('reveal-item');
+            observer.observe(el);
+        });
+    </script>
+    <style>
+        .reveal-item {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+        .reveal-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</body>
+</html>

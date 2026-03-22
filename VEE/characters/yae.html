@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雨庭やえ | VEE Archive</title>
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #95c6c6;
+            --char-glow: rgba(149, 198, 198, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../vee_index.html" class="cp-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK TO ARCHIVE
+        </a>
+        <div class="cp-nav-gen">Dev-e / E:clips</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-motif"></div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">VEE 第5弾 / Dev-e</div>
+            <h1 class="cp-hero-name">雨庭やえ</h1>
+            <span class="cp-hero-en">AMENIWA YAE</span>
+            <div class="cp-chara-desc">
+                都市伝説「雨庭神社」の狛犬。みんなに忘れられると神社が消えてしまうため、存在を広めるべく配信活動を開始。参拝者が少なく暇なため、よく巫女の身体に憑依して人間界を楽しんでいる。よく猫やキツネに間違えられるが、本人は「狛犬」であることを強調している。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag">#狛犬</span>
+                <span class="cp-tag">#晩酌配信</span>
+                <span class="cp-tag">#飯テロ</span>
+                <span class="cp-tag">#クリエイター</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">IDENTIFIER</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>PROFILE</h3>
+                <p><strong>BIRTHDAY</strong>: 1月18日 (114歳)</p>
+                <p><strong>HEIGHT</strong>: 158cm (ヒール、耳含)</p>
+                <p><strong>ORIGIN</strong>: 雨庭神社</p>
+                <p><strong>COLOR</strong>: #95c6c6</p>
+            </div>
+            <div class="cp-card">
+                <h3>COMMUNITY</h3>
+                <p><strong>FAN NAME</strong>: やえばー</p>
+                <p><strong>MARK</strong>: ⛩🐾</p>
+                <p><strong>NICKNAME</strong>: やえにわ、わんわんやえ</p>
+            </div>
+            <div class="cp-card">
+                <h3>HABITS</h3>
+                <p><strong>LIKE</strong>: 睡眠、お酒、焼肉、旅行</p>
+                <p><strong>DISLIKE</strong>: 生野菜、内臓系、虫</p>
+                <p><strong>DREAM</strong>: 人間界に雨庭神社を作りたい</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">RECORDS & EPISODES</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>初配信から焼肉＆ビール</h3>
+                <p>初配信で無煙ロースターを持ち込み、肉を焼きながらビールを飲む暴挙。結果、2週間部屋の匂いが取れず巫女にこっぴどく怒られた。ファンを「豚カルビ」と呼ぶなど、食いしん坊なエピソードに事欠かない。</p>
+            </div>
+            <div class="cp-card">
+                <h3>自ら手にした「滑舌悪い王」</h3>
+                <p>「滑舌悪い王決定戦」を主催しMCを務めるも、早口言葉対決で自らボロボロになり、結果的に自分が王の称号を手にしてしまうというオチをつけた。MCもこなすが、どこか抜けているポンコツさが魅力。</p>
+            </div>
+            <div class="cp-card">
+                <h3>深夜の飯テロ「雨庭御膳」</h3>
+                <p>リスナーから募集した食べ物写真をおつまみにお酒を飲む企画を定期開催。深夜にリスナーから悲鳴が上がる中で美味しそうに酒を飲む姿はまさに「飯テロ」。VEEのボスも配信画面上でフリー素材化して遊んでいる。</p>
+            </div>
+            <div class="cp-card">
+                <h3>実は涙もろい愛情深い一面</h3>
+                <p>同期の歌枠で感動してミュート中に密かに泣いたり、イベントで迷子になりそうな同期と手を繋ごうとするなど、面倒見が良く愛情深い。朝5時からの朝活で、大量の挨拶により4分以上のプランクをやらされる不運も。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <div class="cp-footer-logo">VEE / VTuber Archive</div>
+        <p>© 2026 VTuber Archive Project. Data provided by official records.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal-active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.cp-card, .cp-section-title').forEach(el => {
+            el.classList.add('reveal-item');
+            observer.observe(el);
+        });
+    </script>
+    <style>
+        .reveal-item {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+        .reveal-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</body>
+</html>

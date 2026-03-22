@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>るみなす・すいーと | VEE Archive</title>
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #add8e6;
+            --char-glow: rgba(173, 216, 230, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+
+    <nav class="cp-nav">
+        <a href="../vee_index.html" class="cp-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK TO ARCHIVE
+        </a>
+        <div class="cp-nav-gen">VEE</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-motif"></div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">VEE / 電脳世界の妖精</div>
+            <h1 class="cp-hero-name">るみなす・すいーと</h1>
+            <span class="cp-hero-en">LUMINOUS SWEET</span>
+            <div class="cp-chara-desc">
+                「こるみ✨」<br><br>
+                人間界のことを学ぶためにやってきた、電脳世界の妖精。人間を幸せにするためにお菓子を生み出せる。おっちょこちょいで天然な性格だが、VEE随一の「王道メインヒロイン」と称されるほどの純粋さと、無限の成長を見せる新人妖精（？）。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag">#電脳妖精</span>
+                <span class="cp-tag">#インターネット赤ちゃん</span>
+                <span class="cp-tag">#王道ヒロイン</span>
+                <span class="cp-tag">#腹踊り</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">IDENTIFIER</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>PROFILE</h3>
+                <p><strong>BIRTHDAY</strong>: 1月21日</p>
+                <p><strong>HEIGHT</strong>: 136cm</p>
+                <p><strong>LANG</strong>: 2進数 (10001000 cm)</p>
+                <p><strong>COLOR</strong>: 水色</p>
+            </div>
+            <div class="cp-card">
+                <h3>COMMUNITY</h3>
+                <p><strong>FAN NAME</strong>: すふれ</p>
+                <p><strong>MARK</strong>: ✨🍆🧁</p>
+                <p><strong>ILLUST</strong>: tsucaco</p>
+            </div>
+            <div class="cp-card">
+                <h3>VIBES</h3>
+                <p><strong>LIKE</strong>: 遊ぶこと、お菓子、雀魂</p>
+                <p><strong>DREAM</strong>: たくさんのお友達をつくる</p>
+                <p><strong>HABIT</strong>: ご飯を食べると声が消える</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">RECORDS & EPISODES</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>「インターネット赤ちゃん」の成長</h3>
+                <p>デビュー前はSNS禁止。VEE加入時はPC操作すらおぼつかない「インターネット赤ちゃん」だったが、周りの先輩に助けられ急成長。今や「VEEの純白メインヒロイン」として光り輝いている。</p>
+            </div>
+            <div class="cp-card">
+                <h3>新幹線ドヤ顔からのカバン紛失</h3>
+                <p>新幹線に慣れていると豪語した直後、トイレにスマホ入りのカバンを忘れて下車。「身軽ルミ〜」とドヤ顔でホームに降り立った数秒後、荷物がないことに気づき絶望したおっちょこちょいエピソード。</p>
+            </div>
+            <div class="cp-card">
+                <h3>3Dお披露目での「腹踊り」</h3>
+                <p>念願の3D配信で、同期の前で謎の「腹踊りポーズ」を披露。「リスナーは毎日これをやるように」と指示し、美少女妖精らしからぬ斜め上のファンサ（？）で会場を爆笑の渦に巻き込んだ。</p>
+            </div>
+            <div class="cp-card">
+                <h3>クレジットカードがない悲哀</h3>
+                <p>仲間の収益化配信を祝いたかったが、カードを持っておらずスパチャができなかった。最終的に諦めて自分でお祝いのたこ焼きを食べるという、妖精ゆえの不便さとマイペースさが愛おしい事件。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <div class="cp-footer-logo">VEE / VTuber Archive</div>
+        <p>© 2026 VTuber Archive Project. Data provided by official records.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal-active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.cp-card, .cp-section-title').forEach(el => {
+            el.classList.add('reveal-item');
+            observer.observe(el);
+        });
+    </script>
+    <style>
+        .reveal-item {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+        .reveal-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</body>
+</html>
