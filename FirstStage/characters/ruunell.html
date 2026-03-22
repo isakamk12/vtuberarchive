@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>ルゥ・ネル・ジーニアス | FIRST STAGE PRODUCTION | VTuber Archive</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="char-base.css" rel="stylesheet"/>
+    <style>
+        :root {
+            --char-color: #9b59b6;
+            --char-color-glow: rgba(155, 89, 182, 0.3);
+            --char-color-sub: rgba(155, 89, 182, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a class="cp-back" href="../firststage_index.html">
+            <i class="fa-solid fa-angle-left"></i> BACK TO ROSTER
+        </a>
+        <div class="cp-nav-gen">5th Generation</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-motif"></div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">
+                <i class="fa-solid fa-satellite-dish"></i> 5期生
+            </div>
+            <h1 class="cp-hero-name">ルゥ・ネル・ジーニアス</h1>
+            <span class="cp-hero-en">Ruunell Genius</span>
+            <div class="cp-chara-desc">
+                「オリオンズ・アーク」に飛び級入学した孤高の天才少女。生体アンドロイド「ぶにゅぶにゅ君」の仲間を探す研究者。きみの鼓動も受信中！＼天才降臨／
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag">#るぅねるみてる</span>
+                <span class="cp-tag">三月二十日</span>
+                <span class="cp-tag">zzzz</span>
+                <span class="cp-tag">📡👾</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>基本情報</h3>
+                <p>
+                    <strong>ユニット:</strong> そらびん (紫色担当)<br>
+                    <strong>誕生日:</strong> 3月20日<br>
+                    <strong>身長:</strong> 139cm<br>
+                    <strong>種族:</strong> 天才少女<br>
+                    <strong>好きなもの:</strong> 寝ること、おじたん救済活動
+                </p>
+            </div>
+            <div class="cp-card">
+                <h3>クリエイター</h3>
+                <p>
+                    <strong>デザイン:</strong> ゆんみ<br>
+                    <strong>モデリング:</strong> ののん。
+                </p>
+            </div>
+            <div class="cp-card">
+                <h3>活動データ</h3>
+                <p>
+                    <strong>デビュー:</strong> 2025年6月20日<br>
+                    <strong>卒業:</strong> 2025年12月31日<br>
+                    <strong>ファンネーム:</strong> zzzz（ねるズ）
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">EPISODES</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>同期との絆のステージ</h3>
+                <p>単独イベントで四季森ことりと「ハッピーラッキーチャッピー」を披露。普段の甘えた姿とは一転、深みのある表現力でファンを圧倒した。</p>
+            </div>
+            <div class="cp-card">
+                <h3>「こから始めましょう」</h3>
+                <p>リゼロの名セリフを再現しようとするも、滑舌の影響で「ここから」がどうしても言えず。「こから」になってしまうお茶目な一幕があった。</p>
+            </div>
+            <div class="cp-card">
+                <h3>駆け抜けた半年間</h3>
+                <p>体調面の不安から半年という短期間で卒業。驚きと悲しみの声が広がる中、彼女の新しい門出を祝う温かい声に包まれて活動を終えた。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <p>© 2026 VTuber Archive Project.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.cp-card, .cp-section-title').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'all 0.6s ease-out';
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>

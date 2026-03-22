@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>しぐれうい | Indie VTuber Archive</title>
+  <meta name="description" content="イラストレーター兼個人勢VTuber・しぐれうい の非公式アーカイブページ。プロフィール・活動情報・エピソードを収録。"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Zen+Kaku+Gothic+New:wght@300;400;700;900&family=Dancing+Script:wght@600&family=Orbitron:wght@500&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="shigureui.css"/>
+</head>
+<body>
+
+  <!-- 雨粒キャンバス -->
+  <canvas id="rainCanvas"></canvas>
+
+  <!-- 水彩インク背景オーブ -->
+  <div class="ink-bg">
+    <div class="ink-orb ink-orb--rose"></div>
+    <div class="ink-orb ink-orb--sky"></div>
+    <div class="ink-orb ink-orb--mint"></div>
+  </div>
+
+  <!-- ナビ -->
+  <nav class="ui-nav" id="uiNav">
+    <a href="../../indie_index.html" class="nav-back-btn" id="navBack">
+      <i class="fa-solid fa-chevron-left"></i>
+      <span>INDIE</span>
+    </a>
+    <div class="nav-logo">
+      <span class="nav-umbrella">☂</span>
+      <span class="nav-name-text">しぐれうい</span>
+    </div>
+    <div class="nav-links">
+      <a href="#profile" class="nav-link" data-section="profile">Profile</a>
+      <a href="#activity" class="nav-link" data-section="activity">Activity</a>
+      <a href="#episodes" class="nav-link" data-section="episodes">Episodes</a>
+    </div>
+  </nav>
+
+  <!-- ヒーロー -->
+  <header class="hero-section" id="heroSection">
+    <div class="hero-inner">
+      <div class="hero-badge-wrap">
+        <span class="hero-badge">INDEPENDENT</span>
+        <span class="hero-badge hero-badge--art">ILLUSTRATOR</span>
+      </div>
+      <div class="hero-name-block">
+        <div class="hero-kana">しぐれうい</div>
+        <div class="hero-roma">Shigure Ui</div>
+        <div class="hero-umbrella-deco">☂</div>
+      </div>
+      <p class="hero-tagline">イラストレーター × 個人勢VTuber<br><span>週一、1時間。趣味として心ゆくまで。</span></p>
+      <div class="hero-scroll-hint">
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+    </div>
+    <div class="watercolor-splash splash--left"></div>
+    <div class="watercolor-splash splash--right"></div>
+  </header>
+
+  <!-- ── PROFILE ── -->
+  <section class="content-section" id="profile">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-num">01</span>
+        <h2 class="section-title">Profile</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="profile-layout">
+        <!-- キャラカード -->
+        <div class="chara-card" id="charaCard">
+          <div class="chara-img-placeholder">
+            <div class="chara-placeholder-art">
+              <div class="placeholder-umbrella">☂</div>
+              <div class="placeholder-name">UI</div>
+            </div>
+          </div>
+          <div class="chara-quick-stats">
+            <div class="quick-stat">
+              <span class="qs-label">年齢</span>
+              <span class="qs-val">16歳</span>
+            </div>
+            <div class="quick-stat">
+              <span class="qs-label">誕生日</span>
+              <span class="qs-val">5月30日</span>
+            </div>
+            <div class="quick-stat">
+              <span class="qs-label">身長</span>
+              <span class="qs-val">149 cm</span>
+            </div>
+            <div class="quick-stat">
+              <span class="qs-label">出身</span>
+              <span class="qs-val">三重県四日市市</span>
+            </div>
+            <div class="quick-stat">
+              <span class="qs-label">血液型</span>
+              <span class="qs-val">A型</span>
+            </div>
+            <div class="quick-stat">
+              <span class="qs-label">ファンマーク</span>
+              <span class="qs-val">☂ (傘)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- バイオ -->
+        <div class="bio-block">
+          <div class="bio-lead">
+            <p>本職はイラストレーター。VTuber活動は<strong>あくまで「趣味」</strong>であり、企業に所属せず個人として配信を行っている。ホロライブ所属・大空スバルのキャラクターデザイン（お仕立て）も担当するなど、業界との縁は深い。</p>
+          </div>
+
+          <div class="bio-details-grid">
+            <div class="bio-detail-card">
+              <div class="bdc-icon"><i class="fa-solid fa-star"></i></div>
+              <div class="bdc-content">
+                <div class="bdc-title">特技</div>
+                <div class="bdc-text">タイピング / マリオカート / テトリス</div>
+              </div>
+            </div>
+            <div class="bio-detail-card">
+              <div class="bdc-icon"><i class="fa-solid fa-heart"></i></div>
+              <div class="bdc-content">
+                <div class="bdc-title">好きなもの</div>
+                <div class="bdc-text">女子高生（特に17歳）・メロン・パスタ・麺類・たまごボーロ・たまごパン・VTuber・ボーカロイド</div>
+              </div>
+            </div>
+            <div class="bio-detail-card">
+              <div class="bdc-icon"><i class="fa-solid fa-ban"></i></div>
+              <div class="bdc-content">
+                <div class="bdc-title">苦手なもの</div>
+                <div class="bdc-text">辛いもの・苦いもの・炭酸・睡眠不足・社会生活（朝起きられない）</div>
+              </div>
+            </div>
+            <div class="bio-detail-card">
+              <div class="bdc-icon"><i class="fa-solid fa-hashtag"></i></div>
+              <div class="bdc-content">
+                <div class="bdc-title">配信ハッシュタグ</div>
+                <div class="bdc-text">#ういの校内放送</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-note">
+            <div class="note-icon">☂</div>
+            <div class="note-text">
+              <strong>ファンネームについて</strong><br>
+              公式のファンネーム・リスナー名はあえて設定していない。初見の人が入りづらくなるような身内ノリを避けるため。リスナーが「ゴミ」と自称するのは過去配信から広まった非公式のもの。
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ACTIVITY ── -->
+  <section class="content-section content-section--alt" id="activity">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-num">02</span>
+        <h2 class="section-title">Activity</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="activity-layout">
+        <!-- タイムライン -->
+        <div class="timeline-block">
+
+          <div class="timeline-item">
+            <div class="tl-dot tl-dot--origin"></div>
+            <div class="tl-date">2018.09.16</div>
+            <div class="tl-content">
+              <div class="tl-title">YouTubeアカウント開設</div>
+              <div class="tl-desc">大空スバルの初配信にコメントするためだけにアカウントを作成。この時点ではVTuberになるつもりは全くなかった。</div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="tl-dot"></div>
+            <div class="tl-date">2018.11.02</div>
+            <div class="tl-content">
+              <div class="tl-title">VTuberとして初音声出演（PNG状態）</div>
+              <div class="tl-desc">大空スバル・舞元啓介らとのコラボ配信に、Twitter用に2時間で描いた「動かない1枚絵（PNG）」のまま参加。Live2Dモデルはまだ持っていなかった。</div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="tl-dot"></div>
+            <div class="tl-date">2019.05.18</div>
+            <div class="tl-content">
+              <div class="tl-title">自チャンネルでの初配信</div>
+              <div class="tl-desc">スバルに「母ちゃんが動いてるとこ見たい」と言われたことをきっかけにLive2Dモデルを用意し正式デビュー。マシュマロQ&A・即席キャラ制作（安堂レインボージョニージョニー誕生）などを実施。</div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="tl-dot"></div>
+            <div class="tl-date">2020.08〜10</div>
+            <div class="tl-content">
+              <div class="tl-title">画集『雨に恋う』発売・初個展「雨天決行」</div>
+              <div class="tl-desc">8月に玄光社から初の画集を出版。10月にpixiv WAEN GALLERYにて初個展を開催。絵師100人展参加やポップアップストアも重なり、イラストレーターとしての充実期。</div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="tl-dot"></div>
+            <div class="tl-date">2021.03</div>
+            <div class="tl-content">
+              <div class="tl-title">CDデビュー『SPOTLIGHT vol.1』参加</div>
+              <div class="tl-desc">VTuberコンピレーションアルバムにソロ（メランコリック）＋カグラナナとのデュエット（奏）で参加。事実上のCDデビュー。</div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="tl-dot"></div>
+            <div class="tl-date">2022.01.16</div>
+            <div class="tl-content">
+              <div class="tl-title">念願の3Dお披露目配信</div>
+              <div class="tl-desc">2020年春から水面下で進めていた3D化がついに実現。教室ステージで「神っぽいな」を歌唱・ダンス披露。3Dで大空スバルとのツーショットも実現。</div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="tl-dot"></div>
+            <div class="tl-date">2022.05</div>
+            <div class="tl-content">
+              <div class="tl-title">1stアルバム・単独リアルイベント開催</div>
+              <div class="tl-desc">5/25に『まだ雨はやまない』リリース。5/28にヒューリックホール東京にて初の単独リアルイベント『うい・おん・すてーじ −雨上がりの文化祭−』を開催。</div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="tl-dot"></div>
+            <div class="tl-date">2023.09</div>
+            <div class="tl-content">
+              <div class="tl-title">登録者100万人突破 &amp; 「ロリ神レクイエム」1億回再生</div>
+              <div class="tl-desc">国内個人VTuber初のチャンネル登録者100万人を突破（早朝突発配信中にリスナーと共に見届けた）。MV「粛聖!! ロリ神レクイエム☆」がSNSで大流行し、VTuberオリジナル楽曲史上初の1億回再生を達成。</div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="tl-dot"></div>
+            <div class="tl-date">2024.08〜10</div>
+            <div class="tl-content">
+              <div class="tl-title">5周年：2nd画集・個展・アルバム・パシフィコ横浜ライブ・200万人突破</div>
+              <div class="tl-desc">8/27に2nd画集『雨を綴る』発売・六本木ヒルズ個展「雨を手繰る」開催。9/11に2ndアルバム『fiction』リリース。10/2パシフィコ横浜国立大ホールで5周年ライブ「masterpiece」を開催し、直後に登録者200万人突破。</div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="tl-dot"></div>
+            <div class="tl-date">2025.05.30</div>
+            <div class="tl-content">
+              <div class="tl-title">音声合成ソフト「VoiSona 雨衣」発売・誕生日3Dライブ</div>
+              <div class="tl-desc">自身がキャラデザ＆ボイスを担当するVoiSona雨衣が誕生日当日に発売。同日、無料3Dライブ「インターネット・ガール・バースデー」を開催。CLIP STUDIO PAINT公式アンバサダー就任（3月）、台湾アートカフェ開催なども。</div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="tl-dot tl-dot--current"></div>
+            <div class="tl-date">2026〜</div>
+            <div class="tl-content">
+              <div class="tl-title">Kアリーナ横浜ライブ・大型企画展「Uitopia」発表</div>
+              <div class="tl-desc">2026年のKアリーナ横浜でのライブ開催と、全展示物がしぐれういになる超大型企画展「Uitopia」が発表。個人勢として前代未聞の規模への挑戦が続く。</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 配信スタイル -->
+        <div class="stream-style-block">
+          <h3 class="sub-block-title">配信スタイル</h3>
+          <div class="stream-tags">
+            <div class="stag"><i class="fa-solid fa-paintbrush"></i> お絵描き</div>
+            <div class="stag"><i class="fa-solid fa-gamepad"></i> ゲーム実況</div>
+            <div class="stag"><i class="fa-solid fa-microphone"></i> 雑談</div>
+            <div class="stag stag--accent">週1・約1時間</div>
+          </div>
+          <div class="stream-style-note">
+            <p>イラストレーターとしての活動が本業のため配信頻度は控えめ。但し2023年は本人も「ミュージックガールの年」と振り返るほど、多くの歌動画やMVを公開した。1回1回の配信に視聴者との密度の高いやり取りがある。</p>
+          </div>
+
+          <h3 class="sub-block-title" style="margin-top: 2rem;">☂ 傘マークについて</h3>
+          <div class="umbrella-note">
+            <p>推しマークは<strong>閉じた傘（☂）</strong>。「しぐれ＝時雨（雨）」に由来するが、「現在は雨が降っていないから閉じている」という設定。シンプルながらキャラクター性をよく表している。</p>
+          </div>
+
+          <h3 class="sub-block-title" style="margin-top: 2rem;">記録・実績</h3>
+          <div class="record-list">
+            <div class="record-item">
+              <span class="rec-icon">🏆</span>
+              <span class="rec-text">国内個人VTuber初 登録者<strong>100万人</strong>突破 (2023.09)</span>
+            </div>
+            <div class="record-item">
+              <span class="rec-icon">🎵</span>
+              <span class="rec-text">VTuberオリジナル楽曲初 <strong>1億回再生</strong>「ロリ神レクイエム☆」</span>
+            </div>
+            <div class="record-item">
+              <span class="rec-icon">🎤</span>
+              <span class="rec-text">登録者<strong>200万人</strong>突破 (2024.10)</span>
+            </div>
+            <div class="record-item">
+              <span class="rec-icon">🏟️</span>
+              <span class="rec-text">パシフィコ横浜 国立大ホール単独ライブ (2024.10.02)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EPISODES ── -->
+  <section class="content-section" id="episodes">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-num">03</span>
+        <h2 class="section-title">Episodes</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="episodes-grid">
+
+        <div class="ep-card" id="ep-debut">
+          <div class="ep-card-tag">VTuberデビューの真相 ─ PNG参加から動く体へ</div>
+          <div class="ep-card-body">
+            <p>もともとVTuberになるつもりは一切なく、大空スバルの初配信にコメントするだけのためにYouTubeアカウントを作ったのが始まり。2018年11月のコラボ配信には「Twitter用に2時間で描いた動かない1枚絵（PNG）」のまま参加。その後、スバルに「<strong>母ちゃんが動いてるとこ見たい</strong>」と言われたことが決定打となり、Live2Dモデルを用意してVTuberとして正式デビューすることになった。</p>
+          </div>
+        </div>
+
+        <div class="ep-card" id="ep-subaru">
+          <div class="ep-card-tag">大空スバルとの特異な関係性</div>
+          <div class="ep-card-body">
+            <p>ホロライブ所属VTuber・大空スバルのキャラクターデザイン（お仕立て）を担当。パンツスタイルの私服セーラーや「ホロライブを引っ張って進んでほしい」という願いを込めたマーチング衣装など複数の衣装を制作。デザイナーとキャラクターという立場でありながら実際にコラボ配信も行う、VTuberシーンならではの縁。スバルから「おかあ…（お母さん）」と慕われている。</p>
+          </div>
+        </div>
+
+        <div class="ep-card" id="ep-kimoi">
+          <div class="ep-card-tag">「お前らキモすぎ」事件 ─ リスナー罵倒の起源</div>
+          <div class="ep-card-body">
+            <p>活動初期のしぐれういは、仕事先で話すような「丁寧で清楚な配信」をしていた。しかしある配信の罰ゲームでロリ声を披露した際、視聴者が大いに沸き立ったことに対して思わず「<strong>お前らキモすぎ</strong>」と言い放ったことから、現在の「リスナーを罵倒する」スタイルが定着してしまったと本人が語っている。当初の清楚キャラからの変貌を示す、ファンに語り継がれるエピソード。</p>
+          </div>
+        </div>
+
+        <div class="ep-card" id="ep-rainbow">
+          <div class="ep-card-tag">安堂レインボージョニージョニーの誕生</div>
+          <div class="ep-card-body">
+            <p>初配信の企画として、視聴者と一緒にキャラクターをその場で作り上げるコーナーが行われ、「<strong>安堂レインボージョニージョニー</strong>」という謎のキャラクターが爆誕した。即興・ライブ感を大切にする配信スタイルを象徴するエピソードであり、型にはまらない配信の面白さをそのままパッケージしたような出来事として記憶されている。</p>
+          </div>
+        </div>
+
+        <div class="ep-card" id="ep-book">
+          <div class="ep-card-tag">画集『雨に恋う』・初個展「雨天決行」（2020年）</div>
+          <div class="ep-card-body">
+            <p>2020年8月に玄光社から初の画集『<strong>雨に恋う</strong>』を出版。同年10月にpixiv WAEN GALLERYにて初の個展「<strong>雨天決行</strong>」を開催。絵師100人展参加、ポップアップストアの展開も重なり、イラストレーターとしての充実期を迎えた。VTuber活動と並行してプロとして着実にキャリアを積み上げていることを示した大きな節目。</p>
+          </div>
+        </div>
+
+        <div class="ep-card" id="ep-cd">
+          <div class="ep-card-tag">CDデビュー『SPOTLIGHT vol.1』（2021年）</div>
+          <div class="ep-card-body">
+            <p>2021年3月発売のVTuberコンピレーションアルバム『<strong>SPOTLIGHT vol.1</strong>』に参加。ソロで「<strong>メランコリック</strong>」を、カグラナナとのデュエットで「<strong>奏（かなで）</strong>」を歌唱し、これが事実上のCDデビューとなった。「VTuber活動は趣味」というスタンスを保ちながら、音楽面での活動の幅を広げた転換点。</p>
+          </div>
+        </div>
+
+        <div class="ep-card" id="ep-3d">
+          <div class="ep-card-tag">念願の3Dお披露目（2022年1月16日）</div>
+          <div class="ep-card-body">
+            <p>2020年春頃から水面下で進められていた3D化プロジェクトがついに実現。学校の教室をモチーフにしたステージで「<strong>神っぽいな</strong>」の歌唱とダンスを披露。さらに自身がデザインした大空スバルを3Dでゲストとして呼び、長年の夢だった<strong>3Dでのツーショット</strong>を実現。個人勢として3Dモデルを制作するという前例の少ない挑戦を成し遂げた。</p>
+          </div>
+        </div>
+
+        <div class="ep-card" id="ep-live1">
+          <div class="ep-card-tag">初フルアルバム＆単独リアルイベント（2022年5月）</div>
+          <div class="ep-card-body">
+            <p>5月25日に初のオリジナルフルアルバム『<strong>まだ雨はやまない</strong>』をリリース。その3日後、5月28日にはヒューリックホール東京にて初の単独リアルイベント『<strong>うい・おん・すてーじ −雨上がりの文化祭−</strong>』を開催。大空スバル・角巻わため・舞元啓介らがゲストに駆け付け、文化祭モチーフの歌＆バラエティパートで大成功。</p>
+          </div>
+        </div>
+
+        <div class="ep-card" id="ep-rori">
+          <div class="ep-card-tag">「ロリ神レクイエム」社会現象・登録者100万人（2023年）</div>
+          <div class="ep-card-body">
+            <p>もともと2022年の1stアルバム収録曲だった「<strong>粛聖!! ロリ神レクイエム☆</strong>」のMVが2023年9月に公開されるとSNSで大流行。VTuberオリジナル楽曲として<strong>史上初の1億回再生</strong>を達成する社会現象となった。同時期には<strong>国内個人VTuber初のチャンネル登録者100万人</strong>を突破。快挙は早朝突発配信中にリスナーと共に見届けるドラマチックな瞬間となった。2023年は本人も「ミュージックガールの年」と振り返るほど、スバルとの「アドレナリン」、雨宮こころとの「大・天才・大好き」など多数の歌コラボも行われた。</p>
+          </div>
+        </div>
+
+        <div class="ep-card" id="ep-5th">
+          <div class="ep-card-tag">デビュー5周年 前人未到の集大成（2024年）</div>
+          <div class="ep-card-body">
+            <p>「楽しいこと全部やる！」を掲げた5周年。8月27日に2nd画集『<strong>雨を綴る</strong>』（KADOKAWA）発売＆六本木ヒルズで最大規模の個展「雨を手繰る」開催。9月11日に全曲書き下ろしの2ndアルバム『<strong>fiction</strong>』リリース。10月2日にパシフィコ横浜国立大ホールにて5周年ライブ「<strong>masterpiece</strong>」を大成功で開催し、直後に登録者<strong>200万人</strong>も突破。ライブ最後にはキャラデザ＆ボイス担当の音声合成ソフト「<strong>VoiSona 雨衣</strong>」の制作も発表された。</p>
+          </div>
+        </div>
+
+        <div class="ep-card" id="ep-2025">
+          <div class="ep-card-tag">音声合成ソフト発売・CLIP STUDIO・台湾・Kアリーナ（2025年〜）</div>
+          <div class="ep-card-body">
+            <p>3月にはペイントソフト「<strong>CLIP STUDIO PAINT</strong>」の公式アンバサダーに就任、台湾・台北にてアートカフェ「時雨羽衣 Art Cafe」を開催。5月30日の誕生日に「<strong>VoiSona 雨衣</strong>」が発売され、同日に無料3Dライブ「インターネット・ガール・バースデー」も配信。三重県とのコラボ「ういさんぽ」、渋谷TSUTAYAポップアップ、コラボカフェ「喫茶ういしぐれ」なども展開。さらに<strong>2026年Kアリーナ横浜</strong>でのライブと超大型企画展「<strong>Uitopia</strong>」の開催が発表され、個人勢として前代未聞の規模への挑戦が続く。</p>
+          </div>
+        </div>
+
+        <div class="ep-card" id="ep-fan">
+          <div class="ep-card-tag">ファンネームを作らない理由・「ゴミ」の誕生</div>
+          <div class="ep-card-body">
+            <p>多くのVTuberが独自のファンネームを持つ中、しぐれういはあえて設定しない。理由は「身内ノリで初見が入りづらくなることを避けるため」。誕生日（5月30日・ゴミゼロの日）との語呂合わせも加わり、リスナーが非公式に「ゴミ」と自称するようになった。本人もフラットに受け入れており、このオープンなスタンスが「誰でも入れる」という配信文化の根幹となっている。</p>
+          </div>
+        </div>
+
+        <div class="ep-card" id="ep-summer">
+          <div class="ep-card-tag">名物恒例企画 ─ しぐれういサマー・神様配信・マシュマロノック</div>
+          <div class="ep-card-body">
+            <p>「新衣装考えるの面倒くさい」という理由から始まった<strong>しぐれういサマー/ウィンター</strong>は、リスナーの安価コメントで衣装を決めその場でイラストを描く企画。毎回「宇宙服」「カナブン」「西船橋駅南口で歌うアイドル」など凄まじくカオスな衣装が誕生するのがお約束。正月の<strong>神様配信</strong>では絵馬のお願いを一刀両断、<strong>マシュマロノック</strong>ではリスナーのクソマロを超高速で捌く。いずれもしぐれうい配信の核をなす名物となっている。</p>
+          </div>
+        </div>
+
+        <div class="ep-card" id="ep-prowres">
+          <div class="ep-card-tag">リスナーとの「プロレス」とオタクファーストな気遣い</div>
+          <div class="ep-card-body">
+            <p>リスナーを「ゴミ」と呼び、奇抜コメントを冷たくあしらう「プロレス」的な煽り合いが名物だが、その根底にはファンへの深い信頼がある。グッズ展開が増えた今も「<strong>無理して買わなくていい</strong>」「お財布と相談して、自分が楽しむ範囲で」と、同じオタクとしての目線でリスナーの生活を真剣に気遣う発言を繰り返している。時折見せる優しい言葉がツンデレ感を際立てる。</p>
+          </div>
+        </div>
+
+        <div class="ep-card" id="ep-otaku">
+          <div class="ep-card-tag">熱狂的オタクとしての一面 ─ アイマス・MILGRAM</div>
+          <div class="ep-card-body">
+            <p>『<strong>アイドルマスター シャイニーカラーズ</strong>』『<strong>学園アイドルマスター</strong>』の熱狂的プロデューサーであり、配信でガチャを引いたり限界化して語る場面は多い。特に<strong>イラストレーターのプロ視点でシャニマスのカードイラストの構図や光の表現を熱く解説する配信</strong>はファンからも高評価。また音楽×ストーリープロジェクト『<strong>MILGRAM -ミルグラム-</strong>』にも深くハマり、配信で布教を行う。多趣味でコンテンツを深く愛するオタク気質がリスナーの共感を集めている。</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="ui-footer">
+    <div class="footer-inner">
+      <div class="footer-mark">☂</div>
+      <div class="footer-name">しぐれうい / Shigure Ui</div>
+      <div class="footer-note">このページはファンが制作した非公式アーカイブです。公式情報ではありません。</div>
+      <a href="../../indie_index.html" class="footer-back-link">← INDIE ARCHIVE へ戻る</a>
+    </div>
+  </footer>
+
+  <script src="shigureui.js"></script>
+</body>
+</html>

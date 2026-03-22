@@ -15,11 +15,11 @@ const agencies = [
             icon: "I",
             url: "IndieVtubers/indie_index.html",
             tags: ["Agency"],
-            desc: "MyHoloTVはVTuberプロジェクト。アイドル・ゲームが特徴。公式サイトで活動情報が整理されている。",
-            desc_en: "MyHoloTV is a VTuber project. Known for idol and gaming. The site organizes activity information.",
-            desc_es: "MyHoloTV is a proyecto VTuber. Destaca por idol y los juegos. El sitio organiza la información de actividades.",
-            desc_zh: "MyHoloTV是VTuber 项目。以偶像与游戏为特色。官网整理了活动信息。",
-            desc_ko: "마이홀로TV (MyHoloTV)는 VTuber 프로젝트입니다. 아이돌 및 게임이(가) 특징입니다. 공식 사이트에서 활동 정보가 정리되어 있습니다."
+            desc: "企業に属さず自らの力で活動する独立系VTuberたちのアーカイブ。クリエイター・シンガー・ゲーマーなど多彩な表現者が名を連ねる。",
+            desc_en: "An archive of independent VTubers who operate without corporate backing. Creators, singers, gamers, and more diverse voices are featured.",
+            desc_es: "Un archivo de VTubers independientes que operan sin respaldo corporativo. Creadores, cantantes, jugadores y más voces diversas aparecen aquí.",
+            desc_zh: "记录不依附于任何企业、以自身之力活动的个人势VTuber们的档案馆。创作者、歌手、游戏主播等多彩的表达者汇聚于此。",
+            desc_ko: "기업에 속하지 않고 스스로의 힘으로 활동하는 독립 버추얼 유튜버들의 아카이브입니다. 크리에이터, 싱어, 게이머 등 다양한 표현자들을 소개합니다."
         },
 
         // ── JAPAN (稼働中) ──

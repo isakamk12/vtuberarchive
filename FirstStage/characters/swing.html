@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>ローズ・スイング！ | FIRST STAGE PRODUCTION | VTuber Archive</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="char-base.css" rel="stylesheet"/>
+    <style>
+        :root {
+            --char-color: #ff4d4d;
+            --char-color-glow: rgba(255, 77, 77, 0.3);
+            --char-color-sub: rgba(255, 77, 77, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a class="cp-back" href="../firststage_index.html">
+            <i class="fa-solid fa-angle-left"></i> BACK TO ROSTER
+        </a>
+        <div class="cp-nav-gen">1st Generation</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-motif"></div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">
+                <i class="fa-solid fa-fan"></i> 1期生
+            </div>
+            <h1 class="cp-hero-name">ローズ・スイング！</h1>
+            <span class="cp-hero-en">Rose Swing!</span>
+            <div class="cp-chara-desc">
+                やきうの国「乳酸菌王国」の貴族令嬢。圧倒的な運動神経と野球への異常な愛を持つ。元気いっぱいのトークと、1期生への強い絆が魅力。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag">#ローズ・スイング！</span>
+                <span class="cp-tag">二月二十三日</span>
+                <span class="cp-tag">ビタ民</span>
+                <span class="cp-tag">野球</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>基本情報</h3>
+                <p>
+                    <strong>ユニット:</strong> 1期生<br>
+                    <strong>誕生日:</strong> 2月23日<br>
+                    <strong>身長:</strong> 153cm<br>
+                    <strong>体重:</strong> ホームベース4.5個分<br>
+                    <strong>好きなもの:</strong> 野球、牛タン、グミ
+                </p>
+            </div>
+            <div class="cp-card">
+                <h3>クリエイター</h3>
+                <p>
+                    <strong>キャラクターデザイン:</strong> Tam-U<br>
+                    <strong>Live2Dモデラー:</strong> うなぬん
+                </p>
+            </div>
+            <div class="cp-card">
+                <h3>活動データ</h3>
+                <p>
+                    <strong>デビュー:</strong> 2023年3月10日<br>
+                    <strong>卒業:</strong> 2024年8月31日<br>
+                    <strong>ファンネーム:</strong> ビタ民
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">EPISODES</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>圧倒的運動神経</h3>
+                <p>ソフトボール歴15年以上。3Dお披露目では反復横跳び75回を記録。大谷選手の球速を体感すべく世界最大のバンジーに挑戦した。</p>
+            </div>
+            <div class="cp-card">
+                <h3>『多分花粉』</h3>
+                <p>重度の花粉症。やす子さんの楽曲をカバーした『多分花粉』は彼女の代表的な持ちネタとなり、配信の名物となった。</p>
+            </div>
+            <div class="cp-card">
+                <h3>伝説の二代目バカ</h3>
+                <p>学力テストでぶっちぎりの最下位となり「初代バカ」を襲名。次回のテストでも連覇し「二代目バカ」の座を堅守した。</p>
+            </div>
+            <div class="cp-card">
+                <h3>1期生揃っての卒業</h3>
+                <p>「誰かが辞める時は全員で」という事前の約束通り、1期生4人全員で同日に卒業。強い絆を感じさせる幕引きとなった。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <p>© 2026 VTuber Archive Project.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.cp-card, .cp-section-title').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'all 0.6s ease-out';
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>

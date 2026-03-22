@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>天ノ桜紬姫 | FIRST STAGE PRODUCTION | VTuber Archive</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="char-base.css" rel="stylesheet"/>
+    <style>
+        :root {
+            --char-color: #ffb7c5;
+            --char-color-glow: rgba(255, 183, 197, 0.3);
+            --char-color-sub: rgba(255, 183, 197, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a class="cp-back" href="../firststage_index.html">
+            <i class="fa-solid fa-angle-left"></i> BACK TO ROSTER
+        </a>
+        <div class="cp-nav-gen">3rd Generation</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-motif"></div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">
+                <i class="fa-solid fa-crown"></i> 3期生
+            </div>
+            <h1 class="cp-hero-name">天ノ桜紬姫</h1>
+            <span class="cp-hero-en">Amanosakura Tsumugihime</span>
+            <div class="cp-chara-desc">
+                1000年の時を経て人間の姿になった桜の神。働きたくない怠惰なお姫ちゃま。「神通力」と呼ばれる七色の声を操り、多彩な表現でリスナーを魅了する。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag">#天ノ桜紬姫</span>
+                <span class="cp-tag">一月十二日</span>
+                <span class="cp-tag">のじゃ組</span>
+                <span class="cp-tag">🌸🐇</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>基本情報</h3>
+                <p>
+                    <strong>ユニット:</strong> 3期生<br>
+                    <strong>誕生日:</strong> 1月12日<br>
+                    <strong>年齢:</strong> 1000歳超<br>
+                    <strong>種族:</strong> 桜の神<br>
+                    <strong>好きなもの:</strong> ラーメン、牛丼、チョコ、紅茶
+                </p>
+            </div>
+            <div class="cp-card">
+                <h3>クリエイター</h3>
+                <p>
+                    <strong>キャラクターデザイン:</strong> 小原トメ太<br>
+                    <strong>お供:</strong> 佐藤、塩、胡椒、ヴィネガー
+                </p>
+            </div>
+            <div class="cp-card">
+                <h3>活動データ</h3>
+                <p>
+                    <strong>デビュー:</strong> 2024年3月16日<br>
+                    <strong>活動終了:</strong> 2025年1月31日<br>
+                    <strong>ファンの呼称:</strong> のじゃ組
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">EPISODES</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>全員ゴリラの桃太郎</h3>
+                <p>初配信で披露した『桃太郎』の読み聞かせが、諸事情により「全員ゴリラ」に急遽改変。これが伝説のスタートとなり、ゴリラネタで親しまれた。</p>
+            </div>
+            <div class="cp-card">
+                <h3>多声類の極致</h3>
+                <p>ロリからマダムまで自在に声を操る。架空言語（ガブリエル語）の楽曲カバーに挑戦するなど、歌への情熱と実力は非常に高かった。</p>
+            </div>
+            <div class="cp-card">
+                <h3>愛されすぎた姫ちゃん</h3>
+                <p>卒業前のカウントダウン凸待ちには、所属の垣根を超えて多くのライバーが来訪。人望厚く、おねだり上手な人柄で愛された。</p>
+            </div>
+            <div class="cp-card">
+                <h3>マネちゃんスタンプ</h3>
+                <p>裏方であるマネージャーまでがファンに愛され、スタンプ化される事態に。枠の温かさを象徴するエピソードである。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <p>© 2026 VTuber Archive Project.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.cp-card, .cp-section-title').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'all 0.6s ease-out';
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>

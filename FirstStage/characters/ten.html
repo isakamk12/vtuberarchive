@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>天廻てん | FIRST STAGE PRODUCTION | VTuber Archive</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="char-base.css" rel="stylesheet"/>
+    <style>
+        :root {
+            --char-color: #dcd0ff;
+            --char-color-glow: rgba(220, 208, 255, 0.3);
+            --char-color-sub: rgba(220, 208, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a class="cp-back" href="../firststage_index.html">
+            <i class="fa-solid fa-angle-left"></i> BACK TO ROSTER
+        </a>
+        <div class="cp-nav-gen">1st Generation</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-motif"></div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">
+                <i class="fa-solid fa-cloud"></i> 1期生
+            </div>
+            <h1 class="cp-hero-name">天廻てん</h1>
+            <span class="cp-hero-en">Amae Ten</span>
+            <div class="cp-chara-desc">
+                人間界へ落とされたひきこもりニートの見習い天使。元気で活発な「ウルトラニートゲーマー」。一人前の天使になって天界へ帰る日を夢見て、多様なゲームに打ち込む。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag">#天廻てん</span>
+                <span class="cp-tag">一月二十二日</span>
+                <span class="cp-tag">☁💜</span>
+                <span class="cp-tag">天使</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>基本情報</h3>
+                <p>
+                    <strong>ユニット:</strong> 1期生<br>
+                    <strong>誕生日:</strong> 1月22日<br>
+                    <strong>年齢:</strong> 天使年齢400歳<br>
+                    <strong>身長:</strong> 145cm<br>
+                    <strong>種族:</strong> 天使
+                </p>
+            </div>
+            <div class="cp-card">
+                <h3>特徴</h3>
+                <p>
+                    ひきこもりニート天使。プリンとオムライスが好物。元合唱部でギターも弾ける。注射とセロリがこの世で一番苦手。
+                </p>
+            </div>
+            <div class="cp-card">
+                <h3>活動データ</h3>
+                <p>
+                    <strong>デビュー:</strong> 2023年3月10日<br>
+                    <strong>卒業:</strong> 2024年8月31日<br>
+                    <strong>ファンマーク:</strong> ☁💜
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">EPISODES</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>「謝る声もうるさい」</h3>
+                <p>生まれつき声が大きく、学校で普通に話していただけで先生に「うるさい」と怒られる。謝っても「謝る声もうるさい」と重ねて怒られた悲しき過去。</p>
+            </div>
+            <div class="cp-card">
+                <h3>幻のZカップ</h3>
+                <p>当初「Zカップ（ぜっぺき）」を自称。誕生日配信で詳細を確認したところ一般的サイズと判明し、真逆の意味の「Zカップ」という用語が誕生した。</p>
+            </div>
+            <div class="cp-card">
+                <h3>DV彼氏OW君</h3>
+                <p>『オーバーウォッチ』への愛が深すぎて、どれほど酷い状況でもやめられない。その姿が「DV彼氏を持った彼女」に見えるとリスナーを心配させた。</p>
+            </div>
+            <div class="cp-card">
+                <h3>ウルトラニートゲーマー</h3>
+                <p>FPSからシミュレーションまで幅広くプレイ。FPSの操作技術も高く、ゲームへの情熱は天使の中でも随一であった。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <p>© 2026 VTuber Archive Project.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.cp-card, .cp-section-title').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'all 0.6s ease-out';
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>

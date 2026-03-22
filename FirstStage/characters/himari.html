@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>緋ノ宮ヒマリ | FIRST STAGE PRODUCTION | VTuber Archive</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="char-base.css" rel="stylesheet"/>
+    <style>
+        :root {
+            --char-color: #ff4500;
+            --char-color-glow: rgba(255, 69, 0, 0.3);
+            --char-color-sub: rgba(255, 69, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a class="cp-back" href="../firststage_index.html">
+            <i class="fa-solid fa-angle-left"></i> BACK TO ROSTER
+        </a>
+        <div class="cp-nav-gen">5th Generation</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-motif"></div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">
+                <i class="fa-solid fa-sun"></i> 5期生
+            </div>
+            <h1 class="cp-hero-name">緋ノ宮ヒマリ</h1>
+            <span class="cp-hero-en">Hinomiya Himari</span>
+            <div class="cp-chara-desc">
+                「ひだまり笑顔でフルチャージっ★ キラキラ照らすあなたの太陽！」。ステラバトン学科の現役生。圧倒的な身体能力と、家庭的な女子力の高さを併せ持つ。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag">#緋ノ宮ヒマリ</span>
+                <span class="cp-tag">九月二十九日</span>
+                <span class="cp-tag">ひのみゃーと</span>
+                <span class="cp-tag">❤🔥🪄</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>基本情報</h3>
+                <p>
+                    <strong>ユニット:</strong> そらびん (赤色担当)<br>
+                    <strong>誕生日:</strong> 9月29日 (招き猫の日)<br>
+                    <strong>年齢:</strong> 20歳超<br>
+                    <strong>身長:</strong> 154cm<br>
+                    <strong>特技:</strong> バトントワリング
+                </p>
+            </div>
+            <div class="cp-card">
+                <h3>特徴</h3>
+                <p>
+                    ステラバトン学科2年生。自炊派（リュウジ氏を崇拝）。相棒は猫型AI「ホムホム」。感受性が強くアニメでボロ泣きするタイプ。
+                </p>
+            </div>
+            <div class="cp-card">
+                <h3>活動データ</h3>
+                <p>
+                    <strong>デビュー:</strong> 2025年6月21日<br>
+                    <strong>デザイン:</strong> 玖条イチソ<br>
+                    <strong>ファンネーム:</strong> ひのみゃーと
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">EPISODES</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>ガンプラ歌唱RTA</h3>
+                <p>初配信で「歌いながらノーミスでガンプラを組む」試練に挑戦。見事に顔パーツを完成させ、多才な一面をリスナーに焼き付けた。</p>
+            </div>
+            <div class="cp-card">
+                <h3>リュウジ氏への絶対的信頼</h3>
+                <p>「ヒマリの体はリュウジさんでできている」と豪語するほどレシピを愛用。SNSで本人から反応をもらうほどの徹底ぶり。</p>
+            </div>
+            <div class="cp-card">
+                <h3>3Dライブの裏話</h3>
+                <p>バトンなしのダンスに大苦戦。幻のアクロバット披露計画もあったが、安全を優先し断念したというストイックな努力の裏側を明かした。</p>
+            </div>
+            <div class="cp-card">
+                <h3>猫アレルギーなのに猫下敷き</h3>
+                <p>猫アレルギーだがリアル猫を飼育。冬場は猫に顔を塞がれて起きるという、命がけ（？）の幸せな日常を過ごしている。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <p>© 2026 VTuber Archive Project.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.cp-card, .cp-section-title').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'all 0.6s ease-out';
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>

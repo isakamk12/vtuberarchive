@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>座敷乃笑ク | FIRST STAGE PRODUCTION | VTuber Archive</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="char-base.css" rel="stylesheet"/>
+    <style>
+        :root {
+            --char-color: #e67e22;
+            --char-color-glow: rgba(230, 126, 34, 0.3);
+            --char-color-sub: rgba(230, 126, 34, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a class="cp-back" href="../firststage_index.html">
+            <i class="fa-solid fa-angle-left"></i> BACK TO ROSTER
+        </a>
+        <div class="cp-nav-gen">3rd Generation</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-motif"></div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">
+                <i class="fa-solid fa-home"></i> 3期生
+            </div>
+            <h1 class="cp-hero-name">座敷乃笑ク</h1>
+            <span class="cp-hero-en">Zashikino Waraku</span>
+            <div class="cp-chara-desc">
+                インターネット座敷童。色々な人の家に入り込み、ワクワクするイタズラを届けることが大好き。辛いものが大好きだが、フィジカルは「弱々」な愛されキャラ。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag">#座敷乃笑ク</span>
+                <span class="cp-tag">五月二十九日</span>
+                <span class="cp-tag">屋根友</span>
+                <span class="cp-tag">🏠⛓</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>基本情報</h3>
+                <p>
+                    <strong>ユニット:</strong> 3期生<br>
+                    <strong>誕生日:</strong> 5月29日 (幸福の日)<br>
+                    <strong>年齢:</strong> はたち<br>
+                    <strong>身長:</strong> 165cm<br>
+                    <strong>種族:</strong> 座敷童
+                </p>
+            </div>
+            <div class="cp-card">
+                <h3>特徴</h3>
+                <p>
+                    剣道2段。激辛ペヤング好き（後でお腹を下す）。シリケンイモリを飼育中。水泳とダンスが極端に苦手。
+                </p>
+            </div>
+            <div class="cp-card">
+                <h3>活動データ</h3>
+                <p>
+                    <strong>デビュー:</strong> 2024年3月16日<br>
+                    <strong>卒業:</strong> 2025年3月31日<br>
+                    <strong>ファンネーム:</strong> 屋根友
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">EPISODES</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>体力測定「おばあちゃん」</h3>
+                <p>初配信で体力測定結果を公表。筋肉量が「おばあちゃん」レベル、体脂肪率が「和牛と同じ」など、衝撃のよわよわフィジカルが露呈した。</p>
+            </div>
+            <div class="cp-card">
+                <h3>ボール拾いで小指骨折</h3>
+                <p>バレーボール部時代、部活のメイン練習ではなく、ボール拾いの最中に小指を骨折して辞めてしまったという不運な過去を持つ。</p>
+            </div>
+            <div class="cp-card">
+                <h3>「ミツカッテモウタ~‼」</h3>
+                <p>座敷童らしく、見つかってしまった時の独特の顔文字と挨拶が定番。リスナー（屋根友）との追いかけっこのような関係を楽しんだ。</p>
+            </div>
+            <div class="cp-card">
+                <h3>愛された座敷童の旅立ち</h3>
+                <p>故郷へ帰るための卒業。ファン有志によるクラウドファンディングでの寄せ書き企画が立ち上がるなど、非常に深く愛された活動期間であった。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <p>© 2026 VTuber Archive Project.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.cp-card, .cp-section-title').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'all 0.6s ease-out';
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>

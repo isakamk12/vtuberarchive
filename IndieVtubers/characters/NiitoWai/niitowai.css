@@ -1,0 +1,197 @@
+/* ================================================================
+   niitowai.css  ─  High-spec Neet & Shorts Theme
+   ================================================================ */
+
+:root {
+  --wai-orange: #ff8c00;
+  --wai-light-orange: #ffa500;
+  --wai-navy: #1a2a6c;
+  --wai-pink: #f06292;
+  --wai-white: #ffffff;
+  --wai-gray: #f0f0f0;
+  --font-main: 'Noto Sans JP', sans-serif;
+  --font-pop: 'M PLUS Rounded 1c', sans-serif;
+  --font-title: 'Bungee', cursive;
+  --font-accent: 'Outfit', sans-serif;
+}
+
+/* --- Reset & Base --- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--wai-gray);
+  color: var(--wai-navy);
+  font-family: var(--font-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* --- Background Texture --- */
+.wai-background {
+  position: fixed; inset: 0; z-index: -2;
+  background: white;
+}
+
+.pixel-grid {
+  position: absolute; inset: 0;
+  background-image: radial-gradient(var(--wai-orange) 1px, transparent 1px);
+  background-size: 30px 30px;
+  opacity: 0.1;
+}
+
+.floating-items {
+  position: absolute; inset: 0; pointer-events: none;
+}
+
+/* --- Navigation --- */
+.wai-nav {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 75px;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 40px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  border-bottom: 4px solid var(--wai-orange);
+}
+
+.nav-back {
+  text-decoration: none; color: var(--wai-orange);
+  font-family: var(--font-title); font-size: 1.2rem;
+  display: flex; align-items: center; gap: 10px;
+}
+
+.logo-text { font-family: var(--font-title); font-size: 1.5rem; color: var(--wai-navy); letter-spacing: 0.05em; }
+
+.nav-links { display: flex; gap: 20px; }
+.nav-link {
+  text-decoration: none; color: #555;
+  font-size: 0.85rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.1em;
+  transition: 0.3s;
+}
+.nav-link:hover { color: var(--wai-orange); }
+
+/* --- Hero Section --- */
+.hero-section {
+  height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  text-align: center; position: relative;
+}
+
+.hero-label {
+  font-family: var(--font-accent); font-size: 0.8rem; color: var(--wai-orange);
+  letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 15px;
+  font-weight: 900;
+}
+
+.hero-title { margin-bottom: 30px; }
+.title-jp {
+  display: block; font-family: var(--font-pop); font-weight: 900;
+  font-size: 5.5rem; color: var(--wai-navy); line-height: 1.1;
+}
+.title-en {
+  display: block; font-family: var(--font-title);
+  font-size: 1.8rem; color: var(--wai-orange);
+  margin-top: 5px; letter-spacing: 0.15em;
+}
+
+.hero-pills { display: flex; justify-content: center; gap: 10px; margin-bottom: 30px; }
+.pill {
+  background: var(--wai-navy); color: #fff;
+  padding: 5px 15px; border-radius: 50px;
+  font-size: 0.75rem; font-weight: 700;
+}
+
+.hero-intro { font-size: 1.2rem; color: #555; font-weight: 500; }
+.hero-intro span { color: var(--wai-orange); font-weight: 900; }
+
+/* --- Content Sections --- */
+.content-section { padding: 120px 20px; }
+.container { max-width: 1100px; margin: 0 auto; }
+
+.section-title {
+  font-family: var(--font-pop); font-size: 2.8rem; color: var(--wai-navy);
+  margin-bottom: 60px; position: relative;
+}
+
+/* --- Profile Section --- */
+.profile-layout { display: grid; grid-template-columns: 400px 1fr; gap: 60px; align-items: center; }
+
+.wai-id-card {
+  background: #fff; border: 3px solid var(--wai-navy); border-radius: 15px;
+  box-shadow: 10px 10px 0 var(--wai-orange); overflow: hidden;
+}
+.id-header {
+  background: var(--wai-navy); color: #fff; text-align: center;
+  font-family: var(--font-title); padding: 10px; letter-spacing: 0.2em;
+}
+.id-body { padding: 30px; display: flex; gap: 20px; align-items: center; }
+.id-photo {
+  width: 100px; height: 100px; background: var(--wai-gray);
+  border-radius: 10px; display: flex; align-items: center; justify-content: center;
+  font-size: 3rem; color: var(--wai-orange);
+}
+.id-details p { font-size: 0.9rem; font-weight: 900; margin-bottom: 5px; }
+.id-details span { color: var(--wai-orange); width: 60px; display: inline-block; font-size: 0.7rem; }
+
+.id-footer {
+  border-top: 1px dashed #ccc; padding: 10px; text-align: center;
+  font-size: 0.7rem; font-weight: 900; color: #888;
+}
+
+.family-box { margin-top: 30px; background: #fff; padding: 30px; border-radius: 10px; border-left: 10px solid var(--wai-orange); }
+.family-box h4 { font-family: var(--font-pop); margin-bottom: 10px; color: var(--wai-navy); }
+
+/* --- Shorts Section --- */
+.shorts-title-wrap { text-align: center; margin-bottom: 60px; }
+.shorts-title-wrap h3 { font-family: var(--font-title); font-size: 2.5rem; color: var(--wai-orange); margin-bottom: 15px; }
+
+.shorts-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
+.s-card {
+  padding: 60px; border-radius: 20px; text-align: center; color: #fff;
+  transition: 0.3s; cursor: pointer;
+}
+.s-card:hover { transform: scale(1.02); }
+.s-card i { font-size: 3rem; margin-bottom: 30px; }
+.s-card h4 { font-family: var(--font-pop); font-size: 1.8rem; margin-bottom: 20px; }
+.s-card.pink { background: var(--wai-pink); }
+.s-card.orange { background: var(--wai-orange); }
+
+/* --- Skill Section --- */
+.game-flex { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.game-item {
+  background: #fff; padding: 40px; border-radius: 20px; border: 2px solid var(--wai-navy);
+}
+.g-icon {
+  font-family: var(--font-title); font-size: 3.5rem; color: var(--wai-orange); margin-bottom: 20px;
+}
+.game-item h3 { font-family: var(--font-pop); margin-bottom: 15px; }
+
+/* --- Episode Grid --- */
+.ep-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+.ep-card {
+  background: #fff; padding: 30px; border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: 0.3s;
+}
+.ep-card:hover { transform: translateY(-5px); box-shadow: 10px 10px 0 var(--wai-orange); }
+.ep-tag {
+  display: inline-block; font-size: 0.65rem; font-weight: 900;
+  text-transform: uppercase; color: var(--wai-pink); letter-spacing: 0.1em;
+  margin-bottom: 15px;
+}
+.ep-card h4 { font-family: var(--font-pop); margin-bottom: 10px; }
+.ep-card p { font-size: 0.9rem; color: #666; }
+
+/* --- Footer --- */
+.wai-footer { padding: 80px 20px; text-align: center; background: var(--wai-navy); color: #fff; }
+.footer-logo { font-family: var(--font-title); font-size: 2rem; margin-bottom: 20px; color: var(--wai-orange); }
+.footer-copy { font-size: 0.8rem; opacity: 0.6; margin-bottom: 20px; }
+.footer-links a { color: #fff; text-decoration: none; font-weight: 700; border-bottom: 2px solid var(--wai-orange); }
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+  .title-jp { font-size: 3.5rem; }
+  .profile-layout, .shorts-grid, .game-flex { grid-template-columns: 1fr; }
+}

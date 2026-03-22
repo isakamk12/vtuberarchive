@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>姫雅夜花香 | FIRST STAGE PRODUCTION | VTuber Archive</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="char-base.css" rel="stylesheet"/>
+    <style>
+        :root {
+            --char-color: #81D8D0;
+            --char-color-glow: rgba(129, 216, 208, 0.3);
+            --char-color-sub: rgba(129, 216, 208, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a class="cp-back" href="../firststage_index.html">
+            <i class="fa-solid fa-angle-left"></i> BACK TO ROSTER
+        </a>
+        <div class="cp-nav-gen">4th Generation</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-motif"></div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">
+                <i class="fa-brands fa-pagelines"></i> 4期生
+            </div>
+            <h1 class="cp-hero-name">姫雅夜花香</h1>
+            <span class="cp-hero-en">Himemiya Honoka</span>
+            <div class="cp-chara-desc">
+                秘湯旅館「王絢楼」の癒やし手。高品質なASMRで「お客様」に極上の癒やしを提供する妖狐。ホラーゲームでの激しいリアクションという意外なギャップも。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag">#姫雅夜花香</span>
+                <span class="cp-tag">四月二十日</span>
+                <span class="cp-tag">こぎつね</span>
+                <span class="cp-tag">ASMR</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>基本情報</h3>
+                <p>
+                    <strong>ユニット:</strong> 4期生 (Coloris)<br>
+                    <strong>誕生日:</strong> 4月20日<br>
+                    <strong>年齢:</strong> 201歳<br>
+                    <strong>種族:</strong> 妖狐<br>
+                    <strong>趣味:</strong> ASMR研究、生き物飼育
+                </p>
+            </div>
+            <div class="cp-card">
+                <h3>特徴</h3>
+                <p>
+                    旅館の癒やし手として、黒3Dioマイクを用いた高品質ASMRを追求。ホラーゲームは苦手でお酒の力を借りることも。
+                </p>
+            </div>
+            <div class="cp-card">
+                <h3>活動データ</h3>
+                <p>
+                    <strong>デビュー:</strong> 2024年10月12日<br>
+                    <strong>身長:</strong> 160cm<br>
+                    <strong>ファンネーム:</strong> こぎつね
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">EPISODES</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>伝説のペヤング事故</h3>
+                <p>初配信で獄激辛ペヤングに挑戦。ミュート忘れにより、裏で母親に助けを求める切実な声が全世界に配信される事態に。</p>
+            </div>
+            <div class="cp-card">
+                <h3>誤BANをネタに昇華</h3>
+                <p>デビュー2ヶ月でチャンネルがBANされるも、「ASMRメインなのに誤BANされたVtuber」と自虐ネタにして笑いに変えた。</p>
+            </div>
+            <div class="cp-card">
+                <h3>天国地獄ルーレット</h3>
+                <p>誕生日にカオスなルーレットを実施。リスナーがペットになったり完食目標「ココイチ10辛」を決定したりと盛り上がった。</p>
+            </div>
+            <div class="cp-card">
+                <h3>水槽6凸プレゼント</h3>
+                <p>アクアリウム好きが高じ、リスナーから水槽を7個もプレゼントされる奇跡が発生。深く愛されている証となった。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <p>© 2026 VTuber Archive Project.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.cp-card, .cp-section-title').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'all 0.6s ease-out';
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>

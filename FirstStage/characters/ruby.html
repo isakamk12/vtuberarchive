@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>儚依るびぃ | FIRST STAGE PRODUCTION | VTuber Archive</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="char-base.css" rel="stylesheet"/>
+    <style>
+        :root {
+            --char-color: #e74c3c;
+            --char-color-glow: rgba(231, 76, 60, 0.3);
+            --char-color-sub: rgba(231, 76, 60, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a class="cp-back" href="../firststage_index.html">
+            <i class="fa-solid fa-angle-left"></i> BACK TO ROSTER
+        </a>
+        <div class="cp-nav-gen">4th Generation</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-motif"></div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">
+                <i class="fa-solid fa-gem"></i> 4期生
+            </div>
+            <h1 class="cp-hero-name">儚依るびぃ</h1>
+            <span class="cp-hero-en">Hakanai Ruby</span>
+            <div class="cp-chara-desc">
+                150年前に作られた魔法の人形。「ご主人様の生きる理由になる!!」を目標に、一途で少し重い愛を届ける。願いを叶えるとご主人様がいなくなってしまうため、右目を眼帯で隠している。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag">#儚依るびぃ</span>
+                <span class="cp-tag">七月二十六日</span>
+                <span class="cp-tag">るびぃのご主人様</span>
+                <span class="cp-tag">人形</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>基本情報</h3>
+                <p>
+                    <strong>ユニット:</strong> 4期生 (Coloris)<br>
+                    <strong>誕生日:</strong> 7月26日<br>
+                    <strong>年齢:</strong> 151歳<br>
+                    <strong>種族:</strong> 人形<br>
+                    <strong>好きなもの:</strong> ご主人様、甘いお菓子、猫、歌
+                </p>
+            </div>
+            <div class="cp-card">
+                <h3>特徴</h3>
+                <p>
+                    魔女に作られた「幸せの人形」。他の女の子を見ているご主人様が苦手。自作のぬいぐるみ「ねこ」を抱いている。
+                </p>
+            </div>
+            <div class="cp-card">
+                <h3>活動データ</h3>
+                <p>
+                    <strong>デビュー:</strong> 2024年10月13日<br>
+                    <strong>身長:</strong> 145cm<br>
+                    <strong>ファンネーム:</strong> るびぃのご主人様
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">EPISODES</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>衝撃のお料理スキル</h3>
+                <p>野菜の皮をカッターで剥き、肉を入れ忘れて水を焦がしきるという凄まじい「煮物」を披露。独特の感性でお料理に挑む。</p>
+            </div>
+            <div class="cp-card">
+                <h3>物理テスト0点の大号泣</h3>
+                <p>数学は得意な一方、物理が極端に苦手。難問テストで0点を取り、放課後の職員室で先生を前に大号泣した過去を持つ。</p>
+            </div>
+            <div class="cp-card">
+                <h3>理不尽タクシー事件</h3>
+                <p>体調不良の帰路、道を間違えた運転手に逆ギレされ、弱りきったままポロポロと泣きながら帰宅した悲しい出来事。</p>
+            </div>
+            <div class="cp-card">
+                <h3>万引きGメンにマーク</h3>
+                <p>ドラッグストアで体調を崩ししゃがみ込んでいたところ、不審者と間違われ、万引きGメンにレジまで背後をマークされた。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <p>© 2026 VTuber Archive Project.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.cp-card, .cp-section-title').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'all 0.6s ease-out';
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>波宵かなで | FIRST STAGE PRODUCTION | VTuber Archive</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="char-base.css" rel="stylesheet"/>
+    <style>
+        :root {
+            --char-color: #3498db;
+            --char-color-glow: rgba(52, 152, 219, 0.3);
+            --char-color-sub: rgba(52, 152, 219, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a class="cp-back" href="../firststage_index.html">
+            <i class="fa-solid fa-angle-left"></i> BACK TO ROSTER
+        </a>
+        <div class="cp-nav-gen">5th Generation</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-motif"></div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">
+                <i class="fa-solid fa-water"></i> 5期生
+            </div>
+            <h1 class="cp-hero-name">波宵かなで</h1>
+            <span class="cp-hero-en">Kanade Namiyoi</span>
+            <div class="cp-chara-desc">
+                「そらびん」の青色担当。母から譲り受けたヘッドホンを大切にしている歌好きの女の子。独特の語彙力「でんでん語」と、仲間思いで豊かな感受性が魅力。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag">#波宵かなで</span>
+                <span class="cp-tag">一月十五日</span>
+                <span class="cp-tag">さざ波隊</span>
+                <span class="cp-tag">🌊🎧</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>基本情報</h3>
+                <p>
+                    <strong>ユニット:</strong> そらびん (5期生)<br>
+                    <strong>誕生日:</strong> 1月15日<br>
+                    <strong>担当カラー:</strong> 青色<br>
+                    <strong>身長:</strong> 150cm<br>
+                    <strong>好きなもの:</strong> 歌、ヘッドホン、キングダム
+                </p>
+            </div>
+            <div class="cp-card">
+                <h3>特徴</h3>
+                <p>
+                    圧倒的な歌唱力を持ち、ホラーには強気。一方で漢字や言葉には弱く、オリジナルの言葉「でんでん語」を連発する。左利き。
+                </p>
+            </div>
+            <div class="cp-card">
+                <h3>活動データ</h3>
+                <p>
+                    <strong>デビュー:</strong> 2025年6月20日<br>
+                    <strong>ハッシュタグ:</strong> #かなでる時間<br>
+                    <strong>ファンネーム:</strong> さざ波隊
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">EPISODES</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>独特の語彙力「でんでん語」</h3>
+                <p>「余裕」を「お湯」、「切磋琢磨」を「きりさぶたまん」と読み、窮地を「オリオンズアークだから！」で乗り切るのが定番。</p>
+            </div>
+            <div class="cp-card">
+                <h3>ホラゲーでの「強キャラ」</h3>
+                <p>コラボホラゲーにて、もふちゅ大佐を囮にして自分は待機するという、ホラー耐性と魅せ方を活かした強気な立ち回りを見せた。</p>
+            </div>
+            <div class="cp-card">
+                <h3>ラーメンつけ麺、ボクイケメン</h3>
+                <p>配信遅刻中に飯テロを受け、咄嗟に伝説のギャグを披露。寝起きならではの絶好調なテンションでリスナーを沸かせた。</p>
+            </div>
+            <div class="cp-card">
+                <h3>るらりとの「姉妹」論争</h3>
+                <p>恩人であるるる・らら・りりぃとは、「どちらが姉か」を巡って日々争っている。るらりちゃんにだけは譲らない意地がある。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <p>© 2026 VTuber Archive Project.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.cp-card, .cp-section-title').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'all 0.6s ease-out';
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>

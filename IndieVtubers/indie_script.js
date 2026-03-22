@@ -12,17 +12,97 @@ document.addEventListener('DOMContentLoaded', () => {
     // ============================================================
     const vtubers = [
 
-        // ──────────── クリエイター ────────────
+        // ──────────── 主要・伝説の個人勢 ────────────
         {
             name: "しぐれうい",
             sub: "Shigure Ui",
             feature: "イラストレーター発・トップランナー",
             desc: "本業がプロのイラストレーター（ホロライブ・大空スバルのキャラクターデザイン等）であり、自身のアバターを含めたビジュアルの完成度が極めて高い。自身のオリジナル楽曲がインターネットミームとして爆発的に流行するなど、クリエイティブの発信力と見せ方の質において最高峰のサンプル。",
             category: "creator",
-            color: "100, 180, 255",
-            icon: "う",
+            color: "247, 168, 196",
+            icon: "☂",
+            page: "characters/ShigureUi/shigureui.html",
             tags: ["イラストレーター", "ミーム", "ビジュアル"]
         },
+        {
+            name: "Ironmouse",
+            sub: "アイアンマウス",
+            feature: "Twitchの女王・不屈の歌姫",
+            desc: "元オペラ歌手志望の高い歌唱力と、難病CVIDを抱えながら世界一のサブスクライブ数を記録した圧倒的なエネルギーを持つ。2025年に完全独立し、チャリティ活動でも数億円規模の貢献を果たすなど、個人勢の可能性を世界規模で証明し続けている。",
+            category: "variety",
+            color: "255, 0, 255",
+            icon: "🔔",
+            page: "characters/Ironmouse/ironmouse.html",
+            tags: ["Twitch世界1位", "歌姫", "チャリティ"]
+        },
+        {
+            name: "Sameko Saba",
+            sub: "さめこさば",
+            feature: "デジタル開発者・史上最速の魚",
+            desc: "デビュー初配信で同接20万人、3日で登録者100万人を突破した伝説のサバ。プログラミングやゲーム開発（Plantlets等）を自身で行うクリエイターとしての顔を持ちつつ、独特の食生活やカオスな配信スタイルで圧倒的な支持を得ている。",
+            category: "variety",
+            color: "0, 255, 255",
+            icon: "🐟",
+            page: "characters/SamekoSaba/samekosaba.html",
+            tags: ["開発者", "最速100万", "サバ"]
+        },
+        {
+            name: "結城さくな",
+            sub: "Yuuki Sakuna",
+            feature: "一流の猫メイド・SAOへの誓い",
+            desc: "「一流の猫メイド」を目指し奮闘する、ゲームと歌が大好きな10001歳の女の子。デビュー2ヶ月で登録者100万人を突破する快挙を達成。自身の名前や活動のルーツに『ソードアート・オンライン』への深い愛を持つ、個人勢の超新星。",
+            category: "variety",
+            color: "255, 105, 180",
+            icon: "🎀",
+            page: "characters/YuukiSakuna/yuukisakuna.html",
+            tags: ["猫メイド", "SAO愛", "歌うま"]
+        },
+        {
+            name: "みけねこ",
+            sub: "Mikeneko",
+            feature: "ネットの荒波を往く感情の化身",
+            desc: "2009年のニコニコ生放送から活動を続ける、ネット史を体現するトップストリーマー。圧倒的な感情表現とリスナーとの距離感、そして法的措置を辞さない毅然とした姿勢を併せ持つ。声優「恋糸りあ」としても活動し、その才能を多方面で発揮し続けている。",
+            category: "variety",
+            color: "173, 216, 230",
+            icon: "🐈",
+            page: "characters/Mikeneko/mikeneko.html",
+            tags: ["ストリーマー", "声優", "伝説"]
+        },
+        {
+            name: "河崎翆",
+            sub: "Kawasaki Sui",
+            feature: "VTuberアナリスト・データで勝つ受付嬢",
+            desc: "「大企業の受付嬢」から専業VTuberへ転身した実力派。データ分析に基づいた業界解説や新人支援（コンサルティング）を精力的に行い、著書『VTuberの教科書』も出版。自身のプロモーションに650万円を投じるなど、ビジネス視点での活動が光る。",
+            category: "gaming",
+            color: "64, 130, 109",
+            icon: "翆",
+            page: "characters/KawasakiSui/kawasakisui.html",
+            tags: ["アナリスト", "コンサル", "GT7"]
+        },
+        {
+            name: "新兎わい",
+            sub: "Niito Wai",
+            feature: "はいすぺっくにーと・Shortsの覇者",
+            desc: "毎日投稿されるShorts動画で爆発的な人気を誇る「はいすぺっくにーと」。実家暮らしの社会不適合者を自称しながらも教員免許を所持し、物理演算パズル『Q』の大会で優勝するなど、その名の通りハイスペックな実力を持つ。",
+            category: "variety",
+            color: "255, 140, 0",
+            icon: "2⃣",
+            page: "characters/NiitoWai/niitowai.html",
+            tags: ["ニート", "Shorts", "教員免許"]
+        },
+        {
+            name: "kson",
+            sub: "ケイソン",
+            feature: "龍が如くを愛しすぎた米南部の総長",
+            desc: "アメリカ出身、日本在住のトップストリーマー。暴走族の総長アバター（2D/3D）と実写（組長）の両面で活動。『龍が如く』への深い愛が実り、公式ゲームへの出演やオーディション優勝を果たすなど、ファン活動を極めた存在。",
+            category: "gaming",
+            color: "218, 165, 32",
+            icon: "🐉",
+            page: "characters/kson/kson.html",
+            tags: ["総長", "龍が如く", "Vshojo出身"]
+        },
+
+        // ──────────── クリエイター ────────────
         {
             name: "伊東ライフ",
             sub: "Itou Life",
@@ -990,7 +1070,16 @@ document.addEventListener('DOMContentLoaded', () => {
             card.style.setProperty('--card-color', v.color);
             card.style.animationDelay = `${i * 0.03}s`;
 
+            if (v.page) {
+                card.style.cursor = 'pointer';
+                card.addEventListener('click', () => {
+                    window.location.href = v.page;
+                });
+                card.title = `${v.name} のページへ`;
+            }
+
             const tagsHTML = v.tags.map(t => `<span class="card-tag">${t}</span>`).join('');
+            const linkBadge = v.page ? `<span class="card-link-badge">📄 詳細ページあり</span>` : '';
 
             card.innerHTML = `
                 <div class="card-header">
@@ -1002,7 +1091,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
                 <div class="card-feature">${v.feature}</div>
                 <div class="card-desc">${v.desc}</div>
-                <div class="card-tags">${tagsHTML}</div>
+                <div class="card-tags">${tagsHTML}${linkBadge}</div>
             `;
 
             grid.appendChild(card);

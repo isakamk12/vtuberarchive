@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>にゃぷぷ・まりーな | FIRST STAGE PRODUCTION | VTuber Archive</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="char-base.css" rel="stylesheet"/>
+    <style>
+        :root {
+            --char-color: #00ced1;
+            --char-color-glow: rgba(0, 206, 209, 0.3);
+            --char-color-sub: rgba(0, 206, 209, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a class="cp-back" href="../firststage_index.html">
+            <i class="fa-solid fa-angle-left"></i> BACK TO ROSTER
+        </a>
+        <div class="cp-nav-gen">4th Generation</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-motif"></div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">
+                <i class="fa-solid fa-fish"></i> 4期生
+            </div>
+            <h1 class="cp-hero-name">にゃぷぷ・まりーな</h1>
+            <span class="cp-hero-en">Nyapupu Marina</span>
+            <div class="cp-chara-desc">
+                野良猫から生まれ変わったネオヒューマン。海洋レストラン「トワイライト・ジェリーフィッシュ」の猫メイド。透明感のある歌声と、お料理を爆発させるギャップが魅力。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag">#にゃぷぷまりーな</span>
+                <span class="cp-tag">五月十日</span>
+                <span class="cp-tag">にゃぷめいと</span>
+                <span class="cp-tag">🐈🪼</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>基本情報</h3>
+                <p>
+                    <strong>ユニット:</strong> 4期生 (Coloris)<br>
+                    <strong>誕生日:</strong> 5月10日<br>
+                    <strong>年齢:</strong> 3歳<br>
+                    <strong>種族:</strong> ネオヒューマン<br>
+                    <strong>好きなもの:</strong> 塩、ポン酢、納豆、生ハム
+                </p>
+            </div>
+            <div class="cp-card">
+                <h3>特徴</h3>
+                <p>
+                    遺伝子改良型。移動型海洋レストラン勤務。歌う猫メイドとして活動中。Fateのイリヤ等の声真似も得意。
+                </p>
+            </div>
+            <div class="cp-card">
+                <h3>活動データ</h3>
+                <p>
+                    <strong>デビュー:</strong> 2024年10月12日<br>
+                    <strong>身長:</strong> 154cm<br>
+                    <strong>ファンネーム:</strong> にゃぷめいと
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">EPISODES</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>お尻歩きのギネス挑戦</h3>
+                <p>特技の「お尻歩き」でギネス記録を目指す。3D配信では同僚と競争し圧勝、「K」の字を描くシュールかつ高い能力を見せた。</p>
+            </div>
+            <div class="cp-card">
+                <h3>リアルママのサプライズ</h3>
+                <p>初配信で実母のインタビューVTRを公開。3D配信でも電話出演したが、母が他事務所の先輩を娘と勘違いしていたことが発覚した。</p>
+            </div>
+            <div class="cp-card">
+                <h3>ポンマヨトースト</h3>
+                <p>ポン酢とマヨネーズを塗って焼く「ポンマヨトースト」を提言。困惑するリスナーが実際に試すと好評が相次ぎ、味覚の正しさが証明された。</p>
+            </div>
+            <div class="cp-card">
+                <h3>幼少期の鉄棒エピソード</h3>
+                <p>一人で鉄棒を回り続け吐いてしまったが、誰にも気づかれず一人で処理したという、切なくも明るい子供時代の思い出を語った。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <p>© 2026 VTuber Archive Project.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.cp-card, .cp-section-title').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'all 0.6s ease-out';
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>

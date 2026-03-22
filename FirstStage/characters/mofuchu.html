@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>もふちゅ大佐 | FIRST STAGE PRODUCTION | VTuber Archive</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="char-base.css" rel="stylesheet"/>
+    <style>
+        :root {
+            --char-color: #ffafbd;
+            --char-color-glow: rgba(255, 175, 189, 0.3);
+            --char-color-sub: rgba(255, 175, 189, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a class="cp-back" href="../firststage_index.html">
+            <i class="fa-solid fa-angle-left"></i> BACK TO ROSTER
+        </a>
+        <div class="cp-nav-gen">5th Generation</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-motif"></div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">
+                <i class="fa-solid fa-paw"></i> 5期生
+            </div>
+            <h1 class="cp-hero-name">もふちゅ大佐</h1>
+            <span class="cp-hero-en">Colonel Mofuchu / Whip Lop Strawberry</span>
+            <div class="cp-chara-desc">
+                ウサディウス王立宇宙音楽隊大佐。白くて丸っこい宇宙生物。毎朝自星で採ったイチゴを頭に乗せている。涙もろく「～いちゅ」が口癖の愛されマスコット。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag">#もふちゅ大佐</span>
+                <span class="cp-tag">十一月二十二日</span>
+                <span class="cp-tag">もふちゅ隊</span>
+                <span class="cp-tag">🍰☁</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>基本情報</h3>
+                <p>
+                    <strong>ユニット:</strong> 5期生<br>
+                    <strong>本名:</strong> ほいっぷ・ろっぷ・すとろべりー<br>
+                    <strong>誕生日:</strong> 11月22日<br>
+                    <strong>身長:</strong> 約40cm（自称5m）<br>
+                    <strong>好きなもの:</strong> スイーツ、エビ天寿司
+                </p>
+            </div>
+            <div class="cp-card">
+                <h3>特徴</h3>
+                <p>
+                    オリオンズアークの制服を身につけ、サインが驚くほど綺麗。感情が高ぶるとすぐ泣いてしまうピュアな性格。
+                </p>
+            </div>
+            <div class="cp-card">
+                <h3>活動データ</h3>
+                <p>
+                    <strong>デビュー:</strong> 2025年6月21日<br>
+                    <strong>3Dお披露目:</strong> 2026年3月14日<br>
+                    <strong>イメージカラー:</strong> ショートケーキ・ピンク
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">EPISODES</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>涙のホラゲー突破</h3>
+                <p>所属条件として運営から課されたホラゲー攻略。おばけが苦手ながら2時間泣き叫んでクリアし、見事いちプロ入りを果たした。</p>
+            </div>
+            <div class="cp-card">
+                <h3>抱っこタイム</h3>
+                <p>初配信直前、緊張で号泣。噂を聞いた5期生メンバーが駆けつけ、みんなで大佐を抱っこして励ましたことで無事乗り切れた。</p>
+            </div>
+            <div class="cp-card">
+                <h3>スパルタサイン練習</h3>
+                <p>字が綺麗な理由は、デビュー前に運営から何度もダメ出しを受け、永遠にスパルタ特訓をさせられた努力の結晶である。</p>
+            </div>
+            <div class="cp-card">
+                <h3>居眠りバレ</h3>
+                <p>24時間配信の待機時間中、こっそり居眠り。寝起きの低い声ですぐに司会やリスナーにバレてしまった。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <p>© 2026 VTuber Archive Project.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.cp-card, .cp-section-title').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'all 0.6s ease-out';
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>

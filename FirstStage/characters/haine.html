@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>朱御灰音 | FIRST STAGE PRODUCTION | VTuber Archive</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="char-base.css" rel="stylesheet"/>
+    <style>
+        :root {
+            --char-color: #FF0000;
+            --char-color-glow: rgba(255, 0, 0, 0.3);
+            --char-color-sub: rgba(255, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a class="cp-back" href="../firststage_index.html">
+            <i class="fa-solid fa-angle-left"></i> BACK TO ROSTER
+        </a>
+        <div class="cp-nav-gen">2nd Generation</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-motif"></div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">
+                <i class="fa-solid fa-fire"></i> 2期生
+            </div>
+            <h1 class="cp-hero-name">朱御灰音</h1>
+            <span class="cp-hero-en">Akemi Haine</span>
+            <div class="cp-chara-desc">
+                由緒ある家系の現代陰陽師。才能はあるが面倒くさがりでサボりがちな自堕落系。和風タロットでの占いや、霍乱するホラーゲーム配信が特徴。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag">#朱御灰音</span>
+                <span class="cp-tag">七月十日</span>
+                <span class="cp-tag">朱御霊</span>
+                <span class="cp-tag">陰陽師</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>基本情報</h3>
+                <p>
+                    <strong>ユニット:</strong> 2期生<br>
+                    <strong>誕生日:</strong> 7月10日<br>
+                    <strong>年齢:</strong> 23歳<br>
+                    <strong>身長:</strong> 172cm<br>
+                    <strong>種族:</strong> 陰陽師
+                </p>
+            </div>
+            <div class="cp-card">
+                <h3>特徴</h3>
+                <p>
+                    自堕落な性格。堅揚げポテトが好き。MARVEL作品など洋画鑑賞が趣味。戦略を立てるゲーム全般を好む。
+                </p>
+            </div>
+            <div class="cp-card">
+                <h3>活動データ</h3>
+                <p>
+                    <strong>血液型:</strong> AB型<br>
+                    <strong>イメージカラー:</strong> 赤 (#FF0000)<br>
+                    <strong>ファンネーム:</strong> 朱御霊
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">EPISODES</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>初配信で寝落ち</h3>
+                <p>「一生ぐーたらしてたい」の言葉通り、初配信冒頭で本当に寝てしまい、焦りながらスタートするという彼らしい幕開けとなった。</p>
+            </div>
+            <div class="cp-card">
+                <h3>ホラゲを「祓う」</h3>
+                <p>あやかしに会えるという理由でホラゲをプレイ。全エンド回収まで終わらないスタイルで、8時間に及ぶ長時間配信も厭わない。</p>
+            </div>
+            <div class="cp-card">
+                <h3>占いは科学</h3>
+                <p>「占いは統計学」という持論で悩みを占う。大アルカナを高確率で引き当てるなど、陰陽師としての引きの強さを見せる。</p>
+            </div>
+            <div class="cp-card">
+                <h3>文殊の知恵プレイ</h3>
+                <p>『漢字でGO』の高難易度で、リスナーの知識を借りてクリアを目指す。ファンと一体になる共闘型配信も行っている。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <p>© 2026 VTuber Archive Project.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.cp-card, .cp-section-title').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'all 0.6s ease-out';
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>幽々ゆら | FIRST STAGE PRODUCTION | VTuber Archive</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="char-base.css" rel="stylesheet"/>
+    <style>
+        :root {
+            --char-color: #afeeee;
+            --char-color-glow: rgba(175, 238, 238, 0.3);
+            --char-color-sub: rgba(175, 238, 238, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a class="cp-back" href="../firststage_index.html">
+            <i class="fa-solid fa-angle-left"></i> BACK TO ROSTER
+        </a>
+        <div class="cp-nav-gen">2nd Generation</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-motif"></div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">
+                <i class="fa-solid fa-ghost"></i> 2期生
+            </div>
+            <h1 class="cp-hero-name">幽々ゆら</h1>
+            <span class="cp-hero-en">Yu-yu-Yura</span>
+            <div class="cp-chara-desc">
+                200年の眠りから覚めた幽霊のお嬢様。人見知りだが「配信おばけ」と呼ばれるほどのスタミナを持つ。シャチをこよなく愛する、意外とアクティブな幽霊。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag">#幽々ゆら</span>
+                <span class="cp-tag">四月四日</span>
+                <span class="cp-tag">ゆらんでりあ</span>
+                <span class="cp-tag">👻💭</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>基本情報</h3>
+                <p>
+                    <strong>ユニット:</strong> 2期生<br>
+                    <strong>誕生日:</strong> 4月4日 (アンパンの日)<br>
+                    <strong>出身:</strong> 関西<br>
+                    <strong>種族:</strong> おばけ / お嬢様<br>
+                    <strong>肩乗り:</strong> ほいっぴ～ (猫のおばけ)
+                </p>
+            </div>
+            <div class="cp-card">
+                <h3>特徴</h3>
+                <p>
+                    「配信おばけ」。寝ること、食べること（クロワッサン、牡蠣）が好き。鼻がぺしゃんこな猫が好き。暑さ・寒さが苦手。
+                </p>
+            </div>
+            <div class="cp-card">
+                <h3>活動データ</h3>
+                <p>
+                    <strong>デビュー:</strong> 2023年9月16日<br>
+                    <strong>身長:</strong> 150cm<br>
+                    <strong>ファンネーム:</strong> ゆらんでりあ / もじ
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">EPISODES</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>シャチ全国制覇の旅</h3>
+                <p>名古屋港水族館でシャチに魅了され、日本国内のシャチがいる全水族館を巡りきるという、並外れた行動力を発揮した。</p>
+            </div>
+            <div class="cp-card">
+                <h3>情熱の「配信おばけ」</h3>
+                <p>ほぼ毎日配信。マイクラで8時間以上、全体企画後も休まずソロ配信を繋ぐなど、「配信おばけ」の名に恥じぬ情熱を見せる。</p>
+            </div>
+            <div class="cp-card">
+                <h3>可愛いPONエピソード</h3>
+                <p>素材を必死に集めてドロッパーを作りたかったのに間違えてディスペンサーを作るなど、愛らしくも PON なミスでリスナーを和ませる。</p>
+            </div>
+            <div class="cp-card">
+                <h3>優しいお紅茶の秘密</h3>
+                <p>「お紅茶タイム」と称して優雅に喉を潤すが、実は中身は麦茶や天然水、黒豆茶であることがほとんどという庶民派な一面。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <p>© 2026 VTuber Archive Project.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.cp-card, .cp-section-title').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'all 0.6s ease-out';
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>

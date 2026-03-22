@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>心摘ありさ | FIRST STAGE PRODUCTION | VTuber Archive</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="char-base.css" rel="stylesheet"/>
+    <style>
+        :root {
+            --char-color: #8e44ad;
+            --char-color-glow: rgba(142, 68, 173, 0.3);
+            --char-color-sub: rgba(142, 68, 173, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a class="cp-back" href="../firststage_index.html">
+            <i class="fa-solid fa-angle-left"></i> BACK TO ROSTER
+        </a>
+        <div class="cp-nav-gen">4th Generation</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-motif"></div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">
+                <i class="fa-solid fa-heart"></i> 4期生
+            </div>
+            <h1 class="cp-hero-name">心摘ありさ</h1>
+            <span class="cp-hero-en">Kozumi Arisa</span>
+            <div class="cp-chara-desc">
+                猫カフェ店員兼、ドジっ子ソウルハンター。重度のポテチ愛とオタク知識を持つ。ホヨバース作品やスプラを得意とする一方、超有名作品が未履修という極端な一面も。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag">#心摘ありさ</span>
+                <span class="cp-tag">三月七日</span>
+                <span class="cp-tag">ポテチ</span>
+                <span class="cp-tag">🕸💜</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>基本情報</h3>
+                <p>
+                    <strong>ユニット:</strong> 4期生 (Coloris)<br>
+                    <strong>誕生日:</strong> 3月7日<br>
+                    <strong>職業:</strong> 猫カフェ店員 / ソウルハンター<br>
+                    <strong>趣味:</strong> ポテチ、オタク、料理
+                </p>
+            </div>
+            <div class="cp-card">
+                <h3>特徴</h3>
+                <p>
+                    水樹奈々、田村ゆかり、深夜アニメを愛するガチオタク。チンアナゴや土偶など、独特な感性のアイテムを好む。
+                </p>
+            </div>
+            <div class="cp-card">
+                <h3>活動データ</h3>
+                <p>
+                    <strong>デビュー:</strong> 2024年10月13日<br>
+                    <strong>年齢:</strong> 17歳＋α<br>
+                    <strong>ファンネーム:</strong> カロリスナー
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">EPISODES</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>ポテチハンター失格</h3>
+                <p>毎日1袋食べるほどのポテチ愛を語るも、利きポテチ企画で大敗。「ポテチハンター」を剥奪され修業編へと突入した。</p>
+            </div>
+            <div class="cp-card">
+                <h3>誕生日の闇鍋完食</h3>
+                <p>誕生日に「シュークリーム・ヨーグルト・鴨肉」等を入れた闇鍋を実施。本人は「意外と美味しい」と平らげ、周囲を戦慄させた。</p>
+            </div>
+            <div class="cp-card">
+                <h3>理不尽な電撃VR</h3>
+                <p>VRホラー中、心拍数が低いにもかかわらず理不尽に電撃を流されるイジりを受け、エビ反りになりながら絶叫した。</p>
+            </div>
+            <div class="cp-card">
+                <h3>寿司屋で初配信</h3>
+                <p>猫カフェ店員設定だが、初配信は寿司屋の格好で登場。ロシアン寿司で自爆するなど、混沌としたスタートを切った。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <p>© 2026 VTuber Archive Project.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.cp-card, .cp-section-title').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'all 0.6s ease-out';
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>

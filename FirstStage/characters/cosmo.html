@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>爽田こすも | FIRST STAGE PRODUCTION | VTuber Archive</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="char-base.css" rel="stylesheet"/>
+    <style>
+        :root {
+            --char-color: #2ecc71;
+            --char-color-glow: rgba(46, 204, 113, 0.3);
+            --char-color-sub: rgba(46, 204, 113, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a class="cp-back" href="../firststage_index.html">
+            <i class="fa-solid fa-angle-left"></i> BACK TO ROSTER
+        </a>
+        <div class="cp-nav-gen">3rd Generation</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-motif"></div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">
+                <i class="fa-solid fa-rocket"></i> 3期生
+            </div>
+            <h1 class="cp-hero-name">爽田こすも</h1>
+            <span class="cp-hero-en">Soda Cosmo</span>
+            <div class="cp-chara-desc">
+                日本のアニメ文化に憧れて地球へやってきた宇宙人。メロンソーダと歌うことが大好き。アメリカンダイナーで働きながら、歌で全人類と友達になることを夢見ていた。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag">#爽田こすも</span>
+                <span class="cp-tag">十二月六日</span>
+                <span class="cp-tag">ちきゅうじん</span>
+                <span class="cp-tag">歌枠</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>基本情報</h3>
+                <p>
+                    <strong>ユニット:</strong> 3期生<br>
+                    <strong>誕生日:</strong> 12月6日<br>
+                    <strong>種族:</strong> 宇宙人<br>
+                    <strong>夢:</strong> 歌で全人類と友達になる<br>
+                    <strong>好きなもの:</strong> メロンソーダ、アニソン
+                </p>
+            </div>
+            <div class="cp-card">
+                <h3>特徴</h3>
+                <p>
+                    アメリカンダイナー店員。ハンバーガーは好きだがレタス抜きの徹底した野菜嫌い。アニメ文化をこよなく愛する。
+                </p>
+            </div>
+            <div class="cp-card">
+                <h3>活動データ</h3>
+                <p>
+                    <strong>デビュー:</strong> 2024年3月16日<br>
+                    <strong>卒業:</strong> 2025年3月31日<br>
+                    <strong>ファンネーム:</strong> ちきゅうじん
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">EPISODES</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>驚異の歌唱数</h3>
+                <p>わずか7ヶ月で歌枠115回、1906曲を歌唱。最終的な総歌唱曲数は3290曲に達するという、圧倒的な活動量を誇った。</p>
+            </div>
+            <div class="cp-card">
+                <h3>アニソンへの情熱</h3>
+                <p>幼少期にカラオケで褒められたことが歌を好きになった原点。配信でもアニソン縛りなど、アニメ文化への愛が溢れる企画を多数実施。</p>
+            </div>
+            <div class="cp-card">
+                <h3>徹底した野菜NG</h3>
+                <p>好物はハンバーガーだが、レタス・オニオン・ピクルスは全て抜く。コラボでも「野菜はNG」と公言するほどの野菜嫌い。</p>
+            </div>
+            <div class="cp-card">
+                <h3>バーチャル売り子</h3>
+                <p>コミケにバーチャル売り子として参加。「ファン全員をハッピーにしたい」と、リスナーとの直接交流を心から楽しんでいた。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <p>© 2026 VTuber Archive Project.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.cp-card, .cp-section-title').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'all 0.6s ease-out';
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>パーフェクト・ボンバー | FIRST STAGE PRODUCTION | VTuber Archive</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="char-base.css" rel="stylesheet"/>
+    <style>
+        :root {
+            --char-color: #16b755;
+            --char-color-glow: rgba(22, 183, 85, 0.3);
+            --char-color-sub: rgba(22, 183, 85, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a class="cp-back" href="../firststage_index.html">
+            <i class="fa-solid fa-angle-left"></i> BACK TO ROSTER
+        </a>
+        <div class="cp-nav-gen">2nd Generation</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-motif"></div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">
+                <i class="fa-solid fa-bomb"></i> 2期生
+            </div>
+            <h1 class="cp-hero-name">パーフェクト・ボンバー</h1>
+            <span class="cp-hero-en">Perfect Bomber / Jade Verdino</span>
+            <div class="cp-chara-desc">
+                ヴェルディーノ王国の元第一王子。ある事件をきっかけに城を追われ、現在は冒険者として活動中。明るいトークと、作詞作曲・MIX・編集までこなすマルチな才能を持つ。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag">#パーフェクト・ボンバー</span>
+                <span class="cp-tag">四月二十五日</span>
+                <span class="cp-tag">ボ民</span>
+                <span class="cp-tag">王族ニート</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>基本情報</h3>
+                <p>
+                    <strong>ユニット:</strong> 2期生<br>
+                    <strong>本名:</strong> ジェード・ヴェルディーノ<br>
+                    <strong>誕生日:</strong> 4月25日<br>
+                    <strong>身長:</strong> 178cm<br>
+                    <strong>好きなもの:</strong> ゲーム（FPS/TCG）、音楽、アニメ
+                </p>
+            </div>
+            <div class="cp-card">
+                <h3>特徴</h3>
+                <p>
+                    王子様ながら種族は「ただの人間」。城を追われた後は「ただのニート」を自称している。クリエイティブへの情熱が凄まじく、一切の妥協を許さない。
+                </p>
+            </div>
+            <div class="cp-card">
+                <h3>活動データ</h3>
+                <p>
+                    <strong>デビュー:</strong> 2023年9月17日<br>
+                    <strong>イメージカラー:</strong> #16b755<br>
+                    <strong>ファンネーム:</strong> ボ民
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">EPISODES</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>涙のステーキ丼</h3>
+                <p>制作に没頭し30時間不眠で作業。24時間ぶりに食べたステーキ丼の美味しさに、同期と通話しながら涙を流した。</p>
+            </div>
+            <div class="cp-card">
+                <h3>無類のカードゲーム好き</h3>
+                <p>デュエマ、MTG、ポケカなど広範なアナログゲームを愛好。雑談では専門的なガチトークでリスナーを沸かせる。</p>
+            </div>
+            <div class="cp-card">
+                <h3>ストグラ「バチ公」</h3>
+                <p>ストグラにて「バチ公」として参加。ヤンキーロールプレイを楽しみ、長時間の配信で多くの交流を深めた。</p>
+            </div>
+            <div class="cp-card">
+                <h3>男子組の絆</h3>
+                <p>同期の朱御灰音、黒崎タイガ、月皇レンらと「男子組」を結成。歌ってみたや通話など、強い絆で結ばれている。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <p>© 2026 VTuber Archive Project.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.cp-card, .cp-section-title').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'all 0.6s ease-out';
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>

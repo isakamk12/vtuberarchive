@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>月皇レン | FIRST STAGE PRODUCTION | VTuber Archive</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="char-base.css" rel="stylesheet"/>
+    <style>
+        :root {
+            --char-color: #7d5fff;
+            --char-color-glow: rgba(125, 95, 255, 0.3);
+            --char-color-sub: rgba(125, 95, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a class="cp-back" href="../firststage_index.html">
+            <i class="fa-solid fa-angle-left"></i> BACK TO ROSTER
+        </a>
+        <div class="cp-nav-gen">2nd Generation</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-motif"></div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">
+                <i class="fa-solid fa-moon"></i> 2期生
+            </div>
+            <h1 class="cp-hero-name">月皇レン</h1>
+            <span class="cp-hero-en">Tsukigami Len</span>
+            <div class="cp-chara-desc">
+                エンタメの世界で生きるミステリアスな劇場支配人。妖しげな雰囲気と蠱惑的な微笑みの裏に秘密を隠し持つ。独特の感性と気さくな性格でリスナーを魅了する。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag">#月皇レン</span>
+                <span class="cp-tag">六月八日</span>
+                <span class="cp-tag">Lunamates</span>
+                <span class="cp-tag">劇場支配人</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>基本情報</h3>
+                <p>
+                    <strong>ユニット:</strong> 2期生<br>
+                    <strong>誕生日:</strong> 6月8日<br>
+                    <strong>身長:</strong> 約178cm<br>
+                    <strong>血液型:</strong> AB型<br>
+                    <strong>好きなもの:</strong> ゲーム、芝居、ラーメン、夜景
+                </p>
+            </div>
+            <div class="cp-card">
+                <h3>クリエイター</h3>
+                <p>
+                    <strong>キャラクターデザイン:</strong> OTOCHI 先生
+                </p>
+            </div>
+            <div class="cp-card">
+                <h3>活動データ</h3>
+                <p>
+                    <strong>デビュー:</strong> 2023年9月17日<br>
+                    <strong>ファンネーム:</strong> Lunamates<br>
+                    <strong>ハッシュタグ:</strong> #月皇公演中
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">EPISODES</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>リアクション芸</h3>
+                <p>クールな支配人を自負するが、電流罰ゲームやホラーゲームでは凄まじい絶叫を披露。リスナーからは「面白お兄さん」と呼ばれる。</p>
+            </div>
+            <div class="cp-card">
+                <h3>月皇画伯</h3>
+                <p>初配信でお手製の紙芝居動画を披露した際、その独創的すぎる画力でリスナーの度肝を抜いた。以降「画伯」として親しまれる。</p>
+            </div>
+            <div class="cp-card">
+                <h3>魔法少女誤爆事件</h3>
+                <p>ASMR配信中に変身呪文を唱えてふざけていたところ、偶然ママ（OTOCHI先生）に聴かれており、配信中に激しく狼狽した。</p>
+            </div>
+            <div class="cp-card">
+                <h3>山賊リスナー</h3>
+                <p>ASMR中の無茶振りコメントに「山賊だよそれ君たち」とツッコんだことから、リスナーが一時的に「山賊」と呼ばれるようになった。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <p>© 2026 VTuber Archive Project.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.cp-card, .cp-section-title').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'all 0.6s ease-out';
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>

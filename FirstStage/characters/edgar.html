@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>エドガー・フレミング | FIRST STAGE PRODUCTION | VTuber Archive</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="char-base.css" rel="stylesheet"/>
+    <style>
+        :root {
+            --char-color: #2c3e50;
+            --char-color-glow: rgba(44, 62, 80, 0.3);
+            --char-color-sub: rgba(44, 62, 80, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="cp-bg"></div>
+    <nav class="cp-nav">
+        <a class="cp-back" href="../firststage_index.html">
+            <i class="fa-solid fa-angle-left"></i> BACK TO ROSTER
+        </a>
+        <div class="cp-nav-gen">Male Members</div>
+    </nav>
+
+    <header class="cp-hero">
+        <div class="cp-hero-motif"></div>
+        <div class="cp-hero-content">
+            <div class="cp-gen-label">
+                <i class="fa-solid fa-user-secret"></i> Spy
+            </div>
+            <h1 class="cp-hero-name">エドガー・フレミング</h1>
+            <span class="cp-hero-en">Edgar Fleming</span>
+            <div class="cp-chara-desc">
+                表向きはITセールスマン、正体はスパイ。落ち着いた低音ボイスを武器とする。ASMR配信を通じて多くのリスナーに癒やしと休息を届けた「紳士」。
+            </div>
+            <div class="cp-tags">
+                <span class="cp-tag">#EdgarFleming</span>
+                <span class="cp-tag">ASMR</span>
+                <span class="cp-tag">紳士</span>
+                <span class="cp-tag">スパイ</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">PROFILE</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>基本情報</h3>
+                <p>
+                    <strong>ユニット:</strong> 男性メンバー<br>
+                    <strong>職業:</strong> スパイ (ITセールスマン)<br>
+                    <strong>特技:</strong> 人の懐に入ること<br>
+                    <strong>以前の変装:</strong> コック、ヴァイオリニスト
+                </p>
+            </div>
+            <div class="cp-card">
+                <h3>特徴</h3>
+                <p>
+                    魅力的な低音ボイス。女性向けASMRをメインに活動。全肯定・労いの言葉で、多くの「眠れない夜」を救済してきた。
+                </p>
+            </div>
+            <div class="cp-card">
+                <h3>活動データ</h3>
+                <p>
+                    <strong>活動期間:</strong> 約1年間<br>
+                    <strong>卒業:</strong> 2025年4月30日<br>
+                    <strong>スタイル:</strong> 本格的ASMR
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-section">
+        <h2 class="cp-section-title">EPISODES</h2>
+        <div class="cp-grid">
+            <div class="cp-card">
+                <h3>全肯定のASMR</h3>
+                <p>「私は紳士ですから」と囁きながら、日々の疲れを癒やすオイルマッサージや耳かきASMRを披露。絶大な安心感を与え続けた。</p>
+            </div>
+            <div class="cp-card">
+                <h3>本格機材へのこだわり</h3>
+                <p>KU100や3Dioを使用し、極上の音響体験を追求。音だけでスパイ並みの潜入感を作り出す技術は、多くのリスナーを魅了した。</p>
+            </div>
+            <div class="cp-card">
+                <h3>惜しまれつつの卒業</h3>
+                <p>約1年という短い期間で活動を終了。引退後も、彼のアーカイブは眠りにつく前の癒やしとしてファンに愛され続けている。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cp-footer">
+        <p>© 2026 VTuber Archive Project.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.cp-card, .cp-section-title').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'all 0.6s ease-out';
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -403,8 +403,25 @@ body {
     transition: background var(--transition-base);
 }
 
+.card-link-badge {
+    margin-left: auto;
+    font-size: 0.65rem;
+    padding: 3px 10px;
+    border-radius: 8px;
+    background: rgba(var(--card-color), 0.15);
+    color: rgb(var(--card-color));
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    transition: all var(--transition-base);
+}
+
 .vtuber-card:hover .card-tag {
     background: rgba(var(--card-color), 0.12);
+}
+
+.vtuber-card:hover .card-link-badge {
+    background: rgb(var(--card-color));
+    color: #fff;
 }
 
 /* --- Empty State --- */
