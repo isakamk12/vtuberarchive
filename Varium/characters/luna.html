@@ -1,38 +1,89 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ルナ・ゴールドレイン | Varium Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #ffb6c1;
+            --char-color-alt: #ffd1dc;
+            --char-rgb: 255, 182, 193;
+        }
+    </style>
 </head>
-
 <body>
-    <header class="hero">
-        <h1 class="hero-name">LUNA</h1>
-        <p class="hero-subtitle">ルナ・ゴールドレイン</p>
+    <div class="va-bg">
+        <div class="va-bg-shape va-shape-1"></div>
+        <div class="va-bg-shape va-shape-2"></div>
+    </div>
+
+    <nav class="va-nav">
+        <a href="../varium_index.html" class="va-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO HUB
+        </a>
+    </nav>
+
+    <header class="va-hero">
+        <div class="va-hero-badge">LUNA / フクロウの錬金術師</div>
+        <h1 class="va-hero-name-jp">ルナ・ゴールドレイン</h1>
+        <p class="va-hero-name-en">Luna Goldrain</p>
+        <div class="va-hero-tags">
+            <span class="va-tag">#フクロウの錬金術師</span>
+            <span class="va-tag">#生活能力皆無</span>
+            <span class="va-tag">#喘ぎの錬金術師</span>
+            <span class="va-tag">#限界オタク</span>
+        </div>
     </header>
 
-    <main class="container">
-        <section class="section reveal">
-            <h2 class="section-title">PROFILE</h2>
-            <div class="profile-card">
-                <div class="data-grid">
-                    <div class="data-item"><span class="label">GEN</span><span class="value">4期生</span></div>
-                    <div class="data-item"><span class="label">ID</span><span class="value">VAR-04-01</span></div>
-                </div>
+    <main class="va-container">
+        <section class="va-card reveal">
+            <h2 class="va-section-title"><i class="fa-solid fa-user"></i> PROFILE</h2>
+            <div class="va-profile-grid">
+                <div class="va-profile-item"><span class="va-label">BIRTHDAY</span><span class="va-value">11月7日</span></div>
+                <div class="va-profile-item"><span class="va-label">HEIGHT</span><span class="va-value">162cm</span></div>
+                <div class="va-profile-item"><span class="va-label">BLOOD TYPE</span><span class="va-value">A型</span></div>
+                <div class="va-profile-item"><span class="va-label">FAN NAME</span><span class="va-value">アルケミス</span></div>
+            </div>
+            <div class="va-bio">
+                <p>落ち着いたお姉さんボイスが魅力のフクロウの錬金術師。動画編集やPV制作をこなすクリエイターだが、私生活では飲みかけのペットボトルにマリモを錬成してしまうほどの汚部屋住人。先輩（特に海汐もるふ）への愛が重すぎる限界オタクでもあり、マリカコラボでは「ルナメロ」という不名誉な歴史を刻んだ。</p>
             </div>
         </section>
 
-        <section class="section reveal">
-            <h2 class="section-title">STORY</h2>
-            <div class="description">
-                <p>ぶいありうむっ！4期生。黄金の雨のように降り注ぐ祝福と共に現れた。輝く未来を感じさせる明るさと、新世代らしい感性で、これからの「ぶいありうむっ！」をさらに光り輝かせていく。</p>
+        <section class="va-card reveal">
+            <h2 class="va-section-title"><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="va-episode-list">
+                <div class="va-episode">
+                    <h3 class="va-episode-title">伝説の汚部屋と「マリモ」錬成事件</h3>
+                    <p class="va-episode-text">家事能力が皆無で、放置したペットボトルの底にマリモを錬成した過去を持つ。初配信でも机の上がペットボトルで埋まっていることを告白。錬金術の才能が変な方向に発揮されている。</p>
+                </div>
+                <div class="va-episode">
+                    <h3 class="va-episode-title">初案件配信での大PONと「左手袋」</h3>
+                    <p class="va-episode-text">『Huel』の案件配信にて、緊張のあまり手袋着用ルールを忘却。慌てて探すも、なぜか左手用しか見つからず、片手だけ手袋という滑稽な姿で案件をこなす伝説のPONを披露した。</p>
+                </div>
+                <div class="va-episode">
+                    <h3 class="va-episode-title">優しさが招いたデトロイト「全滅エンド」</h3>
+                    <p class="va-episode-text">『Detroit: Become Human』の初見プレイで平和的解決を望みすぎた結果、1周目で主要キャラが全滅。ルナの優しすぎる性格が災いした悲劇としてリスナーの心に刻まれた。</p>
+                </div>
+                <div class="va-episode">
+                    <h3 class="va-episode-title">1万人耐久で授かった「喘ぎの錬金術師」の二つ名</h3>
+                    <p class="va-episode-text">深夜のテンションで高難易度アクションに挑んだ際、思わず漏れ出た声の連続によりリスナーから「喘ぎの錬金術師」と命名。錬金術師としての名誉（？）が危機に瀕した瞬間である。</p>
+                </div>
+                <div class="va-episode">
+                    <h3 class="va-episode-title">海汐もるふ先輩への重すぎる愛（限界オタク）</h3>
+                    <p class="va-episode-text">合格期間中にもるふ先輩の1on1チケットを自腹で購入。ただの一般オタクとして認知をもらい、後に同期であることを明かして本人を戦慄させたガチの限界オタクエピソード。</p>
+                </div>
             </div>
         </section>
     </main>
 
+    <footer class="va-footer">
+        <p>&copy; 2026 VTuber Archive Project. Unofficial Fan Site.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
     <script>
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -42,5 +93,4 @@
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     </script>
 </body>
-
 </html>

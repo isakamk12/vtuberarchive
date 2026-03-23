@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>有栖ノ宮くおん | ぶいじだい アーカイブ</title>
+    <link rel="stylesheet" href="char-base.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500;600&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --char-color: #ffd700;
+            --char-rgb: 255, 215, 0;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .data-item {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .label {
+            font-size: 0.75rem;
+            color: var(--char-color);
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+        .value {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--c-text);
+        }
+        .episode-card {
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-left: 4px solid var(--char-color);
+            background: rgba(var(--char-rgb), 0.03);
+            border-radius: 0 12px 12px 0;
+        }
+        .episode-title {
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            color: var(--char-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+    <a href="../buijidai_index.html" class="char-back">
+        <i class="fa-solid fa-chevron-left"></i> BACK TO AGENCY
+    </a>
+
+    <header class="char-hero">
+        <div class="char-tag">ぶいじだい 3期生</div>
+        <h1 class="char-name">有栖ノ宮くおん</h1>
+        <p class="char-read">Arisunomiya Quon</p>
+        <div class="char-tags">
+            <span class="char-tag">#有栖ノ宮くおん</span><span class="char-tag">#くおんの事件簿</span><span class="char-tag">#有栖ノ宮本部</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2>PROFILE</h2>
+            <div class="data-grid">
+                <div class="data-item"><span class="label">Birthday</span><span class="value">2月28日</span></div>
+                <div class="data-item"><span class="label">Height</span><span class="value">168cm</span></div>
+                <div class="data-item"><span class="label">Blood Type</span><span class="value">不明</span></div>
+                <div class="data-item"><span class="label">Origin</span><span class="value">財閥</span></div>
+                <div class="data-item"><span class="label">Fan Name</span><span class="value">ワトソンくん</span></div>
+            </div>
+            <p><strong>「難攻不落も裸足で逃げ出す大天才、有栖ノ宮くおんである！」</strong></p>
+            <p>財閥のお嬢様ながら無職ニートを自称する探偵コスプレイヤー。ガチのプロ占い師としての顔を持ち、的中率の高さで驚愕される。お母さんが大好きすぎる「スーパーサイコマザコンえげちゃん」としても有名。</p>
+        </section>
+
+        <section class="char-section reveal">
+            <h2>EPISODES</h2>
+            <div class="episode-card"><h3 class="episode-title">殺害予告誤爆事件</h3><p class="episode-text">運営プロデューサーに冗談で送った「殺害予告」を事務所の総合サーバーに誤爆。斜め上のメンタルで運営ともバチバチにやり合う問題児っぷりを発揮。</p></div><div class="episode-card"><h3 class="episode-title">アンチコメントに大歓喜</h3><p class="episode-text">初のアンチコメントに落ち込むどころか大喜び。デコって晒そうとするも、事前にYouTubeに通報してしまったためコメントが消滅し悔しがる強靭なメンタル。</p></div><div class="episode-card"><h3 class="episode-title">ガチすぎる占い能力</h3><p class="episode-text">実力派のプロ占い師。コラボ相手が言っていない予定や悩みをタロットで的確に言い当て、「怖い」と評されるほど。占い枠として唯一無二の地位を確立。</p></div><div class="episode-card"><h3 class="episode-title">初配信で「死にかけの悟空」</h3><p class="episode-text">記念すべき初配信で、何を思ったのか「死にかけの悟空」のモノマネを披露。シュールすぎる幕開けでリスナーの度肝を抜いた。</p></div><div class="episode-card"><h3 class="episode-title">「くおんちゃん大好き砲」</h3><p class="episode-text">リスナーからの愛が非常に重く、オレンジのハートで画面が埋め尽くされるのが恒例。ファンとのイチャイチャプロレスが彼女の配信の名物となっている。</p></div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        © 2026 VTuber Archive Project - ぶいじだい.
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

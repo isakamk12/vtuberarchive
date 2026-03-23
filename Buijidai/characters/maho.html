@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>羽壱まほ | ぶいじだい アーカイブ</title>
+    <link rel="stylesheet" href="char-base.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500;600&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --char-color: #ff8c00;
+            --char-rgb: 255, 140, 0;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .data-item {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .label {
+            font-size: 0.75rem;
+            color: var(--char-color);
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+        .value {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--c-text);
+        }
+        .episode-card {
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-left: 4px solid var(--char-color);
+            background: rgba(var(--char-rgb), 0.03);
+            border-radius: 0 12px 12px 0;
+        }
+        .episode-title {
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            color: var(--char-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+    <a href="../buijidai_index.html" class="char-back">
+        <i class="fa-solid fa-chevron-left"></i> BACK TO AGENCY
+    </a>
+
+    <header class="char-hero">
+        <div class="char-tag">ぶいじだい 1期生</div>
+        <h1 class="char-name">羽壱まほ</h1>
+        <p class="char-read">Uichi Maho</p>
+        <div class="char-tags">
+            <span class="char-tag">#羽壱まほ</span><span class="char-tag">#ういちなまほーそー</span><span class="char-tag">#ういちらすと</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2>PROFILE</h2>
+            <div class="data-grid">
+                <div class="data-item"><span class="label">Birthday</span><span class="value">6月28日</span></div>
+                <div class="data-item"><span class="label">Height</span><span class="value">156cm</span></div>
+                <div class="data-item"><span class="label">Blood Type</span><span class="value">不明</span></div>
+                <div class="data-item"><span class="label">Origin</span><span class="value">魔導学校</span></div>
+                <div class="data-item"><span class="label">Fan Name</span><span class="value">ういちのだち</span></div>
+            </div>
+            <p><strong>「魔導学校のタフな女の子、羽壱まほだよ！おもしろ図鑑、一緒に作ろうね！」</strong></p>
+            <p>魔導学校に通う「おもしろ図鑑」を作りたい魔法少女。圧倒的なトーク力と、映像制作から3Dモデリングまで自身でこなす超絶クリエイター。リスナーを「ダチ」と呼び、アットホームなプロレスを繰り広げる。</p>
+        </section>
+
+        <section class="char-section reveal">
+            <h2>EPISODES</h2>
+            <div class="episode-card"><h3 class="episode-title">振り返らない振り返り配信</h3><p class="episode-text">初配信の翌日に振り返り配信を行うも、脱線し続けて4時間半喋り倒し、結局一切振り返らずに終わるという驚異のトーク力を見せつけた。</p></div><div class="episode-card"><h3 class="episode-title">海竜の咆哮（くしゃみ）</h3><p class="episode-text">弱点として公言しているくしゃみがとてつもなくデカく、リスナーからは「海竜の咆哮」「スマホが振動する」と恐れられつつも愛されている。</p></div><div class="episode-card"><h3 class="episode-title">おなら疑惑をネタに昇華</h3><p class="episode-text">ホラーゲームで驚いた拍子に出た「音」をおならと疑われるも、後に自らネタにする強心臓。リスナーとの高度なプロレス技術が光る。</p></div><div class="episode-card"><h3 class="episode-title">1時間で100%達成のCF</h3><p class="episode-text">3D化クラウドファンディングにて、開始わずか1時間で目標の250万円を達成。最終的に500万円以上を集め、リスナーへの熱い感謝を涙ながらに語った。</p></div><div class="episode-card"><h3 class="episode-title">致命的にお裁縫が苦手</h3><p class="episode-text">多才な彼女だが、家庭科の授業でハーフパンツ作りが終わらず一人だけ居残り。不格好なパンツは「芸術」としてリスナーの語り草になっている。</p></div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        © 2026 VTuber Archive Project - ぶいじだい.
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

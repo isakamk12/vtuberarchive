@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>綺音れむ | Varium Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #e0b0ff;
+            --char-color-alt: #f0e0ff;
+            --char-rgb: 224, 176, 255;
+        }
+    </style>
+</head>
+<body>
+    <div class="va-bg">
+        <div class="va-bg-shape va-shape-1"></div>
+        <div class="va-bg-shape va-shape-2"></div>
+    </div>
+
+    <nav class="va-nav">
+        <a href="../varium_index.html" class="va-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO HUB
+        </a>
+    </nav>
+
+    <header class="va-hero">
+        <div class="va-hero-badge">REMU / 人間界へ脱走した魔王様</div>
+        <h1 class="va-hero-name-jp">綺音れむ</h1>
+        <p class="va-hero-name-en">Anon Remu</p>
+        <div class="va-hero-tags">
+            <span class="va-tag">#No1ｴｹﾁｪﾝ</span>
+            <span class="va-tag">#ATフィールド</span>
+            <span class="va-tag">#脳筋魔王</span>
+            <span class="va-tag">#鼓膜破壊の悲鳴</span>
+        </div>
+    </header>
+
+    <main class="va-container">
+        <section class="va-card reveal">
+            <h2 class="va-section-title"><i class="fa-solid fa-user"></i> PROFILE</h2>
+            <div class="va-profile-grid">
+                <div class="va-profile-item"><span class="va-label">BIRTHDAY</span><span class="va-value">9月9日</span></div>
+                <div class="va-profile-item"><span class="va-label">HEIGHT</span><span class="va-value">145cm</span></div>
+                <div class="va-profile-item"><span class="va-label">BLOOD TYPE</span><span class="va-value">-</span></div>
+                <div class="va-profile-item"><span class="va-label">FAN NAME</span><span class="va-value">れむの従者</span></div>
+            </div>
+            <div class="va-bio">
+                <p>人間と仲良くなるために魔界から脱走してきた「とってもえらい魔王様」。可愛いｴｹﾁｪﾝボイスゆえに周囲から赤ちゃん扱いされるが、本人は断固否定。PCメモリ増設に5時間泣きながら戦うポンコツぶりや、ホラーでの鼓膜破壊レベルの悲鳴、そして推しへの限界化など、ギャップだらけの愛すべき魔王。</p>
+            </div>
+        </section>
+
+        <section class="va-card reveal">
+            <h2 class="va-section-title"><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="va-episode-list">
+                <div class="va-episode">
+                    <h3 class="va-episode-title">永遠の「ｴｹﾁｪﾝ（赤ちゃん）」枠扱いへの抵抗</h3>
+                    <p class="va-episode-text">「赤ちゃんではありません！」と必死に魔王の威厳を保とうとするも、漏れ出るｴｹﾁｪﾝボイスにより不名誉なNo.1ｴｹﾁｪﾝの称号を獲得。言い訳すればするほど可愛がられる運命。</p>
+                </div>
+                <div class="va-episode">
+                    <h3 class="va-episode-title">角は禁忌だが…中身は「物理」の脳筋</h3>
+                    <p class="va-episode-text">角に触れると「世界が終わる」と警告するが、本人はマイクアームを頭突きで破壊しガムテープで修理するほど物理的に強靭。魔力よりも筋肉で解決する系の魔王（？）</p>
+                </div>
+                <div class="va-episode">
+                    <h3 class="va-episode-title">PCメモリ増設「5時間の泣き濡れる死闘」</h3>
+                    <p class="va-episode-text">メモリの挿し方が分からず、泣きながら5時間以上格闘。物理的に壊れそうな中、魔王の威厳を投げ打って戦い続けた。ケーキを爆散させる等、料理分野でも爆発的な才能を発揮。</p>
+                </div>
+                <div class="va-episode">
+                    <h3 class="va-episode-title">限界突破の「鼓膜破壊悲鳴」と特技の迷子</h3>
+                    <p class="va-episode-text">ホラゲー実慶では尋常ではない悲鳴を上げ、リスナーの鼓膜を物理的に蹂躙する。また、引越し直後に自宅へ帰れなくなる等、リアル・ゲーム問わず迷子になる特技を持つ。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="va-footer">
+        <p>&copy; 2026 VTuber Archive Project. Unofficial Fan Site.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

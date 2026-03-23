@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蝶咲りりは | ぶいじだい アーカイブ</title>
+    <link rel="stylesheet" href="char-base.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500;600&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --char-color: #00cccc;
+            --char-rgb: 0, 204, 204;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .data-item {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .label {
+            font-size: 0.75rem;
+            color: var(--char-color);
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+        .value {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--c-text);
+        }
+        .episode-card {
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-left: 4px solid var(--char-color);
+            background: rgba(var(--char-rgb), 0.03);
+            border-radius: 0 12px 12px 0;
+        }
+        .episode-title {
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            color: var(--char-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+    <a href="../buijidai_index.html" class="char-back">
+        <i class="fa-solid fa-chevron-left"></i> BACK TO AGENCY
+    </a>
+
+    <header class="char-hero">
+        <div class="char-tag">ぶいじだい 2期生</div>
+        <h1 class="char-name">蝶咲りりは</h1>
+        <p class="char-read">Chosaki Ririha</p>
+        <div class="char-tags">
+            <span class="char-tag">#りりはらいぶ</span><span class="char-tag">#りりはいらいと</span><span class="char-tag">#りりはーと</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2>PROFILE</h2>
+            <div class="data-grid">
+                <div class="data-item"><span class="label">Birthday</span><span class="value">5月21日</span></div>
+                <div class="data-item"><span class="label">Height</span><span class="value">159cm</span></div>
+                <div class="data-item"><span class="label">Blood Type</span><span class="value">不明</span></div>
+                <div class="data-item"><span class="label">Origin</span><span class="value">諜報機関</span></div>
+                <div class="data-item"><span class="label">Fan Name</span><span class="value">蝶報員</span></div>
+            </div>
+            <p><strong>「天才エージェントの蝶咲りりはだよ。お前らのこと、大寿司！」</strong></p>
+            <p>諜報機関所属の「天才エージェント」。クールビューティーな見た目とは裏腹に、漢字が苦手でポンコツな一面を持つ。「大寿司（大好き）」が合言葉。独特の語彙とリスナーとのチクチクしたプロレスが人気。</p>
+        </section>
+
+        <section class="char-section reveal">
+            <h2>EPISODES</h2>
+            <div class="episode-card"><h3 class="episode-title">概要欄を「ようがいらん」と誤読</h3><p class="episode-text">漢字が致命的に苦手。概要欄や常用漢字の読み間違いが多く、リスナーから「おこちゃま」「小学5年生」といじられるのが日常茶飯事。</p></div><div class="episode-card"><h3 class="episode-title">初配信の「猫かぶり」に悶絶</h3><p class="episode-text">初配信ではクールな大人を演じていたが、後の振り返り配信で「顔が熱い」「恥ずかしすぎる」と悶絶。本来の賑やかな性格が露呈する結果に。</p></div><div class="episode-card"><h3 class="episode-title">「ピーピー」鳴くホラゲー配信</h3><p class="episode-text">ホラーゲームで「ピー！」という高音の鳥のような悲鳴を上げ続ける。本人は無意識だったが、アーカイブを見て自らの鳴き声に驚愕した。</p></div><div class="episode-card"><h3 class="episode-title">「大寿司」という愛情表現</h3><p class="episode-text">リスナーに「大好き」と言うのが照れくさく、「お前らのこと寿司だよ」「大寿司」と表現。不器用な彼女なりのファンへの愛情表現である。</p></div><div class="episode-card"><h3 class="episode-title">焼肉のタレマヨご飯生活</h3><p class="episode-text">自炊が面倒で、白ご飯に焼肉のタレとマヨネーズをかけただけの食事を1日3食続けるなど、私生活の不健康っぷりでリスナーを心配（？）させた。</p></div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        © 2026 VTuber Archive Project - ぶいじだい.
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

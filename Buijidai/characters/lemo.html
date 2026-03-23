@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黄白レモ | ぶいじだい アーカイブ</title>
+    <link rel="stylesheet" href="char-base.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500;600&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --char-color: #00cccc;
+            --char-rgb: 0, 204, 204;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .data-item {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .label {
+            font-size: 0.75rem;
+            color: var(--char-color);
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+        .value {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--c-text);
+        }
+        .episode-card {
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-left: 4px solid var(--char-color);
+            background: rgba(var(--char-rgb), 0.03);
+            border-radius: 0 12px 12px 0;
+        }
+        .episode-title {
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            color: var(--char-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+    <a href="../buijidai_index.html" class="char-back">
+        <i class="fa-solid fa-chevron-left"></i> BACK TO AGENCY
+    </a>
+
+    <header class="char-hero">
+        <div class="char-tag">ぶいじだい 2期生</div>
+        <h1 class="char-name">黄白レモ</h1>
+        <p class="char-read">Kishiro Lemo</p>
+        <div class="char-tags">
+            <span class="char-tag">#黄白レモ</span><span class="char-tag">#おしゃべり最強</span><span class="char-tag">#黄白カンパニー</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2>PROFILE</h2>
+            <div class="data-grid">
+                <div class="data-item"><span class="label">Birthday</span><span class="value">11月12日</span></div>
+                <div class="data-item"><span class="label">Height</span><span class="value">157cm</span></div>
+                <div class="data-item"><span class="label">Blood Type</span><span class="value">不明</span></div>
+                <div class="data-item"><span class="label">Origin</span><span class="value">日本（大阪のおばちゃんテンション）</span></div>
+                <div class="data-item"><span class="label">Fan Name</span><span class="value">パ員さん</span></div>
+            </div>
+            <p><strong>「おしゃべり最強VTuber！フレッシュレモンなあなたのビタミン✨」</strong></p>
+            <p>「おしゃべり最強」を自称する2期生。青春に憧れる普通の女の子（自称946歳）。圧倒的なトーク力と、映像演出やデザインを自ら手掛ける高いクリエイティブ能力を併せ持つ。3D化を目指しアイドル修行中。</p>
+        </section>
+
+        <section class="char-section reveal">
+            <h2>EPISODES</h2>
+            <div class="episode-card"><h3 class="episode-title">宿敵「バナナ」との因縁</h3><p class="episode-text">マリオカート配信でバナナの皮にひたすら引っかかり続けたことが原因でバナナが嫌いに。リスナーからバナナの皮を投げられるプロレスが恒例。</p></div><div class="episode-card"><h3 class="episode-title">おしゃべり最強の無尽蔵トーク</h3><p class="episode-text">「黙っていると死んじゃう」と語るほどのトーク力。6時間半の耐久配信でも一人で喋り続け、「口と声を奪ったら何も残らない」と豪語する。</p></div><div class="episode-card"><h3 class="episode-title">絶叫が「オンドゥル語」に</h3><p class="episode-text">ホラーゲームが極端に苦手で、恐怖のあまり「オンドゥル語」のような謎の言語で絶叫。その悲鳴の凄まじさはリスナーから「鳥肌が立つ」と言われるほど。</p></div><div class="episode-card"><h3 class="episode-title">愛すべきポンコツ料理</h3><p class="episode-text">クッキングシミュレーターで食材をすべて床に落として調理するなど、数々の伝説を残す。ポンコツだが真面目で努力家な一面が仲間からも絶賛されている。</p></div><div class="episode-card"><h3 class="episode-title">自称946歳のカモフラージュ</h3><p class="episode-text">年齢設定は語呂合わせ。「大阪のおばちゃんが100歳やからと言うのと同じテンション」であり、中身は等身大の女の子である。</p></div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        © 2026 VTuber Archive Project - ぶいじだい.
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

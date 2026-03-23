@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>紫電ライム | Varium Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #a8e063;
+            --char-color-alt: #c3e88d;
+            --char-rgb: 168, 224, 99;
+        }
+    </style>
+</head>
+<body>
+    <div class="va-bg">
+        <div class="va-bg-shape va-shape-1"></div>
+        <div class="va-bg-shape va-shape-2"></div>
+    </div>
+
+    <nav class="va-nav">
+        <a href="../varium_index.html" class="va-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO HUB
+        </a>
+    </nav>
+
+    <header class="va-hero">
+        <div class="va-hero-badge">LIME / 雷獣（妖怪音楽学校）</div>
+        <h1 class="va-hero-name-jp">紫電ライム</h1>
+        <p class="va-hero-name-en">Siden Lime</p>
+        <div class="va-hero-tags">
+            <span class="va-tag">#自称ボケの天才</span>
+            <span class="va-tag">#音大の声楽科出身</span>
+            <span class="va-tag">#チーニ病</span>
+            <span class="va-tag">#電源要らずのエコ妖怪</span>
+        </div>
+    </header>
+
+    <main class="va-container">
+        <section class="va-card reveal">
+            <h2 class="va-section-title"><i class="fa-solid fa-user"></i> PROFILE</h2>
+            <div class="va-profile-grid">
+                <div class="va-profile-item"><span class="va-label">BIRTHDAY</span><span class="va-value">8月8日</span></div>
+                <div class="va-profile-item"><span class="va-label">HEIGHT</span><span class="va-value">161cm</span></div>
+                <div class="va-profile-item"><span class="va-label">BLOOD TYPE</span><span class="va-value">AB型</span></div>
+                <div class="va-profile-item"><span class="va-label">FAN NAME</span><span class="va-value">酸味ん</span></div>
+            </div>
+            <div class="va-bio">
+                <p>妖怪音楽学校に通う雷獣の女の子。音大の声楽科出身という確かな実力を持ち、痺れるような高音の歌声で世界を轟かせることを夢見ている。一方で、自称「ボケの天才」として爆笑エネルギーで自家発電するエコな一面も。独特な語彙力とハイテンションなトークで、リスナー（酸味ん）を常に感電させている。</p>
+            </div>
+        </section>
+
+        <section class="va-card reveal">
+            <h2 class="va-section-title"><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="va-episode-list">
+                <div class="va-episode">
+                    <h3 class="va-episode-title">音大出身のガチ歌唱と「武道館」への夢</h3>
+                    <p class="va-episode-text">声楽科で培った圧倒的な歌唱力が最大の武器。特に高音域の伸びと表現力は一級品。いつか武道館でギターボーカルとしてライブをすることを目標に、日々魂を込めて歌い続けている。</p>
+                </div>
+                <div class="va-episode">
+                    <h3 class="va-episode-title">重度の「チーニ病」とリスナーへの伝染</h3>
+                    <p class="va-episode-text">語尾に「チーニ」をつけて喋る独特のスタイル。一度ハマると抜け出せない中毒性があり、リスナーの間でも感染者が続出。もはや彼女のアイデンティティの一部となっている。</p>
+                </div>
+                <div class="va-episode">
+                    <h3 class="va-episode-title">自家発電エコ妖怪のハイテンション配信</h3>
+                    <p class="va-episode-text">人の爆笑をエネルギーに変えるため、常にフルスロットルでボケを連発。電源不要というエコな設定を活かし（？）、深夜早朝問わずエネルギッシュな配信を届けている。</p>
+                </div>
+                <div class="va-episode">
+                    <h3 class="va-episode-title">「雷獣」らしからぬ意外な乙女心</h3>
+                    <p class="va-episode-text">荒々しい雷獣のイメージとは裏腹に、繊細で乙女チックな一面を見せることも。リスナーへの感謝を語る際や、可愛いものに触れた時のリアクションに、彼女の素の魅力が詰まっている。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="va-footer">
+        <p>&copy; 2026 VTuber Archive Project. Unofficial Fan Site.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

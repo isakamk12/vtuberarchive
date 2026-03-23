@@ -1,38 +1,85 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>セレナーデ・オックスブラッド | Varium Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #ffb7b2;
+            --char-color-alt: #ffcfcc;
+            --char-rgb: 255, 183, 178;
+        }
+    </style>
 </head>
-
 <body>
-    <header class="hero">
-        <h1 class="hero-name">SERENADE</h1>
-        <p class="hero-subtitle">セレナーデ・オックスブラッド</p>
+    <div class="va-bg">
+        <div class="va-bg-shape va-shape-1"></div>
+        <div class="va-bg-shape va-shape-2"></div>
+    </div>
+
+    <nav class="va-nav">
+        <a href="../varium_index.html" class="va-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO HUB
+        </a>
+    </nav>
+
+    <header class="va-hero">
+        <div class="va-hero-badge">SERENADE / ミノタウロス</div>
+        <h1 class="va-hero-name-jp">セレナーデ・オックスブラッド</h1>
+        <p class="va-hero-name-en">Serenade Oxblood</p>
+        <div class="va-hero-tags">
+            <span class="va-tag">#弾き語りミノタウロス</span>
+            <span class="va-tag">#むぎちゃん</span>
+            <span class="va-tag">#横スクロール勢</span>
+            <span class="va-tag">#焼肉大好き</span>
+        </div>
     </header>
 
-    <main class="container">
-        <section class="section reveal">
-            <h2 class="section-title">PROFILE</h2>
-            <div class="profile-card">
-                <div class="data-grid">
-                    <div class="data-item"><span class="label">GEN</span><span class="value">2期生</span></div>
-                    <div class="data-item"><span class="label">ID</span><span class="value">VAR-02-01</span></div>
-                </div>
+    <main class="va-container">
+        <section class="va-card reveal">
+            <h2 class="va-section-title"><i class="fa-solid fa-user"></i> PROFILE</h2>
+            <div class="va-profile-grid">
+                <div class="va-profile-item"><span class="va-label">BIRTHDAY</span><span class="va-value">11月29日</span></div>
+                <div class="va-profile-item"><span class="va-label">HEIGHT</span><span class="va-value">166cm</span></div>
+                <div class="va-profile-item"><span class="va-label">BLOOD TYPE</span><span class="va-value">-</span></div>
+                <div class="va-profile-item"><span class="va-label">FAN NAME</span><span class="va-value">うしさん</span></div>
+            </div>
+            <div class="va-bio">
+                <p>かわいいものが大好きなミノタウロスの女の子。相棒のギター「むぎちゃん」と共に奏でる弾き語りは、聴く者を優しく包み込む。横スクロールアクションゲームが得意という玄人好みな一面も。属性はミノタウロスだが、一番の好物は焼肉（特に牛タン）というシュールな食性を持つ。</p>
             </div>
         </section>
 
-        <section class="section reveal">
-            <h2 class="section-title">STORY</h2>
-            <div class="description">
-                <p>ぶいありうむっ！2期生。高貴な血筋を感じさせる優雅な立ち振る舞いと、深みのある歌声が特徴。夜空に響くセレナーデのように、リスナーの心に深く刻まれるようなパフォーマンスを追求している。</p>
+        <section class="va-card reveal">
+            <h2 class="va-section-title"><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="va-episode-list">
+                <div class="va-episode">
+                    <h3 class="va-episode-title">相棒「むぎちゃん」との癒やしの弾き語り</h3>
+                    <p class="va-episode-text">アコースティックギターの弾き語り配信が人気。透き通るような歌声と優しいギターの音色で、深い時間帯のリスナーを癒やす。音楽への情熱は非常に高く、オリジナル曲制作への意欲も強い。</p>
+                </div>
+                <div class="va-episode">
+                    <h3 class="va-episode-title">ミノタウロスなのに「焼肉大好き」</h3>
+                    <p class="va-episode-text">誕生日は「いい肉の日」。自身の属性と矛盾するかのように、大の焼肉好きを公言。牛タンやミノの美味しさを熱弁する姿は、リスナーから「共食い…？」と突っ込まれるのがお約束。</p>
+                </div>
+                <div class="va-episode">
+                    <h3 class="va-episode-title">意外なガチ勢？横スクロールアクションの腕前</h3>
+                    <p class="va-episode-text">『ロックマン』シリーズなどの高難易度な横スクロールアクションを得意とする。普段のおっとりした雰囲気からは想像できない集中力と指さばきで、数々の難関ステージを攻略する。</p>
+                </div>
+                <div class="va-episode">
+                    <h3 class="va-episode-title">「かわいいもの」への止まらない情熱</h3>
+                    <p class="va-episode-text">ファンシーな小物や可愛いキャラクターに目がなく、雑談では最近見つけた可愛いものについて熱く語る。自身の衣装やビジュアルへのこだわりも深く、常に「可愛さ」を追求している。</p>
+                </div>
             </div>
         </section>
     </main>
 
+    <footer class="va-footer">
+        <p>&copy; 2026 VTuber Archive Project. Unofficial Fan Site.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
     <script>
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -42,5 +89,4 @@
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     </script>
 </body>
-
 </html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>飴望にぃな | Varium Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #e0b0ff;
+            --char-color-alt: #f0e0ff;
+            --char-rgb: 224, 176, 255;
+        }
+    </style>
+</head>
+<body>
+    <div class="va-bg">
+        <div class="va-bg-shape va-shape-1"></div>
+        <div class="va-bg-shape va-shape-2"></div>
+    </div>
+
+    <nav class="va-nav">
+        <a href="../varium_index.html" class="va-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO HUB
+        </a>
+    </nav>
+
+    <header class="va-hero">
+        <div class="va-hero-badge">NINA / 天才秀才魔法少女（フェネックの精霊）</div>
+        <h1 class="va-hero-name-jp">飴望にぃな</h1>
+        <p class="va-hero-name-en">Amemochi Nina</p>
+        <div class="va-hero-tags">
+            <span class="va-tag">#天才秀才魔法少女</span>
+            <span class="va-tag">#ASMRの女王</span>
+            <span class="va-tag">#クリエイター精霊</span>
+            <span class="va-tag">#不憫可愛い</span>
+        </div>
+    </header>
+
+    <main class="va-container">
+        <section class="va-card reveal">
+            <h2 class="va-section-title"><i class="fa-solid fa-user"></i> PROFILE</h2>
+            <div class="va-profile-grid">
+                <div class="va-profile-item"><span class="va-label">BIRTHDAY</span><span class="va-value">10月3日</span></div>
+                <div class="va-profile-item"><span class="va-label">HEIGHT</span><span class="va-value">141cm</span></div>
+                <div class="va-profile-item"><span class="va-label">BLOOD TYPE</span><span class="va-value">AB型</span></div>
+                <div class="va-profile-item"><span class="va-label">FAN NAME</span><span class="va-value">あめちゃん</span></div>
+            </div>
+            <div class="va-bio">
+                <p>フェネックの精霊と契約した天才秀才魔法少女。可愛がられるのが大好きで、甘い魔法で人々を虜にする。ASMRや料理、さらにはLive2D制作までこなす多才な努力家。一方で、不器用な一面や予想外の「不憫」な展開に見舞われることも多く、そのギャップがリスナー（あめちゃん）から深く愛されている。</p>
+            </div>
+        </section>
+
+        <section class="va-card reveal">
+            <h2 class="va-section-title"><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="va-episode-list">
+                <div class="va-episode">
+                    <h3 class="va-episode-title">リスナーを甘やかす「ASMRの魔法」</h3>
+                    <p class="va-episode-text">Varium内でも屈指のASMR技術を持つ。心音や耳かき、添い寝シチュエーションなどで多くのリスナーを「魔法」にかけ、安眠へと誘う。技術向上のために機材への投資も惜しまないガチ勢。</p>
+                </div>
+                <div class="va-episode">
+                    <h3 class="va-episode-title">天才の証明？自作Live2Dとクリエイティブ活動</h3>
+                    <p class="va-episode-text">「天才秀才」の肩書きに偽りなく、自身のLive2Dモデルの調整や動画編集を自らこなす。さらには料理配信での凝った演出など、多方面でクリエイティビティを発揮している。</p>
+                </div>
+                <div class="va-episode">
+                    <h3 class="va-episode-title">愛すべき「不憫」エピソードの数々</h3>
+                    <p class="va-episode-text">意気揚々と始めた企画で機材トラブルに見舞われたり、ゲームで予想外の負け方をしたりと、どこか「不憫」な展開になりがち。悔しがる姿が可愛いとリスナーからは好評。</p>
+                </div>
+                <div class="va-episode">
+                    <h3 class="va-episode-title">「にぃな」と同期・先輩との深い絆</h3>
+                    <p class="va-episode-text">2期生の仲間に甘えたり、逆に支えたりと箱内の関係性を大切にしている。特に同期とのやり取りでは、普段の魔法少女らしからぬリラックスした素の表情が見られることも。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="va-footer">
+        <p>&copy; 2026 VTuber Archive Project. Unofficial Fan Site.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

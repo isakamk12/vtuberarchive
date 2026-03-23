@@ -1714,6 +1714,13 @@ const app = createApp({
         const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
         const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         const cleanupFns = [];
+        const isEntryGranted = ref(sessionStorage.getItem('vt_archive_authorized') === 'true');
+
+        const grantEntry = () => {
+            console.log('AKASHIC_SYSTEM: Initialization sequence started.');
+            isEntryGranted.value = true;
+            sessionStorage.setItem('vt_archive_authorized', 'true');
+        };
 
         const handleResize = () => { windowWidth.value = window.innerWidth; };
 
@@ -1748,6 +1755,12 @@ const app = createApp({
 
         // Use global translations object from i18n.js
         const t = (item, field) => {
+            if (!item) {
+                const lang = currentLang.value;
+                const dict = (typeof translations !== 'undefined') ? (translations[lang] || translations[lang.split('-')[0]] || translations['ja']) : null;
+                return (dict && dict[field]) || field;
+            }
+
             const postfix = currentLang.value === 'ja' ? '' : '_' + currentLang.value.split('-')[0];
             return item[field + postfix] || item[field] || '';
         };
@@ -2030,7 +2043,20 @@ const app = createApp({
             cleanupFns.push(() => document.removeEventListener('pointerdown', onPointerDown));
         };
 
-        return { isMobile, currentLang, filterMode, searchQuery, filteredAgencies, setFilter, t, totalAgencies, formatTag, handleCardClick };
+        return { 
+            isMobile, 
+            currentLang, 
+            filterMode, 
+            searchQuery, 
+            filteredAgencies, 
+            setFilter, 
+            t, 
+            totalAgencies, 
+            formatTag, 
+            handleCardClick,
+            isEntryGranted,
+            grantEntry
+        };
     }
 });
 
@@ -2038,3 +2064,4 @@ const app = createApp({
 agencies.forEach(item => { item.resolvedTags = item.tags || []; });
 
 app.mount('#app');
+

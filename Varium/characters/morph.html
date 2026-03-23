@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>海汐もるふ | Varium Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #b2e2f2;
+            --char-color-alt: #d1f0f7;
+            --char-rgb: 178, 226, 242;
+        }
+    </style>
+</head>
+<body>
+    <div class="va-bg">
+        <div class="va-bg-shape va-shape-1"></div>
+        <div class="va-bg-shape va-shape-2"></div>
+    </div>
+
+    <nav class="va-nav">
+        <a href="../varium_index.html" class="va-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO HUB
+        </a>
+    </nav>
+
+    <header class="va-hero">
+        <div class="va-hero-badge">MOLF / オオカミ船長（桃色ウルフ）</div>
+        <h1 class="va-hero-name-jp">海汐もるふ</h1>
+        <p class="va-hero-name-en">Mishio Molf</p>
+        <div class="va-hero-tags">
+            <span class="va-tag">#オオカミ船長</span>
+            <span class="va-tag">#2進数年齢</span>
+            <span class="va-tag">#むっちりうむ</span>
+            <span class="va-tag">#お宝（エビ）大好き</span>
+        </div>
+    </header>
+
+    <main class="va-container">
+        <section class="va-card reveal">
+            <h2 class="va-section-title"><i class="fa-solid fa-user"></i> PROFILE</h2>
+            <div class="va-profile-grid">
+                <div class="va-profile-item"><span class="va-label">BIRTHDAY</span><span class="va-value">9月19日</span></div>
+                <div class="va-profile-item"><span class="va-label">HEIGHT</span><span class="va-value">139cm</span></div>
+                <div class="va-profile-item"><span class="va-label">BLOOD TYPE</span><span class="va-value">-</span></div>
+                <div class="va-profile-item"><span class="va-label">FAN NAME</span><span class="va-value">船員</span></div>
+            </div>
+            <div class="va-bio">
+                <p>海を駆けるオオカミ船長。桃色の毛並みと可愛らしいビジュアルとは裏腹に、豪快な食いっぷりと独特の感性を持つ。年齢を2進数で数えるというデジタル（？）な一面も。3期生ユニット「むっちりうむ」のメンバーとして、リスナー（船員）と共に日々新たなお宝（主に美味しいもの）を探求している。</p>
+            </div>
+        </section>
+
+        <section class="va-card reveal">
+            <h2 class="va-section-title"><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="va-episode-list">
+                <div class="va-episode">
+                    <h3 class="va-episode-title">「2進数年齢」の謎とこだわり</h3>
+                    <p class="va-episode-text">年齢を聞かれると「100歳（2進数）」と答えるのがお約束。計算が合っているかはさておき、そのミステリアスな設定が彼女のキャラクター性を際立たせている。</p>
+                </div>
+                <div class="va-episode">
+                    <h3 class="va-episode-title">お宝探しという名の「食べ歩き」</h3>
+                    <p class="va-episode-text">海賊船長らしくお宝集めが趣味だが、実態は美味しいものの食べ歩き。特にエビやあげ餅、梅酒への愛は深く、食レポ時の幸せそうな表情は「船員」たちの名物。</p>
+                </div>
+                <div class="va-episode">
+                    <h3 class="va-episode-title">「むっちりうむ」リーダー（？）の苦悩</h3>
+                    <p class="va-episode-text">3期生ユニットの中でもまとめ役になることが多いが、同期の自由奔放な言動に振り回されることもしばしば。苦労人な一面が垣間見える瞬間にリスナーからの応援が集まる。</p>
+                </div>
+                <div class="va-episode">
+                    <h3 class="va-episode-title">マスコット「ぷかぷ」との冒険</h3>
+                    <p class="va-episode-text">白鯨の赤ちゃん「ぷかぷ」を可愛がっており、配信中もよく話題に上る。ぷかぷに対する過保護なまでの愛情と、時折見せる船長らしい凛とした態度のギャップが魅力。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="va-footer">
+        <p>&copy; 2026 VTuber Archive Project. Unofficial Fan Site.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

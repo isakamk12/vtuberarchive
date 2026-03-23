@@ -1,38 +1,89 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>透乃おと | Varium Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #4facfe;
+            --char-color-alt: #8ec5fc;
+            --char-rgb: 79, 172, 254;
+        }
+    </style>
 </head>
-
 <body>
-    <header class="hero">
-        <h1 class="hero-name">OTO</h1>
-        <p class="hero-subtitle">透乃おと / Tono Oto</p>
+    <div class="va-bg">
+        <div class="va-bg-shape va-shape-1"></div>
+        <div class="va-bg-shape va-shape-2"></div>
+    </div>
+
+    <nav class="va-nav">
+        <a href="../varium_index.html" class="va-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO HUB
+        </a>
+    </nav>
+
+    <header class="va-hero">
+        <div class="va-hero-badge">OTO / 感情豊かな機械の女の子</div>
+        <h1 class="va-hero-name-jp">透乃おと</h1>
+        <p class="va-hero-name-en">Toono Oto</p>
+        <div class="va-hero-tags">
+            <span class="va-tag">#感情豊かな機械</span>
+            <span class="va-tag">#特級呪物</span>
+            <span class="va-tag">#社会人経験豊富</span>
+            <span class="va-tag">#はぐるま愛</span>
+        </div>
     </header>
 
-    <main class="container">
-        <section class="section reveal">
-            <h2 class="section-title">PROFILE</h2>
-            <div class="profile-card">
-                <div class="data-grid">
-                    <div class="data-item"><span class="label">GEN</span><span class="value">3期生</span></div>
-                    <div class="data-item"><span class="label">ID</span><span class="value">VAR-03-01</span></div>
-                </div>
+    <main class="va-container">
+        <section class="va-card reveal">
+            <h2 class="va-section-title"><i class="fa-solid fa-user"></i> PROFILE</h2>
+            <div class="va-profile-grid">
+                <div class="va-profile-item"><span class="va-label">BIRTHDAY</span><span class="va-value">3月20日</span></div>
+                <div class="va-profile-item"><span class="va-label">HEIGHT</span><span class="va-value">160cm</span></div>
+                <div class="va-profile-item"><span class="va-label">BLOOD TYPE</span><span class="va-value">O型</span></div>
+                <div class="va-profile-item"><span class="va-label">FAN NAME</span><span class="va-value">はぐるま</span></div>
+            </div>
+            <div class="va-bio">
+                <p>魔法で感情を吹き込まれた機械の女の子。美しいビジュアルと歌声からは「清楚」な印象を受けるが、喋り出すと芸人顔負けのアドリブとリアクションを見せる。過酷な社会人経験を経てVariumに辿り着いた苦労人であり、リスナー（はぐるま）や箱への愛は誰よりも深く、涙もろい一面を持つ。</p>
             </div>
         </section>
 
-        <section class="section reveal">
-            <h2 class="section-title">STORY</h2>
-            <div class="description">
-                <p>ぶいありうむっ！3期生。透き通るような純粋さと、音楽をこよなく愛する心を持つ。彼女が奏でる「音」は、デジタル世界の喧騒を忘れさせ、穏やかな星空の広がる場所へと導いてくれる。</p>
+        <section class="va-card reveal">
+            <h2 class="va-section-title"><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="va-episode-list">
+                <div class="va-episode">
+                    <h3 class="va-episode-title">「黙れば清楚、喋れば芸人」のギャップ</h3>
+                    <p class="va-episode-text">透明感のある歌声とは裏腹に、配信では持ち前のユーモアとアドリブ力が爆発。「歌のお姉さん」から「芸人お姉さん」へと評価がシフトするも、そのギャップが最大の武器。</p>
+                </div>
+                <div class="va-episode">
+                    <h3 class="va-episode-title">未来の後輩も恐れる（？）特級呪物事件</h3>
+                    <p class="va-episode-text">初期の配信での発言が「特級呪物」として切り抜かれ、箱内外に知れ渡る事態に。自身の黒歴史として語り継がれ、未来の後輩に「やべえ先輩」と思われることを危惧している。</p>
+                </div>
+                <div class="va-episode">
+                    <h3 class="va-episode-title">口座残高3桁、5円玉生活の壮絶な過去</h3>
+                    <p class="va-episode-text">電気やガスを止められ、5円玉で食いつないだ極限の社会人時代を経験。理不尽な苦労を重ねてきたからこそ、働くリスナーへの感謝は人一倍深く、非常に情に厚い。</p>
+                </div>
+                <div class="va-episode">
+                    <h3 class="va-episode-title">箱推し精神と「はぐるま」への深すぎる愛情</h3>
+                    <p class="va-episode-text">「活動が生きがい」と断言。リスナーの名前やアイコンを驚異的な記憶力で把握しており、皆の優しさに触れて配信中に大号泣することもしばしば。Varium愛に溢れた3部生。</p>
+                </div>
+                <div class="va-episode">
+                    <h3 class="va-episode-title">限界突破のブチギレ実況とリアクション</h3>
+                    <p class="va-episode-text">ゲームへの感情移入が激しく、『ドラクエ7』の展開に本気でブチギレたり、落下時に事件性のある悲鳴を上げたりと、全力の喜怒哀楽でリスナーを飽きさせない。</p>
+                </div>
             </div>
         </section>
     </main>
 
+    <footer class="va-footer">
+        <p>&copy; 2026 VTuber Archive Project. Unofficial Fan Site.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
     <script>
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -42,5 +93,4 @@
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     </script>
 </body>
-
 </html>

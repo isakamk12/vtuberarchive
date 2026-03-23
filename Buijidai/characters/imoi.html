@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>いもいぽて | ぶいじだい アーカイブ</title>
+    <link rel="stylesheet" href="char-base.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500;600&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --char-color: #ff8c00;
+            --char-rgb: 255, 140, 0;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .data-item {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .label {
+            font-size: 0.75rem;
+            color: var(--char-color);
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+        .value {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--c-text);
+        }
+        .episode-card {
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-left: 4px solid var(--char-color);
+            background: rgba(var(--char-rgb), 0.03);
+            border-radius: 0 12px 12px 0;
+        }
+        .episode-title {
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            color: var(--char-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+    <a href="../buijidai_index.html" class="char-back">
+        <i class="fa-solid fa-chevron-left"></i> BACK TO AGENCY
+    </a>
+
+    <header class="char-hero">
+        <div class="char-tag">ぶいじだい 1期生</div>
+        <h1 class="char-name">いもいぽて</h1>
+        <p class="char-read">Imoi Pote</p>
+        <div class="char-tags">
+            <span class="char-tag">#いもいぽて</span><span class="char-tag">#ぽてたいむ</span><span class="char-tag">#ぽてぽてあーと</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2>PROFILE</h2>
+            <div class="data-grid">
+                <div class="data-item"><span class="label">Birthday</span><span class="value">4月26日</span></div>
+                <div class="data-item"><span class="label">Height</span><span class="value">155cm</span></div>
+                <div class="data-item"><span class="label">Blood Type</span><span class="value">A型</span></div>
+                <div class="data-item"><span class="label">Origin</span><span class="value">じゃがいもの妖精</span></div>
+                <div class="data-item"><span class="label">Fan Name</span><span class="value">ぽてらー</span></div>
+            </div>
+            <p><strong>「毎日たのしさをお届け！じゃがいもの妖精、いもいぽてです！」</strong></p>
+            <p>自由を求めてこの世界にやってきた「じゃがいもの妖精」。可愛い女の子（特にギャル）とお酒が大好き。ポンコツな一面もありつつ、リスナーを「一番の自慢」と語る心優しい性格。緊急時には視聴者の心の避難所となるなど、誠実な一面も持つ。</p>
+        </section>
+
+        <section class="char-section reveal">
+            <h2>EPISODES</h2>
+            <div class="episode-card"><h3 class="episode-title">「良い風呂の日」生まれの災難</h3><p class="episode-text">誕生日は4月26日で「良い風呂の日」だが、幼少期にお風呂で転倒し左耳の骨を折る大怪我を経験。中音域が聞こえにくいが、「耳が命を守ってくれた」とポジティブに語る。</p></div><div class="episode-card"><h3 class="episode-title">飲酒配信と全ロスの悲劇</h3><p class="episode-text">特技は「お酒」。酔うと笑い上戸になり哲学を語り出すが、飲酒マイクラ中に寝落ちしてゾンビに倒され、大事な装備を全て失う（全ロス）という伝説的なやらかしも。</p></div><div class="episode-card"><h3 class="episode-title">圧倒的な「ギャル」好き</h3><p class="episode-text">可愛い女の子に目がなく、特に「優しい目のギャル」が性癖。ゲーム内の女性キャラに限界化したり、プロの接客を学ぶためにキャバクラへ行くなど、その情熱は本物。</p></div><div class="episode-card"><h3 class="episode-title">初配信前からのポンコツ伝説</h3><p class="episode-text">操作確認のテスト配信をうっかり一般公開で行ってしまう。機材トラブルや機械音痴に悩まされながらも、その不器用さがリスナーから愛されている。</p></div><div class="episode-card"><h3 class="episode-title">リスナーは「心の避難所」</h3><p class="episode-text">2024年元日の大地震発生時、配信を即座に切り替え、不安な視聴者のための情報共有と雑談を数時間継続。普段の姿からは想像できない誠実さで多くの人の心を打った。</p></div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        © 2026 VTuber Archive Project - ぶいじだい.
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

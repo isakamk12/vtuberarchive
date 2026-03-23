@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百瀬こいろ | ぶいじだい アーカイブ</title>
+    <link rel="stylesheet" href="char-base.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500;600&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --char-color: #00cccc;
+            --char-rgb: 0, 204, 204;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .data-item {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .label {
+            font-size: 0.75rem;
+            color: var(--char-color);
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+        .value {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--c-text);
+        }
+        .episode-card {
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-left: 4px solid var(--char-color);
+            background: rgba(var(--char-rgb), 0.03);
+            border-radius: 0 12px 12px 0;
+        }
+        .episode-title {
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            color: var(--char-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+    <a href="../buijidai_index.html" class="char-back">
+        <i class="fa-solid fa-chevron-left"></i> BACK TO AGENCY
+    </a>
+
+    <header class="char-hero">
+        <div class="char-tag">ぶいじだい 2期生</div>
+        <h1 class="char-name">百瀬こいろ</h1>
+        <p class="char-read">Momose Koiro</p>
+        <div class="char-tags">
+            <span class="char-tag">#こいろに参拝</span><span class="char-tag">#こいろ絵馬</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2>PROFILE</h2>
+            <div class="data-grid">
+                <div class="data-item"><span class="label">Birthday</span><span class="value">4月5日</span></div>
+                <div class="data-item"><span class="label">Height</span><span class="value">146cm</span></div>
+                <div class="data-item"><span class="label">Blood Type</span><span class="value">不明</span></div>
+                <div class="data-item"><span class="label">Origin</span><span class="value">伝説の滝</span></div>
+                <div class="data-item"><span class="label">Fan Name</span><span class="value">参拝者様</span></div>
+            </div>
+            <p><strong>「鯉から女神になった巫女、百瀬こいろです。こいろに参拝してね！」</strong></p>
+            <p>滝を登って女神になった鯉の女の子。恋愛成就の巫女として活動。魅力的な低音ボイス（イケボ）と豪快な笑い声のギャップが持ち味。自称「清楚（本物）担当」だが、同期からは「筋肉赤ちゃん」とも呼ばれる。</p>
+        </section>
+
+        <section class="char-section reveal">
+            <h2>EPISODES</h2>
+            <div class="episode-card"><h3 class="episode-title">清楚からドスの効いた低音へ</h3><p class="episode-text">初配信の清楚ボイスを「黒歴史」として、現在は素の豪快な性格を披露。リスナーとの攻防を楽しみつつ、アイドルとしての誇りは捨てていない。</p></div><div class="episode-card"><h3 class="episode-title">男性と間違われる「イケボ」</h3><p class="episode-text">ドッキリ電話で先輩に「男が泊まっている」とガチで勘違いされるほどのイケボ。別名義「ももせくん」としても活動し、リスナーを輝かせている。</p></div><div class="episode-card"><h3 class="episode-title">伝説の納豆1万回混ぜ耐久</h3><p class="episode-text">納豆を1万回混ぜ、粘土状の何かを作り上げた耐久配信は伝説。納豆のイメージが定着しすぎて本人は少し複雑な心境のようだ。</p></div><div class="episode-card"><h3 class="episode-title">ホラーは平気、虫には絶叫</h3><p class="episode-text">強心臓でホラー演出には動じないが、リアルな虫のグラフィックには大パニック。お化けよりも虫を「キモすぎてしょうがない」と語る。</p></div><div class="episode-card"><h3 class="episode-title">隠れメンヘラ・独占欲</h3><p class="episode-text">性格診断で「隠れメンヘラ」と露呈。友人関係でも「自分だけを見てほしい」という重めの独占欲を語るなど、意外な一面を秘めている。</p></div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        © 2026 VTuber Archive Project - ぶいじだい.
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

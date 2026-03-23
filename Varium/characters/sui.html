@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>涼月すい | Varium Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #a2d2ff;
+            --char-color-alt: #cde4ff;
+            --char-rgb: 162, 210, 255;
+        }
+    </style>
+</head>
+<body>
+    <div class="va-bg">
+        <div class="va-bg-shape va-shape-1"></div>
+        <div class="va-bg-shape va-shape-2"></div>
+    </div>
+
+    <nav class="va-nav">
+        <a href="../varium_index.html" class="va-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO HUB
+        </a>
+    </nav>
+
+    <header class="va-hero">
+        <div class="va-hero-badge">SUI / とあるマンション（幽霊）</div>
+        <h1 class="va-hero-name-jp">涼月すい</h1>
+        <p class="va-hero-name-en">Suzutuki Sui</p>
+        <div class="va-hero-tags">
+            <span class="va-tag">#幽霊ゲーマー</span>
+            <span class="va-tag">#激辛党</span>
+            <span class="va-tag">#圧倒的メンタル</span>
+            <span class="va-tag">#自尊心</span>
+        </div>
+    </header>
+
+    <main class="va-container">
+        <section class="va-card reveal">
+            <h2 class="va-section-title"><i class="fa-solid fa-user"></i> PROFILE</h2>
+            <div class="va-profile-grid">
+                <div class="va-profile-item"><span class="va-label">BIRTHDAY</span><span class="va-value">12月15日</span></div>
+                <div class="va-profile-item"><span class="va-label">HEIGHT</span><span class="va-value">149cm</span></div>
+                <div class="va-profile-item"><span class="va-label">BLOOD TYPE</span><span class="va-value">A型</span></div>
+                <div class="va-profile-item"><span class="va-label">FAN NAME</span><span class="va-value">家主さん</span></div>
+            </div>
+            <div class="va-bio">
+                <p>マンションに住み着く幽霊の女の子。家主がいない間にオンラインゲームを極めるうちに、ゲームが大好きになった。普段は内気で無気力だが、激ムズゲームへの耐久力や日本酒・激辛料理への耐性はVarium随一。リスナー（家主さん）への感謝を忘れない、心優しき霊体。</p>
+            </div>
+        </section>
+
+        <section class="va-card reveal">
+            <h2 class="va-section-title"><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="va-episode-list">
+                <div class="va-episode">
+                    <h3 class="va-episode-title">激ムズゲームに立ち向かう「鋼のメンタル」</h3>
+                    <p class="va-episode-text">『Getting Over It』や『Celeste』等の鬼畜ゲーム耐久を好む。「バカ野郎すぎる！」とキレつつも、「楽しいの、怒ってないよ」と笑顔で完走する芯の強さを持つ。</p>
+                </div>
+                <div class="va-episode">
+                    <h3 class="va-episode-title">Varium一の酒豪、そして驚異の激辛党</h3>
+                    <p class="va-episode-text">日本酒やウイスキーを嗜む酒豪。さらにはCoCo壱の20辛を「美味しい」と完食するほどの激辛党。お酒が入ると饒舌になり、際どい発言が飛び出すこともしばしば。</p>
+                </div>
+                <div class="va-episode">
+                    <h3 class="va-episode-title">伝説の「自尊心」配信と内弁慶エピソード</h3>
+                    <p class="va-episode-text">極度の人見知りで、いとこの結婚式で挨拶の空気に耐えきれず車に逃げ込み号泣。その心境を赤裸々に語った「自尊心」雑談は、彼女の人間性を象徴する神回として名高い。</p>
+                </div>
+                <div class="va-episode">
+                    <h3 class="va-episode-title">「みそきん」を食べながらの不甲斐なさへの号泣</h3>
+                    <p class="va-episode-text">コラボで上手く喋れなかった不甲斐なさから、一人泣きながら「みそきん」を食べるレビュー配信を敢行。人一倍感受性が強く、真面目な性格が垣間見えるエピソード。</p>
+                </div>
+                <div class="va-episode">
+                    <h3 class="va-episode-title">スパチャ読みで見せる「人の心に寄り添う力」</h3>
+                    <p class="va-episode-text">一人ひとりのコメントに丁寧に感謝を伝え、リスナーの悩みにも全力で寄り添う。「私が彼女として君を支えたい」とまで語るその優しさが、多くの「家主さん」を救っている。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="va-footer">
+        <p>&copy; 2026 VTuber Archive Project. Unofficial Fan Site.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

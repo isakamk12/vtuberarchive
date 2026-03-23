@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>上水流 宇宙 | vα-liv アーカイブ</title>
+    <link rel="stylesheet" href="char-base.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --char-color: #64b4ff;
+            --char-rgb: 100, 180, 255;
+        }
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+        .data-item {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .label {
+            font-size: 0.7rem;
+            color: var(--char-color);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        .value {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
+        }
+        .episode-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        .episode-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--char-color);
+            transition: transform 0.3s, background 0.3s;
+        }
+        .episode-card:hover {
+            transform: translateX(10px);
+            background: rgba(var(--char-rgb), 0.05);
+        }
+        .episode-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .episode-text {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.8;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+    <a href="../valiv_index.html" class="char-back">
+        <i class="fa-solid fa-chevron-left"></i> BACK TO AGENCY
+    </a>
+
+    <header class="char-hero">
+        <div class="char-tag">PROJECT vα-liv</div>
+        <h1 class="char-name">上水流 宇宙</h1>
+        <p class="char-read">Cosmo Kamizuru</p>
+        <div class="char-tags">
+            <span class="char-tag">踊れる工事現場</span>
+            <span class="char-tag">インターネット老人会</span>
+            <span class="char-tag">マルチクリエイター</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2>PROFILE</h2>
+            <div class="data-grid">
+                <div class="data-item"><span class="label">Birthday</span><span class="value">9月12日 (宇宙の日)</span></div>
+                <div class="data-item"><span class="label">Age</span><span class="value">19歳</span></div>
+                <div class="data-item"><span class="label">Height</span><span class="value">162cm</span></div>
+                <div class="data-item"><span class="label">Blood Type</span><span class="value">B型</span></div>
+                <div class="data-item"><span class="label">Origin</span><span class="value">東京都 (江戸っ子)</span></div>
+                <div class="data-item"><span class="label">Oshi Mark</span><span class="value">🈁</span></div>
+                <div class="data-item"><span class="label">Specialty</span><span class="value">書道(師範)・配信デザイン</span></div>
+                <div class="data-item"><span class="label">Target</span><span class="value">宇宙統一</span></div>
+            </div>
+            <div style="margin-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem;">
+                <p>「踊れる工事現場」の異名を持つ。クールで清楚な見た目とは裏腹に、ゲーム配信では奇声や情けない声を連発する元気で愉快なキャラクター。高いダンススキルとクリエイティブ能力を併せ持つ、vα-livの職人気質なアイドル。</p>
+            </div>
+        </section>
+
+        <section class="char-section reveal">
+            <h2>EPISODES</h2>
+            <div class="episode-grid">
+                <div class="episode-card">
+                    <h3 class="episode-title"><i class="fa-solid fa-star"></i> 芸歴10年目の決意とリベンジ</h3>
+                    <p class="episode-text">候補生になる前は舞台やCMに出演していたが、コロナ禍でのグループ解散を経験。10年という歳月が流れても「アイドル」の夢を諦めきれず、不退転の決意でヴイアライヴに参加し、見事デビューを掴み取った。</p>
+                </div>
+                <div class="episode-card">
+                    <h3 class="episode-title"><i class="fa-solid fa-volume-high"></i> 「踊れる工事現場」の由来</h3>
+                    <p class="episode-text">普通の喋り声がすでに75dB（工事現場の騒音レベル）、叫び声は110dBを記録。その圧倒的な声量と得意のダンスを掛け合わせ、自他共に認める「踊れる工事現場」としての地位を確立した。</p>
+                </div>
+                <div class="episode-card">
+                    <h3 class="episode-title"><i class="fa-solid fa-ban"></i> 宿敵「しいたけ」との戦い</h3>
+                    <p class="episode-text">5歳の時のトラウマにより、しいたけが最大の天敵。配信ではスパチャを通じて「しいたけ代」が投げられるなど、日々リスナーの「しいたけ圧力」と戦っているが、その度に鮮やかな塩対応を見せる。</p>
+                </div>
+                <div class="episode-card">
+                    <h3 class="episode-title"><i class="fa-solid fa-ear-deaf"></i> 悲しき特技「地獄耳」</h3>
+                    <p class="episode-text">小学生の時、遠くでクラスメイトが小声で言った悪口をハッキリ聞き取ってしまったことで才能を自覚。今では「プロデューサーが言った悪口も聞こえますからね！」と牽制に活用している。</p>
+                </div>
+                <div class="episode-card">
+                    <h3 class="episode-title"><i class="fa-solid fa-palette"></i> マルチクリエイターの才能</h3>
+                    <p class="episode-text">イラストや動画制作も自身で手掛け、自らの楽曲（ZeroGravity）のリリックビデオではディレクターからアニメーションまで全てを完遂。歌への恐怖心を克服し、今では自分の表現を全力で届けている。</p>
+                </div>
+                <div class="episode-card">
+                    <h3 class="episode-title"><i class="fa-solid fa-clock-rotate-left"></i> インターネット老人会の血</h3>
+                    <p class="episode-text">ニコニコ動画直撃世代として育ち、10代とは思えない死語やネットスラングを使いこなす。「わこす〜」から始まる挨拶や、骨の髄までオタクな気質から、親愛を込めて「インターネット老人会」と呼ばれている。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        © 2026 VTuber Archive Project - PROJECT vα-liv.
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

@@ -1,169 +1,292 @@
 /* =====================================================
    Varium (ぶいありうむっ！) — Character Page Base CSS
-   Brand color: Pastel Pink/Blue
+   Premium Theme: CUTE × DREAM, Glassmorphism, Floaty
 ===================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=M+PLUS+Rounded+1c:wght@400;700;800;900&display=swap');
 
 :root {
-    --c-main: #ffb6c1;
-    /* Pastel Pink */
-    --c-main-alt: #a2d2ff;
-    --c-bg: #fff0f5;
-    --c-text: #4a4a4a;
-    --c-glass: rgba(255, 255, 255, 0.85);
-    --c-border: rgba(255, 182, 193, 0.4);
-    /* Override per character: */
-    --char-color: #ffb6c1;
+    --va-brand: #ffb6c1;
+    --va-brand-alt: #a2d2ff;
+    --va-text: #4a4a4a;
+    --va-bg-grad: linear-gradient(135deg, #fff0f5 0%, #e6f2ff 100%);
+    --va-glass: rgba(255, 255, 255, 0.7);
+    --va-border: rgba(255, 255, 255, 0.8);
+    --va-shadow: 0 8px 32px rgba(255, 182, 193, 0.15);
+    
+    /* Default char colors - overridden in individual files */
+    --char-color: var(--va-brand);
+    --char-color-alt: var(--va-brand-alt);
     --char-rgb: 255, 182, 193;
 }
 
-*,
-*::before,
-*::after {
+*, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 body {
-    min-height: 100vh;
-    background: var(--c-bg);
-    color: var(--c-text);
-    font-family: 'M PLUS Rounded 1c', 'Noto Sans JP', sans-serif;
+    background: var(--va-bg-grad);
+    color: var(--va-text);
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    overflow-x: hidden;
     line-height: 1.8;
 }
 
-.char-bg {
+/* BACKGROUND ELEMENTS */
+.va-bg {
     position: fixed;
     inset: 0;
     z-index: -1;
-    background-image: radial-gradient(rgba(var(--char-rgb), 0.3) 1px, transparent 1px);
-    background-size: 40px 40px;
+    overflow: hidden;
 }
 
-.char-back {
+.va-bg-shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.4;
+    animation: float 20s ease-in-out infinite alternate;
+}
+
+.va-shape-1 {
+    width: 40vw; height: 40vw;
+    background: var(--char-color);
+    top: -10vw; left: -10vw;
+}
+
+.va-shape-2 {
+    width: 30vw; height: 30vw;
+    background: var(--char-color-alt);
+    bottom: -5vw; right: -5vw;
+    animation-delay: -5s;
+}
+
+@keyframes float {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(40px, -40px) scale(1.1); }
+}
+
+/* NAV */
+.va-nav {
     position: fixed;
-    top: 20px;
-    left: 20px;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.va-back {
     display: flex;
     align-items: center;
     gap: 8px;
-    color: #888;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
     text-decoration: none;
+    color: var(--va-text);
     font-family: 'Fredoka', sans-serif;
+    font-weight: 700;
     font-size: 0.85rem;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    transition: color 0.2s;
-    z-index: 100;
-    padding: 8px 16px;
-    background: #fff;
-    border-radius: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
 }
 
-.char-back:hover {
+.va-back:hover {
+    transform: translateX(-5px);
     color: var(--char-color);
 }
 
-.char-hero {
+/* HERO */
+.va-hero {
+    min-height: 70vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 60vh;
-    padding: 120px 2rem 4rem;
+    padding: 140px 2rem 4rem;
     text-align: center;
+    position: relative;
 }
 
-.char-name {
-    font-family: 'Fredoka', 'M PLUS Rounded 1c', sans-serif;
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
-    font-weight: 800;
-    color: var(--char-color);
-    text-shadow: 2px 2px 0 #fff;
-    margin-bottom: 0.5rem;
-    line-height: 1.2;
-}
-
-.char-read {
-    font-family: 'Fredoka', sans-serif;
-    font-size: 1rem;
-    color: #888;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin-bottom: 2rem;
-}
-
-.char-tag {
-    display: inline-block;
+.va-hero-badge {
     padding: 8px 20px;
     background: #fff;
-    border: 2px solid var(--char-color);
     border-radius: 30px;
     font-family: 'Fredoka', sans-serif;
+    font-weight: 700;
     font-size: 0.8rem;
+    color: var(--char-color);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    box-shadow: 0 4px 12px rgba(var(--char-rgb), 0.2);
+    margin-bottom: 2rem;
+}
+
+.va-hero-name-jp {
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    font-weight: 900;
+    color: var(--char-color);
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 0 #fff;
+}
+
+.va-hero-name-en {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.2rem;
+    color: #888;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    margin-bottom: 2.5rem;
+}
+
+.va-hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    max-width: 600px;
+}
+
+.va-tag {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 6px 16px;
+    border-radius: 12px;
+    font-size: 0.85rem;
     font-weight: 700;
     color: var(--char-color);
-    letter-spacing: 0.05em;
-    margin: 6px;
-    box-shadow: 0 4px 10px rgba(var(--char-rgb), 0.2);
+    border: 1px solid var(--va-border);
 }
 
-.char-container {
-    max-width: 900px;
+/* CONTAINER */
+.va-container {
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 1rem 2rem 100px;
+    padding: 0 2rem 100px;
 }
 
-.char-section {
-    margin-bottom: 4rem;
-    background: var(--c-glass);
-    border: 1px solid var(--c-border);
-    border-radius: 30px;
-    padding: 3rem;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 10px 40px rgba(var(--char-rgb), 0.15);
+.va-card {
+    background: var(--va-glass);
+    border: 2px solid var(--va-border);
+    border-radius: 40px;
+    padding: 4rem;
+    margin-bottom: 5rem;
+    backdrop-filter: blur(12px);
+    box-shadow: var(--va-shadow);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
 }
 
-.char-section h2 {
-    font-family: 'Fredoka', 'M PLUS Rounded 1c', sans-serif;
-    font-size: 1.5rem;
+.va-card.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.va-section-title {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.8rem;
     font-weight: 800;
     color: var(--char-color);
-    margin-bottom: 2rem;
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 15px;
+    margin-bottom: 3rem;
 }
 
-.char-section h2 i {
+.va-section-title i {
+    width: 45px; height: 45px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 1.2rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-.char-section p,
-.char-section li {
-    font-size: 1.05rem;
-    color: var(--c-text);
-    line-height: 2;
-    margin-bottom: 1.5rem;
+/* PROFILE GRID */
+.va-profile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 2.5rem;
+    border-radius: 24px;
 }
 
-.char-section ul {
-    padding-left: 2rem;
+.va-profile-item {
+    display: flex;
+    flex-direction: column;
 }
 
-.char-section li {
-    margin-bottom: 0.8rem;
-}
-
-.char-footer {
-    padding: 3rem;
-    text-align: center;
+.va-label {
     font-family: 'Fredoka', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #999;
+    letter-spacing: 0.1em;
+    margin-bottom: 4px;
+}
+
+.va-value {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--va-text);
+}
+
+/* EPISODES */
+.va-episode-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.va-episode {
+    position: relative;
+    padding-left: 2rem;
+    border-left: 4px solid var(--va-border);
+}
+
+.va-episode-title {
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: var(--va-text);
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.va-episode-title::before {
+    content: '';
+    position: absolute;
+    left: -2.45rem; top: 0.5rem;
+    width: 12px; height: 12px;
+    background: var(--char-color);
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+
+.va-episode-text {
+    font-size: 1rem;
+    color: #555;
+    line-height: 2;
+}
+
+/* FOOTER */
+.va-footer {
+    text-align: center;
+    padding: 4rem;
     font-size: 0.85rem;
     color: #999;
-    font-weight: 600;
 }
+
+@media (max-width: 768px) {
+    .va-card { padding: 2.5rem 1.5rem; }
+    .va-hero { padding-top: 100px; }
+    .va-section-title { font-size: 1.5rem; }
+}

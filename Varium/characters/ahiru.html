@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>綿宮あひる | Varium Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #fffacd;
+            --char-color-alt: #fffed0;
+            --char-rgb: 255, 250, 205;
+        }
+    </style>
+</head>
+<body>
+    <div class="va-bg">
+        <div class="va-bg-shape va-shape-1"></div>
+        <div class="va-bg-shape va-shape-2"></div>
+    </div>
+
+    <nav class="va-nav">
+        <a href="../varium_index.html" class="va-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO HUB
+        </a>
+    </nav>
+
+    <header class="va-hero">
+        <div class="va-hero-badge">AHIRU / 令和生まれ（時間の流れが違う）</div>
+        <h1 class="va-hero-name-jp">綿宮あひる</h1>
+        <p class="va-hero-name-en">Watamiya Ahiru</p>
+        <div class="va-hero-tags">
+            <span class="va-tag">#インテリあひる</span>
+            <span class="va-tag">#物理6点</span>
+            <span class="va-tag">#交通違反31点</span>
+            <span class="va-tag">#PONの女王</span>
+        </div>
+    </header>
+
+    <main class="va-container">
+        <section class="va-card reveal">
+            <h2 class="va-section-title"><i class="fa-solid fa-user"></i> PROFILE</h2>
+            <div class="va-profile-grid">
+                <div class="va-profile-item"><span class="va-label">BIRTHDAY</span><span class="va-value">2月2日</span></div>
+                <div class="va-profile-item"><span class="va-label">HEIGHT</span><span class="va-value">152cm</span></div>
+                <div class="va-profile-item"><span class="va-label">BLOOD TYPE</span><span class="va-value">A型</span></div>
+                <div class="va-profile-item"><span class="va-label">FAN NAME</span><span class="va-value">ぴーたん</span></div>
+            </div>
+            <div class="va-bio">
+                <p>変幻自在な歌声を持つあひるの子。2期生のまとめ役（ママ）として頼られる一方、息をするようにPON（やらかし）を連発する愛すべきポンコツ。物理テスト6点や交通違反31点など、伝説的なエピソードに事欠かない。「ハッピーの連鎖」を信条に、今日もどこかでPONを積み上げる。</p>
+            </div>
+        </section>
+
+        <section class="va-card reveal">
+            <h2 class="va-section-title"><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="va-episode-list">
+                <div class="va-episode">
+                    <h3 class="va-episode-title">「PON」はもはやログインボーナス？</h3>
+                    <p class="va-episode-text">配信におけるやらかしは日常茶飯事。「PONノルマ達成」「ログボ」とリスナーから愛でられるほど。本人は「アヒルはPONしてないです！」と否定するが、結局お約束の展開に。</p>
+                </div>
+                <div class="va-episode">
+                    <h3 class="va-episode-title">物理6点と交通違反31点のインテリ（？）</h3>
+                    <p class="va-episode-text">物理テストで6点を取った衝撃の過去。さらには教習ゲーで反対車線を爆走し、免停レベルの交通違反を記録。学力は高いはずなのに、何故か「インテリアひる」扱いされる。</p>
+                </div>
+                <div class="va-episode">
+                    <h3 class="va-episode-title">頼れる2期生のママと「スナック綿宮」</h3>
+                    <p class="va-episode-text">2期生のトップバッターとして、冷静な進行で皆を支えるママ的存在。大人びた歌声や言動を見せると「スナック綿宮」が開店し、普段のポンコツとのギャップで魅了する。</p>
+                </div>
+                <div class="va-episode">
+                    <h3 class="va-episode-title">初配信当日のX（Twitter）制限の悲劇</h3>
+                    <p class="va-episode-text">記念すべきデビュー日にXのバグで「人間ではない（コンピューター）」と判断され制限を受ける。それでもトレンド入りを果たすなど、強運（？）と話題性に恵まれたスタートだった。</p>
+                </div>
+                <div class="va-episode">
+                    <h3 class="va-episode-title">高速移動するジオゲッサー事件</h3>
+                    <p class="va-episode-text">『GeoGuessr』配信中、自アバターが突然画面外へ超高速で消滅。本人が気づかぬままプレイを続けるシュールな光景は、リスナーの爆笑を誘った。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="va-footer">
+        <p>&copy; 2026 VTuber Archive Project. Unofficial Fan Site.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

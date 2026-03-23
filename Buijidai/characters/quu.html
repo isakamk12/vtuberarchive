@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>月宮くぅ | ぶいじだい アーカイブ</title>
+    <link rel="stylesheet" href="char-base.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500;600&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --char-color: #ff8c00;
+            --char-rgb: 255, 140, 0;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .data-item {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .label {
+            font-size: 0.75rem;
+            color: var(--char-color);
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+        .value {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--c-text);
+        }
+        .episode-card {
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-left: 4px solid var(--char-color);
+            background: rgba(var(--char-rgb), 0.03);
+            border-radius: 0 12px 12px 0;
+        }
+        .episode-title {
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            color: var(--char-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+    <a href="../buijidai_index.html" class="char-back">
+        <i class="fa-solid fa-chevron-left"></i> BACK TO AGENCY
+    </a>
+
+    <header class="char-hero">
+        <div class="char-tag">ぶいじだい 1期生</div>
+        <h1 class="char-name">月宮くぅ</h1>
+        <p class="char-read">Tsukimiya Quu</p>
+        <div class="char-tags">
+            <span class="char-tag">#月宮くぅ</span><span class="char-tag">#ReAUTH</span><span class="char-tag">#リオース</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2>PROFILE</h2>
+            <div class="data-grid">
+                <div class="data-item"><span class="label">Birthday</span><span class="value">8月10日</span></div>
+                <div class="data-item"><span class="label">Height</span><span class="value">148cm</span></div>
+                <div class="data-item"><span class="label">Blood Type</span><span class="value">不明</span></div>
+                <div class="data-item"><span class="label">Origin</span><span class="value">月</span></div>
+                <div class="data-item"><span class="label">Fan Name</span><span class="value">餌</span></div>
+            </div>
+            <p><strong>「月から地球にやってきました育成型新人Vtuber」</strong></p>
+            <p>「月から地球にやってきました育成型新人Vtuber」。LoLでダイヤ到達の実績を持つガチゲーマー。事務所崩壊を「猫ミーム」にしてバズらせるなど、逆境を笑いに変えるたくましさを持つ。現在は個人勢としてプロeスポーツチーム「Re:AUTH」に所属。</p>
+        </section>
+
+        <section class="char-section reveal">
+            <h2>EPISODES</h2>
+            <div class="episode-card"><h3 class="episode-title">事務所崩壊を「猫ミーム」でネタに</h3><p class="episode-text">所属事務所の社長が失踪し事実上の崩壊という悲劇を、やけくそで「猫ミーム」動画にして投稿。逆境を最強のネタに変える姿勢が大バズりした。</p></div><div class="episode-card"><h3 class="episode-title">LoL歴7年のガチゲーマー</h3><p class="episode-text">LoLを7年間プレイし、ADCでダイヤモンドランクに到達。アイドルのような外見に反して、プロチームに所属するほどの圧倒的なゲームスキルを持つ。</p></div><div class="episode-card"><h3 class="episode-title">リスナーを「餌」と呼ぶ監視力</h3><p class="episode-text">「餌」と呼ぶリスナーの生活リズムや実家の情報まで詳細に把握・記憶。一人ひとりをしっかり見ている（監視している）その記憶力でファンを驚かせた。</p></div><div class="episode-card"><h3 class="episode-title">筋金入りのオタク・夢女子</h3><p class="episode-text">ヒロアカの大ファンで1話を見るたびに号泣。またガンダム00のグラハム・エーカーと結婚した設定で「10年間未亡人だった」と語るなど、愛が深い。</p></div><div class="episode-card"><h3 class="episode-title">NGなし？ ぶっちゃけ泥酔トーク</h3><p class="episode-text">お酒が入るとリミッターが外れ、下ネタやメンヘラ気質な本音が飛び出すことも。アイドルらしからぬ親しみやすさとギャップでファンを惹きつけている。</p></div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        © 2026 VTuber Archive Project - ぶいじだい.
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

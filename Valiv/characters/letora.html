@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>レトラ | vα-liv アーカイブ</title>
+    <link rel="stylesheet" href="char-base.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --char-color: #ffb446;
+            --char-rgb: 255, 180, 70;
+        }
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+        .data-item {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .label {
+            font-size: 0.7rem;
+            color: var(--char-color);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        .value {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
+        }
+        .episode-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        .episode-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--char-color);
+            transition: transform 0.3s, background 0.3s;
+        }
+        .episode-card:hover {
+            transform: translateX(10px);
+            background: rgba(var(--char-rgb), 0.05);
+        }
+        .episode-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .episode-text {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.8;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+    <a href="../valiv_index.html" class="char-back">
+        <i class="fa-solid fa-chevron-left"></i> BACK TO AGENCY
+    </a>
+
+    <header class="char-hero">
+        <div class="char-tag">PROJECT vα-liv</div>
+        <h1 class="char-name">レトラ</h1>
+        <p class="char-read">Sara Letora Oliveira Utagawa</p>
+        <div class="char-tags">
+            <span class="char-tag">日本とブラジルのはっぴーせっと</span>
+            <span class="char-tag">センシティブ爆弾</span>
+            <span class="char-tag">チャンポンガール</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2>PROFILE</h2>
+            <div class="data-grid">
+                <div class="data-item"><span class="label">Full Name</span><span class="value">サラ・レトラ・オリヴェイラ・ウタガワ</span></div>
+                <div class="data-item"><span class="label">Birthday</span><span class="value">11月11日 (さそり座)</span></div>
+                <div class="data-item"><span class="label">Height</span><span class="value">159cm</span></div>
+                <div class="data-item"><span class="label">Blood Type</span><span class="value">O型</span></div>
+                <div class="data-item"><span class="label">Origin</span><span class="value">埼玉県</span></div>
+                <div class="data-item"><span class="label">Brand Color</span><span class="value">ネオンイエロー</span></div>
+                <div class="data-item"><span class="label">Specialty</span><span class="value">歌・古着リメイク・犬吸い</span></div>
+                <div class="data-item"><span class="label">Fan Name</span><span class="value">れとらぶ</span></div>
+            </div>
+            <div style="margin-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem;">
+                <p>「日本とブラジルのはっぴーせっと」。圧倒的な歌唱力と、飾らないラフなキャラクターで親しまれるvα-livの成人枠。元バンドボーカリストとしての挫折を乗り越え、誰かの隣に寄り添う音楽を届けるためにアイドルとしての道を切り拓いた。</p>
+            </div>
+        </section>
+
+        <section class="char-section reveal">
+            <h2>EPISODES</h2>
+            <div class="episode-grid">
+                <div class="episode-card">
+                    <h3 class="episode-title"><i class="fa-solid fa-microphone-lines"></i> 歌への情熱と挫折のリベンジ</h3>
+                    <p class="episode-text">アーティストデビュー後の解散という挫折を経験し、「自分が救われたように誰かを救いたい」という一心でヴイアラへ。歌枠にかける熱量は凄まじく、87分6秒（876プロにちなんで）歌い続けるなど、その歌声で多くのPの心を震わせてきた。</p>
+                </div>
+                <div class="episode-card">
+                    <h3 class="episode-title"><i class="fa-solid fa-bomb"></i> 「犬被り」の脱却とセンシティブ爆弾</h3>
+                    <p class="episode-text">当初は「清楚」を演じて猫（犬派なので犬）を被っていたが、次第にラフな口調やエッチな話題好きが露呈。今では公式プロフィールにも「センシティブ爆弾」と記載される、ヴイアラ随一の自由人としての地位を確立した。</p>
+                </div>
+                <div class="episode-card">
+                    <h3 class="episode-title"><i class="fa-solid fa-dog"></i> 犬過激派、「犬吸い」が日課</h3>
+                    <p class="episode-text">愛犬「ジゼル」を溺愛しており、配信中に膝へ乗せたり鳴き声が入ることも。「犬吸って字固まる」という迷言を残すほど、愛犬を直接嗅ぐ「犬吸い」に心血を注ぐ自他共に認める犬過激派である。</p>
+                </div>
+                <div class="episode-card">
+                    <h3 class="episode-title"><i class="fa-solid fa-book-open"></i> 漢字と英語が読めない天才</h3>
+                    <p class="episode-text">極度の漢字・英語の苦手っぷりはPたちとの「読み方教室」がお約束。「#レトラ漢字ドリル食え」というタグが作られ、病気休暇中には周囲の大人たちからガチの国語問題集を差し入れられたという伝説を持つ。</p>
+                </div>
+                <div class="episode-card">
+                    <h3 class="episode-title"><i class="fa-solid fa-mountain"></i> 山に捨てられ氷の「滝行」</h3>
+                    <p class="episode-text">高校1年生の冬、反抗が度を越して親により山寺に1ヶ月放り込まれた過去を持つ。氷柱が降る極寒の中、命懸けの滝行を完遂。その過酷すぎる体験は、今の彼女の鋼のメンタルを形成したのかもしれない。</p>
+                </div>
+                <div class="episode-card">
+                    <h3 class="episode-title"><i class="fa-solid fa-wine-glass"></i> 破天荒な「チャンポンガール」</h3>
+                    <p class="episode-text">20歳の誕生日を機に飲酒配信を開始。ビール、ハイボール、シャンパンなど全てを混ぜて「チャンポン」を作るなど、豪快すぎる飲みっぷりを披露。社畜（業務）スーパーのこんにゃくや、亀（丸亀）うどんを愛する庶民派な一面も。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        © 2026 VTuber Archive Project - PROJECT vα-liv.
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

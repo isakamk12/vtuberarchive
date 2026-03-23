@@ -1,39 +1,93 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>狛犬うめ | Varium Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #ffb6c1;
+            --char-color-alt: #ffd1dc;
+            --char-rgb: 255, 182, 193;
+        }
+    </style>
 </head>
-
 <body>
-    <header class="hero">
-        <h1 class="hero-name">UME</h1>
-        <p class="hero-subtitle">狛犬うめ / Komainu Ume</p>
+    <div class="va-bg">
+        <div class="va-bg-shape va-shape-1"></div>
+        <div class="va-bg-shape va-shape-2"></div>
+    </div>
+
+    <nav class="va-nav">
+        <a href="../varium_index.html" class="va-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO HUB
+        </a>
+    </nav>
+
+    <header class="va-hero">
+        <div class="va-hero-badge">UME / 神社（巫女業）</div>
+        <h1 class="va-hero-name-jp">狛犬うめ</h1>
+        <p class="va-hero-name-en">Komai Ume</p>
+        <div class="va-hero-tags">
+            <span class="va-tag">#1期生リーダー</span>
+            <span class="va-tag">#Zカップ（自称）</span>
+            <span class="va-tag">#マイクラ廃人</span>
+            <span class="va-tag">#ロリコン巫女</span>
+        </div>
     </header>
 
-    <main class="container">
-        <section class="section reveal">
-            <h2 class="section-title">PROFILE</h2>
-            <div class="profile-card">
-                <div class="data-grid">
-                    <div class="data-item"><span class="label">GEN</span><span class="value">1期生</span></div>
-                    <div class="data-item"><span class="label">ID</span><span class="value">VAR-01-01</span></div>
-                </div>
+    <main class="va-container">
+        <section class="va-card reveal">
+            <h2 class="va-section-title"><i class="fa-solid fa-user"></i> PROFILE</h2>
+            <div class="va-profile-grid">
+                <div class="va-profile-item"><span class="va-label">BIRTHDAY</span><span class="va-value">5月5日</span></div>
+                <div class="va-profile-item"><span class="va-label">HEIGHT</span><span class="va-value">144cm</span></div>
+                <div class="va-profile-item"><span class="va-label">BLOOD TYPE</span><span class="va-value">O型</span></div>
+                <div class="va-profile-item"><span class="va-label">FAN NAME</span><span class="va-value">仔うめ</span></div>
+            </div>
+            <div class="va-bio">
+                <p>梅の花が大好きな狛犬の女の子。朝は神社で巫女としてお手伝いをしているが、寝坊して怒られることもしばしば。大人のお姉さんに憧れる自称「Zカップ」だが、実はVarium 1期生をまとめる頼れるリーダー。機材トラブルや絶叫、独創的なワードセンスでリスナーを「監獄」へ誘う。</p>
             </div>
         </section>
 
-        <section class="section reveal">
-            <h2 class="section-title">STORY</h2>
-            <div class="description">
-                <p>ぶいありうむっ！1期生。神社の狛犬として人々の願いを見守ってきた。元気一杯で、リスナーに笑顔と元気を届けることが一番の喜び。彼女の周りにはいつも明るい星々が輝いているような、温かい雰囲気が溢れている。
-                </p>
+        <section class="va-card reveal">
+            <h2 class="va-section-title"><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="va-episode-list">
+                <div class="va-episode">
+                    <h3 class="va-episode-title">伝説の「ばけがく」事件と大バズり</h3>
+                    <p class="va-episode-text">「化学」を「ばけがく」と読みリスナーからツッコミを受けるも、実際は「科学」との区別で使われる読みであることを知り形勢逆転。この件がXで12万いいねを超える大バズりを記録し、Variumの知名度を一気に押し上げた。</p>
+                </div>
+                <div class="va-episode">
+                    <h3 class="va-episode-title">「ロリロリアイランド」を夢見るガチ勢</h3>
+                    <p class="va-episode-text">自分より小さい生き物を愛でる生粋のロリコン。ドラクエ配信での誘惑に対し「ロリロリアイランドを作りたい」と答えるなど、その情熱はラスボスをも凌駕する。</p>
+                </div>
+                <div class="va-episode">
+                    <h3 class="va-episode-title">Zカップお姉さん（自称）の敗北</h3>
+                    <p class="va-episode-text">「胸のサイズは無限大の無」と強弁し、常にZカップを自称。しかし新衣装公開で「小」サイズが確定。「非公式Wikiにボインボインって書け」と圧をかけるも、貧乳の事実は隠せなかった。</p>
+                </div>
+                <div class="va-episode">
+                    <h3 class="va-episode-title">「狛犬監獄」とリスナーとのプロレス</h3>
+                    <p class="va-episode-text">殺風景な部屋での配信からメンシ名が「狛犬監獄」に。入会を「逮捕」、可愛いと言うのを「独禁」とするなど、リスナー（囚人）との独自のプロレス文化が根付いている。</p>
+                </div>
+                <div class="va-episode">
+                    <h3 class="va-episode-title">マイクラに住まう文明の創り手</h3>
+                    <p class="va-episode-text">マインクラフトへの情熱は凄まじく、Varium鯖に「バリドナルド」などの施設を次々建設。イタズラで自宅が半焼しても「撮れ高ができた」と喜ぶ、根っからのエンターテイナー。</p>
+                </div>
+                <div class="va-episode">
+                    <h3 class="va-episode-title">絶叫ホラーと意外な理系脳のギャップ</h3>
+                    <p class="va-episode-text">ホラゲーでは鼓膜破壊レベルの美しい絶叫を見せる一方、学力テストでは理系科目で無類の強さを発揮。「ばけがく」の汚名を返上する高い理系的専門知識で周囲を驚かせた。</p>
+                </div>
             </div>
         </section>
     </main>
 
+    <footer class="va-footer">
+        <p>&copy; 2026 VTuber Archive Project. Unofficial Fan Site.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
     <script>
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -43,5 +97,4 @@
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     </script>
 </body>
-
 </html>

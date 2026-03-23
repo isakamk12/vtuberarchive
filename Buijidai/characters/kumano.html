@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>七八くまの | ぶいじだい アーカイブ</title>
+    <link rel="stylesheet" href="char-base.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500;600&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --char-color: #00cccc;
+            --char-rgb: 0, 204, 204;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .data-item {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .label {
+            font-size: 0.75rem;
+            color: var(--char-color);
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+        .value {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--c-text);
+        }
+        .episode-card {
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-left: 4px solid var(--char-color);
+            background: rgba(var(--char-rgb), 0.03);
+            border-radius: 0 12px 12px 0;
+        }
+        .episode-title {
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            color: var(--char-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+    <a href="../buijidai_index.html" class="char-back">
+        <i class="fa-solid fa-chevron-left"></i> BACK TO AGENCY
+    </a>
+
+    <header class="char-hero">
+        <div class="char-tag">ぶいじだい 2期生</div>
+        <h1 class="char-name">七八くまの</h1>
+        <p class="char-read">Kumano Shichihachi</p>
+        <div class="char-tags">
+            <span class="char-tag">#七八くまの</span><span class="char-tag">#しちはちみん</span><span class="char-tag">#くまの絵譜</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2>PROFILE</h2>
+            <div class="data-grid">
+                <div class="data-item"><span class="label">Birthday</span><span class="value">7月8日</span></div>
+                <div class="data-item"><span class="label">Height</span><span class="value">150cm</span></div>
+                <div class="data-item"><span class="label">Blood Type</span><span class="value">不明</span></div>
+                <div class="data-item"><span class="label">Origin</span><span class="value">魔界</span></div>
+                <div class="data-item"><span class="label">Fan Name</span><span class="value">78民</span></div>
+            </div>
+            <p><strong>「魔界からやってきた、次期魔王の悪魔！くまの様だぞ！」</strong></p>
+            <p>魔界から修行に来た次期魔王の悪魔。空手全国大会出場の経歴を持つパワフルな女の子。リスナーとの熱いプロレスを楽しみつつ、武道館ライブを夢見る努力家。ファン（人間たち）への愛は非常に重い。</p>
+        </section>
+
+        <section class="char-section reveal">
+            <h2>EPISODES</h2>
+            <div class="episode-card"><h3 class="episode-title">初見を囲む「マイムマイム」</h3><p class="episode-text">初見リスナーが現れると既存ファンが「マイムマイム」で囲むのがお決まり。悪魔らしく「捕食」を匂わせつつ、実は歓迎している微笑ましい光景。</p></div><div class="episode-card"><h3 class="episode-title">空手全国レベルの「武闘派」</h3><p class="episode-text">かつて空手道場で全国大会に出場。上段突きからの回し蹴りを得意とするなど、可愛い見た目に反してガチの武闘派エピソードを持つ。</p></div><div class="episode-card"><h3 class="episode-title">ツノは「ドンキのサツマイモ」？</h3><p class="episode-text">頭のツノを食べ物扱いされるのが定番。リスナーに「ドンキのサツマイモ刺さってる」といじられるが、「食べれませんから！」と激怒するのがお家芸。</p></div><div class="episode-card"><h3 class="episode-title">割り箸占いの可愛い秘密</h3><p class="episode-text">お酒が入った際に、割り箸の割れ方でリスナーの愛をこっそり占っていることを暴露。悪魔らしからぬ乙女な一面にリスナーも悶絶した。</p></div><div class="episode-card"><h3 class="episode-title">ファンへの重すぎる愛情</h3><p class="episode-text">いつもプロレスをしているが、実は誰よりもファンが大好き。記念配信では感謝のあまり号泣し、「ずっと一緒にいて」と本音を漏らす熱い心の持ち主。</p></div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        © 2026 VTuber Archive Project - ぶいじだい.
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

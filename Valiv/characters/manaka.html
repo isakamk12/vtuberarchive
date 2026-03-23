@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>灯里 愛夏 | vα-liv アーカイブ</title>
+    <link rel="stylesheet" href="char-base.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --char-color: #ff6464;
+            --char-rgb: 255, 100, 100;
+        }
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+        .data-item {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .label {
+            font-size: 0.7rem;
+            color: var(--char-color);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        .value {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
+        }
+        .episode-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        .episode-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--char-color);
+            transition: transform 0.3s, background 0.3s;
+        }
+        .episode-card:hover {
+            transform: translateX(10px);
+            background: rgba(var(--char-rgb), 0.05);
+        }
+        .episode-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .episode-text {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.8;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+    <a href="../valiv_index.html" class="char-back">
+        <i class="fa-solid fa-chevron-left"></i> BACK TO AGENCY
+    </a>
+
+    <header class="char-hero">
+        <div class="char-tag">PROJECT vα-liv</div>
+        <h1 class="char-name">灯里 愛夏</h1>
+        <p class="char-read">Manaka Tomori</p>
+        <div class="char-tags">
+            <span class="char-tag">ド根性筋力担当</span>
+            <span class="char-tag">パリィの王</span>
+            <span class="char-tag">豚骨過激派</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2>PROFILE</h2>
+            <div class="data-grid">
+                <div class="data-item"><span class="label">Birthday</span><span class="value">7月1日 (かに座)</span></div>
+                <div class="data-item"><span class="label">Affiliation</span><span class="value">876プロダクション</span></div>
+                <div class="data-item"><span class="label">Height</span><span class="value">158cm</span></div>
+                <div class="data-item"><span class="label">Blood Type</span><span class="value">B型</span></div>
+                <div class="data-item"><span class="label">Origin</span><span class="value">福岡県</span></div>
+                <div class="data-item"><span class="label">Fan Name</span><span class="value">灯され隊</span></div>
+                <div class="data-item"><span class="label">Catchphrase</span><span class="value">あなたの心、灯します！やっぴー！</span></div>
+                <div class="data-item"><span class="label">Goal</span><span class="value">誰かに寄り添えるヒーローのようなアイドル</span></div>
+            </div>
+            <div style="margin-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem;">
+                <p>「清楚な美少女」を自称するが、ひとたびゲームに熱中すれば博多弁で吠え、パリィを連発するド根性アイドル。3580回の腹筋をやり遂げる精神力と、愛する豚骨ラーメンへの情熱は本物。誰かの心に寄り添うヒーローを目指して走り続ける。</p>
+            </div>
+        </section>
+
+        <section class="char-section reveal">
+            <h2>EPISODES</h2>
+            <div class="episode-grid">
+                <div class="episode-card">
+                    <h3 class="episode-title"><i class="fa-solid fa-dumbbell"></i> 伝説の「腹筋3580回」のド根性</h3>
+                    <p class="episode-text">「いいねの数だけ腹筋する」企画で課せられた3580回という数字。逃げ出すことなく1ヶ月かけて完遂し、ヴイアライヴの「筋力担当」としての地位を確立。そのド根性は多くのプロデューサーを驚愕させた。</p>
+                </div>
+                <div class="episode-card">
+                    <h3 class="episode-title"><i class="fa-solid fa-shield-halved"></i> 覚醒した「パリィの王」</h3>
+                    <p class="episode-text">フロム・ソフトウェアの「死にゲー」配信では、敵の攻撃を弾く「パリィ」に異常な快感を見出す。数々の強敵をパリィでねじ伏せるその姿は職人の域に達しており、目に見えるもの全てを滅ぼす勢いで戦い抜く。</p>
+                </div>
+                <div class="episode-card">
+                    <h3 class="episode-title"><i class="fa-solid fa-bowl-food"></i> ガチの豚骨過激派、ラーメン屋でバイト開始</h3>
+                    <p class="episode-text">ラーメンといえば「ギトギトの豚骨」以外認めない。ゲーム内で豚骨を広めるために「ガチでリアルなラーメン屋のキッチンでバイトを始める」という驚異の行動力を発揮。東京の客を豚骨で洗脳することを誓っている。</p>
+                </div>
+                <div class="episode-card">
+                    <h3 class="episode-title"><i class="fa-solid fa-wand-sparkles"></i> 配信開始の「魔法（絶妙な呪い）」</h3>
+                    <p class="episode-text">Xでの拡散をしないリスナーに対し、「ペットボトルの蓋をあけあけして水浸しになる魔法」や「親と一緒にテレビを見るのが気まずくなる魔法」など、絶妙に嫌な気分になる呪いをかけるのがお約束のやり取り。</p>
+                </div>
+                <div class="episode-card">
+                    <h3 class="episode-title"><i class="fa-solid fa-crown"></i> 「まな王子」降臨</h3>
+                    <p class="episode-text">アイマス曲の縛り歌枠などで、男性曲を原キーで歌い上げるイケボぶりが話題に。「まな王子」というあだ名が定着するほどのイケメンボイスは、普段の元気な姿とのギャップでプロデューサーを魅了する。</p>
+                </div>
+                <div class="episode-card">
+                    <h3 class="episode-title"><i class="fa-solid fa-heart"></i> 誰の手も手放さない決意</h3>
+                    <p class="episode-text">不器用で引っ込み思案だった自分を変えたくて上京。「経験もないしスキルもまだまだ」と悩みながらも、持ち前の根性で成長し続ける。「世界中の皆の心を灯すアイドル」になるため、彼女は今日もやっぴーを届ける。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        © 2026 VTuber Archive Project - PROJECT vα-liv.
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

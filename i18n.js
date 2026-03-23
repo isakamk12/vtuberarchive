@@ -27,7 +27,9 @@ const translations = {
         empty_state_title: "見つかりませんでした...",
         empty_state_desc: "別のキーワードで探してみてください。",
         alert_investigating: "【整備中】\nいま内容を更新中です。もう少し待っててね！",
-        alert_not_active: "ステータス: [準備中です]"
+        alert_not_active: "ステータス: [準備中です]",
+        opening_status: "認証待機中... システムアクセスを初期化してください",
+        opening_btn: "アクセス初期化"
     },
     en: {
         nav_agencies: "Agencies",
@@ -55,7 +57,9 @@ const translations = {
         empty_state_title: "Nothing found...",
         empty_state_desc: "Try searching with different words.",
         alert_investigating: "[In Progress]\nWe're updating the content right now. Please wait a little longer!",
-        alert_not_active: "Status: [Getting ready...]"
+        alert_not_active: "Status: [Getting ready...]",
+        opening_status: "AWAITING AUTHORIZATION... INITIALIZE SYSTEM ACCESS",
+        opening_btn: "INITIALIZE"
     },
     es: {
         nav_agencies: "Agencias",
@@ -83,7 +87,9 @@ const translations = {
         empty_state_title: "No encontramos nada...",
         empty_state_desc: "Prueba buscando con otras palabras.",
         alert_investigating: "[En progreso]\nEstamos actualizando el contenido. ¡Espera un poquito más!",
-        alert_not_active: "Estado: [Preparándose...]"
+        alert_not_active: "Estado: [Preparándose...]",
+        opening_status: "ESPERANDO AUTORIZACIÓN... INICIALIZAR ACCESO AL SISTEMA",
+        opening_btn: "INICIALIZAR"
     },
     "zh-Hans": {
         nav_agencies: "事务所",
@@ -111,7 +117,9 @@ const translations = {
         empty_state_title: "没找到呢...",
         empty_state_desc: "请试试换个关键词搜索吧。",
         alert_investigating: "【整理中】\n内容正在更新中，请稍等！",
-        alert_not_active: "状态：[准备中]"
+        alert_not_active: "状态：[准备中]",
+        opening_status: "等待身份验证... 请初始化系统访问",
+        opening_btn: "初始化"
     },
     "zh-Hant": {
         nav_agencies: "事務所",
@@ -139,7 +147,9 @@ const translations = {
         empty_state_title: "沒找到呢...",
         empty_state_desc: "請試試換個關鍵字搜尋吧。",
         alert_investigating: "【整理中】\n內容正在更新中，請稍等！",
-        alert_not_active: "狀態：[準備中]"
+        alert_not_active: "狀態：[準備中]",
+        opening_status: "等待身份驗證... 請初始化系統訪問",
+        opening_btn: "初始化"
     },
     ko: {
         nav_agencies: "에이전시",
@@ -167,8 +177,8 @@ const translations = {
         empty_state_title: "찾지 못했어요...",
         empty_state_desc: "다른 키워드로 다시 검색해 보세요.",
         alert_investigating: "[정비 중]\n현재 내용을 업데이트 중입니다. 잠시만 기다려 주세요!",
-        alert_not_active: "상태: [준비 중입니다]"
+        alert_not_active: "상태: [준비 중입니다]",
+        opening_status: "인증 대기 중... 시스템 액세스를 초기화하십시오",
+        opening_btn: "초기화"
     }
 };
-
-

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>白乃ことら | ぶいじだい アーカイブ</title>
+    <link rel="stylesheet" href="char-base.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500;600&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --char-color: #ff8c00;
+            --char-rgb: 255, 140, 0;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .data-item {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .label {
+            font-size: 0.75rem;
+            color: var(--char-color);
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+        .value {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--c-text);
+        }
+        .episode-card {
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-left: 4px solid var(--char-color);
+            background: rgba(var(--char-rgb), 0.03);
+            border-radius: 0 12px 12px 0;
+        }
+        .episode-title {
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            color: var(--char-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+    <a href="../buijidai_index.html" class="char-back">
+        <i class="fa-solid fa-chevron-left"></i> BACK TO AGENCY
+    </a>
+
+    <header class="char-hero">
+        <div class="char-tag">ぶいじだい 1期生</div>
+        <h1 class="char-name">白乃ことら</h1>
+        <p class="char-read">Shirono Kotora</p>
+        <div class="char-tags">
+            <span class="char-tag">#白乃ことら</span><span class="char-tag">#ことら出没中</span><span class="char-tag">#ことら図鑑</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2>PROFILE</h2>
+            <div class="data-grid">
+                <div class="data-item"><span class="label">Birthday</span><span class="value">7月11日</span></div>
+                <div class="data-item"><span class="label">Height</span><span class="value">152cm</span></div>
+                <div class="data-item"><span class="label">Blood Type</span><span class="value">不明</span></div>
+                <div class="data-item"><span class="label">Origin</span><span class="value">ホワイトタイガー</span></div>
+                <div class="data-item"><span class="label">Fan Name</span><span class="value">ことみーと（お肉）</span></div>
+            </div>
+            <p><strong>「癒やして柔らかくしてから、食べてあげるね。ガブリンチョ！」</strong></p>
+            <p>人間を癒やしてストレスを減らし、「美味しいお肉（ことみーと）」に育ててから食べようと企む不器用なホワイトタイガー。自称「清楚担当」だが、リスナーとのプロレスが日常茶飯事。「こてつ」にヤキモチを焼く可愛い一面も。</p>
+        </section>
+
+        <section class="char-section reveal">
+            <h2>EPISODES</h2>
+            <div class="episode-card"><h3 class="episode-title">誕生日の由来は「虎」の文字</h3><p class="episode-text">7月11日生まれの理由は、「虎」という漢字の中に漢数字の「七」と算用数字の「11」が隠れているから。初配信でリスナーに証明させたユニークなエピソード。</p></div><div class="episode-card"><h3 class="episode-title">恐怖に耐える「ガチビビり」</h3><p class="episode-text">ホラーが苦手だが配信でプレイさせられることが多く、悲鳴を上げるよりも「息を飲んで耐える」タイプのリアルなビビり方を見せ、リスナーの保護欲を刺激する。</p></div><div class="episode-card"><h3 class="episode-title">不屈の精神と嘆きのプロレス</h3><p class="episode-text">高難易度ゲームで何度も落下し、「もうやだ！」と嘆きつつも決して諦めない根性の持ち主。リスナーからのいじりへのキレのあるツッコミは一級品。</p></div><div class="episode-card"><h3 class="episode-title">伝説の1時間半寝坊事件</h3><p class="episode-text">朝が弱く、朝活配信で1時間半の大寝坊。「横になったらダメだった」という素直すぎる反省と謝罪配信は、リスナーの笑いと優しさを誘った。</p></div><div class="episode-card"><h3 class="episode-title">水泳でお尻がドンブラコ</h3><p class="episode-text">泳ぐのは好きだが「お尻が浮いてきちゃう」という衝撃の告白。川をドンブラコと流れていく様子を想像され、リスナーと爆笑の寸劇を繰り広げた。</p></div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        © 2026 VTuber Archive Project - ぶいじだい.
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

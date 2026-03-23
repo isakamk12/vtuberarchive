@@ -27,6 +27,28 @@
 
 <body>
     <div id="app" v-cloak>
+    <!-- Opening / Entry Step -->
+    <div class="omni-opening" v-if="!isEntryGranted">
+        <div class="opening-content">
+            <div class="opening-logo">
+                <div class="logo-ring"></div>
+                <div class="logo-ring"></div>
+                <div class="logo-ring"></div>
+                <i class="fa-solid fa-database"></i>
+            </div>
+            <h2 class="opening-title">AKASHIC_SYSTEM</h2>
+            <div class="opening-status">
+                <span class="status-blink"></span>
+                <span data-i18n="opening_status">{{ t(null, 'opening_status') }}</span>
+            </div>
+            <button class="opening-btn" @click="grantEntry">
+                <span class="btn-glitch" :data-text="t(null, 'opening_btn')">{{ t(null, 'opening_btn') }}</span>
+            </button>
+        </div>
+        <div class="opening-grid"></div>
+        <div class="opening-scanline"></div>
+    </div>
+
     <!-- Immersive Deep Void Background -->
     <div class="omni-bg" v-if="!isMobile">
         <div class="omni-orb orb-1"></div>

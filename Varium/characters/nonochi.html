@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>兎ノ花ののち | Varium Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #a8e063;
+            --char-color-alt: #c3e88d;
+            --char-rgb: 168, 224, 99;
+        }
+    </style>
+</head>
+<body>
+    <div class="va-bg">
+        <div class="va-bg-shape va-shape-1"></div>
+        <div class="va-bg-shape va-shape-2"></div>
+    </div>
+
+    <nav class="va-nav">
+        <a href="../varium_index.html" class="va-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO HUB
+        </a>
+    </nav>
+
+    <header class="va-hero">
+        <div class="va-hero-badge">NONOCHI / 筋肉で解決するウサ耳メイド</div>
+        <h1 class="va-hero-name-jp">兎ノ花ののち</h1>
+        <p class="va-hero-name-en">Unohana Nonochi</p>
+        <div class="va-hero-tags">
+            <span class="va-tag">#ののち丸</span>
+            <span class="va-tag">#IQ9万</span>
+            <span class="va-tag">#野生児ウサギ</span>
+            <span class="va-tag">#おむつ日本代表</span>
+        </div>
+    </header>
+
+    <main class="va-container">
+        <section class="va-card reveal">
+            <h2 class="va-section-title"><i class="fa-solid fa-user"></i> PROFILE</h2>
+            <div class="va-profile-grid">
+                <div class="va-profile-item"><span class="va-label">BIRTHDAY</span><span class="va-value">10月10日</span></div>
+                <div class="va-profile-item"><span class="va-label">HEIGHT</span><span class="va-value">158cm</span></div>
+                <div class="va-profile-item"><span class="va-label">BLOOD TYPE</span><span class="va-value">A型</span></div>
+                <div class="va-profile-item"><span class="va-label">FAN NAME</span><span class="va-value">花束ちゃん</span></div>
+            </div>
+            <div class="va-bio">
+                <p>全てを筋肉で解決しようとする脳筋ウサ耳メイド。薪割りや魚の石投げ猟をこなすワイルドな野生児として育った。沼プレイが目立つ一方で学力テストは箱内3位の秀才という「IQ9万」のギャップを持つ。毒餅事件で大蛇丸のような声になった「ののち丸」など、身体を張った伝説が多い。</p>
+            </div>
+        </section>
+
+        <section class="va-card reveal">
+            <h2 class="va-section-title"><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="va-episode-list">
+                <div class="va-episode">
+                    <h3 class="va-episode-title">命を懸けた「毒餅事件」と「ののち丸」降臨</h3>
+                    <p class="va-episode-text">自作の桜餅に猫の毛が混入し喘息を発症。喉を痛め「大蛇丸」のようなガラガラ声（ののち丸）になりながらも配信を続けた根性のウサギ。ネタに昇華するエンタメ精神を見せた。</p>
+                </div>
+                <div class="va-episode">
+                    <h3 class="va-episode-title">「IQ9万」のインテリと沼プレイの二重生活</h3>
+                    <p class="va-episode-text">アクションゲームで「沼」な姿を見せ「ぬぅまぁーず」入りする一方、学力テストでは箱内3位の秀才。設定通りのIQの高さを証明し、脳筋設定とのバランスを保っている。</p>
+                </div>
+                <div class="va-episode">
+                    <h3 class="va-episode-title">五右衛門風呂と薪割りの「ワイルド野生児」</h3>
+                    <p class="va-episode-text">実家が五右衛門風呂で毎日薪割りをしていた。川に石を投げ魚を気絶させて手掴みで獲るなど、現代っ子らしからぬサバイバル力を持つ「リアル野生児」ウサギ。</p>
+                </div>
+                <div class="va-episode">
+                    <h3 class="va-episode-title">おむつバスケットボール日本代表（暫定）</h3>
+                    <p class="va-episode-text">育児ゲームにて、使用済みおむつを遠くのゴミ箱へ一発でシュートする驚異の才能を発揮。「ののち天才！」と大興奮し、特技欄に「おむつバスケットボール」を追加することを宣言した。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="va-footer">
+        <p>&copy; 2026 VTuber Archive Project. Unofficial Fan Site.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

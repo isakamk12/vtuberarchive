@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>おばけなの | ぶいじだい アーカイブ</title>
+    <link rel="stylesheet" href="char-base.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500;600&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --char-color: #ffd700;
+            --char-rgb: 255, 215, 0;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .data-item {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .label {
+            font-size: 0.75rem;
+            color: var(--char-color);
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+        .value {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--c-text);
+        }
+        .episode-card {
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-left: 4px solid var(--char-color);
+            background: rgba(var(--char-rgb), 0.03);
+            border-radius: 0 12px 12px 0;
+        }
+        .episode-title {
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            color: var(--char-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+    <a href="../buijidai_index.html" class="char-back">
+        <i class="fa-solid fa-chevron-left"></i> BACK TO AGENCY
+    </a>
+
+    <header class="char-hero">
+        <div class="char-tag">ぶいじだい 3期生</div>
+        <h1 class="char-name">おばけなの</h1>
+        <p class="char-read">Obake Nano</p>
+        <div class="char-tags">
+            <span class="char-tag">#おばけなの</span><span class="char-tag">#なののらいぶ</span><span class="char-tag">#なのどろー</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2>PROFILE</h2>
+            <div class="data-grid">
+                <div class="data-item"><span class="label">Birthday</span><span class="value">6月15日</span></div>
+                <div class="data-item"><span class="label">Height</span><span class="value">150cm</span></div>
+                <div class="data-item"><span class="label">Blood Type</span><span class="value">不明</span></div>
+                <div class="data-item"><span class="label">Origin</span><span class="value">おばけの世界</span></div>
+                <div class="data-item"><span class="label">Fan Name</span><span class="value">なのなー</span></div>
+            </div>
+            <p><strong>「ひゅ〜どろ！あなたのハートキャッチ！お歌大好き天才おばけ、おばけなの です！」</strong></p>
+            <p>元人見知りの女の子のおばけ。お歌大好き天才おばけを自称。ガチャ運が極端に低く「沼ること」が特技。愛猫の姫と愛犬のまるに振り回される日々を送っている。リスナーの走馬灯に出演することが目標。</p>
+        </section>
+
+        <section class="char-section reveal">
+            <h2>EPISODES</h2>
+            <div class="episode-card"><h3 class="episode-title">特技：ガチャで沼ること</h3><p class="episode-text">ガチャ運に見放されており、スタレ等のガチャ配信では常に本天井まで連れて行かれる。すり抜けの絶望に悶絶する姿は、リスナーにとって最高の撮れ高。</p></div><div class="episode-card"><h3 class="episode-title">愛猫「姫」の暴君ぶり</h3><p class="episode-text">配信中に愛猫「姫」が乱入し、キーボードを操作したり、大切にしていたフィギュアの羽パーツを噛みちぎるなど、日々猫に振り回されている。</p></div><div class="episode-card"><h3 class="episode-title">ポンコツ全開のゲームプレイ</h3><p class="episode-text">マイクラを歩き方から教わるレベルの超初心者。開始早々に溺死するなど伝説を残す。ポケモンではイーブイを探すだけで10時間を費やすこだわりも。</p></div><div class="episode-card"><h3 class="episode-title">ファンマーク🍏の後付け理由</h3><p class="episode-text">🍏（緑のりんご）にエモい理由を後付けして説明したが、直後に「本当は被らないように適当に選んで焦って嘘ついた」と正直に暴露してしまう。</p></div><div class="episode-card"><h3 class="episode-title">親に内緒の活動がバレる</h3><p class="episode-text">隠れて活動していたが、パパから「頑張ってんね」と声をかけられ、TikTok等を見られていたことが発覚。恥ずかしさで死にそうになったという。</p></div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        © 2026 VTuber Archive Project - ぶいじだい.
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
