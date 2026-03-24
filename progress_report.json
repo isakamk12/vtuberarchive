@@ -72,12 +72,6 @@
         "expected": 10
     },
     {
-        "agency": "ProjectNebula",
-        "status": "Not Started",
-        "count": 0,
-        "expected": 5
-    },
-    {
         "agency": "Synthmaniacs",
         "status": "Not Started",
         "count": 0,
@@ -90,28 +84,10 @@
         "expected": 10
     },
     {
-        "agency": "VBOX",
-        "status": "Not Started",
-        "count": 0,
-        "expected": 5
-    },
-    {
         "agency": "VOMS",
         "status": "Not Started",
         "count": 0,
         "expected": 8
-    },
-    {
-        "agency": "VOne",
-        "status": "Not Started",
-        "count": 0,
-        "expected": 2
-    },
-    {
-        "agency": "VRegion",
-        "status": "Not Started",
-        "count": 0,
-        "expected": 7
     },
     {
         "agency": "Nijisanji",
@@ -144,15 +120,15 @@
         "expected": 13
     },
     {
+        "agency": "VRegion",
+        "status": "Progressing (7/8)",
+        "count": 7,
+        "expected": 8
+    },
+    {
         "agency": "VShojo",
         "status": "Progressing (3/15)",
         "count": 3,
-        "expected": 15
-    },
-    {
-        "agency": "Varium",
-        "status": "Progressing (4/15)",
-        "count": 4,
         "expected": 15
     },
     {
@@ -444,6 +420,12 @@
         "expected": 20
     },
     {
+        "agency": "ProjectNebula",
+        "status": "Likely Complete",
+        "count": 5,
+        "expected": 5
+    },
+    {
         "agency": "RKMusic",
         "status": "Likely Complete",
         "count": 31,
@@ -498,6 +480,12 @@
         "expected": 5
     },
     {
+        "agency": "VBOX",
+        "status": "Likely Complete",
+        "count": 5,
+        "expected": 5
+    },
+    {
         "agency": "VEE",
         "status": "Likely Complete",
         "count": 23,
@@ -510,10 +498,22 @@
         "expected": 4
     },
     {
+        "agency": "VOne",
+        "status": "Likely Complete",
+        "count": 1,
+        "expected": 1
+    },
+    {
         "agency": "Valiv",
         "status": "Likely Complete",
         "count": 3,
         "expected": 3
+    },
+    {
+        "agency": "Varium",
+        "status": "Likely Complete",
+        "count": 15,
+        "expected": 15
     },
     {
         "agency": "Vlash",

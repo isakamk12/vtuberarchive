@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>なっつぐるめ | VASE Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #ffcc00;
+            --char-rgb: 255, 204, 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../vase_index.html" class="char-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK TO HUB
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Nutsgourmet</div>
+        <h1 class="char-name">なっつぐるめ</h1>
+        <div class="char-tags">
+            <span class="char-tag">#なっつぐるめ</span>
+            <span class="char-tag">#なっつ愛</span>
+            <span class="char-tag">#なーたん</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-peanut"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>DEBUT:</strong> 2023年10月27日</p>
+                <p><strong>BIRTHDAY:</strong> 2月7日</p>
+                <p><strong>HEIGHT:</strong> 157cm</p>
+                <p><strong>WEIGHT:</strong> 5.7g</p>
+                <p><strong>FANNAME:</strong> なっつ愛</p>
+                <p><strong>SPECIES:</strong> ハーフエルフ</p>
+            </div>
+            <div class="char-bio">
+                <p>ナッツの王様と菜の花のエルフを親に持つハーフエルフ。夢は「地球のぐるめぐり」。食べる事と歌うこと、お喋りが大好き。ゲームは苦手だが、驚異的な根性を見せる耐久配信や、愛すべき「ポン」でリスナーを魅了。クラウドファンディングにより3D化の夢を叶え、初のオリジナル曲『いただき！』を歌い踊る姿を披露した。</p>
+            </div>
+        </section>
+
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>伝説の「あべっ」初配信事故</h3>
+                    <p>デビュー配信開始5秒で緊張のあまり「あべっ、あべっ」と謎の言葉を発し続ける放送事故を起こした。今でも自身の最大の黒歴史（ポン）として語り継がれている。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>ゲーム音痴ゆえの激闘（ポンクラ）</h3>
+                    <p>マイクラ配信は「ポンクラ」と呼ばれる。スイカゲームでは16時間以上の格闘、ドンキーコングでは11時間の末に「残機を見るな！自分の可能性を信じろ！」と熱い名言を残しクリアした。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>47都道府県グルメマップ耐久</h3>
+                    <p>リスナーの出身地とグルメで日本地図を埋める13時間の耐久配信。最後はショート動画で島根県民を募り、見事コンプリートを果たした伝説の配信。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>生誕祭での3D初披露とオリジナル曲</h3>
+                    <p>VASEのCFで3D化の夢を達成。生誕祭配信にてキュートな3D姿をお披露目し、オリジナル曲『いただき！』を披露。応援し続けてくれたリスナー（なっつ愛）と共に喜びを爆発させた。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

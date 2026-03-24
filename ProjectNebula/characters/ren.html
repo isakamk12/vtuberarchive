@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鈴莉 れん | PROJECT NEBULA Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #ffcc00;
+            --char-rgb: 255, 204, 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../projectnebula_index.html" class="char-back">
+            <i class="fa-solid fa-shuttle-space"></i> BACK TO HUB
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">SUZURI REN</div>
+        <h1 class="char-name">鈴莉 れん</h1>
+        <div class="char-tags">
+            <span class="char-tag">#鈴莉れん</span>
+            <span class="char-tag">#常連</span>
+            <span class="char-tag">#NiYuRe</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2><i class="fa-regular fa-bell"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>DEBUT:</strong> 2023年9月22日</p>
+                <p><strong>BIRTHDAY:</strong> 2月20日</p>
+                <p><strong>HEIGHT:</strong> 165cm</p>
+                <p><strong>FAN NAME:</strong> 常連</p>
+                <p><strong>OSHI MARK:</strong> 💛🪐🔧</p>
+                <p><strong>AGE:</strong> 自称90歳</p>
+            </div>
+            <div class="char-bio">
+                <p>PROJECT NEBULA所属の「クールビューティー担当（自称）」。実際は時折飛び出す関西弁や飾らない言動から「キュート担当」といじられ愛されている。3歳の頃からクラシックバレエを続けており体幹は最強だが、PC機材には弱く数々のポンを生み出す。実は根っからの人見知り。特技はバレエ・書道・茶道・CAD・速読、そして「街中の葉っぱを見て何の木かわかること」。</p>
+            </div>
+        </section>
+
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>「クールビューティー」vs「キュート」の戦い</h3>
+                    <p>本人は一貫して「私はクールビューティー！」と主張しているが、リスナーからは全く認められていない。コメント欄が「キュート」やピンク色で埋め尽くされ、必死に抵抗するのがお約束の流れ。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>伝説だらけの「初配信ポン」</h3>
+                    <p>デビュー準備で寝不足が続き、初配信の30分前まで爆睡。さらにYouTube側の開始ボタンを押し忘れ、数分間”虚無空間”に向かって一人で喋り続けるという大遅刻＆大ポンをやらかした。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>3ヶ月間ゴミ音質に気づかなかった事件</h3>
+                    <p>設定ミスでずっと”ヘッドホンの内蔵マイク”で音を拾い続けていたことに3ヶ月間気づかず、「なんでこんなに音質が悪いんだろう？」と悩みながら配信していた。気づいた時には絶望したという。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>わさびアイドルと渋すぎる味覚</h3>
+                    <p>自らを「わさびアイドル」と称し、らあらゆる食べ物にわさびを入れる。梅干し、するめ、貝ひもなど「お酒のあて」が大好物だが、実はお酒が一滴も飲めない（下戸）。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>夏色まつりちゃんへの限界化</h3>
+                    <p>ホロライブの夏色まつりさんを見てVTuberになろうと決心した強火オタク。初配信に本人が現れた際には号泣し、その後も絡みがあるたびに「生きててよかった」と限界化している。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

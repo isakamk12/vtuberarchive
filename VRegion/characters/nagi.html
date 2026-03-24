@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三ツ矢 凪 | VRegion Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #e23d3d;
+            --char-color-alt: #7d4ba1;
+            --char-rgb: 226, 61, 61;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../vregion_index.html" class="char-back">
+            <i class="fa-solid fa-mountain-sun"></i> BACK TO HUB
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">MITSUYA NAGI</div>
+        <h1 class="char-name">三ツ矢 凪</h1>
+        <div class="char-tags">
+            <span class="char-tag">#みなぎるど</span>
+            <span class="char-tag">🍁</span>
+            <span class="char-tag">🍋</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-id-card"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>PREFECTURE:</strong> 広島県</p>
+                <p><strong>DEBUT:</strong> 2021年7月22日</p>
+                <p><strong>ORIGIN:</strong> VRegion (現個人勢)</p>
+                <p><strong>HEIGHT:</strong> 148cm</p>
+                <p><strong>FAN NAME:</strong> みなぎるど</p>
+            </div>
+            <div class="char-bio">
+                <p>広島県の魅力を伝えるために誕生したご当地VTuber。2024年6月から個人勢として活動。ビジュアルには広島要素が詰め込まれており、イメージカラーはカープや県花のモミジを象徴する「赤」。瞳の中にはモミジが描かれ、髪留めはサンフレッチェをイメージした紫の「三本の矢」になっている。「魂は85歳」を自称し、少し古い広島弁を話すおばあちゃん子な一面も。</p>
+            </div>
+        </section>
+
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>広島愛と豪華すぎる人脈</h3>
+                    <p>中西一彦氏（ゲーム業界レジェンド）との対談や、湯崎元広島県知事をゲストに招くなど、一般VTuberらしからぬ大物ゲストとの共演を果たしています。ひろしまブランドショップ「TAU」の自称・看板娘として「メンヘラ（麺も切れちゃうヘラ）」を販売するなど、地元企業との癒着（コラボ）が絶えません。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>仁義なき広島ジオゲッサー対決</h3>
+                    <p>Googleストリートビューで場所を当てるゲーム「GeoGuessr」を使い、広島に縁のあるプロeスポーツチーム代表、ローソンポプラ公式キャラ、弁護士VTuberなどを集めた「仁義なき広島ジオゲッサー対決」を主催。広島知識を競い合う熱い配信で盛り上がりました。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>SHOWROOM時代のサクセスストーリー</h3>
+                    <p>ファンと共に「ほっかほっか亭 ダブルPRプリンセス」への就任を勝ち取り、RCCラジオ出演やテレビ番組のナレーションを務めるなど、リスナーと夢を叶えてきた熱い歴史を持っています。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>愛すべきポンコツぶりとPCトラブル</h3>
+                    <p>配信設定を「子ども向け」にしてリスナーがコメントを打てない事態になって焦ったり、OBSがフリーズして緊急で「人間界のパソコン（シンプル画面）」から配信したりと、機械トラブルやポンコツな一面を見せることが多々あります。父親に「新しいパソコンを買って」とねだるも、「洗濯機が先」と一蹴されたエピソードも。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>ゲームでの迷言と鋭い性格診断</h3>
+                    <p>ドラクエ3の配信中、「海賊の家」に到着した際に突如「広島に俺はなる」と謎の宣言をしました。また、同ゲームの性格診断で「負けず嫌い」「自分が話題の中心にいないと面白くない」と診断され、「じゃなきゃ配信者しとらんかもしれんよ」とあっさり納得しています。</p>
+                </div>
+            </div>
+        </section>
+     main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

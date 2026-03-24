@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>桃瀬 にな | PROJECT NEBULA Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #ff70a6;
+            --char-color-alt: #ffccbb;
+            --char-rgb: 255, 112, 166;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../projectnebula_index.html" class="char-back">
+            <i class="fa-solid fa-shuttle-space"></i> BACK TO HUB
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">MOMOSE NINA</div>
+        <h1 class="char-name">桃瀬 にな</h1>
+        <div class="char-tags">
+            <span class="char-tag">#桃瀬にな</span>
+            <span class="char-tag">#になの担い手</span>
+            <span class="char-tag">#ポナーズ</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-peach"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>DEBUT:</strong> 2022年7月16日</p>
+                <p><strong>BIRTHDAY:</strong> 4月10日</p>
+                <p><strong>HEIGHT:</strong> 157cm</p>
+                <p><strong>DESIGNER:</strong> ときさん</p>
+                <p><strong>FAN NAME:</strong> 担い手</p>
+                <p><strong>MEMBERSHIP:</strong> ポナーズ (PONERS)</p>
+            </div>
+            <div class="char-bio">
+                <p>自由と歌をこよなく愛する少女。カナダに数年間住んでいた帰国子女で、流暢な英語を話す。海外のファンからも「カナダ人？」と聞かれるが、本人は「桃の妖精でもカナダ人でもなく、純粋な日本生まれ日本育ちの人間」だと何度も念押ししている。重度のアイドルオタクであり、可愛い女の子が大好き。歌枠やゲーム配信、長時間の雑談配信を中心に活動。可愛い歌声と、オタク特有の早口マシンガントークのギャップが魅力。本人は「しっかり者」を自称しているが、実際は愛すべき「PON（ミス）」の天才。</p>
+            </div>
+        </section>
+
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>伝説の初配信！「ロプロジェクト ネブラ」事件</h3>
+                    <p>記念すべき初配信のスライドで、自身の所属事務所「PROJECT NEBULA」のスペルを間違え、堂々と「ロプロジェクト ネブラ」と記載して登場。さらに、初配信のタイトルが「一人リハーサル」になっていたりと、デビュー初日からPONを連発し伝説を残した。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>ファンネーム「ポナーズ」爆誕の悲劇</h3>
+                    <p>公式ファンネームは「担い手」に決定していたが、初配信からのあまりのPON連発っぷりを見た海外リスナーから「ファンネームは『ポナーズ（PONERS）』じゃないの？」と突っ込まれてしまう。結果として、メンバーシップの名前が正式に「ポナーズ」になってしまった。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>飛行機に乗れない！？「関空・伊丹空港 間違え事件」</h3>
+                    <p>自身のPONエピソードの中でもトップクラスの伝説。大阪の「伊丹空港」発の飛行機に乗るはずが、まったく別の「関西国際空港（関空）」に行ってしまった。最終的になんとか関空発の便に無理やり乗せてもらい事なきを得たが、本人の鉄板ネタとなっている。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>宅配便のおばちゃんに配信バレ？事件</h3>
+                    <p>あつ森の配信中、インターホンが壊れていたため、宅配便のおばちゃんからの「ごめんくださーい！」という声に、ミュートをし忘れたまま「はーい！」と大声で返事をしてしまう。自分のオタクトークがご近所に聞かれていたのではないかと激しく動揺した。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>パンティ死守による流血・配信遅刻事件</h3>
+                    <p>配信開始時刻の直前に、愛犬に自身の「使用済みパンツ」を盗まれそうになり、必死に取り返そうとした結果、手をガブッと噛まれて出血。そのせいで配信に遅刻するという衝撃の理由を赤裸々に語り、リスナーを爆笑させた。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

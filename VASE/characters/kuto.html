@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>クト | VASE Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #ff3366;
+            --char-rgb: 255, 51, 102;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../vase_index.html" class="char-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK TO HUB
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Kuto</div>
+        <h1 class="char-name">クト</h1>
+        <div class="char-tags">
+            <span class="char-tag">#クト</span>
+            <span class="char-tag">#VASE</span>
+            <span class="char-tag">#看板タコ</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-water"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>DEBUT:</strong> 2026年3月14日</p>
+                <p><strong>SPECIES:</strong> タコ</p>
+                <p><strong>HOBBY:</strong> ネット小説、日本酒</p>
+                <p><strong>ORIGIN:</strong> 岩手の酒蔵</p>
+            </div>
+            <div class="char-bio">
+                <p>岩手の酒蔵の「看板見習いタコ」。突如として消息を絶った看板娘・鬼月夜々の代役として配信を開始。名前はクトゥルフ神話に由来するが、ホラーは大の苦手という「優しいタコ」。日本酒（特に岩手の銘柄）とネット小説をこよなく愛し、お酒を飲むと笑いが止まらなくなる笑い上戸な性格。</p>
+            </div>
+        </section>
+
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>名前の由来は邪神なのにホラーNG</h3>
+                    <p>クトゥルフ由来の名を持ちながらホラーは絶対禁止。「クトは優しいタコだから！」と主張するも、リスナーからは名前とのギャップを突っ込まれるのがお約束。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>ネット小説で「時間が溶ける」事件</h3>
+                    <p>配信準備中、息抜きのつもりで『なろう』などのネット小説を読み始め、気づけば別の作品まで完読。準備が停滞し「時間って溶けるんだね」と身をもって学んだ。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>箸が転がっても笑う「笑い上戸」</h3>
+                    <p>お酒が入ると何でも面白くなってしまう。初飲酒配信では自分の笑い声に誘われてさらに笑い出す「笑いの無限ループ」に陥り、リスナーを困惑と爆笑の渦に巻き込んだ。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>コナン映画と巨大ポップコーンへの執着</h3>
+                    <p>名探偵コナンの映画が大好き。一番大きいハーフ＆ハーフのポップコーンを買うためだけに映画館へ通い、食べきれなかった分を持ち帰るのが至福のルーティン。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

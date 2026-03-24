@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>花巻レシュラ | VASE Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #9d4edd;
+            --char-rgb: 157, 78, 221;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../vase_index.html" class="char-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK TO HUB
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Hanamaki Reshura</div>
+        <h1 class="char-name">花巻レシュラ</h1>
+        <div class="char-tags">
+            <span class="char-tag">#花巻レシュラ</span>
+            <span class="char-tag">#レsheep</span>
+            <span class="char-tag">#岩手ご当地VTuber</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-wand-magic-sparkles"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>DEBUT:</strong> 2021年5月25日</p>
+                <p><strong>BIRTHDAY:</strong> 1月23日</p>
+                <p><strong>FANNAME:</strong> レsheep</p>
+                <p><strong>OSHICOLOR:</strong> 紫色</p>
+                <p><strong>PET:</strong> サシャ (ペガサス)</p>
+            </div>
+            <div class="char-bio">
+                <p>岩手県ご当地VTuber。「やりたいことがない」という理由から岩手担当に任命された。地元のディープなネタや自虐、特徴的な引き笑いで親しまれている。お酒（特に日本酒とビール）が大好き。運動は苦手だが、3Dライブに向けた練習には全力で取り組む努力家。占いも得意とし、毎日の星座占いが好評。</p>
+            </div>
+        </section>
+
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>「やりたいことがない」からご当地VTuberへ</h3>
+                    <p>当初は宇宙人設定だったが、目標を問われ「特にない」と答えた結果、急遽「岩手県ご当地VTuber」に。リスナーには岩手住みがバレバレだったため、結果的に話しやすくなったと語る。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>地元・岩手県への深すぎる（？）愛と自虐</h3>
+                    <p>わんこそば論争やローカル番組のネタが豊富。岩手にSuicaが導入された際は「革命が起きた」と大歓喜。ただし、自分の住んでいる地域以外についてはあまり詳しくないというお茶目な一面も。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>自称「清楚枠」を崩壊させる引き笑い</h3>
+                    <p>清楚キャラを自称しているが、テンションが上がると盛大な「引き笑い」が飛び出し、清楚イメージが霧散する。今ではその飾らない姿がリスナーの大きな魅力となっている。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>大のお酒好き！晩酌も全力</h3>
+                    <p>日本酒やビールに目がなく、誕生日にはお酒をリクエスト。松戸小金ビールとのコラボでは自身の水着ラベルビールが発売され、配信で嬉しそうに飲み比べを披露した。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>運動神経は皆無？伝説の「体力測定」</h3>
+                    <p>3D体力測定で、独特すぎる反復横跳びや低すぎる握力を露呈し爆笑を誘った. 一方で3Dライブのダンス練習には熱心に励む, 真面目な努力家でもある。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>負けず嫌いのゲーム実況</h3>
+                    <p>基本的にゲームはポンコツだが、強敵相手に何度も敗北しても諦めず、リスナーのアドバイスを糧にクリアまで粘り抜く「負けず嫌い」な根性を見せ、感動を呼ぶ。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

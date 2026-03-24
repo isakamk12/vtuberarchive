@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>白雪 ほたる | VRegion Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #61afef;
+            --char-color-alt: #a2d2ff;
+            --char-rgb: 97, 175, 239;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../vregion_index.html" class="char-back">
+            <i class="fa-solid fa-mountain-sun"></i> BACK TO HUB
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">SHIRAYUKI HOTARU</div>
+        <h1 class="char-name">白雪 ほたる</h1>
+        <div class="char-tags">
+            <span class="char-tag">#白雪ほたる</span>
+            <span class="char-tag">🌷</span>
+            <span class="char-tag">🦑</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-id-card"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>PREFECTURE:</strong> 富山県</p>
+                <p><strong>BIRTHDAY:</strong> 5月14日</p>
+                <p><strong>DEBUT:</strong> 2023年12月1日</p>
+                <p><strong>FAN NAME:</strong> 化け物(?)</p>
+            </div>
+            <div class="char-bio">
+                <p>富山県の「イカれチューリップ」の妖精。毎週日曜日朝9時からの「まったり朝活配信」が恒例。長らくチューリップの姿で活動していたが、後に可愛らしい人型の姿をお披露目した。漢字と英語が苦手なポンコツな一面もあり、運営からマジ説教されることも。犬が大好きだが愛が重すぎて嫌われるという悲しい過去を持つ。</p>
+            </div>
+        </section>
+
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>狂気がにじみ出るメンバーシップバッジ</h3>
+                    <p>自身で考案した継続バッジは、最初は普通のチューリップですが、1ヶ月で紫に変色し、2ヶ月でモンスター化（寄生されて足が生える）、そして半年経つと最終的に「茹でられた赤いホタルイカ」になるという狂気の仕様になっています。「早くみんな化け物になってほしい」と願うイカれっぷりが魅力です。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>小学生並みの「うんち」愛</h3>
+                    <p>「うんち」というワードが大好きで、メンバーシップのスタンプには自ら手描きした「うんちソフト」を採用。本人曰く、「うんちは笑顔になれる」とのことで、無邪気（？）な感性を持っています。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>漢字と英語が読めないポンコツぶり</h3>
+                    <p>配信中は漢字や英語、海外リスナーからのコメントが読めずに頭を抱えることが多々あります。そのポンコツぶりは運営から「漢字が読めなすぎます」とマジ説教されるほどですが、本人は「バカだからしょうがない」と開き直っています。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>伝説の「リンク貼れない」事件</h3>
+                    <p>デビュー半年後、配信概要欄にXのリンクを貼ろうとして10分以上格闘した挙句、配信画面すらも壊れ出すという放送事故（通称：小さな炎上事件）を起こしました。ITスキルに難があるのも彼女の愛されポイントです。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>恐ろしすぎる特殊能力「イカれエキス」</h3>
+                    <p>「もし特殊能力が使えるなら？」という質問に対し、「イカれエキスを移植できる力」と回答。「みんなにイカれエキスを付与していきたい」と語っており、視聴者を自分と同じ「イカれ」に染めようと目論んでいます。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

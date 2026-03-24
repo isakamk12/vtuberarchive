@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ヘルツ・イグナイト | VASE Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #ff3366;
+            --char-rgb: 255, 51, 102;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../vase_index.html" class="char-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK TO HUB
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Herz Ignite</div>
+        <h1 class="char-name">ヘルツ・イグナイト</h1>
+        <div class="char-tags">
+            <span class="char-tag">#ヘルツ・イグナイト</span>
+            <span class="char-tag">#親衛隊</span>
+            <span class="char-tag">#ガノタ</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-fire-flame-curved"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>DEBUT:</strong> 6月28日</p>
+                <p><strong>BIRTHDAY:</strong> 9月6日</p>
+                <p><strong>HEIGHT:</strong> 155cm</p>
+                <p><strong>FANNAME:</strong> 親衛隊</p>
+                <p><strong>ORIGIN:</strong> 愛の星アフェリオ</p>
+            </div>
+            <div class="char-bio">
+                <p>愛の星アフェリオからやってきた Vsinger。黒髪縦巻きロールにお嬢様然とした容姿だが、中身は生粋のガンダムオタク（ガノタ）。自作のBGMやイラストを手掛けるクリエイター気質で、歌唱力も高い。リスナー（親衛隊）との雑談が大好きで、歌枠が雑談枠に化けるのが恒例。デシル・ガレットへの愛が深すぎる夢女子でもある。</p>
+            </div>
+        </section>
+
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>卵の姿から始まったガノタ全開デビュー</h3>
+                    <p>登録者200人達成まで卵型ポットから出られない設定で活動開始。可憐な歌姫を期待したリスナーの前に現れたのは、ガンダムAGEについて語り出すと止まらない生粋のオタクだった。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>ガンプラに興奮しすぎて「知恵熱」で欠席</h3>
+                    <p>『ローゼン・ズール』のガンプラを完成させ、あまりのカッコよさに大興奮で撮影しまくった結果、翌日に熱を出して学校を休んでしまうという衝撃のガンプラ愛を持つ。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>デシル・ガレットへの重すぎる夢女子愛</h3>
+                    <p>ガンダムAGEのデシル・ガレットに狂愛を捧げ、「結婚が目標」と公言。お盆には彼のためだけに「迎え火」を焚いて魂を迎え入れるなど、並外れた愛の深さを見せる。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>伝説の「セリトくん」約6時間妄想配信</h3>
+                    <p>ゲーム中のNPC「セリト」くんに一目惚れ。リスナーと共に、彼の身長・体重・家族構成・好きな食べ物などの裏設定を6時間かけて妄想し続けるという伝説を残した。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>多才すぎるクリエイターお嬢様</h3>
+                    <p>高い歌唱力に加え、配信待機画面のイラスト制作や、配信BGMの作詞・作曲まで自ら手掛ける。華やかな容姿の裏で、OBSの操作に苦戦するポンコツな一面も愛されている。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

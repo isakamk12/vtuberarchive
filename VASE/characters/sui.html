@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鶏尾 翠 | VASE Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #00cc99;
+            --char-rgb: 0, 204, 153;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../vase_index.html" class="char-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK TO HUB
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Keio Sui</div>
+        <h1 class="char-name">鶏尾 翠</h1>
+        <div class="char-tags">
+            <span class="char-tag">#鶏尾翠</span>
+            <span class="char-tag">#お吸い物</span>
+            <span class="char-tag">#高知ご当地VTuber</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-music"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>DEBUT:</strong> 2024年6月27日</p>
+                <p><strong>BIRTHDAY:</strong> 11月28日</p>
+                <p><strong>FANNAME:</strong> お吸い物</p>
+                <p><strong>SPECIES:</strong> 鶏のキメラ</p>
+            </div>
+            <div class="char-bio">
+                <p>人間と鶏のキメラ。Vsingerユニット『Shadow'z BEAT』所属。喫茶ケイオスの看板鶏。調理師免許を持つ料理男子で、お喋りと歌が大好き。鳥への愛が異常に深く、文鳥を「吸う」情熱を語ることも。バーチャル高知ご当地VTuberとして地元愛を爆発させ、スト教官（師匠）のもとでスト6にも励むガチゲーマーな鶏。</p>
+            </div>
+        </section>
+
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>鳥への異常な愛と「鳥吸い」の熱弁</h3>
+                    <p>文鳥の匂いを「お日様の香り」と愛で、背中を吸う「鳥吸い」を推奨。鳥の尾脂腺について早口で解説する姿はまさにガチ勢。「鳥専門のストーカー」を自称する。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>スト6への情熱と「責任は自分」の精神</h3>
+                    <p>『スト6』にドハマりし、短期間でダイヤモンド帯へ。チーム戦よりも「負けても自分のせい」と言い切れる格ゲーを好むストイックなゲーマースピリットを持つ。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>「バーチャル高知」ご当地VTuberの地元愛</h3>
+                    <p>高知の「芋天」や「ウツボ」を熱く推奨。実際に地元水族館へ取材交渉に行きVlogを制作するなど、高知の魅力を世界に発信するために全力で行動している。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>お酒に弱い「酒雑魚」のニコニコ飲酒</h3>
+                    <p>味は好きだがアルコールには極端に弱く、少し飲んだだけで目がとろ～んとなり笑い出す。高知の地酒をリスナーにおすすめしながら、自身はフワフワご機嫌になる。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

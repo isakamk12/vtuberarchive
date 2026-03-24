@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>夢成 夏月 | VRegion Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #f39c12;
+            --char-color-alt: #d35400;
+            --char-rgb: 243, 156, 18;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../vregion_index.html" class="char-back">
+            <i class="fa-solid fa-mountain-sun"></i> BACK TO HUB
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">YUMENARI NATSUKI</div>
+        <h1 class="char-name">夢成 夏月</h1>
+        <div class="char-tags">
+            <span class="char-tag">#ゆめなりんく</span>
+            <span class="char-tag">🍶</span>
+            <span class="char-tag">🐡</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-id-card"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>PREFECTURE:</strong> 山口県</p>
+                <p><strong>DEBUT:</strong> 2021年9月17日</p>
+                <p><strong>ORIGIN:</strong> VRegion</p>
+                <p><strong>FAN NAME:</strong> ゆめなりんく</p>
+            </div>
+            <div class="char-bio">
+                <p>地方創生バーチャルタレントグループ「VRegion」山口県担当。「一升瓶は抱き枕」を自称する筋金入りの酒豪。山口名物の瓦そばを頭に乗せたマスコット「ふくみちゃん」がお供。笑顔になるとショールの柄がフグに変わる仕掛けがある。お酒（特に日本酒）を片手に語ることが多く、ついにはオリジナルラベルの日本酒も発売された。</p>
+            </div>
+        </section>
+
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>筋金入りの酒豪！「一升瓶は抱き枕」</h3>
+                    <p>運営が作成したポスターのキャッチコピー「一升瓶は抱き枕」が代名詞に。配信では日本酒（獺祭、雁木など）を片手に語ることが多く、ついにはオリジナルラベルの日本酒も発売。お酒を飲むと同僚に絡んだり、長文LINEを送ってしまう可愛い一面も。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>伝説の寝坊すっぽかし事件と「なちゅガチャ」</h3>
+                    <p>「お布団が大変気持ちようございまして」と16時からの配信を爆睡ですっぽかし、40分後に起きて堂々と報告。朝に弱いため、午前午後の配信が予定通り始まるかはリスナーの間で「なちゅガチャ（起きる時間ガチャ）」と呼ばれています。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>瓦そば火傷事件とドヤ顔アピール</h3>
+                    <p>配信直前、瓦そばの出汁を温めすぎて火傷し開始に遅れるというお茶目なトラブルを起こしたことも。Live2Dで表情が豊かになってからは、お気に入りの「ドヤ顔」を披露してリスナーを楽しませるのが定番になっています。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>山口県への深い愛と広報活動</h3>
+                    <p>定期配信「山口ゆめなり塾」で現地の食や歴史を熱心に紹介。郷土料理「けんちょう」を自作して食べたり、偉人を解説したりと山口愛は本物。「広島に岩国が取り込まれとる」と謎の危機感を抱くほど地元を愛しています。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>ホラゲで絶叫＆ボードゲーム愛</h3>
+                    <p>ゲームは得意だがホラーは極めて苦手。驚きすぎて「もう怖がらじぇるやんか！」と阿鼻叫喚の絶叫を響かせます。一方でボードゲーム愛は強く、専門番組のレギュラーを勝ち取るほどの知識と情熱を持っています。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

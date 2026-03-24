@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>紫雨 るか | PROJECT NEBULA Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #9d4edd;
+            --char-rgb: 157, 78, 221;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../projectnebula_index.html" class="char-back">
+            <i class="fa-solid fa-shuttle-space"></i> BACK TO HUB
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">SHIGURE RUKA</div>
+        <h1 class="char-name">紫雨 るか</h1>
+        <div class="char-tags">
+            <span class="char-tag">#紫雨るか</span>
+            <span class="char-tag">#しぐれびゅー</span>
+            <span class="char-tag">#るかちゅ</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-cloud-showers-heavy"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>DEBUT:</strong> 2025年1月2日</p>
+                <p><strong>BIRTHDAY:</strong> 6月11日</p>
+                <p><strong>HEIGHT:</strong> 162cm</p>
+                <p><strong>FAN NAME:</strong> るかちゅ</p>
+                <p><strong>OSHI MARK:</strong> ☂️🫧</p>
+                <p><strong>ROLE:</strong> ゲーマーアイドル</p>
+            </div>
+            <div class="char-bio">
+                <p>雨音のようにリラックスできる配信スタイル。圧倒的なFPSの実力を持ちつつ、清楚な見た目とのギャップが魅力的なゲーマーアイドル。VALORANTは2300時間超、最高ランクはアセンダント1という猛者。クールに見えて実は極度の人見知りであり、外部コラボではガチガチになってしまう愛らしい一面も。一番のファンはガチ勢のお母さん。お兄ちゃんの影響でゲーマーになった。</p>
+            </div>
+        </section>
+
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>ガチすぎるFPS愛と努力</h3>
+                    <p>デビュー前から「ジャンプ投げが10回連続成功するまでやめない」など、座学や練習を徹底的に行うストイックな一面を持つ。VALORANTへの造詣が非常に深い。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>強心臓！？ホラゲーで全くビビらない</h3>
+                    <p>ホラゲーをプレイしても殆ど悲鳴を上げず、淡々とストーリー考察を始めるため「リアクションなさすぎ」とツッコまれる。本人曰く「叫び声はおっさん」らしい。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>歌枠（という名の雑談枠）</h3>
+                    <p>歌枠と銘打っていても最初の2時間はひたすら喋り続け、後半数十分で慌てて曲を詰め込む。お喋り好きが災いしてなかなか歌に入れないのが恒例。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>龍角散の粉（コンクリート味）</h3>
+                    <p>喉のケアのために龍角散の粉を愛飲。その味を「コンクリートの味がするよ」と評し、大容量の缶を1年かけても使い切れないと嘆いている。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>人見知りゆえの「無言アピール」</h3>
+                    <p>外部の大人数コラボで緊張して一言も喋れなかった際、プレイで活躍した後に配信画面で無言で大きく頷き、リスナーに「私すごいでしょ！」とアピールした。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

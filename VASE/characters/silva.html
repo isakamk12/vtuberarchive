@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>二藍 シルバ | VASE Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #9d4edd;
+            --char-rgb: 157, 78, 221;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../vase_index.html" class="char-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK TO HUB
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Futaai Silva</div>
+        <h1 class="char-name">二藍 シルバ</h1>
+        <div class="char-tags">
+            <span class="char-tag">#二藍シルバ</span>
+            <span class="char-tag">#シバリス</span>
+            <span class="char-tag">#やべーやつ担当</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-mask"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>DEBUT:</strong> 5月10日 (タマゴとして)</p>
+                <p><strong>BIRTHDAY:</strong> 11月11日</p>
+                <p><strong>HEIGHT:</strong> 185cm</p>
+                <p><strong>FANNAME:</strong> シバリス</p>
+                <p><strong>AGE:</strong> 28歳</p>
+            </div>
+            <div class="char-bio">
+                <p>VASEの「やべーやつ担当」。元オネェバーのオーナーという異色の経歴を持ち、ふとした瞬間にオネェ言葉が飛び出す。ヒプマイやデレステなど、好きなものを語る時は驚異の早口になる限界オタク。鬼畜音ゲーに執着するドMゲーマーな一面も。リスナーとは仲良しプロレスを繰り広げるなど、親しみやすい兄貴分として愛されている。</p>
+            </div>
+        </section>
+
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>隠しきれない前職バーオーナーの片鱗</h3>
+                    <p>「ゲイではない」と言いつつも、焦るとオネェ言葉が暴発。初配信から「ただのオネェになっちゃった」と反省するほど。この「営業オネェ（？）」ぶりがリスナーの笑いを誘う。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>好きなものを語り出すと止まらない早口</h3>
+                    <p>ヒプマイやデレステの推しについて語る時は、VASE内屈指の早口オタクに。愛が深すぎるあまりの限界化配信は、ファンから「一番生き生きしている」と好評。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>鬼畜音ゲーへの異常な執着</h3>
+                    <p>難攻不落の音ゲー『ADOFAI』にドハマりし、ボロボロになりながらも「無限に楽しい」と語る。並外れた集中力とドMゲーマー気質を見せ、リスナーを驚愕させた。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>TS化「シルビアちゃん」の爆誕</h3>
+                    <p>誕生日配信で、自身を女の子化した「シルビアちゃん」のイラストを贈られ困惑。と言いつつも「TS大好き」と大喜びし、新たなネタとして受け入れる懐の深さを見せた。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>菜鳥 ひなた | PROJECT NEBULA Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #00f5d4;
+            --char-rgb: 0, 245, 212;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../projectnebula_index.html" class="char-back">
+            <i class="fa-solid fa-shuttle-space"></i> BACK TO HUB
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">NATORI HINATA</div>
+        <h1 class="char-name">菜鳥 ひなた</h1>
+        <div class="char-tags">
+            <span class="char-tag">#菜鳥ひなた</span>
+            <span class="char-tag">#ひなもす</span>
+            <span class="char-tag">#こんひな</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-sun"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>DEBUT:</strong> 2024年8月30日</p>
+                <p><strong>BIRTHDAY:</strong> 3月15日</p>
+                <p><strong>HEIGHT:</strong> 150cm</p>
+                <p><strong>FAN NAME:</strong> ひなもす</p>
+                <p><strong>OSHI MARK:</strong> 🪿☀</p>
+                <p><strong>ROLE:</strong> ポカポカ担当</p>
+            </div>
+            <div class="char-bio">
+                <p>「本日も日向日より、PROJECT NEBULAのポカポカ担当菜鳥ひなたです！」ギターの弾き語りを愛する少女。愛用のギターは白いYAMAHA APX600。ぷろねぶ伝統のポンをしっかり継承しており、裏での打ち合わせ音声を流してしまったり、ホラゲーでガチ泣きしたりと愛嬌たっぷり。褒められるのが大好きで、自ら「全方向美少女」と自称する自己肯定感の高さが魅力。ミントグリーンの瞳とツイン三つ編みがトレードマーク。</p>
+            </div>
+        </section>
+
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>ギターへの情熱と「ビヨンビヨン弦」</h3>
+                    <p>配信の9.9割が弾き語り枠。しかし、弦を一度も張り替えたことがなく、サビてビヨンビヨンになった弦で弾き続けていたという驚きのエピソードを持つ。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>ミュートし忘れで打ち合わせ丸聞き事件</h3>
+                    <p>配信開始前にミュートを切り忘れ、「あ、どうなんですかねこれ合ってますか？」という裏での業務連絡や打ち合わせの音声をリスナーに丸聞きされてしまった。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>家族（妹）とのほっこりエピソード</h3>
+                    <p>妹ととても仲が良く、Duolingoの唯一のフレンド。幼少期には焼肉を早く食べたいあまり、網戸に突進して枠ごと外してひっくり返ったというお転婆伝説もある。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>ゆるゆる雑談と「カバの話」</h3>
+                    <p>リスナーとの会話が楽しすぎて歌い始めないこともしばしば。「カバの汗はピンク色」という雑学で盛り上がり、30分間カバの話だけで配信を完結させたことも。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>おしゃぶり耐久配信</h3>
+                    <p>「おしゃぶり」をくわえながら歌うというカオスな耐久配信を行い、職場でこっそりチェックしていたリスナーを気まずい思いにさせた。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

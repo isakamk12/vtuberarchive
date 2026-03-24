@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>リリア・ツェペル | VASE Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #00cc99;
+            --char-rgb: 0, 204, 153;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../vase_index.html" class="char-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK TO HUB
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Lilia Tsepel</div>
+        <h1 class="char-name">リリア・ツェペル</h1>
+        <div class="char-tags">
+            <span class="char-tag">#リリア・ツェペル</span>
+            <span class="char-tag">#おやつの眷属</span>
+            <span class="char-tag">#バトオペ2</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-gem"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>DEBUT:</strong> 2021年4月29日</p>
+                <p><strong>BIRTHDAY:</strong> 11月1日</p>
+                <p><strong>HEIGHT:</strong> 143cm (自称155cm)</p>
+                <p><strong>FANNAME:</strong> おやつの眷属</p>
+                <p><strong>SPECIES:</strong> 吸血鬼</p>
+            </div>
+            <div class="char-bio">
+                <p>VASE 3期生の子供の吸血鬼。「おやつ（血）を求めて人間界へやってきた」という。喜怒哀楽が激しく天真爛漫なキャラクターで、ゲームと歌が大好き。特に『バトオペ2』や『FGO』への愛は深く、夢のオペレーター実装や感情的な朗読配信でファンを魅了。自身の持病も「超激レア」とポジティブに捉え、笑顔を届けるために活動している。</p>
+            </div>
+        </section>
+
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>異例 of 「青い卵」からのデビュー</h3>
+                    <p>正式デビューまでの約1ヶ月間、姿を明かさず「青い卵」のままで配信を続けた。配信を重ねるごとに卵の模様が増えていくというユニークな演出でリスナーを驚かせた。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>バトオペ2での愛あるプロレスと夢の実現</h3>
+                    <p>『バトオペ2』の熱狂的プレイヤー。リスナーから愛の集中砲火（スナイプ）を受けるのが日常。公式配信出演を経て、ついに念願の「オペレーターボイス」担当という夢を叶えた。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>「おやつの眷属」への重すぎる愛と嫉妬</h3>
+                    <p>リスナーへの束縛が強いヤンデレ気質を公言。「浮気は許さないよ」「次出て行ったら鍵閉めるから」と、激重な愛で多くのファン（おやつの眷属）を虜にしている。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>FGO愛が深すぎるあまりのガチ泣き</h3>
+                    <p>『FGO』のストーリーに深く感情移入し、配信中にガチ泣きするほど。2部の配信許可が降りた際には「動悸が止まらない」と狂喜乱舞し、ファンと喜びを分かち合った。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>持病を笑い飛ばす「ニュータイプ」な強さ</h3>
+                    <p>脳や血液の病気を公表しているが、10万人に数人の希少な症例であると知り「超激レアやん！ニュータイプ！」と大興奮。苦しい入院生活を経て「誰かを笑顔にしたい」とVTuberになった信念を持つ。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>お尻に血豆事件とポンコツエピソード</h3>
+                    <p>1年前のチョコを食べて悶絶したり、お尻に血豆ができて病院送りになった顛末を詳細に語るなど、飾らない（？）ポンコツぶりがリスナーの笑いを誘う。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

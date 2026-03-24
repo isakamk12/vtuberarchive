@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天ノ守 露 | VRegion Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #e5c07b;
+            --char-color-alt: #0077b6;
+            --char-rgb: 229, 192, 123;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../vregion_index.html" class="char-back">
+            <i class="fa-solid fa-mountain-sun"></i> BACK TO HUB
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">AMANOMORI TSUYU</div>
+        <h1 class="char-name">天ノ守 露</h1>
+        <div class="char-tags">
+            <span class="char-tag">#つゆてんかく</span>
+            <span class="char-tag">🐙</span>
+            <span class="char-tag">💧</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-id-card"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>PREFECTURE:</strong> 大阪府</p>
+                <p><strong>BIRTHDAY:</strong> 11月7日</p>
+                <p><strong>DEBUT:</strong> 2022年4月13日</p>
+                <p><strong>FAN MARK:</strong> 🐙💧</p>
+            </div>
+            <div class="char-bio">
+                <p>地方創生バーチャルタレントグループ「VRegion」大阪府担当。見た目とは裏腹なコテコテの大阪弁で話し、キレのあるツッコミが秀逸。頭にはたこ焼きが乗っており、オッドアイは御堂筋線（赤）と四つ橋線（青）を表している。大阪・日本橋を「庭」とし、大阪難読地名にも精通。頭のたこ焼きはいざという時の「非常食」。</p>
+            </div>
+        </section>
+
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>大の虫嫌い、特に「セミ」は天敵</h3>
+                    <p>爬虫類や両生類は平気（首に巻いたり食べることも可能）だが、虫は絶対にNG。特に小学生時代のトラウマからセミに対しては強い恐怖心を抱いており、「夏は地獄」と語るほどです。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>配信トラブルはお約束！？ 愛すべきポンコツ</h3>
+                    <p>配信開始時にミュートになっていたり、SHOWROOMのURLだけしか配信されていなかったりと、ポンコツなミストラブルが多め。「うちがアホか！アホかうちは！」と自らツッコミを入れる姿が定番です。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>メシテロと「月化粧」への深すぎる愛</h3>
+                    <p>配信中は常にお腹を空かせており、自身で食べ物の話をして自爆しがち。特に大阪土産の「みるく饅頭 月化粧」を愛してやまず、3周年までにコラボしたいと熱烈なプレゼンを繰り返しています。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>超・めんどくさがりなインドア派</h3>
+                    <p>部屋にいる時は一歩も動かなくて済むように、手の届く範囲に全てを置く工夫を凝らしています。「掃除機がないのでクイックルワイパーとコロコロで頑張っている」という驚愕の私生活も明かされています。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>大阪への深い愛と地元知識</h3>
+                    <p>難読地名（喜連瓜破、放出など）に精通し、日本橋のディープな情報にも明るい。オンラインバスツアーの配信では、景色の映像だけで現在地を特定する驚異の大阪知識を披露し、メンバーを驚かせました。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

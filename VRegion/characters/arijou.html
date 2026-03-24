@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>有城 忠臣 | VRegion Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #e5c07b;
+            --char-color-alt: #d19a66;
+            --char-rgb: 229, 192, 123;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../vregion_index.html" class="char-back">
+            <i class="fa-solid fa-mountain-sun"></i> BACK TO HUB
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">ARIJOU TADAOMI</div>
+        <h1 class="char-name">有城 忠臣</h1>
+        <div class="char-tags">
+            <span class="char-tag">#有城忠臣</span>
+            <span class="char-tag">📦</span>
+            <span class="char-tag">🧅</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-id-card"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>PREFECTURE:</strong> 兵庫県</p>
+                <p><strong>DEBUT:</strong> 2023年4月1日</p>
+                <p><strong>AGE:</strong> 26歳 (推定)</p>
+                <p><strong>FAN MARK:</strong> 📦</p>
+                <p><strong>JOB:</strong> 映像クリエイター</p>
+            </div>
+            <div class="char-bio">
+                <p>地方創生バーチャルタレントグループ「VRegion」兵庫担当。淡路島の玉ねぎをコンセプトにしたビジュアルに反し、低音ボイスのヘビースモーカー。本業はフリーランスの映像クリエイターで、CMやロゴ作成を手掛ける。ガジェット収集と料理、そして10年以上のFPS歴を持つゲーマーとしての一面も併せ持つ。かつては「おみろぐ」という名義で活動していた。</p>
+            </div>
+        </section>
+
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>大嘘ショート動画での爆伸びと果てしない謝罪</h3>
+                    <p>「漢字でGO!」の爆速タイピングクリア動画が大バズりするも、実は高度な編集スキルを駆使した合成（大嘘）。あまりに信じ込む視聴者が増えたため、配信のたびに「すみません、合成です」と謝罪し、「嘘つくな」というコメントを許可する独自ルールが設けられました。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>全ての元凶はバイク事故による肩の骨折</h3>
+                    <p>合成ショート動画を作り始めたのは、バイク事故で鎖骨を骨折し、予定していたツーリング動画が出せなくなった暇つぶしがきっかけ。不運を転機に変えるクリエイター魂（？）を見せました。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>「江戸川コナン」率いるリスナー軍団とのコナン人狼</h3>
+                    <p>コメント欄が「江戸川コナン」をはじめとするコナンキャラの偽垢で占拠される異常事態が発生。モデレーター権限を剥奪しまくる「モデレーター大剥奪会」を開催するなど、カオスな展開で盛り上がりました。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>PC炎上からのヤケクソ爆買いツーリング</h3>
+                    <p>PCの簡易水冷クーラーが爆発・炎上し、編集データが全滅。その鬱憤を晴らすため、予算10万円を握りしめてスノーピークへ爆買いツーリングに向かうという破天荒な行動でリスナーを驚かせました。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>極度の片付けられない病と凄まじい収集癖</h3>
+                    <p>机の上が物で埋め尽くされ、Amazonで年間200万以上使うほどの浪費家・収集癖の持ち主。高額な漢方薬「荊芥連翹湯（けいがいれんぎょうとう）」の値段に嘆くなど、生活感あふれる（？）エピソードが尽きません。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

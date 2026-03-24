@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>甘美 梨羽 | VASE Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #ffcc00;
+            --char-rgb: 255, 204, 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../vase_index.html" class="char-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK TO HUB
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Kanbi Rioha</div>
+        <h1 class="char-name">甘美 梨羽</h1>
+        <div class="char-tags">
+            <span class="char-tag">#甘美梨羽</span>
+            <span class="char-tag">#なし連隊</span>
+            <span class="char-tag">#元自衛官</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-jet-fighter-up"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>DEBUT:</strong> 11月7日 (なしどくんとして)</p>
+                <p><strong>BIRTHDAY:</strong> 3月3日</p>
+                <p><strong>FANNAME:</strong> なし連隊</p>
+                <p><strong>OSHIMARK:</strong> 🍐🕊️</p>
+            </div>
+            <div class="char-bio">
+                <p>元陸上自衛官という異色の経歴を持つVTuber。梨の妖精「なしどくん」から進化して今の姿に。自衛隊仕込みの射撃の腕前や、大型免許所持というギャップが魅力。お酒（特に日本酒）と麻雀をこよなく愛する。緊張しいで涙もろい性格で、初お披露目でのミュート事件や大号泣配信など、人間味あふれる活動で親しまれている。</p>
+            </div>
+        </section>
+
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>ギャップが凄い！元・陸上自衛官エピソード</h3>
+                    <p>自衛隊時代は需品科に所属し、大型トラックの運転や炊き出しに従事。射撃訓練では50点中45点の好成績を収めるプロ。今でもつい「フタフタマルマル」と自衛隊用語が出てしまう。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>筋金入りの呑兵衛！電気ブラン罰ゲーム</h3>
+                    <p>お酒が大好きで、麻雀配信のビリ罰ゲームに40度の「電気ブラン」を用意。自ら負けて強烈なお酒を食らう羽目に。日本酒イベントへの参戦やビールコラボも精力的に行う。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>歴史に残る初お披露目「ミュート事件」</h3>
+                    <p>記念すべき甘美梨羽としての姿をお披露目する配信にて、緊張のあまりマイクをミュートしたまま延々と喋り続ける大放送事故を起こした。これが伝説の始まりとなった。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>「白半梨園」応援ガールと梨羽梨</h3>
+                    <p>名前にちなみ、千葉県白井市の「白半梨園」応援ガールに就任。自ら梨の摘果作業を手伝い、自身の名前が冠された「梨羽梨（りおはなし）」が販売されるという夢を叶えた。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

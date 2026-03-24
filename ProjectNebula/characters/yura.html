@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>碓氷 ゆら | PROJECT NEBULA Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #88ccff;
+            --char-rgb: 136, 204, 255;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../projectnebula_index.html" class="char-back">
+            <i class="fa-solid fa-shuttle-space"></i> BACK TO HUB
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">USUI YURA</div>
+        <h1 class="char-name">碓氷 ゆら</h1>
+        <div class="char-tags">
+            <span class="char-tag">#碓氷ゆら</span>
+            <span class="char-tag">#ゆらみりー</span>
+            <span class="char-tag">#こんゆら</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-water"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>DEBUT:</strong> 2023年5月19日</p>
+                <p><strong>BIRTHDAY:</strong> 11月8日</p>
+                <p><strong>HEIGHT:</strong> 158cm (裸足156cm)</p>
+                <p><strong>FAN NAME:</strong> ゆらみりー</p>
+                <p><strong>BLOOD TYPE:</strong> A型</p>
+                <p><strong>MOTTO:</strong> 花より団子</p>
+            </div>
+            <div class="char-bio">
+                <p>「ゆるっとゆらっと心に癒しを𓂃 𓈒𓏸」PROJECT NEBULA所属の、新人アイドル見習いVtuber！清楚でふんわりとした癒やし系の見た目や声とは裏腹に、可愛い女の子のキャラクターを見るとスイッチが入り「おじさん化」してしまう一面も。特に「太もも」への情熱は凄まじい。平日の朝6時から「朝活」配信を精力的に行っており、リスナーたち一人一人に名前を呼んで挨拶をする、ゆらみりー想いの心優しい性格。</p>
+            </div>
+        </section>
+
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>可愛い女の子に目がない！？「ゆらおじ」の出現</h3>
+                    <p>ゲーム配信のPV鑑賞会などで、可愛い女の子の「太もも」や「食い込み」について大興奮で語り、リスナーから「お巡りさんこっちです」と突っ込まれるのがお約束の展開。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>はらぺこアイドル！「お腹の音ASMR」</h3>
+                    <p>朝活配信中にはマイクに乗ってしまうほど盛大にお腹の音を鳴らしてしまうことが多々あり、リスナーからは「お腹の音ASMR助かる」といじられ、なんと「お腹の音代」としてスパチャが飛んでくることも。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>朝活の女王！ファンへの特大の愛と涙</h3>
+                    <p>毎日休まず朝活配信を続け、ファンからの温かいコメントには感極まってボロボロと嬉し泣きをしてしまうピュアな心の持ち主。ファンアートはフォルダに保存して疲れた時に眺めている。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>おっちょこちょいな「初手ポン」事件</h3>
+                    <p>自身の初配信で開始早々、一番最後に出すべき「嬉しいお知らせ」のスライドをいきなり画面に表示してしまった。慌てて隠しながら「見なかったことにしてください！」とお願いする姿が話題になった。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>ぬいぐるみ生存者報告</h3>
+                    <p>朝活での大人気恒例コーナー。寝相がアクティブすぎてベッドから蹴り落とされてしまう5体のぬいぐるみのうち、その日の朝に何体がベッドの上で「生存」していたかを報告する。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

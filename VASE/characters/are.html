@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>はるなぎ あれ | VASE Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #ff3366;
+            --char-rgb: 255, 51, 102;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../vase_index.html" class="char-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK TO HUB
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Harunagi Are</div>
+        <h1 class="char-name">はるなぎ あれ</h1>
+        <div class="char-tags">
+            <span class="char-tag">#はるなぎあれ</span>
+            <span class="char-tag">#アーレ</span>
+            <span class="char-tag">#規格外Vsinger</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-masks-theater"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>DEBUT:</strong> 2025年2月14日</p>
+                <p><strong>BIRTHDAY:</strong> 4月29日</p>
+                <p><strong>FANNAME:</strong> アーレ</p>
+                <p><strong>OSHICOLOR:</strong> オレンジ</p>
+            </div>
+            <div class="char-bio">
+                <p>Vsingerユニット『Shadow'z BEAT』所属の規格外シンガー。癒やしボイスのメガネお兄ちゃんだが、その実体はボケたがりのイレギュラー。2026人に挨拶するまで終われない124時間耐久など、数々の規格外な伝説を残す。海外のドラゴンボールファンからも人気が高く、お酒が入ると饒舌に愛を語る一面も。</p>
+            </div>
+        </section>
+
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>伝説の「あけおめ2026人耐久配信」</h3>
+                    <p>2026人に挨拶をもらうまで終われない企画を決行。結果、約124時間にわたり配信を続け、VTuber界の耐久配信の新たな伝説としてニュースにも取り上げられた。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>他人の枠でパンツの色を叫ぶ「パンツの人」</h3>
+                    <p>他人の配信枠に現れては自らのパンツの色を報告するという謎の「人助け」活動を展開。今では「パンツの人」として親しまれ、メンバーシップスタンプまで制作された。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>DB歌ってみたでメキシコ勢に見つかる</h3>
+                    <p>ドラゴンボールのカバー曲がメキシコで大バズり。コメント欄がスペイン語の「セニョール」達で埋め尽くされるという、国際的なバズりを経験した歌い手でもある。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>お酒を飲むと愛を語り出す饒舌なお兄さん</h3>
+                    <p>お酒には強いが、酔うとテンションが上がり愛を語る。深夜のBar風配信では、ハイボールを片手にリスナーや仲間に向かって饒舌にボケと愛を振りまく。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

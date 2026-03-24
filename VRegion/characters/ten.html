@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>幸魂 天 | VRegion Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #e06c75;
+            --char-color-alt: #d19a66;
+            --char-rgb: 224, 108, 117;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../vregion_index.html" class="char-back">
+            <i class="fa-solid fa-mountain-sun"></i> BACK TO HUB
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">SAKIMITAMA TEN</div>
+        <h1 class="char-name">幸魂 天</h1>
+        <div class="char-tags">
+            <span class="char-tag">#はにわーるど</span>
+            <span class="char-tag">🦏</span>
+            <span class="char-tag">☯</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-id-card"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>PREFECTURE:</strong> 埼玉県</p>
+                <p><strong>BIRTHDAY:</strong> 2月2日</p>
+                <p><strong>DEBUT:</strong> 2024年4月14日</p>
+                <p><strong>FAN NAME:</strong> 天ぺすと</p>
+            </div>
+            <div class="char-bio">
+                <p>地方創生バーチャルタレントグループ「VRegion」埼玉県担当。自称・埼玉の守護神。悪いことをしすぎてハニワに封印されていたが、ゲーム耐久で世界を救ったことで人型の姿を取り戻した。栄養士・調理師免許を持つガチの料理系VTuberであり、レトロゲーム（特にSFC）をこよなく愛する。涙もろい一面もあり、ストーリーに感動して大号泣することも。</p>
+            </div>
+        </section>
+
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>悪いことをしてハニワに封印されていた過去</h3>
+                    <p>デビューから約10ヶ月間は「ハニワ」の姿で活動。悪いことをしすぎて封印されていたが、『ドラクエ3』の長時間耐久配信で「世界を救った」功績により、自身の誕生日に念願の人型の姿を初お披露目しました。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>小麦粉と向き合う狂気の「ちねり米」</h3>
+                    <p>登録者耐久配信などで、小麦粉を水で練って米粒サイズにする「ちねり米」を延々と作成。悟りを開きかけながら作り続ける姿から「ちねりの人」と呼ばれるほど。後にそのちねり米で作ったチャーハンは絶品だったそうです。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>「カブトムシ入りチョコ」100万回再生突破</h3>
+                    <p>本物の食用カブトムシをチョコでコーティングしたショート動画が100万回再生を突破。アンチコメントすら楽しむ強メンタルを見せつつ、そのチョコは運営に送りつけて食レポをさせるという容赦ない一面も。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>栄養士・調理師免許を持つ料理の腕前</h3>
+                    <p>「おもしろお料理チャンネル」を掲げる通り、料理の腕はガチ。「揚げない天丼」などのユニークな料理を披露する一方、配信中は深夜の飯テロも欠かしません。「ちくわぶ」を愛してやまない埼玉県民らしい一面も。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>レトロゲームへの情熱と涙もろい感性</h3>
+                    <p>SFCソフトを箱・説明書付きで集めるガチ勢。「MOTHER」シリーズや「クロノ・トリガー」などストーリー重視のゲームが大好きで、感情移入して大号泣してしまうピュアな心の持ち主です。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
