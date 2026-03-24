@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>真昼 ねる | ProForma Nova Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #ffd11a;
+            --char-rgb: 255, 209, 26;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../proformanova_index.html" class="char-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK TO HUB
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Mahiru Neru</div>
+        <h1 class="char-name">真昼 ねる</h1>
+        <div class="char-tags">
+            <span class="char-tag">#真昼ねる</span>
+<span class="char-tag">#まひるらいぶ</span>
+<span class="char-tag">#清楚系VTuber</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-sun"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>DEBUT:</strong> 2021年9月4日</p>
+<p><strong>BIRTHDAY:</strong> 1月18日</p>
+<p><strong>HEIGHT:</strong> 148cm</p>
+<p><strong>AGE:</strong> 20歳</p>
+<p><strong>FANMARK:</strong> ☀️💤</p>
+            </div>
+            <div class="char-bio">
+                <p>自堕落でぐーたらな、よく寝る女の子。明るくノリが良く、太陽のような性格だが、ゲーム中の真剣な表情やメスガキのような生意気な一面も魅力。ゲーセン店員やe-sportsチームスタッフの経歴を持つガチゲーマー。</p>
+            </div>
+        </section>
+
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="char-episodes">
+                
+                <div class="char-episode">
+                    <h3>自称「清楚系VTuber」とリスナーの戦い</h3>
+                    <p>常に清楚系を自称するが、リスナーからは鋭いツッコミを受け続けるのがお約束。清楚の定義を読み上げ「完璧に私のことじゃん！」と言い張る一幕も。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>「永遠の18歳」からの卒業と飲酒配信</h3>
+                    <p>3周年を機に年齢を20歳に変更。飲酒配信を解禁し、誕生日配信では「ほろよい」でリスナーと乾杯を交わし、大人の階段（？）を登った。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>エリートニートの圧倒的「睡眠力」</h3>
+                    <p>16時間寝てしまいお昼配信をすっぽかすなど、設定通りの睡眠力を持つ。一方でApexのランク上げ企画では10時間以上の耐久をこなす情熱も併せ持つ。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>配信中のポンコツやらかしと黒歴史</h3>
+                    <p>Apex配信中に間違えてポケモンの動画音を流してしまい大パニックになったり、初配信の音質の悪さを黒歴史として振り返ったり、愛すべきポンコツ要素が多い。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

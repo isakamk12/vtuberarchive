@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>泡清 みる | ProForma Nova Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #99ccff;
+            --char-rgb: 153, 204, 255;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../proformanova_index.html" class="char-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK TO HUB
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Awasuzu Miru</div>
+        <h1 class="char-name">泡清 みる</h1>
+        <div class="char-tags">
+            <span class="char-tag">#泡清みる</span>
+<span class="char-tag">#みるにちゅーもく</span>
+<span class="char-tag">#みるギャラリー</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-soap"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>DEBUT:</strong> 2025年5月2日</p>
+<p><strong>BIRTHDAY:</strong> 5月15日</p>
+<p><strong>HEIGHT:</strong> 164cm</p>
+<p><strong>SPECIES:</strong> ロシアンブルーハムスター</p>
+<p><strong>FANNAME:</strong> みるみん</p>
+<p><strong>FANMARK:</strong> 🐹🫧</p>
+            </div>
+            <div class="char-bio">
+                <p>三度の飯より食べることが大好きな「もぐもぐハムスター」。清楚に見えるが天真爛漫なガール。第5人格の熱狂的伝道師を自称し、公式アンバサダーを目指している。毎週水曜夜の紅茶雑談「マヨティー」でもリスナーを癒やしている。</p>
+            </div>
+        </section>
+
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="char-episodes">
+                
+                <div class="char-episode">
+                    <h3>伝説の初配信はゲームの世界から逃走スタート</h3>
+                    <p>開始直後、第5人格の世界でハンターから逃げ回りながら挨拶するというドタバタな寸劇からスタート。初配信の緊張を逆手に取ったユニークなデビューを飾った。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>食べ物へのガチすぎる執着と収益化餃子配信</h3>
+                    <p>収益化記念で「餃子100個作るまで終わらない配信」を実施。ひたすら餃子を包み続けるなど、自ら「食のガチ勢」と語る通りの食いしん坊エピソードを数多く持つ。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>水曜夜の癒し「マヨティー」と紅茶愛</h3>
+                    <p>毎週水曜夜に「真夜中ティータイム（マヨティー）」を実施。紅茶が大好きで、自ら淹れた紅茶の香りを解説しながらのんびり語り合う癒しの時間を提供している。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>グループへの愛と移籍の決断</h3>
+                    <p>所属プロジェクトの解散時、個人勢の道もあったが「グループで何か成し遂げたい」という強い思いから移籍を決断。活動スタイルを変えず新たな仲間と歩み続けている。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

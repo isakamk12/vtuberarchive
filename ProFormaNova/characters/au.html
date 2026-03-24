@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>銘兎目 あう | ProForma Nova Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #ff99cc;
+            --char-rgb: 255, 153, 204;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../proformanova_index.html" class="char-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK TO HUB
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Metome Au</div>
+        <h1 class="char-name">銘兎目 あう</h1>
+        <div class="char-tags">
+            <span class="char-tag">#銘兎目あう</span>
+<span class="char-tag">#あうサポ</span>
+<span class="char-tag">#あう時間</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-eye"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>DEBUT:</strong> 2025年3月7日</p>
+<p><strong>BIRTHDAY:</strong> 5月25日</p>
+<p><strong>HEIGHT:</strong> 150cm</p>
+<p><strong>WEIGHT:</strong> 48kg</p>
+<p><strong>ORIGIN:</strong> 金星</p>
+<p><strong>FANNAME:</strong> あうサポ</p>
+<p><strong>FANMARK:</strong> 👀</p>
+            </div>
+            <div class="char-bio">
+                <p>「熱血不思議ちゃん担当」の金星人。1秒間に15回のクリック連打という特技を持ち、動物と会話ができる。ストリートファイター6に熱中しており、腱鞘炎になるほどコンボ練習に打ち込む努力家。リスナーの名前をノートに書き溜めるほどファン思い。</p>
+            </div>
+        </section>
+
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="char-episodes">
+                
+                <div class="char-episode">
+                    <h3>伝説の耐久配信と「鶏肉2キレ」</h3>
+                    <p>Twitch初配信でスト6シルバー到達まで20時間の耐久を実施。配信中に席を外せないと思い込み、数秒で鶏肉2切れだけ食べて戻ってきた過酷なエピソードは語り草となっている。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>寝不足が生んだ迷言「メキフラ」</h3>
+                    <p>EVOミラー配信中、寝ぼけた頭で「メキシコはフランスだっけ？」という衝撃的な迷言を放った。以来、この「メキフラ」という言葉はファンの間で語り継がれている。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>動物と会話ができる金星人</h3>
+                    <p>特技は動物との会話。野良猫との交流に加え、配信中には実際にカエルに対しても言葉で指示を出し、操作（？）した動画が存在することを明かしている。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>リスナーへの深い愛と「目とめ博物館」の夢</h3>
+                    <p>対戦したリスナーの名前をノートに書き残しており、「いつか博物館に展示してみんなに自分の名前を見つけてほしい」と語るほど、ファンとの絆を大切にしている。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

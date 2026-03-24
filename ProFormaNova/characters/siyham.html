@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>しーはむ | ProForma Nova Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #ffcc99;
+            --char-rgb: 255, 204, 153;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../proformanova_index.html" class="char-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK TO HUB
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Siyham</div>
+        <h1 class="char-name">しーはむ</h1>
+        <div class="char-tags">
+            <span class="char-tag">#しーはむ</span>
+<span class="char-tag">#はむぴぽ</span>
+<span class="char-tag">#清楚担当</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-headset"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>DEBUT:</strong> 2024年2月10日</p>
+<p><strong>BIRTHDAY:</strong> 11月27日</p>
+<p><strong>HEIGHT:</strong> 123cm</p>
+<p><strong>AGE:</strong> 2歳 (ハム年齢)</p>
+<p><strong>FANNAME:</strong> はむぴぽ</p>
+            </div>
+            <div class="char-bio">
+                <p>「はむはむ清楚担当」の頭がぶっとんでるハムスター。小柄ゆえに集合写真では雲の台に乗せられることも。クリエイター気質で配信画面や衣装案を自作する一方、パジャマを道路に落としたり逆張り伝説を持っていたりとポンコツエピソードも豊富。</p>
+            </div>
+        </section>
+
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="char-episodes">
+                
+                <div class="char-episode">
+                    <h3>事務所のキービジュアルで「雲の台」に乗せられる</h3>
+                    <p>身長が123cmと小さいため、キービジュアル作成時に他のメンバーと並ぶと違和感が出るという理由で、足元に「雲の台」を追加され身長を底上げされた。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>パジャマが道路に落ちていた事件</h3>
+                    <p>家の向かいの道路に自分のパジャマが落ちているのを発見。カバンにパジャマを引っかけたまま気付かずに外出し落したという、本人にとっての「今年一番のホラー体験」。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>コンビニのレシートの裏に新衣装をデザイン</h3>
+                    <p>クリエイター気質で配信資材を自作。新衣装のデザイン案も、コンビニバイト中にレシートの裏にこっそり描いて練り上げていたという努力家な一面がある。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>小学生時代の「超逆張りマン」伝説</h3>
+                    <p>子供の頃はかなりの反抗期で「超逆張りマン」だった。先生に「帰りなさい！」と言われ、本当にランドセルを持ってそのまま帰宅してしまったという伝説を持つ。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

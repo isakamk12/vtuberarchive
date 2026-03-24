@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>なかもと おまち | ProForma Nova Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #4da3ff;
+            --char-rgb: 77, 163, 255;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../proformanova_index.html" class="char-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK TO HUB
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Nakamoto Omachi</div>
+        <h1 class="char-name">なかもと おまち</h1>
+        <div class="char-tags">
+            <span class="char-tag">#なかもとおまち</span>
+<span class="char-tag">#なかやん</span>
+<span class="char-tag">#スト6</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-keyboard"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>DEBUT:</strong> 2025年7月16日</p>
+<p><strong>BIRTHDAY:</strong> 17歳 (自称)</p>
+<p><strong>HEIGHT:</strong> 153cm</p>
+<p><strong>BLOODTYPE:</strong> AB型</p>
+<p><strong>FANNAME:</strong> なかやん</p>
+<p><strong>ATTRIBUTE:</strong> 2.2次元にゃんこ</p>
+            </div>
+            <div class="char-bio">
+                <p>「自称無敵のくいしん坊スーパーカリスマにゃんこ」。元気で人懐っこいが実は緊張しい。ストリートファイター6に熱中しており、ジェイミーを一筋で使い続ける努力家。コスプレイヤーや顔出しモデル（真白ふとん名義）としても活動。</p>
+            </div>
+        </section>
+
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="char-episodes">
+                
+                <div class="char-episode">
+                    <h3>名前の由来は「蒙古タンメン中本」</h3>
+                    <p>大好きな蒙古タンメン中本とコラボしたくて「なかもと」と命名。しかしイメージカラーを青にしてしまい「食べ物と離れている」と後悔するお茶目な一面がある。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>格ゲーゼロから「ジェイミー」一筋</h3>
+                    <p>格ゲー未経験からスト6を開始。ジェイミー使いがプロに勝つ姿に憧れ、以来ブレずにクラシック操作・レバーでジェイミーを使い続ける硬派な一面を持つ。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>サウジアラビア開催の「EWC」へ弾丸渡航</h3>
+                    <p>スーパーファンクラブに当選し、サウジアラビアで開催されたEsports World Cupへ現地観戦に。20時間のフライトでダウンしつつも、現地の食を楽しむバイタリティを見せた。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>激辛ラーメン実写食レポで悶絶</h3>
+                    <p>実写Vlogで激辛ラーメン「鬼金棒」の鬼増しに挑戦。悶絶しながらも完食し、その後にイチゴバナナパフェを食べて帰るという驚異の食いしん坊ぶりを発揮した。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

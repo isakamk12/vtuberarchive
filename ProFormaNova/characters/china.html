@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>月皇 ちな | ProForma Nova Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #c4aead;
+            --char-rgb: 196, 174, 173;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../proformanova_index.html" class="char-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK TO HUB
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Tsukigami China</div>
+        <h1 class="char-name">月皇 ちな</h1>
+        <div class="char-tags">
+            <span class="char-tag">#月皇ちな</span>
+<span class="char-tag">#ちなぐみ</span>
+<span class="char-tag">#chi7art</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-crown"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>DEBUT:</strong> 2024年6月1日</p>
+<p><strong>BIRTHDAY:</strong> 5月9日</p>
+<p><strong>HEIGHT:</strong> 166cm</p>
+<p><strong>FANNAME:</strong> ちなぐみ</p>
+<p><strong>FANMARK:</strong> 🐺☾</p>
+            </div>
+            <div class="char-bio">
+                <p>ゲームと食べることが大好きな一匹狼。極度の人見知りで感情表現が乏しいが、ゲーム中はテンション高め。狼のような嗅覚を持ち美味しい食べ物を見つけるのに長けている。実は元10万いいね超えのバズりコスプレイヤー。</p>
+            </div>
+        </section>
+
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="char-episodes">
+                
+                <div class="char-episode">
+                    <h3>あつまれ どうぶつの森のイケメン狼を求めて限界化</h3>
+                    <p>狼系の住民を愛し、Switch2台持ちで1300時間プレイ。100枚以上のマイル旅行券を消費する離島ガチャ耐久で推しのシベリアを引いた際は過呼吸寸前で喜んだ。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>FPSになると性格が変わる闘争心</h3>
+                    <p>普段はクールだがゲームでは熱くなる。VALORANTで大会MVPを獲る実力者。マリオカートでは「1位を引きずり落とせ！」と叫ぶほどの闘争心を見せる。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>底なしの食欲と「お腹空いた」</h3>
+                    <p>配信の終盤には高確率で「お腹空いた」と言って締める。咀嚼音を響かせながらイクラ丼を食べる雑談や、海外の爆食い動画でのおすすめ埋め尽くしなど、食への愛が深い。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>小学生時代の律儀すぎる誘拐騒動</h3>
+                    <p>「知らない人について行かない」という教えを律儀に守りすぎ、友達の親の車を拒否して一人で裏道を帰宅。周囲を巻き込む大捜索に発展した幼少期の伝説がある。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

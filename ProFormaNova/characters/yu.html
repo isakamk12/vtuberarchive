@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水透 ユウ | ProForma Nova Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #4da3ff;
+            --char-rgb: 77, 163, 255;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../proformanova_index.html" class="char-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK TO HUB
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Minato Yu</div>
+        <h1 class="char-name">水透 ユウ</h1>
+        <div class="char-tags">
+            <span class="char-tag">#水透ユウ</span>
+<span class="char-tag">#ユウ人</span>
+<span class="char-tag">#クールジャパン</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-water"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>DEBUT:</strong> 2025年3月7日</p>
+<p><strong>BIRTHDAY:</strong> 4月11日</p>
+<p><strong>HEIGHT:</strong> 170cm</p>
+<p><strong>ORIGIN:</strong> 水星</p>
+<p><strong>BLOODTYPE:</strong> O型</p>
+<p><strong>FANNAME:</strong> ユウ人</p>
+<p><strong>FANMARK:</strong> 💎🫧</p>
+            </div>
+            <div class="char-bio">
+                <p>「クールな大人のお姉さん担当」を自称するが、実態はノンストップで喋り続ける人懐っこい性格。本人の言う「クール」とは「クールジャパン」の意味。ゲーム中は非常に熱くなりやすく、台パンにも定評がある熱血ゲーマー。</p>
+            </div>
+        </section>
+
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="char-episodes">
+                
+                <div class="char-episode">
+                    <h3>「クールな大人のお姉さん」の実態はノンストップトーカー</h3>
+                    <p>クール内担当を自称するが、配信ではノンストップで喋り続ける人懐っこい性格。感情豊かでお叫び遊ばさることもあり、視聴者を飽きさせない。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>水星出身の40数億歳</h3>
+                    <p>年齢を聞かれた際は「40数億年」と答える。地球の一般的なニュースや政治に疎いことも「水星人だから」という理由で説明している。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>負けず嫌いで台パン必須の熱血ゲーマー</h3>
+                    <p>プレイ中は非常に熱くなりやすく、台パンに定評がある。スト6では自身のミスに怒ったり、親指が筋肉痛になるまで500ラウンド耐久をやり遂げたりするほどの熱量を持つ。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>媚びないサバサバした「男気」ある性格</h3>
+                    <p>不快なコメントには「親の前で音読できる名前できなさい」と一刀両断。ゲームと配信活動第一の姿勢を貫く芯の強さがある。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
