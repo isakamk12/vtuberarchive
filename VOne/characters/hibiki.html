@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>甘井 ひびき | VOne Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #ff7f50;
+            --char-color-alt: #1e90ff;
+            --char-rgb: 255, 127, 80;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../vone_index.html" class="char-back">
+            <i class="fa-solid fa-angle-left"></i> BACK TO HUB
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">AMAI HIBIKI</div>
+        <h1 class="char-name">甘井 ひびき</h1>
+        <div class="char-tags">
+            <span class="char-tag">#ぶいわん</span>
+            <span class="char-tag">#事務兼タレント</span>
+            <span class="char-tag">#期待の新人</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-user-tie"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>BIRTHDAY:</strong> 11月1日</p>
+                <p><strong>HEIGHT:</strong> 158cm</p>
+                <p><strong>FAN NAME:</strong> ひびきすなー</p>
+                <p><strong>ORIGIN:</strong> ぶいわんproduction (One Connect)</p>
+            </div>
+            <div class="char-bio">
+                <p>ぶいわんproductionの専属イメージキャラクター。事務所の事務作業をこなしながら、ライブ活動も精力的に行っている自称「働くVTuber」。法人運営の強みを活かし、ゲーム出演やカフェとの連動など、多角的な活動を目指す期待の新人です。</p>
+            </div>
+        </section>
+
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-briefcase"></i> EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>ぶいわんproduction設立と第1号デビュー</h3>
+                    <p>2025年4月、株式会社ワンコネクトが設立した新事務所「ぶいわんproduction」の第1号タレントとして活動を開始。持ち前の明るさと事務処理能力で、事務所の屋台骨を支えつつ、タレントとしても急成長を遂げています。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>事務作業とライブの両立</h3>
+                    <p>午前中は事務所で書類整理やメール対応を行い、午後はボイトレやダンスレッスン、そして夜には配信やライブを行うというハードなスケジュールをこなす。「事務服でステージに上がる日も近いかもしれません」と冗談を飛ばすことも。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

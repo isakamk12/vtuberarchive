@@ -617,3 +617,133 @@ body {
         margin: 1rem auto 0;
     }
 }
+
+/* Corporate Section */
+.vo-corporate-content {
+    margin-top: 4rem;
+}
+
+.vo-corp-card {
+    background: #fff;
+    padding: 3rem;
+    border-radius: 30px;
+    box-shadow: var(--vo-shadow);
+    border: 1px solid rgba(30, 144, 255, 0.1);
+    margin-bottom: 2.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.vo-corp-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 900;
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--vo-text);
+}
+
+.vo-corp-card h3 i {
+    color: var(--vo-blue);
+    font-size: 1.8rem;
+}
+
+.vo-corp-card p {
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+.vo-business-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 3rem;
+}
+
+.vo-biz-item {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 20px;
+    border: 1px solid rgba(30, 144, 255, 0.08);
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.vo-biz-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(30, 144, 255, 0.08);
+    border-color: var(--vo-blue);
+}
+
+.vo-biz-item h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: var(--vo-blue);
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+    letter-spacing: 1.5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.vo-biz-item h4::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: var(--vo-orange);
+    border-radius: 50%;
+}
+
+.vo-biz-item p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.7;
+}
+
+.vo-achievement {
+    display: flex;
+    gap: 25px;
+    background: linear-gradient(135deg, #fff, rgba(30, 144, 255, 0.03));
+    padding: 2.5rem;
+    border-radius: 25px;
+    border: 1px solid rgba(30, 144, 255, 0.1);
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+.vo-achievement-icon {
+    font-size: 3rem;
+    color: var(--vo-orange);
+    filter: drop-shadow(0 4px 8px rgba(255, 127, 80, 0.3));
+}
+
+.vo-achievement-text strong {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 0.6rem;
+    color: var(--vo-text);
+}
+
+.vo-achievement-text p {
+    font-size: 0.95rem;
+    color: #777;
+    margin: 0;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .vo-achievement {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+    }
+    .vo-corp-card {
+        padding: 2rem;
+    }
+}

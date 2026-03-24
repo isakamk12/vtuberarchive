@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>朧 | VBOX Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #556b2f;
+            --char-color-alt: #f5f5dc;
+            --char-rgb: 85, 107, 47;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../vbox_index.html" class="char-back">
+            <i class="fa-solid fa-compass"></i> BACK TO HUB
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">OBORO</div>
+        <h1 class="char-name">朧</h1>
+        <div class="char-tags">
+            <span class="char-tag">#朧V</span>
+            <span class="char-tag">#おもろやん</span>
+            <span class="char-tag">#御座候過激派</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-snake"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>BIRTHDAY:</strong> 2月16日</p>
+                <p><strong>HEIGHT:</strong> 192cm</p>
+                <p><strong>FAN NAME:</strong> 朧古分</p>
+                <p><strong>ORIGIN:</strong> 関西の廃れた社の白蛇 (1000歳以上)</p>
+            </div>
+            <div class="char-bio">
+                <p>幸運の象徴、白蛇の化身。最強のラスボスを目指しているが、幸運パワーのせいで善行ばかりしてしまう不憫な体質。酒と煙草を愛するヤニカス蛇。和菓子は「御座候」以外認めない過激派。低音ボイスのイケボと、お茶目な関西弁オカン気質のギャップが魅力です。</p>
+            </div>
+        </section>
+
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-scroll"></i> EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>終わらない禁煙耐久と「お香ストロー事件」</h3>
+                    <p>禁煙耐久中に苦しさのあまり「お香の煙をストローで吸う」という奇行に走った。禁煙明けの配信では、タバコを吸った瞬間に「脳にニコチン回ってる感じ…」と限界を迎えた様子を見せ、リスナーを爆笑させました。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>ラスボス志望なのに溢れ出る「オカン」み</h3>
+                    <p>クールなヴィランを装うが、ゲームキャラやリスナーへの面倒見が良すぎて「手触りのいいオカン」と呼ばれる。本人は必死に否定するも、その温かさと包容力は隠せません。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>ミュート芸とCR朧の寝坊朝活</h3>
+                    <p>配信開始時にマイクを忘れる「ミュート芸」はもはや持ちネタ。朝活の寝坊率が非常に高く、パチンコの演出に見立てて「CR朧朝活」とネタにされるほど。スケジュールの実施確率が20%になることも。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>同期「でいぶれ」からの満場一致カバ認定</h3>
+                    <p>同期コラボで動物に例えられた際、自分は「大鷲」だと思っていたが、満場一致で「カバ（安心感があり怒らせると最強）」と認定された。「チワワ」といじられてキレる一幕もあります。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>漢字の弱さとAI小説へのダメ出し</h3>
+                    <p>「塵芥（ちりあくた）」を読めず迷推理を展開。AIに書かせた自分の闇堕ち小説には「散歩好きやな！」とキレキレの編集者風ダメ出しを行い。まるで作者の暴走を止める編集者のような姿を見せました。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

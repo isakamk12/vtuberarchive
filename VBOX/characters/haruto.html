@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>土御門 ハルト | VBOX Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #ff4500;
+            --char-color-alt: #daa520;
+            --char-rgb: 255, 69, 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../vbox_index.html" class="char-back">
+            <i class="fa-solid fa-compass"></i> BACK TO HUB
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">TSUCHIMIKADO HARUTO</div>
+        <h1 class="char-name">土御門 ハルト</h1>
+        <div class="char-tags">
+            <span class="char-tag">#フクロウ便からおたよりです</span>
+            <span class="char-tag">#土絵門</span>
+            <span class="char-tag">#はるとといっしょ</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-feather-pointed"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>BIRTHDAY:</strong> 5月5日</p>
+                <p><strong>HEIGHT:</strong> 180cm</p>
+                <p><strong>FAN NAME:</strong> ハト</p>
+                <p><strong>ORIGIN:</strong> VBOX（元はーれはれ2期生）</p>
+            </div>
+            <div class="char-bio">
+                <p>歌うことが大好きで、いつもなにかしら口ずさんでいる青年。配信上では無邪気な性格に見えるが、実はかなりの依存体質で、他人に優しくされるとその人のことしか考えられなくなるという一面も。かつては「クリエイターズエリアを根城にする炎タイプのライバー。相棒はミミズクのフクロウ。声色は水タイプ」という設定も語られていました。</p>
+            </div>
+        </section>
+
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-fire"></i> EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>伝説の「初配信で19時間マイクラ耐久」事件</h3>
+                    <p>デビュー初日の初配信で「マインクラフトのハードコアモードでエンダードラゴン討伐」という無謀な耐久企画を実施。結果的に19時間近くもかかってしまい、後日「なぜ初配信で耐久配信になってしまったのか、後悔しか残らない」と振り返るほどのトラウマに。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>あふれ出る「Mrs. GREEN APPLE」への愛</h3>
+                    <p>大の「Mrs. GREEN APPLE（ミセス）」ファンであり、歌枠では「ミセスいっぱい歌ってこうかなと思います」と公言するほど。ミセスの楽曲が権利的にOKが出た際には、「元々いっぱい歌うつもりでいたのが、さらに増えるのが確定した！」と大喜びしていました。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>「バブ」扱い＆「ド衛門」いじりとの終わらない戦い</h3>
+                    <p>リスナーからなぜか「バブ（赤ちゃん）」扱いされることが多く、配信中は「俺はバブじゃねえ！」と必死に抵抗するのがお約束。また、苗字の「土御門」を「ド衛門」と読まれるいじりも定着しており、ツッコミを入れる姿が定番です。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>ゲームによって変わる「陽キャ」と「陰キャ」</h3>
+                    <p>気分やゲームによってテンションが乱高下するのも魅力。マイクラでは饒舌な陽キャ（パリピモード）を見せる一方で、FPSでは急に口数が減ってダウナーな陰キャになったりする、感情豊かな配信スタイルが特徴です。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>ホラゲーでの異常なビビリっぷり</h3>
+                    <p>ホラーゲームが好きでプレイするものの、実は極度のビビリ。どんな小さな物音にも絶叫を響かせ、パニックに陥るリアクションはリスナーから「マイクラがホラゲーに見える」と言われるほどの名物となっています。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

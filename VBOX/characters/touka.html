@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>闇咲 とうか | VBOX Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #800080;
+            --char-color-alt: #ffc0cb;
+            --char-rgb: 128, 0, 128;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../vbox_index.html" class="char-back">
+            <i class="fa-solid fa-compass"></i> BACK TO HUB
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">YAMISAKI TOUKA</div>
+        <h1 class="char-name">闇咲 とうか</h1>
+        <div class="char-tags">
+            <span class="char-tag">#❤🩹🗡</span>
+            <span class="char-tag">#やみよし</span>
+            <span class="char-tag">#最強の14歳</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-moon"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>BIRTHDAY:</strong> 12月1日</p>
+                <p><strong>HEIGHT:</strong> 140cm (アホ毛込 148cm)</p>
+                <p><strong>FAN NAME:</strong> 闇ふぁみ</p>
+                <p><strong>ORIGIN:</strong> せんめつしゃ (14歳・中学2年生)</p>
+            </div>
+            <div class="char-bio">
+                <p>自称「殲滅者」の中学2年生。設定はクールだが実は愛されポンコツ。配信中毒レベルの体力を持ち、毎日朝6時半からの朝活を欠かさない。美少女ゲームと銀髪キャラをこよなく愛する限界オタクな一面も持ち合わせています。可愛らしい設定と親しみやすいポンコツエピソードのギャップが彼女の最大の魅力です。</p>
+            </div>
+        </section>
+
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-heart-pulse"></i> EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>伝説の初配信！ポンコツすぎる「殲滅者」</h3>
+                    <p>初配信でマイク設定のミスにより99分間無音で喋り続けた伝説を持つ。さらにカッコいい演出のはずが大量のハートを降らせて顔が見えなくなるなど、初日からポンコツが炸裂しました。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>狂人レベルの配信体力と「朝活」の根性</h3>
+                    <p>13時間睡眠からの長時間配信を得意とし、朝6時半の朝活はもはや生活の一部。「15万人挨拶耐久」など、過酷な企画をノリで完遂する驚異のスタミナと根性を誇ります。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>美少女ゲームへの深い愛と限界化</h3>
+                    <p>美少女ゲームが大好きで、お気に入りのキャラに出会うと「デュフ笑い」を漏らしながら限界化する。銀髪やロリキャラへの情熱は本物で、リスナーを度々驚かせるほどの熱量です。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>ドMゲーマーとしての矜持と初期値縛り</h3>
+                    <p>エルデンリングなどのフロムゲーを愛し、「生命力初期値縛り」という過酷なドMプレイに自ら挑む。何度やられても「10時間やれば倒せる」と諦めない姿に、リスナーは熱狂します。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>リスナーとのプロレスと「ロリじゃない！」</h3>
+                    <p>14歳相応の幼さからロリ扱いされるが、「立派なレディーだ！」と全力で反論するのがお約束。リスナー（変態紳士）とのキレのある煽り合いは、配信の風物詩です。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>激辛CoCo壱15辛への挑戦と天然過去</h3>
+                    <p>激辛党であり、CoCo壱の15辛を完食する偉業を達成。一方で、学校のロッカーでなだれを起こしたり、俳句がスーパーに掲示されたりといった微笑ましい天然過去も持ち合わせています。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

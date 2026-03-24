@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天空 こはね | VBOX Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #87ceeb;
+            --char-color-alt: #ffffff;
+            --char-rgb: 135, 206, 235;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../vbox_index.html" class="char-back">
+            <i class="fa-solid fa-compass"></i> BACK TO HUB
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">AMASORA KOHANE</div>
+        <h1 class="char-name">天空 こはね</h1>
+        <div class="char-tags">
+            <span class="char-tag">#ゆっくり寝る雨空</span>
+            <span class="char-tag">#自堕落天使</span>
+            <span class="char-tag">#アイドルオタク</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-cloud"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>BIRTHDAY:</strong> 5月10日</p>
+                <p><strong>HEIGHT:</strong> 150cm</p>
+                <p><strong>FAN NAME:</strong> 雨空</p>
+                <p><strong>ORIGIN:</strong> 天界から追放された自堕落天使 (18歳)</p>
+            </div>
+            <div class="char-bio">
+                <p>お昼寝のし過ぎで天界を追放された天使。人間界のメイド喫茶に居候しながら功績を積んでいる。人懐っこい性格だが、漢字や英語が極端に苦手。アイドルの話になるとマシンガントークが止まらない、愛され自堕落天使です。</p>
+            </div>
+        </section>
+
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>伝説の「朝枠大寝坊事件」</h3>
+                    <p>初の「朝活配信」で3時間の大寝坊をやらかした事件。Xでは「#ゆっくり寝る雨空」というタグが作られる始末。「20%の確率を引いた」と弁明する姿がリスナーを和ませました。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>漢字も英語も苦手なポンコツ天使</h3>
+                    <p>「7以上数えられない」と自称するほど勉強が苦手。海外リスナーの英語コメントに「ハッピー」と笑顔で答えつつも困惑する姿は、言語の壁を超えた可愛さがあります。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>アイドルオタクとしての底知れぬ熱量</h3>
+                    <p>ハロプロ（嗣永桃子推し）やK-POPへの愛が深く、オタ活の話になるとマシンガントークが止まりません。ランダムトレカ交換の地獄を熱く語る姿はガチ勢そのものです。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>謎の「ルーズリーフ炙り」事件</h3>
+                    <p>ファンレターの白紙ルーズリーフを「炙り出し」と思い込み、コンロで炙って単なる「あちちの紙」を作った天然エピソード。その純粋（？）な発想にリスナーは震撼しました。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>『テニプリ』日吉若のプロフィール詠唱</h3>
+                    <p>『テニスの王子様』が大好きで、日吉若の公式プロフィールを一言一句違わずに暗唱できる特技を持っています。突然始まる詠唱は、普段のポンコツさを忘れさせるほど圧巻です。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>喋りすぎて配信中に溺れかける</h3>
+                    <p>おしゃべりが大好きすぎて唾液で自分が溺れそうになると訴える。歌枠でも息継ぎを忘れて限界まで歌い続け、本当に溺れかけるほどの熱唱を見せる情熱的な天使です。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

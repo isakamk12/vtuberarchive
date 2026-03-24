@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ざざ・ざうる | VBOX Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #32cd32;
+            --char-color-alt: #8b4513;
+            --char-rgb: 50, 205, 50;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../vbox_index.html" class="char-back">
+            <i class="fa-solid fa-compass"></i> BACK TO HUB
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">ZAZA ZAURU</div>
+        <h1 class="char-name">ざざ・ざうる</h1>
+        <div class="char-tags">
+            <span class="char-tag">#ざうる生</span>
+            <span class="char-tag">#♻️</span>
+            <span class="char-tag">#田舎恐竜</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-dragon"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>BIRTHDAY:</strong> 9月19日</p>
+                <p><strong>HEIGHT:</strong> 150cm</p>
+                <p><strong>FAN NAME:</strong> ざうチル</p>
+                <p><strong>ORIGIN:</strong> 白亜紀9000万歳 (田舎恐竜)</p>
+            </div>
+            <div class="char-bio">
+                <p>絶滅危惧種「田舎恐竜ざうる」。絶滅という危機に瀕していながらも、明るく一生懸命に配信をする頑張り屋さん。どこかしら抜けているドジっ子な一面もあるが、みんなが絶滅しない持続可能な世界をみつけるため勉強中。趣味はご飯を食べながらアニメを見ることで、お茶などの水分補給が大好き。</p>
+            </div>
+        </section>
+
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-leaf"></i> EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>特技は「喉越し」と「NNN」の弾幕</h3>
+                    <p>お茶などの水分を飲むときの「ゴクッ」という音が特技。配信中に「特技の喉越しまで3・2・1…」とカウントダウンをして水分補給をすると、リスナーから「ナイス喉越し」、略して「NNN」という弾幕が送られるのがお決まりのノリになっている。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>学名は「Zマジカヨめっちゃザウルス」</h3>
+                    <p>初配信の際、自身の学名が「Zマジカヨめっちゃザウルス」であることを発表し、そのネーミングセンスでリスナーの笑いを誘いました。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>早口すぎる自己紹介と「こざうる」</h3>
+                    <p>配信冒頭の自己紹介のスピードが非常に早く、「初音ミクの消失レベル」と言われるほど。また、分身キャラクターの「こざうる」がおり、イベントでは様々なコスチュームを披露してファンから愛されています。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>ギャップ萌え必至の企画朝活</h3>
+                    <p>普段の元気な配信とは打って変わり、落ち着いた「お姉さんざうる」や、恐怖を届ける「白髪デビルざうる」などを演じ分ける企画朝活が人気。その高い演技力とギャップが魅力です。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>鼓膜破壊の絶叫と長時間配信の情熱</h3>
+                    <p>ホラゲーでの絶叫は「叫び方の教科書」と自負するほど。一方で、19時間に及ぶ耐久配信を完遂するなど、恐竜ならではの驚異的な体力と配信への情熱を併せ持っています。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>不屈の精神とハッピーエンターテイナー</h3>
+                    <p>事務所解散などの激動を乗り越え、「みんなが楽しめるように」と活動を続ける、不屈のポジティブ恐竜。どんな困難も明るく笑い飛ばす姿は、多くのざうチルに勇気を与えています。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
