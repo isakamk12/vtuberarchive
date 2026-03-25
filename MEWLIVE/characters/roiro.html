@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>闇依ろいろ | MEWLIVE Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #0cc0c0;
+            --char-rgb: 12, 192, 192;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../mewlive_index.html" class="char-back">
+            <i class="fa-solid fa-music"></i> BACK
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Yamiyori Roiro</div>
+        <h1 class="char-name">闇依ろいろ</h1>
+        <div class="char-tags">
+            <span class="char-tag">2期生</span>
+            <span class="char-tag">🦴🖤</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2>PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>BIRTHDAY:</strong> 3月13日</p>
+                <p><strong>HEIGHT:</strong> 161cm</p>
+                <p><strong>SPECIES:</strong> 犬の悪魔（冥界出身）</p>
+                <p><strong>FANMARK:</strong> 🦴🖤</p>
+            </div>
+            <div class="char-bio">
+                <p>冥界からきた犬の悪魔。悠々自適な「飼い犬」に憧れ、運命の飼い主（石油王）を探すために配信を開始。生意気だが愛嬌のある「クソガキ」属性全開のスタイルが魅力。</p>
+            </div>
+            <div class="char-details" style="margin-top: 1.5rem; border-top: 1px dashed rgba(var(--char-rgb), 0.3); padding-top: 1.5rem;">
+                <p><strong>HOBBIES:</strong> カラオケ（歌マナ）、ゲーム、お散歩、中国茶（ジャスミン茶等）</p>
+                <p><strong>DESIGN:</strong> 灸場メロ</p>
+                <p><strong>DISLIKES:</strong> 指示厨、たくあん、香水のにおい</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+            <h2>EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>伝説の失踪事件と『豆腐』での衝撃復帰</h3>
+                    <p>ストレスから1ヶ月半ほど行方不明に。心配するリスナーの前に復帰配信で選んだのは『豆腐になるだけのゲーム』。豆腐として空を舞うシュールすぎる姿で、失踪の暗い空気を笑いに変えました。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>ストリーマーサーバーで轟いた「闇金さん」の悪名</h3>
+                    <p>『RUST』などの多人数企画では「闇依（やみより）」を「闇金（やみきん）」と勘違いされ定着。大先輩や海外勢にもズケズケと物申す立ち回りが、エンタメとして高く評価されました。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>実は涙もろく、ファンへの激重感情</h3>
+                    <p>普段は反抗的な態度だが、耐久配信の最後や記念枠では感極まって号泣することも。「見に来たいタイミングで見に来て」と語る、リスナーの自由を尊重した深い愛を持っています。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page. Not affiliated with MEWLIVE.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = "1";
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

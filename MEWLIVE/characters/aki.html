@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>夏芽川アキ | MEWLIVE Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #FF8C00;
+            --char-rgb: 255, 140, 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../mewlive_index.html" class="char-back">
+            <i class="fa-solid fa-music"></i> BACK
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Natsumegawa Aki</div>
+        <h1 class="char-name">夏芽川アキ</h1>
+        <div class="char-tags">
+            <span class="char-tag">Reφilm Staff</span>
+            <span class="char-tag">🍿🍎</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2>PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>BIRTHDAY:</strong> 12月20日</p>
+                <p><strong>HEIGHT:</strong> 175cm-179cm</p>
+                <p><strong>FANNAME:</strong> ちびもろこし</p>
+                <p><strong>DESIGN:</strong> およ</p>
+            </div>
+            <div class="char-bio">
+                <p>映画館「Reφilm」のアルバイト兼、未来の超大物ラジオDJ。とにかく声が大きく、機材トラブルを頻発させながらも、圧倒的なトーク力と熱狂的な「エイトリ」愛でリスナーを虜にする。</p>
+            </div>
+            <div class="char-details" style="margin-top: 1.5rem; border-top: 1px dashed rgba(var(--char-rgb), 0.3); padding-top: 1.5rem;">
+                <p><strong>HOBBIES:</strong> 18TRIP（沼）、ディズニー、男性声優、ポップコーン、おしゃべり</p>
+                <p><strong>DISLIKES:</strong> ホラー、トマト、ナス、滑舌が必要な言葉</p>
+                <p><strong>SPECIALTY:</strong> Switchの起動音の完璧なモノマネ</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+            <h2>EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>エイトリへの底なしの愛と限界実況</h3>
+                    <p>『18TRIP』の実況では、推しキャラが登場するたびに語彙力を失い絶叫。あまりにストーリーをじっくり味わいすぎるため、ゲームの進みが異常に遅いことで有名です。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>愛すべきポンコツ「カツトレ」の日々</h3>
+                    <p>「駆け出しラジオDJ」という肩書きが噛んで言えない滑舌の弱さが魅力。配信冒頭での「滑舌トレーニング」や、握力が小3レベルなど、数々のポンコツ伝説を持ちます。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>機材トラブルの神に愛された男</h3>
+                    <p>感動シーンでPCが落ちたり、神引きした瞬間に無音が続いたりと、笑いの神（トラブル）が常に降臨。そんな大事故さえも「大暴れ実況」としてエンタメに昇華させています。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page. Not affiliated with MEWLIVE.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = "1";
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

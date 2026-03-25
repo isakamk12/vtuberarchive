@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>熊乃ベアトリーチェ | MEWLIVE Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #FF0055;
+            --char-rgb: 255, 0, 85;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../mewlive_index.html" class="char-back">
+            <i class="fa-solid fa-music"></i> BACK
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Kumano BearTrice</div>
+        <h1 class="char-name">熊乃ベアトリーチェ</h1>
+        <div class="char-tags">
+            <span class="char-tag">0期生</span>
+            <span class="char-tag">🧸🎸</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2>PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>BIRTHDAY:</strong> 3月23日</p>
+                <p><strong>HEIGHT:</strong> 152cm</p>
+                <p><strong>WEIGHT:</strong> 55kg</p>
+                <p><strong>FANNAME:</strong> ベア友</p>
+                <p><strong>DESIGN:</strong> 裕</p>
+            </div>
+            <div class="char-bio">
+                <p>おもちゃ屋さんで売れ残っていた熊のぬいぐるみが、魔法で女の子の姿になりVTuberになった。声優の小岩井ことりさんに拾われて飼われており、彼女の音響機材を勝手に使って配信している。</p>
+            </div>
+            <div class="char-details" style="margin-top: 1.5rem; border-top: 1px dashed rgba(var(--char-rgb), 0.3); padding-top: 1.5rem;">
+                <p><strong>HOBBIES:</strong> インターネット、メタル音楽、アニソン、ガンプラ（デンドロビウム等）</p>
+                <p><strong>DISLIKES:</strong> お風呂（カビチューバー疑惑）</p>
+                <p><strong>MOTTO:</strong> 世界一のマスコットになるべあ！</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+            <h2>EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>ぬいぐるみから「生身」へ！次元を超えたライブ活動</h3>
+                    <p>VTuberとしては珍しく「生身」のボディでリアルライブに出演。『SUMMER SONIC 2024』や『イナズマロック フェス』への出演も果たした、マスコットの枠を超えた活動が魅力。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>可愛い見た目から放たれる強烈な「デスボイス」</h3>
+                    <p>ピンク色の可愛らしい見た目からは想像もつかない、本格的な「グロウル（デスボイス）」を操り、視聴者を驚愕させるギャップの塊。ARCH ENEMYに憧れて習得した本格派。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>MEWLIVE初代「おバカ王」の称号獲得</h3>
+                    <p>MENSA会員を自称する天才クマのはずが、学力テスト企画でまさかの最下位になり「おバカ王」に。ファンからは「おバカリーチェ」といじられ、キレのあるツッコミを返すのがお約束。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page. Not affiliated with MEWLIVE.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = "1";
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

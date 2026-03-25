@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ユノ・ミハナダ | MEWLIVE Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #6677ff;
+            --char-rgb: 102, 119, 255;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../mewlive_index.html" class="char-back">
+            <i class="fa-solid fa-music"></i> BACK
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Yuno Mihanada</div>
+        <h1 class="char-name">ユノ・ミハナダ</h1>
+        <div class="char-tags">
+            <span class="char-tag">1期生</span>
+            <span class="char-tag">🎨🤖</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2>PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>BIRTHDAY:</strong> 6月6日</p>
+                <p><strong>FANNAME:</strong> アシスタント（君）</p>
+                <p><strong>ROLE:</strong> バーチャルデザイナー</p>
+                <p><strong>DESIGN:</strong> さいね</p>
+            </div>
+            <div class="char-bio">
+                <p>「自分のブランドを作って世界中を鮮やかに彩りたい！」という夢を持つバーチャルデザイナー。自称「MEWLIVEの清楚担当」だが、リスナーからは「小学生男児のよう」と扱われる愛されキャラ。</p>
+            </div>
+            <div class="char-details" style="margin-top: 1.5rem; border-top: 1px dashed rgba(var(--char-rgb), 0.3); padding-top: 1.5rem;">
+                <p><strong>HOBBIES:</strong> ガンダム（オタク）、女性キャラ（限界化）、海釣り・川釣り、虫（平気）</p>
+                <p><strong>LIKE:</strong> 博多豚骨ラーメン</p>
+                <p><strong>DISLIKES:</strong> 漢字、横文字（カタカナ）、コバエ</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+            <h2>EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>伝説の「完全ミリシラ」名作ゲーム実況</h3>
+                    <p>家庭の事情で有名作品を知らずに育ち、『ドラゴンボール』や『FF7』を完全初見で実況。セフィロスを「どん兵衛の人」だと思っていたなど、新鮮すぎるリアクションが大ウケしました。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>鼓膜破壊の絶叫ホラゲと「やかんの沸く笑い声」</h3>
+                    <p>ホラーゲームが非常に苦手だが、なぜか事務所内で一番プレイする羽目に。鼓膜を突き破る悲鳴や、爆笑時の「やかんでお湯を沸かしているような『ピー！』という声」が特徴。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>キービジュアルとの「別人（花田ゆのみ）疑惑」</h3>
+                    <p>SDアイコンから美麗なキービジュアル公開時に違和感を持たれ、「花田ゆのみ」という別キャラ扱いされる茶番が定着。清楚な見た目と内面のギャップを象徴するエピソードです。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page. Not affiliated with MEWLIVE.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = "1";
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

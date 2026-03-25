@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>氷猫みう | MEWLIVE Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #66ccff;
+            --char-rgb: 102, 204, 255;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../mewlive_index.html" class="char-back">
+            <i class="fa-solid fa-music"></i> BACK
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Koneko Miu</div>
+        <h1 class="char-name">氷猫みう</h1>
+        <div class="char-tags">
+            <span class="char-tag">2期生</span>
+            <span class="char-tag">🐈❄️🪄</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2>PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>BIRTHDAY:</strong> 11月28日</p>
+                <p><strong>AGE:</strong> 2ちゃい</p>
+                <p><strong>FANNAME:</strong> こじが（こねじゃが）</p>
+                <p><strong>MOTTO:</strong> 君に魔法をかけちゃうぞ、こねこねビーム！</p>
+            </div>
+            <div class="char-bio">
+                <p>氷属性の見習い魔法使いの子猫。「夢の続きを見るために地下アイドルから転生しました！」というキャッチコピーの通り、再び「ソロライブ」という夢を追いかけている努力家。</p>
+            </div>
+            <div class="char-details" style="margin-top: 1.5rem; border-top: 1px dashed rgba(var(--char-rgb), 0.3); padding-top: 1.5rem;">
+                <p><strong>HOBBIES:</strong> 平成文化（オタク）、トマト、ハラミ、牛タン、ジャスミン茶、豆乳（紅茶味）</p>
+                <p><strong>DESIGN:</strong> 師走ほりお</p>
+                <p><strong>DISLIKES:</strong> お化け屋敷（号泣）、生魚、1人でいること（寂しがりや）</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+            <h2>EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>元地下アイドルからのリベンジ！</h3>
+                    <p>アイドル時代の苦労や、「あの頃叶えられなかった夢に挑戦したい」という強い想いを配信で語る。ファン（こじが）と一緒に再び大きなステージを目指す姿勢が多くの支持を集めています。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>朝活名物！過酷すぎる「腹筋耐久」</h3>
+                    <p>配信中の挨拶や神引きに応じて腹筋が増える企画が恒例。数百回に及ぶこともあり、悲鳴と嗚咽を漏らしながらも完遂する根性は、見習い魔法使いの枠を超えています。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>「世界一可愛い！」自称アイドルとリスナーのプロレス</h3>
+                    <p>可愛いと褒められたい自称アイドルだが、リスナーからは「おもしれー女」「中身おじさん」といじられる絶妙な距離感。平成の懐かしい話題で盛り上がることも多い。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page. Not affiliated with MEWLIVE.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = "1";
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

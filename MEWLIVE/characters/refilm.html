@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reφilm (レフィルム) | MEWLIVE Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #1A237E;
+            --char-rgb: 26, 35, 126;
+        }
+        .unit-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .unit-card {
+            background: rgba(var(--char-rgb), 0.1);
+            border: 1px solid rgba(var(--char-rgb), 0.3);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: var(--c-text);
+        }
+        .unit-card:hover {
+            background: rgba(var(--char-rgb), 0.2);
+            transform: translateY(-5px);
+            border-color: var(--char-color);
+            box-shadow: 0 0 20px rgba(var(--char-rgb), 0.4);
+        }
+        .unit-card h3 {
+            margin: 0.5rem 0;
+            color: var(--char-color);
+        }
+        .unit-card p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../mewlive_index.html" class="char-back">
+            <i class="fa-solid fa-music"></i> BACK
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Reφilm</div>
+        <h1 class="char-name">Reφilm（レフィルム）</h1>
+        <div class="char-tags">
+            <span class="char-tag">Male Unit</span>
+            <span class="char-tag">📽️🍿🐍</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2>UNIT CONCEPT</h2>
+            <div class="char-bio">
+                <p>映画館「Reφilm」を舞台に活動する男性VTuberユニット。オーナーのルキと、アルバイトのアキ・リノの3人で構成される。個性豊か（すぎる）メンバーたちが織りなす、笑いあり、叫びあり、感動（？）ありのエンターテインメント・シアター。</p>
+            </div>
+            
+            <div class="unit-grid">
+                <a href="luki.html" class="unit-card">
+                    <i class="fa-solid fa-crown fa-2x"></i>
+                    <h3>ルキ・ルクス</h3>
+                    <p>シアターのオーナー。<br>お叫び三つ編み。</p>
+                </a>
+                <a href="aki.html" class="unit-card" style="--char-color: #FF8C00; --char-rgb: 255, 140, 0;">
+                    <i class="fa-solid fa-microphone-lines fa-2x"></i>
+                    <h3>夏芽川アキ</h3>
+                    <p>ポップコーンマスター。<br>超大物ラジオDJ。</p>
+                </a>
+                <a href="rino.html" class="unit-card" style="--char-color: #8DC1F0; --char-rgb: 141, 193, 240;">
+                    <i class="fa-solid fa-wand-magic-sparkles fa-2x"></i>
+                    <h3>涙夜リノ</h3>
+                    <p>不憫マルチクリエイター。<br>中二病の蛇使い。</p>
+                </a>
+            </div>
+        </section>
+
+        <section class="char-section">
+            <h2>RECORDS</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>2025.02.18 デビュー</h3>
+                    <p>映画館「Reφilm」のオープンと共に3名が同時デビュー。それぞれの個性が爆発した初配信は大きな話題となりました。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>オーナーを振り回すアルバイトたち</h3>
+                    <p>オーナーのルキが一番しっかりしていないことを自認しており、アキやリノに振り回されたり、逆にイジり倒したりと、本当の家族のような仲の良さが魅力です。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page. Not affiliated with MEWLIVE.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = "1";
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

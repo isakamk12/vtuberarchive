@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我王むすび | MEWLIVE Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #00F2FE;
+            --char-rgb: 0, 242, 254;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../mewlive_index.html" class="char-back">
+            <i class="fa-solid fa-music"></i> BACK
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Gaou Musubi</div>
+        <h1 class="char-name">我王むすび</h1>
+        <div class="char-tags">
+            <span class="char-tag">0期生</span>
+            <span class="char-tag">🦕🌊</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2>PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>BIRTHDAY:</strong> 11月18日</p>
+                <p><strong>AGE:</strong> 7,000万1歳</p>
+                <p><strong>SPECIES:</strong> モササウルス</p>
+                <p><strong>FANNAME:</strong> 非常食</p>
+                <p><strong>MASTER:</strong> 来栖りん</p>
+            </div>
+            <div class="char-bio">
+                <p>太古の海で最強のモササウルスとして君臨し、現在は海の神としてのんびり暮らしている。のんびり寝ていたら日本の浜辺に打ち上げられ、ご主人（来栖りん）に拾われた「拾われペットモササウルス」。</p>
+            </div>
+            <div class="char-details" style="margin-top: 1.5rem; border-top: 1px dashed rgba(var(--char-rgb), 0.3); padding-top: 1.5rem;">
+                <p><strong>HOBBIES:</strong> お肉、甘いもの（ケーキや羊羹など）、ボカロやゲームのサントラ、青・水色</p>
+                <p><strong>DISLIKES:</strong> 難しい言葉（四字熟語など）、コミュニケーション、お化け、野菜、わかめ</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+            <h2>EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>ホラゲでのビビリっぷりと謎の「煽りスキル」</h3>
+                    <p>『Phasmophobia』での心霊調査では、恐怖のあまり泣き言を言う一方で、幽霊に向かって突然「カモン！カモン！」と煽り散らかし、激写して全力で逃走する見事なプレイングを見せました。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>自称「ゴールド無免許」の最強モサドライバー</h3>
+                    <p>『Euro Truck Simulator 2』では、壁に激突したり対向車線にはみ出したりと、カオスな運転技術を披露。「ごめんなさい、無免許なもんで！」と強引に進む姿は、まさにモササウルス級のダイナミックさでした。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>『RUST』での「ぼっちアリーナごっこ」赤面事件</h3>
+                    <p>誰もいないパリピハウスの前で「アリーナ！」と一人でライブごっこをし、叫んでいたところを他プレイヤーに目撃され、無言で逃げられるという非常に恥ずかしい体験をしました。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page. Not affiliated with MEWLIVE.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = "1";
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

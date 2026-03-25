@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>月魅暁りりか | MEWLIVE Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #FFB6C1;
+            --char-rgb: 255, 182, 193;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../mewlive_index.html" class="char-back">
+            <i class="fa-solid fa-music"></i> BACK
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Tsukimia Ririka</div>
+        <h1 class="char-name">月魅暁りりか</h1>
+        <div class="char-tags">
+            <span class="char-tag">1期生</span>
+            <span class="char-tag">🌙🔭</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2>PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>BIRTHDAY:</strong> 9月13日</p>
+                <p><strong>FANNAME:</strong> 月魅隊</p>
+                <p><strong>GENRE:</strong> FPS, MMO</p>
+                <p><strong>DESIGN:</strong> 千種みのり</p>
+            </div>
+            <div class="char-bio">
+                <p>宇宙に住んでるゲーム大好きの女の子。「陽キャっぽいけど陰キャなギャル」を自称しており、学生時代は図書館に入り浸る図書館勢だった。配信活動を心から愛するワーカーホリック。</p>
+            </div>
+            <div class="char-details" style="margin-top: 1.5rem; border-top: 1px dashed rgba(var(--char-rgb), 0.3); padding-top: 1.5rem;">
+                <p><strong>HOBBIES:</strong> 長時間・無限配信、ガンダムSEED（胎教）、リスナーとのプロレス</p>
+                <p><strong>LIKE:</strong> レモン、マスカット、お寿司、海鮮お茶漬け</p>
+                <p><strong>DISLIKES:</strong> 漢字、計算（算数）、宇宙にないもの</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+            <h2>EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>ガンダムSEEDへの熱すぎる愛と「大きな夢」</h3>
+                    <p>生粋のガンダムオタク。「リリカカラーのストライクフリーダムの手の上でライブしたい」という夢を掲げ、誕生日配信でファンに熱く宣言しました。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>「鼓膜破壊兵器」の異名を持つ絶叫</h3>
+                    <p>声が非常に大きくリアクションが良いため「鼓膜破壊兵器」といじられる。配信前には「みんな鼓膜の替えは準備してあるか？」と自ら注意喚起するのがお約束。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>ゲームへのガチっぷりと「長時間・無限配信」</h3>
+                    <p>FPSやMMOのガチ勢であり、アークやマイクラでは平気で6〜7時間を超える配信を行う。「朝起きたらまだりりかが配信している」状況が頻繁に起こります。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page. Not affiliated with MEWLIVE.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = "1";
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

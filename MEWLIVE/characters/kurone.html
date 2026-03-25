@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>夜羽咲クロネ | MEWLIVE Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #FF69B4;
+            --char-rgb: 255, 105, 180;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../mewlive_index.html" class="char-back">
+            <i class="fa-solid fa-music"></i> BACK
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Kurone Yousagi</div>
+        <h1 class="char-name">夜羽咲クロネ</h1>
+        <div class="char-tags">
+            <span class="char-tag">1期生</span>
+            <span class="char-tag">🐈⬛🗝️</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2>PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>BIRTHDAY:</strong> 9月6日</p>
+                <p><strong>FANNAME:</strong> 黒猫団</p>
+                <p><strong>SPECIALTY:</strong> ひとりぼっち、長時間睡眠、キュウリASMR</p>
+                <p><strong>DESIGN:</strong> AIKO</p>
+            </div>
+            <div class="char-bio">
+                <p>病みかわツンデレ最強ツインテール美少女爆誕VTuber。当初は「大豪邸のお嬢様」を自称していたが、本当は大人数でいると震えちゃう、部屋の隅に住んでいる引きこもり。</p>
+            </div>
+            <div class="char-details" style="margin-top: 1.5rem; border-top: 1px dashed rgba(var(--char-rgb), 0.3); padding-top: 1.5rem;">
+                <p><strong>HOBBIES:</strong> 自撮り、パワプロ（栄冠ナイン監督）、布団でぬくぬくすること、ジャンクフード</p>
+                <p><strong>RELATION:</strong> 鈴原希実（いとこ）</p>
+                <p><strong>DISLIKES:</strong> 運動、パソコン（難解）、満員電車</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+            <h2>EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>初配信で即カミングアウト！「本当は引きこもりです」</h3>
+                    <p>お嬢様設定の見栄を張りつつ、すぐに嘘を告白。「引きこもりで辛い思いをしている人に元気を届けたい」という真摯な想いに多くのファンが心を打たれました。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>恐怖をかき消す「キュウリASMR」</h3>
+                    <p>ホラーゲームの恐怖に耐えきれず、HPとMPを回復する魔法として突然「キュウリ」をかじり始める。ホラーそっちのけで咀嚼音が響く名シーンが誕生しました。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>パソコン音痴ゆえの奇跡のポンコツトラブル</h3>
+                    <p>OBS操作に苦戦し、画面上で3人に分身したり、爆音を流したり、謎の黒板が右目に突き刺さったまま進行したりと、愛すべき放送事故を連発するポンコツお嬢様。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page. Not affiliated with MEWLIVE.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = "1";
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

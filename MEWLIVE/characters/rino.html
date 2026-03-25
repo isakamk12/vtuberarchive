@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>涙夜リノ | MEWLIVE Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #8DC1F0;
+            --char-rgb: 141, 193, 240;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../mewlive_index.html" class="char-back">
+            <i class="fa-solid fa-music"></i> BACK
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Nadaya Rino</div>
+        <h1 class="char-name">涙夜リノ</h1>
+        <div class="char-tags">
+            <span class="char-tag">Reφilm Staff</span>
+            <span class="char-tag">🐍🖤</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2>PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>BIRTHDAY:</strong> 7月3日</p>
+                <p><strong>HEIGHT:</strong> 173cm</p>
+                <p><strong>DESIGN:</strong> ゆっ子</p>
+                <p><strong>FANMARK:</strong> 🐍🖤</p>
+            </div>
+            <div class="char-bio">
+                <p>映画館「Reφilm」のアルバイト兼、マルチクリエイター。重度の中二病で、白蛇の「リリーちゃん」を連れている。不憫な体質とメンヘラ気質を持ち合わせ、納期に泣かされながらも独創的な表現を追求している。</p>
+            </div>
+            <div class="char-details" style="margin-top: 1.5rem; border-top: 1px dashed rgba(var(--char-rgb), 0.3); padding-top: 1.5rem;">
+                <p><strong>HOBBIES:</strong> 映像制作、太もも、ガーターベルト、1人水族館、家庭科（ミシン）</p>
+                <p><strong>DISLIKES:</strong> トマト、満員電車、納期</p>
+                <p><strong>SPECIALTY:</strong> ホラゲー（叫ばない）、プロ級の土下座（PSP）</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+            <h2>EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>人生で9回車に轢かれている不憫体質</h3>
+                    <p>小・中・高・大と、これまでの人生で計9回も車に轢かれたり巻き込まれた経験を持つ。そんな不運を「不憫な星の下に生まれた」と語りつつ、強く生きる姿が印象的。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>異名は「メンヘラブレイカー」</h3>
+                    <p>中学時代、無自覚な優しさ（細かな変化を褒めるなど）で女子6人を振り回してしまった過去から命名。本人も自覚のあるメンヘラ気質で、重くなりやすい一面を持ちます。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>謎の持ちネタ「本マグロ」</h3>
+                    <p>高い声が出るアピールから誕生した、ただ「本マグロ」と叫ぶだけの持ちネタ。あまりのシュールさにショート動画も制作され、「本マグロの人」として認知されかけました。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page. Not affiliated with MEWLIVE.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = "1";
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

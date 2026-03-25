@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SZNO | MEWLIVE Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #8A2BE2;
+            --char-rgb: 138, 43, 226;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../mewlive_index.html" class="char-back">
+            <i class="fa-solid fa-music"></i> BACK
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">SZNO</div>
+        <h1 class="char-name">SZNO（スズノ）</h1>
+        <div class="char-tags">
+            <span class="char-tag">UNIVERSE</span>
+            <span class="char-tag">🎧🌙</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2>PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>BIRTHDAY:</strong> アナタが見つけてくれた日</p>
+                <p><strong>AGE:</strong> ？</p>
+                <p><strong>FANNAME:</strong> 同志</p>
+                <p><strong>CONCEPT:</strong> 正体不明のシティアーティスト</p>
+            </div>
+            <div class="char-bio">
+                <p>皆が知ってて、誰も知らない。二次元のアバターと実在の少女としてのパフォーマンスを両立させる「多次元アーティスト」。自分を隠してくれる「静かな夜」に安心しながら、この街の夜を自分好みに塗り替えようとしている。</p>
+            </div>
+            <div class="char-details" style="margin-top: 1.5rem; border-top: 1px dashed rgba(var(--char-rgb), 0.3); padding-top: 1.5rem;">
+                <p><strong>HOBBIES:</strong> 自作ダンス、音楽、ファッション、楽しい夜、猫、温泉</p>
+                <p><strong>CREATORS:</strong> じん（原案協力）、りたお（デザイン）</p>
+                <p><strong>DISLIKES:</strong> 朝、昼、退屈な夜（賑やかな方がいい）</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+            <h2>EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>圧巻のダンスパフォーマンスと自作の振り付け</h3>
+                    <p>「動くのは嫌い」と言いつつ踊ることは大好き。ライブイベントでは、カバー曲に対して自らダンスの振り付けを行い披露。力強い歌声とのギャップで観客を圧倒的な「虜」にします。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>ファンは「同志」であり、心地よい「風」</h3>
+                    <p>リスナーとの集まりを「会合」と呼び、大切な「同志」として扱う。ファンの存在を「頬を撫でる風」と表現し、自らは彼らが夜の道に迷わないための「明かり」でありたいと願っています。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>ミステリアスな姿に隠れた、お茶目な日常</h3>
+                    <p>重度の方向音痴で迷子になったり、マカロン作りで気合を入れすぎてハンドミキサーを物理的に破壊してしまったりと、クールな外見に反したパワフルで可愛らしい一面も。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page. Not affiliated with MEWLIVE.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = "1";
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

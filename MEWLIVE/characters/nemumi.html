@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>温々ねむみ | MEWLIVE Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #ffcc00;
+            --char-rgb: 255, 204, 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../mewlive_index.html" class="char-back">
+            <i class="fa-solid fa-music"></i> BACK
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Nukunuku Nemumi</div>
+        <h1 class="char-name">温々ねむみ</h1>
+        <div class="char-tags">
+            <span class="char-tag">2期生</span>
+            <span class="char-tag">🐨💤</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2>PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>BIRTHDAY:</strong> 2月10日</p>
+                <p><strong>HEIGHT:</strong> 156cm</p>
+                <p><strong>SPECIES:</strong> コアラと人間のハーフ</p>
+                <p><strong>FANNAME:</strong> ぬくミンズ</p>
+            </div>
+            <div class="char-bio">
+                <p>「最強のひきこもり」を自称するウルトラスーパーニート。人と話した過ぎて、自作の潜水艦でネットの海に出てきた。ふわふわした喋り方だが、中身はガチの「じーにあす」ゲーマー。</p>
+            </div>
+            <div class="char-details" style="margin-top: 1.5rem; border-top: 1px dashed rgba(var(--char-rgb), 0.3); padding-top: 1.5rem;">
+                <p><strong>HOBBIES:</strong> ゲーム（格ゲー・FPS・謎ゲー）、洋画、睡眠、固くないものを食べること</p>
+                <p><strong>DESIGN:</strong> はむねずこ</p>
+                <p><strong>SPECIALTY:</strong> 瞬間記憶能力、スト6（マスターランク）</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+            <h2>EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>伝説の「チキンアンドチキン」事件</h3>
+                    <p>ゲーム内での名前表示が、翻訳の手違いでなぜか英語で「Chicken and Chicken」となり、本人のカッコいい意図に反してシュールすぎる笑いを生み出しました。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>ふにゃふにゃボイスなのに「格ゲー・FPS」ガチ勢</h3>
+                    <p>眠そうな低体温ボイスで話すが、ゲームの腕前は超一流。特に対戦格闘ゲーム『ストリートファイター6』ではガチ勢も驚くマスターランクに到達する実力を見せています。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>「漢字二級」と「瞬間記憶」を誇るじーにあす</h3>
+                    <p>ひらがな多めの喋り方だが、漢検二級を所持。また、トランプの神経衰弱では一度見たカードを全て覚えるほどの瞬間記憶能力を披露し、「本当は天才なのでは？」と目されています。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page. Not affiliated with MEWLIVE.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = "1";
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

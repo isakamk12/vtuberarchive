@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ルキ・ルクス | MEWLIVE Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #1A237E;
+            --char-rgb: 26, 35, 126;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../mewlive_index.html" class="char-back">
+            <i class="fa-solid fa-music"></i> BACK
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Luki Lux</div>
+        <h1 class="char-name">ルキ・ルクス</h1>
+        <div class="char-tags">
+            <span class="char-tag">Reφilm Owner</span>
+            <span class="char-tag">🎦🪽</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2>PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>BIRTHDAY:</strong> 2月18日</p>
+                <p><strong>ROLE:</strong> 映画館Reφilm オーナー</p>
+                <p><strong>FANNAME:</strong> シアター</p>
+                <p><strong>DESIGN:</strong> 高山しのぶ</p>
+            </div>
+            <div class="char-bio">
+                <p>映画館「Reφilm」のオーナー。映画好きが高じてミニシアターを道楽で経営中。年齢不詳・種族不明。自称「VTuber界のお叫び三つ編み」として、デスボイスと映画愛を世に轟かせている。</p>
+            </div>
+            <div class="char-details" style="margin-top: 1.5rem; border-top: 1px dashed rgba(var(--char-rgb), 0.3); padding-top: 1.5rem;">
+                <p><strong>HOBBIES:</strong> 映画鑑賞（2700本以上）、歌（デスボイス・スクリーム）、筋トレ、ダイエット</p>
+                <p><strong>MOTTO:</strong> 全員を退屈させないと誓う</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+            <h2>EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>「メイリオ」を擦り続ける独特の挨拶とポンコツっぷり</h3>
+                    <p>初配信でOBSに見つけた「メイリオ」フォントの読みやすさに感動。挨拶で「メイリオ、メイリオ、メイリオ」と3回連呼するのが定着しました。名前を「ルチルプ」と噛むお茶目な一面も。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>ガチの「お叫び」と志村けんさん講座</h3>
+                    <p>スクリームやデスボイスを得意とし、「志村けんさんのハミングから口を開けるとスクリームになる」という独自の習得法をリスナーに伝授。過酷な歌耐久も難なくこなす実力派です。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>筋トレと映画への深すぎる愛</h3>
+                    <p>朝一番にプロテインを飲むのが日課。デスボイスを出すために筋肉が必要だと考え、筋トレを始めた型破りな経歴を持ちます。映画『グレイテスト・ショーマン』を熱烈にプレゼンするガチオタ。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page. Not affiliated with MEWLIVE.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = "1";
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
