@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ゆらぎゆら | Million Production Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #ADD8E6;
+            --char-rgb: 173, 216, 230;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../milipro_index.html" class="char-back">
+            <i class="fa-solid fa-star"></i> BACK
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Yuragi Yura</div>
+        <h1 class="char-name">ゆらぎゆら</h1>
+        <div class="char-tags">
+            <span class="char-tag">ミリプロ NOVA</span>
+            <span class="char-tag">🌙🫧</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2>PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>BIRTHDAY:</strong> 11月3日</p>
+                <p><strong>AGE:</strong> 20歳 (可変式)</p>
+                <p><strong>HEIGHT:</strong> 155cm</p>
+                <p><strong>FANNAME:</strong> ゆらふぃら</p>
+                <p><strong>FANMARK:</strong> 🌙🫧</p>
+            </div>
+            <div class="char-bio">
+                <p>深海からやってきた、人間とミズクラゲのハーフ。歌、イラスト、ASMRを得意とし、清楚な見た目から「ガンギマリ」まで幅広い表情を見せる。</p>
+            </div>
+            <div class="char-details" style="margin-top: 1.5rem; border-top: 1px dashed rgba(var(--char-rgb), 0.3); padding-top: 1.5rem;">
+                <p><strong>HOBBIES:</strong> 歌、イラスト、ASMR、お酒（テキーラも可）、BL（腐女子）</p>
+                <p><strong>DISLIKES:</strong> 虫、ホラーゲーム、甘えること</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+            <h2>EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>オーディション動画は「猫かぶり」、面接は「二日酔い」</h3>
+                    <p>動画では清楚ロリ声で猫をかぶったが、2次審査の面談はバチバチの二日酔いで受け、何を喋ったか覚えていないという豪快なエピソードを持っています。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>伝説の初配信！ 開幕「BGMなしアカペラ」</h3>
+                    <p>初配信の開幕、BGMを流し忘れたまま歌い出し、無音でアカペラを披露。即座にやり直したこの出来事は、彼女のPON伝説の始まりとなりました。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>「ガンギマリ」と「せくすぃー」担当への変貌</h3>
+                    <p>儚いお姉さん路線だったが、ホラー配信で見せた「ガンギマリ」顔が定着。流行語大賞に選ばれた「セクシーはセクシーよ」など、愉快なキャラに変貌しました。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>ミリプロ随一の酒豪！テキーラ8杯伝説</h3>
+                    <p>酒豪として知られ、忘年会の3次会では40度のテキーラショットを8杯ほどキメてぶっ潰れるという凄まじい伝説を残しています。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>筋金入りの腐女子と「心にタマ」発言</h3>
+                    <p>「男同士のカップリングの壁になりたい」と語る腐女子。「誰だって心にタマ飼ってんだよ」という迷言は、ファンの間で語録として刻まれています。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>ミリプロNo.1の配信ジャンキー</h3>
+                    <p>最も配信頻度が高く、10時間以上の耐久も平気で行う。一方で誤字が非常に多く、「タイピング」を「ダイビング」と書いてしまうなどの一面もあります。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page. Not affiliated with Million Production inc.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = "1";
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

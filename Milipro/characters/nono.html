@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音ノ乃のの | Million Production Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #8575BF;
+            --char-rgb: 133, 117, 191;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../milipro_index.html" class="char-back">
+            <i class="fa-solid fa-star"></i> BACK
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Nonono Nono</div>
+        <h1 class="char-name">音ノ乃のの</h1>
+        <div class="char-tags">
+            <span class="char-tag">1期生</span>
+            <span class="char-tag">🎧🤍</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2>PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>BIRTHDAY:</strong> 5月4日</p>
+                <p><strong>AGE:</strong> 19歳</p>
+                <p><strong>HEIGHT:</strong> 149cm</p>
+                <p><strong>FANNAME:</strong> ののの隊</p>
+                <p><strong>FANMARK:</strong> 🎧🤍</p>
+            </div>
+            <div class="char-bio">
+                <p>歌うことが大好きなVSinger。可愛らしい声の雑談と、大人っぽく芯のある歌声のギャップが魅力。音楽に対する情熱は並外れている。</p>
+            </div>
+            <div class="char-details" style="margin-top: 1.5rem; border-top: 1px dashed rgba(var(--char-rgb), 0.3); padding-top: 1.5rem;">
+                <p><strong>HOBBIES:</strong> 音楽、食べること（特にちくわ）、もずく、梅干し、するめいか、ブルーベリー</p>
+                <p><strong>DISLIKES:</strong> 外に出ること、泳ぐこと、自転車</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+            <h2>EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>狂気的な「ちくわ」愛</h3>
+                    <p>一番好きな食べ物は「ちくわ」。毎日1袋は食べ、最大で1日に8袋を空にしたこともある。紀文の公式Xからも「ちくわ代表」と認められるほどの逸話を持っています。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>始まりは「ナンパ（スカウト）」から</h3>
+                    <p>路上ライブの録音をXに投稿していたところ、甘狼このみにスカウトされたのがきっかけ。最初は「詐欺かと思った」とDMを無視していたが、熱意に押されて加入を決意しました。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>歌に対する凄まじい熱量とストイックさ</h3>
+                    <p>「完璧に歌えるまで録る」という信条があり、1曲のために400回、あるいは1フレーズを124回録り直すなど、納得がいくまで妥協しないストイックさを持っています。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>清楚枠から「悪女・人たらし枠」へ</h3>
+                    <p>当初は清楚キャラを目指していたが、今ではリスナーを手のひらで転がしたり、メンバーのほっぺにキスをして回ったりと、公式からも「悪女」「人たらし」として認定されています。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>驚異の記憶力（ネトスト気質？）</h3>
+                    <p>リスナーのアイコンや名前、リプライ内容を詳細に記憶。配信中に「アイコン変わったね」と突然言及するため、リスナーから驚きと愛を込めて恐れられています。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>19時間爆睡と洗剤事件</h3>
+                    <p>大事な行事で19時間爆睡して大号泣謝罪したり、野菜炒めに間違えて洗剤をかけてしまったりと、時折見せる強烈なポンコツエピソードも魅力の一つです。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page. Not affiliated with Million Production inc.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = "1";
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

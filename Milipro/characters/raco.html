@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音ノ瀬らこ | Million Production Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #FFD700;
+            --char-rgb: 255, 215, 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../milipro_index.html" class="char-back">
+            <i class="fa-solid fa-star"></i> BACK
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Otonose Raco</div>
+        <h1 class="char-name">音ノ瀬らこ</h1>
+        <div class="char-tags">
+            <span class="char-tag">ミリプロ NOVA</span>
+            <span class="char-tag">🦦💛</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2>PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>BIRTHDAY:</strong> 4月8日</p>
+                <p><strong>AGE:</strong> 不明</p>
+                <p><strong>HEIGHT:</strong> 151cm</p>
+                <p><strong>FANNAME:</strong> らっ子</p>
+                <p><strong>FANMARK:</strong> 🦦💛</p>
+            </div>
+            <div class="char-bio">
+                <p>音楽を愛する「DJラッコVTuber」。元気が出る歌声と気さくなトーク、そして誰よりもミリプロを愛するガチオタクな一面を持つマルチクリエイター。</p>
+            </div>
+            <div class="char-details" style="margin-top: 1.5rem; border-top: 1px dashed rgba(var(--char-rgb), 0.3); padding-top: 1.5rem;">
+                <p><strong>HOBBIES:</strong> 歌、お絵描き、ミリプログッズ収集、酒雑談（メン限）</p>
+                <p><strong>DISLIKES:</strong> 漢字（苦手）、機械設定、虫（クモ）</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+            <h2>EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>驚愕の漢字読み間違い伝説</h3>
+                    <p>漢字が非常に苦手。「白長須鯨」を「はくばのおうじさま」、「御御御付」を「おんおんおんすん」と読み、リスナーを驚愕の渦に叩き込みました。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>愛すべきポンコツ・ドジっ子</h3>
+                    <p>初配信前にPCセッティングができず機械音痴を露呈したり、BGMをかけ忘れたりと、うっかりミスが絶えない愛されポンコツです。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>ガチすぎる「ミリプロ」オタク</h3>
+                    <p>「推しはミリプロ」と即答する箱推し. 加入前からグッズを収集しており、メンバーの歌ってみたを一生ループで聴くなど愛が深すぎるほど。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>歌とクリエイターとしての執念</h3>
+                    <p>収録では納得いくまで8時間ぶっ通しで歌い続けるストイックさ。自作イラストを動画素材として器用に動かすなど、高い技術力を持っています。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>30代男性疑惑と懐古ネタ</h3>
+                    <p>懐かしいネットミームや、古いアニメ、ボカロ曲にやたらと詳しいため、リスナーから「本当は30代男性なのでは？」とイジられるのが定番です。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>コミュ障を歌で乗り切る機転</h3>
+                    <p>企画で初対面の人とうまく話せず、自作のオリジナル曲「むっつりスケベ」を弾き語りしてその場を乗り切るという強引かつ独創的な機転を見せました。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page. Not affiliated with Million Production inc.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = "1";
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小廻こま | Million Production Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #FF8C00;
+            --char-rgb: 255, 140, 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../milipro_index.html" class="char-back">
+            <i class="fa-solid fa-star"></i> BACK
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Komawari Koma</div>
+        <h1 class="char-name">小廻こま</h1>
+        <div class="char-tags">
+            <span class="char-tag">3期生</span>
+            <span class="char-tag">⛩🔅</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2>PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>BIRTHDAY:</strong> 8月1日</p>
+                <p><strong>AGE:</strong> 不明</p>
+                <p><strong>HEIGHT:</strong> 148cm</p>
+                <p><strong>FANNAME:</strong> こまめいと</p>
+                <p><strong>FANMARK:</strong> ⛩🔅</p>
+            </div>
+            <div class="char-bio">
+                <p>圧倒的声量と多彩な声色を持つ「遊び大好きVTuber」。飾らない性格と、時折見せるガチギレ（保護者）ムーブが人気。</p>
+            </div>
+            <div class="char-details" style="margin-top: 1.5rem; border-top: 1px dashed rgba(var(--char-rgb), 0.3); padding-top: 1.5rem;">
+                <p><strong>HOBBIES:</strong> 一人飲み（酒豪）、歌、遊び</p>
+                <p><strong>DISLIKES:</strong> 洗い物、資料を読まない人</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+            <h2>EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>スカウトと波乱の面接</h3>
+                    <p>歌の投稿からスカウトされたが、最初の面接とは知らずに挑み、さらに最終面接では変な声真似をさせられるなど「遊ばれた」と思ったものの即日合格しました。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>圧倒的声量と多彩な声色</h3>
+                    <p>「とにかく声がでかい」と自他ともに認める声量。一方で声色の幅も広く、中学時代に体育の先生から突然「声優になるのか？」と褒められたほどです。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>洗い物回避の「ラッパ飲み」と酒豪伝説</h3>
+                    <p>ワインを1日1瓶空けるほどの酒豪。洗い物が面倒でワインをラッパ飲みしたり、忘年会で薬をお酒で飲んでダウンしたりと数々の伝説を持っています。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>「MadTownの女王」への成り上がり</h3>
+                    <p>ゲームイベント「MadTown GTA」で初日6時間ぼっちだった様子が注目され大ブレイク。最高同接数8,000人を超え「MadTownの女王」と呼ばれました。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>ガチギレこまわりさん降臨</h3>
+                    <p>後輩の雨夜リズのやらかしに対し、保護者としてガチギレ。「コピペくらい覚えろお前ぇぇぇ！」と激怒するシーンは語り草になっています。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>生み出した謎のキツネ「何こいつ」</h3>
+                    <p>気分で描いた変なキツネのイラストがまさかのキーホルダー化。自分より先にクッション化されたことに理不尽さを感じています。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page. Not affiliated with Million Production inc.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = "1";
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

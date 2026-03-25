@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>あくび・でもんすぺーど | Million Production Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #7B68EE;
+            --char-rgb: 123, 104, 238;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../milipro_index.html" class="char-back">
+            <i class="fa-solid fa-star"></i> BACK
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Akubi Demonspade</div>
+        <h1 class="char-name">あくび・でもんすぺーど</h1>
+        <div class="char-tags">
+            <span class="char-tag">2期生</span>
+            <span class="char-tag">👿♠</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2>PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>BIRTHDAY:</strong> 10月31日</p>
+                <p><strong>AGE:</strong> 2000歳くらい</p>
+                <p><strong>HEIGHT:</strong> 140cm</p>
+                <p><strong>FANNAME:</strong> びぃの一族</p>
+                <p><strong>FANMARK:</strong> 👿♠</p>
+            </div>
+            <div class="char-bio">
+                <p>悪魔と契約した半人半魔の女の子。ポヤポヤした喋りと、歌唱時のハスキーボイスのギャップが激しいスペードクイーン。</p>
+            </div>
+            <div class="char-details" style="margin-top: 1.5rem; border-top: 1px dashed rgba(var(--char-rgb), 0.3); padding-top: 1.5rem;">
+                <p><strong>HOBBIES:</strong> 少年漫画（特にONE PIECE）、エゴサ</p>
+                <p><strong>DISLIKES:</strong> 他人が汚いこと、OBS（トラブル）</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+            <h2>EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>名前の由来は「あくび」のしすぎ</h3>
+                    <p>事務所に入りたてのミーティングでずっとあくびが止まらず怒られたことが名前の由来。当時は「仲良しサークルだと思っていた」と語っています。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>伝説の「締切1分後」提出</h3>
+                    <p>オーディションのPR動画を、期限の23時59分から1分過ぎた「0時1分」に提出完了。それで合格したことを「伝説」として語り継いでいます。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>推しの激レアアクスタをケツで粉砕</h3>
+                    <p>面接の前日、激レアな推しのアクスタを誤って「ケツで踏んで割る」という大事件。しかし「これで運を受け止めて合格した」とポジティブに解釈しました。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>『ONE PIECE』をこよなく愛するオタク</h3>
+                    <p>少年漫画、特に『ONE PIECE』を「人生の教科書」と語るほど愛しており、配信でも頻繁にネタが飛び出します。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>「ネガティブモンスター」と照れ隠し</h3>
+                    <p>リスナーを雑に扱うが、実は自己肯定感が低く、褒められると照れ隠しでキレてしまう。しかし裏ではエゴサをして元気をもらっている可愛い素顔があります。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>機械音痴なポンコツぶり</h3>
+                    <p>大事な場面で機材トラブルを多発させ、「こっちもOBS恐怖症でやってんだよ！」と絶叫する姿もファンから愛されています。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page. Not affiliated with Million Production inc.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = "1";
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>虹深°ぬふ | Million Production Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #F1B9BC;
+            --char-rgb: 241, 185, 188;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../milipro_index.html" class="char-back">
+            <i class="fa-solid fa-star"></i> BACK
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Nijipuka Nuhu</div>
+        <h1 class="char-name">虹深°ぬふ</h1>
+        <div class="char-tags">
+            <span class="char-tag">ミリプロ NOVA</span>
+            <span class="char-tag">🌈🖍</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2>PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>BIRTHDAY:</strong> 11月30日</p>
+                <p><strong>AGE:</strong> 17歳</p>
+                <p><strong>HEIGHT:</strong> 150cm</p>
+                <p><strong>FANNAME:</strong> ぷかぬファミリー</p>
+                <p><strong>FANMARK:</strong> 🌈🖍</p>
+            </div>
+            <div class="char-bio">
+                <p>めんだこと人間のハーフの「完全セルフ受肉VTuber」。感情で髪色が変わるギミックや、プロ級の映像制作技術を持つクリエイター。</p>
+            </div>
+            <div class="char-details" style="margin-top: 1.5rem; border-top: 1px dashed rgba(var(--char-rgb), 0.3); padding-top: 1.5rem;">
+                <p><strong>HOBBIES:</strong> 映像制作、セミのモノマネ、褒められること</p>
+                <p><strong>DISLIKES:</strong> お風呂（風呂キャン気味）、算数</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+            <h2>EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>2年前の誘いを断り、自ら志願して加入した熱い経緯</h3>
+                    <p>設立当初のスカウトを一度断ったが、甘狼このみの活躍に刺激を受け、自ら連絡。研究生としてバズり登録者2万人を達成して見事NOVA所属を勝ち取りました。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>クリエイターとしての圧倒的こだわり</h3>
+                    <p>ティザーPVから配信UI、リスナーマスコットまで全て自作。元ゲーム会社デザイナーの技術を活かし、映像制作もこなす超ハイスペック・クリエイターです。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>「心が清楚」な風呂キャンエピソード</h3>
+                    <p>「体が清潔じゃなくても心は清楚」という持論で風呂に入らないことを正当化しようとするが、周囲から人間の匂いがするとイジられ、最近は改善傾向にあります。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>謎の特技「セミのモノマネ」</h3>
+                    <p>「VTuberらしい特技がない」と悩んで行き着いたのがセミのモノマネ. 1on1で実演したり甘狼このみを指導したりと謎の情熱を注いでいます。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>「俺っ娘」で算数が苦手なポンコツな一面</h3>
+                    <p>一人称が「俺」になることが多い俺っ娘。算数が非常に苦手で、数学で0点を取ったり九九の8の段が言えなかったりする意外な弱点があります。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>褒められ待ちの「ネットリテラシー教育お姉さん」</h3>
+                    <p>褒められるのが大好き。一方で配信の治安を守るためにファンにお説教（教育）することもあり、「俺がみんなを守る」という頼もしい一面も持っています。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page. Not affiliated with Million Production inc.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = "1";
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

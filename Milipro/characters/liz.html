@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雨夜リズ | Million Production Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #4B0082;
+            --char-rgb: 75, 0, 130;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../milipro_index.html" class="char-back">
+            <i class="fa-solid fa-star"></i> BACK
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Amayo Liz</div>
+        <h1 class="char-name">雨夜リズ</h1>
+        <div class="char-tags">
+            <span class="char-tag">ミリプロ UNI</span>
+            <span class="char-tag">🌂🖤</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2>PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>BIRTHDAY:</strong> 3月19日</p>
+                <p><strong>AGE:</strong> 不明</p>
+                <p><strong>HEIGHT:</strong> 161cm</p>
+                <p><strong>FANNAME:</strong> リズナイト</p>
+                <p><strong>FANMARK:</strong> 🌂🖤</p>
+            </div>
+            <div class="char-bio">
+                <p>圧倒的な歌唱力と表現力を持つVSinger。クールなビジュアルとは裏腹に、予測不能な「やらかし（PON）」を連発するギャップが魅力。</p>
+            </div>
+            <div class="char-details" style="margin-top: 1.5rem; border-top: 1px dashed rgba(var(--char-rgb), 0.3); padding-top: 1.5rem;">
+                <p><strong>HOBBIES:</strong> 歌、絵を描くこと、自炊（しょっぱい系）、モノマネ</p>
+                <p><strong>DISLIKES:</strong> お風呂（フロキャン）、チャックの閉め忘れ</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+            <h2>EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>伝説の「メン限アーカイブ45秒」事件</h3>
+                    <p>失言をカットしようとして誤って「失言した45秒間だけを残し、残りの2時間を全カット」するという奇跡の逆張りを起こし、伝説となりました。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>公式配信で社用Discordを全晒し</h3>
+                    <p>公式の歌枠リレー中にパニックになり、誤ってミリプロの社用Discord画面をすべて映し出してしまうという大放送事故を起こしました。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>スマホ配信で「寝起きドスッピン」顔出し未遂</h3>
+                    <p>寝起き配信で内カメラをオンにしたが、幸い天井しか映っておらず。運営からイエローカードをもらい、以後はカメラにシールを貼って対策しています。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>忘年会の自己紹介で「社会の窓」が全開</h3>
+                    <p>「今日はやらかさない！」と挨拶した直後に、ズボンの社会の窓が全開だったことが発覚。1秒足らずでフラグを回収し、会場を爆笑の渦に巻き込みました。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>衝撃の「フロキャン」とボディソープ洗髪</h3>
+                    <p>極度のお風呂嫌いで、シャンプーを切らした際に2週間ボディソープで髪を洗っていたことを告白。その後、オーダーメイドシャンプーとのコラボを獲得しました。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>愛が重すぎる「リスナーへのネトスト」</h3>
+                    <p>ファンへの愛が強すぎて、過去ツイートを12年前まで遡って監視。日常まで把握していましたが、現在は申し訳なさから自粛しています。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page. Not affiliated with Million Production inc.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = "1";
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

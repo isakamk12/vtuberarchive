@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>眠雲ツクリ | Million Production Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #708090;
+            --char-rgb: 112, 128, 144;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../milipro_index.html" class="char-back">
+            <i class="fa-solid fa-star"></i> BACK
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Nemukumo Tsukuri</div>
+        <h1 class="char-name">眠雲ツクリ</h1>
+        <div class="char-tags">
+            <span class="char-tag">ミリプロ UNI</span>
+            <span class="char-tag">☁️🔧</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2>PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>BIRTHDAY:</strong> 9月3日</p>
+                <p><strong>AGE:</strong> 不明</p>
+                <p><strong>HEIGHT:</strong> 160cm (厚底なし156cm)</p>
+                <p><strong>FANNAME:</strong> つくらうど</p>
+                <p><strong>FANMARK:</strong> ☁️🔧</p>
+            </div>
+            <div class="char-bio">
+                <p>音楽からイラスト、映像まで何でも自作する「マルチクリエイティブVTuber」。ダウナー系の声と、仲間思いで不憫な一面のギャップが魅力。</p>
+            </div>
+            <div class="char-details" style="margin-top: 1.5rem; border-top: 1px dashed rgba(var(--char-rgb), 0.3); padding-top: 1.5rem;">
+                <p><strong>HOBBIES:</strong> 作曲、歌、動画編集、長時間睡眠</p>
+                <p><strong>DISLIKES:</strong> おみくじ（運がない）、早起き</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+            <h2>EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>何でも作れるマルチな才能</h3>
+                    <p>配信画面やスケジュール、MVのアニメーションまで自作。電子レンジの音から作曲するなど圧倒的なセンスを持ち、初配信で自作オリジナル曲を披露しました。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>緊張しいな不憫・ポンコツエピソード</h3>
+                    <p>初配信で「ハッシュタグ」を「フラッシュ」と言い間違えたり、大舞台でBGMをかけ忘れてアカペラ熱唱したりと、クールな見た目に反して緊張しいな一面があります。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>愛すべき「長時間睡眠」と寝起き事件</h3>
+                    <p>「睡眠の日」生まれで週に1回は15時間寝る。寝起きスマホ配信でカメラをオンにしてしまったり、年越しカウントダウンでギリギリまで寝坊したこともあります。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>狂気を感じるほどの「ミリプロ箱推し」</h3>
+                    <p>メンバーの活動を隅々までチェックしており、他のメンバーから引かれるほどの「ネトスト（愛）」を発揮。10万人達成時には熱い思いを語り号泣しました。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>ギャップ萌えの「ぶりっ子縛り」</h3>
+                    <p>普段はクールで冷笑系だが、年に一度の「ぶりっ子可愛い曲縛り」歌枠では完全にアイドルになりきり、リスナーを悶絶（昇天）させています。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>伝説の「歌舞伎揚げ＆秋刀魚バースデーケーキ」</h3>
+                    <p>誕生日配信のルーレットで「歌舞伎揚げ」と「秋刀魚」が当たり、実際に秋刀魚入りのケーキを自作するというカオスな展開を生み出しました。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page. Not affiliated with Million Production inc.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = "1";
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
