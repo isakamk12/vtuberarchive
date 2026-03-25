@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>推使 みゅな | まほろば Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #fab1a0;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../mahoroba_index.html" class="char-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Oshitsukai Myuna</div>
+        <h1 class="char-name">推使 みゅな</h1>
+        <div class="char-tags">
+            <span class="char-tag">#推使みゅな</span>
+            <span class="char-tag">#ミュナリスト</span>
+            <span class="char-tag">#身バレRTA</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2><i class="fa-solid fa-heart"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>DEBUT:</strong> 2024年1月21日</p>
+                <p><strong>BIRTHDAY:</strong> 11月4日</p>
+                <p><strong>HEIGHT:</strong> 160cm</p>
+                <p><strong>FANNAME:</strong> みゅなりすと</p>
+                <p><strong>FANMARK:</strong> 💸</p>
+            </div>
+            <div class="char-bio">
+                <p>全方位型二次元限界ヲタクの天使。事務職として働く「兼業VTuber」。アニメ、漫画、ゲーム、音楽など、2Dメディア全般を愛し、第三者視点からキャラクターを見守る「夢女子」スタイル。白いものや美味しい食べ物が好きで、ホラーや刺激物は苦手。</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+            <h2><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>初配信での「限界ヲタクっぷり」と初恋</h3>
+                    <p>デビュー初配信では、自身のマニアックな性癖をスライド1枚に凝縮して、10分間にわたって熱弁。初恋の相手が『Yes!プリキュア5』のココであることを明かし、二次元への深い愛を爆発させた。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>スリリングな日常？「身バレRTA」の危機</h3>
+                    <p>一般企業で事務職として働いており、会社の人たちが彼女を特定しようとしているらしく「知らぬ間に身バレRTAがスタートしている」と語る。バレたら潔く配信のネタにしようという肝の据わった一面も。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>驚きの白さ！アドトラック「白飛び」事件</h3>
+                    <p>秋葉原のアドトラックに掲載された際、モニターの光が強すぎて彼女の姿だけが真っ白に白飛びしてしまい、全く見えないという珍事が発生。「ハイター推使」「発光している」とリスナーから伝説級にいじられた。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>視聴者参加型「47都道府県耐久」の偉業</h3>
+                    <p>リスナーの在住地で地図を埋める耐久配信を定期的に実施。わずか2時間半で47都道府県を3周コンプリートするという、謎の偉業とリスナーとの驚異的な団結力を見せつけている。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = "1";
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

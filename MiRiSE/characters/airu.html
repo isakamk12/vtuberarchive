@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>奉城 アイル | Mi→RiSE Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #ff79c6;
+            --char-rgb: 255, 121, 198;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../mirise_index.html" class="char-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Hojo Airu</div>
+        <h1 class="char-name">奉城 アイル</h1>
+        <div class="char-tags">
+            <span class="char-tag">#Airu_be_back</span>
+            <span class="char-tag">#奉城に奉納</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2>PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>DEBUT:</strong> 2021年6月9日</p>
+                <p><strong>BIRTHDAY:</strong> 1月21日</p>
+                <p><strong>HEIGHT:</strong> 157cm</p>
+                <p><strong>FANNAME:</strong> 鉄奉弾</p>
+                <p><strong>FANMARK:</strong> 👑</p>
+            </div>
+            <div class="char-bio">
+                <p>とある屋敷に住む、元王族の自称メイドVTuber。真面目で冷静な雰囲気を漂わせるポーカーフェイスを目指しているが、推しを前にすると限界化してしまう素直な性格。メイドを名乗っているが家事は苦手で、「元王族だから仕方ない」と割り切っている。特技は抜群のバランス感覚と反射神経。</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+            <h2>EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>伝説の初配信と「Airu_be_back」誕生</h3>
+                    <p>機材トラブルにより30分遅刻で始まった初配信。配信タグをリスナーと相談中、有名映画のセリフをもじった「#Airu_be_back」が誕生。「溶鉱炉に沈むのはまだ早い」とサムズアップのノリで盛り上がり、伝説の幕開けとなった。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>アークナイツ「イグゼキュター」への異常な愛</h3>
+                    <p>人生を狂わされるほど『アークナイツ』のイグゼキュターを愛しており、彼の衣装や異格実装のたびに配信で限界化。筋肉やベルトなどの細部デザインへのフェティシズムを熱烈に語り、酸欠になりかけることも珍しくない。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>生粋の限界オタク・声優愛</h3>
+                    <p>石田彰氏をはじめとする特定の見事な演技力を持つ声優への愛が深く、「声帯だけで推しを決める」ガチ勢。好きな属性（金髪碧眼メカクレなど）が重なると軽率に恋に落ち、ガチャ配信では悲鳴を上げ続けるのがお約束。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>配信のたびにやらかす「ポンコツ」事件簿</h3>
+                    <p>「マイクが入っていない」ことから始まる配信はもはや伝統芸。予約時間を1年後に設定してリスナーを困惑させるなど天然なミスも多く、自ら「配信そのものが珍事件」と語るほどの愛されポンコツぶりを発揮している。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = "1";
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

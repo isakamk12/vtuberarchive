@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>羽渦 ミウネル | VOMS Project Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #70d6ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../voms_index.html" class="char-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Haneuzu Miuneru</div>
+        <h1 class="char-name">羽渦 ミウネル</h1>
+        <div class="char-tags">
+            <span class="char-tag">#羽渦ミウネル</span>
+            <span class="char-tag">#うずまき</span>
+            <span class="char-tag">#ミウネルさんはそんなこと言わない</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-tornado"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>DEBUT:</strong> 2021年10月3日</p>
+                <p><strong>BIRTHDAY:</strong> 9月11日</p>
+                <p><strong>HEIGHT:</strong> 133cm</p>
+                <p><strong>AGE:</strong> 成人はしている（お酒・運転可）</p>
+                <p><strong>FANNAME:</strong> うずまき</p>
+                <p><strong>FANMARK:</strong> 🌀</p>
+            </div>
+            <div class="char-bio">
+                <p>“渦”属性のおしゃべりモンスター。透明感のある美しい声としっかり者な性格で、VOMSの「清楚担当」として知られている。非常に熱心な努力家であり、謎解きやストーリー重視のゲームをじっくり全回収するプレイスタイルを好む。頭のスクリューを外すと死んでしまう。</p>
+            </div>
+        </section>
+
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>応募フォーム9000字＆パワポプレゼン事件</h3>
+                    <p>VOMSのオーディション応募時に志望動機をフリースペースに書き綴った結果、約9000字に到達。さらに面談ではPowerPointで作成したプレゼン資料を持参して自分をアピールした、VOMS愛が重すぎる伝説を持つ。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>清楚ボイスから放たれる「#ミウネルさんはそんなこと言わない」</h3>
+                    <p>『スーパーマリオサンシャイン』配信中、敵に対して「今日はげその唐揚げだー！」等と物騒な発言を連発。GYARI氏により専用タグを作られ、公式切り抜き動画まで制作されるほどのギャップが魅力。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>「8000万ドルの悲鳴」</h3>
+                    <p>大のホラー苦手だが、その悲鳴の美しさは「お手本のような美しい悲鳴」かつ「8000万ドルの悲鳴」と称賛される。あまりに絶叫しすぎた結果、回線が落ちるという奇跡的なハプニングも起こした。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>ポケモン愛と、容赦ない「忘れろビーム」</h3>
+                    <p>自分のポケモンをうっかりNPCのものだと勘違いして使ってしまった際、証拠隠滅のために「忘れろビーム！」と放ち、しれっと元に戻そうとするなど、時折見せるお茶目な一面が愛されている。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

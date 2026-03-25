@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>甘菓子 架斗 | Mi→RiSE Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #f39c12;
+            --char-rgb: 243, 156, 18;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../mirise_index.html" class="char-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Amagashi Kato</div>
+        <h1 class="char-name">甘菓子 架斗</h1>
+        <div class="char-tags">
+            <span class="char-tag">#あまがみたると</span>
+            <span class="char-tag">#ゲイの甘党ショタおじさん</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2>PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>DEBUT:</strong> 2024年10月18日</p>
+                <p><strong>BIRTHDAY:</strong> 9月17日</p>
+                <p><strong>HEIGHT:</strong> 105cm</p>
+                <p><strong>FANNAME:</strong> なこうど</p>
+                <p><strong>FANMARK:</strong> 🍰🫖</p>
+            </div>
+            <div class="char-bio">
+                <p>「ゲイの甘党ショタおじさん」を自称する、Mi→RiSE所属のVTuber。16歳（自称）でありながら平成レトロなトークが炸裂し、マッチョへの深い愛と甘いものへの飽くなき情熱を持つ。喜怒哀楽が激しいヒステリッカーだが、その芯には温かい人生哲学を持つ。</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+            <h2>EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>理想が高すぎる「マッチョ」への異常な愛</h3>
+                    <p>ガチのゲイであることを公言し、マッチョへのこだわりを熱弁。パズルゲーム『マッチョショット』で世界ランキング4位に入るほどの腕前を持ち、マッチョに姫扱いされる妄想を繰り広げるなど、愛の深さは異次元レベル。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>永遠の16歳と隠しきれない平成トーク</h3>
+                    <p>「16歳」を主張しつつも、モーニング娘。1期生や葉っぱ隊など、平成初期〜中期のネタが豊富に飛び出す。「おじさんだから夜は目が効かない」と自ら口走るなど、年齢設定とのギャップがリスナーに愛されている。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>コストコケーキ4kg爆食い事件</h3>
+                    <p>元パティシエで大の甘党だが、自称「糖尿病のサラブレッド」。ダイエットの反動でコストコのスイーツを合計4kg買って爆食いし、「神様に砂糖を産んでくれてありがとうと感謝した」と語るほどの壮絶なスイーツ愛を持つ。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>喜怒哀楽の激しさと「台パン」の奥の優しさ</h3>
+                    <p>思い通りにいかないと絶叫し、スイッチが飛ぶほどの強烈な「台パン」を繰り出すこともあるが、リスナーには「自分の人生のハンドルは自分で握れ」と真摯なメッセージを発信。経験に裏打ちされた深い言葉が心に響く。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = "1";
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>勿忘草 幽冥 | まほろば Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #483d8b;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../mahoroba_index.html" class="char-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Yume Wasurenagusa</div>
+        <h1 class="char-name">勿忘草 幽冥</h1>
+        <div class="char-tags">
+            <span class="char-tag">#幽冥物語</span>
+            <span class="char-tag">#ゆめちゃん見てるよ</span>
+            <span class="char-tag">#勿忘草人形絵</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2><i class="fa-solid fa-seedling"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>DEBUT:</strong> 2023年2月24日</p>
+                <p><strong>BIRTHDAY:</strong> 2月23日</p>
+                <p><strong>HEIGHT:</strong> 150cm</p>
+                <p><strong>FANNAME:</strong> 迷い子さん</p>
+                <p><strong>FANMARK:</strong> 👁️🗨️🐈⬛👻</p>
+            </div>
+            <div class="char-bio">
+                <p>少女人形に取り憑いた幽霊。深夜1時からのダウナーな睡眠導入配信が中心。PCトラブルに愛されており、猫5匹に囲まれながら、下手でも諦めないド根性でゲームに挑む幽霊少女。現世と夢の狭間に住み、迷い込んだ魂を現世に還す仕事をしている。</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+            <h2><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>PCトラブルによる「お葬式の準備」</h3>
+                    <p>頻繁に発生するPCトラブルに悩まされており、再起動から戻らないPCを「死んだ」と思ってお葬式の準備をしていたら生き返ったという珍エピソードを持つ。「パソコンがついに逝ったら配信できない」と予言している。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>6時間放置された二重音声事件</h3>
+                    <p>配信の音声が二重になっていたのに6時間も誰も気づかず、後から発覚したという伝説の放送事故。「誰も幸せにならない初見詐欺はやめて」とリスナーに苦言を呈することも。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>配信に乱入する自由奔放な5匹の猫</h3>
+                    <p>5匹の猫と暮らしており、配信中に猫が大運動会を始めたり、イヤホンを噛みちぎられたり、嘔吐物を処理しに行ったりと、猫中心の生活が垣間見える。猫がいるため有線機器には苦労している模様。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>美少女キャラへの愛が爆発する限界オタク</h3>
+                    <p>ダウナーな雰囲気だが、好みの美少女テーマが登場すると一変。ゲーム内のキャラと結婚を誓い、ガチャを引くか本気で悩み、普段の冷静さを失うほどの限界オタクな一面を露わにする。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = "1";
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

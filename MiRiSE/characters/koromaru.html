@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ヰ乃上 ころまる | Mi→RiSE Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #f1c40f;
+            --char-rgb: 241, 196, 15;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../mirise_index.html" class="char-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Inoue Koromaru</div>
+        <h1 class="char-name">ヰ乃上 ころまる</h1>
+        <div class="char-tags">
+            <span class="char-tag">#ころまるりんぐいん</span>
+            <span class="char-tag">#闘うヲタク</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2>PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>DEBUT:</strong> 2022年3月21日</p>
+                <p><strong>BIRTHDAY:</strong> 5月11日</p>
+                <p><strong>HEIGHT:</strong> 178cm</p>
+                <p><strong>FANNAME:</strong> ころまリスト</p>
+                <p><strong>FANMARK:</strong> 🥊🗿🖋</p>
+            </div>
+            <div class="char-bio">
+                <p>異世界から来た「闘うヲタクファイター」。現役のプロボクサー・井上浩樹選手と同一人物であることを公言しており、ボクシングのガチ解説と深く熱いオタクトークが交錯する唯一無二の配信スタイルを持つ。誰からも愛される生粋のいじられキャラ。</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+            <h2>EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>笑うと「白目」になる特殊体質</h3>
+                    <p>アバターの挙動により、微笑むと白目になり、大笑いすると黒目が見えるという謎の特殊体質を持つ。「激怒しているわけではない」と初配信で弁明して以降、「白目はご愛嬌」としてリスナーから親しまれている。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>井上尚弥選手公認の「いじられ才能」</h3>
+                    <p>どこに行ってもいじられる才能があり、いとこの井上尚弥選手からも「君のいじられは才能だよ」とお墨付きをもらっている。海外選手の陣営からもいきなり友達感覚で絡まれるなど、世界共通の愛され能力を発揮している。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>伝説の「赤いカバン置き忘れ事件」</h3>
+                    <p>井上尚弥選手のトランクス等が入った大事なカバンをホテルに忘れるという大失態を犯すも、周囲から笑い話としてイジられ事なきを得た。心臓が止まりかけるほどのエピソードとして今や鉄板ネタとなっている。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>現役復帰の背中をおした『バンドリ！』</h3>
+                    <p>一度ボクシングを引退し漫画家を志していたが、大好きだったアニメ『BanG Dream!』の映画を見て魂を揺さぶられ現役復帰を決意。入場曲にも楽曲を使用するほどの熱烈な「バンドリヤー」魂が、リングへの情熱を再燃させた。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = "1";
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

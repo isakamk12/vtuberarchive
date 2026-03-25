@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>依澄 しあ | まほろば Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #74b9ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../mahoroba_index.html" class="char-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Izumi Shia</div>
+        <h1 class="char-name">依澄 しあ</h1>
+        <div class="char-tags">
+            <span class="char-tag">#くらしあらいぶ</span>
+            <span class="char-tag">#聞いたぞいすみ</span>
+            <span class="char-tag">#絵ちぜんくらげ</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2><i class="fa-solid fa-cloud"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>DEBUT:</strong> 2023年12月16日</p>
+                <p><strong>BIRTHDAY:</strong> 11月3日</p>
+                <p><strong>HEIGHT:</strong> 160cm</p>
+                <p><strong>FANNAME:</strong> ニコり（非公認）</p>
+                <p><strong>FANMARK:</strong> 🫧☁</p>
+            </div>
+            <div class="char-bio">
+                <p>海に漂う半透明なクラゲの女の子。元「まほろば」スタッフという異色の経歴を持つ「クリエイター兼VTuber」。イラスト、動画、デザインを自ら手掛ける多才さと、リスナーとの軽快なプロレスが魅力。極度の人見知りだが、お酒が入ると陽気になる一面も。</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+            <h2><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>スタッフからVTuberへ！3年越しのデビュー</h3>
+                    <p>事務所のスタッフとして約3年間裏方を務めた後に念願のデビュー。当時のリスナーからは「スタッフのしあちゃん」として親しまれていた。加入歴が長いため「お局」といじられるが、「いつまでも新人！」と抵抗している。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>「メリケンサック」の風評被害と嘘の自白</h3>
+                    <p>可愛いクラゲのヘアピンをリスナーから「メリケンサック」といじられ、「メリケンサックでリスナーを脅している」という物騒な風評被害を定期的に否定しているが、ノリで認めてしまうこともある。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>誘惑に負ける！配信外でゲームを進めすぎる</h3>
+                    <p>ゲームが楽しすぎて配信外で勝手に進めてしまい、配信冒頭でリスナーに懺悔と報告をするのがお決まりの流れ。『アークナイツ：エンドフィールド』などでよく見られる光景。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>謎の飲み物「アクエリスエット」爆誕</h3>
+                    <p>「ポカリスエット」と「アクエリアス」を混同し、「アクエリスエット」という架空の飲み物名を口走ってしまった。今でも切り抜かれて恥ずかしい思いをしている伝説の言い間違い。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = "1";
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

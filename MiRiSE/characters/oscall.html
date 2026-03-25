@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>オスコール | Mi→RiSE Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #9b59b6;
+            --char-rgb: 155, 89, 182;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../mirise_index.html" class="char-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Oscall</div>
+        <h1 class="char-name">オスコール</h1>
+        <div class="char-tags">
+            <span class="char-tag">#オスコール</span>
+            <span class="char-tag">#受肉</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2>PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>DEBUT:</strong> 2019年9月25日</p>
+                <p><strong>BIRTHDAY:</strong> 不明</p>
+                <p><strong>HEIGHT:</strong> 不明</p>
+                <p><strong>FANNAME:</strong> なし</p>
+                <p><strong>FANMARK:</strong> ☠</p>
+            </div>
+            <div class="char-bio">
+                <p>一度死んで蘇った「アンデッドの物書き」。5年間骸骨の姿で活動していたが、事務所所属を機に禁断の蘇生術により美少年の姿へ「受肉」した。酒をこよなく愛し、執筆への凄まじい執念を持つ。リスナーとの対等な関係を重んじ、甘い言葉よりも真摯な対話を好む多才なアンデッド。</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+            <h2>EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>伝説の始まりは「宙吊り」から</h3>
+                    <p>初配信の失敗を忘れないため、1周年記念配信では自らを鎖で巻きつけ、初配信と同じ「宙吊り」状態で配信を行うというストイック（？）な姿勢を見せ、リスナーを驚愕させた。その執念が今の活動の礎となっている。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>5年越しの「受肉」でリスナーを驚愕させる</h3>
+                    <p>長年「親の顔より見た骨」と親しまれた骸骨姿から、突如美少年の姿をお披露目。「上の景色を見てみたい」という飛躍への熱い決意を語り、新時代への一歩を踏み出した。真の本体は左目にはまっている眼球である。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>命がけの「スピリタス」配信</h3>
+                    <p>アルコール度数96度のスピリタスを飲み、意識を飛ばして50分で配信終了した伝説を持つ。後日リベンジするも、死神の気配を感じてのたうち回るなど、文字通り命を削る豪快な配信スタイルで知られる。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>小説執筆への凄まじい執念</h3>
+                    <p>「書かないと死ぬ」と語る創作への熱量は本物。ラノベ大賞の最終選考落選を飲酒配信で悔しがり、一晩で3作のプロットを書き上げるなど、書籍化に向けた飽くなき執念を燃やし続けている情熱的な作家でもある。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = "1";
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

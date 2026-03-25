@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>羽姫 しおり | まほろば Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #8e44ad;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../mahoroba_index.html" class="char-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Hanehime Shiori</div>
+        <h1 class="char-name">羽姫 しおり</h1>
+        <div class="char-tags">
+            <span class="char-tag">#羽姫しおり</span>
+            <span class="char-tag">#社畜魔族</span>
+            <span class="char-tag">#シュレディンガーの学力</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2><i class="fa-solid fa-feather-pointed"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>DEBUT:</strong> 2025年3月</p>
+                <p><strong>BIRTHDAY:</strong> 秘密</p>
+                <p><strong>HEIGHT:</strong> 秘密</p>
+                <p><strong>FANNAME:</strong> しおりんず</p>
+                <p><strong>FANMARK:</strong> 📖</p>
+            </div>
+            <div class="char-bio">
+                <p>バーチャル魔界から来た猫魔族の姫。元「まほろば」裏方スタッフという経歴を持ち、現在は医療事務と兼業の社畜。自称「賢い担当」だが、バカがバレるのを極端に恐れて学力テストから逃げ続けている。Twitchでも活動中。</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+            <h2><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>スタッフからVTuberへ「飯に釣られて」加入</h3>
+                    <p>事務所の裏方スタッフだった過去を持つ。退職後、メンバーとの交流を経て再加入。決め手は運営から「高いご飯を奢ってもらったから」と言い切る潔さ。「飯に釣られたと言っても過言ではない」と語る。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>「賢い担当」を死守する防衛戦</h3>
+                    <p>学力テスト企画からは全力で逃亡。「賢い担当から外れたくない」「バカがバレそうなゲームはしません」と、学力を観測させないことで「シュレディンガーの学力」を保とうとしている。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>圧倒的方向音痴と「汚部屋」インベントリ</h3>
+                    <p>マイクラでは拠点を出た瞬間に迷子になる方向音痴。また、整理整頓が致命的に苦手で、チェストやインベントリは常にゴミで溢れている。「大型だから日常はどうでもいい」と血液型のせいにしている。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>画面酔い対策が「物理的縮小」</h3>
+                    <p>極度の3D酔い体質。ホラゲーなどではウィンドウ画面を限界まで極小サイズにしてプレイするという、物理的な攻略法で酔いと戦っている。本人は「年のせいか」と自虐することもある。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = "1";
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

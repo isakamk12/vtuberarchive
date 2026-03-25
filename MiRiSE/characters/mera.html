@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>花燎 めら | Mi→RiSE Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #e74c3c;
+            --char-rgb: 231, 76, 60;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../mirise_index.html" class="char-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Karyo Mera</div>
+        <h1 class="char-name">花燎 めら</h1>
+        <div class="char-tags">
+            <span class="char-tag">#サイエモチューン</span>
+            <span class="char-tag">#めらちゃんカワイイ</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2>PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>UNIT:</strong> Silent Emotion (Mi→RiSE116)</p>
+                <p><strong>DEBUT:</strong> 2022年4月8日 (ソロ)</p>
+                <p><strong>BIRTHDAY:</strong> 10月24日</p>
+                <p><strong>HEIGHT:</strong> 57m</p>
+                <p><strong>FANNAME:</strong> 小さき物たち</p>
+                <p><strong>FANMARK:</strong> 🔥</p>
+            </div>
+            <div class="char-bio">
+                <p>音楽ユニット『Silent Emotion』の末っ子担当。異世界サウザント・リーフ出身。かつて天才子役として活躍したが、体が大きくなりすぎたためバーチャル世界へ。情熱的でアツい歌声が魅力のアンドロイドVTuberで、火属性らしいメラメラした活動を展開中。</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+            <h2>EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>歌への情熱があふれすぎた「掲示板事件」</h3>
+                    <p>家でも常に全力で歌っていた結果、マンションの掲示板に「歌っている人がいる」と苦情を書かれたこともあるほどの歌好き。負けず嫌いな性格が乗ったそのパワフルな歌声は、ユニット内でも基準となるほど信頼されている。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>ゲーム大好き＆勝負事への執念</h3>
+                    <p>RPGやFPSを好み、『Apex Legends』ではプラチナ3に到達する実力者。『Among Us』では絶体絶命のピンチを言葉巧みにごまかして勝利するなど、勝負事への凄まじい執念と騙し合いのセンスでメンバーを驚かせた。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>サウナ愛と「お家サウナ」での工夫</h3>
+                    <p>サウナのサイクルを3周する本格派だが、過去に倒れた教訓から、現在は風呂場で傘をさして湯船に浸かる独自の「お家サウナ」を楽しんでいる。リスナーへの水分補給の呼びかけは、痛い目を見た経験者ならではの説得力を持つ。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>自分の曲が大好き！リスナーへの可愛いマウント</h3>
+                    <p>自曲「SHINY WIZARD」を四六時中聴いており、「宇宙で一番聴いている」というファンの呟きに対抗して「めらの方が聴いている！」とマウントを取るお茶目な一面も。レコーディングではギャル風の歌い方を披露し好評を得た。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = "1";
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

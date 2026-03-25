@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>しらね いず | まほろば Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #e67e22;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../mahoroba_index.html" class="char-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Shirane Izu</div>
+        <h1 class="char-name">しらね いず</h1>
+        <div class="char-tags">
+            <span class="char-tag">#しらねいず</span>
+            <span class="char-tag">#知らん子</span>
+            <span class="char-tag">#漢字弱者</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2><i class="fa-solid fa-snowflake"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>DEBUT:</strong> 未定</p>
+                <p><strong>BIRTHDAY:</strong> 2月5日</p>
+                <p><strong>HEIGHT:</strong> 160cm</p>
+                <p><strong>FANNAME:</strong> 知らん子</p>
+                <p><strong>FANMARK:</strong> 🐾</p>
+            </div>
+            <div class="char-bio">
+                <p>「食べてはしゃいでよく眠る」オコジョの新人VTuber。マイペースで元気、好奇心旺盛な負けず嫌い。圧倒的なゲーム体力と、それ以上に圧倒的な睡眠エピソードを持つ。漢字に弱く、リスナーとの「媚びない」プロレスが人気の元気印。</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+            <h2><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>伝説の寝落ち＆爆睡配信</h3>
+                    <p>FF14の配信中にガチで3〜4時間寝落ちし、起きたらリスナーに静かに見守られていた伝説を持つ。夜の配信を寝過ごしてすっぽかしてしまい、急遽「朝活」に変更して謝罪しながらゲームをすることもしばしば。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>限界社畜の「床で気絶」伝説</h3>
+                    <p>社畜時代、帰宅後に玄関や部屋の床で気絶するように眠っていた壮絶な過去を持つ。「配信予定に来なかったら気絶してると思って」とリスナーに伝えるほど、睡眠への欲求が強い。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>漢字との終わらない戦い</h3>
+                    <p>自他共に認める漢字弱者。「漢字でGO!」では野生の勘で挑むも大苦戦。初歩的な漢字が読めないことをリスナーから愛着を持ってイジられ、助けを求めるのがお決まりの流れ。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>響き渡る大声と虚無のミュート配信</h3>
+                    <p>50m先まで届く大声が持ち味。配信開始から全力で自己紹介をしていたのに、マイクがミュートだったというポンコツな放送事故を起こしたことがある。焼肉屋のバイト時代は声のデカさを絶賛されていた。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = "1";
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

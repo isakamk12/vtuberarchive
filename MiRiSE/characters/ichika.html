@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>氷雨 いちか | Mi→RiSE Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #3498db;
+            --char-rgb: 52, 152, 219;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../mirise_index.html" class="char-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Hisame Ichika</div>
+        <h1 class="char-name">氷雨 いちか</h1>
+        <div class="char-tags">
+            <span class="char-tag">#いちかばちか</span>
+            <span class="char-tag">#ひさ名画</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2>PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>UNIT:</strong> Silent Emotion (Mi→RiSE116)</p>
+                <p><strong>DEBUT:</strong> 2022年6月1日 (ソロ)</p>
+                <p><strong>BIRTHDAY:</strong> 6月1日</p>
+                <p><strong>HEIGHT:</strong> 634m</p>
+                <p><strong>FANNAME:</strong> 小さき物たち</p>
+                <p><strong>FANMARK:</strong> 🧊</p>
+            </div>
+            <div class="char-bio">
+                <p>音楽ユニット『Silent Emotion』の水属性・長女担当。故郷の惑星が“就職氷河期”に突入したため、バーチャル世界へ移住してきた。スカイツリー級の巨体と、水のようにお酒（ビール）を浴びたい豪快な性格を持つ、面倒見の良いお姉さん。</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+            <h2>EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>魂の叫び！超絶スケールの自己紹介</h3>
+                    <p>「故郷に巨大隕石が落下した！」から始まる、サンシャイン池崎風のハイテンションな自己紹介を考案。「身長634m、さながらスカイツリーなその女の正体は…」という規格外のスケール感で、初見のリスナーに強烈なインパクトを残した。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>配信環境は「洋風ドラえもん状態」</h3>
+                    <p>クローゼットを秘密基地化し、扉を閉め切って歌配信を行うスタイルを「洋風ドラえもん状態」と称している。中はサウナ状態で常に汗だくになりながら、全力の歌声を秘密基地から届けている情熱家の一面。 </p>
+                </div>
+                <div class="char-episode">
+                    <h3>アイドルらしからぬ？「口の中ジャブジャブ」事件</h3>
+                    <p>超難易度の楽曲『アイドル』を歌った際、息継ぎが多すぎて「口の中が唾液でジャブジャブになった」と激白。「ヨダレをバキュームする機械が欲しい」と切実に語り、クールな見た目とのギャップでファンを爆笑させた。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>メンバー愛が詰まった「相合い傘」のサイン</h3>
+                    <p>「いちかの傘でSilent Emotionの3人を守る」という意味を込めた「傘と3つのプラスマーク」のサインを自作。長女らしい深い愛情を持ちつつ、どこの現場でも雨を降らせる筋金入りの雨女っぷりもリスナーに親しまれている。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = "1";
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

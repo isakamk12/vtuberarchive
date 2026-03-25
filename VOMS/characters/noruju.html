@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>植峰 ノルジュ | VOMS Project Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #4caf50;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../voms_index.html" class="char-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Uemine Noruju</div>
+        <h1 class="char-name">植峰 ノルジュ</h1>
+        <div class="char-tags">
+            <span class="char-tag">#植峰ノルジュ</span>
+            <span class="char-tag">#ノルジュが生えた</span>
+            <span class="char-tag">#う絵みね</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-leaf"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>DEBUT:</strong> 2023年11月19日</p>
+                <p><strong>BIRTHDAY:</strong> 12月7日</p>
+                <p><strong>HEIGHT:</strong> 141cm</p>
+                <p><strong>BLOODTYPE:</strong> O型</p>
+                <p><strong>FANNAME:</strong> 森茂</p>
+                <p><strong>FANMARK:</strong> 🌳</p>
+            </div>
+            <div class="char-bio">
+                <p>“森”属性のおしゃべりモンスター。頭の木が伐採されると死んでしまう。クールな印象とは裏腹に、地球を爆発させるほどのポンコツっぷりや、ファンサをピーナッツと間違えられる愛されおバカキャラ。銀魂で義務教育を終えた銀魂女子。トイレに行くことを「セズる」と呼ぶ。</p>
+            </div>
+        </section>
+
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>初配信でテンパりすぎて「地球を爆発」させる</h3>
+                    <p>記念すべき初配信の開始早々、操作ミスにより背景の地球を爆発させるという衝撃的な放送事故を起こす。開始数分でポンコツ王の片鱗を見せ、リスナーを大いに沸かせた。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>渾身のファンサを「ピーナッツ」と間違えられる</h3>
+                    <p>ハートを象ったファンサが、リスナーには「ピーナッツ」や「空洞」にしか見えず大喜利の的に。「ピーナッツじゃねーから！ファンサだから！」は彼女を代表する名言（絶叫）となった。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>自称「キモオタ」からの「ただのキモ」への降格</h3>
+                    <p>VOMSの同僚たちの圧倒的なオタク知識に触れ、「自分はオタクじゃなくて ただのキモ だったんだ」と悟る。「井の中のノルジュ」状態を自覚して以降、愛あるいじりを受けている。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>「銀魂」で義務教育を終えた女のDBガチ泣き体験</h3>
+                    <p>知識がパロディ経由しかなかったドラゴンボール。ゲーム実況を通じて初めて原作の熱いストーリーに触れ、配信中にガチ泣きするほど感動し、多くのリスナーの心を打った。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

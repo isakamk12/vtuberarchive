@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>夜見 ベルノ | Mi→RiSE Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #8e44ad;
+            --char-rgb: 142, 68, 173;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../mirise_index.html" class="char-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Yomi Beruno</div>
+        <h1 class="char-name">夜見 ベルノ</h1>
+        <div class="char-tags">
+            <span class="char-tag">#読書実況</span>
+            <span class="char-tag">#活字狂</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2>PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>DEBUT:</strong> 活動中</p>
+                <p><strong>BIRTHDAY:</strong> 11月23日</p>
+                <p><strong>HEIGHT:</strong> 不明</p>
+                <p><strong>FANNAME:</strong> リスナー</p>
+                <p><strong>FANMARK:</strong> 📕</p>
+            </div>
+            <div class="char-bio">
+                <p>Web小説紹介に特化した「バーチャル小説発掘家（スコッパー）」。ゲーム実況のように小説を読み進める「読書実況」を軸に、作家インタビューや声劇なども行う。真面目で穏やかな性格だが、自身の興味のある分野（特にWeb小説）に関しては非常に高い熱量を持つ。</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+            <h2>EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>活動の原動力は「Web小説への恩返し」</h3>
+                    <p>VTuber活動の根底には、自身を「活字狂」にしてくれたWeb小説界隈への強い感謝がある。「恩返しのためにこんなところまで来てしまった」と語るほど情熱的で、自身のやりたいことをベースにしたブレない活動方針がリスナーに支持されている。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>シャンプーの裏側まで読むガチの「活字狂」</h3>
+                    <p>自身を「ただの本狂い」と称しており、配信中に「お風呂場でシャンプーの裏側を読むタイプの人だ」と指摘された際には「なぜわかった」と即答。筋金入りの活字中毒っぷりを披露し、常に文字を求めて彷徨うスタイルが定着している。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>最低限の生存戦略「毎日140字の作品紹介」</h3>
+                    <p>活動初期からX（旧Twitter）で毎日欠かさず140字以内の小説紹介を継続。体調不良で配信できない時でも「生存確認」として機能し、リスナーとの信頼を積み重ねるための戦略的かつ誠実な活動単位となっている。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>iPodで配信していた苦労人の初期時代</h3>
+                    <p>活動初期の半年間は非常に苦労しており、当時はiPadならぬiPodで配信を行っていた。3ヶ月間誰も来ない時期もあったというが、地道な活動を経て現在では紹介しきれないほどの作品応募が集まる人気者へと成長を遂げた。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = "1";
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

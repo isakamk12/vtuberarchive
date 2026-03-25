@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>緋笠 トモシカ | VOMS Project Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #ff4d4d;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../voms_index.html" class="char-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Hikasa Tomoshika</div>
+        <h1 class="char-name">緋笠 トモシカ</h1>
+        <div class="char-tags">
+            <span class="char-tag">#緋笠トモシカ</span>
+            <span class="char-tag">#シカ友</span>
+            <span class="char-tag">#トモシカクイズ</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-fire"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>DEBUT:</strong> 2020年3月19日</p>
+                <p><strong>BIRTHDAY:</strong> 9月21日</p>
+                <p><strong>HEIGHT:</strong> 138cm</p>
+                <p><strong>AGE:</strong> 秘密</p>
+                <p><strong>FANNAME:</strong> シカ友、雑魚</p>
+                <p><strong>FANMARK:</strong> 🦌</p>
+            </div>
+            <div class="char-bio">
+                <p>ゲーム配信系のVTuberで、「炎」属性のおしゃべりモンスター。頭の炎が消えるとアイデンティティが無くなり死んでしまいます。演技力・企画力が高く、茶番を好む傾向があります。ファンからは「煽り100、イキり100、企画力100、煽り耐性0」と評される、芸人魂あふれるプレイスタイルが愛されています。</p>
+            </div>
+        </section>
+
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>伝説の斜め上耐久配信：羊1万匹＆3時間瞑想</h3>
+                    <p>羊を1万匹数える配信（約11時間43分）や、3時間目を閉じて瞑想するだけのシュールな配信など、常人には真似できない斜め上の耐久企画を完遂する精神力を持つ。リスナーからも「最も衝撃的だった」と語り継がれている。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>愛すべきポンコツ・茶番での大事故</h3>
+                    <p>エイプリルフールに「自分がリコーダーを舐めて逮捕された」という凝った茶番動画を用意するも、本番でマイクをミュートにしたまま無音で進行してしまい、配信後に猛省会を開くという「大事故」を等身大の魅力として昇華させた。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>人生最大の誇りは「マイクラ肝試し」1位</h3>
+                    <p>『マイクラ肝試し』という大会で1位を取ったことを異常なほど誇りにしており、お葬式の遺言でもこの実績を親族に読み上げてほしいと語るほど、勝負事（特に肝試し）への情熱は熱い。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>将棋VTuberへの覚醒と「初狩り」の優しさ</h3>
+                    <p>2025年から将棋に猛烈にハマり、「初狩りしてやる」とイキりながらも、実際には初心者に手取り足取り教え、相手がハマると大喜びする面倒見の良さが漏れ出ている。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小紫 小夜丸 | Mi→RiSE Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #8e44ad;
+            --char-rgb: 142, 68, 173;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../mirise_index.html" class="char-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Komurasaki Sayomaru</div>
+        <h1 class="char-name">小紫 小夜丸</h1>
+        <div class="char-tags">
+            <span class="char-tag">#小夜丸徘徊中</span>
+            <span class="char-tag">#サヨ絵モ</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2>PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>UNIT:</strong> Silent Emotion (Mi→RiSE116)</p>
+                <p><strong>DEBUT:</strong> 2021年12月25日</p>
+                <p><strong>BIRTHDAY:</strong> 3月4日</p>
+                <p><strong>HEIGHT:</strong> 18m</p>
+                <p><strong>FANNAME:</strong> 小さき物たち</p>
+                <p><strong>FANMARK:</strong> 😈🔩</p>
+            </div>
+            <div class="char-bio">
+                <p>『Silent Emotion』の闇属性担当。異世界のネジ工場を「心がない」という理由でクビになり闇落ちした過去を持つ。18mとガンダム並の巨体ながらユニット内では最少の「ちびっ子」。ダークで狂気的な作品を好む独特なセンスの持ち主。</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+            <h2>EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>ネジ工場クビからの闇落ちと出会い</h3>
+                    <p>「君の作業には心がない」という理不尽な理由で工場をクビになり闇落ちした異色の経歴。バーチャル世界を彷徨う中でめら・いちかと出会い、活動を開始した。将来の夢は「悪意の詰まった本棚を作ること」と語るほどダークな世界観を愛している。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>巨大だけどユニット内では最小の「ちびっ子」</h3>
+                    <p>ガンダムサイズの18mを誇るが、他メンバーが規格外すぎるためユニット内では最小。人間（小さきものたち）を踏まないよう気をつけながら歩く優しさと、プロレス生観戦で衝撃を受け、デスペラード選手に憧れるといった意外な情熱も併せ持つ。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>『Among Us』でのポンコツインポスター</h3>
+                    <p>ベントに隠れる瞬間をバッチリ目撃されるなど、インポスターとしてのクソ下手ぶりが露呈。「お前船降りろ」とまでいじられるポンコツな一面がチャームポイント。プラネタリウムで具のない麺ばかり食べたという不憫なエピソードも事欠かない。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>ピュアな過去とホラーなサプライズ</h3>
+                    <p>小4までサンタを信じ、手編みマフラーを贈るピュアな心を持っていた。誕生日配信でメンバーからの祝辞に喜ぶ一方、いちかからの「宇宙で一つになろう」というスピリチュアルすぎるメッセージに本気で怯えるなど、リアクションも非常に豊か。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = "1";
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

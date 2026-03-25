@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猫々 | Marble Creators Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #9D4EDD;
+            --char-rgb: 157, 78, 221;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg">
+        <div class="char-color-blob"></div>
+        <div class="char-bg-glass"></div>
+    </div>
+
+    <nav>
+        <a href="../marblecreators_index.html" class="char-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK TO HUB
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Maomao</div>
+        <h1 class="char-name">猫々</h1>
+        <div class="char-tags">
+            <span class="char-tag">#猫々</span>
+<span class="char-tag">#働いたら負け</span>
+<span class="char-tag">#下ネタ担当</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2><i class="fa-solid fa-cat"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>DEBUT:</strong> 2019年12月29日</p>
+<p><strong>BIRTHDAY:</strong> 2月22日</p>
+<p><strong>HEIGHT:</strong> 161cm</p>
+<p><strong>WEIGHT:</strong> 3.5kg</p>
+<p><strong>FANMARK:</strong> 🐱🛸</p>
+
+            </div>
+            <div class="char-bio">
+                <p>空から降ってきたチャイナ服の猫耳美少女にして、ひきこもりクズニート宇宙人VTuber。筋肉ムキムキの「ばぁば」に拾われ、下ネタ担当として奔放に活動中。耳が4つ、歯が1本という特異な体質を持ちながら、独特な喋り方と「働いたら負け」の精神で異彩を放つ。</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+            <h2><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="char-episodes">
+                
+                <div class="char-episode">
+                    <h3>初配信直後の「働いたら負け」宣言</h3>
+                    <p>書き初め企画で「働いたら負け」と書き上げ、最初から一貫したクズニート精神を披露。同時に強烈な下ネタを連発し、デビュー早々に「下ネタ担当」の地位を確立した。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>アークナイツ古参ドクターの「カッターちゃん」信仰</h3>
+                    <p>サービス開始時からのガチ勢。「カッターちゃんが出れば勝ち」という謎のジンクスや、ガチャ結果による一喜一憂、キャラの露出への執着など、欲望に忠実なプレイスタイルが人気。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>VRChatでの「重度陰キャ」奮闘記</h3>
+                    <p>自分から声をかけるミッションに挑むも、緊張で手が震え、2時間で話しかけたのはわずか数人。胸が揺れるギミックに大興奮する姿も含め、リアルな引きこもり気質が露わになった。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>切れ痔で死を覚悟した衝撃の報告</h3>
+                    <p>配信前に便器が真っ赤になり「死」を覚悟するも、ただの切れ痔と判明。それを笑いながら平然とオープニングトークで報告する、あけすけな性格がリスナーを驚かせた。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>漢字が読めない朗読会「アー漢字読めナイツ」</h3>
+                    <p>難しい漢字が続くストーリー朗読では頻繁に詰まり、リスナーに助けを求める「協力型」配信へと変貌。ポンコツさとリスナーとの一体感が楽しめる名物企画となっている。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

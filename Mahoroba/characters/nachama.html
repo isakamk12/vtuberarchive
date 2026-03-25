@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>夏月 ニナ | まほろば Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #6a5acd;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../mahoroba_index.html" class="char-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Natsuki Nina</div>
+        <h1 class="char-name">夏月 ニナ</h1>
+        <div class="char-tags">
+            <span class="char-tag">#なちゃま</span>
+            <span class="char-tag">#夏月ニナ</span>
+            <span class="char-tag">#アグロ絶対許さない</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2><i class="fa-solid fa-fan"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>DEBUT:</strong> 2021年6月20日</p>
+                <p><strong>BIRTHDAY:</strong> 秘密</p>
+                <p><strong>HEIGHT:</strong> 160cm</p>
+                <p><strong>FANNAME:</strong> お兄さん</p>
+                <p><strong>FANMARK:</strong> 🌙</p>
+            </div>
+            <div class="char-bio">
+                <p>自称「エターナルJK」にして「お兄さん」。Shadowverseを中心に活動する「社畜系最底辺犬VTuber」。可憐なビジュアルとは裏腹に、カードゲームに対する熱すぎる情熱と、日々の社畜生活の悲哀を等身大で語るギャップが魅力。プレイヤーネームを「お兄さん」にするほど、ファンから「お兄さん」と呼ばれたい願望がある。</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+            <h2><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>RAGE初参加で地獄の「10時間待機」</h3>
+                    <p>シャドバの大型大会RAGEにて、進行トラブルによりAグループだけが約10時間も待機させられる大事件に遭遇。「Aグループ被害者の会」を結成し、「次はAグループの赤い首かけを持っていこうぜ」と持ちネタへと昇華させた。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>過酷すぎる労働環境と「社畜」の叫び</h3>
+                    <p>深夜から朝まで仕事のトラブル対応に追われるなど、リアルなブラック労働エピソードが尽きない。夜中の1時前に仕事に入り、解散したのが朝の9時だったという絶望的な状況を配信で赤裸々に語っている。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>強烈すぎる「アグロアンチ」の咆哮</h3>
+                    <p>シャドバのアグロデッキを親の仇のように憎んでおり、理不尽に負けると清楚なガワからは想像できない暴言が飛び出す。「アグロを滅ぼすぞ」は配信タイトルの定番であり、運営からも心配されるほどのキレっぷりを見せる。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>第4回シャドバVtuber最強決定戦「準優勝」</h3>
+                    <p>チーム「イエーイ楽しい」の一員として出場。猛練習を重ねて臨んだ大会で見事準優勝。終了後の配信では、プレッシャーから解放され涙を流して感謝を伝えるエモいシーンを生み出した。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = "1";
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

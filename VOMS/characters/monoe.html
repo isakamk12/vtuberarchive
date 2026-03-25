@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>磁富 モノエ | VOMS Project Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #607d8b;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../voms_index.html" class="char-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Jitomi Monoe</div>
+        <h1 class="char-name">磁富 モノエ</h1>
+        <div class="char-tags">
+            <span class="char-tag">#磁富モノエ</span>
+            <span class="char-tag">#ジト民</span>
+            <span class="char-tag">#心地いい騒音</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-magnet"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>DEBUT:</strong> 2020年3月19日</p>
+                <p><strong>GRADUATION:</strong> 2021年2月19日</p>
+                <p><strong>BIRTHDAY:</strong> 5月12日</p>
+                <p><strong>HEIGHT:</strong> 132cm</p>
+                <p><strong>FANNAME:</strong> ジト民</p>
+                <p><strong>FANMARK:</strong> 🧲</p>
+            </div>
+            <div class="char-bio">
+                <p>“磁”属性のおしゃべりモンスター。魅力的な低音ボイスとまったりトークが「心地いい騒音」と評された。TRPGでの圧倒的な世界観構築力や、まったりした雰囲気の中に潜む「イキリ陰キャ」や「サイコパス」な一面が魅力。磁石を外すと死ぬ。</p>
+            </div>
+        </section>
+
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>緊張とサイコパスが同居した伝説の初配信</h3>
+                    <p>極度の緊張で震えながらも、履歴書に「うるせ〜〜！！」と書き込み、人間を溶かす機械を「ベリーキュート」と称するなど、初日からマイペースサイコな大物の片鱗を見せた。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>雪山人狼で露呈した「イキリ陰キャ」伝説</h3>
+                    <p>人狼役で「さぁ、行こう。」とカッコよく決めるも、幽霊となった同僚たちに現場を抑えられ、後に「イキリ陰キャ」として盛大にいじられるという完璧なオチをつけた迷シーン。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>TRPGで見せた圧倒的なプレイングと世界観</h3>
+                    <p>『シン狂気山脈V3』等で活躍。他配信者からも絶賛される世界観構築力と、物語に命を吹き込む卓越した名演技で、TRPGシーンに大きな爪痕を残した。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>執念の壺耐久と10万人達成の快挙</h3>
+                    <p>登録者10万人達成のために『壺おじ』耐久を実施。目標達成後も「関係なく壺をする」と24時間以上配信を続けクリアまで漕ぎ着けるという、凄まじい執念と根性を見せつけた。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

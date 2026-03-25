@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>未知又 バトヤ | VOMS Project Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #9c27b0;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../voms_index.html" class="char-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Batoya Michimata</div>
+        <h1 class="char-name">未知又 バトヤ</h1>
+        <div class="char-tags">
+            <span class="char-tag">#未知又バトヤ</span>
+            <span class="char-tag">#戦友</span>
+            <span class="char-tag">#Batoyarts</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-swords"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>DEBUT:</strong> 2023年11月19日</p>
+                <p><strong>BIRTHDAY:</strong> 2月27日</p>
+                <p><strong>HEIGHT:</strong> 144cm</p>
+                <p><strong>BLOODTYPE:</strong> A型</p>
+                <p><strong>MBTI:</strong> INFJ</p>
+                <p><strong>FANNAME:</strong> 戦友</p>
+                <p><strong>FANMARK:</strong> 🆚</p>
+            </div>
+            <div class="char-bio">
+                <p>“戦”属性のおしゃべりモンスター。ヤンキー風の外見に反し、中身は誠実で真面目な努力家。RPGやRTAにストイックに取り組むゲーマーとしての顔と、作詞・作曲までこなす音楽クリエイターとしての才能を併せ持つ。髪型の「VS」が読めなくなると死ぬ。</p>
+            </div>
+        </section>
+
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>度肝を抜いた初配信とポケモン150問連続正解</h3>
+                    <p>自作のポケモン風画面での自己紹介や、脅威のスピードでのポケモン鳴き声クイズ150問連続正解など、圧倒的なクオリティと知識量で伝説的なデビューを飾った。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>マルチな才能を発揮する「変拍子オタク」な音楽家</h3>
+                    <p>中身をすべて自身で手掛けた楽曲やアルバムをリリース。「変拍子」を愛し、作詞・作曲・Mixまでこなす高いクリエイティビティで、唯一無二の存在感を放っている。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>ガチすぎるRTA走者としての情熱</h3>
+                    <p>『キングダムハーツ2』のRTAイベント出場や、誕生日前日のポケモン赤全クリRTA完走など、自分を追い込むストイックなプレイスタイルで多くの戦友を惹きつけている。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>日本語の些細な疑問で12万いいねの大バズり</h3>
+                    <p>「『可愛い』は『可愛よさそう』と言うのに…」という促音便に関する素朴な疑問をポストしたところ、12万いいねを超える大バズりを記録。意外なバズり運も持っている。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

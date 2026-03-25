@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宝姿 月夜狐 | Mi→RiSE Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #e67e22;
+            --char-rgb: 230, 126, 34;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../mirise_index.html" class="char-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Hoshi Tsukiyoko</div>
+        <h1 class="char-name">宝姿 月夜狐</h1>
+        <div class="char-tags">
+            <span class="char-tag">#人狐系VTuber</span>
+            <span class="char-tag">#EAに嫌われた狐</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2>PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>DEBUT:</strong> 2023年11月14日</p>
+                <p><strong>BIRTHDAY:</strong> 不明</p>
+                <p><strong>HEIGHT:</strong> 不明</p>
+                <p><strong>FANNAME:</strong> リスナー</p>
+                <p><strong>FANMARK:</strong> 🐾</p>
+            </div>
+            <div class="char-bio">
+                <p>人間に化けて暮らしていた狐の「人狐（にこ）系VTuber」。おっとりとした性格と言われるが、ゲーム中にはつい口が悪くなってしまうことも。APEXを1,000時間以上プレイするガチ勢であり、日々回線落ちやエラーと戦いながら、大きなステージでファンと交流することを夢見て活動している。</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+            <h2>EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>伝説の始まり！ドタバタの初配信</h3>
+                    <p>配信開始ミスで11分間一人で喋り続けたり、Xのパスワードを忘れてログインできなかったりと、おっちょこちょいな幕開けを飾った。概要欄に事務所名を書き忘れる痛恨のミスもあり、初々しいポンコツぶりでリスナーを和ませた。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>APEX 1,000時間超えの軌跡と回線落ち</h3>
+                    <p>「立ち絵を逆さまに吊るす」という奇抜な画面構成でプレイしたり、頻発する回線落ちを「EAに嫌われた」と嘆くのがお約束。叫んだら即終了縛りでは数分で絶叫し、必死に弁明しながら配信を強行した伝説を持つ。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>ホラゲーでのビビリっぷりとパニック</h3>
+                    <p>ホラーゲームが極度に苦手で、パニックのあまり味方の隊員を敵と間違えてタコ殴りにしたことも。「スティック押し込み」操作が物理的に苦手で何度もゲームオーバーになるなど、意外な弱点がリスナーを笑顔にしている。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>性格診断で「羊を破壊」するサイコ狐</h3>
+                    <p>性格診断ゲームで「聖職者」と診断されながらも、展開上で「羊を破壊する」ルートを自ら選んでしまい、「羊殺したいと思ったことないよ！」と激しく動揺。想定外のサイコパス（？）行動が大きな話題となった。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = "1";
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

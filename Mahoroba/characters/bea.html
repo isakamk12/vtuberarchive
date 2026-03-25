@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>くれない べあ | まほろば Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../mahoroba_index.html" class="char-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Kurenai Bea</div>
+        <h1 class="char-name">くれない べあ</h1>
+        <div class="char-tags">
+            <span class="char-tag">#べあ出没中</span>
+            <span class="char-tag">#最強あーと</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2><i class="fa-solid fa-paw"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>DEBUT:</strong> 2023年8月3日</p>
+                <p><strong>BIRTHDAY:</strong> 8月3日</p>
+                <p><strong>HEIGHT:</strong> 153cm</p>
+                <p><strong>FANNAME:</strong> べあリス</p>
+                <p><strong>FANMARK:</strong> 🐻</p>
+            </div>
+            <div class="char-bio">
+                <p>「バーチャル界最強に可愛いクマ」を目指す人間（？）。実はクマ耳は着脱可能。波乱万丈な人生を笑いに変えるトーク力と、10時間耐久をこなす圧倒的な喉の強さを持つ配信モンスター。サバサバした性格で、曲がったことが大嫌いな真っ直ぐな正義感の持ち主。</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+            <h2><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>実はクマじゃなかった！？「耳着脱」カミングアウト</h3>
+                    <p>インパクトを求めてクマ耳をつけているだけで、中身は普通の人間だと告白。「最強のクマに憧れているただの人間」であり、ヘッドセットと一緒に外れると身も蓋もないことを語っている。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>怒りの「10時間7000人耐久歌枠」</h3>
+                    <p>寝てる間に登録者が減ったYouTubeへの怒りから突発的に耐久を開始。10時間歌い続けて目標を達成し、圧倒的な喉の強さと根性を見せつけた。喉のケアは「特に何もしていない」という規格外の強さを誇る。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>波乱万丈すぎる過去と「家凸事件」</h3>
+                    <p>USJでの詐欺被害や、バイト先社員による家凸事件など、壮絶な過去を赤裸々に語る。それらを笑いに変えていくトーク力が支持されているが、家凸に関しては深刻なトラウマとなっている。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>運営と「イヤイヤ期」のプロレス</h3>
+                    <p>予定を立てるのが苦手でゲリラを好む自由人。運営を「お母さん」のように扱い、予定を立てろと言われて「イヤイヤ！」と反抗するプロレスを繰り広げている。大雑把なO型を免罪符にしている。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = "1";
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

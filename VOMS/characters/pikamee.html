@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天野 ピカミィ | VOMS Project Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #ffd500;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../voms_index.html" class="char-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Amano Pikamee</div>
+        <h1 class="char-name">天野 ピカミィ</h1>
+        <div class="char-tags">
+            <span class="char-tag">#Pikamee</span>
+            <span class="char-tag">#天野ピカミィ</span>
+            <span class="char-tag">#ケトル笑い</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-bolt"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>DEBUT:</strong> 2020年3月19日</p>
+                <p><strong>GRADUATION:</strong> 2023年3月31日</p>
+                <p><strong>BIRTHDAY:</strong> 7月13日</p>
+                <p><strong>HEIGHT:</strong> 135cm</p>
+                <p><strong>FANNAME:</strong> PIKARMY</p>
+                <p><strong>FANMARK:</strong> ⚡</p>
+            </div>
+            <div class="char-bio">
+                <p>“雷”属性のおしゃべりモンスター。日英バイリンガルで、高音の「ケトル笑い」が世界中で愛された。IQ5兆を自称するが漢字と算数が苦手なポンコツな一面や、ゲームへの豊かな感受性、そしてドーナツへの深い愛が魅力。2023年に活動を終了した伝説のモンスター。アンテナが外れると死ぬ。</p>
+            </div>
+        </section>
+
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>日英ペラペラのハイテンション・バイリンガル！</h3>
+                    <p>日本語と英語を自在に操り、流行の「ピカミーム」現象を巻き起こすなど世界中のファンを繋いだ。毎週の日曜英語配信は彼女ならではの大きな持ち味だった。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>伝説のヤカン引き笑い「ケトル笑い」</h3>
+                    <p>笑い声が高音のヤカンの音にそっくりなことから命名。一度聴いたら忘れられないその笑い声は、PIKARMYにいつも元気と笑顔を届けた彼女のトレードマーク。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>家も消火器も爆発！カオスなクッキング配信</h3>
+                    <p>料理ゲームで消火器をぶちまけ、火事を起こしてもビール樽を持って逃走。最後には家（家賃5兆円）を爆破して締めるという、カオスでエンタメ性の高い伝説を残した。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>敵にも寄り添う優しさと「鬼畜ミィ」の二面性</h3>
+                    <p>ゾンビの体調を心配する優しさを持つ一方、マリオ64で理不尽にキレる「鬼畜ミィ」や、あつ森での「ゲスの極ミィ」など、人間味あふれる多彩な表情が愛された。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

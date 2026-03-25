@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>朱ノ槌 ユウツヅ | まほろば Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #d63031;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../mahoroba_index.html" class="char-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Akanotsuchi Yutsuzu</div>
+        <h1 class="char-name">朱ノ槌 ユウツヅ</h1>
+        <div class="char-tags">
+            <span class="char-tag">#赤の子</span>
+            <span class="char-tag">#赤あーと</span>
+            <span class="char-tag">#つずちゃん</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2><i class="fa-solid fa-hammer"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>DEBUT:</strong> 未定</p>
+                <p><strong>BIRTHDAY:</strong> 8月9日</p>
+                <p><strong>HEIGHT:</strong> 未定</p>
+                <p><strong>FANNAME:</strong> 赤の子</p>
+                <p><strong>FANMARK:</strong> ❤️🔨</p>
+            </div>
+            <div class="char-bio">
+                <p>甘やかされたい獏のおこちゃま。巨大なハンマーを「護身用」として背負う。普段はぽやぽやしているが、『League of Legends』をプレイすると人格が豹変し暴言が飛び出すギャップを持つ。漢字とローマ字が苦手なインドア派で、47都道府県は書けるのが自慢。</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+            <h2><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>護身用ハンマーへの並々ならぬこだわり</h3>
+                    <p>立ち絵で最もこだわったのは顔よりも背負っている巨大なハンマー。角度や揺れ方までモデラーと微調整を重ねた。本人曰く、危ない人がいた時の自己防衛用として振り回すための大切な相棒。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>『LoL』をプレイすると豹変する人格</h3>
+                    <p>普段はおっとりしているが、LoLをプレイすると「やれやれやれ！許すな！」と口が悪くなり激しく叫びまくる。先輩たちと一緒にプレイした際、その豹変ぶりに「こんなに叫ぶ子だったんだ…」と驚愕させた。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>漢字・ローマ字弱者の「ぽやぽや」な日常</h3>
+                    <p>初見リスナーの名前や用語が読めず、ふりがなを懇願するのは日常。英語のローマ字には脳が拒否反応を起こすが、「九九の七の段は言える」と小学生並みの範囲なら問題ないという謎の自信を見せている。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>インドア派の「一人ラーメン」大冒険</h3>
+                    <p>普段は外出を極端に嫌うが、病院帰りに人生2回目となる一人ラーメン（一風堂）を決行。Apex配信の冒頭で「マジで成長ですよこれ！えらくね！？」と大興奮でお土産話を語った。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = "1";
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>善額 サンパロー | VOMS Project Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #ffcc00;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../voms_index.html" class="char-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Zengaku Sanparo</div>
+        <h1 class="char-name">善額 サンパロー</h1>
+        <div class="char-tags">
+            <span class="char-tag">#善額サンパロー</span>
+            <span class="char-tag">#おとなりサン</span>
+            <span class="char-tag">#太曜ロードショー</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-sun"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>DEBUT:</strong> 2023年11月19日</p>
+                <p><strong>BIRTHDAY:</strong> 6月3日</p>
+                <p><strong>HEIGHT:</strong> 152cm</p>
+                <p><strong>BLOODTYPE:</strong> B型</p>
+                <p><strong>FANNAME:</strong> おとなりサン</p>
+                <p><strong>FANMARK:</strong> 🌞</p>
+            </div>
+            <div class="char-bio">
+                <p>“太陽”属性のおしゃべりモンスター。明るく陽気なお兄ちゃん的存在。1900時間を超えるスプラトゥーンの腕前を持つガチゲーマー。私生活では独り言を自動ドアに「開けっ！」と聞かせるお茶目な一面も。圧倒的なトーク力で場を盛り上げるムードメーカー。額の太陽が隠れると死ぬ。</p>
+            </div>
+        </section>
+
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>「岩盤発破」への異常な執着</h3>
+                    <p>『エルデンリング』で初期ステータスのまま魔術「岩盤発破」のみで攻略することに魅了され、「走って葉っぱで破壊しろ！」と叫び続ける独自の縛りプレイでリスナーを熱狂させた。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>ガチグラ「よろず屋サンちゃん」のエモい結末</h3>
+                    <p>ストグラ系企画では自転車で駆け巡るよろず屋として活動。最終日には「乙女の涙が一番盗みたいもの」という普段のキャラとは違うキザでエモい台詞を残し、感動を呼んだ。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>ファンへの愛を形にする「サンキューカード」</h3>
+                    <p>収益化記念などで、リスナー一人ひとりに向けたイラスト付き手書きサンキューカードを長時間かけて作成する。ファンを非常に大切にする誠実な姿勢が強く支持されている。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>オーディションでの「FF9」プレゼン事件</h3>
+                    <p>最終面接で自己アピールそっちのけでGYARI氏と『FF9』の思い出話で1時間半も盛り上がってしまったという、生粋のゲーム好きが伺える彼らしい逸話。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

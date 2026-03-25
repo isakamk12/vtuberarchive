@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YUKIHIME | Marble Creators Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #00BFFF;
+            --char-rgb: 0, 191, 255;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg">
+        <div class="char-color-blob"></div>
+        <div class="char-bg-glass"></div>
+    </div>
+
+    <nav>
+        <a href="../marblecreators_index.html" class="char-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK TO HUB
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Singer YUKIHIME</div>
+        <h1 class="char-name">YUKIHIME</h1>
+        <div class="char-tags">
+            <span class="char-tag">#YUKIHIME</span>
+<span class="char-tag">#MarbleIV</span>
+<span class="char-tag">#Singer</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2><i class="fa-solid fa-microphone-lines"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>DEBUT:</strong> 2021年4月</p>
+<p><strong>FANMARK:</strong> ❄️🎤</p>
+<p><strong>SPECIALTY:</strong> 歌唱</p>
+
+            </div>
+            <div class="char-bio">
+                <p>世界にさよならを告げて、永遠に眠るはずだったところを『歌』によって呼び起こされ、二度と後ろを向かないと決めた少女。明日の貴方に届くように、祈りを込めて歌い続けるシンガー。</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+            <h2><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="char-episodes">
+                
+                <div class="char-episode">
+                    <h3>オリジナル楽曲「宿命」の発表</h3>
+                    <p>自身の想いを乗せた力強いオリジナル曲をリリース。透き通るような歌声とメッセージ性の高い歌詞が、多くのリスナーの心に響いた。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>幅の広い歌唱表現「カバー楽曲シリーズ」</h3>
+                    <p>「回生」「金木犀」「ONE」など、様々なジャンルの楽曲を卓越した表現力でカバー。原曲へのリスペクトを込めつつ、自身のカラーで染め上げる技術に定評がある。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>Vlogを通じた幻想的な世界観の発信</h3>
+                    <p>自身のルーツや日々の想いを綴ったVlogを公開。ミステリアスで幻想的な雰囲気は、彼女の奏でる音楽とも深く共鳴している。</p>
+                </div>
+                <div class="char-episode">
+                    <h3> unarchived Karaoke Stream の衝撃</h3>
+                    <p>アーカイブを残さない特別な歌枠「YUKIHIME Live」を不定期に開催。その場限りの緊張感と親密な空間でリスナーを魅了した。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

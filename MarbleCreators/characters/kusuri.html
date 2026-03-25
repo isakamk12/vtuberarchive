@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>苺病くすり | Marble Creators Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #FF70A6;
+            --char-rgb: 255, 112, 166;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg">
+        <div class="char-color-blob"></div>
+        <div class="char-bg-glass"></div>
+    </div>
+
+    <nav>
+        <a href="../marblecreators_index.html" class="char-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK TO HUB
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Kusuri Maibyou</div>
+        <h1 class="char-name">苺病くすり</h1>
+        <div class="char-tags">
+            <span class="char-tag">#苺病くすり</span>
+<span class="char-tag">#Jellymoa</span>
+<span class="char-tag">#VirtualDesigner</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2><i class="fa-solid fa-capsules"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>DEBUT:</strong> 2019年12月1日</p>
+<p><strong>OCCUPATION:</strong> VirtualDesigner</p>
+<p><strong>SHOP:</strong> Jellymoa</p>
+
+            </div>
+            <div class="char-bio">
+                <p>自身のルーツを辿る旅を続ける少女。VirtualDesignerとしてファッションや音楽など幅広く手掛け、移動式スイーツショップ『Jellymoa』を運営している。過剰な“愛”への執着と「〜なのです」という語尾が特徴。自身の「祈り」を耽美的な楽曲やVlogに込めて発信し続けている。</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+            <h2><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="char-episodes">
+                
+                <div class="char-episode">
+                    <h3>謎に包まれたルーツと「数百万年」の記憶</h3>
+                    <p>自身の生い立ちについて「数百万年も生きている」など意味深な発言を残している。長い旅の中で培われた独特の死生観や孤独感が、彼女の織りなす世界観に深みを与えている。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>ヤンデレ少女としての圧倒的な歌唱表現</h3>
+                    <p>「ヤンデレ少女が歌う」カバーシリーズで絶大な人気を誇る。また、オリジナル曲『夢鬱 - ゆめうつつ -』では、その底知れない「少女性」と狂気を孕んだ耽美な歌声が外部からも絶賛された。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>TRPG配信で見せる好奇心と臨場感</h3>
+                    <p>探索中の無邪気な好奇心や、ホラー展開でのリアルな怯えなど、TRPGでのロールプレイが非常に秀逸。視聴者を物語の世界へと引き込む高い没入感を提供している。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>スイーツ作りが得意な穏やかな一面</h3>
+                    <p>自身のコンセプトであるショップ運営に違わず、お菓子作りが得意。Vlogで手作りケーキを振る舞うような、耽美な姿とは対照的な家庭的で可愛らしい一面も持っている。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>世界観とブランドを守るストイックな姿勢</h3>
+                    <p>自身のブランドイメージを大切にし、愛あるコンテンツづくりを提唱している。作品への強いこだわりは、安易な消費を許さないプロフェッショナルな精神の表れでもある。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

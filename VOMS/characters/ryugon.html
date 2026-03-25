@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大門地 リューゴン | VOMS Project Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #a67c52;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../voms_index.html" class="char-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Daimonji Ryugon</div>
+        <h1 class="char-name">大門地 リューゴン</h1>
+        <div class="char-tags">
+            <span class="char-tag">#DaimonjiRyugon</span>
+            <span class="char-tag">#龍星軍</span>
+            <span class="char-tag">#RyugOnAir</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-dragon"></i> PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>DEBUT:</strong> 2021年10月3日</p>
+                <p><strong>BIRTHDAY:</strong> 3月14日</p>
+                <p><strong>HEIGHT:</strong> 150cm</p>
+                <p><strong>BLOODTYPE:</strong> AB型</p>
+                <p><strong>MBTI:</strong> ENTP-A</p>
+                <p><strong>FANNAME:</strong> 龍星軍</p>
+            </div>
+            <div class="char-bio">
+                <p>VOMS初の男性VTuberで、“地龍”属性のおしゃべりモンスター。元自衛官という異色の経歴を持ち、体力と筋肉で解決する脳筋プレイスタイル。決して無言にならない「脊髄反射トーク」で、長時間の耐久配信も難なくこなすタフさが武器。鼻の星を外すと死ぬ。</p>
+            </div>
+        </section>
+
+        <section class="char-section reveal">
+            <h2><i class="fa-solid fa-star"></i> EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>48時間連続ARK！仕事を辞めて配信に捧げる</h3>
+                    <p>『ARK』に心酔し、48時間連続配信を平然と行うタフさを見せつける。収益化も通っていないデビュー直後に「ARKのために仕事を辞めた」という、人生を賭けたレベルのハマりっぷりを持つ。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>元自衛官ならではのトラウマと退職理由</h3>
+                    <p>起床ラッパが未だにトラウマであることや、上官とのバーベキューという体育会系のノリが合わずに自腹を切らされるのが耐えられなくて辞めた、といった経験を赤裸々かつユーモラスに語る。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>一番の仲良し「Vオタの佐藤」との絆</h3>
+                    <p>一番の親友であるリア友「佐藤」が、切り抜き動画や英訳を担当。受かったら字幕をつけるという約束を強引に実行させ、二人三脚で活動を広めている深い（？）絆がある。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>虫も食う！NGなしの体入り精神</h3>
+                    <p>禁煙宣言に寝坊したケジメとして「カブトムシ」を実食。ホラーゲームには動じないが、ゲテモノ食いをも厭わない謎のバイタリティとNGなしの根性でファンを驚かせ続けている。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
