@@ -1,286 +1,279 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ironmouse | Indie VTuber Archive</title>
-  <meta name="description" content="元オペラ歌手にしてTwitchの女王。Ironmouse（アイアンマウス）の軌跡と、彼女が闘い続ける理由を記録したアーカイブ。"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Zen+Kaku+Gothic+New:wght@300;400;700;900&family=Dancing+Script:wght@600&family=Orbitron:wght@500;700&family=Montserrat:wght@700;900&display=swap" rel="stylesheet"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="ironmouse.css"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ironmouse | Indie VTuber Archive</title>
+<meta content="元オペラ歌手にしてTwitchの女王。Ironmouse（アイアンマウス）の軌跡と、彼女が闘い続ける理由を記録したアーカイブ。" data-i18n="ironmouse_meta_desc" name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&amp;family=Zen+Kaku+Gothic+New:wght@300;400;700;900&amp;family=Dancing+Script:wght@600&amp;family=Orbitron:wght@500;700&amp;family=Montserrat:wght@700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="ironmouse.css" rel="stylesheet"/>
 </head>
 <body class="neon-devil-theme">
-
-  <!-- パーティクルベース（魔法の鈴 / デジタルスパーク） -->
-  <canvas id="particleCanvas"></canvas>
-
-  <!-- ネオン背景オーブ -->
-  <div class="neon-bg">
-    <div class="neon-orb neon-orb--magenta"></div>
-    <div class="neon-orb neon-orb--purple"></div>
-    <div class="neon-orb neon-orb--blue"></div>
-  </div>
-
-  <!-- ナビゲーション -->
-  <nav class="mouse-nav" id="mouseNav">
-    <a href="../../indie_index.html" class="nav-back-btn">
-      <i class="fa-solid fa-arrow-left"></i>
-      <span>INDIE</span>
-    </a>
-    <div class="nav-center">
-      <span class="nav-bell">🔔</span>
-      <span class="nav-name">IRONMOUSE</span>
-    </div>
-    <div class="nav-links">
-      <a href="#profile" class="nav-link" data-section="profile">Story</a>
-      <a href="#activity" class="nav-link" data-section="activity">History</a>
-      <a href="#episodes" class="nav-link" data-section="episodes">Memories</a>
-    </div>
-  </nav>
-
-  <!-- ヒーローセクション -->
-  <header class="hero-section" id="heroSection">
-    <div class="hero-content">
-      <div class="hero-labels">
-        <span class="label-neon">INDEPENDENT</span>
-        <span class="label-neon label-neon--devil">DEMON QUEEN</span>
-      </div>
-      <h1 class="hero-title">
-        <span class="title-main">IRONMOUSE</span>
-        <span class="title-sub">The Queen of Twitch</span>
-      </h1>
-      <div class="hero-bell-icon">🔔</div>
-      <p class="hero-intro">
-        プエルトリコが生んだ、不屈の魂を持つ悪魔の女の子。<br>
-        <span>「たとえ隔離されていても、世界中へ歌声を届けられる。」</span>
-      </p>
-      <div class="hero-scroll-invite">
-        <span>Scroll to Explore</span>
-        <i class="fa-solid fa-angles-down"></i>
-      </div>
-    </div>
-    <div class="hero-glitch-layer"></div>
-  </header>
-
-  <!-- ── STORY (PROFILE) ── -->
-  <section class="content-section" id="profile">
-    <div class="container">
-      <div class="section-heading">
-        <h2 class="section-title">The Devil's Story</h2>
-        <div class="section-divider"></div>
-      </div>
-
-      <div class="profile-grid">
-        <!-- プロフィールカード -->
-        <div class="mouse-card profile-card">
-          <div class="card-inner">
-            <div class="avatar-view">
-              <div class="avatar-placeholder">
-                <i class="fa-solid fa-ghost"></i>
-                <span>SATAN'S CHOSEN</span>
-              </div>
-            </div>
-            <div class="profile-details">
-              <div class="p-row">
-                <span class="p-label">Name</span>
-                <span class="p-val">Ironmouse / Mousey</span>
-              </div>
-              <div class="p-row">
-                <span class="p-label">Birthday</span>
-                <span class="p-val">January 11</span>
-              </div>
-              <div class="p-row">
-                <span class="p-label">Height</span>
-                <span class="p-val">147cm</span>
-              </div>
-              <div class="p-row">
-                <span class="p-label">Origin</span>
-                <span class="p-val">Puerto Rico 🇵🇷</span>
-              </div>
-              <div class="p-row">
-                <span class="p-label">Trait</span>
-                <span class="p-val">Devil Girl (High Energy)</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- バックストーリーテキスト -->
-        <div class="story-text-block">
-          <div class="story-tag">Background</div>
-          <p>
+<span data-i18n="ironmouse_text_1"><span data-i18n="ironmouse_text_1"><!-- パーティクルベース（魔法の鈴 / デジタルスパーク） --></span></span>
+<canvas id="particleCanvas"></canvas>
+<span data-i18n="ironmouse_text_2"><span data-i18n="ironmouse_text_2"><!-- ネオン背景オーブ --></span></span>
+<div class="neon-bg">
+<div class="neon-orb neon-orb--magenta"></div>
+<div class="neon-orb neon-orb--purple"></div>
+<div class="neon-orb neon-orb--blue"></div>
+</div>
+<span data-i18n="ironmouse_text_3"><span data-i18n="ironmouse_text_3"><!-- ナビゲーション --></span></span>
+<nav class="mouse-nav" id="mouseNav">
+<a class="nav-back-btn" href="../../indie_index.html">
+<i class="fa-solid fa-arrow-left"></i>
+<span>INDIE</span>
+</a>
+<div class="nav-center">
+<span class="nav-bell">🔔</span>
+<span class="nav-name">IRONMOUSE</span>
+</div>
+<div class="nav-links">
+<a class="nav-link" data-section="profile" href="#profile">Story</a>
+<a class="nav-link" data-section="activity" href="#activity">History</a>
+<a class="nav-link" data-section="episodes" href="#episodes">Memories</a>
+</div>
+</nav>
+<span data-i18n="ironmouse_text_4"><span data-i18n="ironmouse_text_4"><!-- ヒーローセクション --></span></span>
+<header class="hero-section" id="heroSection">
+<div class="hero-content">
+<div class="hero-labels">
+<span class="label-neon">INDEPENDENT</span>
+<span class="label-neon label-neon--devil">DEMON QUEEN</span>
+</div>
+<h1 class="hero-title">
+<span class="title-main">IRONMOUSE</span>
+<span class="title-sub">The Queen of Twitch</span>
+</h1>
+<div class="hero-bell-icon">🔔</div>
+<p class="hero-intro"><span data-i18n="ironmouse_text_5"><span data-i18n="ironmouse_text_5">
+        プエルトリコが生んだ、不屈の魂を持つ悪魔の女の子。</span></span><br/>
+<span data-i18n="ironmouse_text_6"><span data-i18n="ironmouse_text_6">「たとえ隔離されていても、世界中へ歌声を届けられる。」</span></span>
+</p>
+<div class="hero-scroll-invite">
+<span>Scroll to Explore</span>
+<i class="fa-solid fa-angles-down"></i>
+</div>
+</div>
+<div class="hero-glitch-layer"></div>
+</header>
+<!-- ── STORY (PROFILE) ── -->
+<section class="content-section" id="profile">
+<div class="container">
+<div class="section-heading">
+<h2 class="section-title">The Devil's Story</h2>
+<div class="section-divider"></div>
+</div>
+<div class="profile-grid">
+<span data-i18n="ironmouse_text_7"><span data-i18n="ironmouse_text_7"><!-- プロフィールカード --></span></span>
+<div class="mouse-card profile-card">
+<div class="card-inner">
+<div class="avatar-view">
+<div class="avatar-placeholder">
+<i class="fa-solid fa-ghost"></i>
+<span>SATAN'S CHOSEN</span>
+</div>
+</div>
+<div class="profile-details">
+<div class="p-row">
+<span class="p-label">Name</span>
+<span class="p-val">Ironmouse / Mousey</span>
+</div>
+<div class="p-row">
+<span class="p-label">Birthday</span>
+<span class="p-val">January 11</span>
+</div>
+<div class="p-row">
+<span class="p-label">Height</span>
+<span class="p-val">147cm</span>
+</div>
+<div class="p-row">
+<span class="p-label">Origin</span>
+<span class="p-val">Puerto Rico 🇵🇷</span>
+</div>
+<div class="p-row">
+<span class="p-label">Trait</span>
+<span class="p-val">Devil Girl (High Energy)</span>
+</div>
+</div>
+</div>
+</div>
+<span data-i18n="ironmouse_text_8"><span data-i18n="ironmouse_text_8"><!-- バックストーリーテキスト --></span></span>
+<div class="story-text-block">
+<div class="story-tag">Background</div>
+<p data-i18n="ironmouse_text_9"><span data-i18n="ironmouse_text_9">
             人間界のインターネット、音楽、オタク文化を愛しすぎて地獄から逃げ出してきた悪魔の女の子。彼女が常に身につけている「魔法の鈴」は、暴走しがちな内なるパワーを制御するための重要なアイテムです。
-          </p>
-          <p>
+          </span></p>
+<p data-i18n="ironmouse_text_10"><span data-i18n="ironmouse_text_10">
             明るくカオスな配信スタイルの裏側には、生まれつきの難病である**分類不能型免疫不全症（CVID）**との戦いがあります。他者から隔離された生活、絶望に満ちた年月を過ごす中で、彼女はVTuberという「素顔を隠して繋がれる世界」に希望を見出しました。
-          </p>
-          <div class="pref-list">
-            <div class="pref-item"><i class="fa-solid fa-heart"></i> シナモロール</div>
-            <div class="pref-item"><i class="fa-solid fa-heart"></i> 90年代アニメ</div>
-            <div class="pref-item"><i class="fa-solid fa-heart"></i> プレデター</div>
-            <div class="pref-item"><i class="fa-solid fa-bolt"></i> 下ネタ・ジョーク</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── HISTORY (TIMELINE) ── -->
-  <section class="content-section" id="activity">
-    <div class="container">
-      <div class="section-heading">
-        <h2 class="section-title">Chronicles of Evolution</h2>
-        <div class="section-divider"></div>
-      </div>
-
-      <div class="timeline-container">
-        <!-- 2017 -->
-        <div class="timeline-entry left">
-          <div class="tl-date">2017.09</div>
-          <div class="tl-content">
-            <h3>YouTube Account Created</h3>
-            <p>孤独な隔離生活の慰めとして、YouTubeでの活動を開始。当時の自分には、これが世界を変える一歩になるとは想像もしていなかった。</p>
-          </div>
-        </div>
-        <!-- 2019-2020 -->
-        <div class="timeline-entry right">
-          <div class="tl-date">2019-2020</div>
-          <div class="tl-content">
-            <h3>Twitch & VTuber Launch</h3>
-            <p>Twitchでの配信を開始。キズナアイに触発され、自身の素顔を隠しつつ個性を全開にできる「デジタルアバター（VTuber）」としての活動へ本格移行。瞬く間にコアなファン層を獲得する。</p>
-          </div>
-        </div>
-        <!-- 2020.11 -->
-        <div class="timeline-entry left">
-          <div class="tl-date">2020.11</div>
-          <div class="tl-content">
-            <h3>Joined VShojo</h3>
-            <p>アメリカ初の大手VTuberエージェンシー「VShojo」の創設メンバーとして、さらなる飛躍を遂げる。英語圏におけるVTuber文化の爆発的な広がりの象徴となる。</p>
-          </div>
-        </div>
-        <!-- 2022.02 -->
-        <div class="timeline-entry right">
-          <div class="tl-date">2022-2023</div>
-          <div class="tl-content">
-            <h3>The Subathon Legends</h3>
-            <p>
+          </span></p>
+<div class="pref-list">
+<div class="pref-item"><i class="fa-solid fa-heart"></i><span data-i18n="ironmouse_text_11"><span data-i18n="ironmouse_text_11"> シナモロール</span></span></div>
+<div class="pref-item"><i class="fa-solid fa-heart"></i><span data-i18n="ironmouse_text_12"><span data-i18n="ironmouse_text_12"> 90年代アニメ</span></span></div>
+<div class="pref-item"><i class="fa-solid fa-heart"></i><span data-i18n="ironmouse_text_13"><span data-i18n="ironmouse_text_13"> プレデター</span></span></div>
+<div class="pref-item"><i class="fa-solid fa-bolt"></i><span data-i18n="ironmouse_text_14"><span data-i18n="ironmouse_text_14"> 下ネタ・ジョーク</span></span></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ── HISTORY (TIMELINE) ── -->
+<section class="content-section" id="activity">
+<div class="container">
+<div class="section-heading">
+<h2 class="section-title">Chronicles of Evolution</h2>
+<div class="section-divider"></div>
+</div>
+<div class="timeline-container">
+<!-- 2017 -->
+<div class="timeline-entry left">
+<div class="tl-date">2017.09</div>
+<div class="tl-content">
+<h3>YouTube Account Created</h3>
+<p data-i18n="ironmouse_text_15"><span data-i18n="ironmouse_text_15">孤独な隔離生活の慰めとして、YouTubeでの活動を開始。当時の自分には、これが世界を変える一歩になるとは想像もしていなかった。</span></p>
+</div>
+</div>
+<!-- 2019-2020 -->
+<div class="timeline-entry right">
+<div class="tl-date">2019-2020</div>
+<div class="tl-content">
+<h3>Twitch &amp; VTuber Launch</h3>
+<p data-i18n="ironmouse_text_16"><span data-i18n="ironmouse_text_16">Twitchでの配信を開始。キズナアイに触発され、自身の素顔を隠しつつ個性を全開にできる「デジタルアバター（VTuber）」としての活動へ本格移行。瞬く間にコアなファン層を獲得する。</span></p>
+</div>
+</div>
+<!-- 2020.11 -->
+<div class="timeline-entry left">
+<div class="tl-date">2020.11</div>
+<div class="tl-content">
+<h3>Joined VShojo</h3>
+<p data-i18n="ironmouse_text_17"><span data-i18n="ironmouse_text_17">アメリカ初の大手VTuberエージェンシー「VShojo」の創設メンバーとして、さらなる飛躍を遂げる。英語圏におけるVTuber文化の爆発的な広がりの象徴となる。</span></p>
+</div>
+</div>
+<!-- 2022.02 -->
+<div class="timeline-entry right">
+<div class="tl-date">2022-2023</div>
+<div class="tl-content">
+<h3>The Subathon Legends</h3>
+<p><span data-i18n="ironmouse_text_18"><span data-i18n="ironmouse_text_18">
               1ヶ月以上に及ぶノンストップ配信「サバソン」を開催。
-              <strong>第1回で17万人</strong>、<strong>第2回で20万人以上</strong>のサブスクライブ登録を獲得。Twitchで世界一登録された女性配信者としての金字塔を打ち立てる。
-            </p>
-          </div>
-        </div>
-        <!-- 2023.12 -->
-        <div class="timeline-entry left">
-          <div class="tl-date">2023.12</div>
-          <div class="tl-content">
-            <h3>Content Creator of the Year</h3>
-            <p>
+              </span></span><strong data-i18n="ironmouse_text_19"><span data-i18n="ironmouse_text_19">第1回で17万人</span></strong>、<strong data-i18n="ironmouse_text_20"><span data-i18n="ironmouse_text_20">第2回で20万人以上</span></strong><span data-i18n="ironmouse_text_21"><span data-i18n="ironmouse_text_21">のサブスクライブ登録を獲得。Twitchで世界一登録された女性配信者としての金字塔を打ち立てる。
+            </span></span></p>
+</div>
+</div>
+<!-- 2023.12 -->
+<div class="timeline-entry left">
+<div class="tl-date">2023.12</div>
+<div class="tl-content">
+<h3>Content Creator of the Year</h3>
+<p><span data-i18n="ironmouse_text_22"><span data-i18n="ironmouse_text_22">
               世界最大のゲーム表彰式「The Game Awards 2023」にて、VTuberとして初となる
-              <strong>CONTENT CREATOR OF THE YEAR</strong>を受賞。名実共に「世界の顔」となる。
-            </p>
-          </div>
-        </div>
-        <!-- 2024.09 -->
-        <div class="timeline-entry right">
-          <div class="tl-date">2024.09</div>
-          <div class="tl-content">
-            <h3>Summits of Success</h3>
-            <p>第3回サバソンにて<strong>世界1位（326,252サブスク）</strong>を記録。配信収益の半分を免疫不全財団へ寄付することを発表し、チャリティ活動でも多大な貢献を果たす。</p>
-          </div>
-        </div>
-        <!-- 2025.07 -->
-        <div class="timeline-entry left tl-origin">
-          <div class="tl-date">2025.07</div>
-          <div class="tl-content">
-            <h3>Return to Independence</h3>
-            <p>VShojo運営による寄付金誤用の告発を受け、即日脱退。自らの潔白と意志を示すため、個人勢として再出発。自力で立ち上げたクラウドファンディングでは**120万ドル（約1.7億円）**を集め、個人の力の凄まじさを証明した。</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── MEMORIES (EPISODES) ── -->
-  <section class="content-section" id="episodes">
-    <div class="container">
-      <div class="section-heading">
-        <h2 class="section-title">Vivid Memories</h2>
-        <div class="section-divider"></div>
-      </div>
-
-      <div class="ep-grid">
-        <!-- 1: 闘病と血漿提供 -->
-        <div class="ep-card">
-          <div class="ep-tag">闘病と絆</div>
-          <h3 class="ep-title">「血漿提供」の輪が広がる喜び</h3>
-          <p class="ep-text">
+              </span></span><strong>CONTENT CREATOR OF THE YEAR</strong><span data-i18n="ironmouse_text_23"><span data-i18n="ironmouse_text_23">を受賞。名実共に「世界の顔」となる。
+            </span></span></p>
+</div>
+</div>
+<!-- 2024.09 -->
+<div class="timeline-entry right">
+<div class="tl-date">2024.09</div>
+<div class="tl-content">
+<h3>Summits of Success</h3>
+<p><span data-i18n="ironmouse_text_24"><span data-i18n="ironmouse_text_24">第3回サバソンにて</span></span><strong data-i18n="ironmouse_text_25"><span data-i18n="ironmouse_text_25">世界1位（326,252サブスク）</span></strong><span data-i18n="ironmouse_text_26"><span data-i18n="ironmouse_text_26">を記録。配信収益の半分を免疫不全財団へ寄付することを発表し、チャリティ活動でも多大な貢献を果たす。</span></span></p>
+</div>
+</div>
+<!-- 2025.07 -->
+<div class="timeline-entry left tl-origin">
+<div class="tl-date">2025.07</div>
+<div class="tl-content">
+<h3>Return to Independence</h3>
+<p data-i18n="ironmouse_text_27"><span data-i18n="ironmouse_text_27">VShojo運営による寄付金誤用の告発を受け、即日脱退。自らの潔白と意志を示すため、個人勢として再出発。自力で立ち上げたクラウドファンディングでは**120万ドル（約1.7億円）**を集め、個人の力の凄まじさを証明した。</span></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ── MEMORIES (EPISODES) ── -->
+<section class="content-section" id="episodes">
+<div class="container">
+<div class="section-heading">
+<h2 class="section-title">Vivid Memories</h2>
+<div class="section-divider"></div>
+</div>
+<div class="ep-grid">
+<span data-i18n="ironmouse_text_28"><span data-i18n="ironmouse_text_28"><!-- 1: 闘病と血漿提供 --></span></span>
+<div class="ep-card">
+<div class="ep-tag" data-i18n="ironmouse_text_29"><span data-i18n="ironmouse_text_29">闘病と絆</span></div>
+<h3 class="ep-title" data-i18n="ironmouse_text_30"><span data-i18n="ironmouse_text_30">「血漿提供」の輪が広がる喜び</span></h3>
+<p class="ep-text" data-i18n="ironmouse_text_31"><span data-i18n="ironmouse_text_31">
             隔離された寝たきりの生活から彼女を救ったのはファンでした。「VTuberになって一番嬉しかったことは、ファンの間で血漿提供や献血の輪が広がったこと」と涙ながらに語る姿は、多くの人の心を動かしました。
-          </p>
-        </div>
-        <!-- 2: 親友との疑似旅行 -->
-        <div class="ep-card">
-          <div class="ep-tag">友情</div>
-          <h3 class="ep-title">Connorが叶えた「外の世界」</h3>
-          <p class="ep-text">
+          </span></p>
+</div>
+<span data-i18n="ironmouse_text_32"><span data-i18n="ironmouse_text_32"><!-- 2: 親友との疑似旅行 --></span></span>
+<div class="ep-card">
+<div class="ep-tag" data-i18n="ironmouse_text_33"><span data-i18n="ironmouse_text_33">友情</span></div>
+<h3 class="ep-title" data-i18n="ironmouse_text_34"><span data-i18n="ironmouse_text_34">Connorが叶えた「外の世界」</span></h3>
+<p class="ep-text" data-i18n="ironmouse_text_35"><span data-i18n="ironmouse_text_35">
             外出できない彼女のため、親友のConnor（CDawgVA）はカメラを通じて世界を共有しました。「一生見られないと思っていた」と語った藤の花や、Omega Martの不思議な光景。画面越しでも、彼女は確かに世界を旅していました。
-          </p>
-        </div>
-        <!-- 3: 家族のエピソード -->
-        <div class="ep-card">
-          <div class="ep-tag">家族</div>
-          <h3 class="ep-title">愛にあふれたスタンディングオベーション</h3>
-          <p class="ep-text">
+          </span></p>
+</div>
+<span data-i18n="ironmouse_text_36"><span data-i18n="ironmouse_text_36"><!-- 3: 家族のエピソード --></span></span>
+<div class="ep-card">
+<div class="ep-tag" data-i18n="ironmouse_text_37"><span data-i18n="ironmouse_text_37">家族</span></div>
+<h3 class="ep-title" data-i18n="ironmouse_text_38"><span data-i18n="ironmouse_text_38">愛にあふれたスタンディングオベーション</span></h3>
+<p class="ep-text" data-i18n="ironmouse_text_39"><span data-i18n="ironmouse_text_39">
             初潮を迎えた際、両親が「大人の女性になった」と総立ちで祝福したという伝説のエピソード。高い戸棚に物を置いて頼らせようとする両親。そんなユーモラスで温かい家族との絆が、彼女の元気の源です。
-          </p>
-        </div>
-        <!-- 4: 歌への想い -->
-        <div class="ep-card">
-          <div class="ep-tag">歌・オペラ</div>
-          <h3 class="ep-title">絶望から戻ってきた「妖精の声」</h3>
-          <p class="ep-text">
+          </span></p>
+</div>
+<span data-i18n="ironmouse_text_40"><span data-i18n="ironmouse_text_40"><!-- 4: 歌への想い --></span></span>
+<div class="ep-card">
+<div class="ep-tag" data-i18n="ironmouse_text_41"><span data-i18n="ironmouse_text_41">歌・オペラ</span></div>
+<h3 class="ep-title" data-i18n="ironmouse_text_42"><span data-i18n="ironmouse_text_42">絶望から戻ってきた「妖精の声」</span></h3>
+<p class="ep-text" data-i18n="ironmouse_text_43"><span data-i18n="ironmouse_text_43">
             オペラ歌手を志すも、病気で一度は完全に声を失った過去。再び手にした歌声は、プロから「守るべき貴重な声」と絶賛されました。Adoのカバーなどで見せた圧倒的な表現力は、彼女が生きている証そのものです。
-          </p>
-        </div>
-        <!-- 5: プエルトリコ愛 -->
-        <div class="ep-card">
-          <div class="ep-tag">故郷</div>
-          <h3 class="ep-title">夜に響く「コキ」の大合唱</h3>
-          <p class="ep-text">
+          </span></p>
+</div>
+<span data-i18n="ironmouse_text_44"><span data-i18n="ironmouse_text_44"><!-- 5: プエルトリコ愛 --></span></span>
+<div class="ep-card">
+<div class="ep-tag" data-i18n="ironmouse_text_45"><span data-i18n="ironmouse_text_45">故郷</span></div>
+<h3 class="ep-title" data-i18n="ironmouse_text_46"><span data-i18n="ironmouse_text_46">夜に響く「コキ」の大合唱</span></h3>
+<p class="ep-text" data-i18n="ironmouse_text_47"><span data-i18n="ironmouse_text_47">
             母国プエルトリコの夜を彩るカエル、コキの鳴き声。日が沈むと聞こえてくるあの音が大好きだと語ります。故郷への深い愛着と誇りは、彼女のアイデンティティの根幹を成しています。
-          </p>
-        </div>
-        <!-- 6: ユーモア -->
-        <div class="ep-card">
-          <div class="ep-tag">カオス</div>
-          <h3 class="ep-title">補助便座とエビの姿勢</h3>
-          <p class="ep-text">
+          </span></p>
+</div>
+<span data-i18n="ironmouse_text_48"><span data-i18n="ironmouse_text_48"><!-- 6: ユーモア --></span></span>
+<div class="ep-card">
+<div class="ep-tag" data-i18n="ironmouse_text_49"><span data-i18n="ironmouse_text_49">カオス</span></div>
+<h3 class="ep-title" data-i18n="ironmouse_text_50"><span data-i18n="ironmouse_text_50">補助便座とエビの姿勢</span></h3>
+<p class="ep-text" data-i18n="ironmouse_text_51"><span data-i18n="ironmouse_text_51">
             「座ると便器に落ちてしまう」という自虐にファンから補助便座が贈られた事件や、極悪な猫背を「エビの姿勢」と呼ぶユーモア。どんな苦難も笑いに変えてしまう、底抜けの明るさが魅力です。
-          </p>
-        </div>
-        <!-- 7: VTuber活動への感謝 -->
-        <div class="ep-card">
-          <div class="ep-tag">再生への希望</div>
-          <h3 class="ep-title">「明日すべてが終わっても、私は幸せ」</h3>
-          <p class="ep-text">
+          </span></p>
+</div>
+<span data-i18n="ironmouse_text_52"><span data-i18n="ironmouse_text_52"><!-- 7: VTuber活動への感謝 --></span></span>
+<div class="ep-card">
+<div class="ep-tag" data-i18n="ironmouse_text_53"><span data-i18n="ironmouse_text_53">再生への希望</span></div>
+<h3 class="ep-title" data-i18n="ironmouse_text_54"><span data-i18n="ironmouse_text_54">「明日すべてが終わっても、私は幸せ」</span></h3>
+<p class="ep-text" data-i18n="ironmouse_text_55"><span data-i18n="ironmouse_text_55">
             「他人の重荷になるだけの存在だ」と泣き続けていた過去。VTuberとして奇跡のような5年間を経験し、今では「生きていると実感できる、この軌跡があっただけで幸せ」と語るまでに、彼女は再生を果たしました。
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+          </span></p>
+</div>
+</div>
+</div>
+</section>
+<!-- ── FOOTER ── -->
+<footer class="mouse-footer">
+<div class="footer-wrap">
+<div class="footer-decor">🔔</div>
+<div class="footer-branding" data-i18n="ironmouse_text_56"><span data-i18n="ironmouse_text_56">Ironmouse / アイアンマウス</span></div>
+<p class="footer-note">This is a fan-made archive page. Keeping the memories alive.</p>
+<a class="footer-link" href="../../indie_index.html">← Return to Indie Archive</a>
+</div>
+</footer>
+<script src="ironmouse.js"></script>
 
-  <!-- ── FOOTER ── -->
-  <footer class="mouse-footer">
-    <div class="footer-wrap">
-      <div class="footer-decor">🔔</div>
-      <div class="footer-branding">Ironmouse / アイアンマウス</div>
-      <p class="footer-note">This is a fan-made archive page. Keeping the memories alive.</p>
-      <a href="../../indie_index.html" class="footer-link">← Return to Indie Archive</a>
-    </div>
-  </footer>
+  <!-- I18N Scripts -->
+  <script src="../../../i18n_indie.js"></script>
+  <script src="../../../setup_i18n.js"></script>
 
-  <script src="ironmouse.js"></script>
 </body>
 </html>

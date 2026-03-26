@@ -1,203 +1,200 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>みけねこ | Indie VTuber Archive</title>
-  <meta name="description" content="2009年から活動を続ける伝説のストリーマー。みけねこ（Mikeneko）の激動のキャリアと活動記録を纏めたアーカイブ。"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Zen+Kaku+Gothic+New:wght@300;400;700;900&family=Shippori+Mincho:wght@400;700&family=Orbitron:wght@500;700&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="mikeneko.css"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title data-i18n="mikeneko_title">みけねこ | Indie VTuber Archive</title>
+<meta content="2009年から活動を続ける伝説のストリーマー。みけねこ（Mikeneko）の激動のキャリアと活動記録を纏めたアーカイブ。" data-i18n="mikeneko_meta_desc" name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&amp;family=Zen+Kaku+Gothic+New:wght@300;400;700;900&amp;family=Shippori+Mincho:wght@400;700&amp;family=Orbitron:wght@500;700&amp;family=Playfair+Display:ital,wght@1,700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="mikeneko.css" rel="stylesheet"/>
 </head>
 <body class="mikeneko-theme">
-
-  <!-- エモーショナル・バックグラウンド（雨/涙） -->
-  <div class="emotional-overlay">
-    <div class="rain-container" id="rainContainer"></div>
-    <div class="mirror-shards" id="mirrorShards"></div>
-  </div>
-
-  <!-- ナビゲーション -->
-  <nav class="mikeneko-nav" id="mikenekoNav">
-    <a href="../../indie_index.html" class="nav-back">
-      <i class="fa-solid fa-cat"></i>
-      <span>INDIE</span>
-    </a>
-    <div class="nav-center">
-      <span class="nav-title">MIKENEKO ARCHIVE</span>
-    </div>
-    <div class="nav-links">
-      <a href="#about" class="nav-link">About</a>
-      <a href="#career" class="nav-link">Career</a>
-      <a href="#personality" class="nav-link">Mind</a>
-      <a href="#episodes" class="nav-link">Record</a>
-    </div>
-  </nav>
-
-  <!-- ヒーローセクション -->
-  <header class="hero-section" id="hero">
-    <div class="hero-content">
-      <div class="hero-label">The Eternal 18-Year-Old</div>
-      <h1 class="hero-name">
-        <span class="name-main">みけねこ</span>
-        <span class="name-sub">Mikeneko.</span>
-      </h1>
-      <div class="hero-tags">
-        <span>#ストリーマー</span> <span>#声優</span> <span>#メジャーデビュー</span>
-      </div>
-      <p class="hero-intro">
-        「クルーズって何ですか？」<br>
-        <span>2009年、一筋のコメントを待っていた少女は、やがて世界を揺らす感情の化身となった。</span>
-      </p>
-    </div>
-  </header>
-
-  <!-- ── ABOUT (PROFILE) ── -->
-  <section class="content-section" id="about">
-    <div class="container">
-      <div class="glass-panel profile-grid">
-        <div class="profile-visual">
-          <div class="cat-frame">
-            <div class="cat-eyes"></div>
-            <div class="cat-symbol">🐈‍⬛</div>
-          </div>
-          <div class="status-badge">LEGEND STATUS</div>
-        </div>
-        <div class="profile-info">
-          <h2 class="section-heading">Basic Profile</h2>
-          <div class="info-list">
-            <div class="info-item"><span class="label">誕生日</span> 1月18日</div>
-            <div class="info-item"><span class="label">年齢</span> 永遠の18歳</div>
-            <div class="info-item"><span class="label">身長</span> 164cm - 166cm</div>
-            <div class="info-item"><span class="label">YouTube</span> 登録者100万人超</div>
-            <div class="info-item"><span class="label">声優名義</span> 恋糸りあ (Koiito Ria)</div>
-          </div>
-          <div class="hobby-tags">
-            <span>ピアノ(12年)</span> <span>ホラーゲーム</span> <span>東リベ</span> <span>H×H</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── CAREER (TIMELINE) ── -->
-  <section class="content-section" id="career">
-    <div class="container">
-      <h2 class="section-heading centered">激動の歩み</h2>
-      <div class="timeline">
-        <div class="tl-item">
-          <div class="tl-date">2009 - 2011</div>
-          <div class="tl-content">
-            <h3>NicoNico Origin</h3>
-            <p>「みけ猫＠泥」としてニコニコ生放送を開始。メイド喫茶勤務やTV出演などを経験し、配信界の礎を築く。</p>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-date">2019 - 2022</div>
-          <div class="tl-content">
-            <h3>The Golden Era</h3>
-            <p>大手事務所にてVTuberとしてデビュー。圧倒的な人気を誇るも、2022年2月に激動の中での契約解除。しかしその魂は死なず。</p>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-date">2022 - 2024</div>
-          <div class="tl-content">
-            <h3>Revival & Expansion</h3>
-            <p>「みけねこ」として再起。「ぼいそーれ」加入、声優「恋糸りあ」としての活動開始。アニメ出演やライブを数多く経験。</p>
-          </div>
-        </div>
-        <div class="tl-item highlight">
-          <div class="tl-date">2025 - Present</div>
-          <div class="tl-content">
-            <h3>Major Debut</h3>
-            <p>ドリーミュージックより「みけねこ。」名義でメジャーデビュー。楽曲『猫になって』をリリースし、新たな地平へ。</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── MIND (PERSONALITY) ── -->
-  <section class="content-section" id="personality">
-    <div class="container">
-      <div class="mind-layout">
-        <div class="mind-text">
-          <h2 class="section-heading">喜怒哀楽の旋律</h2>
-          <div class="mind-block">
-            <h3>「キレ芸」と血圧の代償</h3>
-            <p>
+<span data-i18n="mikeneko_text_1"><span data-i18n="mikeneko_text_1"><!-- エモーショナル・バックグラウンド（雨/涙） --></span></span>
+<div class="emotional-overlay">
+<div class="rain-container" id="rainContainer"></div>
+<div class="mirror-shards" id="mirrorShards"></div>
+</div>
+<span data-i18n="mikeneko_text_2"><span data-i18n="mikeneko_text_2"><!-- ナビゲーション --></span></span>
+<nav class="mikeneko-nav" id="mikenekoNav">
+<a class="nav-back" href="../../indie_index.html">
+<i class="fa-solid fa-cat"></i>
+<span>INDIE</span>
+</a>
+<div class="nav-center">
+<span class="nav-title">MIKENEKO ARCHIVE</span>
+</div>
+<div class="nav-links">
+<a class="nav-link" href="#about">About</a>
+<a class="nav-link" href="#career">Career</a>
+<a class="nav-link" href="#personality">Mind</a>
+<a class="nav-link" href="#episodes">Record</a>
+</div>
+</nav>
+<span data-i18n="mikeneko_text_3"><span data-i18n="mikeneko_text_3"><!-- ヒーローセクション --></span></span>
+<header class="hero-section" id="hero">
+<div class="hero-content">
+<div class="hero-label">The Eternal 18-Year-Old</div>
+<h1 class="hero-name">
+<span class="name-main" data-i18n="mikeneko_text_4"><span data-i18n="mikeneko_text_4">みけねこ</span></span>
+<span class="name-sub">Mikeneko.</span>
+</h1>
+<div class="hero-tags">
+<span data-i18n="mikeneko_text_5"><span data-i18n="mikeneko_text_5">#ストリーマー</span></span> <span data-i18n="mikeneko_text_6"><span data-i18n="mikeneko_text_6">#声優</span></span> <span data-i18n="mikeneko_text_7"><span data-i18n="mikeneko_text_7">#メジャーデビュー</span></span>
+</div>
+<p class="hero-intro"><span data-i18n="mikeneko_text_8"><span data-i18n="mikeneko_text_8">
+        「クルーズって何ですか？」</span></span><br/>
+<span data-i18n="mikeneko_text_9"><span data-i18n="mikeneko_text_9">2009年、一筋のコメントを待っていた少女は、やがて世界を揺らす感情の化身となった。</span></span>
+</p>
+</div>
+</header>
+<!-- ── ABOUT (PROFILE) ── -->
+<section class="content-section" id="about">
+<div class="container">
+<div class="glass-panel profile-grid">
+<div class="profile-visual">
+<div class="cat-frame">
+<div class="cat-eyes"></div>
+<div class="cat-symbol">🐈‍⬛</div>
+</div>
+<div class="status-badge">LEGEND STATUS</div>
+</div>
+<div class="profile-info">
+<h2 class="section-heading">Basic Profile</h2>
+<div class="info-list">
+<div class="info-item"><span class="label" data-i18n="mikeneko_text_10"><span data-i18n="mikeneko_text_10">誕生日</span></span><span data-i18n="mikeneko_text_11"><span data-i18n="mikeneko_text_11"> 1月18日</span></span></div>
+<div class="info-item"><span class="label" data-i18n="mikeneko_text_12"><span data-i18n="mikeneko_text_12">年齢</span></span><span data-i18n="mikeneko_text_13"><span data-i18n="mikeneko_text_13"> 永遠の18歳</span></span></div>
+<div class="info-item"><span class="label" data-i18n="mikeneko_text_14"><span data-i18n="mikeneko_text_14">身長</span></span> 164cm - 166cm</div>
+<div class="info-item"><span class="label">YouTube</span><span data-i18n="mikeneko_text_15"><span data-i18n="mikeneko_text_15"> 登録者100万人超</span></span></div>
+<div class="info-item"><span class="label" data-i18n="mikeneko_text_16"><span data-i18n="mikeneko_text_16">声優名義</span></span><span data-i18n="mikeneko_text_17"><span data-i18n="mikeneko_text_17"> 恋糸りあ (Koiito Ria)</span></span></div>
+</div>
+<div class="hobby-tags">
+<span data-i18n="mikeneko_text_18"><span data-i18n="mikeneko_text_18">ピアノ(12年)</span></span> <span data-i18n="mikeneko_text_19"><span data-i18n="mikeneko_text_19">ホラーゲーム</span></span> <span data-i18n="mikeneko_text_20"><span data-i18n="mikeneko_text_20">東リベ</span></span> <span>H×H</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ── CAREER (TIMELINE) ── -->
+<section class="content-section" id="career">
+<div class="container">
+<h2 class="section-heading centered" data-i18n="mikeneko_text_21"><span data-i18n="mikeneko_text_21">激動の歩み</span></h2>
+<div class="timeline">
+<div class="tl-item">
+<div class="tl-date">2009 - 2011</div>
+<div class="tl-content">
+<h3>NicoNico Origin</h3>
+<p data-i18n="mikeneko_text_22"><span data-i18n="mikeneko_text_22">「みけ猫＠泥」としてニコニコ生放送を開始。メイド喫茶勤務やTV出演などを経験し、配信界の礎を築く。</span></p>
+</div>
+</div>
+<div class="tl-item">
+<div class="tl-date">2019 - 2022</div>
+<div class="tl-content">
+<h3>The Golden Era</h3>
+<p data-i18n="mikeneko_text_23"><span data-i18n="mikeneko_text_23">大手事務所にてVTuberとしてデビュー。圧倒的な人気を誇るも、2022年2月に激動の中での契約解除。しかしその魂は死なず。</span></p>
+</div>
+</div>
+<div class="tl-item">
+<div class="tl-date">2022 - 2024</div>
+<div class="tl-content">
+<h3>Revival &amp; Expansion</h3>
+<p data-i18n="mikeneko_text_24"><span data-i18n="mikeneko_text_24">「みけねこ」として再起。「ぼいそーれ」加入、声優「恋糸りあ」としての活動開始。アニメ出演やライブを数多く経験。</span></p>
+</div>
+</div>
+<div class="tl-item highlight">
+<div class="tl-date">2025 - Present</div>
+<div class="tl-content">
+<h3>Major Debut</h3>
+<p data-i18n="mikeneko_text_25"><span data-i18n="mikeneko_text_25">ドリーミュージックより「みけねこ。」名義でメジャーデビュー。楽曲『猫になって』をリリースし、新たな地平へ。</span></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ── MIND (PERSONALITY) ── -->
+<section class="content-section" id="personality">
+<div class="container">
+<div class="mind-layout">
+<div class="mind-text">
+<h2 class="section-heading" data-i18n="mikeneko_text_26"><span data-i18n="mikeneko_text_26">喜怒哀楽の旋律</span></h2>
+<div class="mind-block">
+<h3 data-i18n="mikeneko_text_27"><span data-i18n="mikeneko_text_27">「キレ芸」と血圧の代償</span></h3>
+<p data-i18n="mikeneko_text_28"><span data-i18n="mikeneko_text_28">
               リスナーとの全力の掛け合い（プロレス）は名物。しかし、熱が入りすぎて血圧が135まで急上昇し、医師から止められて一時期封印を余儀なくされたことも。
-            </p>
-          </div>
-          <div class="mind-block">
-            <h3>中庭の一人弁当</h3>
-            <p>
+            </span></p>
+</div>
+<div class="mind-block">
+<h3 data-i18n="mikeneko_text_29"><span data-i18n="mikeneko_text_29">中庭の一人弁当</span></h3>
+<p data-i18n="mikeneko_text_30"><span data-i18n="mikeneko_text_30">
               実は「陰キャ」な学生時代。群れるのを嫌い、一人で中庭の草地でお弁当を食べ、「やっと人になれた」と感じていた自由を愛する魂。
-            </p>
-          </div>
-        </div>
-        <div class="mind-visual">
-          <div class="shattered-mirror">
-            <div class="fragment f1">情熱</div>
-            <div class="fragment f2">孤独</div>
-            <div class="fragment f3">自由</div>
-            <div class="fragment f4">再生</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── EPISODES (RECORDS) ── -->
-  <section class="content-section" id="episodes">
-    <div class="container">
-      <h2 class="section-heading centered">Archives of Emotion</h2>
-      <div class="ep-grid">
-        <div class="ep-card">
-          <span class="ep-category">Early Days</span>
-          <h4>クルーズ待ちの体育座り</h4>
-          <p>
+            </span></p>
+</div>
+</div>
+<div class="mind-visual">
+<div class="shattered-mirror">
+<div class="fragment f1" data-i18n="mikeneko_text_31"><span data-i18n="mikeneko_text_31">情熱</span></div>
+<div class="fragment f2" data-i18n="mikeneko_text_32"><span data-i18n="mikeneko_text_32">孤独</span></div>
+<div class="fragment f3" data-i18n="mikeneko_text_33"><span data-i18n="mikeneko_text_33">自由</span></div>
+<div class="fragment f4" data-i18n="mikeneko_text_34"><span data-i18n="mikeneko_text_34">再生</span></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ── EPISODES (RECORDS) ── -->
+<section class="content-section" id="episodes">
+<div class="container">
+<h2 class="section-heading centered">Archives of Emotion</h2>
+<div class="ep-grid">
+<div class="ep-card">
+<span class="ep-category">Early Days</span>
+<h4 data-i18n="mikeneko_text_35"><span data-i18n="mikeneko_text_35">クルーズ待ちの体育座り</span></h4>
+<p data-i18n="mikeneko_text_36"><span data-i18n="mikeneko_text_36">
             コメントが来ない初期。カメラの真ん中で体育座りし、ニコ生クルーズが来るまで「クルーズって何ですか？」と100回以上言い続けてチャンスを待った。
-          </p>
-        </div>
-        <div class="ep-card">
-          <span class="ep-category">Trauma</span>
-          <h4>新宿駅のヒール事件</h4>
-          <p>
+          </span></p>
+</div>
+<div class="ep-card">
+<span class="ep-category">Trauma</span>
+<h4 data-i18n="mikeneko_text_37"><span data-i18n="mikeneko_text_37">新宿駅のヒール事件</span></h4>
+<p data-i18n="mikeneko_text_38"><span data-i18n="mikeneko_text_38">
             中学生の頃の迷子。誰にも助けられず、落とした紙をヒールで踏み潰された記憶。今でも駅の喧騒や人混みが苦手な理由の一つ。
-          </p>
-        </div>
-        <div class="ep-card">
-          <span class="ep-category">Variety</span>
-          <h4>RUSTサーバーの波乱</h4>
-          <p>
+          </span></p>
+</div>
+<div class="ep-card">
+<span class="ep-category">Variety</span>
+<h4 data-i18n="mikeneko_text_39"><span data-i18n="mikeneko_text_39">RUSTサーバーの波乱</span></h4>
+<p data-i18n="mikeneko_text_40"><span data-i18n="mikeneko_text_40">
             ニコ生老人会サーバーでの出来事。裏切りや手錠での幽閉に本気で号泣。しかし、後に雑に扱われることへの意外な喜びを告白。
-          </p>
-        </div>
-        <div class="ep-card legal">
-          <span class="ep-category">Resolution</span>
-          <h4>毅然たる対応</h4>
-          <p>
+          </span></p>
+</div>
+<div class="ep-card legal">
+<span class="ep-category">Resolution</span>
+<h4 data-i18n="mikeneko_text_41"><span data-i18n="mikeneko_text_41">毅然たる対応</span></h4>
+<p data-i18n="mikeneko_text_42"><span data-i18n="mikeneko_text_42">
             誹謗中傷やデマに対しては徹底抗戦。弁護士を通じて法的措置を講じ、アンチの攻撃に屈せず己の居場所を自ら守り抜く姿勢を貫いている。
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+          </span></p>
+</div>
+</div>
+</div>
+</section>
+<span data-i18n="mikeneko_text_43"><span data-i18n="mikeneko_text_43"><!-- フッター --></span></span>
+<footer class="mikeneko-footer">
+<div class="footer-inner">
+<div class="footer-logo">🐈‍⬛</div>
+<p class="footer-desc">MIKENEKO ARCHIVE - THE ENDLESS JOURNEY</p>
+<div class="footer-links">
+<a href="../../indie_index.html">Back to Archive Index</a>
+</div>
+</div>
+</footer>
+<script src="mikeneko.js"></script>
 
-  <!-- フッター -->
-  <footer class="mikeneko-footer">
-    <div class="footer-inner">
-      <div class="footer-logo">🐈‍⬛</div>
-      <p class="footer-desc">MIKENEKO ARCHIVE - THE ENDLESS JOURNEY</p>
-      <div class="footer-links">
-        <a href="../../indie_index.html">Back to Archive Index</a>
-      </div>
-    </div>
-  </footer>
+  <!-- I18N Scripts -->
+  <script src="../../../i18n_indie.js"></script>
+  <script src="../../../setup_i18n.js"></script>
 
-  <script src="mikeneko.js"></script>
 </body>
 </html>
