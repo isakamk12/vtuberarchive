@@ -154,60 +154,43 @@
             アクセス自体は可能ですが、一部ページはレイアウト未整備・内容暫定の状態です。
         </p>
         <div style="display: flex; flex-direction: column; gap: 8px;">
-            <div style="
-                display: flex;
-                align-items: center;
-                gap: 10px;
-                font-size: 0.78rem;
-                color: rgba(255,255,255,0.85);
-            ">
-                <span style="
-                    display: inline-block;
-                    width: 8px; height: 8px;
-                    border-radius: 50%;
-                    background: #39ff72;
-                    box-shadow: 0 0 6px rgba(57,255,114,0.5);
-                    flex-shrink: 0;
-                "></span>
-                <strong style="min-width: 110px;" data-i18n="status_list_aogiri">あおぎり高校</strong>
-                <span style="color: rgba(255,255,255,0.5);" data-i18n="status_list_aogiri_desc">── 最低限の構成が完成</span>
+            <!-- Latest News -->
+            <div style="display: flex; align-items: center; gap: 10px; font-size: 0.78rem; color: #39ff72; margin-bottom: 4px;">
+                <i class="fa-solid fa-circle-check"></i>
+                <span data-i18n="status_news_illustrator">{{ t(null, 'status_news_illustrator') }}</span>
             </div>
-            <div style="
-                display: flex;
-                align-items: center;
-                gap: 10px;
-                font-size: 0.78rem;
-                color: rgba(255,255,255,0.85);
-            ">
-                <span style="
-                    display: inline-block;
-                    width: 8px; height: 8px;
-                    border-radius: 50%;
-                    background: #ffc83d;
-                    box-shadow: 0 0 6px rgba(255,200,61,0.5);
-                    flex-shrink: 0;
-                "></span>
-                <strong style="min-width: 110px;" data-i18n="status_list_vspo">ぶいすぽっ！</strong>
-                <span style="color: rgba(255,255,255,0.5);" data-i18n="status_list_vspo_desc">── 試験的なUI実装段階</span>
+
+            <!-- Completed Agencies List -->
+            <div style="display: flex; flex-direction: column; gap: 4px; padding: 8px 10px; background: rgba(57, 255, 114, 0.05); border-radius: 4px; border-left: 2px solid #39ff72;">
+                <div style="display: flex; align-items: center; gap: 10px; font-size: 0.78rem; color: rgba(255,255,255,0.95);">
+                    <strong style="min-width: 100px; color: #39ff72;" data-i18n="status_list_completed_title">{{ t(null, 'status_list_completed_title') }}</strong>
+                    <span style="color: rgba(255,255,255,0.4); font-size: 0.7rem;" data-i18n="status_list_completed_range_desc">{{ t(null, 'status_list_completed_range_desc') }}</span>
+                </div>
+                <div style="font-size: 0.7rem; color: rgba(255,255,255,0.65); line-height: 1.5; word-break: break-all;" data-i18n="status_list_completed_range">
+                    {{ t(null, 'status_list_completed_range') }}
+                </div>
             </div>
-            <div style="
-                display: flex;
-                align-items: center;
-                gap: 10px;
-                font-size: 0.78rem;
-                color: rgba(255,255,255,0.85);
-            ">
-                <span style="
-                    display: inline-block;
-                    width: 8px; height: 8px;
-                    border-radius: 50%;
-                    background: #66aaff;
-                    box-shadow: 0 0 6px rgba(102,170,255,0.5);
-                    flex-shrink: 0;
-                "></span>
-                <strong style="min-width: 110px;" data-i18n="status_list_others">その他セクター</strong>
-                <span style="color: rgba(255,255,255,0.5);" data-i18n="status_list_others_desc">──
-                    設計中（アクセスは可能ですがキャラページが未完成の状態なのでご了承ください）</span>
+
+            <!-- Others -->
+            <div style="display: flex; align-items: center; gap: 10px; font-size: 0.78rem; color: rgba(255,255,255,0.85); padding: 4px 10px;">
+                <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #66aaff; box-shadow: 0 0 4px rgba(102,170,255,0.5); flex-shrink: 0;"></span>
+                <strong style="min-width: 100px;" data-i18n="status_list_others">{{ t(null, 'status_list_others') }}</strong>
+                <span style="color: rgba(255,255,255,0.45); font-size: 0.7rem;" data-i18n="status_list_others_desc">── 設計中</span>
+            </div>
+
+            <!-- Official Release Roadmap -->
+            <div style="margin-top: 10px; padding: 12px; background: rgba(255, 200, 61, 0.05); border-radius: 8px; border: 1px solid rgba(255, 200, 61, 0.15);">
+                <div style="display: flex; align-items: center; gap: 10px; font-size: 0.75rem; color: #ffc83d; margin-bottom: 8px; font-family: 'Orbitron', sans-serif; font-weight: 700;">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <span data-i18n="status_roadmap_title">{{ t(null, 'status_roadmap_title') }}</span>
+                </div>
+                <ul style="margin: 0; padding-left: 18px; font-size: 0.7rem; color: rgba(255,255,255,0.7); line-height: 1.6; display: flex; flex-direction: column; gap: 4px;">
+                    <li data-i18n="status_roadmap_criteria_80">{{ t(null, 'status_roadmap_criteria_80') }}</li>
+                    <li data-i18n="status_roadmap_rate">{{ t(null, 'status_roadmap_rate') }}</li>
+                    <li data-i18n="status_roadmap_yt">{{ t(null, 'status_roadmap_yt') }}</li>
+                    <li data-i18n="status_roadmap_features" style="color: #39ff72;">{{ t(null, 'status_roadmap_features') }}</li>
+                    <li data-i18n="status_roadmap_no_lat">{{ t(null, 'status_roadmap_no_lat') }}</li>
+                </ul>
             </div>
         </div>
         <p style="
@@ -287,6 +270,48 @@
 
     <!-- Script -->
     <script src="script.js"></script>
+    <!-- Author Access Link (Fixed Corner) -->
+    <a href="About/author.html" class="author-corner-btn" title="System Author Profile">
+        <i class="fa-solid fa-user-gear"></i>
+    </a>
+
+    <style>
+        .author-corner-btn {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 200, 61, 0.1);
+            border: 1px solid rgba(255, 200, 61, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffc83d;
+            text-decoration: none;
+            z-index: 10000;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(5px);
+        }
+        .author-corner-btn:hover {
+            background: #ffc83d;
+            color: #000;
+            transform: scale(1.1) rotate(15deg);
+            box-shadow: 0 0 20px rgba(255, 200, 61, 0.4);
+        }
+        .author-corner-btn i {
+            font-size: 1.2rem;
+        }
+        @media (max-width: 768px) {
+            .author-corner-btn {
+                bottom: 80px;
+                right: 15px;
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
 </body>
 
 </html>

@@ -90,5 +90,47 @@
 <!-- Script -->
 <script src="indie_script.js"></script>
 <script src="../mobile_optimize.js"></script>
+    <!-- Author Access Link (Fixed Corner) -->
+    <a href="../About/author.html" class="author-corner-btn" title="System Author Profile">
+        <i class="fa-solid fa-user-gear"></i>
+    </a>
+
+    <style>
+        .author-corner-btn {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 200, 61, 0.1);
+            border: 1px solid rgba(255, 200, 61, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffc83d;
+            text-decoration: none;
+            z-index: 10000;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(5px);
+        }
+        .author-corner-btn:hover {
+            background: #ffc83d;
+            color: #000;
+            transform: scale(1.1) rotate(15deg);
+            box-shadow: 0 0 20px rgba(255, 200, 61, 0.4);
+        }
+        .author-corner-btn i {
+            font-size: 1.2rem;
+        }
+        @media (max-width: 768px) {
+            .author-corner-btn {
+                bottom: 20px;
+                right: 15px;
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
 </body>
 </html>

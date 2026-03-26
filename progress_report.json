@@ -30,64 +30,16 @@
         "expected": 23
     },
     {
-        "agency": "MEWLIVE",
-        "status": "Not Started",
-        "count": 0,
-        "expected": 10
-    },
-    {
-        "agency": "Mahoroba",
-        "status": "Not Started",
-        "count": 0,
-        "expected": 9
-    },
-    {
-        "agency": "MarbleCreators",
-        "status": "Not Started",
-        "count": 0,
-        "expected": 6
-    },
-    {
-        "agency": "MiRiSE",
-        "status": "Not Started",
-        "count": 0,
-        "expected": 9
-    },
-    {
-        "agency": "Milipro",
-        "status": "Not Started",
-        "count": 0,
-        "expected": 9
-    },
-    {
         "agency": "MugenLive",
         "status": "Not Started",
         "count": 0,
         "expected": 18
     },
     {
-        "agency": "ProFormaNova",
-        "status": "Not Started",
-        "count": 0,
-        "expected": 10
-    },
-    {
         "agency": "Synthmaniacs",
         "status": "Not Started",
         "count": 0,
         "expected": 6
-    },
-    {
-        "agency": "VASE",
-        "status": "Not Started",
-        "count": 0,
-        "expected": 10
-    },
-    {
-        "agency": "VOMS",
-        "status": "Not Started",
-        "count": 0,
-        "expected": 8
     },
     {
         "agency": "Nijisanji",
@@ -330,10 +282,28 @@
         "expected": 5
     },
     {
+        "agency": "MEWLIVE",
+        "status": "Likely Complete",
+        "count": 13,
+        "expected": 10
+    },
+    {
         "agency": "MUSUBIME",
         "status": "Likely Complete",
         "count": 5,
         "expected": 5
+    },
+    {
+        "agency": "Mahoroba",
+        "status": "Likely Complete",
+        "count": 9,
+        "expected": 9
+    },
+    {
+        "agency": "MarbleCreators",
+        "status": "Likely Complete",
+        "count": 6,
+        "expected": 6
     },
     {
         "agency": "MeSTAGE",
@@ -342,10 +312,22 @@
         "expected": 2
     },
     {
+        "agency": "MiRiSE",
+        "status": "Likely Complete",
+        "count": 9,
+        "expected": 9
+    },
+    {
         "agency": "MicoLiz",
         "status": "Likely Complete",
         "count": 2,
         "expected": 2
+    },
+    {
+        "agency": "Milipro",
+        "status": "Likely Complete",
+        "count": 9,
+        "expected": 9
     },
     {
         "agency": "MyHoloTV",
@@ -420,6 +402,12 @@
         "expected": 20
     },
     {
+        "agency": "ProFormaNova",
+        "status": "Likely Complete",
+        "count": 10,
+        "expected": 10
+    },
+    {
         "agency": "ProjectNebula",
         "status": "Likely Complete",
         "count": 5,
@@ -468,6 +456,12 @@
         "expected": 6
     },
     {
+        "agency": "Uniraid",
+        "status": "Likely Complete",
+        "count": 18,
+        "expected": 3
+    },
+    {
         "agency": "Uomusume",
         "status": "Likely Complete",
         "count": 3,
@@ -478,6 +472,12 @@
         "status": "Likely Complete",
         "count": 5,
         "expected": 5
+    },
+    {
+        "agency": "VASE",
+        "status": "Likely Complete",
+        "count": 10,
+        "expected": 10
     },
     {
         "agency": "VBOX",
@@ -496,6 +496,12 @@
         "status": "Likely Complete",
         "count": 4,
         "expected": 4
+    },
+    {
+        "agency": "VOMS",
+        "status": "Likely Complete",
+        "count": 8,
+        "expected": 8
     },
     {
         "agency": "VOne",

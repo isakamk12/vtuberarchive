@@ -26,30 +26,33 @@
 <div class="nav-container">
 <a class="logo" href="../index.html">⬅ VT_ARCHIVE</a>
 <a class="logo" href="#">AOGIRI <span class="text-glow">FAN!</span></a>
+<div class="nav-actions">
 <ul class="nav-links">
-<li><a class="nav-hover" href="#about">About</a></li>
-<li><a class="nav-hover" href="#deep-dive">魅力を深掘り</a></li>
-<li><a class="nav-hover" href="#members">メンバーリスト</a></li>
+<li><a class="nav-hover" data-i18n="nav_about" href="#about">About</a></li>
+<li><a class="nav-hover" data-i18n="nav_deep_dive" href="#deep-dive">魅力を深掘り</a></li>
+<li><a class="nav-hover" data-i18n="nav_members" href="#members">メンバーリスト</a></li>
 </ul>
+<select aria-label="Language" class="lang-select" id="lang-select"></select>
+</div>
 </div>
 </nav>
 <!-- Hero Section -->
 <header class="hero">
 <div class="hero-content">
-<div class="hero-subtitle reveal-scale">おもしろければ、何でもあり！</div>
+<div class="hero-subtitle reveal-scale" data-i18n="hero_subtitle">おもしろければ、何でもあり！</div>
 <h1 class="hero-title reveal-text group-delay-1">
-<span class="d-block">あおぎり高校</span>
+<span class="d-block" data-i18n="hero_title_main">あおぎり高校</span>
 <span class="highlight-wrapper">
-<span class="highlight">ファンサイト</span>
+<span class="highlight" data-i18n="hero_title_sub">ファンサイト</span>
 <span class="highlight-sparkle">✦</span>
 </span>
 </h1>
-<p class="hero-desc reveal-fade group-delay-2">
+<p class="hero-desc reveal-fade group-delay-2" data-i18n-html="hero_desc">
                 理想の姿で「好き」なことを好きなだけ楽しむ、<br/>最高にカオスなVTuberグループの非公式ポータル。
             </p>
 <div class="btn-wrap reveal-up group-delay-3">
 <a class="btn primary-btn magnetic-btn" href="#about">
-<span>魅力を知る</span>
+<span data-i18n="hero_cta">魅力を知る</span>
 <div class="btn-glare"></div>
 </a>
 </div>
@@ -68,13 +71,13 @@
 <section class="section about-section" id="about">
 <div class="container text-center">
 <h2 class="section-title reveal-scale">
-<span class="emoji-pop">🏫</span> あおぎり高校とは？
-                <span class="sub-title">AOGIRI HIGH SCHOOL</span>
+<span class="emoji-pop">🏫</span> <span data-i18n="about_title">あおぎり高校とは？</span>
+                <span class="sub-title" data-i18n="about_subtitle">AOGIRI HIGH SCHOOL</span>
 </h2>
 <div class="premium-glass-card main-about reveal-up delay-1">
 <div class="card-glow"></div>
 <div class="quote-mark">"</div>
-<p>都内のどこかに存在している『あおぎり高校』。<br/>
+<p data-i18n-html="about_body">都内のどこかに存在している『あおぎり高校』。<br/>
                     ここには、「理想の姿で『好き』なことを好きなだけ」楽しみたいメンバーが集っています。<br/><br/>
                     「おもしろければ、何でもあり！」のスタイルをモットーに、所属するVTuberたちはおのおのが思い描く理想のスクールライフを全力で過ごしています。</p>
 </div>
@@ -85,8 +88,8 @@
 <div class="container">
 <div class="text-center">
 <h2 class="section-title reveal-scale">
-<span class="emoji-pop">🎬</span> もっと知りたい！
-                    <span class="sub-title">あおぎり高校のディープな魅力</span>
+<span class="emoji-pop">🎬</span> <span data-i18n="deep_title">もっと知りたい！</span>
+                    <span class="sub-title" data-i18n="deep_subtitle">あおぎり高校のディープな魅力</span>
 </h2>
 </div>
 <div class="feature-timeline">
@@ -96,8 +99,8 @@
 <div class="feature-icon magnetic-btn">🎮</div>
 <div class="feature-content premium-glass-card">
 <div class="card-glow"></div>
-<h3>「ゲーム部」なのにゲーム実況しない！？</h3>
-<p>あおぎり高校は元々「あおぎり高校ゲーム部」として活動をスタートし、初期はゲーム実況動画を投稿していました。しかし、「もっと視聴者を楽しませたい」という思いから、現在ではASMR、歌ってみた、ドッキリ企画、ショート動画など、幅広いジャンルに挑戦。「お前らゲーム部だろｗｗ」というツッコミも、今や愛されるお約束です。
+<h3 data-i18n="feature_1_title">「ゲーム部」なのにゲーム実況しない！？</h3>
+<p data-i18n="feature_1_body">あおぎり高校は元々「あおぎり高校ゲーム部」として活動をスタートし、初期はゲーム実況動画を投稿していました。しかし、「もっと視聴者を楽しませたい」という思いから、現在ではASMR、歌ってみた、ドッキリ企画、ショート動画など、幅広いジャンルに挑戦。「お前らゲーム部だろｗｗ」というツッコミも、今や愛されるお約束です。
                         </p>
 </div>
 </div>
@@ -106,8 +109,8 @@
 <div class="feature-icon magnetic-btn">🔥</div>
 <div class="feature-content premium-glass-card">
 <div class="card-glow"></div>
-<h3>「NGなし」の過激でカオスな企画力</h3>
-<p>VTuberの常識を覆す体を張った企画の数々。乗馬マシンに乗りながらイラスト対決をしたり、巨大グローブで本音をぶつけ合ったり…。時にはお下品なワードも飛び交う「NGなし」の限界スタイルで、視聴者を毎度爆笑の渦に巻き込みます。
+<h3 data-i18n="feature_2_title">「NGなし」の過激でカオスな企画力</h3>
+<p data-i18n="feature_2_body">VTuberの常識を覆す体を張った企画の数々。乗馬マシンに乗りながらイラスト対決をしたり、巨大グローブで本音をぶつけ合ったり…。時にはお下品なワードも飛び交う「NGなし」の限界スタイルで、視聴者を毎度爆笑の渦に巻き込みます。
                         </p>
 </div>
 </div>
@@ -116,8 +119,8 @@
 <div class="feature-icon magnetic-btn">🤝</div>
 <div class="feature-content premium-glass-card">
 <div class="card-glow"></div>
-<h3>個性豊かすぎるメンバーと強い絆</h3>
-<p>初期メンバーから続々と加入した新入生まで、総勢13名を超える大所帯。先輩・後輩の垣根を越えた「わちゃわちゃ」とした掛け合いや、時に見せる強い結束力は必見。惜しまれつつ卒業したメンバーとの感動的なエピソードも、あおぎりの歴史に深く刻まれています。
+<h3 data-i18n="feature_3_title">個性豊かすぎるメンバーと強い絆</h3>
+<p data-i18n="feature_3_body">初期メンバーから続々と加入した新入生まで、総勢13名を超える大所帯。先輩・後輩の垣根を越えた「わちゃわちゃ」とした掛け合いや、時に見せる強い結束力は必見。惜しまれつつ卒業したメンバーとの感動的なエピソードも、あおぎりの歴史に深く刻まれています。
                         </p>
 </div>
 </div>
@@ -126,8 +129,8 @@
 <div class="feature-icon magnetic-btn">🚀</div>
 <div class="feature-content premium-glass-card">
 <div class="card-glow"></div>
-<h3>止まらない快進撃！</h3>
-<p>チャンネル登録者100万人を突破し、有名企業とのコラボやカードゲーム化など、インターネットを飛び出して大活躍。2026年には「あおぎり高校入学祭」などの大型オフラインイベントも控え、その勢いは止まりません！
+<h3 data-i18n="feature_4_title">止まらない快進撃！</h3>
+<p data-i18n="feature_4_body">チャンネル登録者100万人を突破し、有名企業とのコラボやカードゲーム化など、インターネットを飛び出して大活躍。2026年には「あおぎり高校入学祭」などの大型オフラインイベントも控え、その勢いは止まりません！
                         </p>
 </div>
 </div>
@@ -139,43 +142,43 @@
 <div class="container">
 <div class="text-center">
 <h2 class="section-title reveal-scale" style="margin-bottom: 3rem;">
-<span class="emoji-pop">🏷️</span> コンテンツ索引
-                    <span class="sub-title">CONTENT ATTRIBUTES</span>
+<span class="emoji-pop">🏷️</span> <span data-i18n="categories_title">コンテンツ索引</span>
+                    <span class="sub-title" data-i18n="categories_subtitle">CONTENT ATTRIBUTES</span>
 </h2>
-<p class="reveal-fade" style="margin-bottom: 4rem; color: var(--text-muted); font-size: 1.1rem;">
+<p class="reveal-fade" data-i18n="categories_intro" style="margin-bottom: 4rem; color: var(--text-muted); font-size: 1.1rem;">
                     動画や企画から推察される、あおぎり高校の豊富なコンテンツタグ</p>
 </div>
 <div class="category-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
 <div class="premium-glass-card reveal-up" style="padding: 2.5rem;">
-<h3 style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; color: var(--text-main); font-family: 'Kiwi Maru', serif;">
+<h3 data-i18n-html="category_1_title" style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; color: var(--text-main); font-family: 'Kiwi Maru', serif;">
 <span class="emoji-pop">🎬</span> 実写企画
                     </h3>
-<p style="font-size: 0.95rem; color: var(--text-muted);">
+<p data-i18n="category_1_body" style="font-size: 0.95rem; color: var(--text-muted);">
                         滝行、バンジージャンプ、大食い（ピザ、カニ、ケンタッキー）、マウスコンピューター工場見学など。</p>
 </div>
 <div class="premium-glass-card reveal-up delay-1" style="padding: 2.5rem;">
-<h3 style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; color: var(--text-main); font-family: 'Kiwi Maru', serif;">
+<h3 data-i18n-html="category_2_title" style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; color: var(--text-main); font-family: 'Kiwi Maru', serif;">
 <span class="emoji-pop">🛠️</span> 検証・技術系
                     </h3>
-<p style="font-size: 0.95rem; color: var(--text-muted);">ガンプラ製作、自作ゲーム開発（UE5、RPGツクール）、AI尋問ゲームなど。</p>
+<p data-i18n="category_2_body" style="font-size: 0.95rem; color: var(--text-muted);">ガンプラ製作、自作ゲーム開発（UE5、RPGツクール）、AI尋問ゲームなど。</p>
 </div>
 <div class="premium-glass-card reveal-up group-delay-2" style="padding: 2.5rem;">
-<h3 style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; color: var(--text-main); font-family: 'Kiwi Maru', serif;">
+<h3 data-i18n-html="category_3_title" style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; color: var(--text-main); font-family: 'Kiwi Maru', serif;">
 <span class="emoji-pop">🗣️</span> トーク・バラエティ
                     </h3>
-<p style="font-size: 0.95rem; color: var(--text-muted);">NGワード面接、持ち物検査、お悩み相談、ワードセンス大喜利など。</p>
+<p data-i18n="category_3_body" style="font-size: 0.95rem; color: var(--text-muted);">NGワード面接、持ち物検査、お悩み相談、ワードセンス大喜利など。</p>
 </div>
 <div class="premium-glass-card reveal-up group-delay-3" style="padding: 2.5rem;">
-<h3 style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; color: var(--text-main); font-family: 'Kiwi Maru', serif;">
+<h3 data-i18n-html="category_4_title" style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; color: var(--text-main); font-family: 'Kiwi Maru', serif;">
 <span class="emoji-pop">🎤</span> 音楽・パフォーマンス
                     </h3>
-<p style="font-size: 0.95rem; color: var(--text-muted);">3Dカラオケ大会、アーティスト縛り歌枠、オリジナル楽曲製作裏話など。</p>
+<p data-i18n="category_4_body" style="font-size: 0.95rem; color: var(--text-muted);">3Dカラオケ大会、アーティスト縛り歌枠、オリジナル楽曲製作裏話など。</p>
 </div>
 <div class="premium-glass-card reveal-up" style="padding: 2.5rem;">
-<h3 style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; color: var(--text-main); font-family: 'Kiwi Maru', serif;">
+<h3 data-i18n-html="category_5_title" style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; color: var(--text-main); font-family: 'Kiwi Maru', serif;">
 <span class="emoji-pop">🎲</span> マダミス・TRPG
                     </h3>
-<p style="font-size: 0.95rem; color: var(--text-muted);">「狂気山脈」シリーズなどの物語体験型コンテンツ。</p>
+<p data-i18n="category_5_body" style="font-size: 0.95rem; color: var(--text-muted);">「狂気山脈」シリーズなどの物語体験型コンテンツ。</p>
 </div>
 </div>
 </div>
@@ -185,19 +188,19 @@
 <div class="container">
 <div class="text-center">
 <h2 class="section-title reveal-scale">
-<span class="emoji-pop">📝</span> メンバーリスト
-                    <span class="sub-title">MEMBER DIRECTORY</span>
+<span class="emoji-pop">📝</span> <span data-i18n="members_title">メンバーリスト</span>
+                    <span class="sub-title" data-i18n="members_subtitle">MEMBER DIRECTORY</span>
 </h2>
 </div>
 <h3 class="subsection-title reveal-fade">
-<span class="icon-wrap">🌸</span> 在校生
+<span class="icon-wrap">🌸</span> <span data-i18n="active_members_title">在校生</span>
                 <span class="line-grow"></span>
 </h3>
 <div class="members-grid active-members" id="active-members-grid">
 <!-- Injected via JS -->
 </div>
 <h3 class="subsection-title reveal-fade" style="margin-top: 5rem;">
-<span class="icon-wrap">🎓</span> 卒業生
+<span class="icon-wrap">🎓</span> <span data-i18n="graduates_title">卒業生</span>
                 <span class="line-grow"></span>
 </h3>
 <div class="members-grid graduates" id="graduates-grid">
@@ -210,8 +213,8 @@
 <div class="footer-bg-glow"></div>
 <div class="container text-center">
 <h2 class="footer-logo">AOGIRI FAN!</h2>
-<p class="copyright">© 2026 Aogiri High School Fan Site. Developed with passion.</p>
-<p class="disclaimer">※本サイトは非公式のファンサイトであり、株式会社viviON及びあおぎり高校公式とは一切関係ありません。</p>
+<p class="copyright" data-i18n="footer_copyright">© 2026 Aogiri High School Fan Site. Developed with passion.</p>
+<p class="disclaimer" data-i18n="footer_disclaimer">※本サイトは非公式のファンサイトであり、株式会社viviON及びあおぎり高校公式とは一切関係ありません。</p>
 </div>
 </footer>
 <script src="aogiri_script.js"></script>

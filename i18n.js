@@ -18,6 +18,10 @@ const translations = {
         status_list_vspo_desc: "── UI試験運用中",
         status_list_others: "その他セクター",
         status_list_others_desc: "── 計画中（アクセスは可能ですがキャラページなどの整備待ち）",
+        status_list_completed_range: "あおぎり高校, APP LAND, RK Music, うおむすめ, エアリープロダクション, AKA Virtual, ENILIS VLiver, えのぐ, KAMITSUBAKI, キズナアイ, けものフレンズV, シンセマニアクス, 深層組, Star Facet, すぺしゃりて, 超渋谷計画, トリリオンステージ, ななしいんく, にじさんじ, にゃんたじあ！, NeoPorte, NexuStella, のりプロ, ハコネクト, Balus, Palette Project, VEE, FIRST STAGE, vα-liv, Varium, ぶいじ時代, ぶいすぽっ！, VBOX, VRegion, ぶいわんプロダクション, PROJECT NEBULA, ProForma, VASE, VOMS, ホロライブ, Marble Creators, まほろば, Mi→RiSE, ミリプロ, MEWLIVE, ユニバースプロダクション, ゆにれいど！",
+        status_list_completed_title: "仮完成セクター",
+        status_list_completed_range_desc: "── 各セクターの基本構成を仮完成（順次更新中）",
+        status_news_illustrator: "【UPDATE】個人勢の「本業絵師・モデラー」タグを大規模更新しました。",
         status_notice_footer: "※ まだ載せられていないプロジェクトもたくさんありますが、調査が終わったものから順番に作っています。",
         filter_all: "すべて",
         filter_major: "大手",
@@ -29,7 +33,13 @@ const translations = {
         alert_investigating: "【整備中】\nいま内容を更新中です。もう少し待っててね！",
         alert_not_active: "ステータス: [準備中です]",
         opening_status: "認証待機中... システムアクセスを初期化してください",
-        opening_btn: "アクセス初期化"
+        opening_btn: "アクセス初期화",
+        status_roadmap_title: "正式公開へのロードマップ",
+        status_roadmap_criteria_80: "企業勢8割の網羅（約25追加）をもって正式公開とします。",
+        status_roadmap_rate: "公開後も1日平均10人の調査を継続し、データ精度を維持します。",
+        status_roadmap_yt: "YouTubeのアナリティクス・データ分析を最優先とし、他は後回しです。",
+        status_roadmap_features: "個人ページ・横断/絵師検索・スケジュール・ミリオネア機能を順次実装予定。",
+        status_roadmap_no_lat: "国内外で遅延や優先順位の差は設けず、広範なアーカイブを目指します。"
     },
     en: {
         nav_agencies: "Agencies",
@@ -48,6 +58,10 @@ const translations = {
         status_list_vspo_desc: "── Under experimental setup",
         status_list_others: "Other Sectors",
         status_list_others_desc: "── In the planning stages (Character pages are coming soon!)",
+        status_list_completed_range: "Aogiri High School, APP LAND, RK Music, Uomusume, Airy Production, AKA Virtual, ENILIS VLiver, enogu, KAMITSUBAKI, Kizuna AI, Kemono Friends V, Synthemaniacs, Shinsogumi, Star Facet, Specialite, Cho Shibuya, Trillion Stage, 774inc., NIJISANJI, Nyantasia, NeoPorte, NexuStella, Noripro, Haconect, Balus, Palette Project, VEE, FIRST STAGE, Valiv, Varium, V-Jidai, VSPO!, VBOX, VRegion, V-One, PROJECT NEBULA, ProForma, VASE, VOMS, hololive, Marble Creators, Mahoroba, Mi→RiSE, Milipro, MEWLIVE, Universe Production, Uniraid!",
+        status_list_completed_title: "Completed Sectors",
+        status_list_completed_range_desc: "── Sector structures are provisionally complete",
+        status_news_illustrator: "[UPDATE] Major update to Professional Illustrator/Modeler tags in Indie sector.",
         status_notice_footer: "* We're adding more projects as soon as our research is done. Thanks for your patience!",
         filter_all: "All",
         filter_major: "Major",
@@ -59,7 +73,13 @@ const translations = {
         alert_investigating: "[In Progress]\nWe're updating the content right now. Please wait a little longer!",
         alert_not_active: "Status: [Getting ready...]",
         opening_status: "AWAITING AUTHORIZATION... INITIALIZE SYSTEM ACCESS",
-        opening_btn: "INITIALIZE"
+        opening_btn: "INITIALIZE",
+        status_roadmap_title: "OFFICIAL RELEASE ROADMAP",
+        status_roadmap_criteria_80: "Official release upon 80% corporate coverage (~25 more agencies).",
+        status_roadmap_rate: "Post-release: Maintain research rate of 10 people/day.",
+        status_roadmap_yt: "Priority: YouTube analytics/data. Other platforms are secondary.",
+        status_roadmap_features: "Implementing indie talent pages, cross/illustrator search, and schedule/millionaire archive.",
+        status_roadmap_no_lat: "No priority difference between domestic and international projects."
     },
     es: {
         nav_agencies: "Agencias",
@@ -78,6 +98,10 @@ const translations = {
         status_list_vspo_desc: "── En fase de pruebas",
         status_list_others: "Otros Sectors",
         status_list_others_desc: "── En planificación (¡Pronto tendremos las páginas de los personajes!)",
+        status_list_completed_range: "Aogiri High School, APP LAND, RK Music, Uomusume, Airy Production, AKA Virtual, ENILIS VLiver, enogu, KAMITSUBAKI, Kizuna AI, Kemono Friends V, Synthemaniacs, Shinsogumi, Star Facet, Specialite, Cho Shibuya, Trillion Stage, 774inc., NIJISANJI, Nyantasia, NeoPorte, NexuStella, Noripro, Haconect, Balus, Palette Project, VEE, FIRST STAGE, Valiv, Varium, V-Jidai, VSPO!, VBOX, VRegion, V-One, PROJECT NEBULA, ProForma, VASE, VOMS, hololive, Marble Creators, Mahoroba, Mi→RiSE, Milipro, MEWLIVE, Universe Production, Uniraid!",
+        status_list_completed_title: "Sectores Completados",
+        status_list_completed_range_desc: "── Estructuras sectoriales provisionalmente completas",
+        status_news_illustrator: "[UPDATE] Gran actualización de etiquetas de Ilustradores/Modeladores en el sector Indie.",
         status_notice_footer: "* Añadiremos más proyectos a medida que terminemos de investigar. ¡Gracias por la paciencia!",
         filter_all: "Todo",
         filter_major: "Grandes",
@@ -89,7 +113,13 @@ const translations = {
         alert_investigating: "[En progreso]\nEstamos actualizando el contenido. ¡Espera un poquito más!",
         alert_not_active: "Estado: [Preparándose...]",
         opening_status: "ESPERANDO AUTORIZACIÓN... INICIALIZAR ACCESO AL SISTEMA",
-        opening_btn: "INICIALIZAR"
+        opening_btn: "INICIALIZAR",
+        status_roadmap_title: "HOJA DE RUTA HACIA EL LANZAMIENTO OFICIAL",
+        status_roadmap_criteria_80: "Lanzamiento oficial al alcanzar el 80% de cobertura de agencias (~25 más).",
+        status_roadmap_rate: "Tras el lanzamiento: Mantener un ritmo de investigación de 10 personas/día.",
+        status_roadmap_yt: "Prioridad: Estadísticas de YouTube. Otras plataformas son secundarias.",
+        status_roadmap_features: "Implementación de perfiles individuales, búsqueda transversal/ilustradores y sección horario/millonarios.",
+        status_roadmap_no_lat: "Sin diferencias de prioridad entre proyectos nacionales e internacionales."
     },
     "zh-Hans": {
         nav_agencies: "事务所",
@@ -108,6 +138,10 @@ const translations = {
         status_list_vspo_desc: "── 还在准备UI实验",
         status_list_others: "其他区域",
         status_list_others_desc: "── 正在规划中（虽然能进去，但角色页面还要等等哦）",
+        status_list_completed_range: "あおぎり高校, APP LAND, RK Music, うおむすめ, エアリープロダクション, AKA Virtual, ENILIS VLiver, えのぐ, KAMITSUBAKI, キズナアイ, けものフレンズV, シンセマニアクス, 深層組, Star Facet, すぺしゃりて, 超渋谷計画, トリリオンステージ, ななしいんく, にじさんじ, にゃんたじあ！, NeoPorte, NexuStella, のりプロ, ハコネクト, Balus, Palette Project, VEE, FIRST STAGE, vα-liv, Varium, ぶいじ時代, ぶいすぽっ！, VBOX, VRegion, ぶいわんプロダクション, PROJECT NEBULA, ProForma, VASE, VOMS, ホロライブ, Marble Creators, まほろば, Mi→RiSE, ミリプロ, MEWLIVE, ユニバースプロダクション, ゆにれいど！",
+        status_list_completed_title: "已完成区域",
+        status_list_completed_range_desc: "── 各区域基本结构已初步完成",
+        status_news_illustrator: "【更新】个人势区域“本业画师/建模师”标签已大规模更新。",
         status_notice_footer: "※ 还有很多没列出来的项目，我们会按照调研进度慢慢补齐的。",
         filter_all: "全部",
         filter_major: "大型",
@@ -119,7 +153,13 @@ const translations = {
         alert_investigating: "【整理中】\n内容正在更新中，请稍等！",
         alert_not_active: "状态：[准备中]",
         opening_status: "等待身份验证... 请初始化系统访问",
-        opening_btn: "初始化"
+        opening_btn: "初始化",
+        status_roadmap_title: "正式版面世路线图",
+        status_roadmap_criteria_80: "当企业势覆盖率达到80%（约需增加25家）时将正式发布。",
+        status_roadmap_rate: "发布后：保持每日平均调研10位成员，以维护数据精度。",
+        status_roadmap_yt: "优先项：YouTube数据分析。其他平台将被置后处理。",
+        status_roadmap_features: "即将推出个人主页、跨站/画师搜索、日程表及百万粉丝特殊档案功能。",
+        status_roadmap_no_lat: "国内外项目在调研优先级和反馈速度上不设差异。"
     },
     "zh-Hant": {
         nav_agencies: "事務所",
@@ -138,6 +178,10 @@ const translations = {
         status_list_vspo_desc: "── 還在準備UI實驗",
         status_list_others: "其他區域",
         status_list_others_desc: "── 正在規劃中（雖然能進去，但角色頁面還要等等哦）",
+        status_list_completed_range: "あおぎり高校, APP LAND, RK Music, うおむすめ, エアリープロダクション, AKA Virtual, ENILIS VLiver, えのぐ, KAMITSUBAKI, キズナアイ, けものフレンズV, シンセマニアクス, 深層組, Star Facet, すぺしゃりて, 超渋谷計画, トリリオンステージ, ななしいんく, にじさんじ, にゃんたじあ！, NeoPorte, NexuStella, のりプロ, ハコネクト, Balus, Palette Project, VEE, FIRST STAGE, vα-liv, Varium, ぶいじ時代, ぶいすぽっ！, VBOX, VRegion, ぶいわんプロダクション, PROJECT NEBULA, ProForma, VASE, VOMS, ホロライブ, Marble Creators, まほろば, Mi→RiSE, ミリプロ, MEWLIVE, ユニバースプロダクション, ゆにれいど！",
+        status_list_completed_title: "已完成区域",
+        status_list_completed_range_desc: "── 各區域基本結構已初步完成",
+        status_news_illustrator: "【更新】個人勢區域「本業畫師/建模師」標籤已大規模更新。",
         status_notice_footer: "※ 還有許多項目尚未列入上方列表。我們會在調研進度慢慢補齊的。",
         filter_all: "全部",
         filter_major: "大型",
@@ -149,7 +193,13 @@ const translations = {
         alert_investigating: "【整理中】\n內容正在更新中，請稍等！",
         alert_not_active: "狀態：[準備中]",
         opening_status: "等待身份驗證... 請初始化系統訪問",
-        opening_btn: "初始化"
+        opening_btn: "初始化",
+        status_roadmap_title: "正式版面世路線圖",
+        status_roadmap_criteria_80: "當企業勢覆蓋率達到80%（約需增加25家）時將正式發布。",
+        status_roadmap_rate: "發佈後：保持每日平均調研10位成員，以維護數據精度。",
+        status_roadmap_yt: "優先項：YouTube數據分析。其他平台將被置後處理。",
+        status_roadmap_features: "即將推出個人主頁、跨站/畫師搜索、日程表及百萬粉絲特殊檔案功能。",
+        status_roadmap_no_lat: "國內外項目在調研優先級和回饋速度上不設差異。"
     },
     ko: {
         nav_agencies: "에이전시",
@@ -168,6 +218,10 @@ const translations = {
         status_list_vspo_desc: "── UI 실험 준비 중",
         status_list_others: "기타 섹터",
         status_list_others_desc: "── 계획 중입니다 (접속은 가능하지만 캐릭터 페이지는 차근차근 준비할게요)",
+        status_list_completed_range: "아오기리 고교, APP LAND, RK Music, 우오무스메, 에어리 프로덕션, AKA Virtual, ENILIS VLiver, 에노구, KAMITSUBAKI, 키즈나 아이, 케모노 프렌즈 V, 신세매니악스, 심층조, Star Facet, 스페셜리테, 초시부야 계획, 트릴리온 스테이지, 나나시잉크, 니지산지, 냥타지아!, NeoPorte, NexuStella, 노리프로, 하코넥트, 발스, 팔레트 프로젝트, VEE, FIRST STAGE, Valiv, Varium, V지대, 브이스포!, VBOX, VRegion, 브이원 프로덕션, 프로젝트 네뷸라, 프로포마 프로덕션, VASE, VOMS, 홀로라이브, 마블 크리에이터즈, 마호로바, 미라이즈, 밀리프로, MEWLIVE, 유니버스 프로덕션, 유니레이드!",
+        status_list_completed_title: "가완성 섹터",
+        status_list_completed_range_desc: "── 각 섹터의 기본 구성이 가완성되었습니다",
+        status_news_illustrator: "【업데이트】개인세 섹터의 '본업 일러스트레이터/모델러' 태그가 대폭 업데이트되었습니다.",
         status_notice_footer: "※ 아직 목록에 없는 프로젝트도 많지만, 조사가 끝나는 대로 순서대로 만들고 있어요.",
         filter_all: "전체",
         filter_major: "메이저",
@@ -179,6 +233,12 @@ const translations = {
         alert_investigating: "[정비 중]\n현재 내용을 업데이트 중입니다. 잠시만 기다려 주세요!",
         alert_not_active: "상태: [준비 중입니다]",
         opening_status: "인증 대기 중... 시스템 액세스를 초기화하십시오",
-        opening_btn: "초기화"
+        opening_btn: "초기화",
+        status_roadmap_title: "정식 오픈 로드맵",
+        status_roadmap_criteria_80: "기업세의 80% 망라(약 25개 추가) 시 정식 공개를 목표로 합니다.",
+        status_roadmap_rate: "공개 이후에도 하루 평균 10명의 조사를 지속하여 데이터를 유지합니다.",
+        status_roadmap_yt: "우선순위: YouTube 데이터 분석. 그 외 플랫폼은 후순위입니다.",
+        status_roadmap_features: "개인 페이지, 통합/일러스트레이터 검색, 스케줄 및 밀리어네어 보관소 순차 구현.",
+        status_roadmap_no_lat: "국내외 프로젝트 간의 우선순위 및 업데이트 시차는 두지 않습니다."
     }
 };

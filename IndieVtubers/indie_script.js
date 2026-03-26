@@ -464,8 +464,8 @@ document.addEventListener('DOMContentLoaded', () => {
             tags: ["元企業", "EN", "古参"]
         },
         {
-            name: "ピー丸様",
-            sub: "Piimaru-sama",
+            name: "P丸様。",
+            sub: "P-maru-sama",
             feature: "バーチャルアバター活動の先駆者・突出した数字",
             desc: "厳密なVTuberの枠組みからは少し外れる動画制作者兼配信者だが、バーチャルアバターを用いた活動の先駆者。個人として突出した数字を持っており、メディアトレンドの変遷を追う上で無視できない存在。",
             category: "global",
@@ -594,8 +594,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // ──────────── 追加: ゲーム ────────────
         {
-            name: "ソバルト",
-            sub: "Sovalt",
+            name: "SoValt",
+            sub: "SoValt",
             feature: "サバイバルゲーム配信・コミュニティのインフラ裏方",
             desc: "サバイバルゲーム（Rustなど）の配信を中心とする個人のVストリーマー。企業勢やプロゲーマーが集まる大型ストリーマーイベント（VCRなど）の主催やサーバー運営にも個人で深く関わっており、ゲーム配信コミュニティの「インフラ・裏方」として機能している極めて重要な個人勢。",
             category: "gaming",
