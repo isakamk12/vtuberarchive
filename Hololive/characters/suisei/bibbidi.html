@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIBBIDI BOBBIDI BOO - Hoshimachi Suisei Playground</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,900;1,900&family=Noto+Sans+JP:wght@700;900&family=Zen+Dots&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="bibbidi.css">
+</head>
+<body>
+    <div id="noise-overlay"></div>
+    <div id="cursor"></div>
+    <div id="cursor-follower"></div>
+
+    <div class="loader" id="loader">
+        <div class="loader-text glitch" data-text="BIBBIDI BOBBIDI BOOWA">BIBBIDI BOBBIDI BOOWA</div>
+        <button id="start-btn" class="cyber-btn">PLAY MV</button>
+    </div>
+
+    <main id="mv-container">
+        <!-- Background Elements -->
+        <div class="bg-elements">
+            <div class="marquee-bg marquee-left" id="mq1">
+                <span>BIBBIDI BOBBIDI BOOWA BIBBIDI BOBBIDI BOOWA BIBBIDI BOBBIDI BOOWA</span>
+            </div>
+            <div class="marquee-bg marquee-right" id="mq2">
+                <span>HOSHIMACHI SUISEI HOSHIMACHI SUISEI HOSHIMACHI SUISEI</span>
+            </div>
+            <div class="grid-bg"></div>
+            <div class="circle-graphic"></div>
+            <div class="star-graphic"></div>
+        </div>
+
+        <!-- Scroll Content -->
+        <div class="scroll-track">
+            
+            <section class="scene intro">
+                <div class="title-container">
+                    <h1 class="main-title glitch" data-text="ビビデバ">ビビデバ</h1>
+                    <div class="sub-titles">
+                        <p class="subtitle fade-in-up" style="--delay: 0.2s">Vocal：星街すいせい</p>
+                        <p class="subtitle fade-in-up" style="--delay: 0.4s">Lyrics,Music,Arranged ：ツミキ</p>
+                        <p class="subtitle fade-in-up" style="--delay: 0.6s">Mixed by：NNZN</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="scene verse1 type-left">
+                <div class="lyric-block">
+                    <p class="lyric-line reveal-text">つまんないデイズもう散々ね！</p>
+                    <p class="lyric-line reveal-text delay-1">奇蹟願ってるだけの人生</p>
+                </div>
+                <div class="bg-shape shape-tri"></div>
+            </section>
+
+            <section class="scene verse1 type-right">
+                <div class="lyric-block">
+                    <p class="lyric-line pop-in english">watch me do...</p>
+                    <p class="lyric-line reveal-text delay-1">呪術秘中トリック無しのマジック</p>
+                </div>
+                <div class="bg-shape shape-circle"></div>
+            </section>
+
+            <section class="scene verse1 type-center invert-scene">
+                <div class="lyric-block">
+                    <p class="lyric-line glitch-text english large" data-text="I wanna be free!">i wanna be free!</p>
+                    <p class="lyric-line reveal-text delay-1">だって未だふりだし</p>
+                    <p class="lyric-line pop-in delay-2 english small">(the party ain't started)</p>
+                </div>
+            </section>
+
+            <section class="scene pre-chorus type-left">
+                <div class="lyric-block">
+                    <p class="lyric-line impact-text">hey タクシー</p>
+                    <p class="lyric-line reveal-text delay-1">ちょっと宇宙迄</p>
+                </div>
+                <div class="taxi-graphic slide-across"></div>
+            </section>
+
+            <section class="scene pre-chorus2 type-center">
+                <div class="lyric-block">
+                    <p class="lyric-line flash-text">秒針は音を立てて</p>
+                    <p class="lyric-line reveal-text delay-1">夜を急かす魔物のよう</p>
+                </div>
+                <div class="clock-graphic rotate-inf"></div>
+            </section>
+
+            <section class="scene pre-chorus2 type-right">
+                <div class="lyric-block">
+                    <p class="lyric-line reveal-text">人生は一瞬にして溶ける魔法</p>
+                    <p class="lyric-line impact-text delay-1 highlight-pink">それならば駆け抜けて<br>想通り！</p>
+                </div>
+            </section>
+
+            <!-- CHORUS -->
+            <section class="scene chorus chorus-bg">
+                <div class="lyric-block center-block">
+                    <p class="lyric-line giant-text pop-out">おしゃまな馬車</p>
+                    <p class="lyric-line reveal-text delay-1">飛び乗って<span class="english pop-out inline-pop">drivin'</span></p>
+                </div>
+            </section>
+
+            <section class="scene chorus">
+                <div class="lyric-block center-block">
+                    <p class="lyric-line reveal-text">あたしは大変身</p>
+                    <p class="lyric-line giant-text glitch-text delay-1" data-text="メイクアップ！">メイクアップ！</p>
+                </div>
+            </section>
+
+            <section class="scene chorus split-scene">
+                <div class="lyric-block type-left">
+                    <p class="lyric-line reveal-text">我儘のまにまに</p>
+                    <p class="lyric-line pop-in delay-1 highlight-cyan">燦きに注意</p>
+                </div>
+                <div class="lyric-block type-right">
+                    <p class="lyric-line reveal-text delay-2">洒落な街で<span class="english">dancin'</span></p>
+                    <p class="lyric-line reveal-text delay-3">左様ならグッバイ劣等感</p>
+                </div>
+            </section>
+
+            <section class="scene chorus type-center">
+                <div class="lyric-block">
+                    <p class="lyric-line reveal-text">何時かは喝采クラップオウデエンス</p>
+                    <p class="lyric-line impact-text delay-1">皆皆　御唱和あれ</p>
+                </div>
+            </section>
+
+            <section class="scene chorus drop-scene">
+                <div class="lyric-block center-block">
+                    <p class="lyric-line bibbidi-text neon-pulse">bibbidi bobbidi boowa</p>
+                    <p class="lyric-line bibbidi-text delay-1 glitch" data-text="bibbidi bobbidi boowa">bibbidi bobbidi boowa</p>
+                </div>
+            </section>
+
+            <section class="scene chorus type-left">
+                <div class="lyric-block">
+                    <p class="lyric-line reveal-text">混絡がっても仕様がない</p>
+                    <p class="lyric-line reveal-text delay-1">ガラスシューズで踊る<span class="english highlight-pink">tonight</span></p>
+                </div>
+            </section>
+
+            <section class="scene chorus drop-scene invert-scene">
+                <div class="lyric-block center-block">
+                    <p class="lyric-line bibbidi-text">bibbidi bobbidi boowa</p>
+                    <p class="lyric-line bibbidi-text delay-1">bibbidi bobbidi boowa</p>
+                </div>
+            </section>
+
+            <section class="scene chorus type-center">
+                <div class="lyric-block">
+                    <p class="lyric-line reveal-text">今夜に明日など無い</p>
+                    <p class="lyric-line reveal-text delay-1">ならば自由に踊った者勝ち</p>
+                    <p class="lyric-line giant-text pop-in delay-2">でしょう？</p>
+                </div>
+            </section>
+
+            <!-- Verse 2 / Rap part -->
+            <section class="scene verse2 rapid-scene">
+                <div class="lyric-block center-block">
+                    <p class="lyric-line giant-text english blink">dance！</p>
+                    <p class="lyric-line pop-in delay-1">ラリラリホ</p>
+                    <p class="lyric-line reveal-text delay-2">どんな問題も解は一つ</p>
+                </div>
+            </section>
+
+            <section class="scene verse2 grid-text-scene">
+                <div class="lyric-block center-block">
+                    <p class="lyric-line reveal-text">白紙も正解も間違いも愛す</p>
+                    <p class="lyric-line reveal-text delay-1 highlight-cyan">本当のあたしの理想</p>
+                </div>
+            </section>
+
+            <section class="scene verse2 type-left">
+                <div class="lyric-block">
+                    <p class="lyric-line reveal-text">何だか世界は限界の気配がして</p>
+                    <p class="lyric-line reveal-text delay-1">ただただ安心じゃ心配</p>
+                    <p class="lyric-line impact-text delay-2 glitch" data-text="今すぐjumpin out">今すぐjumpin out</p>
+                </div>
+            </section>
+
+            <section class="scene verse2 rapid-scene invert-scene">
+                <div class="lyric-block center-block">
+                    <p class="lyric-line cb-text cb-1">chitty chitty bang bang</p>
+                    <p class="lyric-line cb-text cb-2">chitty bang bang</p>
+                </div>
+            </section>
+
+            <section class="scene verse2 intense-scene">
+                <div class="lyric-block type-right">
+                    <p class="lyric-line reveal-text">唯唯諾諾に危機感抱く日々に</p>
+                    <p class="lyric-line reveal-text delay-1">ぎりぎり爆発気味</p>
+                    <p class="lyric-line pop-in delay-2 highlight-pink">たった今発散してしまおうか</p>
+                </div>
+            </section>
+
+            <section class="scene verse2 intense-scene2">
+                <div class="lyric-block type-left">
+                    <p class="lyric-line reveal-text">まだまだビイビイ弾巧みに乱射</p>
+                    <p class="lyric-line reveal-text delay-1">一発じゃあ撃ち足りないわ</p>
+                    <p class="lyric-line pop-in delay-2">ついに導き出した君にアンサー</p>
+                </div>
+                <div class="lyric-block type-center mt-5">
+                    <p class="lyric-line giant-text highlight-cyan flash-text delay-3">灰に成る迄<br>踊って居よう</p>
+                </div>
+            </section>
+
+            <!-- CHORUS 2 Wait, user lyrics repeated the whole chorus! -->
+            <section class="scene chorus chorus-bg">
+                <div class="lyric-block center-block">
+                    <p class="lyric-line giant-text pop-out">おしゃまな馬車</p>
+                    <p class="lyric-line reveal-text delay-1">飛び乗って<span class="english pop-out inline-pop">drivin'</span></p>
+                </div>
+            </section>
+
+            <section class="scene chorus">
+                <div class="lyric-block center-block">
+                    <p class="lyric-line reveal-text">あたしは大変身</p>
+                    <p class="lyric-line giant-text glitch-text delay-1" data-text="メイクアップ！">メイクアップ！</p>
+                </div>
+            </section>
+
+            <section class="scene chorus split-scene">
+                <div class="lyric-block type-left">
+                    <p class="lyric-line reveal-text">我儘のまにまに</p>
+                    <p class="lyric-line pop-in delay-1 highlight-cyan">燦きに注意</p>
+                </div>
+                <div class="lyric-block type-right">
+                    <p class="lyric-line reveal-text delay-2">洒落な街で<span class="english">dancin'</span></p>
+                    <p class="lyric-line reveal-text delay-3">左様ならグッバイ劣等感</p>
+                </div>
+            </section>
+
+            <section class="scene chorus type-center">
+                <div class="lyric-block">
+                    <p class="lyric-line reveal-text">何時かは喝采クラップオウデエンス</p>
+                    <p class="lyric-line impact-text delay-1">皆皆　御唱和あれ</p>
+                </div>
+            </section>
+
+            <section class="scene chorus drop-scene">
+                <div class="lyric-block center-block">
+                    <p class="lyric-line bibbidi-text neon-pulse">bibbidi bobbidi boowa</p>
+                    <p class="lyric-line bibbidi-text delay-1 glitch" data-text="bibbidi bobbidi boowa">bibbidi bobbidi boowa</p>
+                </div>
+            </section>
+
+            <section class="scene chorus type-left">
+                <div class="lyric-block">
+                    <p class="lyric-line reveal-text">混絡がっても仕様がない</p>
+                    <p class="lyric-line reveal-text delay-1">ガラスシューズで踊る<span class="english highlight-pink">tonight</span></p>
+                </div>
+            </section>
+
+            <section class="scene chorus drop-scene invert-scene">
+                <div class="lyric-block center-block">
+                    <p class="lyric-line bibbidi-text">bibbidi bobbidi boowa</p>
+                    <p class="lyric-line bibbidi-text delay-1">bibbidi bobbidi boowa</p>
+                </div>
+            </section>
+
+            <section class="scene chorus type-center">
+                <div class="lyric-block" style="padding-bottom: 30vh;">
+                    <p class="lyric-line reveal-text">今夜に明日など無い</p>
+                    <p class="lyric-line reveal-text delay-1">ならば自由に踊った者勝ち</p>
+                    <p class="lyric-line giant-text pop-in delay-2 glitch" data-text="でしょう？">でしょう？</p>
+                </div>
+            </section>
+
+            <section class="scene outro">
+                <div class="logo-box">
+                    <h2 class="glitch" data-text="BIBBIDI BOBBIDI BOO">BIBBIDI BOBBIDI BOO</h2>
+                    <p>HOSHIMACHI SUISEI</p>
+                    <a href="../../indie_index.html" class="cyber-btn return-btn">RETURN TO ARCHIVE</a>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <script src="bibbidi.js"></script>
+</body>
+</html>
