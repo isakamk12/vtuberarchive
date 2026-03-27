@@ -1,13 +1,28 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>水瓶ミア | Re:AcT Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #00ffcc;
+            --char-grad: linear-gradient(135deg, #00ffcc 0%, #0088ff 100%);
+        }
+        .hero-name { background: var(--char-grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .section-title { color: var(--char-color); }
+        .profile-card::before { background: var(--char-grad); }
+        .episode-card { background: #1a1a1e; border: 1px solid #333; padding: 2rem; margin-bottom: 2rem; border-left: 5px solid var(--char-color); }
+        .episode-card h3 { color: var(--char-color); margin-bottom: 1rem; font-family: 'Syncopate', sans-serif; font-size: 1.2rem; }
+        .episode-card p { color: #ccc; line-height: 1.8; }
+        .episode-card ul { margin-top: 1rem; list-style: none; }
+        .episode-card li { margin-bottom: 0.5rem; color: #eee; position: relative; padding-left: 1.5rem; }
+        .episode-card li::before { content: '▶'; position: absolute; left: 0; color: var(--char-color); font-size: 0.8rem; top: 0.3rem; }
+        .quote { font-style: italic; color: #fff; border-left: 3px solid var(--char-color); padding-left: 1rem; margin: 1rem 0; }
+    </style>
 </head>
-
 <body>
     <div class="bg-glow"></div>
     <nav class="nav">
@@ -25,7 +40,11 @@
             <div class="profile-card">
                 <div class="data-grid">
                     <div class="data-item"><span class="label">ID</span><span class="value">REA-003</span></div>
-                    <div class="data-item"><span class="label">STATUS</span><span class="value">MAIN</span></div>
+                    <div class="data-item"><span class="label">BIRTHDAY</span><span class="value">2月24日</span></div>
+                    <div class="data-item"><span class="label">HEIGHT</span><span class="value">148cm</span></div>
+                    <div class="data-item"><span class="label">AGE</span><span class="value">永遠の20歳</span></div>
+                    <div class="data-item"><span class="label">FANNAME</span><span class="value">ミアとも</span></div>
+                    <div class="data-item"><span class="label">SPECIALTY</span><span class="value">3Dモデリング、料理</span></div>
                 </div>
             </div>
         </section>
@@ -33,11 +52,34 @@
         <section class="section reveal">
             <h2 class="section-title">DESCRIPTION</h2>
             <div class="description">
-                <p>Re:AcT所属のタレント。水のようにしなやかで、かつ芯の強さを感じさせるトークが特徴。多様なバックグラウンドを持ち、その豊かな経験を活かした配信内容でリスナーの信頼を集めている。</p>
+                <p>「こんかめ～！」の挨拶でおなじみの、Re:AcT所属ハイスペック妹VTuber。歌やゲーム配信だけでなく、動画編集、Mix、3Dモデリングまでこなすクリエイター。マルチタレント部門所属だが、自他ともに認める「芸人枠」として愛されている。</p>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">EPISODES</h2>
+            <div class="episodes-container">
+                <div class="episode-card">
+                    <h3>料理上手で家庭的！「ミアパッド」</h3>
+                    <p>お料理が大得意で、Twitterでは「#ミアパッド」のハッシュタグで簡単レシピやおつまみを発信。食への探求心が旺盛で、実食レビュー配信も人気。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>身体を張った激辛企画と名言</h3>
+                    <p>激辛企画に挑戦し続け、耐性を獲得。しかし「ペヤング獄激辛ファイナル」では一口で悶絶。パニックになり「白菜が甘い」「白菜は優しい」と謎の気づきを得る名言（迷言）を残した。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>独学で「VRChat公式ワールド」制作</h3>
+                    <p>「Re:AcTをもっと知ってほしい」という想いから独学でUnityを猛勉強し、VRChat上に公式ワールド「Re˸AcT VTuberWorld」を一人で制作・公開。その事務所愛は多くのファンを驚かせた。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>永遠の20歳（？）漂うおばちゃん感</h3>
+                    <p>妹キャラだが、「腰が痛い」「最近は揚げ物がきつい」と年齢を感じさせる発言を連発し、「水瓶おばちゃん」と自称することも。独特なダジャレで時を止めるお茶目な一面も魅力。</p>
+                </div>
             </div>
         </section>
     </main>
 
+    <script src="../../mobile_optimize.js"></script>
     <script>
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -47,5 +89,4 @@
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     </script>
 </body>
-
 </html>

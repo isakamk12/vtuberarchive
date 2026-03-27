@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>星鳳 ともり | りーさるぷらん (Lethal Plan) Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #FF1A55;
+            --char-rgb: 255, 26, 85;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../lethalplan_index.html" class="char-back">
+            <i class="fa-solid fa-caret-left"></i> BACK TO ROSTER
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Hoshioh Tomori</div>
+        <h1 class="char-name">星鳳 ともり</h1>
+        <div class="char-tags">
+            <span class="char-tag">1期生・先鋒</span>
+            <span class="char-tag">キミの心に火を灯す！</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2>FIGHTER PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>BIRTHDAY:</strong> 7月21日</p>
+                <p><strong>HEIGHT:</strong> 157cm</p>
+                <p><strong>STYLE:</strong> ゲームパッド勢（ホリ ファイティングコマンダー OCTA愛用）</p>
+                <p><strong>FAVORITE:</strong> Mジュリ、Cディージェイ（スト6） / シン＝キスク（GGST）など</p>
+                <p><strong>FANNAME:</strong> ともり星</p>
+            </div>
+            <div class="char-bio" style="margin-top: 1.5rem; border-top: 1px dashed rgba(var(--char-rgb), 0.3); padding-top: 1.5rem;">
+                <p>明るく元気印の関西弁ゲーマー女子。楽しいことを共有するのが大好きで、常にワクワクできる交流の場を求めている。「いつ闘いを挑まれてもいいようにパッドを持ち歩いている」という設定に違わず、リアルでも超のつく負けず嫌いで努力家な戦闘民族。</p>
+            </div>
+            <div class="char-details" style="margin-top: 1rem;">
+                <p><strong>HOBBIES:</strong> おしゃべり、歌うこと、犬、ワイン、コカ・コーラ ゼロ</p>
+                <p><strong>DISLIKES:</strong> 料理、生トマト、さくらんぼ、虫、怖いもの、じっとすること</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+            <h2>MOVE LIST / EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>オーディションにゲームパッドを持参！？</h3>
+                    <p>「いつ闘いを挑まれてもいいように」というプロフィールの通り、りーさるぷらんのオーディションに本当にゲームパッドを持ち込んで参加。「目が合った瞬間に対戦が始まるかもしれないから」と語り、運営を驚かせた生粋のゲーマーです。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>驚異の「1日8時間トレモ」でマスター到達</h3>
+                    <p>格ゲーを始めた当初は引退も経験したが、『スト6』に出会い覚醒。「コンボを10回連続で成功するまで次に行かない」と毎日8時間トレモに引きこもり、腱鞘炎で通院するほど努力を重ね、見事マスターランクへの到達を果たしました。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>マゴさんへの重すぎるリスペクト</h3>
+                    <p>自身にとって「初恋の人みたいな存在」と語るプロゲーマー・マゴ選手を熱烈に応援。『獅白杯2nd』で直接コーチングを受けた際は、極度の緊張で震え上がりながらも限界化したファンガールのリアクションを見せました。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>伝説の耐久配信「感謝の昇竜拳2万回」</h3>
+                    <p>登録者2万人突破を記念し、手動でひたすら昇竜拳を撃ち続ける狂気の「感謝の昇竜拳2万回」耐久配信を実施。「こいつは2万回昇竜をやった女なんだって称号かっこよくない？」と語り、格ゲーマーとしての意地と底力を見せつけました。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>声がデカすぎてドクターストップ？</h3>
+                    <p>バカデカボイスで喉を痛め「音量を抑えてボソボソ喋る」配信を試みたところ、リスナーから「それが普通の人間サイズの声量だ」「清楚」と絶賛され、自身の常識が覆される衝撃を受けていました。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page. Not affiliated with Lethal Plan.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = "1";
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

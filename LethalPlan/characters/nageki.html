@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天宿 なげき | りーさるぷらん (Lethal Plan) Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #00F0FF;
+            --char-rgb: 0, 240, 255;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../lethalplan_index.html" class="char-back">
+            <i class="fa-solid fa-caret-left"></i> BACK TO ROSTER
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Amayadori Nageki</div>
+        <h1 class="char-name">天宿 なげき</h1>
+        <div class="char-tags">
+            <span class="char-tag">1期生</span>
+            <span class="char-tag">あなたの悲鳴をいただきます</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2>FIGHTER PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>BIRTHDAY:</strong> 5月15日</p>
+                <p><strong>HEIGHT:</strong> 155cm</p>
+                <p><strong>STYLE:</strong> レバーレス（魔改造済み）</p>
+                <p><strong>FAVORITE:</strong> 『ストリートファイター6』（ケン、ベガ等）、『UNI 2』など</p>
+                <p><strong>FANNAME:</strong> なげキッズ</p>
+            </div>
+            <div class="char-bio" style="margin-top: 1.5rem; border-top: 1px dashed rgba(var(--char-rgb), 0.3); padding-top: 1.5rem;">
+                <p>格闘ゲームの妖精。日中は会社員として働く兼業ゲーマーながら、スト6では最高ランク「レジェンド」に到達する実力者。トレモよりも実戦を重んじる「ランクマ狂」として知られる師範代。</p>
+            </div>
+            <div class="char-details" style="margin-top: 1rem;">
+                <p><strong>HOBBIES:</strong> ゲーム全般、昆虫（多足類以外）、アケコンのボタン集め、お笑い</p>
+                <p><strong>DISLIKES:</strong> 運動、多足類の昆虫、早起き、野菜</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+            <h2>MOVE LIST / EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>ランクマに全てを捧ぐ「バーサーカー」</h3>
+                    <p>睡眠時間を削ってランクマを回し続ける狂気的なスタイルから「バーサーカー」と評される。スト6の総プレイ時間は3300時間を超え、「ランクマを回しながら寝落ちする」という止まると死ぬマグロのような生態を見せる。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>「掌底インパクト」を生み出すデバイス改造</h3>
+                    <p>インパクトを最速で返すため、レバーレスの手首（掌底）が当たる位置に自ら穴を開け、ボタンを増設するという魔改造を施している。この配置を「手相」と呼び、嬉々として語るデバイスオタク。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>ゴキブリを「クワガタみたいなもん」と克服</h3>
+                    <p>「頭・胸・腹に分かれ、足が6本」という昆虫 babysitter 定義を知った瞬間、ゴキブリへの苦手意識が消失。「クワガタみたいなもんか」と脳がバグり、平気で素手で触れるようになったという衝撃の生態を持つ。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>「EVOJ偽名エントリー事件」と実力の証明</h3>
+                    <p>EVO Japanに身バレ対策の偽名で出場。結果的に「VTuberが身バレ対策をして大会に潜り込み、見知らぬプレイヤーを実力でボコボコにして無言で去っていった」という伝説となり、バーサーカーとしての格を上げた。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>深夜のノリで韓国大会にカチコミ</h3>
+                    <p>深夜の勢いで申し込んだ韓国のオンライン大会に急遽参戦。「韓国の人が何かを言っている…！」と戸惑いながらも、レジェンド帯の猛者たちを次々と粉砕。見事トップ8に入賞し、海外大会に爪痕を残した。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page. Not affiliated with Lethal Plan.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = "1";
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

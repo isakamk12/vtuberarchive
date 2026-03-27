@@ -1,13 +1,25 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>夢川かなう | Re:AcT Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #ff99cc;
+            --char-grad: linear-gradient(135deg, #ff99cc 0%, #ffccaa 100%);
+        }
+        .hero-name { background: var(--char-grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .section-title { color: var(--char-color); }
+        .profile-card::before { background: var(--char-grad); }
+        .episode-card { background: #1a1a1e; border: 1px solid #333; padding: 2rem; margin-bottom: 2rem; border-left: 5px solid var(--char-color); }
+        .episode-card h3 { color: var(--char-color); margin-bottom: 1rem; font-family: 'Syncopate', sans-serif; font-size: 1.2rem; }
+        .episode-card p { color: #ccc; line-height: 1.8; }
+        .quote { font-style: italic; color: #fff; border-left: 3px solid var(--char-color); padding-left: 1rem; margin: 1rem 0; }
+    </style>
 </head>
-
 <body>
     <div class="bg-glow"></div>
     <nav class="nav">
@@ -25,7 +37,11 @@
             <div class="profile-card">
                 <div class="data-grid">
                     <div class="data-item"><span class="label">ID</span><span class="value">REA-004</span></div>
-                    <div class="data-item"><span class="label">STATUS</span><span class="value">MAIN</span></div>
+                    <div class="data-item"><span class="label">BIRTHDAY</span><span class="value">4月14日</span></div>
+                    <div class="data-item"><span class="label">HEIGHT</span><span class="value">???cm</span></div>
+                    <div class="data-item"><span class="label">AGE</span><span class="value">9歳</span></div>
+                    <div class="data-item"><span class="label">FANNAME</span><span class="value">親衛鯛</span></div>
+                    <div class="data-item"><span class="label">SPECIALTY</span><span class="value">声劇、バレエ</span></div>
                 </div>
             </div>
         </section>
@@ -33,11 +49,34 @@
         <section class="section reveal">
             <h2 class="section-title">DESCRIPTION</h2>
             <div class="description">
-                <p>Re:AcT所属のタレント。「かなう」の名に相応しく、リスナーの夢や希望に寄り添う温かい配信が魅力。親しみやすいキャラクターと、細やかな気配りで、多くのファンに愛されている。</p>
+                <p>「海のお姫様になりたい泡沫たゆたうVSinger」。一人称は「わらわ」。普段は「〜じゃよ」と話す愛らしい9才児だが、役に入ると別人のようなお姉さんボイスに変わる高い演技力を持つ。透明感のある歌声が魅力。</p>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">EPISODES</h2>
+            <div class="episodes-container">
+                <div class="episode-card">
+                    <h3>身長コンプレックスと「バーチャルみかん箱」</h3>
+                    <p>同期の中で背が低かったことを気にしており、初期から「バーチャルみかん箱」に乗って配信。新衣装でもみかん箱は健在で、アクリルスタンドの台座にまで採用されるほどのトレードマーク。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>VSingerとしての覚悟と新チャンネル設立</h3>
+                    <p>2024年の生誕ライブで歌を中心とする新チャンネルへの移行を発表。「より歌に力を入れる」という覚悟を見せ、配信中にそのままリダイレクトさせる前代未聞の演出でファンを驚かせた。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>「9才児」と「演技派お姉さん」のギャップ</h3>
+                    <p>声劇や朗読では別人のような演技力を発揮。ホラーゲーム『推色-オシイロ-』でCVを担当した際は大喜びし、お芝居への深い愛情を度々語っている。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>リスナー（親衛鯛）への深い愛情</h3>
+                    <p>「主たちのおかげで続けてこれた」と涙ぐみながら語るほどファンを想っている。「みんなの人生はふわふわにするから任せて」という優しい言葉でファンを支え続けている。</p>
+                </div>
             </div>
         </section>
     </main>
 
+    <script src="../../mobile_optimize.js"></script>
     <script>
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -47,5 +86,4 @@
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     </script>
 </body>
-
 </html>

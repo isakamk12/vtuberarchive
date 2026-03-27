@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>魔光リサ | Re:AcT Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #ba55d3;
+            --char-grad: linear-gradient(135deg, #ba55d3 0%, #4b0082 100%);
+        }
+        .hero-name { background: var(--char-grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+        .section-title { color: var(--char-color); }
+        .profile-card::before { background: var(--char-grad); }
+        .episode-card { background: #1a1a1e; border: 1px solid #333; padding: 2rem; margin-bottom: 2rem; border-left: 5px solid var(--char-color); }
+        .episode-card h3 { color: var(--char-color); margin-bottom: 1rem; font-family: 'Syncopate', sans-serif; font-size: 1.2rem; }
+        .episode-card p { color: #ccc; line-height: 1.8; }
+        .quote { font-style: italic; color: #fff; border-left: 3px solid var(--char-color); padding-left: 1rem; margin: 1rem 0; }
+    </style>
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <nav class="nav">
+        <a href="../react_index.html" class="nav-brand">RE:ACT ARCHIVE</a>
+    </nav>
+
+    <header class="hero">
+        <h1 class="hero-name">Lisa</h1>
+        <p class="hero-subtitle">魔光リサ</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item"><span class="label">ID</span><span class="value">REA-016</span></div>
+                    <div class="data-item"><span class="label">BIRTHDAY</span><span class="value">11月1日</span></div>
+                    <div class="data-item"><span class="label">HEIGHT</span><span class="value">162cm</span></div>
+                    <div class="data-item"><span class="label">IQ</span><span class="value">5000兆</span></div>
+                    <div class="data-item"><span class="label">FANNAME</span><span class="value">リサのグミ</span></div>
+                    <div class="data-item"><span class="label">UNIT</span><span class="value">つばさぐらでーしょん</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">DESCRIPTION</h2>
+            <div class="description">
+                <p>IQ5000兆の天才悪魔。毒舌で強気に煽るが、ホラーゲームは苦手という可愛らしい一面を持つ。圧倒的な歌唱唱力を持つVSingerであり、ストグラでの「真島ルイ」としての活動も広く知られている。</p>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">EPISODES</h2>
+            <div class="episodes-container">
+                <div class="episode-card">
+                    <h3>強気な悪魔の「美しい悲鳴」</h3>
+                    <p>自称・天才悪魔だがホラゲ耐性は皆無。絶叫のあまり「リサの声にしか驚いていない」と言われるほどのポンコツっぷりを見せる。罵倒を繰り出しながらも恐怖する姿はリスナーに大人気。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>SEKIRO実況と親のガチギレ</h3>
+                    <p>極限のアクション『SEKIRO』に熱中。実家でプレイ中、絶叫しすぎたために母親から「警察が来るのでやめてください」とガチで怒られた伝説を持つ。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>ストグラでの「無線誤爆」事件</h3>
+                    <p>真島ルイとして警察業務中、キザな迷言をうっかり無線の「全乗せ」で誤爆。街の住人たちから大いにいじられるという、最高の撮れ高を生み出した。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>払拭できない「風呂嫌い」疑惑</h3>
+                    <p>なぜか「風呂に入らない」疑惑が定着。運営や母親からも入浴を促され、「事務所以外の人と会う時は必ず入ります！」と必死に弁明する姿がリスナーのイジりネタとなっている。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

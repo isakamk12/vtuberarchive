@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>救堕 える | りーさるぷらん (Lethal Plan) Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #4B0082;
+            --char-rgb: 75, 0, 130;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../lethalplan_index.html" class="char-back">
+            <i class="fa-solid fa-caret-left"></i> BACK TO ROSTER
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Sukuida Eru</div>
+        <h1 class="char-name">救堕 える</h1>
+        <div class="char-tags">
+            <span class="char-tag">2期生</span>
+            <span class="char-tag">救済～！堕天使Vtuberのすくいだえるだぞ～！</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2>FIGHTER PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>BIRTHDAY:</strong> 10月4日</p>
+                <p><strong>HEIGHT:</strong> 1490cm</p>
+                <p><strong>STYLE:</strong> パッド（ファイティングコマンダーOCTA）</p>
+                <p><strong>FAVORITE:</strong> ストリートファイター6、グラブル、シャドウバース等</p>
+                <p><strong>FANNAME:</strong> マヨえる</p>
+            </div>
+            <div class="char-bio" style="margin-top: 1.5rem; border-top: 1px dashed rgba(var(--char-rgb), 0.3); padding-top: 1.5rem;">
+                <p>天界から福音（ゲーム）を広めるためにやってきた堕天使。圧倒的な配信頻度を誇る「無尽蔵 mobile 勇気」の持ち主。マヨネーズをこよなく愛し、食への執着が凄まじい「妖怪バッタキャミィ」。</p>
+            </div>
+            <div class="char-details" style="margin-top: 1rem;">
+                <p><strong>HOBBIES:</strong> マヨねーず食べ比べ、ゲーム、食レポ、RPG（ドラクエ・サガフロ等）</p>
+                <p><strong>DISLIKES:</strong> 東西南北の概念、1人でのランクマ</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+            <h2>MOVE LIST / EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>圧倒的な配信頻度とゲームへの熱量</h3>
+                    <p>デビューから278日で合計884時間を超える驚異のペースで配信。睡眠4〜5時間でも「ゲームしてて疲れることはない」と語る、真のゲーム狂天使。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>「妖怪バッタキャミィ」の奮闘</h3>
+                    <p>スト6ではモダンキャミィを使用。ジャンプ攻撃を多用することから「妖怪バッタ」と自称。ダイヤ2まで「受け身」を知らずに上がってきたという奇跡的なプレイスタイルを持つ。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>大のマヨネーズ好き「マヨえる」</h3>
+                    <p>ファンネームの由来にもなるほどのマヨ好き。喉が痛い時に「ポテトサラダにマヨネーズをかけて摂取した」という狂気の配信を行ったこともある食の探求者。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>オーディションでの「5000円両替事件」</h3>
+                    <p>人間界のバイトにて「5000円札を全部10円玉に両替してしまった」という特大のポンコツエピソードをオーディションで披露し、スタッフに大ウケして合格を勝ち取った。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>方向音痴とメンタル「プレパラート」</h3>
+                    <p>東西南北の概念が弱くゲーム内でも迷子。メンタル面も弱く「プレパラート」と称し、1人でランクマを回すとブチギレそうになるため、リスナーの癒やしを求めて配信を行う。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page. Not affiliated with Lethal Plan.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = "1";
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

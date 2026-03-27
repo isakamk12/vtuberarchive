@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>月紫アリア | Re:AcT Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #a020f0;
+            --char-grad: linear-gradient(135deg, #a020f0 0%, #4b0082 100%);
+        }
+        .hero-name { background: var(--char-grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+        .section-title { color: var(--char-color); }
+        .profile-card::before { background: var(--char-grad); }
+        .episode-card { background: #1a1a1e; border: 1px solid #333; padding: 2rem; margin-bottom: 2rem; border-left: 5px solid var(--char-color); }
+        .episode-card h3 { color: var(--char-color); margin-bottom: 1rem; font-family: 'Syncopate', sans-serif; font-size: 1.2rem; }
+        .episode-card p { color: #ccc; line-height: 1.8; }
+        .quote { font-style: italic; color: #fff; border-left: 3px solid var(--char-color); padding-left: 1rem; margin: 1rem 0; }
+    </style>
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <nav class="nav">
+        <a href="../react_index.html" class="nav-brand">RE:ACT ARCHIVE</a>
+    </nav>
+
+    <header class="hero">
+        <h1 class="hero-name">Aria</h1>
+        <p class="hero-subtitle">月紫アリア</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item"><span class="label">ID</span><span class="value">REA-005</span></div>
+                    <div class="data-item"><span class="label">BIRTHDAY</span><span class="value">10月16日</span></div>
+                    <div class="data-item"><span class="label">HEIGHT</span><span class="value">140cm</span></div>
+                    <div class="data-item"><span class="label">AGE</span><span class="value">14歳</span></div>
+                    <div class="data-item"><span class="label">FANNAME</span><span class="value">推ぢさん</span></div>
+                    <div class="data-item"><span class="label">STATUS</span><span class="value">NEKROMANCER</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">DESCRIPTION</h2>
+            <div class="description">
+                <p>最強中学生とは仮の姿で、本当は人知れず世界を護る「天才無敵の最強ネクロマンサー」。チョロい大人たちをからかうことが大好きで、夢はスーパーアイドルになること。最強のアイドル魂を持つ「元気小僧」。</p>
+                <div class="quote">「理由なき反抗」</div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">EPISODES</h2>
+            <div class="episodes-container">
+                <div class="episode-card">
+                    <h3>「最強無敵」のアイドル魂</h3>
+                    <p>2024年に声帯の腫瘍が見つかり手術を受けたが、わずか4ヶ月で復帰。ライブ直前に貧血で倒れそうになっても、カウントダウンでスイッチが入ると完璧なパフォーマンスを見せる。ステージにかける情熱は人一倍。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>「推ぢさん」とのプロレスと独占欲</h3>
+                    <p>ファンを煽るメスガキムーブが定番だが、リアルイベントではファンの無茶なリクエストに全力で応える優しさも見せる。ヤンデレ気味な独占欲があり、ファンの浮気（他タレントへの推し）には本気で嫉妬する。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>病院のおじいちゃん達もファンに！？</h3>
+                    <p>入院中、待合室にいるおじいちゃんやおばあちゃん達に自分のチャンネルを宣伝し、ちゃっかり登録してもらうという、驚きのコミュニケーション能力を発揮した。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>MBTIは完全に「主人公」</h3>
+                    <p>自身のMBTIが「主人公（ENFJ）」であると語り、その「正義感が強く、お節介でカリスマ性がある」という特徴に深く納得している。世話焼きで仲間思いな性格。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

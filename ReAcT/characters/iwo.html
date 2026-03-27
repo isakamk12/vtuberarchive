@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>不知名イヲ | Re:AcT Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #4682b4;
+            --char-grad: linear-gradient(135deg, #4682b4 0%, #000080 100%);
+        }
+        .hero-name { background: var(--char-grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+        .section-title { color: var(--char-color); }
+        .profile-card::before { background: var(--char-grad); }
+        .episode-card { background: #1a1a1e; border: 1px solid #333; padding: 2rem; margin-bottom: 2rem; border-left: 5px solid var(--char-color); }
+        .episode-card h3 { color: var(--char-color); margin-bottom: 1rem; font-family: 'Syncopate', sans-serif; font-size: 1.2rem; }
+        .episode-card p { color: #ccc; line-height: 1.8; }
+        .quote { font-style: italic; color: #fff; border-left: 3px solid var(--char-color); padding-left: 1rem; margin: 1rem 0; }
+    </style>
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <nav class="nav">
+        <a href="../react_index.html" class="nav-brand">RE:ACT ARCHIVE</a>
+    </nav>
+
+    <header class="hero">
+        <h1 class="hero-name">Iwo</h1>
+        <p class="hero-subtitle">不知名イヲ</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item"><span class="label">ID</span><span class="value">REA-013</span></div>
+                    <div class="data-item"><span class="label">BIRTHDAY</span><span class="value">3月7日</span></div>
+                    <div class="data-item"><span class="label">HEIGHT</span><span class="value">175cm</span></div>
+                    <div class="data-item"><span class="label">FANNAME</span><span class="value">観察者</span></div>
+                    <div class="data-item"><span class="label">SPECIALTY</span><span class="value">低音ボイス、FPS、料理</span></div>
+                    <div class="data-item"><span class="label">UNIT</span><span class="value">Etoile</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">DESCRIPTION</h2>
+            <div class="description">
+                <p>海底の何かと混ざり合い、新しい肉体と意識を得た「生き物」。重厚で響きのある「低音・イケボ系ボイス」が最大の武器。人間にも鯨にもなれない孤独を抱えながら、自分の存在意義を探して歌い続けている。</p>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">EPISODES</h2>
+            <div class="episodes-container">
+                <div class="episode-card">
+                    <h3>即バレした「ポンコツ」保護者</h3>
+                    <p>初配信で「同期の保護者」を自称したが、即座にBGMミスや画面ミスを連発。「保護者自称はまずかった」と焦る姿を晒し、初手でドジっ子属性がバレてしまった。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>リスナーを黙らせる「心地よすぎる」声</h3>
+                    <p>歌枠や雑談では、その心地よい低音にリスナーが聴き入り、チャット欄が静止。スタッフからも「みんなコメントを忘れている」と指摘されるほどの没入感を生み出している。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>FPS強者の自信を砕く『Fall Guys』</h3>
+                    <p>VALORANTやApexで高ランクの実力者だが、『Fall Guys』での理不尽な洗礼に「わしの自信がボカボカに崩れ落ちる…」と意気消沈した姿がファンの爆笑を誘った。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>キーボードカタカタ・限界オタク</h3>
+                    <p>タイピング速度は1万人中934位という爆速。さらに好きなアニメ（呪術廻戦など）の話になると30分以上息継ぎなしで語り倒す、落ち着いた外見とのギャップが凄まじい。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

@@ -1,13 +1,28 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>花鋏キョウ | Re:AcT Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #87ceeb;
+            --char-grad: linear-gradient(135deg, #87ceeb 0%, #4682b4 100%);
+        }
+        .hero-name { background: var(--char-grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .section-title { color: var(--char-color); }
+        .profile-card::before { background: var(--char-grad); }
+        .episode-card { background: #1a1a1e; border: 1px solid #333; padding: 2rem; margin-bottom: 2rem; border-left: 5px solid var(--char-color); }
+        .episode-card h3 { color: var(--char-color); margin-bottom: 1rem; font-family: 'Syncopate', sans-serif; font-size: 1.2rem; }
+        .episode-card p { color: #ccc; line-height: 1.8; }
+        .episode-card ul { margin-top: 1rem; list-style: none; }
+        .episode-card li { margin-bottom: 0.5rem; color: #eee; position: relative; padding-left: 1.5rem; }
+        .episode-card li::before { content: '▶'; position: absolute; left: 0; color: var(--char-color); font-size: 0.8rem; top: 0.3rem; }
+        .quote { font-style: italic; color: #fff; border-left: 3px solid var(--char-color); padding-left: 1rem; margin: 1rem 0; }
+    </style>
 </head>
-
 <body>
     <div class="bg-glow"></div>
     <nav class="nav">
@@ -15,7 +30,7 @@
     </nav>
 
     <header class="hero">
-        <h1 class="hero-name">Kyou</h1>
+        <h1 class="hero-name">Kyo</h1>
         <p class="hero-subtitle">花鋏キョウ</p>
     </header>
 
@@ -25,7 +40,11 @@
             <div class="profile-card">
                 <div class="data-grid">
                     <div class="data-item"><span class="label">ID</span><span class="value">REA-002</span></div>
-                    <div class="data-item"><span class="label">STATUS</span><span class="value">MAIN</span></div>
+                    <div class="data-item"><span class="label">BIRTHDAY</span><span class="value">7月24日</span></div>
+                    <div class="data-item"><span class="label">HEIGHT</span><span class="value">160cm</span></div>
+                    <div class="data-item"><span class="label">AGE</span><span class="value">17歳</span></div>
+                    <div class="data-item"><span class="label">FANNAME</span><span class="value">はなばさ民</span></div>
+                    <div class="data-item"><span class="label">COLOR</span><span class="value">水色</span></div>
                 </div>
             </div>
         </section>
@@ -33,11 +52,35 @@
         <section class="section reveal">
             <h2 class="section-title">DESCRIPTION</h2>
             <div class="description">
-                <p>Re:AcT所属のバーチャルアーティスト。繊細さと力強さを兼ね備えた唯一無二の歌声が魅力。独自の世界観を大切にした楽曲やパフォーマンスで、リスナーを深い感動の渦へと誘う。</p>
+                <p>低音が魅力的な高い歌唱力を武器に、透明感のあるバラードから激しいロックまで歌いこなすバーチャルアーティスト。自分の歌でみんなを笑顔にさせることを目標に活動している。アーティストとしての顔を持つ一方で、普段のおしゃべりはマイペースでふわふわとしたギャップも魅力。</p>
+                <div class="quote">「いつも通り、いつも以上」</div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">EPISODES</h2>
+            <div class="episodes-container">
+                <div class="episode-card">
+                    <h3>アーティストとしてのこだわり</h3>
+                    <p>初のオリジナル曲「蒼に躊躇う」や、1000万回再生を突破した「名前のない怪物」など、歌への思い入れは深い。ライブ演出にも積極的に参加し、照明やマイクの細かなオーダーまで自ら行う。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>伝説の「フィクサー事件」</h3>
+                    <p>過去に「フィクサー」の歌ってみた動画を、誤って自分の手で削除してしまうという大失態を犯した。「一生こんなことしない」と決心した、彼女にとって最大の黒歴史。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>はなばさ民への深い愛情</h3>
+                    <p>非常に涙もろい性格で、休止からの復活ライブやファンとの会話を思い出して「爆泣き」することも。「誰かのためになる歌を」届け続けることを大切にしている。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>ポンコツ・天然エピソード</h3>
+                    <p>ライブタイトル「FLORIST」を「FRORIST」と連呼したり、集合場所の出口を間違えて迷子になったりと、愛すべき一面も多い。</p>
+                </div>
             </div>
         </section>
     </main>
 
+    <script src="../../mobile_optimize.js"></script>
     <script>
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -47,5 +90,4 @@
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     </script>
 </body>
-
 </html>

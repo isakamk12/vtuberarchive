@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>御夜眠 ねるね | りーさるぷらん (Lethal Plan) Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #9370DB;
+            --char-rgb: 147, 112, 219;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../lethalplan_index.html" class="char-back">
+            <i class="fa-solid fa-caret-left"></i> BACK TO ROSTER
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Oyasumi Nerune</div>
+        <h1 class="char-name">御夜眠 ねるね</h1>
+        <div class="char-tags">
+            <span class="char-tag">2期生</span>
+            <span class="char-tag">いつか全てを破壊するリーサルプランの破壊心メイド</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2>FIGHTER PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>BIRTHDAY:</strong> 5月10日</p>
+                <p><strong>HEIGHT:</strong> 156cm（可変）</p>
+                <p><strong>STYLE:</strong> アケコン（ノワール配列・手袋着用）</p>
+                <p><strong>FAVORITE:</strong> 『スト6』（ブランカ）、『ヴァンパイアセイヴァー』（レイレイ）</p>
+                <p><strong>FANNAME:</strong> ねたろー</p>
+            </div>
+            <div class="char-bio" style="margin-top: 1.5rem; border-top: 1px dashed rgba(var(--char-rgb), 0.3); padding-top: 1.5rem;">
+                <p>吸血鬼の館で働く小悪魔メイド。格ゲーに魅了され魔界からやってきた。自称「破壊心」だが、低級悪魔のため力は弱々。シャフ（社会不適合）な一面と、ディープなサブカル知識を併せ持つ。</p>
+            </div>
+            <div class="char-details" style="margin-top: 1rem;">
+                <p><strong>HOBBIES:</strong> いちご、こってりラーメン、ゲーム、睡眠、デバイス鑑賞</p>
+                <p><strong>DISLIKES:</strong> 飛び道具、ジャンプ攻撃、大きい音、運動</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+            <h2>MOVE LIST / EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>『ヴァンパイアセイヴァー』はアイデンティティ</h3>
+                    <p>セイヴァーのキャラデザに惚れ込み、「自分のアイデンティティ」と語る。月1で対戦会を主催し、初心者から猛者までが集う場を提供。プロのsako氏から直接コーチングを受けたこともある。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>アケコンと長いネイルの両立</h3>
+                    <p>アーケード筐体への憧れからアケコンを愛用。長いネイルが折れるのを防ぐため、ゲーム中は手袋を着用し、爪先でボタンを弾くように押す独特のプレイスタイルを貫いている。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>バイト全飛びのポンコツ伝説</h3>
+                    <p>過去のバイトは全て飛んでおり、アニメショップも「通勤が遠い」という理由で飛んだ。お風呂をキャンセルする「フロキャン界隈」でもあり、私生活のポンコツエピソードには事欠かない。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>筋金入りのポケモン廃人＆パチンカス属性</h3>
+                    <p>人生をポケモンと共に過ごし、色違い厳選を何時間もやり続けるガチ勢。また、18歳からパチンコを嗜み「タバコスパスパする女になるのでは」と自ら危惧するほど、趣味がディープ。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>多数の生き物と同居する「動物ファースト」</h3>
+                    <p>ハムスター、モルモット、猫、蛇など多数飼育。特にハムスターの「小雪様」は、配信中にケージでガサガサ音を立てながら格ゲーを観戦する「格ゲーハムスター」として親しまれている。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page. Not affiliated with Lethal Plan.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = "1";
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

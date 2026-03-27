@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>白音ゆき | Re:AcT Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #ffffff;
+            --char-grad: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
+        }
+        .hero-name { background: var(--char-grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+        .section-title { color: var(--char-color); }
+        .profile-card::before { background: var(--char-grad); }
+        .episode-card { background: #1a1a1e; border: 1px solid #333; padding: 2rem; margin-bottom: 2rem; border-left: 5px solid var(--char-color); }
+        .episode-card h3 { color: var(--char-color); margin-bottom: 1rem; font-family: 'Syncopate', sans-serif; font-size: 1.2rem; }
+        .episode-card p { color: #ccc; line-height: 1.8; }
+        .quote { font-style: italic; color: #fff; border-left: 3px solid var(--char-color); padding-left: 1rem; margin: 1rem 0; }
+    </style>
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <nav class="nav">
+        <a href="../react_index.html" class="nav-brand">RE:ACT ARCHIVE</a>
+    </nav>
+
+    <header class="hero">
+        <h1 class="hero-name">Yuki</h1>
+        <p class="hero-subtitle">白音ゆき</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item"><span class="label">ID</span><span class="value">REA-008</span></div>
+                    <div class="data-item"><span class="label">BIRTHDAY</span><span class="value">12月2日</span></div>
+                    <div class="data-item"><span class="label">HEIGHT</span><span class="value">154cm</span></div>
+                    <div class="data-item"><span class="label">MARK</span><span class="value">🍜🤍</span></div>
+                    <div class="data-item"><span class="label">FANNAME</span><span class="value">ゆきks</span></div>
+                    <div class="data-item"><span class="label">UNIT</span><span class="value">PolarNight</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">DESCRIPTION</h2>
+            <div class="description">
+                <p>自称「とっても可愛い清楚担当」。2021年に一度卒業したが、2025年に奇跡の再デビューを果たした「不屈のアイドル」。PolarNightのメンバーとしても活動中。ラーメンをこよなく愛する。</p>
+                <div class="quote">「常識に縛られない思考力」</div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">EPISODES</h2>
+            <div class="episodes-container">
+                <div class="episode-card">
+                    <h3>伝説の「再デビュー」</h3>
+                    <p>一度は活動に区切りをつけたが、ファンの熱い要望と自身の夢を追い続け、数年の時を経てRe:AcTに帰還。その復活劇は多くの古参ファンを涙させた。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>ラーメンへの異常な執着</h3>
+                    <p>ファンマークにラーメンを入れるほどの麺好き。特に深夜のラーメンテロ配信は、ダイエット中のリスナーにとって最大の脅威となっている。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>清楚（自称）の限界</h3>
+                    <p>初期は清楚を装っていたが、次第に毒舌やリスナーとのプロレスが加速。「ゆきks」というファンネームも、彼女とリスナーとの独特な信頼関係の証。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>PolarNightでの絆</h3>
+                    <p>同期ユニットPolarNight（くもり、サマ）では、賑やかな二人に振り回されつつも、確かな絆で活動。抜群の安定感でユニットを支える。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

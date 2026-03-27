@@ -33,7 +33,7 @@ const translations = {
         alert_investigating: "【整備中】\nいま内容を更新中です。もう少し待っててね！",
         alert_not_active: "ステータス: [準備中です]",
         opening_status: "認証待機中... システムアクセスを初期化してください",
-        opening_btn: "アクセス初期화",
+        opening_btn: "アクセス初期化",
         status_roadmap_title: "正式公開へのロードマップ",
         status_roadmap_criteria_80: "企業勢8割の網羅（約25追加）をもって正式公開とします。",
         status_roadmap_rate: "公開後も1日平均10人の調査を継続し、データ精度を維持します。",

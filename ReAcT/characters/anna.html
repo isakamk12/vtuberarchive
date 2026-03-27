@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>神凪アンナ | Re:AcT Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #ff99ff;
+            --char-grad: linear-gradient(135deg, #ff99ff 0%, #333333 100%);
+        }
+        .hero-name { background: var(--char-grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+        .section-title { color: var(--char-color); }
+        .profile-card::before { background: var(--char-grad); }
+        .episode-card { background: #1a1a1e; border: 1px solid #333; padding: 2rem; margin-bottom: 2rem; border-left: 5px solid var(--char-color); }
+        .episode-card h3 { color: var(--char-color); margin-bottom: 1rem; font-family: 'Syncopate', sans-serif; font-size: 1.2rem; }
+        .episode-card p { color: #ccc; line-height: 1.8; }
+        .quote { font-style: italic; color: #fff; border-left: 3px solid var(--char-color); padding-left: 1rem; margin: 1rem 0; }
+    </style>
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <nav class="nav">
+        <a href="../react_index.html" class="nav-brand">RE:ACT ARCHIVE</a>
+    </nav>
+
+    <header class="hero">
+        <h1 class="hero-name">Anna</h1>
+        <p class="hero-subtitle">神凪アンナ</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item"><span class="label">ID</span><span class="value">REA-009</span></div>
+                    <div class="data-item"><span class="label">BIRTHDAY</span><span class="value">3月14日</span></div>
+                    <div class="data-item"><span class="label">HEIGHT</span><span class="value">157cm</span></div>
+                    <div class="data-item"><span class="label">BLOOD TYPE</span><span class="value">O型</span></div>
+                    <div class="data-item"><span class="label">FANNAME</span><span class="value">アン那覇</span></div>
+                    <div class="data-item"><span class="label">UNIT</span><span class="value">Etoile</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">DESCRIPTION</h2>
+            <div class="description">
+                <p>「天使の意思を宿した、ちょっと不器用な女の子（バーチャルシンガー）」。Etoileのリーダー的存在。圧倒的な歌唱唱力と、時折見せるポンコツな一面が魅力。「みんなの心をアンナの色に染めちゃいたいな！」</p>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">EPISODES</h2>
+            <div class="episodes-container">
+                <div class="episode-card">
+                    <h3>「バーチャルシンガー」への志</h3>
+                    <p>幼い頃から歌うことが大好きで、自分の歌で誰かの背中を押したいという想いで活動。ロックからバラードまで幅広く歌いこなし、特に感情を込めたハイトーンボイスは聴く人を圧倒する。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>Etoileのまとめ役と苦悩</h3>
+                    <p>同期5人の個性が強すぎるあまり、リーダーとして奔放なメンバーをまとめるのに苦労することもしばしば。しかし、誰よりもメンバー想いで、グループの絆を大切にしている。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>意外な「激辛」マニア</h3>
+                    <p>天使のような見た目とは裏腹に、激辛料理が大好き。配信で「北極ラーメン」を涼しい顔で完食し、リスナーを驚かせた。本人曰く「辛いものを食べると喉が潤う」という謎の哲学を持つ。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>お風呂での「一人リサイタル」</h3>
+                    <p>お風呂で歌うのが日課で、つい熱中しすぎてのぼせてしまう。ある日、隣の部屋の人に「歌、お上手ですね」と声をかけられ、恥ずか死しそうになったというエピソードも。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

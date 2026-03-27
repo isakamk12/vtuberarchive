@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鈴花いのり | Re:AcT Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #ff69b4;
+            --char-grad: linear-gradient(135deg, #ff69b4 0%, #ffffff 100%);
+        }
+        .hero-name { background: var(--char-grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+        .section-title { color: var(--char-color); }
+        .profile-card::before { background: var(--char-grad); }
+        .episode-card { background: #1a1a1e; border: 1px solid #333; padding: 2rem; margin-bottom: 2rem; border-left: 5px solid var(--char-color); }
+        .episode-card h3 { color: var(--char-color); margin-bottom: 1rem; font-family: 'Syncopate', sans-serif; font-size: 1.2rem; }
+        .episode-card p { color: #ccc; line-height: 1.8; }
+        .quote { font-style: italic; color: #fff; border-left: 3px solid var(--char-color); padding-left: 1rem; margin: 1rem 0; }
+    </style>
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <nav class="nav">
+        <a href="../react_index.html" class="nav-brand">RE:ACT ARCHIVE</a>
+    </nav>
+
+    <header class="hero">
+        <h1 class="hero-name">Inori</h1>
+        <p class="hero-subtitle">鈴花いのり</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item"><span class="label">ID</span><span class="value">REA-011</span></div>
+                    <div class="data-item"><span class="label">BIRTHDAY</span><span class="value">11月17日</span></div>
+                    <div class="data-item"><span class="label">HEIGHT</span><span class="value">148cm</span></div>
+                    <div class="data-item"><span class="label">AGE</span><span class="value">高校1年生</span></div>
+                    <div class="data-item"><span class="label">FANNAME</span><span class="value">せんぱい</span></div>
+                    <div class="data-item"><span class="label">UNIT</span><span class="value">Etoile</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">DESCRIPTION</h2>
+            <div class="description">
+                <p>視聴者を「先輩（せんぱい）」と呼び慕う「後輩クリエイターアイドル」。歌やゲームだけでなく、学校のアニメーション制作部に所属していることを活かし、自ら「歌ってみた」の動画制作やイラストを手がける多才な女の子。</p>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">EPISODES</h2>
+            <div class="episodes-container">
+                <div class="episode-card">
+                    <h3>「後輩」としての全力投球</h3>
+                    <p>常に一生懸命で、リスナーを「せんぱい！」と呼んで懐く姿が人気。初配信では緊張しすぎて噛みまくったが、最後は持ち前のガッツで見事に歌い上げ、多くの「先輩」たちの心を射抜いた。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>アニメーション制作部での「ガチ」活動</h3>
+                    <p>放課後は部室にこもって動画制作に熱中。自作のMVでは、キャラの動かし方から色使いまでプロ顔負けのこだわりを見せる。配信中もつい「ここのカット、もう少しレイヤー分けて描けばよかった…」と反省会が始まることも。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>意外な「隠れオタク」</h3>
+                    <p>清楚な見た目だが、実はマニアックなアニメや特撮まで網羅。好きな作品について語り出すと早口になり、いつもの可愛い後輩キャラがどこかへ行ってしまう「限界オタク」な一面も魅力。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>「お弁当」の失敗談</h3>
+                    <p>「女子力を見せる！」と意気込んで作ったキャラ弁が、登校中にカバンの中で潰れてしまい、昼休みに「悲惨なクリーチャー」と化していたというエピソードでリスナーを和ませた。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

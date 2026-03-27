@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音伽ねむ | Re:AcT Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #dda0dd;
+            --char-grad: linear-gradient(135deg, #dda0dd 0%, #9370db 100%);
+        }
+        .hero-name { background: var(--char-grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .section-title { color: var(--char-color); }
+        .profile-card::before { background: var(--char-grad); }
+        .episode-card { background: #1a1a1e; border: 1px solid #333; padding: 2rem; margin-bottom: 2rem; border-left: 5px solid var(--char-color); }
+        .episode-card h3 { color: var(--char-color); margin-bottom: 1rem; font-family: 'Syncopate', sans-serif; font-size: 1.2rem; }
+        .episode-card p { color: #ccc; line-height: 1.8; }
+        .quote { font-style: italic; color: #fff; border-left: 3px solid var(--char-color); padding-left: 1rem; margin: 1rem 0; }
+    </style>
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <nav class="nav">
+        <a href="../react_index.html" class="nav-brand">RE:ACT ARCHIVE</a>
+    </nav>
+
+    <header class="hero">
+        <h1 class="hero-name">Nemu</h1>
+        <p class="hero-subtitle">音伽ねむ</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item"><span class="label">ID</span><span class="value">REA-007</span></div>
+                    <div class="data-item"><span class="label">BIRTHDAY</span><span class="value">2月4日</span></div>
+                    <div class="data-item"><span class="label">HEIGHT</span><span class="value">147cm</span></div>
+                    <div class="data-item"><span class="label">MARK</span><span class="value">🗝💭</span></div>
+                    <div class="data-item"><span class="label">FANNAME</span><span class="value">ねむ隊</span></div>
+                    <div class="data-item"><span class="label">STATUS</span><span class="value">DREAMER</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">DESCRIPTION</h2>
+            <div class="description">
+                <p>幼くもミステリアスな雰囲気を持つ女の子。甘く妖艶な声で囁き、癒やしを与えて眠りに誘う。彼女と会った日には必ず夢に出てくるとの噂がある。「夢のなかでも、あなたに逢いたい…♡」</p>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">EPISODES</h2>
+            <div class="episodes-container">
+                <div class="episode-card">
+                    <h3>驚異の体力！伝説の長時間配信</h3>
+                    <p>おっとりした声とは裏腹に、16時間で150曲歌唱する耐久配信や、チャンネル登録者が増えるごとに「ハム太郎」を歌い計119回完走するなど、Re:AcT随一のスタミナを誇る。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>ダンスへの情熱と涙もろい一面</h3>
+                    <p>生誕3Dライブでは筋肉痛に耐えながら8曲を踊りきった。1万人登録記念では自身の「推し」の卒業発表に大号泣しながら『誇り高きアイドル』を歌い上げ、ファンの胸を打った。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>リスナーとのノリと謎の「フルガエル」</h3>
+                    <p>ファンの一部を「踏み台」と呼んだり、同期とのコラボから生まれた謎の生物「フルガエル」が大人気になり本人のグッズより先に商品化されたりと、独特な世界観を持つ。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>ゲーム没入とポンコツ事件</h3>
+                    <p>FF14でパスワード入力を間違えログイン制限。可愛いキャラ（ララフェル）を見つけるとメインストーリーを忘れてハグして回るなど、独自の楽しみ方を追求している。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

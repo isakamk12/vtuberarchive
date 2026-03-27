@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>燈明寺かぐら | Re:AcT Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #ff4500;
+            --char-grad: linear-gradient(135deg, #ff4500 0%, #ffd700 100%);
+        }
+        .hero-name { background: var(--char-grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+        .section-title { color: var(--char-color); }
+        .profile-card::before { background: var(--char-grad); }
+        .episode-card { background: #1a1a1e; border: 1px solid #333; padding: 2rem; margin-bottom: 2rem; border-left: 5px solid var(--char-color); }
+        .episode-card h3 { color: var(--char-color); margin-bottom: 1rem; font-family: 'Syncopate', sans-serif; font-size: 1.2rem; }
+        .episode-card p { color: #ccc; line-height: 1.8; }
+        .quote { font-style: italic; color: #fff; border-left: 3px solid var(--char-color); padding-left: 1rem; margin: 1rem 0; }
+    </style>
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <nav class="nav">
+        <a href="../react_index.html" class="nav-brand">RE:ACT ARCHIVE</a>
+    </nav>
+
+    <header class="hero">
+        <h1 class="hero-name">Kagura</h1>
+        <p class="hero-subtitle">燈明寺かぐら</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item"><span class="label">ID</span><span class="value">REA-010</span></div>
+                    <div class="data-item"><span class="label">BIRTHDAY</span><span class="value">8月8日</span></div>
+                    <div class="data-item"><span class="label">HEIGHT</span><span class="value">152cm</span></div>
+                    <div class="data-item"><span class="label">AGE</span><span class="value">不詳</span></div>
+                    <div class="data-item"><span class="label">FANNAME</span><span class="value">鳳の子</span></div>
+                    <div class="data-item"><span class="label">UNIT</span><span class="value">Etoile</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">DESCRIPTION</h2>
+            <div class="description">
+                <p>遥か昔より日輪を祀る社の巫女として、この世界を照らしてきた。長き封印の眠りについていたが、現代に目醒め、再び歌で人々に光を与えるために活動を開始。力強くも神々しい歌声が魅力。</p>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">EPISODES</h2>
+            <div class="episodes-container">
+                <div class="episode-card">
+                    <h3>「巫女」としての威厳と現代への戸惑い</h3>
+                    <p>古風な言葉遣いで話すが、現代の電化製品やインターネット文化には驚きの連続。初めてスマホを手にした際は「この小さな光る箱に、八百万の神が宿っているのか…？」と真剣に驚いていた。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>「封印」の理由と歌への想い</h3>
+                    <p>かつては災厄を払うための「神事」として歌っていたが、今は「みんなを笑顔にしたい」という純粋な想いでマイクを握る。ロックから雅楽を彷彿とさせる和風バラードまで、変幻自在なパフォーマンスを見せる。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>意外な「食いしん坊」キャラ</h3>
+                    <p>現代の食べ物、特にお菓子に目がなく、配信中にこっそりつまみ食いをしていることがバレることもしばしば。「これは供物じゃから問題ない！」という苦しい言い訳をする姿が可愛い。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>「参拝者様」への神託</h3>
+                    <p>リスナーを「参拝者様」と呼び、時折「神託」と称して人生相談に乗ることも。人生経験（神としての年月？）から来る、意外と重みのあるアドバイスに定評がある。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

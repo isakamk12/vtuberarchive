@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>珍珠花 こまり | りーさるぷらん (Lethal Plan) Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #FF4500;
+            --char-rgb: 255, 69, 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../lethalplan_index.html" class="char-back">
+            <i class="fa-solid fa-caret-left"></i> BACK TO ROSTER
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Yukiyanagi Komari</div>
+        <h1 class="char-name">珍珠花 こまり</h1>
+        <div class="char-tags">
+            <span class="char-tag">2期生</span>
+            <span class="char-tag">あなたが私のししょ～ですか？</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2>FIGHTER PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>BIRTHDAY:</strong> 10月6日</p>
+                <p><strong>HEIGHT:</strong> 146cm</p>
+                <p><strong>STYLE:</strong> レバーレス（2桁台数所持）</p>
+                <p><strong>FAVORITE:</strong> 『ストリートファイター6』（C:舞、C:A.K.I.）</p>
+                <p><strong>FANNAME:</strong> こまランディス（？）</p>
+            </div>
+            <div class="char-bio" style="margin-top: 1.5rem; border-top: 1px dashed rgba(var(--char-rgb), 0.3); padding-top: 1.5rem;">
+                <p>中国拳法に憧れる元メイド。ポンコツすぎて師匠の顔を忘れてしまったため、対戦を通じて師匠を探している。ハイクオリティな動画制作スキルと、壊滅的な漢字能力（ちんたまか）のギャップが魅力。</p>
+            </div>
+            <div class="char-details" style="margin-top: 1rem;">
+                <p><strong>HOBBIES:</strong> 少林寺拳法、弓道、日記、ひなたぼっこ、歌</p>
+                <p><strong>DISLIKES:</strong> 辛いもの、夏の暑さ、虫</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+            <h2>MOVE LIST / EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>伝説の始まり！「ちんたまか」誤読事件</h3>
+                    <p>苗字の漢字が難しすぎてアルランディス氏に「ちんたまか」と誤読されたことが発端。本人はノリノリで拠点を「ちんたま村」と名付けるなど、おいしくネタにして愛されキャラを確立した。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>藤村師匠への愛と「藤村式昇龍」の悲劇</h3>
+                    <p>憧れの藤村プロの入力を数時間練習し続け、いざ本人の前で披露したところ「その入力は僕は使っていません」と衝撃の事実を告げられる。熱意が空回りしたこの一件はリスナーの語り草となっている。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>才能の無駄遣い？ 超プロ級の動画制作スキル</h3>
+                    <p>初配信から自作のギャルゲー風動画を披露するなど、動画・画像制作スキルは極めて高い。ポンコツな設定とのギャップが凄まじく、多才なエンターテイナーとしての顔を持つ。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>努力の鬼！ 最大12時間超の練習ルーチン</h3>
+                    <p>練習に5時間から最大12時間以上も費やすほどの「練習の鬼」。トレーニングモードに延々とこもることを苦にせず、真摯にゲームと向き合う姿が多くのファンに支持されている。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>無茶振り対応力と謎の楽器（ドラ）応援</h3>
+                    <p>応援のためにダイソーでドラ等の楽器を持ち込んだり、ハイクオリティなモノマネを披露したりする。大舞台での無茶振りにも堂々と応える、胆力の据わった2期生。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page. Not affiliated with Lethal Plan.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = "1";
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

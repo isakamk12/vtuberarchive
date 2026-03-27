@@ -1,13 +1,28 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>獅子神レオナ | Re:AcT Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #f7a000;
+            --char-grad: linear-gradient(135deg, #f7a000 0%, #00a86b 100%);
+        }
+        .hero-name { background: var(--char-grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .section-title { color: var(--char-color); }
+        .profile-card::before { background: var(--char-grad); }
+        .episode-card { background: #1a1a1e; border: 1px solid #333; padding: 2rem; margin-bottom: 2rem; border-left: 5px solid var(--char-color); }
+        .episode-card h3 { color: var(--char-color); margin-bottom: 1rem; font-family: 'Syncopate', sans-serif; font-size: 1.2rem; }
+        .episode-card p { color: #ccc; line-height: 1.8; }
+        .episode-card ul { margin-top: 1rem; list-style: none; }
+        .episode-card li { margin-bottom: 0.5rem; color: #eee; position: relative; padding-left: 1.5rem; }
+        .episode-card li::before { content: '▶'; position: absolute; left: 0; color: var(--char-color); font-size: 0.8rem; top: 0.3rem; }
+        .quote { font-style: italic; color: #fff; border-left: 3px solid var(--char-color); padding-left: 1rem; margin: 1rem 0; }
+    </style>
 </head>
-
 <body>
     <div class="bg-glow"></div>
     <nav class="nav">
@@ -25,7 +40,11 @@
             <div class="profile-card">
                 <div class="data-grid">
                     <div class="data-item"><span class="label">ID</span><span class="value">REA-001</span></div>
-                    <div class="data-item"><span class="label">STATUS</span><span class="value">MAIN</span></div>
+                    <div class="data-item"><span class="label">BIRTHDAY</span><span class="value">8月16日</span></div>
+                    <div class="data-item"><span class="label">HEIGHT</span><span class="value">150cm</span></div>
+                    <div class="data-item"><span class="label">AGE</span><span class="value">18歳</span></div>
+                    <div class="data-item"><span class="label">FANNAME</span><span class="value">がうまるず</span></div>
+                    <div class="data-item"><span class="label">FAVORITE</span><span class="value">歌、ハンバーグ</span></div>
                 </div>
             </div>
         </section>
@@ -33,12 +52,36 @@
         <section class="section reveal">
             <h2 class="section-title">DESCRIPTION</h2>
             <div class="description">
-                <p>Re:AcTを代表するアーティスト。魂を揺さぶるような力強い歌声と、圧倒的な歌唱唱パフォーマンスで多くのファンを熱狂させている。音楽に対する真摯な姿勢と、ステージでの輝きはプロジェクトの象徴そのもの。
-                </p>
+                <p>サバンナ出身の情熱的なライオンVTuber。「レオの歌で世界中のみんなを元気にすること！」を目標に、圧倒的な歌唱力を武器に活動するバーチャルシンガー。普段の天真爛漫であどけない可愛らしい話し方と、歌い出した瞬間に見せるかっこよくて力強い歌声の「嬉しいギャップ」が最大の魅力。</p>
+                <div class="quote">「いつも通り、いつも以上」</div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">EPISODES</h2>
+            <div class="episodes-container">
+                <div class="episode-card">
+                    <h3>歌への絶対的な情熱とプロ意識</h3>
+                    <p>難しい楽曲に挑戦する際は、1週間ほどその曲だけを聴き込んで覚えるほどの努力家。配信でも「歌がない人生なんて考えられない。歌がないと生けない」と語るほど、歌に対する愛情は本物。</p>
+                    <div class="quote">「ステージに立ったら、自分が一番上手い、一番可愛いって思うようにしてるよ。じゃないと、見に来てくれている人に失礼でしょ？」</div>
+                </div>
+                <div class="episode-card">
+                    <h3>APEX愛と負けず嫌いなゲーマー魂</h3>
+                    <p>FPSゲームが大得意で、VTuber最協決定戦などの大会にも出場。野良プレイヤーとも積極的に連携を取り、「言葉が通じなくても、やってるだけで楽しい」と純粋にゲームを愛している。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>リスナーの「頑張り」を全肯定</h3>
+                    <p>年末の配信で、今年頑張れたかわからないと悩むリスナーに対し、「レオのことを推すというだけでも頑張ってますからね！」と温かく包み込んだエピソードはファンの語り草。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>サバンナ出身のプライド</h3>
+                    <p>「女の子ではないかもしれないけど、メスです。動物なので！」とライオンであることを強調。学園祭イベントでは「サバンナに学校があったら、卒業する頃には残り1頭になってしまう」というブラックジョークも。</p>
+                </div>
             </div>
         </section>
     </main>
 
+    <script src="../../mobile_optimize.js"></script>
     <script>
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -48,5 +91,4 @@
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     </script>
 </body>
-
 </html>

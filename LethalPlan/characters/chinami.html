@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蒼輪 ちなみ | りーさるぷらん (Lethal Plan) Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #FFEE00;
+            --char-rgb: 255, 238, 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../lethalplan_index.html" class="char-back">
+            <i class="fa-solid fa-caret-left"></i> BACK TO ROSTER
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">Sourin Chinami</div>
+        <h1 class="char-name">蒼輪 ちなみ</h1>
+        <div class="char-tags">
+            <span class="char-tag">1期生</span>
+            <span class="char-tag">バイタル安定、10先上等！</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2>FIGHTER PROFILE</h2>
+            <div class="char-profile">
+                <p><strong>BIRTHDAY:</strong> 3月22日</p>
+                <p><strong>HEIGHT:</strong> 167cm</p>
+                <p><strong>STYLE:</strong> アケコン（カスタム・ワイン持ち）</p>
+                <p><strong>FAVORITE:</strong> 『ストリートファイター6』（C:春麗 / MR2100+）</p>
+                <p><strong>FANNAME:</strong> ちな民、受け持ち（患者）</p>
+            </div>
+            <div class="char-bio" style="margin-top: 1.5rem; border-top: 1px dashed rgba(var(--char-rgb), 0.3); padding-top: 1.5rem;">
+                <p>対戦ゲームが大好きな僕っ子「バトルナース」。元・正看護師で、病棟勤務の経験を持つ。スト6ではMR2100を超える「アルティメットマスター」の実力者。ハイタニ一門「春麗会」の門下生。</p>
+            </div>
+            <div class="char-details" style="margin-top: 1rem;">
+                <p><strong>HOBBIES:</strong> ゲーム、アニメ、白デバイス、推し活、採血、ポケカ</p>
+                <p><strong>DISLIKES:</strong> 閉所、暗所、深海、突然の大きな音、漢字</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+            <h2>MOVE LIST / EPISODES</h2>
+            <div class="char-episodes">
+                <div class="char-episode">
+                    <h3>狂気の「白デバイス教」モニター改造</h3>
+                    <p>周辺機器を白で統一することに強いこだわりを持つ。黒いモニターに我慢できず、縁に白いマスキングテープを貼って強引に白くするという力技に出たこともある「白デバイス教」の熱心な信者。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>『バニーガーデン』アイトラッカー事件の首謀者</h3>
+                    <p>プロゲーマーを巻き込み「スト6で負けたらアイトラッカー付きでバニーガーデンをプレイする」という対決をプロデュース。結果、多くの迷言が生まれるきっかけを作った張本人である。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>負けたら強制筋トレ「スクワットカスタム」</h3>
+                    <p>「1先で負けたらスクワット10回」という過酷なルールのリスナー対戦会を頻繁に開催。自身も負けるたびにガチでスクワットを行うため、1日で100回達成するなど体力向上（？）に余念がない。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>悲願の「獅白杯」大将枠（公募）出場</h3>
+                    <p>第4回大会にて遂にMR2100以上の対象枠で出場権を獲得。「バトルナースですから、壊し方も知っている」と強気の応戦を見せ、公募トーナメントという狭き門を突破した実力を世に知らしめた。</p>
+                </div>
+                <div class="char-episode">
+                    <h3>新作格ゲーのキャラ選び基準は「悲鳴」</h3>
+                    <p>『餓狼伝説CotW』のトレーラー視聴時、キャラのやられ声（悲鳴）の良さに注目。「悲鳴ではトップいってる。使用確率が高い」と語るなど、バトルナースならではの斜め上の視点を披露した。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Page. Not affiliated with Lethal Plan.</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = "1";
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>丸餅つきみ | Re:AcT Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #fce803;
+            --char-grad: linear-gradient(135deg, #fce803 0%, #ffa500 100%);
+        }
+        .hero-name { background: var(--char-grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+        .section-title { color: var(--char-color); }
+        .profile-card::before { background: var(--char-grad); }
+        .episode-card { background: #1a1a1e; border: 1px solid #333; padding: 2rem; margin-bottom: 2rem; border-left: 5px solid var(--char-color); }
+        .episode-card h3 { color: var(--char-color); margin-bottom: 1rem; font-family: 'Syncopate', sans-serif; font-size: 1.2rem; }
+        .episode-card p { color: #ccc; line-height: 1.8; }
+        .quote { font-style: italic; color: #fff; border-left: 3px solid var(--char-color); padding-left: 1rem; margin: 1rem 0; }
+    </style>
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <nav class="nav">
+        <a href="../react_index.html" class="nav-brand">RE:ACT ARCHIVE</a>
+    </nav>
+
+    <header class="hero">
+        <h1 class="hero-name">Tsukimi</h1>
+        <p class="hero-subtitle">丸餅つきみ</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item"><span class="label">ID</span><span class="value">REA-019</span></div>
+                    <div class="data-item"><span class="label">BIRTHDAY</span><span class="value">10月1日</span></div>
+                    <div class="data-item"><span class="label">HEIGHT</span><span class="value">157cm</span></div>
+                    <div class="data-item"><span class="label">AGE</span><span class="value">昭和生まれの20歳</span></div>
+                    <div class="data-item"><span class="label">FANNAME</span><span class="value">つきみ荘の皆様</span></div>
+                    <div class="data-item"><span class="label">MOTIF</span><span class="value">満月</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">DESCRIPTION</h2>
+            <div class="description">
+                <p>バーチャル満月からバカンス中のVTuber。「悪女になりたい」と公言しているものの、実際はよく働く「社畜」であり、おっとり・天然で面倒見の良いお姉さん気質。包容力のある歌声とお酒を愛する酒豪の一面を持つ。</p>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">EPISODES</h2>
+            <div class="episodes-container">
+                <div class="episode-card">
+                    <h3>「悪女」を目指す真面目な社畜</h3>
+                    <p>不労所得を夢見つつも、裏ではサムネイル制作や動画編集をきっちりこなす努力家。リスナーに褒められるたびに「悪女だから！」と反論する姿が、隠しきれない真面目さを物語っている。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>ASMR配信名物「猫流し」</h3>
+                    <p>静寂が命のASMR配信中にお腹が豪快に鳴ってしまい、リスナーがチャット欄に猫のスタンプを流してごまかすという謎ルールが誕生した。愛すべきポンコク・ハプニングの一つ。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>週末の癒やし「スナックつきみ」</h3>
+                    <p>毎週土曜日に開店。お酒を嗜みながらリスナーの悩みや愚痴を優しく受け止める。酔いが回るとさらにふわふわした「お姉さん」になり、日本酒に「下剋上」されることも。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>3Dライブへの並々ならぬ努力</h3>
+                    <p>歌やダンスは苦手と謙遜していたが、猛練習の末に3Dライブを大成功させた。「みんなが安心できる場所でありたい」と涙ながらに語る姿は、多くのファンの心を打った。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

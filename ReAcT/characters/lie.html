@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>九楽ライ | Re:AcT Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #ffb6c1;
+            --char-grad: linear-gradient(135deg, #ffb6c1 0%, #ff69b4 100%);
+        }
+        .hero-name { background: var(--char-grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+        .section-title { color: var(--char-color); }
+        .profile-card::before { background: var(--char-grad); }
+        .episode-card { background: #1a1a1e; border: 1px solid #333; padding: 2rem; margin-bottom: 2rem; border-left: 5px solid var(--char-color); }
+        .episode-card h3 { color: var(--char-color); margin-bottom: 1rem; font-family: 'Syncopate', sans-serif; font-size: 1.2rem; }
+        .episode-card p { color: #ccc; line-height: 1.8; }
+        .quote { font-style: italic; color: #fff; border-left: 3px solid var(--char-color); padding-left: 1rem; margin: 1rem 0; }
+    </style>
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <nav class="nav">
+        <a href="../react_index.html" class="nav-brand">RE:ACT ARCHIVE</a>
+    </nav>
+
+    <header class="hero">
+        <h1 class="hero-name">Lie</h1>
+        <p class="hero-subtitle">九楽ライ</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item"><span class="label">ID</span><span class="value">REA-017</span></div>
+                    <div class="data-item"><span class="label">BIRTHDAY</span><span class="value">5月30日</span></div>
+                    <div class="data-item"><span class="label">HEIGHT</span><span class="value">148cm</span></div>
+                    <div class="data-item"><span class="label">BLOOD TYPE</span><span class="value">A型</span></div>
+                    <div class="data-item"><span class="label">FANNAME</span><span class="value">くらくラー</span></div>
+                    <div class="data-item"><span class="label">UNIT</span><span class="value">Melty R.I.P.</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">DESCRIPTION</h2>
+            <div class="description">
+                <p>「もしかして、僕のこと…気になってくれているの…？」。地雷系・量産型ファッションを愛する、Melty R.I.P.（めるりぷ）のめるてぃぴんく担当。独特な毒舌とリスナーへの「プロレス」が持ち味だが、実は非常に仲間想いで熱い一面を持つ。</p>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">EPISODES</h2>
+            <div class="episodes-container">
+                <div class="episode-card">
+                    <h3>伝説の「毒舌」プロレス</h3>
+                    <p>リスナーからの煽りに対し、「お前、鏡見てから言えよ！」「鏡が割れた？そりゃお前の顔のせいだろ！」と爆速でレスバを仕掛けるスタイルが定着。この「プロレス」がファンの最大の楽しみとなっている。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>Melty R.I.P.への深い愛</h3>
+                    <p>ユニット活動には非常に熱心で、メンバーとの絆は本物。ASMR配信中に「相方のことが大好き」とうっかり漏らしてしまい、リスナーから盛大にいじられたこともある。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>意外な「ガチ勢」ゲーマー</h3>
+                    <p>可愛い見た目とは裏腹に、FPSや格闘ゲームでは「負けたら引退」レベルの気迫でプレイ。勝負事には一切妥協しない、熱いゲーマー魂を持っている。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>マスコット「くまやろう」の受難</h3>
+                    <p>マスコットの「くまやろう」を配信の背景でぶん投げたり、ストレス解消の道具にしたりすることも。ファンからは「ライくんの愛（物理）が重すぎる」とネタにされている。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

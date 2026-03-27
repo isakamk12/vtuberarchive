@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>杏夜くもり | Re:AcT Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #fdf5e6;
+            --char-grad: linear-gradient(135deg, #fdf5e6 0%, #ffebcd 100%);
+        }
+        .hero-name { background: var(--char-grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+        .section-title { color: var(--char-color); }
+        .profile-card::before { background: var(--char-grad); }
+        .episode-card { background: #1a1a1e; border: 1px solid #333; padding: 2rem; margin-bottom: 2rem; border-left: 5px solid var(--char-color); }
+        .episode-card h3 { color: var(--char-color); margin-bottom: 1rem; font-family: 'Syncopate', sans-serif; font-size: 1.2rem; }
+        .episode-card p { color: #ccc; line-height: 1.8; }
+        .quote { font-style: italic; color: #fff; border-left: 3px solid var(--char-color); padding-left: 1rem; margin: 1rem 0; }
+    </style>
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <nav class="nav">
+        <a href="../react_index.html" class="nav-brand">RE:ACT ARCHIVE</a>
+    </nav>
+
+    <header class="hero">
+        <h1 class="hero-name">Anya</h1>
+        <p class="hero-subtitle">杏夜くもり</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item"><span class="label">ID</span><span class="value">REA-014</span></div>
+                    <div class="data-item"><span class="label">BIRTHDAY</span><span class="value">11月4日</span></div>
+                    <div class="data-item"><span class="label">HEIGHT</span><span class="value">155cm</span></div>
+                    <div class="data-item"><span class="label">FANNAME</span><span class="value">ふあんず</span></div>
+                    <div class="data-item"><span class="label">MARK</span><span class="value">☁🍳</span></div>
+                    <div class="data-item"><span class="label">UNIT</span><span class="value">PolarNight</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">DESCRIPTION</h2>
+            <div class="description">
+                <p>ゆるふわ系女子高生Vtuber（永遠の17歳）。驚異的なスタミナを誇る「耐久モンスター」であり、800曲以上のレパートリーを持つ歌枠の達人。強い「原曲リスペクト」を持ち、リスナーとの絶妙な距離感で人気を博す。</p>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">EPISODES</h2>
+            <div class="episodes-container">
+                <div class="episode-card">
+                    <h3>自他共に認める「耐久モンスター」</h3>
+                    <p>6時間配信は当たり前、最長でYouTubeのアーカイブ限界である12時間配信を頻繁に行う。過去には実質53時間の耐久配信を実施。「耐久が生きがい」と語るほどの配信愛を持つ。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>強い「原曲愛」とこだわり</h3>
+                    <p>「原曲が一番いい！原曲を超えるものなんてない」と断言し、自身のイメージ一色に染まってしまうことを避けるため「歌ってみた」は基本的に出さない。強い信念を持つVSinger。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>ロマンスマジシャンなさばき</h3>
+                    <p>リスナーの認知力が異常に高く、名前を変えた「初見詐欺」を一発で見抜く。「好きだよ」というスパチャに「事務所を通してください」と返すなど、リスナーを掌の上で転がす対応が人気。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>ハリボテ時代からの躍進</h3>
+                    <p>初期はLive2Dの服や髪が未完成で、インナー姿を自作の「ハリボテ」で隠して活動していた。そんな苦労を乗り越え、現在はオリジナル曲リリースやコミティア参加など多方面で活躍中。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

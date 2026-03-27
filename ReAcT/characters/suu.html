@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>稀羽すう | Re:AcT Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #87ceeb;
+            --char-grad: linear-gradient(135deg, #87ceeb 0%, #ffffff 100%);
+        }
+        .hero-name { background: var(--char-grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .section-title { color: var(--char-color); }
+        .profile-card::before { background: var(--char-grad); }
+        .episode-card { background: #1a1a1e; border: 1px solid #333; padding: 2rem; margin-bottom: 2rem; border-left: 5px solid var(--char-color); }
+        .episode-card h3 { color: var(--char-color); margin-bottom: 1rem; font-family: 'Syncopate', sans-serif; font-size: 1.2rem; }
+        .episode-card p { color: #ccc; line-height: 1.8; }
+        .quote { font-style: italic; color: #fff; border-left: 3px solid var(--char-color); padding-left: 1rem; margin: 1rem 0; }
+    </style>
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <nav class="nav">
+        <a href="../react_index.html" class="nav-brand">RE:ACT ARCHIVE</a>
+    </nav>
+
+    <header class="hero">
+        <h1 class="hero-name">Suu</h1>
+        <p class="hero-subtitle">稀羽すう</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item"><span class="label">ID</span><span class="value">REA-006</span></div>
+                    <div class="data-item"><span class="label">BIRTHDAY</span><span class="value">5月22日</span></div>
+                    <div class="data-item"><span class="label">HEIGHT</span><span class="value">150〜155cm</span></div>
+                    <div class="data-item"><span class="label">BLOOD TYPE</span><span class="value">A型</span></div>
+                    <div class="data-item"><span class="label">FANNAME</span><span class="value">えさ</span></div>
+                    <div class="data-item"><span class="label">SPECIALTY</span><span class="value">歌、イラスト制作</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">DESCRIPTION</h2>
+            <div class="description">
+                <p>「だつりょく系シンガー」、みにくいアヒルの子（白鳥の雛）。絵本の世界から人間界へやってきた。心の傷を隠すために包帯を巻いており、命の恩人である神「とり」に見守られながら生活している。ウィスパーボイスから力強いアニソンまで歌いこなす。</p>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">EPISODES</h2>
+            <div class="episodes-container">
+                <div class="episode-card">
+                    <h3>「えさ」たちとの不思議な絆</h3>
+                    <p>リスナーの総称は「えさ」。待機所では「ON SETと書かれた椅子」のステッカーを投げる「待機イス」という独自文化がある。リスナーを「エレベーター」に例え、いつでも同じ目線で寄り添うエモい一面も。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>狂気的な「ペルソナ」＆「アイマス」愛</h3>
+                    <p>ゲーム『ペルソナ』では感情移入しすぎて号泣。配信外で進めすぎたあまり、「未来から来た」と称して録画を流し自身はチャットに降臨。アイマス曲では自身の「プロデューサー人格」が暴走することも。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>多才なクリエイター気質</h3>
+                    <p>イラスト制作はプロ級。春野氏からの楽曲提供を受けた際は限界オタクっぷりを発揮。自分の声や絵に自信がないと言いつつも、表現活動への情熱は本物。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>異例の移籍と10万人達成</h3>
+                    <p>個人勢からRe:AcTへ名前とガワを保ったまま移籍するという異例の決断。着実にファンを増やし、10万人記念ライブでは感謝の歌を響かせた。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

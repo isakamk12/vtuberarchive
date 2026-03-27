@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音羽奏來 | Re:AcT Archive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #add8e6;
+            --char-grad: linear-gradient(135deg, #add8e6 0%, #00bfff 100%);
+        }
+        .hero-name { background: var(--char-grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+        .section-title { color: var(--char-color); }
+        .profile-card::before { background: var(--char-grad); }
+        .episode-card { background: #1a1a1e; border: 1px solid #333; padding: 2rem; margin-bottom: 2rem; border-left: 5px solid var(--char-color); }
+        .episode-card h3 { color: var(--char-color); margin-bottom: 1rem; font-family: 'Syncopate', sans-serif; font-size: 1.2rem; }
+        .episode-card p { color: #ccc; line-height: 1.8; }
+        .quote { font-style: italic; color: #fff; border-left: 3px solid var(--char-color); padding-left: 1rem; margin: 1rem 0; }
+    </style>
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <nav class="nav">
+        <a href="../react_index.html" class="nav-brand">RE:ACT ARCHIVE</a>
+    </nav>
+
+    <header class="hero">
+        <h1 class="hero-name">Sora</h1>
+        <p class="hero-subtitle">音羽奏來</p>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <h2 class="section-title">PROFILE</h2>
+            <div class="profile-card">
+                <div class="data-grid">
+                    <div class="data-item"><span class="label">ID</span><span class="value">REA-012</span></div>
+                    <div class="data-item"><span class="label">BIRTHDAY</span><span class="value">12月12日</span></div>
+                    <div class="data-item"><span class="label">COLOR</span><span class="value">ライトブルー</span></div>
+                    <div class="data-item"><span class="label">FANNAME</span><span class="value">ソラリス</span></div>
+                    <div class="data-item"><span class="label">SPECIALTY</span><span class="value">アコギ弾き語り</span></div>
+                    <div class="data-item"><span class="label">UNIT</span><span class="value">Etoile</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">DESCRIPTION</h2>
+            <div class="description">
+                <p>「音と羽で心に音楽（歌）を届けます」。アコースティックギターの愛機「シュークリームちゃん」を携え活動するバーチャルシンガーソングライター。低めの男声的な響きから癖の強い歌声まで、感情豊かに歌い上げる。大阪出身のコテコテ関西弁も特徴。</p>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">EPISODES</h2>
+            <div class="episodes-container">
+                <div class="episode-card">
+                    <h3>「倍数」の真実と義務教育の敗北</h3>
+                    <p>iPhoneの容量が128GBの次が512GBなのはなぜか疑問に思いつつ購入。「ギガ数は倍数」だとリスナーに教えられ衝撃を受けた。さらに「THE」を「ザ」と読み続け、自身の学力に度々絶望している。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>「特待生」のメッキ剥がれ</h3>
+                    <p>高校受験で特待生だったことを勲章にしていたが、ユニット内学力テストで5人中4位。それ以降、メンバーから事あるごとに「特待生（笑）」といじられるようになってしまった。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>入院生活でのポンコツ無双</h3>
+                    <p>夜中に大音量の寝言で看護師3人を駆けつけさせたり、他人の病室を自分の部屋と間違えて10分間スマホをいじっていたりと、病院内でも伝説級のポンコツエピソードを量産した。</p>
+                </div>
+                <div class="episode-card">
+                    <h3>「シュークリームちゃん」の安否</h3>
+                    <p>ギターのシールドを抜き忘れて電池を切らすのが日常茶飯事。配信終わりのリスナーからの「シールド抜いた？」というコメントは今やソラリスたちの風物詩となっている。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
