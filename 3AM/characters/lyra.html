@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyra Calyptra | 3AMアーカイブ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #C0C0C0;
+            --char-rgb: 192, 192, 192;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../3am_index.html" class="char-back">
+            <i class="fa-solid fa-skull"></i> 脱出する (ESCAPE)
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">ライラ</div>
+        <h1 class="char-name">Lyra Calyptra</h1>
+        <div class="char-tags">
+            <span class="char-tag">Other Members</span>
+            
+        </div>
+        <p class="char-catchphrase" style="margin-top: 2rem; font-style: italic; color: var(--char-color); opacity: 0.8;">「笑い声で気をそらし襲いかかる吸血蛾」</p>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2>プロフィール (PROFILE)</h2>
+            <div class="char-profile">
+                <p><strong>種族:</strong> 吸血蛾</p>
+
+            </div>
+            <div class="char-bio" style="margin-top: 1.5rem; border-top: 1px dashed #444; padding-top: 1.5rem;">
+                <p>独特の笑い声で相手を油断させ、隙を見て襲いかかる「吸血蛾」。うっかり魔法の言葉を唱えてしまうなど、天然な一面もある。</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+<h2>エピソード (EPISODES)</h2>
+<div class="char-episodes">
+<div class="char-episode" style="margin-bottom: 2rem; border-left: 3px solid var(--char-color); padding-left: 1.5rem;">
+<h3 style="color: var(--char-color); margin-bottom: 0.5rem; font-family: 'Rubik Glitch';">うっかりファイアボール</h3>
+<p>本のページをめくろうとして、うっかり「ファイアボール」という魔法の言葉を唱えてしまったことがある。</p>
+</div>
+</div>
+</section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. 非公式ファンページ。</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = "1";
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

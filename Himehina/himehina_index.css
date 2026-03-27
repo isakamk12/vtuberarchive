@@ -99,6 +99,7 @@ body {
     letter-spacing: 20px;
     background: linear-gradient(135deg, var(--hime-red), var(--hina-blue));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.8));
     position: relative;
@@ -116,27 +117,33 @@ body {
 
 /* Main Content Grid */
 .main-content {
-    max-width: 1100px;
+    max-width: 1600px;
     margin: 0 auto;
-    padding: 4rem 2rem;
+    padding: 6rem 4rem;
 }
 
 .content-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    gap: 4rem;
+}
+
+@media (max-width: 1200px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Script / Parchment Cards */
 .card {
-    background: rgba(20, 20, 25, 0.8);
-    border: 1px solid rgba(212, 175, 55, 0.2);
-    padding: 3rem;
+    background: rgba(15, 15, 20, 0.95);
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    padding: 4rem;
     position: relative;
-    border-radius: 4px;
-    /* Slightly rough edges like old script */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border-radius: 8px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6);
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), background 0.4s, opacity 0.8s;
+    /* Removed backdrop-filter to prevent flickering on some systems */
 }
 
 /* Theater Frame Effect */
@@ -190,10 +197,11 @@ body {
 }
 
 .card p {
-    font-size: 1.05rem;
-    line-height: 2;
-    opacity: 0.85;
+    font-size: 1.15rem;
+    line-height: 2.2;
+    opacity: 0.9;
     text-align: justify;
+    word-break: break-word;
 }
 
 .highlight-card {
@@ -204,6 +212,38 @@ body {
 
 .highlight-card h2 {
     color: var(--text-main);
+}
+
+.episode-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.episode-item {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2rem;
+    border-left: 3px solid var(--gold);
+    transition: 0.3s;
+}
+
+.episode-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.episode-item h3 {
+    font-size: 1.2rem !important;
+    text-align: left !important;
+    border: none !important;
+    margin-bottom: 0.5rem !important;
+    color: var(--gold) !important;
+}
+
+.episode-item p {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    margin: 0 !important;
 }
 
 /* Roster Section - Dual Spotlight */
@@ -351,11 +391,10 @@ body {
 /* Reveal Animation */
 .reveal {
     opacity: 0;
-    transform: translateY(30px);
-    transition: 1s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transition: opacity 1.2s ease-out, transform 1.2s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    will-change: opacity, transform;
 }
 
 .reveal.active {
     opacity: 1;
-    transform: translateY(0);
 }

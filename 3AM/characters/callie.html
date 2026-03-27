@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callie Calico | 3AMアーカイブ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #FF69B4;
+            --char-rgb: 255, 105, 180;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../3am_index.html" class="char-back">
+            <i class="fa-solid fa-skull"></i> 脱出する (ESCAPE)
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">キャリー・キャリコ</div>
+        <h1 class="char-name">Callie Calico</h1>
+        <div class="char-tags">
+            <span class="char-tag">Generation 1</span>
+            <span class="char-tag">🐈💖</span>
+        </div>
+        <p class="char-catchphrase" style="margin-top: 2rem; font-style: italic; color: var(--char-color); opacity: 0.8;">「にょ、にょ、にょ、私を信じて、上手くいくから！」</p>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2>プロフィール (PROFILE)</h2>
+            <div class="char-profile">
+                <p><strong>肩書き:</strong> 自宅軟禁中の魔法少女</p>
+<p><strong>誕生日:</strong> 7月20日</p>
+<p><strong>出身:</strong> テキサス州のど田舎</p>
+<p><strong>ファンネーム:</strong> Alley Cats</p>
+
+            </div>
+            <div class="char-bio" style="margin-top: 1.5rem; border-top: 1px dashed #444; padding-top: 1.5rem;">
+                <p>テキサスのど田舎出身、自宅軟禁中の魔法少女。魔法少女らしからぬ大人向けのユーモアや際どいジョークが得意。「ダディ」属性への執着や、保護活動に従事する動物愛護家としての一面も併せ持つ。</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+<h2>エピソード (EPISODES)</h2>
+<div class="char-episodes">
+<div class="char-episode" style="margin-bottom: 2rem; border-left: 3px solid var(--char-color); padding-left: 1.5rem;">
+<h3 style="color: var(--char-color); margin-bottom: 0.5rem; font-family: 'Rubik Glitch';">独自のアメコミ恋愛観</h3>
+<p>スパイダーマンは遅刻するからNG、シングは唇がないからNG。一方でパニッシャーのような問題児には「私が直してあげる（I can fix him）」と惹かれるなど、独特な恋愛観を持つ。</p>
+</div>
+<div class="char-episode" style="margin-bottom: 2rem; border-left: 3px solid var(--char-color); padding-left: 1.5rem;">
+<h3 style="color: var(--char-color); margin-bottom: 0.5rem; font-family: 'Rubik Glitch';">究極の救出プラン</h3>
+<p>火事の際、赤ちゃんと猫のどちらを助けるか問われ、「両腕とブラジャーの中で合計3人と3匹を同時に救い出せる」と元ナニーの経験を活かした力強い（？）回答を見せた。</p>
+</div>
+<div class="char-episode" style="margin-bottom: 2rem; border-left: 3px solid var(--char-color); padding-left: 1.5rem;">
+<h3 style="color: var(--char-color); margin-bottom: 0.5rem; font-family: 'Rubik Glitch';">「ファー・ママ」への抵抗</h3>
+<p>動物保護活動に熱心で猫を溺愛しているが、ペットを人間の子供と同列に扱う「ファー・ママ」だと思われることには強い拒否感を示し、全力で否定するこだわりがある。</p>
+</div>
+<div class="char-episode" style="margin-bottom: 2rem; border-left: 3px solid var(--char-color); padding-left: 1.5rem;">
+<h3 style="color: var(--char-color); margin-bottom: 0.5rem; font-family: 'Rubik Glitch';">必死のペンシルテスト</h3>
+<p>胸の下に鉛筆を挟めるか試す際、腹筋を極限まで使って体を折り曲げ、必死に挟もうと奮闘。魔法少女のイメージを自ら塗り替えていくスタイル。</p>
+</div>
+<div class="char-episode" style="margin-bottom: 2rem; border-left: 3px solid var(--char-color); padding-left: 1.5rem;">
+<h3 style="color: var(--char-color); margin-bottom: 0.5rem; font-family: 'Rubik Glitch';">崖からのダイブと悲惨な末路</h3>
+<p>TikTok用の動画のために崖から水へ飛び込んだが、お尻から水が入り、さらに岩に激突してゲーム内で悲惨な死を遂げるという体を張ったネタを披露した。</p>
+</div>
+</div>
+</section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. 非公式ファンページ。</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = "1";
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

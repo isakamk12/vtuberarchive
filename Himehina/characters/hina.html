@@ -42,30 +42,46 @@
             <div class="cp-card">
                 <h3>PROFILE</h3>
                 <table class="cp-table">
-                    <tr>
-                        <th>DEBUT</th>
-                        <td>2018.05.29</td>
-                    </tr>
-                    <tr>
-                        <th>AFFILIATION</th>
-                        <td>Studio LaRa</td>
-                    </tr>
-                    <tr>
-                        <th>X ACCOUNT</th>
-                        <td>@HinaSuzuki_HH</td>
-                    </tr>
+                    <tr><th>ACTIVITY START</th><td>2018.05.28</td></tr>
+                    <tr><th>HEIGHT</th><td>147cm</td></tr>
+                    <tr><th>HOBBY</th><td>アニメ鑑賞（ソシャゲ併用）</td></tr>
+                    <tr><th>SPECIAL SKILL</th><td>アニメソムリエ</td></tr>
+                    <tr><th>MOTTO</th><td>出るまで回せば100％</td></tr>
+                    <tr><th>FAVORITES</th><td>コーラ、辛いもの、特撮</td></tr>
+                    <tr><th>X ACCOUNT</th><td>@HinaSuzuki_HH</td></tr>
                 </table>
             </div>
             <div class="cp-card">
-                <h3>EPISODES</h3>
-                <p>ヒメの活動開始から約2ヶ月後に合流。出自不明。ヒメとの絆は深く、作詞活動を通じて自身の内面的なメッセージも発信し続けている。</p>
+                <h3>CHARACTERISTICS</h3>
+                <p><strong>外見:</strong> ブロンドヘアーで前髪の一部が青色、横髪はフカヒレ状。お腹を出した青い軍服に、ヒメと同じ家紋入り帽子、右手には「鈴木」の赤い腕章を着用。</p>
+                <p><strong>特徴:</strong> しっとりとした優しい歌声で、ヒメと美しいハーモニーを奏でる。おっとり天然な「宅の女（アニメオタク）」。ホラーには強いが、漢字や英語が苦手。コーラを愛飲している。</p>
             </div>
+        </div>
+
+        <div class="cp-card" style="margin-top: 3rem;">
+            <h3>EPISODES</h3>
+            <ul class="cp-episode-list">
+                <li><strong>漢字の破壊神</strong>：「忖度（そんたく）」を「フド」、「脊髄反射」を「赤髄反射」と読み間違える言語センス。</li>
+                <li><strong>野生のコマネチ</strong>：体力測定中に「ウキウキ」と言いながら野生を解放したジャンピングコマネチを披露。</li>
+                <li><strong>お風呂からオーディエンス</strong>：生放送中の電話企画で、お風呂に入ってシャワーを浴びている最中に出るという暴挙。</li>
+                <li><strong>コーラ爆発事件</strong>：生放送終了直後、愛飲するコーラを爆発させ、PC周辺を水没させる。</li>
+                <li><strong>サイコパスな冷凍漬け</strong>：雪山人狼にて、トレイター（人狼）として「冷凍漬けにしてやる」と冷徹なサイコパス発言。</li>
+            </ul>
         </div>
     </div>
     <footer class="cp-footer">
         <p>© 2026 HIMEHINA Archive</p>
     </footer>
-    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+    <script>document.addEventListener('DOMContentLoaded', () => { 
+        const r = document.querySelectorAll('.cp-reveal'); 
+        const o = new IntersectionObserver(e => e.forEach(x => {
+            if(x.isIntersecting) {
+                x.target.classList.add('active');
+                o.unobserve(x.target); // Stop observing once active
+            }
+        }), { threshold: 0.05 }); 
+        r.forEach(el => o.observe(el)); 
+    });</script>
 </body>
 
 </html>

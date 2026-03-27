@@ -42,30 +42,46 @@
             <div class="cp-card">
                 <h3>PROFILE</h3>
                 <table class="cp-table">
-                    <tr>
-                        <th>DEBUT</th>
-                        <td>2018.02.05</td>
-                    </tr>
-                    <tr>
-                        <th>AFFILIATION</th>
-                        <td>Studio LaRa</td>
-                    </tr>
-                    <tr>
-                        <th>X ACCOUNT</th>
-                        <td>@HimeTanaka_HH</td>
-                    </tr>
+                    <tr><th>ACTIVITY START</th><td>2018.03.18</td></tr>
+                    <tr><th>HEIGHT/WEIGHT</th><td>147cm / 39kg</td></tr>
+                    <tr><th>HOBBY</th><td>広告ゲー網羅</td></tr>
+                    <tr><th>SPECIAL SKILL</th><td>笑い声で居場所を教える</td></tr>
+                    <tr><th>MOTTO</th><td>どんな時でも努力！ど根性！</td></tr>
+                    <tr><th>FAVORITES</th><td>パイナップル、パズル、PC整理</td></tr>
+                    <tr><th>X ACCOUNT</th><td>@HimeTanaka_HH</td></tr>
                 </table>
             </div>
             <div class="cp-card">
-                <h3>EPISODES</h3>
-                <p>出自は不明だが、ヒナと同じ家紋を身につけている。圧倒的なエネルギーで「田中工務店」から始まった物語を牽引し続け、現在はStudio LaRaの象徴として輝いている。</p>
+                <h3>CHARACTERISTICS</h3>
+                <p><strong>外見:</strong> ピンク色の髪でお団子ヘア（シニヨン）をしており、前髪の一部が赤色になっています。胸元に穴の開いた赤いチャイナドレスを着て、「田中」の家紋付き木札を下げています。</p>
+                <p><strong>特徴:</strong> 感情を叫ぶようなハイトーンな歌声が特徴。笑いとおしゃべりが止まらないハイテンションな性格。本人はおしとやかに振る舞っているつもりでも、つい「ぽんぽこムーブ」が漏れてしまいます。ホラーゲームが非常に苦手です。</p>
             </div>
+        </div>
+        
+        <div class="cp-card" style="margin-top: 3rem;">
+            <h3>EPISODES</h3>
+            <ul class="cp-episode-list">
+                <li><strong>ライブ本番で右手右足同時出撃</strong>：超パーティーのライブ本番、キメキメのシーンで右手と右足を同時に出して歩いてしまう痛恨のミス。</li>
+                <li><strong>罰ゲームの魔力</strong>：罰ゲームで「お兄ちゃん大好き」「ご主人様大好き」などの恥ずかしいセリフを全力で披露。</li>
+                <li><strong>ヒメが連呼事件</strong>：単独イベント初出演時、緊張のあまり「ヒメが、ヒメが」と同じ言葉を連呼し続ける。</li>
+                <li><strong>心拍数オーバーフロー</strong>：ホラー実況中、あまりの恐怖に心拍数計が「150」を突破し、生存を確認される。</li>
+                <li><strong>クソコラお面でドッキリ</strong>：ヒナへの寝起きドッキリに、自身のクソコラ画像を印刷したお面を被って登場する強行軍。</li>
+            </ul>
         </div>
     </div>
     <footer class="cp-footer">
         <p>© 2026 HIMEHINA Archive</p>
     </footer>
-    <script>document.addEventListener('DOMContentLoaded', () => { const r = document.querySelectorAll('.cp-reveal'); const o = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('active')), { threshold: 0.1 }); r.forEach(el => o.observe(el)); });</script>
+    <script>document.addEventListener('DOMContentLoaded', () => { 
+        const r = document.querySelectorAll('.cp-reveal'); 
+        const o = new IntersectionObserver(e => e.forEach(x => {
+            if(x.isIntersecting) {
+                x.target.classList.add('active');
+                o.unobserve(x.target); // Stop observing once active
+            }
+        }), { threshold: 0.05 }); 
+        r.forEach(el => o.observe(el)); 
+    });</script>
 </body>
 
 </html>

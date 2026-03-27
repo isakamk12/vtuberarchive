@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olivia Monroe | 3AMアーカイブ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #FFC0CB;
+            --char-rgb: 255, 192, 203;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../3am_index.html" class="char-back">
+            <i class="fa-solid fa-skull"></i> 脱出する (ESCAPE)
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">オリヴィア</div>
+        <h1 class="char-name">Olivia Monroe</h1>
+        <div class="char-tags">
+            <span class="char-tag">Other Members</span>
+            
+        </div>
+        <p class="char-catchphrase" style="margin-top: 2rem; font-style: italic; color: var(--char-color); opacity: 0.8;">「健全にカオスな、3AMのプリマ・バレリーナ」</p>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2>プロフィール (PROFILE)</h2>
+            <div class="char-profile">
+                <p><strong>肩書き:</strong> プリマ・バレリーナ</p>
+<p><strong>趣味:</strong> 声真似（ミスピギー、カービィ）</p>
+<p><strong>出身:</strong> おしっこ業界（？）</p>
+
+            </div>
+            <div class="char-bio" style="margin-top: 1.5rem; border-top: 1px dashed #444; padding-top: 1.5rem;">
+                <p>3AMを代表するプリマ・バレリーナ。バレエの優雅さとは裏腹に、視聴者を川に投げ込んでクマの姿で食べるといった猟奇的な妄想や、謎の経歴を語り出す「健全なカオス」の持ち主。</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+<h2>エピソード (EPISODES)</h2>
+<div class="char-episodes">
+<div class="char-episode" style="margin-bottom: 2rem; border-left: 3px solid var(--char-color); padding-left: 1.5rem;">
+<h3 style="color: var(--char-color); margin-bottom: 0.5rem; font-family: 'Rubik Glitch';">視聴者を鮭のように食べる妄想</h3>
+<p>視聴者を縛って川に投げ込み、自分はクマの着ぐるみを着て、鮭のように口で視聴者を捕まえて食べるという常軌を逸した妄想を語り、周囲を困惑させた。</p>
+</div>
+<div class="char-episode" style="margin-bottom: 2rem; border-left: 3px solid var(--char-color); padding-left: 1.5rem;">
+<h3 style="color: var(--char-color); margin-bottom: 0.5rem; font-family: 'Rubik Glitch';">「おしっこ業界」の重鎮？</h3>
+<p>薬物検査の話題で、「1986年に父親に工場へ連れて行かれて以来、おしっこ業界（piss industry）にいる」という、真偽不明かつ意図不明の謎の経歴を語り始めた。</p>
+</div>
+</div>
+</section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. 非公式ファンページ。</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = "1";
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

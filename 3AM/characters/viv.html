@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vividlyVIVI | 3AMアーカイブ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #ADFF2F;
+            --char-rgb: 173, 255, 47;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../3am_index.html" class="char-back">
+            <i class="fa-solid fa-skull"></i> 脱出する (ESCAPE)
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">ヴィヴ</div>
+        <h1 class="char-name">vividlyVIVI</h1>
+        <div class="char-tags">
+            <span class="char-tag">Generation 3</span>
+            
+        </div>
+        <p class="char-catchphrase" style="margin-top: 2rem; font-style: italic; color: var(--char-color); opacity: 0.8;">「地下バンカーに住む、放射能を浴びたオーストラリア人」</p>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2>プロフィール (PROFILE)</h2>
+            <div class="char-profile">
+                <p><strong>出身:</strong> オーストラリア</p>
+<p><strong>趣味:</strong> PowerWash Simulator、ASMR</p>
+<p><strong>STYLE:</strong> バラエティストリーマー</p>
+<p><strong>ステータス:</strong> ASMR界のヤンデレ親友</p>
+
+            </div>
+            <div class="char-bio" style="margin-top: 1.5rem; border-top: 1px dashed #444; padding-top: 1.5rem;">
+                <p>放射能を浴び、地下バンカーに住んでいるオーストラリア出身のVTuber。複数のグループに所属する多忙な身ながら、「自分のやりたいことをやる」というマイペースなスタンスを貫く清掃ゲーム中毒者。</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+<h2>エピソード (EPISODES)</h2>
+<div class="char-episodes">
+<div class="char-episode" style="margin-bottom: 2rem; border-left: 3px solid var(--char-color); padding-left: 1.5rem;">
+<h3 style="color: var(--char-color); margin-bottom: 0.5rem; font-family: 'Rubik Glitch';">ハイプトレインで号泣</h3>
+<p>配信中に自身の記録を塗り替えるレベル17のハイプトレインが発生。大量の支援に驚き、「手が震える」と涙を流してリスナーに深く感謝した。</p>
+</div>
+<div class="char-episode" style="margin-bottom: 2rem; border-left: 3px solid var(--char-color); padding-left: 1.5rem;">
+<h3 style="color: var(--char-color); margin-bottom: 0.5rem; font-family: 'Rubik Glitch';">ASMR制作の「燃え尽き」</h3>
+<p>1ヶ月以上かけて制作した力作ASMR。公開直後に「次はいつ？」と急かされ、「ケーキを味わう間もなく次を要求された」とショックを受け、燃え尽きてしまった苦労を赤裸々に語った。</p>
+</div>
+<div class="char-episode" style="margin-bottom: 2rem; border-left: 3px solid var(--char-color); padding-left: 1.5rem;">
+<h3 style="color: var(--char-color); margin-bottom: 0.5rem; font-family: 'Rubik Glitch';">『PowerWash Simulator』への異常な執着</h3>
+<p>前作を100%クリアした後、休む間もなく続編、さらに他の清掃ゲームへと没頭。「いつまで洗ってるの？」と言われるほど清掃作業に没頭する清掃狂。</p>
+</div>
+<div class="char-episode" style="margin-bottom: 2rem; border-left: 3px solid var(--char-color); padding-left: 1.5rem;">
+<h3 style="color: var(--char-color); margin-bottom: 0.5rem; font-family: 'Rubik Glitch';">屋外トイレ事情からの人間賛歌</h3>
+<p>視聴者に屋外トイレの経験を問い、多様な回答が寄せられたことに「みんなそれぞれ人生の旅をしている、人間って素晴らしい」と謎の感動を覚えた珍場面。</p>
+</div>
+</div>
+</section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. 非公式ファンページ。</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = "1";
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

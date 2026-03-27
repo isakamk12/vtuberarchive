@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coqui | 3AMアーカイブ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="char-base.css">
+    <style>
+        :root {
+            --char-color: #00FF7F;
+            --char-rgb: 0, 255, 127;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+
+    <nav>
+        <a href="../3am_index.html" class="char-back">
+            <i class="fa-solid fa-skull"></i> 脱出する (ESCAPE)
+        </a>
+    </nav>
+
+    <header class="char-hero">
+        <div class="char-read">コキ</div>
+        <h1 class="char-name">Coqui</h1>
+        <div class="char-tags">
+            <span class="char-tag">Generation 1</span>
+            
+        </div>
+        <p class="char-catchphrase" style="margin-top: 2rem; font-style: italic; color: var(--char-color); opacity: 0.8;">「恐ろしくて、ちっとも可愛くないストリートのカエル」</p>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2>プロフィール (PROFILE)</h2>
+            <div class="char-profile">
+                <p><strong>フルネーム:</strong> Coqui Saporana</p>
+<p><strong>種族:</strong> カエル（ハーフ）</p>
+<p><strong>年齢:</strong> 28歳（ ripe ）</p>
+<p><strong>身長:</strong> 143cm</p>
+<p><strong>ファンネーム:</strong> Coquinuts</p>
+<p><strong>好きなもの:</strong> 『うる星やつら』、143 (I love you)</p>
+
+            </div>
+            <div class="char-bio" style="margin-top: 1.5rem; border-top: 1px dashed #444; padding-top: 1.5rem;">
+                <p>下水道を拠点とするギャング「South Side Skinks」のサブボス。人間の母とコキガエルの父を持つ。自称「恐ろしくて可愛くない」不良だが、実際には極度の文字の読み間違い（識字障害レベル）や天然な言動で愛されている。</p>
+            </div>
+        </section>
+
+        <section class="char-section">
+<h2>エピソード (EPISODES)</h2>
+<div class="char-episodes">
+<div class="char-episode" style="margin-bottom: 2rem; border-left: 3px solid var(--char-color); padding-left: 1.5rem;">
+<h3 style="color: var(--char-color); margin-bottom: 0.5rem; font-family: 'Rubik Glitch';">犬用ビスケット誤食事件</h3>
+<p>Targetで購入したクッキーを「パサパサする」と文句を言いながら食べていたが、実は犬用のビスケットだった。指摘されると「わざとやったの！」と強引に言い張った。</p>
+</div>
+<div class="char-episode" style="margin-bottom: 2rem; border-left: 3px solid var(--char-color); padding-left: 1.5rem;">
+<h3 style="color: var(--char-color); margin-bottom: 0.5rem; font-family: 'Rubik Glitch';">蜘蛛パニックとお漏らし</h3>
+<p>トイレ中に足に蜘蛛が登ってきたことに驚いて飛び上がり、パニックのあまりお漏らしをしてしまった。自分の尿を泣きながら掃除する羽目になったという悲劇のエピソード。</p>
+</div>
+<div class="char-episode" style="margin-bottom: 2rem; border-left: 3px solid var(--char-color); padding-left: 1.5rem;">
+<h3 style="color: var(--char-color); margin-bottom: 0.5rem; font-family: 'Rubik Glitch';">『うる星やつら』テンちゃん役に抜擢</h3>
+<p>最愛のアニメのリブート版英語吹き替えにて、テンちゃんの役をオーディションで獲得。配信で解禁した際は声を震わせて喜び、収録で叫びすぎて声を枯らすほど熱演した。</p>
+</div>
+<div class="char-episode" style="margin-bottom: 2rem; border-left: 3px solid var(--char-color); padding-left: 1.5rem;">
+<h3 style="color: var(--char-color); margin-bottom: 0.5rem; font-family: 'Rubik Glitch';">Uber運転手をガチギレさせる</h3>
+<p>スマホの充電切れにパニックになり、案内役のエディターが乗車中だったUberを高速道路のど真ん中でキャンセルしてしまった。運転手を激怒させ、平謝りする事態に発展。</p>
+</div>
+<div class="char-episode" style="margin-bottom: 2rem; border-left: 3px solid var(--char-color); padding-left: 1.5rem;">
+<h3 style="color: var(--char-color); margin-bottom: 0.5rem; font-family: 'Rubik Glitch';">「全裸」でPC組み立て</h3>
+<p>「静電気でパーツが壊れる」という知識を真に受けた結果、静電気防止ストラップ以外何も身につけない全裸状態でPCを組み立てるという奇行に走った。</p>
+</div>
+</div>
+</section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© 2026 VTuber Archive Project. 非公式ファンページ。</p>
+    </footer>
+
+    <script src="../../mobile_optimize.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = "1";
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.char-section').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transition = "opacity 0.8s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

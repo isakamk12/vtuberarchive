@@ -22,31 +22,59 @@
 <p class="hero-subtitle">[ Archive Database ]</p>
 </header>
 <main class="main-content">
-<article class="card roster-section">
-<h2><i class="fa-solid fa-users"></i> TALENT ROSTER</h2>
-<div class="member-grid">
-<a class="member-card" href="characters/hime.html">
-<span class="member-name">田中ヒメ</span>
-<span class="member-title">Hime Tanaka</span>
-<p class="member-status">感情を叫ぶようなハイトーンの歌声が特徴。笑いとおしゃべりが止まらないハイテンションな女の子。</p>
-<div class="member-tags">
-<span class="member-tag">Diva</span>
-<span class="member-tag">HighTension</span>
-<span class="member-tag">Studio LaRa</span>
-</div>
-</a>
-<a class="member-card" href="characters/hina.html">
-<span class="member-name">鈴木ヒナ</span>
-<span class="member-title">Hina Suzuki</span>
-<p class="member-status">しっとりした優しい歌声が特徴。おっとり天然な性格の裏に、極度のアニメオタクという顔を持つ。</p>
-<div class="member-tags">
-<span class="member-tag">VSinger</span>
-<span class="member-tag">AnimeOtaku</span>
-<span class="member-tag">Studio LaRa</span>
-</div>
-</a>
-</div>
-</article>
+    <article class="card roster-section">
+        <h2><i class="fa-solid fa-users"></i> TALENT ROSTER</h2>
+        <div class="member-grid">
+            <a class="member-card" href="characters/hime.html">
+                <span class="member-name">田中ヒメ</span>
+                <span class="member-title">Hime Tanaka</span>
+                <p class="member-status">感情を叫ぶようなハイトーンの歌声が特徴。笑いとおしゃべりが止まらないハイテンションな女の子。</p>
+                <div class="member-tags">
+                    <span class="member-tag">Diva</span>
+                    <span class="member-tag">HighTension</span>
+                </div>
+            </a>
+            <a class="member-card" href="characters/hina.html">
+                <span class="member-name">鈴木ヒナ</span>
+                <span class="member-title">Hina Suzuki</span>
+                <p class="member-status">しっとりした優しい歌声が特徴。おっとり天然な、極度のアニメオタク（宅の女）。</p>
+                <div class="member-tags">
+                    <span class="member-tag">VSinger</span>
+                    <span class="member-tag">AnimeOtaku</span>
+                </div>
+            </a>
+        </div>
+    </article>
+
+    <article class="card highlight-card" style="margin-top: 5rem;">
+        <h2><i class="fa-solid fa-star"></i> SHARED MEMORIES / EPISODES</h2>
+        <div class="episode-grid">
+            <div class="episode-item">
+                <h3>斎藤さんでの珍会話</h3>
+                <p>通話アプリ「斎藤さん」で出会った相手から「お尻の向こうには川が見えます」という謎のパワーワードを引き出す奇跡。</p>
+            </div>
+            <div class="episode-item">
+                <h3>おしゃぶり伝言ゲーム</h3>
+                <p>「海に行きたい」という言葉をヒナが「船は臭いね」と聞き間違え、空耳の向こう側へ到達。</p>
+            </div>
+            <div class="episode-item">
+                <h3>配信終了ボタン誤爆</h3>
+                <p>星川サラとの初コラボにて、アンケート終了と間違えて配信終了を押し、最速で伝説を作る。</p>
+            </div>
+            <div class="episode-item">
+                <h3>ライブ前の過呼吸</h3>
+                <p>1stワンマン開演前、緊張しすぎて二人でひたすら「おえー、げー」とえずき合う絆の深さ。</p>
+            </div>
+            <div class="episode-item">
+                <h3>架空の記憶ドッキリ</h3>
+                <p>「月面でロケットカラオケ」など、存在しないエピソードを混ぜてヒナを騙そうとするが...。</p>
+            </div>
+            <div class="episode-item">
+                <h3>VR乳搾りの才能</h3>
+                <p>VR新居お披露目での乳搾り体験にて、ヒナが謎の圧倒的才能を発揮しスタジオが騒然。</p>
+            </div>
+        </div>
+    </article>
 <div class="content-grid">
 <article class="card highlight-card">
 <h2><i class="fa-solid fa-seedling"></i> 運営実績と継続性</h2>
@@ -261,9 +289,10 @@
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
                     }
                 });
-            }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+            }, { threshold: 0.05, rootMargin: "0px 0px -50px 0px" });
 
             cards.forEach(card => observer.observe(card));
         });
