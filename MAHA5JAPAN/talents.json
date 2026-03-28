@@ -1,0 +1,264 @@
+[
+  {
+    "id": "otonari-moka",
+    "name": "音成モカ",
+    "englishName": "Otonari Moka",
+    "agency": "MAHA5JAPAN",
+    "generation": "1期生",
+    "debut": "2021年6月26日",
+    "birthday": "3月29日",
+    "height": "156cm",
+    "fanMark": "☕💚",
+    "description": "ハーフエルフの喫茶店員。緑の髪とオッドアイが特徴。「さらまっぱぎ」の挨拶を愛用。自称「清楚」だがリスナーにいじられる愛されキャラ。",
+    "episodes": [
+      { "title": "自称「清楚」！いじられ愛されキャラ", "content": "事あるごとに「私は清楚」と主張するものの、リスナーからはプロレス気味にいじられるのがお約束です。" },
+      { "title": "理系モカちゃん", "content": "ふわふわした雰囲気ですが実は理系脳。センター試験の数ⅠAで95点以上取った実力を持ちます。" }
+    ],
+    "color": "#a8d5ba",
+    "theme": "cafe"
+  },
+  {
+    "id": "gaoh-omi",
+    "name": "雅桜おみ",
+    "englishName": "Gaoh Omi",
+    "agency": "MAHA5JAPAN",
+    "generation": "1期生",
+    "birthday": "7月18日",
+    "height": "165cm",
+    "age": "永遠の20歳",
+    "fanMark": "👑🐣",
+    "description": "雅の国出身の王族系VTuber。治安の悪さと高い歌唱力のギャップが魅力。「オタクくん殺すの好き」と語る暴君的な一面も。",
+    "episodes": [
+      { "title": "巻き舌習得に1年かけた執念", "content": "椎名林檎に憧れ、毎晩練習して巻き舌を習得。歌唱への並々ならぬ情熱を持っています。" },
+      { "title": "戸籍謄本で「弟」の存在が発覚", "content": "会ったことのない弟が認知されていたことが発覚。「いつか会いに行く動画撮りたい」と笑いに変えました。" }
+    ],
+    "color": "#ffd700",
+    "theme": "royal"
+  },
+  {
+    "id": "higeki-rin",
+    "name": "緋撃 燐",
+    "englishName": "Higeki Rin",
+    "agency": "MAHA5JAPAN",
+    "generation": "GAMERS",
+    "debut": "2021年9月24日",
+    "height": "165cm(実寸159cm)",
+    "description": "ゲームが生きがいな軍人最高司令官。萌え声と野球狂（中日・阪神二刀流）ぶりが武器。オーディションで性癖を語った伝説を持つ。",
+    "episodes": [
+      { "title": "公式165cmの裏にある「盛底」", "content": "シークレットブーツで身長をごまかしており、実際の身長は159cmであることを暴露しました。" },
+      { "title": "狂気的な野球愛", "content": "同時視聴配信で同接3万人の大台を突破。VTuber同接ランキング1位を獲得する快挙を達成しました。" }
+    ],
+    "color": "#e60012",
+    "theme": "military"
+  },
+  {
+    "id": "futaboshi-kira",
+    "name": "双星きら",
+    "englishName": "Futaboshi Kira",
+    "agency": "MAHA5JAPAN",
+    "debut": "2021年6月24日",
+    "description": "双子座の星から生まれたアイドルVTuber。兄のキラを溺愛。2025年4月に卒業を発表。「きらキラ笑顔」を届け続ける。",
+    "episodes": [
+      { "title": "ヘブバン愛とガチャの奇跡", "content": "渾身の祈りを捧げてガチャを回し、10連でSS4枚抜きという配信者の神懸かり的な運を見せました。" },
+      { "title": "筋肉をアピールする「物理系アイドル」", "content": "FF14でタンクを選び、「きらの筋肉ムキムキですよ」と歌って踊れる物理系アイドルを自称します。" }
+    ],
+    "color": "#fff100",
+    "theme": "idol"
+  },
+  {
+    "id": "botamochi-kazu",
+    "name": "牡丹餅 かず",
+    "englishName": "Botamochi Kazu",
+    "agency": "MAHA5JAPAN",
+    "debut": "2022年6月1日",
+    "description": "「餅の世界」から来たお兄さん的存在。多趣味でアクティブ。ナゲット100個耐久やマーマイト罰ゲームなど、体当たり企画が多い。",
+    "episodes": [
+      { "title": "デビューまでの「謎の餅」期間", "content": "数ヶ月間、人の姿にならず「おはぎ（餅）」の姿のまま配信を焦らした伝説の期間があります。" },
+      { "title": "オタクな「母もっち」の英才教育", "content": "母親からコスプレ衣装を自作され、小学生時代からイベントに参加していたというオタクエリートです。" }
+    ],
+    "color": "#7a4171",
+    "theme": "mochi"
+  },
+  {
+    "id": "shido-kosuke",
+    "name": "志導コスケ",
+    "englishName": "Shido Kosuke",
+    "agency": "MAHA5JAPAN",
+    "age": "37歳",
+    "description": "小料理屋を営むおじさん。「配信狂人」と呼ばれるほどの長時間配信（初配信12時間）が特技。看板猫の大輔が大人気。",
+    "episodes": [
+      { "title": "狂気のマイクラ穴掘り", "content": "地下最下層までひたすら手作業で掘り続ける。数十時間を費やす整地作業を「心から楽しい」と語ります。" },
+      { "title": "1時間弱で1000人突破の軌跡", "content": "誕生日凸待ち企画で、リスナーの団結力によりわずか1時間で1000人以上を突破し、深く感動しました。" }
+    ],
+    "color": "#1c305c",
+    "theme": "pub"
+  },
+  {
+    "id": "omotsubaki-no9",
+    "name": "面椿No.9",
+    "englishName": "Omotsubaki No.9",
+    "agency": "MAHA5JAPAN",
+    "debut": "2021年7月1日",
+    "description": "「暗躍する謎のおネエ」。サプライズ、企画への情熱が凄まじい。「おネエは2度刺す」が座右の銘。自腹で高額PCを賞品にする企画屋。",
+    "episodes": [
+      { "title": "驚愕のサプライズデビュー", "content": "引退を匂わせる配信から、日付が変わった瞬間に企業勢デビューを発表。リスナーを極限まで驚かせました。" },
+      { "title": "Live2Dを飛ばして3D化", "content": "2年越しの伏線として、いきなり3Dモデルでお披露目を行い、古参ファンをも驚愕させました。" }
+    ],
+    "color": "#d9333f",
+    "theme": "theatre"
+  },
+  {
+    "id": "pipi-supiru",
+    "name": "ぴぴ すぴる",
+    "englishName": "Pipi Supiru",
+    "agency": "MAHA5JAPAN",
+    "age": "12002歳",
+    "description": "単眼星出身のハーフ。ピンクの髪はいちごの食べ過ぎ。可愛い女の子に目がないアイドル。驚くとおじさんボイスが出る。",
+    "episodes": [
+      { "title": "口内炎のドアップ事件", "content": "初配信で自身の口内炎の写真を3倍サイズで公開しようとした、斜め上の根性を持つポンコツ系アイドルです。" },
+      { "title": "エアコンなしで夏を乗り切る", "content": "冷房のない部屋で凍らせたペットボトルを抱いて配信する、涙ぐましい努力を続けています。" }
+    ],
+    "color": "#f09199",
+    "theme": "monocular"
+  },
+  {
+    "id": "ichino-nabana",
+    "name": "市乃菜花",
+    "englishName": "Ichino Nabana",
+    "agency": "MAHA5JAPAN",
+    "description": "散歩好きのコミュ障オタク。SF小説や映画を好む知的でマニアックな感性と、数々のPONエピソードを併せ持つ。",
+    "episodes": [
+      { "title": "配信プラットフォームの間違い", "content": "YouTubeで開始したのに設定がTwitchになっていたことに気づき「危なかった」と焦る一幕も。" },
+      { "title": "「PON」を辞書で調べる凝り性", "content": "自分のPONを語るためにわざわざ図書館で国語辞典を調べ、語源まで分析するオタク気質です。" }
+    ],
+    "color": "#b28dc6",
+    "theme": "flower"
+  },
+  {
+    "id": "alan",
+    "name": "青蘭",
+    "englishName": "Alan",
+    "agency": "MAHA5JAPAN",
+    "description": "未来から来たイケボ未来人。かまちょな性格で「褒めて！」とねねだる姿が愛らしい。オーディションは酒の勢いで応募した伝説あり。",
+    "episodes": [
+      { "title": "都合の良い「未来人設定」", "content": "流行を知らない言い訳に未来人を自称しつつ、少し前のネット文化には妙に詳しいことがあります。" },
+      { "title": "登録者減少にガチ拗ね", "content": "数字が1人減っただけで「俺泣くからね、歌枠やめる！」とマジ拗ねモードを発動してリスナーを笑わせます。" }
+    ],
+    "color": "#009ad6",
+    "theme": "future"
+  },
+  {
+    "id": "mayoiji-meiro",
+    "name": "迷路メイロ",
+    "englishName": "Meiro Mayoiji",
+    "agency": "MAHA5JAPAN",
+    "description": "迷子の猫娘。極度の方向音痴。労働を極端に嫌い、配信時間を確保するために退職するほどの覚悟の持ち主。",
+    "episodes": [
+      { "title": "所属直後にチャンネル爆散", "content": "登録者700人のメインチャンネルを手続きミスで削除してしまい、運営の神対応で復活した伝説があります。" },
+      { "title": "リスナーへの重すぎる愛", "content": "「なんで他の女の配信見てるの？」など、重厚な愛情（メンヘラ疑惑）を向ける愛の重い猫娘です。" }
+    ],
+    "color": "#1a1a1a",
+    "theme": "cat"
+  },
+  {
+    "id": "yukino",
+    "name": "雪乃",
+    "englishName": "Yukino",
+    "agency": "MAHA5JAPAN",
+    "debut": "2025年4月11日",
+    "description": "雪の国の歌う女王。地図が読めず帰国不能。安眠ボイスと「クソガキ」ムーブのギャップ、そして恒例の「ミュート芸」が人気。",
+    "episodes": [
+      { "title": "地図が読めない「迷子の女王」", "content": "極度の方向音痴で帰れなくなり、リモートで国を統治しながらVTuberとして活動を続けています。" },
+      { "title": "圧倒的美ジュと「足売り」", "content": "太もものレッグガーターがエッチで最高と好評。胸については「期待しないで、足売りなんで！」と潔く宣言。" }
+    ],
+    "color": "#ffffff",
+    "theme": "snow"
+  },
+  {
+    "id": "sakura-isumi",
+    "name": "朔桜衣澄",
+    "englishName": "Sakura Isumi",
+    "agency": "MAHA5JAPAN",
+    "age": "666歳",
+    "description": "ヴァンパイアと天使のハーフ。限界オタクで腐女子な「清楚(自称)担当」。一人で自己紹介して終わった伝説の初配信を持つ。",
+    "episodes": [
+      { "title": "伝説の「一人語り」初配信", "content": "配信が始まっていないのに、1人でOBSの前で自己紹介を完遂してしまった伝説のPONです。" },
+      { "title": "ゴリゴリの乙女ゲーマー", "content": "『DIABOLIK LOVERS』が好きすぎて、学校のプレゼンでゴリゴリに布教した実績を持ちます。" }
+    ],
+    "color": "#f19ca7",
+    "theme": "vampire"
+  },
+  {
+    "id": "irodori-irori",
+    "name": "紅酉いろり",
+    "englishName": "Irodori Irori",
+    "agency": "MAHA5JAPAN",
+    "age": "24歳",
+    "description": "美容系VTuber。メイクアップアーティスト兼ミュージシャン。女と金が好きと公言する、オープンでワーカホリックな姿勢が魅力。",
+    "episodes": [
+      { "title": "デビュー5日目で大遅刻", "content": "マイクラに熱中しすぎて公式番組に大遅刻。「デビュー5日で遅刻した男」として自らネタに昇華しました。" },
+      { "title": "狂気のファンネーム", "content": "「いろりんしゅきしゅきさんチーム」という過激な名前が熱狂的なファンに定着し、公認しています。" }
+    ],
+    "color": "#81d0ff",
+    "theme": "beauty"
+  },
+  {
+    "id": "sayonaki-mio",
+    "name": "小夜鳴ミオ",
+    "englishName": "Sayonaki Mio",
+    "agency": "MAHA5JAPAN",
+    "description": "服飾見習い兼ミュージシャン。低音ボイスとデスボイスを使い分けるギャップの塊。初配信にプロテインだけ持ってきた伝説の男。",
+    "episodes": [
+      { "title": "伝説の初配信", "content": "配信に必要なスマホを忘れ、プロテインとクソデカ手書き歌詞カードを持参してスタジオを凍りつかせました。" },
+      { "title": "ホラゲーでの突然の熱唱", "content": "恐怖を歌でごまかすために、ホラーゲーム中にリバーブ全開で熱唱し、視聴者を大いに困惑させました。" }
+    ],
+    "color": "#4a4a4a",
+    "theme": "visual"
+  },
+  {
+    "id": "himemiya-rino",
+    "name": "姫宮りの",
+    "englishName": "Himemiya Rino",
+    "agency": "MAHA5JAPAN",
+    "debut": "2025年8月29日",
+    "description": "可愛いを学ぶ留学生。可愛らしい外見に反して、モニター台座をボコボコにした過去を持つガチゲーマー。コミュ強お化け。",
+    "episodes": [
+      { "title": "台座クラッシャーな過去", "content": "スプラトゥーンに熱中するあまり、負けた怒りでモニター台座をボコボコにした衝撃の過去を暴露しました。" },
+      { "title": "24時間生誕凸待ちの暴走", "content": "睡魔で限界を超え、誰にでも「婚姻届」を送りつける奇行を連発。深夜テンションで伝説を作りました。" }
+    ],
+    "color": "#ffb6c1",
+    "theme": "kawaii"
+  },
+  {
+    "id": "hitoyo-enishi",
+    "name": "緋十夜 縁",
+    "englishName": "Hitoyo Enishi",
+    "agency": "MAHA5JAPAN",
+    "debut": "2024年4月5日",
+    "description": "治安悪めな歌のお兄さん。裏では事務所運営も支える保護者役。ボソボソ喋る低音と、「バカでかい」音圧の歌声がギャップ。",
+    "episodes": [
+      { "title": "幻の1時間歌枠", "content": "配信開始ボタンを押さずに1時間1人で歌い続けた大事件。絶望しながらも歌い直す姿がリスナーの心を打ちました。" },
+      { "title": "パルへの容赦ないサイコパス", "content": "可愛いパルを愛でながらも、裏では作業効率のために「さよなら」と解体する冷静なギャップを見せます。" }
+    ],
+    "color": "#2c3e50",
+    "theme": "manager"
+  },
+  {
+    "id": "kurage-yuru",
+    "name": "海月ゆる",
+    "englishName": "Kurage Yuru",
+    "agency": "MAHA5JAPAN",
+    "debut": "2020年11月3日",
+    "birthday": "7月3日",
+    "height": "135cm",
+    "age": "16歳/3ヶ月",
+    "description": "ゆるっと脱力系ねこくらげVTuber。ミズクラゲだが猫耳としっぽがある。世界征服を夢見ている。ゲームで豹変し絶叫するギャップを持つ。",
+    "episodes": [
+      { "title": "恐怖の「ジャイアンリサイタル」", "content": "自称音痴な歌枠は「リサイタル」と呼ばれ、リスナーの鼓膜の安全を気遣いながら懸命に歌います。" },
+      { "title": "スパチャは「血となり肉となる」世界征服の糧", "content": "貰ったスパチャを世界征服の資金やクローン生成の糧として感謝を述べるマッドな一面も。" },
+      { "title": "伝統芸能と化した「機材トラブル」", "content": "回線落ちやOBSフリーズに愛されており、記念日でもトラブルが起きるのがお約束です。" }
+    ],
+    "color": "#9be4eb",
+    "theme": "ocean"
+  }
+]
