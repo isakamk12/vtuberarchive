@@ -1,0 +1,218 @@
+/* =====================================================
+   MAHA5 — Character Page Base CSS
+   Brand color: Crimson Red, Ocean Blue
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;900&family=Nunito:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap');
+
+:root {
+    --c-main: #E60012;
+    /* Red */
+    --c-sub: #0288D1;
+    /* Blue */
+    --c-bg: #FFFFFF;
+    --c-surface: #FFFFFF;
+    --c-text: #374151;
+    /* Override per character: */
+    --char-color: #E60012;
+    --char-rgb: 230, 0, 18;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--c-bg);
+    color: var(--c-text);
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Dynamic subtle grid background */
+.char-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-image: radial-gradient(rgba(var(--char-rgb), 0.05) 2px, transparent 2px);
+    background-size: 30px 30px;
+    pointer-events: none;
+}
+
+.char-bg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: var(--char-color);
+}
+
+.char-back {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--c-text);
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 900;
+    padding: 10px 20px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s;
+    z-index: 100;
+    letter-spacing: 1px;
+}
+
+.char-back:hover {
+    color: #fff;
+    background: var(--char-color);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(var(--char-rgb), 0.2);
+}
+
+.char-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    padding: 120px 2rem 4rem;
+    text-align: center;
+    position: relative;
+    background: linear-gradient(135deg, rgba(var(--char-rgb), 0.05) 0%, transparent 100%);
+}
+
+.char-name {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: clamp(3rem, 8vw, 5rem);
+    font-weight: 900;
+    color: #1A1C23;
+    margin-bottom: 0.5rem;
+    line-height: 1.1;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 0px rgba(var(--char-rgb), 0.1);
+}
+
+.char-read {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--char-color);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.char-tag {
+    display: inline-block;
+    padding: 6px 16px;
+    background: transparent;
+    border: 2px solid var(--char-color);
+    color: var(--char-color);
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 900;
+    border-radius: 20px;
+    margin: 4px;
+}
+
+.char-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem 2rem 100px;
+    position: relative;
+}
+
+.char-section {
+    margin-bottom: 4rem;
+    background: var(--c-surface);
+    padding: 3rem;
+    position: relative;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.char-section::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 30px;
+    bottom: 30px;
+    width: 4px;
+    background: var(--char-color);
+    border-radius: 0 4px 4px 0;
+}
+
+.char-section h2 {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #1A1C23;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.char-section h2::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.05);
+    margin-left: 10px;
+}
+
+.char-section p,
+.char-section li {
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+}
+
+.char-section ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.char-section ul li {
+    position: relative;
+    padding-left: 25px;
+}
+
+.char-section ul li::before {
+    content: '\f054';
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    color: var(--char-color);
+    font-size: 0.8rem;
+}
+
+.char-footer {
+    padding: 4rem 2rem;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #999;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    letter-spacing: 1px;
+}

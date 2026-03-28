@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>ProPro Production | VTuber Archive</title>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <style>
+        :root {
+            --pp-pink: #ff69b4;
+            --pp-blue: #00bfff;
+            --pp-purple: #9370db;
+            --pp-dark: #2c3e50;
+            --pp-bg: #fffafa;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--pp-bg);
+            color: var(--pp-dark);
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+            overflow-x: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, var(--pp-pink), var(--pp-purple));
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .header h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            font-weight: 900;
+            letter-spacing: 4px;
+        }
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        .nav-back {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: white;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            z-index: 10;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 900;
+            margin-bottom: 2rem;
+            border-bottom: 3px solid var(--pp-pink);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        .member-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        .member-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+            cursor: pointer;
+            text-align: center;
+            border: 2px solid transparent;
+        }
+        .member-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--pp-pink);
+            box-shadow: 0 15px 40px rgba(255, 105, 180, 0.2);
+        }
+        .member-icon {
+            font-size: 3rem;
+            color: var(--pp-pink);
+            margin-bottom: 1.5rem;
+        }
+        .member-name {
+            font-size: 1.5rem;
+            font-weight: 900;
+            margin-bottom: 5px;
+        }
+        .member-read {
+            font-size: 0.8rem;
+            color: #888;
+            text-transform: uppercase;
+        }
+        footer {
+            text-align: center;
+            padding: 4rem;
+            background: #f8f9fa;
+            color: #888;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html" class="nav-back"><i class="fa-solid fa-chevron-left"></i> BACK TO HUB</a>
+        <h1>ProPro Production</h1>
+        <p>メンタルケアを大切にするVTuberプロダクション。メンヘラは個性である。</p>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2 class="section-title">所属タレント</h2>
+            <div class="member-grid">
+                <!-- 緋撃 燐 -->
+                <div class="member-card" onclick="window.location.href='characters/rin.html'">
+                    <div class="member-icon"><i class="fa-solid fa-fire"></i></div>
+                    <div class="member-name">緋撃 燐</div>
+                    <div class="member-read">Higeki Rin</div>
+                </div>
+                <!-- 双星きら -->
+                <div class="member-card" onclick="window.location.href='characters/kira.html'">
+                    <div class="member-icon"><i class="fa-solid fa-star"></i></div>
+                    <div class="member-name">双星きら</div>
+                    <div class="member-read">Futaboshi Kira</div>
+                </div>
+                <!-- 迷路メイロ -->
+                <div class="member-card" onclick="window.location.href='characters/meiro.html'">
+                    <div class="member-icon"><i class="fa-solid fa-cat"></i></div>
+                    <div class="member-name">迷路メイロ</div>
+                    <div class="member-read">Meiro Mayoiji</div>
+                </div>
+                <!-- 姫宮りの -->
+                <div class="member-card" onclick="window.location.href='characters/rino.html'">
+                    <div class="member-icon"><i class="fa-solid fa-crown"></i></div>
+                    <div class="member-name">姫宮りの</div>
+                    <div class="member-read">Himemiya Rino</div>
+                </div>
+                <!-- 青蘭 -->
+                <div class="member-card" onclick="window.location.href='characters/alan.html'">
+                    <div class="member-icon"><i class="fa-solid fa-robot"></i></div>
+                    <div class="member-name">青蘭</div>
+                    <div class="member-read">Alan</div>
+                </div>
+                <!-- 牡丹餅 かず -->
+                <div class="member-card" onclick="window.location.href='characters/kazu.html'">
+                    <div class="member-icon"><i class="fa-solid fa-bowl-rice"></i></div>
+                    <div class="member-name">牡丹餅 かず</div>
+                    <div class="member-read">Botamochi Kazu</div>
+                </div>
+                <!-- 志導コスケ -->
+                <div class="member-card" onclick="window.location.href='characters/kosuke.html'">
+                    <div class="member-icon"><i class="fa-solid fa-book-open"></i></div>
+                    <div class="member-name">志導コスケ</div>
+                    <div class="member-read">Shido Kosuke</div>
+                </div>
+                <!-- 面椿No.9 -->
+                <div class="member-card" onclick="window.location.href='characters/no9.html'">
+                    <div class="member-icon"><i class="fa-solid fa-masks-theater"></i></div>
+                    <div class="member-name">面椿No.9</div>
+                    <div class="member-read">Omotsubaki No.9</div>
+                </div>
+                <!-- ぴぴ すぴる -->
+                <div class="member-card" onclick="window.location.href='characters/supiru.html'">
+                    <div class="member-icon"><i class="fa-solid fa-eye"></i></div>
+                    <div class="member-name">ぴぴ すぴる</div>
+                    <div class="member-read">Pipi Supiru</div>
+                </div>
+                <!-- 市乃菜花 -->
+                <div class="member-card" onclick="window.location.href='characters/nabana.html'">
+                    <div class="member-icon"><i class="fa-solid fa-leaf"></i></div>
+                    <div class="member-name">市乃菜花</div>
+                    <div class="member-read">Ichino Nabana</div>
+                </div>
+                <!-- 雪乃 -->
+                <div class="member-card" onclick="window.location.href='characters/yukino.html'">
+                    <div class="member-icon"><i class="fa-solid fa-snowflake"></i></div>
+                    <div class="member-name">雪乃</div>
+                    <div class="member-read">Yukino</div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2026 VTuber Archive Project. Unofficial Fan Site.</p>
+    </footer>
+</body>
+</html>

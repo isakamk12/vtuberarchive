@@ -1395,24 +1395,6 @@ const agencies = [
             desc_ko: "본드라이브 (bondlive)는 일본 기반의 VTuber 에이전시입니다. 게임 및 라이브/이벤트이(가) 특징입니다. 공식 사이트에서 소속 멤버를 확인할 수 있습니다."
         },
         {
-            name: "MAHA5JAPAN",
-            name_en: "MAHA5JAPAN",
-            name_es: "MAHA5JAPAN",
-            name_zh: "MAHA5JAPAN",
-            name_ko: "마하판차 재팬 (MAHA5JAPAN)",
-            sub: "マハパンチャ JP",
-            filter: "global",
-            color: "255, 80, 120",
-            icon: "M",
-            url: "MAHA5JAPAN/maha5_index.html",
-            tags: ["Agency", "JP", "Corporate"],
-            desc: "MAHA5JAPANは日本のVTuber事務所。公式サイトで所属タレントの一覧が確認できる。",
-            desc_en: "MAHA5JAPAN is a Japan-based VTuber agency. The site lists the talent roster.",
-            desc_es: "MAHA5JAPAN es una agencia VTuber con base en Japón. El sitio muestra el roster de talentos.",
-            desc_zh: "MAHA5JAPAN是日本的VTuber 事务所。官网可查看成员名单。",
-            desc_ko: "마하판차 재팬 (MAHA5JAPAN)는 일본 기반의 VTuber 에이전시입니다. 공식 사이트에서 소속 멤버를 확인할 수 있습니다."
-        },
-        {
             name: "MeSTAGE",
             name_en: "MeSTAGE",
             name_es: "MeSTAGE",
@@ -2064,4 +2046,5 @@ const app = createApp({
 agencies.forEach(item => { item.resolvedTags = item.tags || []; });
 
 app.mount('#app');
+
 

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>雅桜おみ | MAHA5 Archive</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="char-base.css" rel="stylesheet"/>
+    <style>
+        :root {
+            --char-color: #ffd700;
+            --char-rgb: 255, 215, 0;
+        }
+        .episode-card {
+            background: rgba(var(--char-rgb), 0.05);
+            border-left: 4px solid var(--char-color);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 0 12px 12px 0;
+            transition: transform 0.3s;
+        }
+        .episode-card:hover {
+            transform: translateX(10px);
+            background: rgba(var(--char-rgb), 0.1);
+        }
+        .episode-title {
+            font-weight: 900;
+            color: #856404;
+            margin-bottom: 0.5rem;
+            display: block;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+    <a class="char-back" href="../maha5_index.html">
+        <i class="fa-solid fa-arrow-left"></i> BACK
+    </a>
+
+    <header class="char-hero">
+        <div class="char-tag">MAHA5 JAPAN 1st Generation</div>
+        <h1 class="char-name">雅桜おみ</h1>
+        <p class="char-read">Gaoh Omi</p>
+        <div class="char-info-pills">
+            <span class="char-tag">Birthday: 07.18</span>
+            <span class="char-tag">Age: 永遠の20歳</span>
+            <span class="char-tag">Fan: 👑🐣</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2><i class="fa-solid fa-user"></i> Profile</h2>
+            <p>
+                雅の国出身の王族系VTuber。治安の悪さと高い歌唱力のギャップが魅力。「オタクくん殺すの好き」と語る暴君的な一面も。
+            </p>
+            <p>
+                「MAHA5 JAPAN」の1期生としてデビューし、その圧倒的な存在感と歌唱力でファンを圧倒し続けています。
+            </p>
+        </section>
+
+        <section class="char-section">
+            <h2><i class="fa-solid fa-star"></i> Iconic Episodes</h2>
+
+            <div class="episode-card">
+                <span class="episode-title">巻き舌習得に1年かけた執念</span>
+                <p>椎名林檎に憧れ、毎晩練習して巻き舌を習得。歌唱への並々ならぬ情熱を持っています。</p>
+            </div>
+
+            <div class="episode-card">
+                <span class="episode-title">戸籍謄本で「弟」の存在が発覚</span>
+                <p>会ったことのない弟が認知されていたことが発覚。「いつか会いに行く動画撮りたい」と笑いに変えました。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© MAHA5 / VTuber Archive Project</p>
+    </footer>
+
+    <script src="../maha5_script.js"></script>
+</body>
+</html>

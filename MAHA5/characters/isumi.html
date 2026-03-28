@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>朔桜衣澄 | MAHA5 Archive</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="char-base.css" rel="stylesheet"/>
+    <style>
+        :root {
+            --char-color: #f19ca7;
+            --char-rgb: 241, 156, 167;
+        }
+        .episode-card {
+            background: rgba(var(--char-rgb), 0.1);
+            border-left: 4px solid var(--char-color);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 0 12px 12px 0;
+            transition: transform 0.3s;
+        }
+        .episode-card:hover {
+            transform: translateX(10px);
+            background: rgba(var(--char-rgb), 0.2);
+        }
+        .episode-title {
+            font-weight: 900;
+            color: #b04e5a;
+            margin-bottom: 0.5rem;
+            display: block;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+    <a class="char-back" href="../maha5_index.html">
+        <i class="fa-solid fa-arrow-left"></i> BACK
+    </a>
+
+    <header class="char-hero">
+        <div class="char-tag">MAHA5 JAPAN / Actors To Live!</div>
+        <h1 class="char-name">朔桜衣澄</h1>
+        <p class="char-read">Sakura Isumi</p>
+        <div class="char-info-pills">
+            <span class="char-tag">Age: 666歳</span>
+            <span class="char-tag">Theme: Vampire Angel</span>
+            <span class="char-tag">Role: 腐女子清楚(自称)</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2><i class="fa-solid fa-user"></i> Profile</h2>
+            <p>
+                ヴァンパイアと天使のハーフ。限界オタクで腐女子な「清楚(自称)担当」。一人で自己紹介して終わった伝説の初配信を持つ。
+            </p>
+            <p>
+                「Actors To Live!」のメンバーとして、そのギャップのある魅力でお茶の間を沸かせています。
+            </p>
+        </section>
+
+        <section class="char-section">
+            <h2><i class="fa-solid fa-star"></i> Iconic Episodes</h2>
+
+            <div class="episode-card">
+                <span class="episode-title">伝説の「一人語り」初配信</span>
+                <p>配信が始まっていないのに、1人でOBSの前で自己紹介を完遂してしまった伝説のPONです。</p>
+            </div>
+
+            <div class="episode-card">
+                <span class="episode-title">ゴリゴリの乙女ゲーマー</span>
+                <p>『DIABOLIK LOVERS』が好きすぎて、学校のプレゼンでゴリゴリに布教した実績を持ちます。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© MAHA5 / VTuber Archive Project</p>
+    </footer>
+
+    <script src="../maha5_script.js"></script>
+</body>
+</html>

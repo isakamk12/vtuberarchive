@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>海月ゆる | MAHA5 Archive</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="char-base.css" rel="stylesheet"/>
+    <style>
+        :root {
+            --char-color: #9be4eb;
+            --char-rgb: 155, 228, 235;
+        }
+        .episode-card {
+            background: rgba(var(--char-rgb), 0.1);
+            border-left: 4px solid var(--char-color);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 0 12px 12px 0;
+            transition: transform 0.3s;
+        }
+        .episode-card:hover {
+            transform: translateX(10px);
+            background: rgba(var(--char-rgb), 0.2);
+        }
+        .episode-title {
+            font-weight: 900;
+            color: #2b7a8a;
+            margin-bottom: 0.5rem;
+            display: block;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+    <a class="char-back" href="../maha5_index.html">
+        <i class="fa-solid fa-arrow-left"></i> BACK
+    </a>
+
+    <header class="char-hero">
+        <div class="char-tag">MAHA5 JAPAN / Actors To Live!</div>
+        <h1 class="char-name">海月ゆる</h1>
+        <p class="char-read">Kurage Yuru</p>
+        <div class="char-info-pills">
+            <span class="char-tag">Debut: 2020.11.03</span>
+            <span class="char-tag">Age: 16歳/3ヶ月</span>
+            <span class="char-tag">Fan: 👾🧪</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2><i class="fa-solid fa-user"></i> Profile</h2>
+            <p>
+                ゆるっと脱力系ねこくらげVTuber。ミズクラゲだが猫耳としっぽがある。世界征服を夢見ている。ゲームで豹変し絶叫するギャップを持つ。
+            </p>
+            <p>
+                音楽ユニット「Actors To Live!」のメンバーとしても活動中。
+            </p>
+        </section>
+
+        <section class="char-section">
+            <h2><i class="fa-solid fa-star"></i> Iconic Episodes</h2>
+
+            <div class="episode-card">
+                <span class="episode-title">恐怖の「ジャイアンリサイタル」</span>
+                <p>自称音痴な歌枠は「リサイタル」と呼ばれ、リスナーの鼓膜の安全を気遣いながら懸命に歌います。</p>
+            </div>
+
+            <div class="episode-card">
+                <span class="episode-title">スパチャは「血となり肉となる」世界征服の糧</span>
+                <p>貰ったスパチャを世界征服の資金やクローン生成の糧として感謝を述べるマッドな一面も。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© MAHA5 / VTuber Archive Project</p>
+    </footer>
+
+    <script src="../maha5_script.js"></script>
+</body>
+</html>

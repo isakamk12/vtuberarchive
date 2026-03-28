@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>小夜鳴ミオ | MAHA5 Archive</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="char-base.css" rel="stylesheet"/>
+    <style>
+        :root {
+            --char-color: #4a4a4a;
+            --char-rgb: 74, 74, 74;
+        }
+        .episode-card {
+            background: rgba(var(--char-rgb), 0.05);
+            border-left: 4px solid var(--char-color);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 0 12px 12px 0;
+            transition: transform 0.3s;
+        }
+        .episode-card:hover {
+            transform: translateX(10px);
+            background: rgba(var(--char-rgb), 0.1);
+        }
+        .episode-title {
+            font-weight: 900;
+            color: #333;
+            margin-bottom: 0.5rem;
+            display: block;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+    <a class="char-back" href="../maha5_index.html">
+        <i class="fa-solid fa-arrow-left"></i> BACK
+    </a>
+
+    <header class="char-hero">
+        <div class="char-tag">MAHA5 JAPAN / Actors To Live!</div>
+        <h1 class="char-name">小夜鳴ミオ</h1>
+        <p class="char-read">Sayonaki Mio</p>
+        <div class="char-info-pills">
+            <span class="char-tag">Theme: Visual Kei & Music</span>
+            <span class="char-tag">Fan: ミオ教</span>
+            <span class="char-tag">Role: Low Bass & Death Voice</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2><i class="fa-solid fa-user"></i> Profile</h2>
+            <p>
+                服飾見習い兼ミュージシャン。低音ボイスとデスボイスを使い分けるギャップの塊。初配信にプロテインだけ持ってきた伝説の男。
+            </p>
+            <p>
+                「Actors To Live!」のボーカリストとして、その唯一無二の歌声でファンを魅了しています。
+            </p>
+        </section>
+
+        <section class="char-section">
+            <h2><i class="fa-solid fa-star"></i> Iconic Episodes</h2>
+
+            <div class="episode-card">
+                <span class="episode-title">伝説の初配信</span>
+                <p>配信に必要なスマホを忘れ、プロテインとクソデカ手書き歌詞カードを持参してスタジオを凍りつかせました。</p>
+            </div>
+
+            <div class="episode-card">
+                <span class="episode-title">ホラゲーでの突然の熱唱</span>
+                <p>恐怖を歌でごまかすために、ホラーゲーム中にリバーブ全開で熱唱し、視聴者を大いに困惑させました。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© MAHA5 / VTuber Archive Project</p>
+    </footer>
+
+    <script src="../maha5_script.js"></script>
+</body>
+</html>

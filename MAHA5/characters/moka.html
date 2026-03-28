@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>音成モカ | MAHA5 Archive</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="char-base.css" rel="stylesheet"/>
+    <style>
+        :root {
+            --char-color: #a8d5ba;
+            --char-rgb: 168, 213, 186;
+        }
+        .episode-card {
+            background: rgba(var(--char-rgb), 0.05);
+            border-left: 4px solid var(--char-color);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 0 12px 12px 0;
+            transition: transform 0.3s;
+        }
+        .episode-card:hover {
+            transform: translateX(10px);
+            background: rgba(var(--char-rgb), 0.1);
+        }
+        .episode-title {
+            font-weight: 900;
+            color: #2d5a27;
+            margin-bottom: 0.5rem;
+            display: block;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+    <a class="char-back" href="../maha5_index.html">
+        <i class="fa-solid fa-arrow-left"></i> BACK
+    </a>
+
+    <header class="char-hero">
+        <div class="char-tag">MAHA5 JAPAN 1st Generation</div>
+        <h1 class="char-name">音成モカ</h1>
+        <p class="char-read">Otonari Moka</p>
+        <div class="char-info-pills">
+            <span class="char-tag">Debut: 2021.06.26</span>
+            <span class="char-tag">Birthday: 03.29</span>
+            <span class="char-tag">Fan: ☕💚</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2><i class="fa-solid fa-user"></i> Profile</h2>
+            <p>
+                ハーフエルフの喫茶店員。緑の髪とオッドアイが特徴。「さらまっぱぎ」の挨拶を愛用。自称「清楚」だがリスナーにいじられる愛されキャラ。
+            </p>
+            <p>
+                「MAHA5 JAPAN」の1期生としてデビューし、持ち前の明るさとリアクションの良さで多くのファン（モカリス）を魅了しています。
+            </p>
+        </section>
+
+        <section class="char-section">
+            <h2><i class="fa-solid fa-star"></i> Iconic Episodes</h2>
+
+            <div class="episode-card">
+                <span class="episode-title">自称「清楚」！いじられ愛されキャラ</span>
+                <p>事あるごとに「私は清楚」と主張するものの、リスナーからはプロレス気味にいじられるのがお約束です。</p>
+            </div>
+
+            <div class="episode-card">
+                <span class="episode-title">理系モカちゃん</span>
+                <p>ふわふわした雰囲気ですが実は理系脳。センター試験の数ⅠAで95点以上取った実力を持ちます。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© MAHA5 / VTuber Archive Project</p>
+    </footer>
+
+    <script src="../maha5_script.js"></script>
+</body>
+</html>

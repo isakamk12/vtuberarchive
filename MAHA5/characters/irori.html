@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>紅酉いろり | MAHA5 Archive</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="char-base.css" rel="stylesheet"/>
+    <style>
+        :root {
+            --char-color: #81d0ff;
+            --char-rgb: 129, 208, 255;
+        }
+        .episode-card {
+            background: rgba(var(--char-rgb), 0.1);
+            border-left: 4px solid var(--char-color);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 0 12px 12px 0;
+            transition: transform 0.3s;
+        }
+        .episode-card:hover {
+            transform: translateX(10px);
+            background: rgba(var(--char-rgb), 0.2);
+        }
+        .episode-title {
+            font-weight: 900;
+            color: #0056b3;
+            margin-bottom: 0.5rem;
+            display: block;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+    <a class="char-back" href="../maha5_index.html">
+        <i class="fa-solid fa-arrow-left"></i> BACK
+    </a>
+
+    <header class="char-hero">
+        <div class="char-tag">MAHA5 JAPAN / Actors To Live!</div>
+        <h1 class="char-name">紅酉いろり</h1>
+        <p class="char-read">Irodori Irori</p>
+        <div class="char-info-pills">
+            <span class="char-tag">Age: 24歳</span>
+            <span class="char-tag">Theme: Beauty & Music</span>
+            <span class="char-tag">Fan: いろりんしゅきしゅきチーム</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2><i class="fa-solid fa-user"></i> Profile</h2>
+            <p>
+                美容系VTuber。メイクアップアーティスト兼ミュージシャン。女と金が好きと公言する、オープンでワーカホリックな姿勢が魅力。
+            </p>
+            <p>
+                「Actors To Live!」のムードメーカーとして、高い歌唱力とプロデュース能力を発揮しています。
+            </p>
+        </section>
+
+        <section class="char-section">
+            <h2><i class="fa-solid fa-star"></i> Iconic Episodes</h2>
+
+            <div class="episode-card">
+                <span class="episode-title">デビュー5日目で大遅刻</span>
+                <p>マイクラに熱中しすぎて公式番組に大遅刻。「デビュー5日で遅刻した男」として自らネタに昇華しました。</p>
+            </div>
+
+            <div class="episode-card">
+                <span class="episode-title">狂気のファンネーム</span>
+                <p>「いろりんしゅきしゅきさんチーム」という過激な名前が熱狂的なファンに定着し、公認しています。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© MAHA5 / VTuber Archive Project</p>
+    </footer>
+
+    <script src="../maha5_script.js"></script>
+</body>
+</html>
