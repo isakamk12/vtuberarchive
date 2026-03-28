@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>NanaRika | MAHA5 Archive</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="char-base.css" rel="stylesheet"/>
+    <style>
+        :root {
+            --char-color: #F06292;
+            --char-rgb: 240, 98, 146;
+        }
+        .duo-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        .duo-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border-bottom: 6px solid var(--char-color);
+        }
+        .duo-nana { border-color: #F06292; }
+        .duo-rika { border-color: #42A5F5; }
+        
+        @media (max-width: 768px) {
+            .duo-container { grid-template-columns: 1fr; }
+        }
+        .episode-card {
+            background: rgba(var(--char-rgb), 0.03);
+            border-left: 4px solid var(--char-color);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 0 12px 12px 0;
+            transition: transform 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+    <a class="char-back" href="../maha5_index.html">
+        <i class="fa-solid fa-arrow-left"></i> BACK
+    </a>
+
+    <header class="char-hero">
+        <div class="char-tag">MAHA5 1st Generation Duo</div>
+        <h1 class="char-name">NanaRika</h1>
+        <p class="char-read">ナナリカ (Nana & Rika)</p>
+        <div class="char-info-pills">
+            <span class="char-tag">MLBB Experts</span>
+            <span class="char-tag">Fan: Nakachu (ナカチュ)</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2><i class="fa-solid fa-user-group"></i> Profile</h2>
+            <div class="duo-container">
+                <div class="duo-card duo-nana">
+                    <h3 style="color: #F06292;">Nana Aruna</h3>
+                    <p><strong>Image:</strong> Pink / 8月8日生</p>
+                    <p>お金が大好き。アニメやスターウォーズ、ハリーポッター、呪術廻戦の五条悟が推し。MLBBでは非常に感情豊か（Toxic）になる一面も。</p>
+                </div>
+                <div class="duo-card duo-rika">
+                    <h3 style="color: #42A5F5;">Rika Utami</h3>
+                    <p><strong>Image:</strong> Blue / 10月3日生</p>
+                    <p>山﨑賢人などのイケメン俳優が推し。雨の音や海の音が好き。配信中に突然トイレに駆け込む自由人。</p>
+                </div>
+            </div>
+            <p>
+                主にモバイルゲーム『Mobile Legends: Bang Bang (MLBB)』の実況を中心に活動するデュオVTuber。和気あいあいとした雰囲気と、ゲーム中の激しい感情表現のギャップが名物です。
+            </p>
+        </section>
+
+        <section class="char-section">
+            <h2><i class="fa-solid fa-star"></i> Iconic Episodes</h2>
+
+            <div class="episode-card">
+                <span style="font-weight:900; color:var(--char-color);">1. 幻の30分間（配信開始忘れ）</span>
+                <p>2人で大盛り上がりで30分間喋り続けたものの、実は「配信開始ボタン」を押し忘れていた事件。「うちら誰と喋ってたの！？」と爆笑し、伝説となりました。</p>
+            </div>
+
+            <div class="episode-card">
+                <span style="font-weight:900; color:var(--char-color);">2. 先輩のWi-Fiを拝借（盗聴）</span>
+                <p>同じ事務所の先輩Andi Adinataの家のWi-Fiをこっそり借りて配信していることを公言。「Wi-Fiが遅くなったらAndiのせい」とぼやくなど、遠慮のない関係性を見せています。</p>
+            </div>
+
+            <div class="episode-card">
+                <span style="font-weight:900; color:var(--char-color);">3. 推しのイケメンへの愛が重すぎる</span>
+                <p>呪術廻戦のガチャで五条悟を引いた際にNanaが大発狂。一方のRikaは「山﨑賢人はいつも私の心の中にいる」と語り、ゲームそっちのけでイケメントークに花を咲かせます。</p>
+            </div>
+
+            <div class="episode-card">
+                <span style="font-weight:900; color:var(--char-color);">4. ファン（Nakachu）とのプロレス</span>
+                <p>ゲーム中にトロールするファンに「ビンタするぞ！」と怒鳴るのがお約束。しかし記念配信では感謝のメッセージに涙ぐむ、ツンデレな絆を持っています。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© MAHA5 / VTuber Archive Project</p>
+    </footer>
+    <script src="../maha5_script.js"></script>
+</body>
+</html>

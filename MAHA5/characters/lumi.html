@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Lumi Celestia | MAHA5 Archive</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="char-base.css" rel="stylesheet"/>
+    <style>
+        :root {
+            --char-color: #4FC3F7;
+            --char-rgb: 79, 195, 247;
+        }
+        .episode-card {
+            background: rgba(var(--char-rgb), 0.03);
+            border-left: 4px solid var(--char-color);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 0 12px 12px 0;
+            transition: transform 0.3s;
+        }
+        .episode-card:hover {
+            transform: translateX(10px);
+            background: rgba(var(--char-rgb), 0.06);
+        }
+        .episode-title {
+            font-weight: 900;
+            color: var(--char-color);
+            margin-bottom: 0.5rem;
+            display: block;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+    <a class="char-back" href="../maha5_index.html">
+        <i class="fa-solid fa-arrow-left"></i> BACK
+    </a>
+
+    <header class="char-hero">
+        <div class="char-tag">MAHA5 2nd Generation</div>
+        <h1 class="char-name">Lumi Celestia</h1>
+        <p class="char-read">ルミ・セレスティア</p>
+        <div class="char-info-pills">
+            <span class="char-tag">Debut: 2020.08.01</span>
+            <span class="char-tag">Graduated: 2024.06.27</span>
+            <span class="char-tag">Status: Winter Hibernasi</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2><i class="fa-solid fa-user"></i> Profile</h2>
+            <p>
+                MAHA5第2期生。美しい歌声と明るい性格、温かいファンサービスで人気を集めました。その一方で非常に恥ずかしがり屋な性格でもあります。
+            </p>
+            <p>
+                妹のFuyumi CelestiaにYouTubeチャンネルを引き継ぐ形で卒業。現在は「冬眠（Hibernasi）」という形でファンの記憶に刻まれています。
+            </p>
+        </section>
+
+        <section class="char-section">
+            <h2><i class="fa-solid fa-star"></i> Iconic Episodes</h2>
+
+            <div class="episode-card">
+                <span class="episode-title">1. 3Dデビューでの伝説の「ブリッジ」</span>
+                <p>清楚なイメージを覆し、3Dお披露目配信で「ブリッジ（Kayang）」を披露。その意外な行動はファンの間で語り継がれる歴史的名シーンとなりました。</p>
+            </div>
+
+            <div class="episode-card">
+                <span class="episode-title">2. 「冷蔵庫の住人・オラフ」事件</span>
+                <p>デビュー初期、同期のZenから「オラフみたい」「冷蔵庫の住人」とイジられ、そのコラ画像が5分間も配信画面に晒されるという微笑ましいプロレスを繰り広げました。</p>
+            </div>
+
+            <div class="episode-card">
+                <span class="episode-title">3. 誕生日配信での大号泣</span>
+                <p>とても涙もろい性格。「私なんかがこんなに素敵なものをもらっていいのだろうか」と泣きながらファンに感謝を伝える姿は、彼女の優しさを象徴しています。</p>
+            </div>
+
+            <div class="episode-card">
+                <span class="episode-title">4. 冬眠中もファンを想う</span>
+                <p>私生活に集中するために長期の「冬眠」に入りましたが、休止中も時々こっそり目を覚ましてはファンのコメントを読んでいたと言います。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© MAHA5 / VTuber Archive Project</p>
+    </footer>
+    <script src="../maha5_script.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Andi Adinata | MAHA5 Archive</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="char-base.css" rel="stylesheet"/>
+    <style>
+        :root {
+            --char-color: #0288D1;
+            --char-rgb: 2, 136, 209;
+        }
+        .episode-card {
+            background: rgba(var(--char-rgb), 0.03);
+            border-left: 4px solid var(--char-color);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 0 12px 12px 0;
+            transition: transform 0.3s;
+        }
+        .episode-card:hover {
+            transform: translateX(10px);
+            background: rgba(var(--char-rgb), 0.06);
+        }
+        .episode-title {
+            font-weight: 900;
+            color: var(--char-color);
+            margin-bottom: 0.5rem;
+            display: block;
+            font-size: 1.1rem;
+        }
+        .quote-box {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            border-left: 3px solid #ccc;
+        }
+        .batik-pattern {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 300px;
+            opacity: 0.05;
+            background-image: url('https://www.transparenttextures.com/patterns/batik-fractal.png'); /* Pattern representing Indonesian culture */
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="char-bg"></div>
+    <a class="char-back" href="../maha5_index.html">
+        <i class="fa-solid fa-arrow-left"></i> BACK
+    </a>
+
+    <header class="char-hero">
+        <div class="batik-pattern"></div>
+        <div class="char-tag">MAHA5 1st Generation</div>
+        <h1 class="char-name">Andi Adinata</h1>
+        <p class="char-read">アンディ・アディナータ</p>
+        <div class="char-info-pills">
+            <span class="char-tag">Debut: 2019.10.22</span>
+            <span class="char-tag">Graduated: 2025.05.05</span>
+            <span class="char-tag">Fan: Kucing Liar (野良猫)</span>
+        </div>
+    </header>
+
+    <main class="char-container">
+        <section class="char-section">
+            <h2><i class="fa-solid fa-user"></i> Profile</h2>
+            <p>
+                インドネシアにおけるVTuberシーンの黎明期を支えた実力派男性シンガー。黒と青を基調とし、伝統的なバティック柄（メガムンドゥン）があしらわれたジャケットを着こなすスタイリッシュなビジュアルが特徴です。
+            </p>
+            <p>
+                インドネシア語をメインに、ネイティブレベルの英語も操り、日本のアニメソングやJ-POPを流暢に歌い上げる高い歌唱力を持っています。ユーモアにあふれ「自分が一番イケメン」と豪語するお茶目な一面を持つ一方で、ファンとの交流を何よりも大切にする、誠実で心優しい性格です。
+            </p>
+        </section>
+
+        <section class="char-section">
+            <h2><i class="fa-solid fa-star"></i> Iconic Episodes</h2>
+
+            <div class="episode-card">
+                <span class="episode-title">1. ファン（Kucing Liar）との深い絆と「ナシパダン」</span>
+                <p>投げ銭を「ナシパダン（パダン料理）を奢ってもらう」と表現するのが定番。クラウドファンディング達成時には「皆からの支援は、必ずコンテンツで返す」と約束し、周年配信では感謝の涙を流すなど、ファンを第一に考える姿勢を貫きました。</p>
+            </div>
+
+            <div class="episode-card">
+                <span class="episode-title">2. リアルでも「野良猫」を愛する優しさ</span>
+                <p>コンビニ近くで保護した三毛猫「Anya（アーニャ）」を大切に育てていたエピソードがあります。「Anyaはもう自分が猫だってことを理解してるよ」と語る姿に、彼の愛情深さが表れています。</p>
+            </div>
+
+            <div class="episode-card">
+                <span class="episode-title">3. ゲーム実況で見せる「男らしい叫び声」と名言</span>
+                <p>ホラーゲームでは「男らしい叫び声（teriakan lelaki jantan）」を披露し、『Getting Over It』では「疲れたら休めばいい、これは人生の教訓だ」と自分に言い聞かせてクリアするなど、ユーモアと哲学を織り交ぜた配信が魅力です。</p>
+                <div class="quote-box">「Ikan hiu makan tomat, goblok（サメがトマトを食う、バカ）」</div>
+            </div>
+
+            <div class="episode-card">
+                <span class="episode-title">4. 憑依型エンターテイナー：豊かな別キャラ</span>
+                <p>女声の「Andini（アンディニ）」や、別次元の「Andi B86」、揚げパン売りの「Mang Oleh」など、多彩なキャラクターを演じ分けてファンを飽きさせません。</p>
+            </div>
+
+            <div class="episode-card">
+                <span class="episode-title">5. ファンに寄り添う「コップの理論（Teori Gelas）」</span>
+                <p>お悩み相談枠で語られた「まずは自分自身のコップ（心）をいっぱいにすること。溢れ出て初めて他人に分け与えられる」という教えは、多くのファンの心に残り続けています。</p>
+            </div>
+
+            <div class="episode-card">
+                <span class="episode-title">6. MAHA5の頼れる長男として</span>
+                <p>1期生として後輩を牽引。マイクラコラボ企画『Bakwan SMP』などで進行役を務め、全員が楽しめる舞台を整えるリーダーシップを発揮しました。卒業まで仲間とファンを繋ぐ中心的な役割を果たしました。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="char-footer">
+        <p>© MAHA5 / VTuber Archive Project</p>
+        <p>Connecting the World through Anime & Culture</p>
+    </footer>
+
+    <script src="../maha5_script.js"></script>
+</body>
+</html>
