@@ -27,27 +27,53 @@
 
 <body>
     <div id="app" v-cloak>
-    <!-- Opening / Entry Step -->
-    <div class="omni-opening" v-if="!isEntryGranted">
-        <div class="opening-content">
-            <div class="opening-logo">
-                <div class="logo-ring"></div>
-                <div class="logo-ring"></div>
-                <div class="logo-ring"></div>
-                <i class="fa-solid fa-database"></i>
+    <!-- Opening / Entry Step (Pure CSS, No Images) -->
+    <Transition name="dive-in">
+        <div class="omni-opening" v-if="!isEntryGranted">
+            
+            <!-- Dynamic Data Grid & Scanlines -->
+            <div class="op-grid-layer"></div>
+            <div class="op-scanline-fast"></div>
+
+            <div class="opening-content">
+                <!-- 3D Astrolabe Data Core (CSS-Only) -->
+                <div class="opening-core-3d">
+                    <div class="core-orbit p-x"></div>
+                    <div class="core-orbit p-y"></div>
+                    <div class="core-orbit p-z"></div>
+                    <div class="core-center-icon">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                </div>
+
+                <!-- Terminal Boot Sequence -->
+                <div class="boot-terminal">
+                    <p class="boot-line l-1">> INITIALIZING SYSTEM ENVIRONMENT...</p>
+                    <p class="boot-line l-2">> DECRYPTING ARCHIVE SECTORS: SUCCESS.</p>
+                </div>
+
+                <h2 class="opening-title glitch-head" data-text="AKASHIC_SYSTEM">AKASHIC_SYSTEM</h2>
+                
+                <div class="opening-status">
+                    <span class="status-blink-fast"></span>
+                    <span data-i18n="opening_status">{{ t(null, 'opening_status') }}</span>
+                </div>
+                
+                <button class="opening-btn cyber-btn" @click="grantEntry">
+                    <span class="btn-glitch-layer btn-layer1" :data-text="t(null, 'opening_btn')">{{ t(null, 'opening_btn') }}</span>
+                    <span class="btn-glitch-layer btn-layer2" :data-text="t(null, 'opening_btn')">{{ t(null, 'opening_btn') }}</span>
+                    <span class="btn-text" :data-text="t(null, 'opening_btn')">{{ t(null, 'opening_btn') }}</span>
+                    <div class="bracket-fx bracket-l"></div>
+                    <div class="bracket-fx bracket-r"></div>
+                </button>
             </div>
-            <h2 class="opening-title">AKASHIC_SYSTEM</h2>
-            <div class="opening-status">
-                <span class="status-blink"></span>
-                <span data-i18n="opening_status">{{ t(null, 'opening_status') }}</span>
-            </div>
-            <button class="opening-btn" @click="grantEntry">
-                <span class="btn-glitch" :data-text="t(null, 'opening_btn')">{{ t(null, 'opening_btn') }}</span>
-            </button>
+            
+            <!-- Deep Space Hex Particles (CSS ONLY) -->
+            <div class="css-stars-1"></div>
+            <div class="css-stars-2"></div>
+            <div class="css-stars-3"></div>
         </div>
-        <div class="opening-grid"></div>
-        <div class="opening-scanline"></div>
-    </div>
+    </Transition>
 
     <!-- Immersive Deep Void Background -->
     <div class="omni-bg" v-if="!isMobile">
