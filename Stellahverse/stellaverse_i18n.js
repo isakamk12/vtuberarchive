@@ -1,0 +1,67 @@
+const stellaverse_translations = {
+    "ja": {
+        // Hazuki Rui
+        "rui_title": "彗月るい - Stellahverse JP Archive",
+        "rui_name": "彗月るい",
+        "rui_name_en": "Hazuki Rui",
+        "rui_catch": "新米魔法使い",
+        "rui_gen": "ステラバースプロダクション 0期生",
+        "rui_birthday": "1月16日",
+        "rui_height": "155cm（厚底靴込み）",
+        "rui_blood": "B型",
+        "rui_fanname": "コメイト",
+        "rui_desc": "極度のインドア・活字中毒者。休日は家から出ず、ネットの海に浸かっている新米魔法使い。甘いもの、釣り、キャンプ、ゲームを愛するお家大好き人間。",
+        "rui_ep1_title": "「厚底靴込み」の意地",
+        "rui_ep1_content": "身長155cmと公表しているが、常にかかとが異常に高い靴を履いており、実際の身長についてはリスナーから度々ツッコミを入れられる。本人は「155cmです！」と言い張っている。",
+        "rui_ep2_title": "弟2人との共存",
+        "rui_ep2_content": "陽キャの弟と、自分以上に引きこもりの弟という極端な兄弟に囲まれて生活している。配信では彼らとのユーモラスな日常が語られることも多い。",
+        
+        // Kogami Rewo
+        "rewo_title": "狐守れを - Stellahverse JP Archive",
+        "rewo_name": "狐守れを",
+        "rewo_name_en": "Kogami Rewo / Leocadia Renard",
+        "rewo_catch": "公安部所属 大廃地区治安管理係",
+        "rewo_gen": "ステラバースプロダクション 0期生",
+        "rewo_origin": "惑星イルシオン / 都市国家アポカリスタ",
+        "rewo_age": "推定300歳（大覚醒を3回経験）",
+        "rewo_birthday": "8月8日（雪だるまみたいで可愛いから）",
+        "rewo_height": "160cm（厚底靴込み）",
+        "rewo_desc": "異星人担当であり、歌の人。惑星イルシオンからやってきた公安所属の治安管理係。300年を生きる英知と、雪だるまのような誕生日を選ぶ茶目っ気を併せ持つ。",
+        "rewo_ep1_title": "誕生日の由来",
+        "rewo_ep1_content": "惑星イルシオンには年齢や誕生日を数える文化がなかったが、地球の文化に合わせて「8」が雪だるまみたいで可愛いという理由だけで8月8日に決定した。",
+        "rewo_ep2_title": "300歳の真実",
+        "rewo_ep2_content": "100年に一度の「大覚醒」を3回経験している。見た目は若々しいが、時折見せる落ち着いた言動に、長い年月を感じさせる重みがある。",
+
+        // Uyamuya Karame
+        "karame_title": "愛耶夢耶からめ - Stellahverse JP Archive",
+        "karame_name": "愛耶夢耶からめ",
+        "karame_name_en": "Uyamuya Karame",
+        "karame_catch": "鹿児島バーチャル親善大使を目指す花嫁人形",
+        "karame_gen": "ステラバースプロダクション 0期生",
+        "karame_birthday": "2023年12月11日（もうすぐ1歳）",
+        "karame_fanname": "カラメルト",
+        "karame_greeting": "ごきげんよ〜 / おやっとさぁ / パフパフ",
+        "karame_desc": "オーダーメイドの花嫁人形。夢は「鹿児島バーチャル親善大使」になること。牛を自認するユニークな一面と、ロリータ・ファッション、ジャンクフードを愛する可憐な人形。",
+        "karame_ep1_title": "「今月で1歳」",
+        "karame_ep1_content": "配信内で「去年生まれた」「今月1歳」と言及されており、その若さ（人形としての製造年？）がファンを驚かせた。実は生まれたての花嫁人形である。",
+        "karame_ep2_title": "自認アバターは「牛」",
+        "karame_ep2_content": "ファンネームは「カラメルト」だが、その自認アバターはなぜか「牛」に設定されており、リスナーからは親しみを持って愛でられている。",
+
+        // Mitome Elsa
+        "elsa_title": "三留エルサ - Stellahverse JP Archive",
+        "elsa_name": "三留エルサ",
+        "elsa_name_en": "Elsa Mitome",
+        "elsa_catch": "ステプロのセクシー担当（元カササギ）",
+        "elsa_gen": "ステラバースプロダクション 0期生",
+        "elsa_debut": "2026年6月1日",
+        "elsa_birthday": "2月13日",
+        "elsa_height": "161cm",
+        "elsa_weight": "50kg",
+        "elsa_blood": "O型",
+        "elsa_desc": "元カササギの人間。人間になってから22年が経過。自称セクシー担当だが、「どんぐり大好きクラブ」や「裏切り高校」など、数多くの顔を持つ多才な（？）鳥系人間。",
+        "elsa_ep1_title": "元カササギのアイデンティティ",
+        "elsa_ep1_content": "22年前に人間になった元鳥。そのせいか、今でも「どんぐり」をこよなく愛しており、配信でもその鳥時代の名残を感じさせるエピソードが披露される。",
+        "elsa_ep2_title": "ステプロのセクシー担当",
+        "elsa_ep2_content": "自他共に（？）認めるセクシー担当だが、その称号以上に「健康大好き痛々界隈会長」などユニークな肩書きが次々と増えていくのが彼女の持ち味である。"
+    }
+};

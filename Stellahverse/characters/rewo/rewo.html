@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="rewo_title">狐守れを - Stellahverse JP Archive</title>
+    <link rel="stylesheet" href="../char-base.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cp-bg">
+        <div class="cp-stars"></div>
+    </div>
+
+    <div class="cp-container">
+        <header class="cp-header cp-reveal">
+            <span class="cp-tag" data-i18n="rewo_gen">ステラバースプロダクション 0期生</span>
+            <h1 class="cp-name" data-i18n="rewo_name">狐守れを</h1>
+            <p class="cp-sub" data-i18n="rewo_name_en">Kogami Rewo / Leocadia Renard</p>
+        </header>
+
+        <div class="cp-content-grid">
+            <aside class="cp-sidebar cp-reveal">
+                <div class="cp-card">
+                    <h2 class="cp-card-title">PROFILE</h2>
+                    <div class="cp-info-item">
+                        <span class="cp-info-label">職業 / 担当</span>
+                        <span class="cp-info-value" data-i18n="rewo_catch">公安部所属 治安管理係</span>
+                    </div>
+                    <div class="cp-info-item">
+                        <span class="cp-info-label">出身地</span>
+                        <span class="cp-info-value" data-i18n="rewo_origin">惑星イルシオン / 都市国家アポカリスタ</span>
+                    </div>
+                    <div class="cp-info-item">
+                        <span class="cp-info-label">年齢</span>
+                        <span class="cp-info-value" data-i18n="rewo_age">推定300歳</span>
+                    </div>
+                    <div class="cp-info-item">
+                        <span class="cp-info-label">誕生日</span>
+                        <span class="cp-info-value" data-i18n="rewo_birthday">8月8日</span>
+                    </div>
+                    <div class="cp-info-item">
+                        <span class="cp-info-label">身長</span>
+                        <span class="cp-info-value" data-i18n="rewo_height">160cm（厚底靴込み）</span>
+                    </div>
+                    <a href="../../stellaverse_index.html" class="cp-back-btn">← BACK TO INDEX</a>
+                </div>
+            </aside>
+
+            <main class="cp-main">
+                <section class="cp-section cp-reveal">
+                    <h2 class="cp-section-title">CHARACTER</h2>
+                    <p class="cp-desc" data-i18n="rewo_desc">異星人担当であり、歌の人。惑星イルシオンからやってきた公安所属の治安管理係。300年を生きる英知と、雪だるまのような誕生日を選ぶ茶目っ気を併せ持つ。</p>
+                </section>
+
+                <section class="cp-section cp-reveal">
+                    <h2 class="cp-section-title">REPRESENTATIVE EPISODES</h2>
+                    <div class="cp-episode-list">
+                        <div class="cp-episode-card">
+                            <h3 class="cp-ep-title" data-i18n="rewo_ep1_title">誕生日の由来</h3>
+                            <p class="cp-ep-text" data-i18n="rewo_ep1_content">惑星イルシオンには年齢や誕生日を数える文化がなかったが、地球の文化に合わせて「8」が雪だるまみたいで可愛いという理由だけで8月8日に決定した。</p>
+                        </div>
+                        <div class="cp-episode-card">
+                            <h3 class="cp-ep-title" data-i18n="rewo_ep2_title">300歳の真実</h3>
+                            <p class="cp-ep-text" data-i18n="rewo_ep2_content">100年に一度の「大覚醒」を3回経験している。見た目は若々しいが、時折見せる落ち着いた言動に、長い年月を感じさせる重みがある。</p>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../stellaverse_i18n.js"></script>
+    <script src="../../stellaverse_char_i18n.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.cp-reveal').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

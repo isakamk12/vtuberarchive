@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="elsa_title">三留エルサ - Stellahverse JP Archive</title>
+    <link rel="stylesheet" href="../char-base.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cp-bg">
+        <div class="cp-stars"></div>
+    </div>
+
+    <div class="cp-container">
+        <header class="cp-header cp-reveal">
+            <span class="cp-tag" data-i18n="elsa_gen">ステラバースプロダクション 0期生</span>
+            <h1 class="cp-name" data-i18n="elsa_name">三留エルサ</h1>
+            <p class="cp-sub" data-i18n="elsa_name_en">Elsa Mitome</p>
+        </header>
+
+        <div class="cp-content-grid">
+            <aside class="cp-sidebar cp-reveal">
+                <div class="cp-card">
+                    <h2 class="cp-card-title">PROFILE</h2>
+                    <div class="cp-info-item">
+                        <span class="cp-info-label">自称 / 肩書き</span>
+                        <span class="cp-info-value" data-i18n="elsa_catch">ステプロのセクシー担当（元カササギ）</span>
+                    </div>
+                    <div class="cp-info-item">
+                        <span class="cp-info-label">デビュー日</span>
+                        <span class="cp-info-value" data-i18n="elsa_debut">2026年6月1日</span>
+                    </div>
+                    <div class="cp-info-item">
+                        <span class="cp-info-label">誕生日</span>
+                        <span class="cp-info-value" data-i18n="elsa_birthday">2月13日</span>
+                    </div>
+                    <div class="cp-info-item">
+                        <span class="cp-info-label">身長 / 体重</span>
+                        <span class="cp-info-value" data-i18n="elsa_height">161cm / 50kg</span>
+                    </div>
+                    <div class="cp-info-item">
+                        <span class="cp-info-label">血液型</span>
+                        <span class="cp-info-value" data-i18n="elsa_blood">O型</span>
+                    </div>
+                    <a href="../../stellaverse_index.html" class="cp-back-btn">← BACK TO INDEX</a>
+                </div>
+            </aside>
+
+            <main class="cp-main">
+                <section class="cp-section cp-reveal">
+                    <h2 class="cp-section-title">CHARACTER</h2>
+                    <p class="cp-desc" data-i18n="elsa_desc">元カササギの人間。人間になってから22年が経過。自称セクシー担当だが、「どんぐり大好きクラブ」や「裏切り高校」など、数多くの顔を持つ多才な（？）鳥系人間。</p>
+                </section>
+
+                <section class="cp-section cp-reveal">
+                    <h2 class="cp-section-title">REPRESENTATIVE EPISODES</h2>
+                    <div class="cp-episode-list">
+                        <div class="cp-episode-card">
+                            <h3 class="cp-ep-title" data-i18n="elsa_ep1_title">元カササギのアイデンティティ</h3>
+                            <p class="cp-ep-text" data-i18n="elsa_ep1_content">22年前に人間になった元鳥。そのせいか、今でも「どんぐり」をこよなく愛しており、配信でもその鳥時代の名残を感じさせるエピソードが披露される。</p>
+                        </div>
+                        <div class="cp-episode-card">
+                            <h3 class="cp-ep-title" data-i18n="elsa_ep2_title">ステプロのセクシー担当</h3>
+                            <p class="cp-ep-text" data-i18n="elsa_ep2_content">自他共に（？）認めるセクシー担当だが、その称号以上に「健康大好き痛々界隈会長」などユニークな肩書きが次々と増えていくのが彼女の持ち味である。</p>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../stellaverse_i18n.js"></script>
+    <script src="../../stellaverse_char_i18n.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.cp-reveal').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

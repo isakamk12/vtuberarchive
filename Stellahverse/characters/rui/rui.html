@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="rui_title">彗月るい - Stellahverse JP Archive</title>
+    <link rel="stylesheet" href="../char-base.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cp-bg">
+        <div class="cp-stars"></div>
+    </div>
+
+    <div class="cp-container">
+        <header class="cp-header cp-reveal">
+            <span class="cp-tag" data-i18n="rui_gen">ステラバースプロダクション 0期生</span>
+            <h1 class="cp-name" data-i18n="rui_name">彗月るい</h1>
+            <p class="cp-sub" data-i18n="rui_name_en">Hazuki Rui</p>
+        </header>
+
+        <div class="cp-content-grid">
+            <aside class="cp-sidebar cp-reveal">
+                <div class="cp-card">
+                    <h2 class="cp-card-title">PROFILE</h2>
+                    <div class="cp-info-item">
+                        <span class="cp-info-label">職業 / 肩書き</span>
+                        <span class="cp-info-value" data-i18n="rui_catch">新米魔法使い</span>
+                    </div>
+                    <div class="cp-info-item">
+                        <span class="cp-info-label">誕生日</span>
+                        <span class="cp-info-value" data-i18n="rui_birthday">1月16日</span>
+                    </div>
+                    <div class="cp-info-item">
+                        <span class="cp-info-label">身長</span>
+                        <span class="cp-info-value" data-i18n="rui_height">155cm（厚底靴込み）</span>
+                    </div>
+                    <div class="cp-info-item">
+                        <span class="cp-info-label">血液型</span>
+                        <span class="cp-info-value" data-i18n="rui_blood">B型</span>
+                    </div>
+                    <div class="cp-info-item">
+                        <span class="cp-info-label">ファンネーム</span>
+                        <span class="cp-info-value" data-i18n="rui_fanname">コメイト</span>
+                    </div>
+                    <a href="../../stellaverse_index.html" class="cp-back-btn">← BACK TO INDEX</a>
+                </div>
+            </aside>
+
+            <main class="cp-main">
+                <section class="cp-section cp-reveal">
+                    <h2 class="cp-section-title">CHARACTER</h2>
+                    <p class="cp-desc" data-i18n="rui_desc">極度のインドア・活字中毒者。休日は家から出ず、ネットの海に浸かっている新米魔法使い。甘いもの、釣り、キャンプ、ゲームを愛するお家大好き人間。</p>
+                </section>
+
+                <section class="cp-section cp-reveal">
+                    <h2 class="cp-section-title">REPRESENTATIVE EPISODES</h2>
+                    <div class="cp-episode-list">
+                        <div class="cp-episode-card">
+                            <h3 class="cp-ep-title" data-i18n="rui_ep1_title">「厚底靴込み」の意地</h3>
+                            <p class="cp-ep-text" data-i18n="rui_ep1_content">身長155cmと公表しているが、常にかかとが異常に高い靴を履いており、実際の身長についてはリスナーから度々ツッコミを入れられる。本人は「155cmです！」と言い張っている。</p>
+                        </div>
+                        <div class="cp-episode-card">
+                            <h3 class="cp-ep-title" data-i18n="rui_ep2_title">弟2人との共存</h3>
+                            <p class="cp-ep-text" data-i18n="rui_ep2_content">陽キャの弟と、自分以上に引きこもりの弟という極端な兄弟に囲まれて生活している。配信では彼らとのユーモラスな日常が語られることも多い。</p>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../stellaverse_i18n.js"></script>
+    <script src="../../stellaverse_char_i18n.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.cp-reveal').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

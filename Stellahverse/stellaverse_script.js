@@ -1,4 +1,4 @@
-// Stellaverse Production — Agency Script
+// Stellahverse Production — Agency Script
 
 document.addEventListener('DOMContentLoaded', () => {
     // Reveal animations

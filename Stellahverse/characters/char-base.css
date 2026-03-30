@@ -1,0 +1,233 @@
+:root {
+    --sv-bg: #0a0b10;
+    --sv-panel: rgba(20, 22, 35, 0.7);
+    --sv-accent: #fde047; /* Gold/Star color */
+    --sv-accent-rgb: 253, 224, 71;
+    --sv-text: #e2e8f0;
+    --sv-text-muted: #94a3b8;
+    --sv-border: rgba(253, 224, 71, 0.2);
+    --sv-glow: rgba(253, 224, 71, 0.4);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--sv-bg);
+    color: var(--sv-text);
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.cp-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 80px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Cosmic Background */
+.cp-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: radial-gradient(circle at 50% 50%, #1a1c2e 0%, #0a0b10 100%);
+    overflow: hidden;
+}
+
+.cp-stars {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background-image: 
+        radial-gradient(1px 1px at 10% 10%, #fff, transparent),
+        radial-gradient(1px 1px at 20% 50%, #fff, transparent),
+        radial-gradient(2px 2px at 40% 80%, #fff, transparent),
+        radial-gradient(1px 1px at 60% 20%, #fff, transparent),
+        radial-gradient(2px 2px at 80% 40%, #fff, transparent);
+    background-size: 50% 50%;
+    animation: drift 100s linear infinite;
+    opacity: 0.3;
+}
+
+@keyframes drift {
+    from { transform: translate(0, 0); }
+    to { transform: translate(-20%, -20%); }
+}
+
+/* Header Section */
+.cp-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.cp-tag {
+    display: inline-block;
+    font-size: 0.8rem;
+    color: var(--sv-accent);
+    border: 1px solid var(--sv-border);
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    letter-spacing: 0.1em;
+    background: rgba(var(--sv-accent-rgb), 0.1);
+}
+
+.cp-name {
+    font-size: 3.5rem;
+    margin: 0;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    background: linear-gradient(to bottom, #fff, var(--sv-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 10px 30px rgba(var(--sv-accent-rgb), 0.3);
+}
+
+.cp-sub {
+    font-size: 1.1rem;
+    color: var(--sv-text-muted);
+    margin-top: 10px;
+}
+
+/* Layout Grid */
+.cp-content-grid {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 40px;
+}
+
+@media (max-width: 850px) {
+    .cp-content-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Sidebar / Profile Info */
+.cp-sidebar {
+    position: sticky;
+    top: 40px;
+}
+
+.cp-card {
+    background: var(--sv-panel);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--sv-border);
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.cp-card-title {
+    font-size: 0.9rem;
+    color: var(--sv-accent);
+    margin-bottom: 20px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.cp-info-item {
+    margin-bottom: 20px;
+}
+
+.cp-info-label {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--sv-text-muted);
+    margin-bottom: 4px;
+}
+
+.cp-info-value {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.cp-back-btn {
+    display: block;
+    margin-top: 30px;
+    text-align: center;
+    padding: 12px;
+    border: 1px solid var(--sv-border);
+    border-radius: 8px;
+    color: var(--sv-text);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.cp-back-btn:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--sv-accent);
+}
+
+/* Main Content */
+.cp-section {
+    margin-bottom: 50px;
+}
+
+.cp-section-title {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.cp-section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, var(--sv-border), transparent);
+}
+
+.cp-desc {
+    font-size: 1.1rem;
+    color: var(--sv-text);
+    line-height: 1.8;
+}
+
+.cp-episode-list {
+    display: grid;
+    gap: 25px;
+}
+
+.cp-episode-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 25px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.cp-episode-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--sv-border);
+}
+
+.cp-ep-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--sv-accent);
+    margin-bottom: 10px;
+}
+
+.cp-ep-text {
+    font-size: 1rem;
+    color: var(--sv-text-muted);
+}
+
+/* Animations */
+.cp-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cp-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}

@@ -248,7 +248,7 @@
             <div class="datapanel-card fade-in" 
                  :class="{ 'card-defunct': (agency.resolvedTags || []).includes('Defunct'), 'is-pressed': agency._pressed }"
                  v-for="(agency, index) in filteredAgencies" 
-                 :key="agency.name" 
+                 :key="agency.url || (agency.name + '|' + agency.sub)" 
                  :style="{ animationDelay: (index * 0.05) + 's', '--brand-rgb': agency.color }"
                  @click="handleCardClick(agency)"
                  @pointerdown="agency._pressed = true"
