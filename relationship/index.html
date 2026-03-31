@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>資本系統・依存構造アーカイブ（2026）| VTuber Archive</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@300;400;600&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Immersive Deep Void Background -->
+    <div class="omni-bg">
+        <div class="omni-orb orb-1"></div>
+        <div class="omni-orb orb-2"></div>
+        <div class="omni-grid"></div>
+    </div>
+
+    <!-- Scrollable Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Floating Navigation -->
+    <nav class="omni-dock">
+        <a href="../index.html" class="dock-back">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>RETURN</span>
+        </a>
+        <div class="dock-title">RELATIONSHIP_MAP_2026</div>
+        <div class="dock-meta">STATUS: OBSERVED</div>
+    </nav>
+
+    <main class="rel-container">
+        <!-- Hero Header -->
+        <header class="rel-hero slide-in-bottom">
+            <div class="hero-tag">CAPITAL & DEPENDENCY STRUCTURE</div>
+            <h1 class="hero-title">VTuber Industry Archive</h1>
+            <p class="hero-desc">マネジメントの責任所在と資本の親子関係に基づく全111件の勢力分類</p>
+            <div class="hero-divider"></div>
+        </header>
+
+        <!-- Category 1: Brave Group -->
+        <section class="rel-section" id="brave-group">
+            <div class="section-label">01 // FEDERATED_MODEL</div>
+            <h2 class="section-title">Brave Group 系列</h2>
+            <p class="section-desc">親会社（Brave Group）がホールディングスとして資金・インフラを支え、子会社が現場運営を担う。連邦型経営体制。</p>
+            <div class="group-grid">
+                <div class="group-node parent-node">
+                    <div class="node-icon"><i class="fa-solid fa-building-columns"></i></div>
+                    <div class="node-info">
+                        <h3>Brave Group</h3>
+                        <span>Holding Entity</span>
+                    </div>
+                </div>
+                <div class="subs-grid">
+                    <div class="node-item">ぶいすぽっ！</div>
+                    <div class="node-item">Neo-Porte</div>
+                    <div class="node-item">RIOT MUSIC</div>
+                    <div class="node-item">ゆにれいど！</div>
+                    <div class="node-item">V4Mirai</div>
+                    <div class="node-item">globie</div>
+                    <div class="node-item">ENILIS VLiver</div>
+                    <div class="node-item status-defunct">Vlash <small>(活動終了)</small></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category 2: ANYCOLOR -->
+        <section class="rel-section" id="anycolor">
+            <div class="section-label">02 // DIRECT_GOVERNANCE</div>
+            <h2 class="section-title">ANYCOLOR 系列</h2>
+            <p class="section-desc">上場企業（ANYCOLOR）による直接統治。単一資本による強固なブランド管理。</p>
+            <div class="group-grid single-parent">
+                <div class="group-node anycolor-node">
+                    <div class="node-icon"><i class="fa-solid fa-cube"></i></div>
+                    <div class="node-info">
+                        <h3>ANYCOLOR</h3>
+                        <span>Public Corporation</span>
+                    </div>
+                </div>
+                <div class="subs-grid">
+                    <div class="node-item">にじさんじ</div>
+                    <div class="node-item">VirtuaReal / バーチャリアル</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category 3: Cover -->
+        <section class="rel-section" id="cover">
+            <div class="section-label">03 // UNIFIED_PRODUCTION</div>
+            <h2 class="section-title">カバー 系列</h2>
+            <p class="section-desc">上場企業（カバー）による直接統治。ホロライブ、ホロスターズ、海外拠点を一本化したプロダクション体制。</p>
+            <div class="group-grid single-parent">
+                <div class="group-node cover-node">
+                    <div class="node-icon"><i class="fa-solid fa-star"></i></div>
+                    <div class="node-info">
+                        <h3>カバー株式会社</h3>
+                        <span>Cover Corp.</span>
+                    </div>
+                </div>
+                <div class="subs-grid">
+                    <div class="node-item">ホロライブプロダクション</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category 4: Sony -->
+        <section class="rel-section" id="sony">
+            <div class="section-label">04 // MUSIC_RESOURCES</div>
+            <h2 class="section-title">ソニー系</h2>
+            <p class="section-desc">ソニーグループの巨大資本および制作リソースに活動基盤を依存する系列。</p>
+            <div class="hierarchy-tree">
+                <div class="tree-root">Sony Group</div>
+                <div class="tree-branch">
+                    <div class="tree-node">ソニー・ミュージック (SMEJ)</div>
+                    <div class="tree-leaves">
+                        <div class="leaf-item">VEE <small>(直接運営)</small></div>
+                        <div class="leaf-item">VERSEⁿ <small>(共同運営)</small></div>
+                        <div class="leaf-item">YOAKE entertainment <small>(出資・支援)</small></div>
+                        <div class="leaf-item status-defunct">PRISM Project <small>(撤退済み)</small></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category 5: TV/Media -->
+        <section class="rel-section" id="media">
+            <div class="section-label">05 // BROADCAST_ALLIANCE</div>
+            <h2 class="section-title">テレビ・メディア系</h2>
+            <p class="section-desc">地上波放送局の番組枠やメディアリソース、既存IPとの連動に依存する系列。</p>
+            <div class="media-grid">
+                <div class="media-box">
+                    <div class="media-owner">ClaN Entertainment <small>(日本テレビ系列)</small></div>
+                    <div class="media-assets">
+                        <span>CLAUSTRA</span>
+                        <span>にゃんたじあ！</span>
+                    </div>
+                </div>
+                <div class="media-box accent-bandai">
+                    <div class="media-owner">バンダイナムコ</div>
+                    <div class="media-assets">
+                        <span>vα-liv (ヴイアライヴ)</span>
+                    </div>
+                </div>
+                <div class="media-box accent-bushiroad">
+                    <div class="media-owner">ブシロード</div>
+                    <div class="media-assets">
+                        <span>いろどり芸能郵便社</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category 6: Independents (Corporate) -->
+        <section class="rel-section" id="independents">
+            <div class="section-label">06 // INDEPENDENT_CORPORATES</div>
+            <h2 class="section-title">独立系（企業・グループ・中堅）</h2>
+            <p class="section-desc">独自の資本で運営され、巨大資本への依存度が低い、あるいは特定のゲーム・制作会社が主導する勢力。</p>
+            
+            <div class="independent-layout">
+                <div class="sub-category">
+                    <h4>Direct Multi-Project</h4>
+                    <div class="node-list">
+                        <div class="node-card"><strong>VOMS project</strong> <small>(GYARI主導)</small></div>
+                        <div class="node-card"><strong>viviON</strong> <small>(エイシス系列: あおぎり高校, Vebop Project)</small></div>
+                        <div class="node-card"><strong>SQUARE ENIX</strong> <small>(GEMS COMPANY)</small></div>
+                    </div>
+                </div>
+                
+                <div class="sub-category">
+                    <h4>Legacy & Mid-Scale</h4>
+                    <div class="entities-cloud">
+                        <span>ななしいんく</span> <span>のりプロ</span> <span>APP LAND</span> <span>KAMITSUBAKI</span> 
+                        <span>キズナアイ</span> <span>深層組</span> <span>Varium</span> <span>ミリプロ</span> 
+                        <span>ぶいじ時代</span> <span>SilverStellaStage</span> <span>GuildB</span> 
+                        <span>らいとあっぷ！</span> <span>ゆにゆにっ！</span>
+                        <span class="status-defunct">株式会社リド (Lide)</span>
+                    </div>
+                </div>
+
+                <div class="sub-category">
+                    <h4>Global Independent</h4>
+                    <div class="entities-cloud">
+                        <span>VShojo</span> <span>Idol Corp</span> <span>春魚クリエイティブ</span> 
+                        <span>箱箱Official</span> <span>Phase Connect</span> <span>MAHA5</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category 7: Individual -->
+        <section class="rel-section" id="individual">
+            <div class="section-label">07 // SOLO_INDEPENDENT</div>
+            <h2 class="section-title">個人勢（単独独立）</h2>
+            <p class="section-desc">マネジメント権およびガワの所有権をタレント本人が保持し、組織化されていない形態。</p>
+            <div class="individual-box">
+                <div class="indie-label">Independent VTubers</div>
+                <div class="indie-symbol"><i class="fa-solid fa-user-astronaut"></i></div>
+                <p>数万を超える個別の活動者たち。中央集権的な依存を持たない究極の分散勢力。</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Stats -->
+    <footer class="rel-footer">
+        <div class="stats-row">
+            <div class="stat-item">
+                <span class="stat-val">111</span>
+                <span class="stat-lbl">TOTAL_ENTITIES_MAPPED</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-val">7</span>
+                <span class="stat-lbl">SYSTEM_CATEGORIES</span>
+            </div>
+        </div>
+        <div class="footer-copy">&copy; 2026 VTuber Archive | Omni-Terminal Data Visualizer</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

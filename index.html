@@ -92,6 +92,7 @@
         <div class="dock-links">
             <a href="#" class="active"><i class="fa-solid fa-cubes"></i> <span
                     data-i18n="nav_agencies">AGENCIES</span></a>
+            <a href="relationship/index.html"><i class="fa-solid fa-diagram-project"></i> <span data-i18n="nav_relationship">RELATIONSHIP</span></a>
             <a href="#"><i class="fa-solid fa-chart-network"></i> <span data-i18n="nav_statistics">STATISTICS</span></a>
             <a href="#"><i class="fa-solid fa-clock-rotate-left"></i> <span data-i18n="nav_history">HISTORY</span></a>
         </div>
@@ -136,98 +137,58 @@
     </header>
 
     <!-- Status Notice -->
-    <div class="status-notice" style="
-        max-width: 900px;
-        margin: -20px auto 30px;
-        padding: 24px 30px;
-        background: rgba(10, 10, 20, 0.85);
-        backdrop-filter: blur(14px);
-        -webkit-backdrop-filter: blur(14px);
-        border: 1px solid rgba(255, 200, 60, 0.25);
-        border-radius: 14px;
-        position: relative;
-        z-index: 10;
-        font-family: 'Inter', 'Noto Sans JP', sans-serif;
-    ">
-        <div style="
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 14px;
-            font-family: 'Orbitron', sans-serif;
-            font-size: 0.72rem;
-            font-weight: 700;
-            letter-spacing: 0.15em;
-            color: #ffc83d;
-        " data-i18n="status_early_access">
+    <div class="status-notice">
+        <div class="status-notice-head" data-i18n="status_early_access">
             <i class="fa-solid fa-triangle-exclamation"></i>
             STATUS: EARLY ACCESS — 構築中
         </div>
-        <p style="
-            font-size: 0.82rem;
-            color: rgba(255,255,255,0.6);
-            line-height: 1.7;
-            margin-bottom: 16px;
-        " data-i18n="status_notice_p1">
+        <p class="status-notice-copy" data-i18n="status_notice_p1">
             本アーカイブは現在構築中のため、各セクターの完成度にばらつきがあります。
         </p>
-        <p style="
-            font-size: 0.82rem;
-            color: rgba(255,255,255,0.6);
-            line-height: 1.7;
-            margin-bottom: 16px;
-        " data-i18n="status_notice_p2">
+        <p class="status-notice-copy" data-i18n="status_notice_p2">
             アクセス自体は可能ですが、一部ページはレイアウト未整備・内容暫定の状態です。
         </p>
-        <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="status-stack">
             <!-- Latest News -->
-            <div style="display: flex; align-items: center; gap: 10px; font-size: 0.78rem; color: #39ff72; margin-bottom: 4px;">
+            <div class="status-news">
                 <i class="fa-solid fa-circle-check"></i>
                 <span data-i18n="status_news_illustrator">{{ t(null, 'status_news_illustrator') }}</span>
             </div>
 
             <!-- Completed Agencies List -->
-            <div style="display: flex; flex-direction: column; gap: 4px; padding: 8px 10px; background: rgba(57, 255, 114, 0.05); border-radius: 4px; border-left: 2px solid #39ff72;">
-                <div style="display: flex; align-items: center; gap: 10px; font-size: 0.78rem; color: rgba(255,255,255,0.95);">
-                    <strong style="min-width: 100px; color: #39ff72;" data-i18n="status_list_completed_title">{{ t(null, 'status_list_completed_title') }}</strong>
-                    <span style="color: rgba(255,255,255,0.4); font-size: 0.7rem;" data-i18n="status_list_completed_range_desc">{{ t(null, 'status_list_completed_range_desc') }}</span>
+            <div class="status-panel status-panel-completed">
+                <div class="status-panel-head">
+                    <strong class="status-label status-label-completed" data-i18n="status_list_completed_title">{{ t(null, 'status_list_completed_title') }}</strong>
+                    <span class="status-meta" data-i18n="status_list_completed_range_desc">{{ t(null, 'status_list_completed_range_desc') }}</span>
                 </div>
-                <div style="font-size: 0.7rem; color: rgba(255,255,255,0.65); line-height: 1.5; word-break: break-all;" data-i18n="status_list_completed_range">
+                <div class="status-panel-body" data-i18n="status_list_completed_range">
                     {{ t(null, 'status_list_completed_range') }}
                 </div>
             </div>
 
             <!-- Others -->
-            <div style="display: flex; align-items: center; gap: 10px; font-size: 0.78rem; color: rgba(255,255,255,0.85); padding: 4px 10px;">
-                <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #66aaff; box-shadow: 0 0 4px rgba(102,170,255,0.5); flex-shrink: 0;"></span>
-                <strong style="min-width: 100px;" data-i18n="status_list_others">{{ t(null, 'status_list_others') }}</strong>
-                <span style="color: rgba(255,255,255,0.45); font-size: 0.7rem;" data-i18n="status_list_others_desc">── 設計中</span>
+            <div class="status-row">
+                <span class="status-dot"></span>
+                <strong class="status-label" data-i18n="status_list_others">{{ t(null, 'status_list_others') }}</strong>
+                <span class="status-meta" data-i18n="status_list_others_desc">── 設計中</span>
             </div>
 
             <!-- Official Release Roadmap -->
-            <div style="margin-top: 10px; padding: 12px; background: rgba(255, 200, 61, 0.05); border-radius: 8px; border: 1px solid rgba(255, 200, 61, 0.15);">
-                <div style="display: flex; align-items: center; gap: 10px; font-size: 0.75rem; color: #ffc83d; margin-bottom: 8px; font-family: 'Orbitron', sans-serif; font-weight: 700;">
+            <div class="status-panel status-panel-roadmap">
+                <div class="status-roadmap-head">
                     <i class="fa-solid fa-map-location-dot"></i>
                     <span data-i18n="status_roadmap_title">{{ t(null, 'status_roadmap_title') }}</span>
                 </div>
-                <ul style="margin: 0; padding-left: 18px; font-size: 0.7rem; color: rgba(255,255,255,0.7); line-height: 1.6; display: flex; flex-direction: column; gap: 4px;">
+                <ul class="status-roadmap-list">
                     <li data-i18n="status_roadmap_criteria_80">{{ t(null, 'status_roadmap_criteria_80') }}</li>
                     <li data-i18n="status_roadmap_rate">{{ t(null, 'status_roadmap_rate') }}</li>
                     <li data-i18n="status_roadmap_yt">{{ t(null, 'status_roadmap_yt') }}</li>
-                    <li data-i18n="status_roadmap_features" style="color: #39ff72;">{{ t(null, 'status_roadmap_features') }}</li>
+                    <li class="status-roadmap-accent" data-i18n="status_roadmap_features">{{ t(null, 'status_roadmap_features') }}</li>
                     <li data-i18n="status_roadmap_no_lat">{{ t(null, 'status_roadmap_no_lat') }}</li>
                 </ul>
             </div>
         </div>
-        <p style="
-            font-size: 0.75rem;
-            color: rgba(255,255,255,0.45);
-            line-height: 1.5;
-            margin-top: 14px;
-            margin-bottom: 0;
-            padding-top: 12px;
-            border-top: 1px dashed rgba(255,255,255,0.1);
-        " data-i18n="status_notice_footer">
+        <p class="status-notice-footer" data-i18n="status_notice_footer">
             ※ 上記リストにまだ追加していないプロジェクトも多数存在しますが、詳細な調査が完了次第順次制作するため掲載が遅延しています。
         </p>
     </div>
@@ -296,45 +257,90 @@
 
     <!-- Script -->
     <script src="script.js"></script>
-    <!-- Author Access Link (Fixed Corner) -->
-    <a href="About/author.html" class="author-corner-btn" title="System Author Profile">
-        <i class="fa-solid fa-user-gear"></i>
-    </a>
+    <!-- Bottom Corner Actions -->
+    <div class="corner-actions">
+        <a href="relationship/index.html" class="corner-btn rel-btn" title="Relationship Archive">
+            <i class="fa-solid fa-diagram-project"></i>
+            <span class="btn-label">関係性リスト</span>
+        </a>
+        <a href="About/author.html" class="corner-btn author-btn" title="System Author Profile">
+            <i class="fa-solid fa-user-gear"></i>
+        </a>
+    </div>
 
     <style>
-        .author-corner-btn {
+        .corner-actions {
             position: fixed;
             bottom: 25px;
             right: 25px;
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .corner-btn {
             width: 45px;
             height: 45px;
-            background: rgba(255, 200, 61, 0.1);
-            border: 1px solid rgba(255, 200, 61, 0.2);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #ffc83d;
+            color: rgba(255, 255, 255, 0.6);
             text-decoration: none;
-            z-index: 10000;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             backdrop-filter: blur(5px);
+            position: relative;
         }
-        .author-corner-btn:hover {
+        .corner-btn:hover {
+            background: rgba(255, 255, 255, 0.15);
+            color: #fff;
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+        }
+        .rel-btn {
+            background: rgba(0, 229, 255, 0.1);
+            border-color: rgba(0, 229, 255, 0.2);
+            color: #00e5ff;
+            width: auto;
+            padding: 0 20px;
+            border-radius: 30px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
+            gap: 10px;
+            letter-spacing: 1px;
+        }
+        .rel-btn:hover {
+            background: #00e5ff;
+            color: #000;
+            box-shadow: 0 0 20px rgba(0, 229, 255, 0.4);
+        }
+        .author-btn {
+            background: rgba(255, 200, 61, 0.1);
+            border-color: rgba(255, 200, 61, 0.2);
+            color: #ffc83d;
+        }
+        .author-btn:hover {
             background: #ffc83d;
             color: #000;
             transform: scale(1.1) rotate(15deg);
             box-shadow: 0 0 20px rgba(255, 200, 61, 0.4);
         }
-        .author-corner-btn i {
-            font-size: 1.2rem;
-        }
         @media (max-width: 768px) {
-            .author-corner-btn {
+            .corner-actions {
                 bottom: 80px;
                 right: 15px;
+            }
+            .corner-btn {
                 width: 40px;
                 height: 40px;
+            }
+            .rel-btn {
+                padding: 0 15px;
+            }
+            .btn-label {
+                display: none;
             }
         }
     </style>

@@ -1,0 +1,228 @@
+@media (max-width: 900px) {
+    html,
+    body {
+        max-width: 100%;
+        overflow-x: clip;
+    }
+
+    body {
+        overflow-wrap: anywhere;
+    }
+
+    .nav,
+    .top-nav,
+    .vm-nav {
+        width: 100%;
+        padding: 0.9rem 1rem !important;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+    }
+
+    .nav-brand,
+    .vm-nav-logo,
+    .vm-nav-back,
+    .vm-nav-tag {
+        min-width: 0;
+    }
+
+    .nav-links {
+        width: 100%;
+        gap: 0.75rem !important;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .hero,
+    .hero-section,
+    .vm-hero {
+        min-height: auto !important;
+        height: auto !important;
+        padding: 5rem 1rem 2.5rem !important;
+        margin-bottom: 2rem !important;
+    }
+
+    .hero-title,
+    .hero-section .hero-title,
+    .sidebar-hero .hero-title,
+    .branch-title,
+    .vm-hero-name,
+    .vm-hero-subname {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    .hero-title,
+    .hero-section .hero-title,
+    .sidebar-hero .hero-title {
+        font-size: clamp(2rem, 9vw, 3.6rem) !important;
+        line-height: 1.05 !important;
+        letter-spacing: 0.08em !important;
+        padding-inline: clamp(0.5rem, 3vw, 1.25rem) !important;
+    }
+
+    .hero-sub,
+    .hero-subtitle,
+    .sidebar-hero .hero-subtitle,
+    .vm-hero-subname,
+    .vm-eyebrow,
+    .vm-tagline {
+        letter-spacing: 0.12em !important;
+        line-height: 1.5;
+    }
+
+    .main-content,
+    .container,
+    .vm-container {
+        width: 100%;
+        max-width: 100%;
+        padding: 1.25rem 1rem 2rem !important;
+    }
+
+    .sidebar-hero {
+        position: relative !important;
+        top: 0 !important;
+        flex: none !important;
+        width: 100% !important;
+    }
+
+    .card,
+    .glass-panel,
+    .sub-card,
+    .vm-member-card {
+        padding: 1.25rem !important;
+    }
+
+    .branch-nav,
+    .vm-section-header,
+    .panel-title,
+    .gen-title,
+    .status-row,
+    .status-panel-head {
+        min-width: 0;
+        flex-wrap: wrap;
+    }
+
+    .branch-link,
+    .filter-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .content-grid,
+    .member-grid,
+    .grid-2,
+    .grid-3,
+    .vm-member-grid,
+    [class*="grid"] {
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)) !important;
+        gap: 1rem !important;
+    }
+
+    .m-name,
+    .vm-member-name,
+    [class*="member-name"] {
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    .m-title,
+    .vm-member-read,
+    [class*="member-read"],
+    [class*="subtitle"] {
+        overflow-wrap: anywhere;
+    }
+
+    .m-status {
+        max-width: calc(100% - 20px);
+        white-space: normal;
+        text-align: right;
+    }
+
+    .bg-fx::before,
+    .bg-fx::after,
+    .hero::before,
+    .hero::after {
+        max-width: 160vw;
+    }
+}
+
+@media (max-width: 640px) {
+    .nav-links {
+        display: none !important;
+    }
+
+    .nav,
+    .top-nav,
+    .vm-nav {
+        align-items: flex-start;
+    }
+
+    .hero-title,
+    .hero-section .hero-title,
+    .sidebar-hero .hero-title {
+        font-size: clamp(1.8rem, 10vw, 2.8rem) !important;
+        letter-spacing: 0.04em !important;
+    }
+
+    .hero-sub,
+    .hero-subtitle,
+    .branch-title,
+    .gen-title,
+    .panel-title,
+    .vm-section-title {
+        font-size: clamp(1rem, 5vw, 1.5rem) !important;
+    }
+
+    .main-content,
+    .container,
+    .vm-container,
+    .glass-panel,
+    .card {
+        padding-left: 0.9rem !important;
+        padding-right: 0.9rem !important;
+    }
+
+    .branch-link,
+    .member-card,
+    .vm-member-card,
+    .sub-card {
+        border-radius: 14px;
+    }
+}
+
+@media (max-width: 420px) {
+    .hero,
+    .hero-section,
+    .vm-hero {
+        padding-top: 4.5rem !important;
+    }
+
+    .hero-title,
+    .hero-section .hero-title,
+    .sidebar-hero .hero-title {
+        font-size: clamp(1.5rem, 11vw, 2.2rem) !important;
+    }
+
+    .hero-sub,
+    .hero-subtitle,
+    .vm-hero-subname,
+    .vm-eyebrow,
+    .vm-tagline {
+        font-size: 0.78rem !important;
+        letter-spacing: 0.08em !important;
+    }
+
+    .card,
+    .glass-panel,
+    .sub-card,
+    .member-card,
+    .vm-member-card {
+        padding: 1rem !important;
+    }
+
+    .m-status {
+        font-size: 0.55rem;
+        padding: 2px 6px;
+    }
+}

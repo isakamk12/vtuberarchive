@@ -558,6 +558,8 @@ body {
     color: transparent;
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
     position: relative;
+    display: inline-block;
+    max-width: 100%;
 }
 
 .hero-title::after {
@@ -626,13 +628,165 @@ body {
     letter-spacing: 2px;
 }
 
+.status-notice {
+    max-width: 900px;
+    margin: -20px auto 30px;
+    padding: 24px 30px;
+    background: rgba(10, 10, 20, 0.85);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 200, 60, 0.25);
+    border-radius: 14px;
+    position: relative;
+    z-index: 10;
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+}
+
+.status-notice-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    font-family: var(--font-heading);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: #ffc83d;
+}
+
+.status-notice-copy {
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+.status-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.status-news {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.78rem;
+    color: #39ff72;
+    margin-bottom: 4px;
+}
+
+.status-panel {
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.status-panel-completed {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 8px 10px;
+    background: rgba(57, 255, 114, 0.05);
+    border-left: 2px solid #39ff72;
+    border-radius: 4px;
+}
+
+.status-panel-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.status-label {
+    min-width: 100px;
+    font-size: 0.78rem;
+}
+
+.status-label-completed {
+    color: #39ff72;
+}
+
+.status-meta {
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 0.7rem;
+}
+
+.status-panel-body {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.65);
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.status-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 4px 10px;
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.status-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #66aaff;
+    box-shadow: 0 0 4px rgba(102, 170, 255, 0.5);
+    flex-shrink: 0;
+}
+
+.status-panel-roadmap {
+    margin-top: 10px;
+    background: rgba(255, 200, 61, 0.05);
+    border: 1px solid rgba(255, 200, 61, 0.15);
+}
+
+.status-roadmap-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #ffc83d;
+}
+
+.status-roadmap-list {
+    margin: 0;
+    padding-left: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+}
+
+.status-roadmap-accent {
+    color: #39ff72;
+}
+
+.status-notice-footer {
+    margin: 14px 0 0;
+    padding-top: 12px;
+    border-top: 1px dashed rgba(255, 255, 255, 0.1);
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.45);
+    line-height: 1.5;
+}
+
 /* -------------------------------------------
    Main Container & Filters
 ------------------------------------------- */
 .omni-container {
     max-width: 1600px;
     margin: 0 auto;
-    padding: 2rem 4rem 120px;
+    padding: 2rem clamp(1rem, 4vw, 4rem) 150px;
     position: relative;
     z-index: 2;
 }
@@ -678,7 +832,7 @@ body {
 ------------------------------------------- */
 .datapanel-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
     gap: 2.5rem;
     perspective: 1500px;
     /* Essential for 3D tilt effect */
@@ -869,9 +1023,12 @@ body {
 
 @media (max-width: 900px) {
     .omni-dock {
-        width: 95%;
+        width: min(95%, 720px);
         justify-content: space-around;
-        padding: 1rem;
+        gap: 0.85rem;
+        padding: 0.9rem 1rem;
+        bottom: 68px;
+        flex-wrap: wrap;
     }
 
     .dock-search {
@@ -889,26 +1046,53 @@ body {
 
     .hero-title {
         font-size: 3rem;
+        letter-spacing: 0.2em;
+    }
+
+    .hero-core {
+        width: min(62vw, 320px);
+        height: min(62vw, 320px);
+    }
+
+    .status-notice {
+        margin: -10px 1rem 24px;
+        padding: 20px;
     }
 }
 
 @media (max-width: 700px) {
     .omni-hero {
-        height: 50vh;
+        min-height: 420px;
+        height: auto;
+        padding: 4.5rem 0 2rem;
     }
 
     .hero-text-container {
-        padding: 2rem 1.5rem;
+        width: min(100%, 560px);
+        padding: 2rem 1.25rem;
     }
 
     .hero-title {
-        font-size: 2.4rem;
-        letter-spacing: 8px;
+        font-size: clamp(1.7rem, 9vw, 2.5rem);
+        letter-spacing: 0.08em;
+        line-height: 0.95;
+        width: min(100%, 12ch);
+        margin-inline: auto;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+        color: var(--text-primary);
+        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.35);
+        text-shadow: 0 0 18px rgba(0, 229, 255, 0.18);
+    }
+
+    .hero-title::after {
+        content: none;
     }
 
     .hero-subtitle {
         font-size: 0.8rem;
-        letter-spacing: 4px;
+        letter-spacing: 0.22em;
+        margin-top: 0.6rem;
     }
 
     .hero-metrics {
@@ -921,7 +1105,7 @@ body {
     }
 
     .datapanel-grid {
-        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        grid-template-columns: 1fr;
         gap: 1.5rem;
     }
 
@@ -937,18 +1121,78 @@ body {
     .card-desc {
         font-size: 0.75rem;
     }
+
+    .status-notice-head,
+    .status-news,
+    .status-panel-head,
+    .status-roadmap-head,
+    .status-row {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .status-label {
+        min-width: 0;
+    }
+
+    .status-meta {
+        display: block;
+        width: 100%;
+    }
+
+    .opening-content {
+        width: min(100%, 92vw);
+    }
+
+    .boot-terminal {
+        width: min(320px, 100%);
+    }
+
+    .opening-title.glitch-head {
+        font-size: clamp(2rem, 9vw, 2.8rem);
+        letter-spacing: 0.18em;
+    }
+
+    .opening-status {
+        justify-content: center;
+        flex-wrap: wrap;
+        letter-spacing: 0.08em;
+        text-align: center;
+    }
+
+    .cyber-btn {
+        width: min(100%, 320px);
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+        letter-spacing: 0.25em;
+    }
 }
 
 @media (max-width: 520px) {
     .omni-dock {
-        gap: 1rem;
-        padding: 0.8rem 0.8rem;
+        width: calc(100% - 16px);
+        gap: 0.6rem 0.9rem;
+        padding: 0.75rem;
+        border-radius: 24px;
+        bottom: 60px;
     }
 
     .dock-links a {
         width: 42px;
         height: 42px;
         font-size: 1rem;
+    }
+
+    .dock-links a span {
+        display: none;
+    }
+
+    .dock-links {
+        gap: 0.5rem;
+    }
+
+    .dock-lang {
+        padding-left: 0.75rem;
     }
 
     .omni-filters {
@@ -959,6 +1203,78 @@ body {
     .filter-btn {
         padding: 0.6rem 1rem;
         font-size: 0.7rem;
+    }
+
+    .hero-core {
+        width: min(72vw, 260px);
+        height: min(72vw, 260px);
+    }
+
+    .hero-subtitle {
+        font-size: 0.72rem;
+        letter-spacing: 0.1em;
+    }
+
+    .hero-title {
+        text-shadow: 0 0 14px rgba(0, 229, 255, 0.14);
+    }
+
+    .metric-val {
+        font-size: 2rem;
+    }
+
+    .metric-val.status-ok {
+        font-size: 1.6rem;
+    }
+
+    .status-notice {
+        margin: 0 0.75rem 22px;
+        padding: 16px 14px;
+        border-radius: 12px;
+    }
+
+    .status-notice-copy,
+    .status-news,
+    .status-row,
+    .status-panel-head {
+        font-size: 0.74rem;
+    }
+
+    .status-panel,
+    .status-panel-completed {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .opening-core-3d {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 0.5rem;
+    }
+
+    .core-center-icon {
+        font-size: 2.8rem;
+    }
+
+    .boot-terminal {
+        font-size: 0.62rem;
+        height: 36px;
+    }
+
+    .opening-title.glitch-head {
+        letter-spacing: 0.12em;
+        line-height: 1.05;
+    }
+
+    .opening-status {
+        font-size: 0.72rem;
+    }
+
+    .cyber-btn {
+        width: min(100%, 280px);
+        padding: 0.95rem 1.1rem;
+        font-size: 0.9rem;
+        letter-spacing: 0.16em;
     }
 }
 
@@ -1287,4 +1603,3 @@ body {
 
 .cyber-btn:hover .bracket-l { left: 0; opacity: 1; border-color: #000; height: 100%; }
 .cyber-btn:hover .bracket-r { right: 0; opacity: 1; border-color: #000; height: 100%; }
-
