@@ -14,28 +14,27 @@
 <nav class="nav">
 <a class="nav-brand" href="../index.html"><i class="fa-solid fa-layer-group"></i> VT_ARCHIVE</a>
 <div class="nav-links">
-<a href="../index.html"><i class="fa-solid fa-home"></i> HOME</a>
-<a href="#" style="color: var(--c1);"><i class="fa-solid fa-rainbow"></i> NIJISANJI</a>
+<a href="../index.html"><i class="fa-solid fa-home"></i> <span data-i18n="nav_home">HOME</span></a>
+<a href="#" style="color: var(--c1);"><i class="fa-solid fa-rainbow"></i> <span data-i18n="nav_nijisanji">NIJISANJI</span></a>
 </div>
 </nav>
 <header class="hero">
 <h1 class="hero-title" data-text="NIJISANJI">NIJISANJI</h1>
-<p class="hero-subtitle">[ Archive Database ]</p>
+<p class="hero-subtitle" data-i18n="hero_subtitle">[ Archive Database ]</p>
 </header>
 <main class="main-content">
 <!-- Analytical Report Section -->
 <section class="report-section">
 <div class="content-grid">
 <article class="card highlight-card">
-<h2><i class="fa-solid fa-seedling"></i> 運営実績と継続性</h2>
-<p>本アーカイブでは過去の組織的変遷やトラブルも記録していますが、<strong>最も重要なのは「様々な試練を乗り越え、現在まで運営が継続し、タレントたちが輝き続けている」という事実</strong>です。ファンとの絆や、試行錯誤を通じて培われた運営ノウハウこそが、この機関の真の価値です。
+<h2><i class="fa-solid fa-seedling"></i> <span data-i18n="report_legacy_title">運営実績と継続性</span></h2>
+<p data-i18n-html="report_legacy_text">本アーカイブでは過去の組織的変遷やトラブルも記録していますが、<strong>最も重要なのは「様々な試練を乗り越え、現在まで運営が継続し、タレントたちが輝き続けている」という事実</strong>です。ファンとの絆や、試行錯誤を通じて培われた運営ノウハウこそが、この機関の真の価値です。
                                         </p>
 </article>
 <article class="card">
-<h2><i class="fa-solid fa-book-open fa-xs" style="opacity:0.5;"></i> Overview
-                                        </h2>
-<p>Anycolorにおける「にじさんじ」タレントポートフォリオの構造的分析と網羅的名簿：ユニット・レーベル・世代の変遷</p>
-<p>バーチャルライバー（<strong style="color:var(--c-blue);">VTuber</strong>）業界において、Anycolor株式会社が運営する「にじさんじ」プロジェクトは、そのタレント数の多さと多様なユニット展開において、類を見ない巨大なポートフォリオを形成している。2018年の発説当初、わずか8名の「1期生」から始まったこの試みは、2024年12月時点で計187名の現役ライバーを擁するまでに拡大し、さらに2025年から2026年にかけても年間約20名の新規デビューを計画するなど、その膨張は止まる所を知らない。
+<h2><i class="fa-solid fa-book-open fa-xs" style="opacity:0.5;"></i> <span data-i18n="report_overview_title">Overview</span></h2>
+<p data-i18n="report_overview_subtitle">Anycolorにおける「にじさんじ」タレントポートフォリオの構造的分析と網羅的名簿：ユニット・レーベル・世代の変遷</p>
+<p data-i18n="report_overview_text">バーチャルライバー（<strong style="color:var(--c-blue);">VTuber</strong>）業界において、Anycolor株式会社が運営する「にじさんじ」プロジェクトは、そのタレント数の多さと多様なユニット展開において、類を見ない巨大なポートフォリオを形成している。2018年の発説当初、わずか8名の「1期生」から始まったこの試みは、2024年12月時点で計187名の現役ライバーを擁するまでに拡大し、さらに2025年から2026年にかけても年間約20名の新規デビューを計画するなど、その膨張は止まる所を知らない。
                                         </p>
 </article>
 <!-- Other summary articles preserved for context -->
@@ -43,7 +42,7 @@
 </section>
 <!-- Talent Roster Section -->
 <section class="roster-header reveal" id="roster">
-<h2 class="roster-title">TALENT ROSTER</h2>
+<h2 class="roster-title" data-i18n="roster_title">TALENT ROSTER</h2>
 <div class="branch-nav">
 <div class="branch-link active" data-branch="jp">JP</div>
 <div class="branch-link" data-branch="en">EN</div>
@@ -957,7 +956,7 @@
 </div>
 </section>
 </main>
-<footer style="text-align:center; padding:4rem; margin-top:5rem; opacity:0.5; font-family:'Montserrat', sans-serif; letter-spacing:3px; font-size: 0.9rem;">
+<footer style="text-align:center; padding:4rem; margin-top:5rem; opacity:0.5; font-family:'Montserrat', sans-serif; letter-spacing:3px; font-size: 0.9rem;" data-i18n="footer_text">
                 © 2026 VTuber Archive Project - NIJISANJI Databank.
         </footer>
 <script>
@@ -1012,15 +1011,17 @@
                 // Smooth scroll for nav links
                 document.querySelectorAll('.nav-links a').forEach(anchor => {
                         anchor.addEventListener('click', function (e) {
-                                if (this.hash !== "") {
-                                        e.preventDefault();
-                                        document.querySelector(this.hash).scrollIntoView({
-                                                behavior: 'smooth'
-                                        });
-                                }
+                                const hash = this.hash;
+                                if (!hash || hash === '#') return;
+                                const target = document.querySelector(hash);
+                                if (!target) return;
+                                e.preventDefault();
+                                target.scrollIntoView({ behavior: 'smooth' });
                         });
                 });
         </script>
+<div id="i18n-switcher-container"></div>
+<script src="nijisanji_script.js"></script>
 <script src="../mobile_optimize.js"></script>
 </body>
 </html>

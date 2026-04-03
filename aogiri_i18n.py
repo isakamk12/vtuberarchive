@@ -79,6 +79,59 @@ NAME_FIX_RULES = {
     "Sound Soul Child": "Tamako Otodama",
 }
 
+def apply_gender_fixes(text, lang):
+    """Normalize pronouns for Aogiri members (all female)."""
+    if lang == 'en':
+        # Keep it simple and predictable (avoids changing punctuation/formatting).
+        text = re.sub(r'\bHe\b', 'She', text)
+        text = re.sub(r'\bhe\b', 'she', text)
+        text = re.sub(r'\bHim\b', 'Her', text)
+        text = re.sub(r'\bhim\b', 'her', text)
+        text = re.sub(r'\bHis\b', 'Her', text)
+        text = re.sub(r'\bhis\b', 'her', text)
+        text = re.sub(r'\bHimself\b', 'Herself', text)
+        text = re.sub(r'\bhimself\b', 'herself', text)
+        # De-capitalize mid-sentence artifacts (best-effort).
+        text = re.sub(r'([a-z0-9,;:\)\]])\sShe\b', r'\1 she', text)
+        text = re.sub(r'([a-z0-9,;:\)\]])\sHer\b', r'\1 her', text)
+        text = re.sub(r'([a-z0-9,;:\)\]])\sHerself\b', r'\1 herself', text)
+        text = re.sub(r'\(She\b', '(she', text)
+        text = re.sub(r'\(Her\b', '(her', text)
+        text = re.sub(r'\(Herself\b', '(herself', text)
+        return text
+
+    if lang == 'de':
+        # Possessives first (longest to shortest), then personal pronouns.
+        text = re.sub(r'\bSeinen\b', 'Ihren', text)
+        text = re.sub(r'\bseinen\b', 'ihren', text)
+        text = re.sub(r'\bSeinem\b', 'Ihrem', text)
+        text = re.sub(r'\bseinem\b', 'ihrem', text)
+        text = re.sub(r'\bSeines\b', 'Ihres', text)
+        text = re.sub(r'\bseines\b', 'ihres', text)
+        text = re.sub(r'\bSeiner\b', 'Ihrer', text)
+        text = re.sub(r'\bseiner\b', 'ihrer', text)
+        text = re.sub(r'\bSeine\b', 'Ihre', text)
+        text = re.sub(r'\bseine\b', 'ihre', text)
+        text = re.sub(r'\bSein\b', 'Ihr', text)
+        text = re.sub(r'\bsein\b', 'ihr', text)
+
+        text = re.sub(r'\bIhn\b', 'Sie', text)
+        text = re.sub(r'\bihn\b', 'sie', text)
+        text = re.sub(r'\bIhm\b', 'Ihr', text)
+        text = re.sub(r'\bihm\b', 'ihr', text)
+        text = re.sub(r'\bEr\b', 'Sie', text)
+        text = re.sub(r'\ber\b', 'sie', text)
+        return text
+
+    if lang == 'fr':
+        text = re.sub(r'\bLui-même\b', 'Elle-même', text)
+        text = re.sub(r'\blui-même\b', 'elle-même', text)
+        text = re.sub(r'\bIl\b', 'Elle', text)
+        text = re.sub(r'\bil\b', 'elle', text)
+        return text
+
+    return text
+
 def apply_name_fixes(text, lang):
     """Post-process text to fix name translations."""
     if lang == 'ja':
@@ -91,7 +144,9 @@ def apply_name_fixes(text, lang):
     # Apply general literal fix rules
     for lit, rep in NAME_FIX_RULES.items():
         text = text.replace(lit, rep)
-    
+
+    text = apply_gender_fixes(text, lang)
+
     # Force full names if they appear in isolation or obvious patterns
     # (Matches any of the values in AOGIRI_NAME_MAP if they were translated)
     # Since we can't know ALL possible translations, we focus on the rule set above.
