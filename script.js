@@ -714,12 +714,12 @@ const agencies = [
             desc_zh: "由插画家GYARI发起的个人主导项目。官方网站统一采用独特艺术风格，信息简洁明了。",
             desc_ko: "일러스트레이터 GYARI 씨가 주도하는 개인 프로젝트입니다. 공식 사이트는 독특한 아트 스타일로 통일되어 있으며 정보가 미니멀하게 정리되어 있습니다."
         },
-        {
-            name: "ホロライブプロダクション",
-            name_en: "hololive production",
-            name_es: "hololive production",
-            name_zh: "hololive production",
-            name_ko: "홀로라이브 프로덕션",
+          {
+              name: "ホロライブプロダクション",
+              name_en: "hololive production",
+              name_es: "hololive production",
+              name_zh: "hololive production",
+              name_ko: "홀로라이브 프로덕션",
             sub: "hololive production",
             filter: "major",
             color: "0, 210, 255",
@@ -729,9 +729,27 @@ const agencies = [
             desc: "世界的人気を誇るVTuberグループ。公式サイトは世界中のファンに対応した多言語展開が完璧で、情報の網羅性に優れている。",
             desc_en: "A world-famous VTuber group. Their site features perfect multi-language support for fans worldwide.",
             desc_es: "Un grupo VTuber de fama mundial. Su sitio cuenta con un soporte multiidioma perfecto para fans de todo el mundo.",
-            desc_zh: "享誉全球的VTuber团体。官网完美支持多语言，面向全球粉丝，信息全面性极佳。",
-            desc_ko: "전 세계적으로 인기를 끌고 있는 버추얼 유튜버 그룹입니다. 전 세계 팬들을 위한 다국어 지원이 완벽하며 정보의 포괄성은 세계 최고 수준입니다."
-        },
+              desc_zh: "享誉全球的VTuber团体。官网完美支持多语言，面向全球粉丝，信息全面性极佳。",
+              desc_ko: "전 세계적으로 인기를 끌고 있는 버추얼 유튜버 그룹입니다. 전 세계 팬들을 위한 다국어 지원이 완벽하며 정보의 포괄성은 세계 최고 수준입니다."
+          },
+          {
+              name: "ホロスターズ",
+              name_en: "holostars",
+              name_es: "holostars",
+              name_zh: "holostars",
+              name_ko: "홀로스타즈",
+              sub: "holostars",
+              filter: "major",
+              color: "0, 179, 106",
+              icon: "S",
+              url: "Holostars/holostars_index.html",
+              tags: ["Idol", "Male"],
+              desc: "ホロライブプロダクションの男性VTuberグループ。音楽・ライブ・配信を軸に多彩なユニットで展開。",
+              desc_en: "The male VTuber group under hololive production, spanning music, live events, and streams.",
+              desc_es: "El grupo masculino de VTubers bajo hololive production, con musica, directos y streams.",
+              desc_zh: "hololive production旗下的男性VTuber团体，涵盖音乐、演出与直播。",
+              desc_ko: "hololive production 소속 남성 버추얼 유튜버 그룹으로, 음악과 라이브, 방송을 폭넓게 전개합니다."
+          },
         {
             name: "Marble Creators",
             name_en: "Marble Creators",
