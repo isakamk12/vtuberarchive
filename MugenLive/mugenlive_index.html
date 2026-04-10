@@ -1,288 +1,106 @@
 <!DOCTYPE html>
-
 <html lang="ja">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>MUGEN LIVE | VTuber Archive</title>
-<meta content="Brave Group Chinaが運営する、無限の可能性を秘めた多言語VTuberプロジェクト「MUGEN LIVE」の非公式ファンサイト。" name="description"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&amp;family=Nunito:wght@400;600;700;800;900&amp;family=Noto+Sans+JP:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
-<link href="mugenlive.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="../agency_mobile.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUGEN LIVE (夢幻Live) Archive | VTuber Archive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Noto+Sans+SC:wght@400;700;900&family=Fredoka:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="mugenlive_index.css">
+    <link rel="stylesheet" href="../agency_mobile.css">
 </head>
 <body>
-<div class="mu-bg">
-<div class="mu-bg-blobs">
-<div class="mu-blob mu-blob-pink"></div>
-<div class="mu-blob mu-blob-blue"></div>
-<div class="mu-blob mu-blob-purple"></div>
-</div>
-<div class="mu-danmaku-container" id="mu-danmaku"></div>
-<div class="mu-bg-glass"></div>
-</div>
-<nav class="mu-nav">
-<a class="mu-nav-back" href="../index.html">
-<i class="fa-solid fa-chevron-left"></i> BACK
+    <div class="mu-bg-dots"></div>
+
+    <nav class="mu-nav">
+        <a href="../index.html" style="color: var(--mu-dim); text-decoration: none; font-weight: 700;">
+            <i class="fa-solid fa-chevron-left"></i> BACK
         </a>
-<div class="mu-nav-logo">
-<span class="mu-text-pink">MUGEN</span> <span class="mu-text-blue">LIVE</span>
-</div>
-<div class="mu-nav-tags">
-<span class="mu-tag"><i class="fa-solid fa-earth-asia"></i> GLOBAL</span>
-<span class="mu-tag"><i class="fa-solid fa-tv"></i> BILIBILI</span>
-</div>
-</nav>
-<!-- HERO -->
-<section class="mu-hero">
-<div class="mu-hero-inner">
-<div class="mu-hero-content">
-<div class="mu-live-badge"><span class="mu-dot"></span>INFINITE POSSIBILITIES</div>
-<h1 class="mu-hero-title">
-<span class="mu-title-mugen">MUGEN</span>
-<span class="mu-title-live">LIVE</span>
-</h1>
-<p class="mu-hero-tagline">Brave Group China — Multilingual VTuber Project</p>
-<div class="mu-hero-concept">
-<p>「MUGEN LIVE」は、Brave Group Chinaが運営する中国のVTuberおよびVUPエージェンシーです。2021年8月に「萌咲学园（Moesaki
-                        Academy）」として活動を開始し、その後統合されました。</p>
-<p>主にBilibiliで配信を行っていますが、日本や英語圏などの多言語で配信を行う海外インディーズVTuberも多数加入し、「多言語VTuberプロジェクト」としてグローバルに展開しています。
-                    </p>
-</div>
-</div>
-<div class="mu-hero-visual">
-<!-- Abstract streaming interface window -->
-<div class="mu-stream-window">
-<div class="mu-window-header">
-<div class="mu-win-dots">
-<i></i><i></i><i></i>
-</div>
-<div class="mu-win-title">mugen_live_broadcast.exe</div>
-</div>
-<div class="mu-window-body">
-<div class="mu-play-btn"><i class="fa-solid fa-play"></i></div>
-<div class="mu-sound-wave">
-<i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- ROSTER CONTAINER -->
-<div class="mu-container">
-<!-- eSports Unit -->
-<section class="mu-section mu-reveal">
-<div class="mu-section-header">
-<h2 class="mu-section-title"><i class="fa-solid fa-gamepad"></i> eSports Unit</h2>
-<p class="mu-section-desc">元・VSPO! China（ぶいすぽっ！中国支部）。2025年10月にVSPO! China解散に伴いMUGEN LIVEへ移籍。</p>
-</div>
-<div class="mu-member-grid">
-<div class="mu-member-card">
-<div class="mu-card-inner">
-<div class="mu-member-icon mu-icon-esports"><i class="fa-solid fa-crosshairs"></i></div>
-<div class="mu-member-info">
-<a class="mu-member-name" href="characters/aya.html">Kohari Aya</a>
-<span class="mu-member-kanji">小針 あや</span>
-</div>
-</div>
-</div>
-<div class="mu-member-card">
-<div class="mu-card-inner">
-<div class="mu-member-icon mu-icon-esports"><i class="fa-solid fa-headset"></i></div>
-<div class="mu-member-info">
-<a class="mu-member-name" href="characters/tsuyuri.html">Shirasaki Tsuyuri</a>
-<span class="mu-member-kanji">白崎 つゆり</span>
-</div>
-</div>
-</div>
-<div class="mu-member-card">
-<div class="mu-card-inner">
-<div class="mu-member-icon mu-icon-esports"><i class="fa-solid fa-ghost"></i></div>
-<div class="mu-member-info">
-<a class="mu-member-name" href="characters/pafi.html">Pafi</a>
-<span class="mu-member-kanji">帕菲</span>
-</div>
-</div>
-</div>
-<div class="mu-member-card">
-<div class="mu-card-inner">
-<div class="mu-member-icon mu-icon-esports"><i class="fa-solid fa-kitesurfing"></i></div>
-<div class="mu-member-info">
-<a class="mu-member-name" href="characters/sen.html">Sen</a>
-<span class="mu-member-kanji">千</span>
-</div>
-</div>
-</div>
-<div class="mu-member-card">
-<div class="mu-card-inner">
-<div class="mu-member-icon mu-icon-esports"><i class="fa-regular fa-sun"></i></div>
-<div class="mu-member-info">
-<a class="mu-member-name" href="characters/haru.html">Hinata Haru</a>
-<span class="mu-member-kanji">日向 はる</span>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Overseas Solo Members -->
-<section class="mu-section mu-reveal">
-<div class="mu-section-header">
-<h2 class="mu-section-title"><i class="fa-solid fa-earth-americas"></i> Overseas Solo</h2>
-<p class="mu-section-desc">日本などを拠点とした多言語VTuber陣。</p>
-</div>
-<div class="mu-member-grid">
-<div class="mu-member-card">
-<div class="mu-card-inner">
-<div class="mu-member-icon"><i class="fa-solid fa-star"></i></div>
-<div class="mu-member-info">
-<a class="mu-member-name" href="characters/ritsu.html">Takatsuki Ritsu</a>
-<span class="mu-member-kanji">高槻 りつ</span>
-<span class="mu-member-note">最初の海外ソロメンバー</span>
-</div>
-</div>
-</div>
-<div class="mu-member-card">
-<div class="mu-card-inner">
-<div class="mu-member-icon"><i class="fa-solid fa-palette"></i></div>
-<div class="mu-member-info">
-<a class="mu-member-name" href="characters/uyu.html">Pastel Uyu</a>
-<span class="mu-member-kanji">パステルうゆ</span>
-</div>
-</div>
-</div>
-<div class="mu-member-card">
-<div class="mu-card-inner">
-<div class="mu-member-icon"><i class="fa-solid fa-cat"></i></div>
-<div class="mu-member-info">
-<a class="mu-member-name" href="characters/shanoa.html">Shanoa</a>
-<span class="mu-member-kanji">シャノア / Chatnoir</span>
-</div>
-</div>
-</div>
-<div class="mu-member-card">
-<div class="mu-card-inner">
-<div class="mu-member-icon"><i class="fa-solid fa-candy-cane"></i></div>
-<div class="mu-member-info">
-<a class="mu-member-name" href="characters/latte.html">Amedama Latte</a>
-<span class="mu-member-kanji">飴玉 らて</span>
-</div>
-</div>
-</div>
-<div class="mu-member-card">
-<div class="mu-card-inner">
-<div class="mu-member-icon"><i class="fa-regular fa-snowflake"></i></div>
-<div class="mu-member-info">
-<a class="mu-member-name" href="characters/yuki.html">Tsurugasaki Yuki</a>
-<span class="mu-member-kanji">鶴河 咲雪</span>
-</div>
-</div>
-</div>
-<div class="mu-member-card">
-<div class="mu-card-inner">
-<div class="mu-member-icon"><i class="fa-solid fa-moon"></i></div>
-<div class="mu-member-info">
-<a class="mu-member-name" href="characters/momo.html">Mitsuki Momo</a>
-<span class="mu-member-kanji">美月 もも</span>
-</div>
-</div>
-</div>
-<div class="mu-member-card">
-<div class="mu-card-inner">
-<div class="mu-member-icon"><i class="fa-solid fa-comet"></i></div>
-<div class="mu-member-info">
-<a class="mu-member-name" href="characters/sio.html">Hosimiya Sio</a>
-<span class="mu-member-kanji">星宮 しお</span>
-</div>
-</div>
-</div>
-<div class="mu-member-card">
-<div class="mu-card-inner">
-<div class="mu-member-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-<div class="mu-member-info">
-<a class="mu-member-name" href="characters/nano.html">Hananashi Nano</a>
-<span class="mu-member-kanji">花梨 なの</span>
-<span class="mu-member-note">日本語を学ぶ留学生 (YouTube)</span>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Generation 1 & 2 -->
-<div class="mu-gen-wrapper">
-<section class="mu-section mu-reveal mu-flex-1">
-<div class="mu-section-header">
-<h2 class="mu-section-title">Gen 2</h2>
-</div>
-<div class="mu-member-grid mu-grid-small">
-<div class="mu-member-card mu-card-mini">
-<div class="mu-card-inner">
-<div class="mu-member-icon"><i class="fa-solid fa-terminal"></i></div>
-<div class="mu-member-info">
-<a class="mu-member-name" href="characters/administer.html">Administer</a>
-<span class="mu-member-kanji">艾德敏内斯特</span>
-</div>
-</div>
-</div>
-<div class="mu-member-card mu-card-mini">
-<div class="mu-card-inner">
-<div class="mu-member-icon"><i class="fa-solid fa-music"></i></div>
-<div class="mu-member-info">
-<a class="mu-member-name" href="characters/cyuko.html">Cyuko</a>
-<span class="mu-member-kanji">啾可</span>
-</div>
-</div>
-</div>
-<div class="mu-member-card mu-card-mini">
-<div class="mu-card-inner">
-<div class="mu-member-icon"><i class="fa-solid fa-leaf"></i></div>
-<div class="mu-member-info">
-<a class="mu-member-name" href="characters/fuuwa.html">Fuuwa</a>
-<span class="mu-member-kanji">枫和</span>
-</div>
-</div>
-</div>
-<div class="mu-member-card mu-card-mini">
-<div class="mu-card-inner">
-<div class="mu-member-icon"><i class="fa-solid fa-bed"></i></div>
-<div class="mu-member-info">
-<a class="mu-member-name" href="characters/nemu.html">Nemu</a>
-<span class="mu-member-kanji">未眠眠</span>
-</div>
-</div>
-</div>
-</div>
-<p class="mu-grad-note">* Yoki has graduated.</p>
-</section>
-<section class="mu-section mu-reveal mu-flex-1">
-<div class="mu-section-header">
-<h2 class="mu-section-title">Gen 1</h2>
-</div>
-<div class="mu-member-grid mu-grid-small">
-<div class="mu-member-card mu-card-mini">
-<div class="mu-card-inner">
-<div class="mu-member-icon"><i class="fa-solid fa-seedling"></i></div>
-<div class="mu-member-info">
-<a class="mu-member-name" href="characters/nte.html">Nte</a>
-<span class="mu-member-kanji">恩缇</span>
-</div>
-</div>
-</div>
-</div>
-<p class="mu-grad-note">* Anna, Hana, Xiǎowěibā Qīfàn have graduated.</p>
-</section>
-</div>
-</div>
-<footer class="mu-footer">
-<div class="mu-footer-logo">
-            MUGEN <span class="mu-text-blue">LIVE</span>
-</div>
-<div class="mu-footer-company">A Brave Group China Agency</div>
-<p>© 2026 VTuber Archive Project. Unofficial fan archive. Not affiliated with MUGEN LIVE.</p>
-</footer>
-<script src="mugenlive_script.js"></script>
-<script src="../mobile_optimize.js"></script>
+        <div class="mu-nav-logo">
+            <span class="mu-logo-txt-pink">MUGEN</span> <span class="mu-logo-txt-blue">LIVE</span>
+        </div>
+        <div class="mu-nav-tag" style="font-size: 0.7rem; color: var(--mu-pink); font-weight: 900;">BGC_SUBSET</div>
+    </nav>
+
+    <header class="mu-hero">
+        <span class="mu-hero-badge">MULTILINGUAL VTUBER PROJECT</span>
+        <h1 class="mu-hero-title">MUGEN LIVE</h1>
+        <p class="mu-hero-tagline">Infinite Possibilities Across Borders.</p>
+    </header>
+
+    <main class="mu-container">
+        <article class="mu-article">
+            <h2>プロジェクト概要</h2>
+            <p>
+                「MUGEN LIVE（夢幻Live）」は、Brave Group Chinaが運営する、多言語展開を主軸としたグローバルVTuberプロジェクトです。
+                2021年8月の始動以来、中国のBilibiliをメインプラットフォームとしながら、日本や英語圏のタレントも擁する「国境なきバーチャルエンターテインメント」を追求しています。
+            </p>
+            <p>
+                特に2025年10月には、VSPO! China（ぶいすぽっ！中国支部）の解散に伴い、所属していたeSportsタレント5名がMUGEN LIVEへと移籍統合されました。
+                これにより、従来のアイドル・バラエティ路線に加え、競技性の高いゲーム実況分野でも強固な基盤を確立しています。
+            </p>
+            <p>
+                本アーカイブでは、言語の壁を超えて加速し続ける、Brave Group Chinaの革新的なプロジェクトの足跡を保存しています。
+            </p>
+        </article>
+
+        <!-- Unit: eSports -->
+        <h2 class="mu-section-title"><i class="fa-solid fa-gamepad"></i> eSports Unit</h2>
+        <div class="mu-grid">
+            <div class="mu-card">
+                <span class="kana">こはり あや</span>
+                <h3>Kohari Aya</h3>
+                <span class="mu-unit-pill">Former VSPO! CN</span>
+            </div>
+            <div class="mu-card">
+                <span class="kana">しらさき つゆり</span>
+                <h3>Shirasaki Tsuyuri</h3>
+                <span class="mu-unit-pill">Former VSPO! CN</span>
+            </div>
+            <div class="mu-card">
+                <span class="kana">ぱふぇ</span>
+                <h3>Pafi</h3>
+                <span class="mu-unit-pill">Former VSPO! CN</span>
+            </div>
+            <div class="mu-card">
+                <span class="kana">せん</span>
+                <h3>Sen</h3>
+                <span class="mu-unit-pill">Former VSPO! CN</span>
+            </div>
+            <div class="mu-card">
+                <span class="kana">ひなた はる</span>
+                <h3>Hinata Haru</h3>
+                <span class="mu-unit-pill">Former VSPO! CN</span>
+            </div>
+        </div>
+
+        <!-- Unit: Overseas -->
+        <h2 class="mu-section-title"><i class="fa-solid fa-earth-asia"></i> Overseas Solo</h2>
+        <div class="mu-grid">
+            <div class="mu-card">
+                <span class="kana">たかつき りつ</span>
+                <h3>Takatsuki Ritsu</h3>
+                <span class="mu-unit-pill">1st Overseas</span>
+            </div>
+            <div class="mu-card">
+                <span class="kana">ぱすてる うゆ</span>
+                <h3>Pastel Uyu</h3>
+                <span class="mu-unit-pill">Soloist</span>
+            </div>
+            <div class="mu-card">
+                <span class="kana">しゃのあ</span>
+                <h3>Shanoa</h3>
+                <span class="mu-unit-pill">Soloist</span>
+            </div>
+            <div class="mu-card">
+                <span class="kana">あめだま らて</span>
+                <h3>Amedama Latte</h3>
+                <span class="mu-unit-pill">Soloist</span>
+            </div>
+        </div>
+    </main>
+
+    <script src="mugenlive_script.js"></script>
+    <script src="../mobile_optimize.js"></script>
 </body>
 </html>

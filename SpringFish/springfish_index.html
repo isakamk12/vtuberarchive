@@ -1,44 +1,106 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SpringFish - VTuber Archive</title>
-  <link rel="stylesheet" href="../agency_base.css" />
-  <link rel="stylesheet" href="../agency_mobile.css" />
-  <style>
-    .container { max-width: 980px; margin: 0 auto; padding: 2.5rem 1.25rem; }
-    .card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 1.75rem; }
-    .pill { display:inline-block; padding: 0.25rem 0.6rem; border-radius: 999px; border: 1px solid var(--glass-border); color: var(--text-secondary); font-size: 0.85rem; }
-    h1 { margin: 0.75rem 0 0.75rem; letter-spacing: 1px; }
-    .muted { color: var(--text-secondary); }
-    .actions { display:flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.25rem; }
-    .btn { text-decoration:none; display:inline-block; padding: 0.75rem 1rem; border-radius: 12px; border: 1px solid var(--glass-border); color: var(--text-primary); background: rgba(255,255,255,0.04); }
-    .btn:hover { box-shadow: 0 0 0 2px rgba(59,130,246,0.25); }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpringFish (春魚創意) Archive | VTuber Archive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700;900&family=Noto+Sans+JP:wght@400;700&family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="springfish_index.css">
+    <link rel="stylesheet" href="../agency_mobile.css">
 </head>
 <body>
-  <div class="bg-layer" aria-hidden="true"></div>
-  <nav class="top-nav">
-    <a class="nav-brand" href="../index.html">VT_ARCHIVE</a>
-    <div class="nav-links">
-      <a href="../index.html">HOME</a>
-      <a href="#">SpringFish</a>
+    <div class="sf-bg">
+        <div class="sf-starfield"></div>
     </div>
-  </nav>
 
-  <main class="container">
-    <div class="card">
-      <span class="pill">整備中 / Under construction</span>
-      <h1>SpringFish</h1>
-      <p class="muted">このページは現在準備中です。メインの一覧（Index）からのリンク切れを避けるための仮ページです。</p>
-      <div class="actions">
-        <a class="btn" href="../index.html">← 戻る</a>
-      </div>
-    </div>
-  </main>
+    <nav class="sf-nav">
+        <a href="../index.html" style="color: white; text-decoration: none; font-weight: 300; letter-spacing: 2px;">
+             ← RETURN
+        </a>
+        <div class="sf-nav-logo">SPRINGFISH</div>
+        <div class="sf-nav-tag" style="font-size: 0.7rem; color: var(--sf-accent); opacity: 0.6;">LOC: TAIWAN</div>
+    </nav>
 
-  <script src="../mobile_optimize.js"></script>
+    <header class="sf-hero">
+        <h1 class="sf-hero-title">春魚創意</h1>
+        <p class="sf-hero-tagline">STORYTELLING IN THE DEEP BLUE & SPACE</p>
+    </header>
+
+    <main class="sf-container">
+        <article class="sf-article">
+            <h2>春魚創意（Springfish Creative）</h2>
+            <p>
+                「春魚創意」は、台湾を拠点に活動する、伝統的かつ革新的なVTuberスタジオです。
+                単なるアバターを用いた配信活動以上に、科学的知見や環境保護、天文学といった深淵なテーマをキャラクターの背景に織り込む、高度なストーリーテリングを得意としています。
+            </p>
+            <p>
+                2021年に始動した、絶滅危惧種をモチーフにしたアイドルグループ「Rescute（瀕臨絕種團）」の成功を皮切りに、宇宙の深淵をテーマにした「Xtreme Deep Field（極深空計畫）」など、次々と独創的なプロジェクトを展開。
+                台湾におけるVTuber文化の質的向上に大きく貢献してきました。
+            </p>
+            <p>
+                本アーカイブでは、大海原から宇宙の果てまでを舞台に、彼女たちが紡ぎ出す美しくも切ない物語と、その圧倒的なビジュアル表現の記録を保存しています。
+            </p>
+        </article>
+
+        <!-- Unit: Rescute -->
+        <section class="sf-unit">
+            <span class="sf-unit-label">Project: Rescute (瀕臨絕種團)</span>
+            <div class="sf-grid">
+                <div class="sf-card">
+                    <span class="subtitle">TYPE: LEOPARD CAT</span>
+                    <h3>Lutra</h3>
+                    <p class="desc">石虎（ベンガルヤマネコ）をモチーフにしたメンバー。元気で前向きなパフォーマンスが魅力。</p>
+                </div>
+                <div class="sf-card">
+                    <span class="subtitle">TYPE: BLACK BEAR (Legacy)</span>
+                    <h3>Obear</h3>
+                    <p class="desc">台湾ツキノワグマをモチーフにした、Rescuteの精神的支柱。現在は歴史として刻まれている。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Unit: Xtreme Deep Field -->
+        <section class="sf-unit">
+            <span class="sf-unit-label">Project: Xtreme Deep Field (極深空計畫)</span>
+            <div class="sf-grid">
+                <div class="sf-card">
+                    <span class="subtitle">THEME: GALAXY</span>
+                    <h3>Erentier</h3>
+                    <p class="desc">広大な銀河を司る存在。その歌声は星々の輝きを想起させる。</p>
+                </div>
+                <div class="sf-card">
+                    <span class="subtitle">THEME: NEBULA</span>
+                    <h3>Neme</h3>
+                    <p class="desc">星雲のように形を変え、リスナーの心に寄り添う変幻自在なパフォーマンス。</p>
+                </div>
+                <div class="sf-card">
+                    <span class="subtitle">THEME: STARLIGHT</span>
+                    <h3>Emuya</h3>
+                    <p class="desc">遠くの星から届く光のように、優しく力強いメッセージを届ける。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Unit: Celestial -->
+        <section class="sf-unit">
+            <span class="sf-unit-label">Project: Celestial (瑟拉斯蒂歐)</span>
+            <div class="sf-grid">
+                <div class="sf-card">
+                    <span class="subtitle">THEME: DIVINE</span>
+                    <h3>Kumosuki</h3>
+                    <p class="desc">神秘的なオーラを纏う、Celestialのメンバー。</p>
+                </div>
+                <div class="sf-card">
+                    <span class="subtitle">THEME: AETHER</span>
+                    <h3>Eisnebel</h3>
+                    <p class="desc">幻想的な空間を創り出す、高い技術力を持つメンバー。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="springfish_script.js"></script>
+    <script src="../mobile_optimize.js"></script>
 </body>
 </html>
-

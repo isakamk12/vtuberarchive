@@ -1,0 +1,160 @@
+/* Interlunium Premium Theme */
+:root {
+    --int-primary: #1e3a8a; /* Deep Blue */
+    --int-secondary: #0ea5e9; /* Light Blue */
+    --int-bg: #ffffff;
+    --int-surface: #f8fafc;
+    --int-text: #0f172a;
+    --int-dim: #64748b;
+}
+
+body {
+    background-color: var(--int-bg);
+    color: var(--int-text);
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Studio Floor Pattern */
+.i-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: 
+        radial-gradient(circle at 100% 0%, rgba(14, 165, 233, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 0% 100%, rgba(30, 58, 138, 0.05) 0%, transparent 40%);
+}
+
+/* Nav */
+.i-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    border-bottom: 1px solid #e2e8f0;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.i-nav-logo {
+    font-size: 1.4rem;
+    font-weight: 900;
+    letter-spacing: 0.2rem;
+    color: var(--int-primary);
+}
+
+/* Hero */
+.i-hero {
+    padding: 6rem 5% 4rem;
+    text-align: center;
+    background: var(--int-surface);
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.i-hero-title {
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    margin: 0;
+    font-weight: 900;
+    color: var(--int-primary);
+}
+
+.i-hero-tagline {
+    font-size: 1rem;
+    color: var(--int-dim);
+    letter-spacing: 0.5rem;
+    margin-top: 1rem;
+    text-transform: uppercase;
+}
+
+/* Content */
+.i-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 6rem 5%;
+}
+
+.i-article {
+    line-height: 2;
+    font-size: 1.1rem;
+    color: #475569;
+}
+
+.i-section-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--int-secondary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+/* Member Roster */
+.i-roster {
+    margin-top: 6rem;
+}
+
+.i-unit-header {
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 1rem;
+    margin-bottom: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.i-unit-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin: 0;
+    color: var(--int-primary);
+}
+
+.i-member-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.i-card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    padding: 2rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.i-card:hover {
+    box-shadow: 0 10px 25px rgba(30, 58, 138, 0.1);
+    border-color: var(--int-secondary);
+    transform: translateY(-4px);
+}
+
+.i-card h3 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.i-card .voice {
+    font-size: 0.8rem;
+    color: var(--int-dim);
+}
+
+.i-card .type {
+    display: inline-block;
+    margin-top: 1.5rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.2rem 0.5rem;
+    background: var(--int-surface);
+    border-radius: 4px;
+}

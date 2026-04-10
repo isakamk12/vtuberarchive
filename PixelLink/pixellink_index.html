@@ -1,44 +1,96 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PixelLink - VTuber Archive</title>
-  <link rel="stylesheet" href="../agency_base.css" />
-  <link rel="stylesheet" href="../agency_mobile.css" />
-  <style>
-    .container { max-width: 980px; margin: 0 auto; padding: 2.5rem 1.25rem; }
-    .card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 1.75rem; }
-    .pill { display:inline-block; padding: 0.25rem 0.6rem; border-radius: 999px; border: 1px solid var(--glass-border); color: var(--text-secondary); font-size: 0.85rem; }
-    h1 { margin: 0.75rem 0 0.75rem; letter-spacing: 1px; }
-    .muted { color: var(--text-secondary); }
-    .actions { display:flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.25rem; }
-    .btn { text-decoration:none; display:inline-block; padding: 0.75rem 1rem; border-radius: 12px; border: 1px solid var(--glass-border); color: var(--text-primary); background: rgba(255,255,255,0.04); }
-    .btn:hover { box-shadow: 0 0 0 2px rgba(59,130,246,0.25); }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelLink Archive | VTuber Archive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Press+Start+2P&family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="pixellink_index.css">
+    <link rel="stylesheet" href="../agency_mobile.css">
 </head>
 <body>
-  <div class="bg-layer" aria-hidden="true"></div>
-  <nav class="top-nav">
-    <a class="nav-brand" href="../index.html">VT_ARCHIVE</a>
-    <div class="nav-links">
-      <a href="../index.html">HOME</a>
-      <a href="#">PixelLink</a>
-    </div>
-  </nav>
+    <div class="px-scanlines"></div>
 
-  <main class="container">
-    <div class="card">
-      <span class="pill">整備中 / Under construction</span>
-      <h1>PixelLink</h1>
-      <p class="muted">このページは現在準備中です。メインの一覧（Index）からのリンク切れを避けるための仮ページです。</p>
-      <div class="actions">
-        <a class="btn" href="../index.html">← 戻る</a>
-      </div>
-    </div>
-  </main>
+    <nav class="px-nav">
+        <a href="../index.html" style="color: white; text-decoration: none; font-family: 'Press Start 2P'; font-size: 0.6rem;">
+            [BACK]
+        </a>
+        <div class="px-logo">PIXEL_LINK</div>
+        <div class="px-status" style="color: #ff0000; font-family: 'Press Start 2P'; font-size: 0.6rem;">OFFLINE</div>
+    </nav>
 
-  <script src="../mobile_optimize.js"></script>
+    <header class="px-hero">
+        <h1 class="px-title" style="color: white; font-family: 'Press Start 2P';">ARCHIVE.DAT</h1>
+    </header>
+
+    <main class="px-container">
+        <article class="px-article">
+            <span class="px-tag">HISTORY_LOG</span>
+            <h2 style="font-family: 'Press Start 2P'; font-size: 1rem; color: var(--px-magenta);">CONNECTED_PIONEERS</h2>
+            <p>
+                「PixelLink（ピクセルリンク）」は、2022年後半から2025年まで英語圏（EN）を中心に活動を展開したバーチャル・タレント・エージェンシーです。
+                デジタルの絆を通じてタレントと視聴者を繋ぐことを掲げ、独自の「Pixel」テーマを冠した世代構成でファンを魅了しました。
+            </p>
+            <p>
+                2025年3月31日、運営責任者の健康上の理由により惜しまれつつも全ての事業を終了しました。
+                しかし、多くの所属タレントが自身のキャラクターIPを買い取ることで、個人勢（Independent）として活動を継続するという、タレントの権利を尊重した解散形態は業界内でも高く評価されました。
+            </p>
+            <p>
+                本アーカイブでは、彼女たちが駆け抜けたデジタルの軌跡と、その色鮮やかなリンクの記録を保存しています。
+            </p>
+        </article>
+
+        <h2 class="px-gen-title">GEN_1: PixelStart+</h2>
+        <div class="px-grid">
+            <div class="px-card">
+                <h3>Raki Kazuki</h3>
+                <p>冷静沈着なリーダーシップ。解散後は運営からIPを譲り受け独立。</p>
+                <span class="status">INDEPENDENT</span>
+            </div>
+            <div class="px-card">
+                <h3>Miuna Usako</h3>
+                <p>愛くるしいキャラクター。独立しての活動継続を表明。</p>
+                <span class="status">INDEPENDENT</span>
+            </div>
+            <div class="px-card">
+                <h3>Lottie Shinju</h3>
+                <p>ファンとの深い絆を大切にする。独立後も変わらぬ人気を博す。</p>
+                <span class="status">INDEPENDENT</span>
+            </div>
+            <div class="px-card">
+                <h3>Chiaki Katsumi</h3>
+                <p>高い歌唱力と表現力。個人勢として新たなスタートを切る。</p>
+                <span class="status">INDEPENDENT</span>
+            </div>
+        </div>
+
+        <h2 class="px-gen-title">GEN_2: PixelChronicle</h2>
+        <div class="px-grid">
+            <div class="px-card">
+                <h3>Kanna Yanagi</h3>
+                <p>ミステリアスな魅力。現在は独立タレントとして活動中。</p>
+                <span class="status">INDEPENDENT</span>
+            </div>
+            <div class="px-card">
+                <h3>Arisu Oshiro</h3>
+                <p>豊かな感性を持つアーティスト。独立しての活動を選択。</p>
+                <span class="status">INDEPENDENT</span>
+            </div>
+            <div class="px-card">
+                <h3>Chio Chompi</h3>
+                <p>明るいエネルギー。独立後も元気に配信中。</p>
+                <span class="status">INDEPENDENT</span>
+            </div>
+            <div class="px-card">
+                <h3>Daiya Fortuna</h3>
+                <p>幸運を呼ぶ少女。個人勢としての道を歩み始める。</p>
+                <span class="status">INDEPENDENT</span>
+            </div>
+        </div>
+    </main>
+
+    <script src="pixellink_script.js"></script>
+    <script src="../mobile_optimize.js"></script>
 </body>
 </html>
-

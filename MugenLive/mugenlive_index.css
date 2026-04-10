@@ -1,0 +1,179 @@
+/* MUGEN LIVE (Brave Group China) Premium Theme */
+:root {
+    --mu-pink: #fb7299; /* Bilibili Pink */
+    --mu-blue: #00aeec; /* Bilibili Blue */
+    --mu-bg: #f4f5f7;
+    --mu-surface: #ffffff;
+    --mu-text: #212121;
+    --mu-dim: #9499a0;
+}
+
+body {
+    background-color: var(--mu-bg);
+    color: var(--mu-text);
+    font-family: 'Fredoka', 'Noto Sans JP', 'Noto Sans SC', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Streaming Interface Pattern */
+.mu-bg-dots {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: radial-gradient(var(--mu-pink) 0.5px, transparent 0.5px);
+    background-size: 30px 30px;
+    opacity: 0.05;
+}
+
+/* Nav */
+.mu-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: #fff;
+    border-bottom: 3px solid var(--mu-pink);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.mu-nav-logo {
+    font-size: 1.4rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.mu-logo-txt-pink { color: var(--mu-pink); }
+.mu-logo-txt-blue { color: var(--mu-blue); }
+
+/* Hero */
+.mu-hero {
+    padding: 6rem 5% 4rem;
+    text-align: center;
+    background: linear-gradient(135deg, #fff 0%, #fff0f5 100%);
+    border-bottom: 1px solid #e3e5e7;
+}
+
+.mu-hero-badge {
+    display: inline-block;
+    background: var(--mu-blue);
+    color: #fff;
+    padding: 0.2rem 1rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.mu-hero-title {
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    margin: 0;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.mu-hero-tagline {
+    font-size: 1.1rem;
+    color: var(--mu-dim);
+    margin-top: 1rem;
+    letter-spacing: 2px;
+}
+
+/* Container */
+.mu-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 5rem 5% 10rem;
+}
+
+.mu-article {
+    background: #fff;
+    padding: 4rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    line-height: 1.8;
+}
+
+.mu-article h2 {
+    color: var(--mu-pink);
+    border-left: 6px solid var(--mu-blue);
+    padding-left: 1rem;
+}
+
+/* Member Roster */
+.mu-section-title {
+    font-size: 1.8rem;
+    font-weight: 900;
+    margin: 6rem 0 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.mu-section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #e3e5e7;
+}
+
+.mu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.mu-card {
+    background: #fff;
+    border: 1px solid #e3e5e7;
+    border-radius: 16px;
+    padding: 2.5rem;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+.mu-card:hover {
+    border-color: var(--mu-pink);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(251, 114, 153, 0.1);
+}
+
+.mu-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background: var(--mu-blue);
+}
+
+.mu-card h3 {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.mu-card .kana {
+    font-size: 0.8rem;
+    color: var(--mu-dim);
+    display: block;
+    margin-top: 0.25rem;
+}
+
+.mu-unit-pill {
+    display: inline-block;
+    margin-top: 1.5rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--mu-blue);
+    background: rgba(0, 174, 236, 0.05);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+}

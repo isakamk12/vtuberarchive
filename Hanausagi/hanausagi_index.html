@@ -1,44 +1,145 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hanausagi - VTuber Archive</title>
-  <link rel="stylesheet" href="../agency_base.css" />
-  <link rel="stylesheet" href="../agency_mobile.css" />
-  <style>
-    .container { max-width: 980px; margin: 0 auto; padding: 2.5rem 1.25rem; }
-    .card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 1.75rem; }
-    .pill { display:inline-block; padding: 0.25rem 0.6rem; border-radius: 999px; border: 1px solid var(--glass-border); color: var(--text-secondary); font-size: 0.85rem; }
-    h1 { margin: 0.75rem 0 0.75rem; letter-spacing: 1px; }
-    .muted { color: var(--text-secondary); }
-    .actions { display:flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.25rem; }
-    .btn { text-decoration:none; display:inline-block; padding: 0.75rem 1rem; border-radius: 12px; border: 1px solid var(--glass-border); color: var(--text-primary); background: rgba(255,255,255,0.04); }
-    .btn:hover { box-shadow: 0 0 0 2px rgba(59,130,246,0.25); }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>はなうさぎ (Hanausagi) | VTuber Archive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Inter:wght@300;400;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="hanausagi_index.css">
+    <link rel="stylesheet" href="../agency_mobile.css">
 </head>
 <body>
-  <div class="bg-layer" aria-hidden="true"></div>
-  <nav class="top-nav">
-    <a class="nav-brand" href="../index.html">VT_ARCHIVE</a>
-    <div class="nav-links">
-      <a href="../index.html">HOME</a>
-      <a href="#">Hanausagi</a>
-    </div>
-  </nav>
+    <div class="hana-bg"></div>
 
-  <main class="container">
-    <div class="card">
-      <span class="pill">整備中 / Under construction</span>
-      <h1>Hanausagi</h1>
-      <p class="muted">このページは現在準備中です。メインの一覧（Index）からのリンク切れを避けるための仮ページです。</p>
-      <div class="actions">
-        <a class="btn" href="../index.html">← 戻る</a>
-      </div>
-    </div>
-  </main>
+    <nav class="hana-nav">
+        <a href="../index.html" class="hana-nav-back">
+            <i class="fa-solid fa-arrow-left"></i> BACK TO DATABASE
+        </a>
+        <div class="hana-nav-logo">HANAUSAGI</div>
+        <div class="hana-nav-tag">INDIE_ARCHIVE</div>
+    </nav>
 
-  <script src="../mobile_optimize.js"></script>
+    <header class="hana-hero">
+        <span class="hana-hero-tag">VIRTUAL COLLECTIVE</span>
+        <h1 class="hana-hero-title">はなうさぎ</h1>
+        <p>卯の導きと、四季折々の個性が集う場所</p>
+    </header>
+
+    <main class="hana-content">
+        <article class="hana-article">
+            <h2>プロジェクト概要</h2>
+            <p>
+                「はなうさぎ」は、個性的かつ高品質なLive2Dモデルを持つタレントたちが集結したVTuberプロジェクトです。
+                特に「えとむす（Etomusu）」プロジェクトとの深い関わりを持ち、十二支および独自のコンセプトを冠したメンバーによる音楽活動、バラエティ配信を中心に展開をしていました。
+            </p>
+            <p>
+                その活動の核となるのは、卯（うさぎ）を担当する「花うさぎ」を中心とした、明るく親しみやすいコミュニティ形成です。
+                単なる事務所としての枠組みを超え、クリエイターとタレントが密接に連携し、各メンバーの「らしさ」を最大限に引き出すブランディングが特徴となっています。
+            </p>
+
+            <h2>アーカイブの意義</h2>
+            <p>
+                本アーカイブでは、2020年代前半に活動した「はなうさぎ」および「えとむす」に関連するメンバーの足跡を記録しています。
+                音楽と物語が交差する独自の活動スタイルは、後発のインディーグループにも大きな影響を与えました。
+                当時の熱量と、四季に彩られた彼女たちの声を次世代へと繋ぐことを目的としています。
+            </p>
+        </article>
+
+        <section class="hana-roster-header">
+            <h2 class="hana-nav-logo">MEMBERS</h2>
+            <input type="text" id="memberSearch" class="hana-search-box" placeholder="Search by name or zodiac...">
+        </section>
+
+        <section class="hana-member-grid">
+            <div class="hana-member-card">
+                <div class="hana-member-info">
+                    <span class="hana-member-tag">卯 / Rabbit</span>
+                    <h3>花うさぎ</h3>
+                    <p class="hana-member-desc">プロジェクトの象徴。明るく元気な進行役としてバラエティを牽引。</p>
+                </div>
+            </div>
+            <div class="hana-member-card">
+                <div class="hana-member-info">
+                    <span class="hana-member-tag">子 / Rat</span>
+                    <h3>クルーシャ</h3>
+                    <p class="hana-member-desc">知的なトークとゲーム実況が魅力のメンバー。</p>
+                </div>
+            </div>
+            <div class="hana-member-card">
+                <div class="hana-member-info">
+                    <span class="hana-member-tag">丑 / Ox</span>
+                    <h3>神岸みのり</h3>
+                    <p class="hana-member-desc">落ち着いた歌声でリスナーを癒す癒やし系。</p>
+                </div>
+            </div>
+            <div class="hana-member-card">
+                <div class="hana-member-info">
+                    <span class="hana-member-tag">寅 / Tiger</span>
+                    <h3>平和千鶴</h3>
+                    <p class="hana-member-desc">パワフルなパフォーマンスと情熱的なトーク。</p>
+                </div>
+            </div>
+            <div class="hana-member-card">
+                <div class="hana-member-info">
+                    <span class="hana-member-tag">辰 / Dragon</span>
+                    <h3>アイちゃん</h3>
+                    <p class="hana-member-desc">神秘的な雰囲気を持つ唯一無二の表現者。</p>
+                </div>
+            </div>
+            <div class="hana-member-card">
+                <div class="hana-member-info">
+                    <span class="hana-member-tag">巳 / Snake</span>
+                    <h3>紫陽花ヒナ</h3>
+                    <p class="hana-member-desc">ミステリアスな魅力でファンを惹きつける。</p>
+                </div>
+            </div>
+            <div class="hana-member-card">
+                <div class="hana-member-info">
+                    <span class="hana-member-tag">午 / Horse</span>
+                    <h3>午來のぞみ</h3>
+                    <p class="hana-member-desc">爽やかな風のような歌声と笑顔。</p>
+                </div>
+            </div>
+            <div class="hana-member-card">
+                <div class="hana-member-info">
+                    <span class="hana-member-tag">未 / Sheep</span>
+                    <h3>しのねらむ</h3>
+                    <p class="hana-member-desc">ふわふわとした雰囲気のASMR・トーク担当。</p>
+                </div>
+            </div>
+            <div class="hana-member-card">
+                <div class="hana-member-info">
+                    <span class="hana-member-tag">申 / Monkey</span>
+                    <h3>絶愛/Zena</h3>
+                    <p class="hana-member-desc">アクロバティックな発想で企画を盛り上げる。</p>
+                </div>
+            </div>
+            <div class="hana-member-card">
+                <div class="hana-member-info">
+                    <span class="hana-member-tag">酉 / Rooster</span>
+                    <h3>朝比奈ひより</h3>
+                    <p class="hana-member-desc">朝の放送を彩る清々しいキャラクター。</p>
+                </div>
+            </div>
+            <div class="hana-member-card">
+                <div class="hana-member-info">
+                    <span class="hana-member-tag">戌 / Dog</span>
+                    <h3>龍姫妖狐</h3>
+                    <p class="hana-member-desc">忠実で真っ直ぐな、熱い想いを届けるVTuber。</p>
+                </div>
+            </div>
+            <div class="hana-member-card">
+                <div class="hana-member-info">
+                    <span class="hana-member-tag">亥 / Boar</span>
+                    <h3>エリカ</h3>
+                    <p class="hana-member-desc">猪突猛進、元気いっぱいの猪年担当。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="hanausagi_script.js"></script>
+    <script src="../mobile_optimize.js"></script>
 </body>
 </html>
-

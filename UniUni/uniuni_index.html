@@ -1,44 +1,85 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>UniUni - VTuber Archive</title>
-  <link rel="stylesheet" href="../agency_base.css" />
-  <link rel="stylesheet" href="../agency_mobile.css" />
-  <style>
-    .container { max-width: 980px; margin: 0 auto; padding: 2.5rem 1.25rem; }
-    .card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 1.75rem; }
-    .pill { display:inline-block; padding: 0.25rem 0.6rem; border-radius: 999px; border: 1px solid var(--glass-border); color: var(--text-secondary); font-size: 0.85rem; }
-    h1 { margin: 0.75rem 0 0.75rem; letter-spacing: 1px; }
-    .muted { color: var(--text-secondary); }
-    .actions { display:flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.25rem; }
-    .btn { text-decoration:none; display:inline-block; padding: 0.75rem 1rem; border-radius: 12px; border: 1px solid var(--glass-border); color: var(--text-primary); background: rgba(255,255,255,0.04); }
-    .btn:hover { box-shadow: 0 0 0 2px rgba(59,130,246,0.25); }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ゆにゆにっ！ (UniUni) | VTuber Archive</title>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="uniuni_index.css">
+    <link rel="stylesheet" href="../agency_mobile.css">
 </head>
 <body>
-  <div class="bg-layer" aria-hidden="true"></div>
-  <nav class="top-nav">
-    <a class="nav-brand" href="../index.html">VT_ARCHIVE</a>
-    <div class="nav-links">
-      <a href="../index.html">HOME</a>
-      <a href="#">UniUni</a>
+    <div class="uni-bg">
+        <div class="uni-cloud" style="top: 10%; left: 0;"></div>
+        <div class="uni-cloud" style="bottom: 10%; right: 0;"></div>
     </div>
-  </nav>
 
-  <main class="container">
-    <div class="card">
-      <span class="pill">整備中 / Under construction</span>
-      <h1>UniUni</h1>
-      <p class="muted">このページは現在準備中です。メインの一覧（Index）からのリンク切れを避けるための仮ページです。</p>
-      <div class="actions">
-        <a class="btn" href="../index.html">← 戻る</a>
-      </div>
-    </div>
-  </main>
+    <nav class="uni-nav">
+        <a href="../index.html" class="uni-nav-back">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO HUB
+        </a>
+        <div class="uni-nav-logo">ゆにゆにっ！</div>
+        <div class="uni-nav-tag">Virtual YouTuber Group</div>
+    </nav>
 
-  <script src="../mobile_optimize.js"></script>
+    <header class="uni-hero">
+        <span class="uni-hero-tagline">FUWA-FUWA FANTASY</span>
+        <h1 class="uni-hero-name">UniUni</h1>
+        <p>♬♪ゆにゆにっ♪♬ — あなたの日常に、小さな魔法と安らぎを。</p>
+    </header>
+
+    <main class="uni-container">
+        <article class="uni-article">
+            <h2>グループコンセプト</h2>
+            <p>
+                「ゆにゆにっ！」は、<b>“ふわ系ファンタジー”</b>をテーマに掲げる、個性豊かなVTuberグループです。
+                日々の生活で疲れたリスナーが、ふと立ち寄って「ほっとできる」場所、そして「魔法のようなワクワク」を感じられる空間を提供することを目的としています。
+            </p>
+            <p>
+                リーダーの猫宮そらを中心に、人妻天使や吸血鬼、元気な少女など、種族も性格もバラバラなメンバーが集結。
+                「Uni（一つ）」という名の通り、個々の才能が合わさることで生まれるハーモニーを大切にしながら、ゲーム実況、歌、雑談など幅広いジャンルで活動を展開しています。
+            </p>
+            <p>
+                メンバー同士の仲の良さが最大の特徴であり、コラボ配信では時に騒がしく、時に温かい、まるで家族のような空気感が多くのファンを惹きつけています。
+            </p>
+        </article>
+
+        <section class="uni-member-grid">
+            <div class="uni-card">
+                <span class="role">LEADER</span>
+                <h3>猫宮そら</h3>
+                <p class="desc">イメージカラーは空色。かわいい担当としてグループを支える、頼れる（？）リーダー。</p>
+            </div>
+            <div class="uni-card">
+                <span class="role">SUB-LEADER</span>
+                <h3>人妻天使ダンテ</h3>
+                <p class="desc">イメージカラーは黄色。天然溢れる振る舞いで周囲を和ませる、グループのオカン的存在。</p>
+            </div>
+            <div class="uni-card">
+                <span class="role">VARIETY</span>
+                <h3>るふらん・ブラット</h3>
+                <p class="desc">イメージカラーは赤色。盛り上げ・突っ込みを担当する、賑やかなムードメーカー。</p>
+            </div>
+            <div class="uni-card">
+                <span class="role">GENTLE</span>
+                <h3>はがね</h3>
+                <p class="desc">イメージカラーは黒色。ほんわかとした雰囲気でリスナーを包み込む、癒やしの聞き手。</p>
+            </div>
+            <div class="uni-card">
+                <span class="role">ENERGY</span>
+                <h3>来海緋彩</h3>
+                <p class="desc">イメージカラーは桃色。とにかく元気いっぱいで、周囲にパワーを分け与える活動的な少女。</p>
+            </div>
+            <div class="uni-card">
+                <span class="role">NEW_GEN</span>
+                <h3>零原レイレイ</h3>
+                <p class="desc">新しく加わったミステリアスな新星。予測不能なトークで新しい風を吹き込む。</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="uniuni_script.js"></script>
+    <script src="../mobile_optimize.js"></script>
 </body>
 </html>
-

@@ -1,44 +1,106 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Interlunium - VTuber Archive</title>
-  <link rel="stylesheet" href="../agency_base.css" />
-  <link rel="stylesheet" href="../agency_mobile.css" />
-  <style>
-    .container { max-width: 980px; margin: 0 auto; padding: 2.5rem 1.25rem; }
-    .card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 1.75rem; }
-    .pill { display:inline-block; padding: 0.25rem 0.6rem; border-radius: 999px; border: 1px solid var(--glass-border); color: var(--text-secondary); font-size: 0.85rem; }
-    h1 { margin: 0.75rem 0 0.75rem; letter-spacing: 1px; }
-    .muted { color: var(--text-secondary); }
-    .actions { display:flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.25rem; }
-    .btn { text-decoration:none; display:inline-block; padding: 0.75rem 1rem; border-radius: 12px; border: 1px solid var(--glass-border); color: var(--text-primary); background: rgba(255,255,255,0.04); }
-    .btn:hover { box-shadow: 0 0 0 2px rgba(59,130,246,0.25); }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interlunium Archive | VTuber Archive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="interlunium_index.css">
+    <link rel="stylesheet" href="../agency_mobile.css">
 </head>
 <body>
-  <div class="bg-layer" aria-hidden="true"></div>
-  <nav class="top-nav">
-    <a class="nav-brand" href="../index.html">VT_ARCHIVE</a>
-    <div class="nav-links">
-      <a href="../index.html">HOME</a>
-      <a href="#">Interlunium</a>
-    </div>
-  </nav>
+    <div class="i-bg"></div>
 
-  <main class="container">
-    <div class="card">
-      <span class="pill">整備中 / Under construction</span>
-      <h1>Interlunium</h1>
-      <p class="muted">このページは現在準備中です。メインの一覧（Index）からのリンク切れを避けるための仮ページです。</p>
-      <div class="actions">
-        <a class="btn" href="../index.html">← 戻る</a>
-      </div>
-    </div>
-  </main>
+    <nav class="i-nav">
+        <a href="../index.html" style="color: var(--int-primary); text-decoration: none; font-weight: 700;">
+            <i class="fa-solid fa-chevron-left"></i> BACK
+        </a>
+        <div class="i-nav-logo">INTERLUNIUM</div>
+        <div class="i-nav-tag" style="font-size: 0.7rem; color: var(--int-dim);">LABEL: I_MY_ME</div>
+    </nav>
 
-  <script src="../mobile_optimize.js"></script>
+    <header class="i-hero">
+        <h1 class="i-hero-title">Interlunium</h1>
+        <p class="i-hero-tagline">11 Voices, One Story.</p>
+    </header>
+
+    <main class="i-container">
+        <article class="i-article">
+            <span class="i-section-label">コンセプト</span>
+            <p>
+                「Interlunium（インタールニウム）」は、「I MY ME」レーベルに所属する、11名のボーカリストから構成される物語主導のウェブ・アイドルグループです。
+                2017年12月の活動開始以来、高品質な楽曲制作と多言語展開（日本語・英語・韓国語など）を特徴とし、インターネット音楽シーンにおいて独自の存在感を放っています。
+            </p>
+            <p>
+                「新月」を意味するその名の通り、目には見えないけれどそこに存在する物語、そして歌声を届けることをテーマに掲げています。
+                メンバーはそれぞれが異なる個性と背景を持ち、さらに「Aromatique」や「PichiPichi PASSION!!!」といったサブユニットを通じても、多彩な音楽性を提示しています。
+            </p>
+            <p>
+                本アーカイブでは、彼女たちが紡いできた数々の楽曲と、その歴史の軌跡を永久保存しています。
+            </p>
+        </article>
+
+        <section class="i-roster">
+            <div class="i-unit-header">
+                <h2 class="i-unit-title">Aromatique</h2>
+                <span class="i-section-label">Vocal Unit</span>
+            </div>
+            <div class="i-member-grid">
+                <div class="i-card">
+                    <span class="voice">Vocals</span>
+                    <h3>Junko</h3>
+                    <span class="type">Main</span>
+                </div>
+                <div class="i-card">
+                    <span class="voice">Vocals</span>
+                    <h3>Yume Zhou</h3>
+                    <span class="type">Main</span>
+                </div>
+                <div class="i-card">
+                    <span class="voice">Vocals</span>
+                    <h3>Anette Chanel</h3>
+                    <span class="type">Main</span>
+                </div>
+            </div>
+
+            <div class="i-unit-header">
+                <h2 class="i-unit-title">PichiPichi PASSION!!!</h2>
+                <span class="i-section-label">Vocal Unit</span>
+            </div>
+            <div class="i-member-grid">
+                <div class="i-card">
+                    <span class="voice">Vocals</span>
+                    <h3>Chiyo Watanabe</h3>
+                    <span class="type">Pop</span>
+                </div>
+                <div class="i-card">
+                    <span class="voice">Vocals</span>
+                    <h3>Megumi Aihara</h3>
+                    <span class="type">Pop</span>
+                </div>
+                <div class="i-card">
+                    <span class="voice">Vocals</span>
+                    <h3>Kazue Ono</h3>
+                    <span class="type">Pop</span>
+                </div>
+            </div>
+
+            <div class="i-unit-header">
+                <h2 class="i-unit-title">Others</h2>
+                <span class="i-section-label">All Vocalists</span>
+            </div>
+            <div class="i-member-grid">
+                <div class="i-card"><h3>Rinko Hanazawa</h3></div>
+                <div class="i-card"><h3>Eimi Inagawa</h3></div>
+                <div class="i-card"><h3>Kanon Mitsuboshi</h3></div>
+                <div class="i-card"><h3>Akira Hoshino</h3></div>
+                <div class="i-card"><h3>Dam Bi Han</h3></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="interlunium_script.js"></script>
+    <script src="../mobile_optimize.js"></script>
 </body>
 </html>
-

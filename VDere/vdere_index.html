@@ -1,44 +1,93 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>V-Dere - VTuber Archive</title>
-  <link rel="stylesheet" href="../agency_base.css" />
-  <link rel="stylesheet" href="../agency_mobile.css" />
-  <style>
-    .container { max-width: 980px; margin: 0 auto; padding: 2.5rem 1.25rem; }
-    .card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 1.75rem; }
-    .pill { display:inline-block; padding: 0.25rem 0.6rem; border-radius: 999px; border: 1px solid var(--glass-border); color: var(--text-secondary); font-size: 0.85rem; }
-    h1 { margin: 0.75rem 0 0.75rem; letter-spacing: 1px; }
-    .muted { color: var(--text-secondary); }
-    .actions { display:flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.25rem; }
-    .btn { text-decoration:none; display:inline-block; padding: 0.75rem 1rem; border-radius: 12px; border: 1px solid var(--glass-border); color: var(--text-primary); background: rgba(255,255,255,0.04); }
-    .btn:hover { box-shadow: 0 0 0 2px rgba(59,130,246,0.25); }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V-Dere Archive | VTuber Archive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Inter:wght@300;400;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="vdere_index.css">
+    <link rel="stylesheet" href="../agency_mobile.css">
 </head>
 <body>
-  <div class="bg-layer" aria-hidden="true"></div>
-  <nav class="top-nav">
-    <a class="nav-brand" href="../index.html">VT_ARCHIVE</a>
-    <div class="nav-links">
-      <a href="../index.html">HOME</a>
-      <a href="#">V-Dere</a>
-    </div>
-  </nav>
+    <div class="v-star-bg"></div>
 
-  <main class="container">
-    <div class="card">
-      <span class="pill">整備中 / Under construction</span>
-      <h1>V-Dere</h1>
-      <p class="muted">このページは現在準備中です。メインの一覧（Index）からのリンク切れを避けるための仮ページです。</p>
-      <div class="actions">
-        <a class="btn" href="../index.html">← 戻る</a>
-      </div>
-    </div>
-  </main>
+    <nav class="v-nav">
+        <a href="../index.html" style="color: white; text-decoration: none; font-weight: 600;">
+            <i class="fa-solid fa-arrow-left"></i> BACK TO DATABASE
+        </a>
+        <div class="v-nav-logo">V-DERE</div>
+        <div class="v-nav-tag" style="font-size: 0.8rem; opacity: 0.6;">INDEPENDENT_GROUP</div>
+    </nav>
 
-  <script src="../mobile_optimize.js"></script>
+    <header class="v-hero">
+        <span class="v-hero-badge">TALENT-LED COLLECTIVE</span>
+        <h1 class="v-hero-title">V-Dere</h1>
+        <p>個性（Dere）が響き合い、星々が繋がる場所。</p>
+    </header>
+
+    <main class="v-container">
+        <article class="v-article">
+            <h2>グループ・コンセプト</h2>
+            <p>
+                「V-Dere（ブイデレ）」は、米国を拠点に活動する、タレント主導の独立系VTuberグループです。
+                企業による従来の「事務所」という枠組みではなく、志を同じくする友人、そしてクリエイターたちが集い、互いの活動を支え合い、共に成長していくためのコミュニティとして結成されました。
+            </p>
+            <p>
+                グループ名の由来にもなっている「Dere（デレ）」タイプをそれぞれのキャラクター性の核に据えながらも、その枠に囚われない自由な表現と、高い物語性（Lore）を持つ世界観が特徴です。
+            </p>
+            <p>
+                独創的なビジュアルと、リスナーとの深い繋がりを大切にする活動スタイルは、英語圏のインディーVTuberシーンにおいて独自の地位を確立しています。
+                本アーカイブでは、彼女たちが紡ぎ出す「夜空の物語」の記録を保存しています。
+            </p>
+        </article>
+
+        <section class="v-member-grid">
+            <div class="v-card">
+                <span class="dere-tag">NIPADERE</span>
+                <h3>Airi Viridis</h3>
+                <span class="realm">Realm:Era</span>
+                <p class="bio">自然を愛する精霊。その明るい笑顔は、周囲に春の訪れを感じさせる。</p>
+            </div>
+
+            <div class="v-card">
+                <span class="dere-tag">BAKADERE</span>
+                <h3>Kirispica</h3>
+                <span class="realm">Realm:Era</span>
+                <p class="bio">元気いっぱいで少しお調子者。彼女の周りにはいつも笑い声が絶えない。</p>
+            </div>
+
+            <div class="v-card">
+                <span class="dere-tag">TSUNDERE</span>
+                <h3>Mozumi Pichi</h3>
+                <span class="realm">Realm:Era</span>
+                <p class="bio">素直になれない不器用な少女。その真っ直ぐな想いは、時に誰よりも強く響く。</p>
+            </div>
+
+            <div class="v-card">
+                <span class="dere-tag">KUUDERE</span>
+                <h3>Alpha Betta</h3>
+                <span class="realm">Illus:Eon</span>
+                <p class="bio">常に冷静沈着、知的な分析を得意とする。その瞳の奥には熱い情熱を秘めている。</p>
+            </div>
+
+            <div class="v-card">
+                <span class="dere-tag">DEREDERE</span>
+                <h3>Hani Hima</h3>
+                <span class="realm">Illus:Eon</span>
+                <p class="bio">溢れんばかりの愛情を周囲に注ぐ。その温かさは、凍てついた心をも溶かす。</p>
+            </div>
+
+            <div class="v-card">
+                <span class="dere-tag">DANDERE</span>
+                <h3>Tomoe Umari</h3>
+                <span class="realm">Illus:Eon</span>
+                <p class="bio">内気で言葉少なだが、その一言一言には深い優しさが込められている。</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="vdere_script.js"></script>
+    <script src="../mobile_optimize.js"></script>
 </body>
 </html>
-

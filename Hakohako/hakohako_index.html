@@ -1,44 +1,78 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hakohako - VTuber Archive</title>
-  <link rel="stylesheet" href="../agency_base.css" />
-  <link rel="stylesheet" href="../agency_mobile.css" />
-  <style>
-    .container { max-width: 980px; margin: 0 auto; padding: 2.5rem 1.25rem; }
-    .card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 1.75rem; }
-    .pill { display:inline-block; padding: 0.25rem 0.6rem; border-radius: 999px; border: 1px solid var(--glass-border); color: var(--text-secondary); font-size: 0.85rem; }
-    h1 { margin: 0.75rem 0 0.75rem; letter-spacing: 1px; }
-    .muted { color: var(--text-secondary); }
-    .actions { display:flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.25rem; }
-    .btn { text-decoration:none; display:inline-block; padding: 0.75rem 1rem; border-radius: 12px; border: 1px solid var(--glass-border); color: var(--text-primary); background: rgba(255,255,255,0.04); }
-    .btn:hover { box-shadow: 0 0 0 2px rgba(59,130,246,0.25); }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>箱箱Official (The Box) Archive | VTuber Archive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&family=Noto+Sans+JP:wght@400;700;900&family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="hakohako_index.css">
+    <link rel="stylesheet" href="../agency_mobile.css">
 </head>
 <body>
-  <div class="bg-layer" aria-hidden="true"></div>
-  <nav class="top-nav">
-    <a class="nav-brand" href="../index.html">VT_ARCHIVE</a>
-    <div class="nav-links">
-      <a href="../index.html">HOME</a>
-      <a href="#">Hakohako</a>
-    </div>
-  </nav>
+    <div class="box-bg-layer"></div>
 
-  <main class="container">
-    <div class="card">
-      <span class="pill">整備中 / Under construction</span>
-      <h1>Hakohako</h1>
-      <p class="muted">このページは現在準備中です。メインの一覧（Index）からのリンク切れを避けるための仮ページです。</p>
-      <div class="actions">
-        <a class="btn" href="../index.html">← 戻る</a>
-      </div>
-    </div>
-  </main>
+    <nav class="box-nav">
+        <a href="../index.html" style="color: white; text-decoration: none; font-weight: 300;">
+            <i class="fa-solid fa-arrow-left"></i> BACK
+        </a>
+        <div class="box-logo">
+            <i class="fa-solid fa-cube"></i> 箱箱THE_BOX
+        </div>
+        <div class="box-tag" style="font-size: 0.7rem; color: var(--box-primary);">MOD: MERIDIAN_PROJECT</div>
+    </nav>
 
-  <script src="../mobile_optimize.js"></script>
+    <header class="box-hero">
+        <h1 class="box-hero-title">箱箱Official</h1>
+        <p class="box-hero-tagline">Beyond the Boundaries of the Box.</p>
+    </header>
+
+    <main class="box-container">
+        <article class="box-article">
+            <h2>箱箱The Box (Hakohako)</h2>
+            <p>
+                「箱箱Official（箱箱The Box）」は、台湾を拠点とする気鋭のVTuber事務所「子午計畫（Meridian Project）」が展開する、ハイクオリティなタレントブランドです。
+                単なるキャラクターの提供に留まらず、3Dライブ、バラエティ番組、そして卓越した音楽パフォーマンスを融合させた「総合エンターテインメント」を世界中の繁体字圏・日本語圏の視聴者に届けています。
+            </p>
+            <p>
+                看板タレントである森森鈴蘭を筆頭に、所属するタレントたちは類まれなる歌唱力と個性を備えており、その活動はYouTubeのみならず、大型リアルイベントやタイアップ展開においても高い注目を集めています。
+            </p>
+            <p>
+                本アーカイブでは、彼女たちが「箱」という概念を超えて描き出す、鮮やかでダイナミックな活動の記録を保存しています。
+            </p>
+        </article>
+
+        <section class="box-grid">
+            <div class="box-card">
+                <div class="box-card-header">LEAD PERFORMANCE</div>
+                <div class="box-card-content">
+                    <span class="kanji">森森鈴蘭</span>
+                    <h3>Lily Linglan</h3>
+                    <p class="bio">圧倒的な歌唱力と表現力を誇る、プロジェクトのメインボーカリスト。その歌声は聴く者の魂を揺さぶる。</p>
+                </div>
+            </div>
+
+            <div class="box-card">
+                <div class="box-card-header">VOCAL & VARIETY</div>
+                <div class="box-card-content">
+                    <span class="kanji">瑪格麗特·諾爾絲</span>
+                    <h3>Margaret North</h3>
+                    <p class="bio">華やかなビジュアルと、親しみやすいキャラクターを併せ持つ。多様なコンテンツ展開でファンを魅了する。</p>
+                </div>
+            </div>
+
+            <div class="box-card">
+                <div class="box-card-header">CALM & MELODY</div>
+                <div class="box-card-content">
+                    <span class="kanji">柴崎楓音</span>
+                    <h3>Fuune</h3>
+                    <p class="bio">穏やかで癒やしに満ちた歌声を持つ。静かな夜に寄り添うような配信スタイルが人気。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="hakohako_script.js"></script>
+    <script src="../mobile_optimize.js"></script>
 </body>
 </html>
-

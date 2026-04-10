@@ -1,44 +1,86 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VERSEⁿ - VTuber Archive</title>
-  <link rel="stylesheet" href="../agency_base.css" />
-  <link rel="stylesheet" href="../agency_mobile.css" />
-  <style>
-    .container { max-width: 980px; margin: 0 auto; padding: 2.5rem 1.25rem; }
-    .card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 1.75rem; }
-    .pill { display:inline-block; padding: 0.25rem 0.6rem; border-radius: 999px; border: 1px solid var(--glass-border); color: var(--text-secondary); font-size: 0.85rem; }
-    h1 { margin: 0.75rem 0 0.75rem; letter-spacing: 1px; }
-    .muted { color: var(--text-secondary); }
-    .actions { display:flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.25rem; }
-    .btn { text-decoration:none; display:inline-block; padding: 0.75rem 1rem; border-radius: 12px; border: 1px solid var(--glass-border); color: var(--text-primary); background: rgba(255,255,255,0.04); }
-    .btn:hover { box-shadow: 0 0 0 2px rgba(59,130,246,0.25); }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VERSEⁿ (ヴァース) Archive | VTuber Archive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;400;700&family=Inter:wght@200;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="verse_index.css">
+    <link rel="stylesheet" href="../agency_mobile.css">
 </head>
 <body>
-  <div class="bg-layer" aria-hidden="true"></div>
-  <nav class="top-nav">
-    <a class="nav-brand" href="../index.html">VT_ARCHIVE</a>
-    <div class="nav-links">
-      <a href="../index.html">HOME</a>
-      <a href="#">VERSEⁿ</a>
-    </div>
-  </nav>
+    <div class="v-bg"></div>
+    <div class="v-noise"></div>
 
-  <main class="container">
-    <div class="card">
-      <span class="pill">整備中 / Under construction</span>
-      <h1>VERSEⁿ</h1>
-      <p class="muted">このページは現在準備中です。メインの一覧（Index）からのリンク切れを避けるための仮ページです。</p>
-      <div class="actions">
-        <a class="btn" href="../index.html">← 戻る</a>
-      </div>
-    </div>
-  </main>
+    <nav class="v-nav">
+        <a href="../index.html" style="color: white; text-decoration: none; font-weight: 200; letter-spacing: 2px;">
+             ← RETURN
+        </a>
+        <div class="v-nav-logo">VERSEⁿ</div>
+        <div class="v-nav-tag" style="font-size: 0.7rem; opacity: 0.5;">DEPT: SONY_MUSIC</div>
+    </nav>
 
-  <script src="../mobile_optimize.js"></script>
+    <header class="v-hero">
+        <h1 class="v-hero-title">VERSEⁿ</h1>
+        <p class="v-hero-tagline">A story about girls who connect the world.</p>
+    </header>
+
+    <main class="v-container">
+        <article class="v-article">
+            <h2>物語を巡るプロジェクト</h2>
+            <p>
+                「VERSEⁿ（ヴァース）」は、ソニー・ミュージックレーベルズとHelixesが共同で手掛けた、VTuberの枠を超えたクロスメディア・プロジェクトです。
+                単なるライブ配信活動に留まらず、アニメ、音楽、イラスト、小説、漫画といった多角的なメディアを通じて、一続きの広大な「物語」を紡ぎ出すことを目的として始動しました。
+            </p>
+            <p>
+                赤坂アカ、堀口悠紀子といった豪華クリエイター陣を迎え、各タレントが異なる「世界」を背景に持ちながら、それらが交差していく叙事詩的な展開が最大の特徴です。
+            </p>
+            <p>
+                2024年4月2日をもって、プロジェクトの運営は同じくソニー・ミュージックエンタテインメントが展開するバーチャルタレント育成&マネジメントプロジェクト「VEE」へと統合されました。
+                本アーカイブでは、VERSEⁿが独自の独立したブランドとして提示した「物語とバーチャルの融合」の記録を保存しています。
+            </p>
+        </article>
+
+        <section class="v-member-grid">
+            <div class="v-card">
+                <span class="subtitle">ENTRY_NO. 001</span>
+                <h3>マル・ナナモナ</h3>
+                <p class="desc">不可思議な世界からやってきた、物語の鍵を握る少女。奔放な性格で周囲を翻弄する。</p>
+                <span class="v-badge-vee">NOW AT VEE</span>
+            </div>
+
+            <div class="v-card">
+                <span class="subtitle">ENTRY_NO. 002</span>
+                <h3>一等星イツキ</h3>
+                <p class="desc">真面目で真っ直ぐな、正義感の強い少女。未知なる世界への好奇心に溢れている。</p>
+                <span class="v-badge-vee">NOW AT VEE</span>
+            </div>
+
+            <div class="v-card">
+                <span class="subtitle">ENTRY_NO. 003</span>
+                <h3>鳳玲天々</h3>
+                <p class="desc">ミステリアスな雰囲気を纏った、物語の観測者。その言葉には深い響きがある。</p>
+                <span class="v-badge-vee">NOW AT VEE</span>
+            </div>
+
+            <div class="v-card">
+                <span class="subtitle">ENTRY_NO. 004</span>
+                <h3>アルバ・セラ</h3>
+                <p class="desc">力強い歌声を持つ孤独な戦士。音楽を通じて自身の想いを世界に刻み込む。</p>
+                <span class="v-badge-vee">NOW AT VEE</span>
+            </div>
+
+            <div class="v-card">
+                <span class="subtitle">ENTRY_NO. 005</span>
+                <h3>カシ・オトハ</h3>
+                <p class="desc">静謐な空気を纏う、知識を司る少女。穏やかな時間が彼女の周りには流れている。</p>
+                <span class="v-badge-vee">NOW AT VEE</span>
+            </div>
+        </section>
+    </main>
+
+    <script src="verse_script.js"></script>
+    <script src="../mobile_optimize.js"></script>
 </body>
 </html>
-

@@ -1,0 +1,137 @@
+/* PixelLink Retro-Cyber Theme */
+:root {
+    --px-magenta: #ff00ff;
+    --px-cyan: #00ffff;
+    --px-bg: #050505;
+    --px-surface: #121212;
+    --px-text: #ffffff;
+}
+
+body {
+    background-color: var(--px-bg);
+    color: var(--px-text);
+    font-family: 'Inter', 'Press Start 2P', 'Noto Sans JP', sans-serif;
+    margin: 0;
+    image-rendering: pixelated;
+}
+
+/* Scanline Effect */
+.px-scanlines {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+}
+
+/* Nav */
+.px-nav {
+    border-bottom: 4px solid var(--px-magenta);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--px-bg);
+}
+
+.px-logo {
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: var(--px-cyan);
+    text-shadow: 2px 2px var(--px-magenta);
+}
+
+/* Hero */
+.px-hero {
+    padding: 6rem 5% 4rem;
+    text-align: center;
+    background-image: 
+        linear-gradient(var(--px-magenta) 1px, transparent 1px),
+        linear-gradient(90deg, var(--px-magenta) 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-position: center;
+    border-bottom: 4px solid var(--px-cyan);
+    opacity: 0.8;
+}
+
+.px-title {
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    background: var(--px-bg);
+    display: inline-block;
+    padding: 10px 30px;
+    border: 4px solid var(--px-magenta);
+    box-shadow: 10px 10px var(--px-cyan);
+    text-transform: uppercase;
+}
+
+/* Main Content */
+.px-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 6rem 5%;
+}
+
+.px-article {
+    border: 4px solid var(--px-cyan);
+    padding: 3rem;
+    background: var(--px-surface);
+    position: relative;
+    box-shadow: -10px 10px var(--px-magenta);
+}
+
+.px-tag {
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    background: var(--px-magenta);
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+/* Roster */
+.px-gen-title {
+    font-size: 1.5rem;
+    color: var(--px-cyan);
+    margin: 4rem 0 2rem;
+    border-left: 10px solid var(--px-magenta);
+    padding-left: 1rem;
+}
+
+.px-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.px-card {
+    border: 2px solid var(--px-magenta);
+    padding: 2rem;
+    background: rgba(255, 0, 255, 0.05);
+    transition: 0.2s;
+    position: relative;
+}
+
+.px-card:hover {
+    background: rgba(0, 255, 255, 0.1);
+    border-color: var(--px-cyan);
+    transform: translate(4px, -4px);
+    box-shadow: -8px 8px var(--px-magenta);
+}
+
+.px-card h3 {
+    margin: 0;
+    color: var(--px-cyan);
+}
+
+.px-card .status {
+    font-size: 0.7rem;
+    color: var(--px-magenta);
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}

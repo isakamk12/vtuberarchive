@@ -1,44 +1,118 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MyDear - VTuber Archive</title>
-  <link rel="stylesheet" href="../agency_base.css" />
-  <link rel="stylesheet" href="../agency_mobile.css" />
-  <style>
-    .container { max-width: 980px; margin: 0 auto; padding: 2.5rem 1.25rem; }
-    .card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 1.75rem; }
-    .pill { display:inline-block; padding: 0.25rem 0.6rem; border-radius: 999px; border: 1px solid var(--glass-border); color: var(--text-secondary); font-size: 0.85rem; }
-    h1 { margin: 0.75rem 0 0.75rem; letter-spacing: 1px; }
-    .muted { color: var(--text-secondary); }
-    .actions { display:flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.25rem; }
-    .btn { text-decoration:none; display:inline-block; padding: 0.75rem 1rem; border-radius: 12px; border: 1px solid var(--glass-border); color: var(--text-primary); background: rgba(255,255,255,0.04); }
-    .btn:hover { box-shadow: 0 0 0 2px rgba(59,130,246,0.25); }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my dear. production | VTuber Archive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Inter:wght@300;400;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="mydear_index.css">
+    <link rel="stylesheet" href="../agency_mobile.css">
 </head>
 <body>
-  <div class="bg-layer" aria-hidden="true"></div>
-  <nav class="top-nav">
-    <a class="nav-brand" href="../index.html">VT_ARCHIVE</a>
-    <div class="nav-links">
-      <a href="../index.html">HOME</a>
-      <a href="#">MyDear</a>
-    </div>
-  </nav>
+    <div class="md-bg"></div>
 
-  <main class="container">
-    <div class="card">
-      <span class="pill">整備中 / Under construction</span>
-      <h1>MyDear</h1>
-      <p class="muted">このページは現在準備中です。メインの一覧（Index）からのリンク切れを避けるための仮ページです。</p>
-      <div class="actions">
-        <a class="btn" href="../index.html">← 戻る</a>
-      </div>
-    </div>
-  </main>
+    <nav class="md-nav">
+        <a href="../index.html" class="md-nav-logo" style="text-decoration: none;">
+            <i class="fa-solid fa-chevron-left"></i> MY DEAR. PRODUCTION
+        </a>
+        <div class="md-nav-tag" style="font-size: 0.8rem; color: #888;">EST. 2023</div>
+    </nav>
 
-  <script src="../mobile_optimize.js"></script>
+    <header class="md-hero">
+        <h1 class="md-hero-title">一人ひとりに圧倒的な熱狂を</h1>
+        <p>VTuberとファンの距離を再定義する、次世代の「推し活」エンターテインメント・プロジェクト。</p>
+    </header>
+
+    <main class="md-container">
+        <article class="md-article">
+            <h2>プロジェクト・コンセプト</h2>
+            <p>
+                「my dear. production」は、株式会社any styleが運営するVTuber事務所です。
+                単なる配信活動に留まらず、事務所公式の推し活アプリ「my dear.」との強力な連携により、タレントとファンが「1対1」で繋がるパーソナライズされた体験を届けることを最大のミッションとしています。
+            </p>
+            <p>
+                所属タレントは、それぞれが持つ独自のキャラクター性と世界観を武器に、アプリを通じたダイレクトなメッセージ交換、特別な限定ボイス、そしてパーソナルなチャット機能を通じて、ファンの日常生活に寄り添う活動を展開しています。
+            </p>
+            <p>
+                この「双方向性」と「密接な距離感」を重視したマネジメント体制は、2020年代のVTuberシーンにおける新たなトレンドを象徴するものとなりました。
+            </p>
+        </article>
+
+        <section class="md-grid">
+            <div class="md-card">
+                <div class="md-card-header">
+                    <h3>伊織 潤</h3>
+                    <span class="md-card-tag">1st Gen</span>
+                </div>
+                <div class="md-msg-box">
+                    「今日も一日お疲れ様。君に会えるのを楽しみにしてたんだ。」
+                </div>
+                <div class="md-card-footer">
+                    <span><i class="fa-regular fa-clock"></i> Debut: 2023</span>
+                    <span><i class="fa-regular fa-heart"></i> Style: Calm & Close</span>
+                </div>
+            </div>
+
+            <div class="md-card">
+                <div class="md-card-header">
+                    <h3>月宮 花音</h3>
+                    <span class="md-card-tag">1st Gen</span>
+                </div>
+                <div class="md-msg-box">
+                    「ねぇねぇ、最近のニュース聞いた？花音と一緒に話そうよ！」
+                </div>
+                <div class="md-card-footer">
+                    <span><i class="fa-regular fa-clock"></i> Debut: 2023</span>
+                    <span><i class="fa-regular fa-heart"></i> Style: Energetic</span>
+                </div>
+            </div>
+
+            <div class="md-card">
+                <div class="md-card-header">
+                    <h3>明澄 アスタ</h3>
+                    <span class="md-card-tag">1st Gen</span>
+                </div>
+                <div class="md-msg-box">
+                    「アスタの音楽、届いてるかな？君の感想が聞きたいな。」
+                </div>
+                <div class="md-card-footer">
+                    <span><i class="fa-regular fa-clock"></i> Debut: 2023</span>
+                    <span><i class="fa-regular fa-heart"></i> Style: Music focused</span>
+                </div>
+            </div>
+
+            <div class="md-card">
+                <div class="md-card-header">
+                    <h3>幼井 らゆら</h3>
+                    <span class="md-card-tag">1st Gen</span>
+                </div>
+                <div class="md-msg-box">
+                    「えへへ、らゆらと一緒にのんびりしよ？約束だよ。」
+                </div>
+                <div class="md-card-footer">
+                    <span><i class="fa-regular fa-clock"></i> Debut: 2023</span>
+                    <span><i class="fa-regular fa-heart"></i> Style: Relaxed</span>
+                </div>
+            </div>
+
+            <div class="md-card">
+                <div class="md-card-header">
+                    <h3>猫松 フェリィ</h3>
+                    <span class="md-card-tag">1st Gen</span>
+                </div>
+                <div class="md-msg-box">
+                    「フェリィのこと、もっと知りたい？じゃあ特別に教えてあげるね。」
+                </div>
+                <div class="md-card-footer">
+                    <span><i class="fa-regular fa-clock"></i> Debut: 2023</span>
+                    <span><i class="fa-regular fa-heart"></i> Style: Playful</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="mydear_script.js"></script>
+    <script src="../mobile_optimize.js"></script>
 </body>
 </html>
-

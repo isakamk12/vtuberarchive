@@ -1,44 +1,117 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WACTOR - VTuber Archive</title>
-  <link rel="stylesheet" href="../agency_base.css" />
-  <link rel="stylesheet" href="../agency_mobile.css" />
-  <style>
-    .container { max-width: 980px; margin: 0 auto; padding: 2.5rem 1.25rem; }
-    .card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 1.75rem; }
-    .pill { display:inline-block; padding: 0.25rem 0.6rem; border-radius: 999px; border: 1px solid var(--glass-border); color: var(--text-secondary); font-size: 0.85rem; }
-    h1 { margin: 0.75rem 0 0.75rem; letter-spacing: 1px; }
-    .muted { color: var(--text-secondary); }
-    .actions { display:flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.25rem; }
-    .btn { text-decoration:none; display:inline-block; padding: 0.75rem 1rem; border-radius: 12px; border: 1px solid var(--glass-border); color: var(--text-primary); background: rgba(255,255,255,0.04); }
-    .btn:hover { box-shadow: 0 0 0 2px rgba(59,130,246,0.25); }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WACTOR (910inc) Archive | VTuber Archive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Inter:wght@300;400;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="wactor_index.css">
+    <link rel="stylesheet" href="../agency_mobile.css">
 </head>
 <body>
-  <div class="bg-layer" aria-hidden="true"></div>
-  <nav class="top-nav">
-    <a class="nav-brand" href="../index.html">VT_ARCHIVE</a>
-    <div class="nav-links">
-      <a href="../index.html">HOME</a>
-      <a href="#">WACTOR</a>
+    <div class="wa-bg">
+        <div class="wa-grid"></div>
     </div>
-  </nav>
 
-  <main class="container">
-    <div class="card">
-      <span class="pill">整備中 / Under construction</span>
-      <h1>WACTOR</h1>
-      <p class="muted">このページは現在準備中です。メインの一覧（Index）からのリンク切れを避けるための仮ページです。</p>
-      <div class="actions">
-        <a class="btn" href="../index.html">← 戻る</a>
-      </div>
-    </div>
-  </main>
+    <nav class="wa-nav">
+        <a href="../index.html" style="color: white; text-decoration: none; font-weight: 600;">
+            <i class="fa-solid fa-chevron-left"></i> BACK TO HUB
+        </a>
+        <div class="wa-nav-logo">WACTOR</div>
+        <div class="wa-nav-tag" style="font-size: 0.8rem; color: var(--wactor-neon-blue);">RECORD_ID: 910_INC</div>
+    </nav>
 
-  <script src="../mobile_optimize.js"></script>
+    <header class="wa-hero">
+        <h1 class="wa-hero-title">WACTOR</h1>
+        <p class="wa-hero-tagline">GLOBAL VIRTUAL PIONEER</p>
+    </header>
+
+    <main class="wa-container">
+        <article class="wa-article">
+            <h2 class="wa-section-title"><i class="fa-solid fa-microchip"></i> プロジェクト・ヒストリー</h2>
+            <p>
+                「WACTOR（ワクター）」は、日本を拠点としながらも、中国（Bilibili）やスペイン語圏（中南米・スペイン）など、グローバル市場において圧倒的なプレゼンスを誇ったVTuber事務所です。
+                2024年1月には、その運営資産とブランドを継承する形で「910inc」へとリブランドされました。
+            </p>
+            <p>
+                活動の最大の特徴は、デビュー時点からのハイクオリティな3Dモデルの提供、オリジナルソングの制作、そしてVR空間を活用した没入型ライブパフォーマンスにあります。
+                特にヒヅキミウを中心としたスペイン語圏での爆発的な人気は、日本のVTuberシーンが世界へと羽ばたく先駆けとなりました。
+            </p>
+            <p>
+                本アーカイブでは、WACTORが築き上げた先進的なビジュアル表現と、国境を超えた熱狂的なコミュニティの足跡を保存しています。
+                その歩みは、現在のグローバルVTuber市場における「標準」を形作る上で、極めて重要なマイルストーンとなっています。
+            </p>
+        </article>
+
+        <section class="wa-member-grid">
+            <div class="wa-card">
+                <span class="wa-status-badge">GLOBAL</span>
+                <span class="kana">ひづき みう</span>
+                <h3>ヒヅキミウ</h3>
+                <p>スペイン語圏で絶大な人気を誇る、WACTORの顔とも言える存在。高い3Dパフォーマンス力が魅力。</p>
+                <a href="#" class="btn-info">HISTORY</a>
+            </div>
+
+            <div class="wa-card">
+                <span class="wa-status-badge">ACTIVE</span>
+                <span class="kana">みつるぎ りあ</span>
+                <h3>ミツルギリア</h3>
+                <p>クールな外見と熱い歌声。中国・bilibiliでも精力的に活動を展開。</p>
+                <a href="#" class="btn-info">HISTORY</a>
+            </div>
+
+            <div class="wa-card">
+                <span class="wa-status-badge">ACTIVE</span>
+                <span class="kana">ほしな すず</span>
+                <h3>ホシナスズ</h3>
+                <p>歌とゲームを愛する、親しみやすさが魅力のメンバー。</p>
+                <a href="#" class="btn-info">HISTORY</a>
+            </div>
+
+            <div class="wa-card">
+                <span class="wa-status-badge">ACTIVE</span>
+                <span class="kana">ひなみ そら</span>
+                <h3>ヒナミソラ</h3>
+                <p>癒やし系のトークと透明感のある歌声がリスナーを惹きつける。</p>
+                <a href="#" class="btn-info">HISTORY</a>
+            </div>
+
+            <div class="wa-card">
+                <span class="wa-status-badge">ACTIVE</span>
+                <span class="kana">とわ ふぃおな</span>
+                <h3>トワフィオナ</h3>
+                <p>明るく元気なキャラクターで、配信を盛り上げるムードメーカー。</p>
+                <a href="#" class="btn-info">HISTORY</a>
+            </div>
+
+            <div class="wa-card">
+                <span class="wa-status-badge">ACTIVE</span>
+                <span class="kana">いぬまき ひまり</span>
+                <h3>イヌマキヒマリ</h3>
+                <p>独特の世界観を持つ、ミステリアスな魅力が特徴。</p>
+                <a href="#" class="btn-info">HISTORY</a>
+            </div>
+
+            <div class="wa-card">
+                <span class="wa-status-badge">ACTIVE</span>
+                <span class="kana">いりす みあ</span>
+                <h3>イリスミア</h3>
+                <p>華やかなビジュアルと、多言語を操る高いコミュニケーション能力。</p>
+                <a href="#" class="btn-info">HISTORY</a>
+            </div>
+
+            <div class="wa-card">
+                <span class="wa-status-badge">ACTIVE</span>
+                <span class="kana">ひめあ だるまりあ</span>
+                <h3>ヒメアダルマリア</h3>
+                <p>ゴシックな装いと、力強いパフォーマンスが印象的なメンバー。</p>
+                <a href="#" class="btn-info">HISTORY</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="wactor_script.js"></script>
+    <script src="../mobile_optimize.js"></script>
 </body>
 </html>
-

@@ -1,0 +1,181 @@
+/* WACTOR Premium Theme (Archival Edition) */
+:root {
+    --wactor-neon-blue: #00f2ff;
+    --wactor-neon-purple: #bc00ff;
+    --wactor-bg: #05050a;
+    --wactor-surface: #11111d;
+    --wactor-text: #e0e0f0;
+    --wactor-dim: #8080a0;
+}
+
+body {
+    background-color: var(--wactor-bg);
+    color: var(--wactor-text);
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Cyber City Background */
+.wa-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(0, 242, 255, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(188, 0, 255, 0.05) 0%, transparent 40%);
+    background-size: cover;
+}
+
+.wa-grid {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 50px 50px;
+    transform: perspective(1000px) rotateX(60deg) translateY(-200px);
+    opacity: 0.3;
+}
+
+/* Nav */
+.wa-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    border-bottom: 2px solid rgba(0, 242, 255, 0.2);
+    background: rgba(5, 5, 10, 0.8);
+    backdrop-filter: blur(15px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.wa-nav-logo {
+    font-size: 1.8rem;
+    font-weight: 900;
+    letter-spacing: 5px;
+    background: linear-gradient(to right, var(--wactor-neon-blue), var(--wactor-neon-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Hero Section */
+.wa-hero {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.wa-hero-title {
+    font-size: clamp(3rem, 10vw, 6rem);
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 900;
+    filter: drop-shadow(0 0 15px var(--wactor-neon-blue));
+}
+
+.wa-hero-tagline {
+    font-size: 1.2rem;
+    color: var(--wactor-neon-blue);
+    letter-spacing: 10px;
+    margin-top: 10px;
+}
+
+/* Main Content */
+.wa-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 6rem 5%;
+}
+
+.wa-article {
+    background: var(--wactor-surface);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 3.5rem;
+    border-radius: 4px;
+    line-height: 1.9;
+    position: relative;
+    overflow: hidden;
+}
+
+.wa-article::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--wactor-neon-blue), var(--wactor-neon-purple));
+}
+
+.wa-section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--wactor-neon-blue);
+}
+
+/* Member Grid */
+.wa-member-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.wa-card {
+    background: #161625;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 2.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.wa-card:hover {
+    border-color: var(--wactor-neon-blue);
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(0, 242, 255, 0.1);
+}
+
+.wa-card h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.wa-card .kana {
+    font-size: 0.8rem;
+    color: var(--wactor-dim);
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+.wa-status-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 0.7rem;
+    background: rgba(0, 242, 255, 0.1);
+    color: var(--wactor-neon-blue);
+    padding: 0.2rem 0.5rem;
+    border: 1px solid var(--wactor-neon-blue);
+}
+
+.wa-card .btn-info {
+    display: inline-block;
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
+    color: var(--wactor-neon-blue);
+    text-decoration: none;
+    border-bottom: 1px solid var(--wactor-neon-blue);
+}

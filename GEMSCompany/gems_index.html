@@ -1,44 +1,89 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GEMS COMPANY - VTuber Archive</title>
-  <link rel="stylesheet" href="../agency_base.css" />
-  <link rel="stylesheet" href="../agency_mobile.css" />
-  <style>
-    .container { max-width: 980px; margin: 0 auto; padding: 2.5rem 1.25rem; }
-    .card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 1.75rem; }
-    .pill { display:inline-block; padding: 0.25rem 0.6rem; border-radius: 999px; border: 1px solid var(--glass-border); color: var(--text-secondary); font-size: 0.85rem; }
-    h1 { margin: 0.75rem 0 0.75rem; letter-spacing: 1px; }
-    .muted { color: var(--text-secondary); }
-    .actions { display:flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.25rem; }
-    .btn { text-decoration:none; display:inline-block; padding: 0.75rem 1rem; border-radius: 12px; border: 1px solid var(--glass-border); color: var(--text-primary); background: rgba(255,255,255,0.04); }
-    .btn:hover { box-shadow: 0 0 0 2px rgba(59,130,246,0.25); }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEMS COMPANY (ジェムズ カンパニー) | VTuber Archive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Inter:wght@300;400;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="gems_index.css">
+    <link rel="stylesheet" href="../agency_mobile.css">
 </head>
 <body>
-  <div class="bg-layer" aria-hidden="true"></div>
-  <nav class="top-nav">
-    <a class="nav-brand" href="../index.html">VT_ARCHIVE</a>
-    <div class="nav-links">
-      <a href="../index.html">HOME</a>
-      <a href="#">GEMS COMPANY</a>
+    <div class="gems-bg">
+        <div class="gems-particles"></div>
     </div>
-  </nav>
 
-  <main class="container">
-    <div class="card">
-      <span class="pill">整備中 / Under construction</span>
-      <h1>GEMS COMPANY</h1>
-      <p class="muted">このページは現在準備中です。メインの一覧（Index）からのリンク切れを避けるための仮ページです。</p>
-      <div class="actions">
-        <a class="btn" href="../index.html">← 戻る</a>
-      </div>
-    </div>
-  </main>
+    <nav class="gems-nav">
+        <a href="../index.html" style="color: white; text-decoration: none; font-weight: 600;">
+            <i class="fa-solid fa-arrow-left"></i> BACK
+        </a>
+        <div class="gems-nav-logo">GEMS COMPANY</div>
+        <div class="gems-nav-tag" style="color: var(--gold); font-size: 0.8rem;">SQUARE ENIX PROJECT</div>
+    </nav>
 
-  <script src="../mobile_optimize.js"></script>
+    <header class="gems-hero">
+        <h1 class="gems-hero-title">GEMS COMPANY</h1>
+        <p class="gems-hero-tagline">Diamond in the Rough</p>
+    </header>
+
+    <main class="gems-container">
+        <article class="gems-article">
+            <h2>プロジェクト概要</h2>
+            <p>
+                「GEMS COMPANY（ジェムズ カンパニー）」は、株式会社スクウェア・エニックスがプロデュースするアイドルグループです。
+                2018年4月の始動以来、最新のIT技術とアイドルの融合を掲げ、ハイクオリティな3Dモデルと、メンバー個々の高いパフォーマンス力によるライブ活動、配信活動を展開しています。
+            </p>
+            <p>
+                「原石」を意味する名の通り、それぞれが強い個性を放つメンバーたちは、ディアステージ（DEARSTAGE）との連携による本格的なアイドル活動を主軸としています。
+                YouTubeでの生配信のみならず、リアル会場でのライブ公演、VR技術を活用した体験型イベントなど、バーチャルとリアルの境界を超えた新しいエンターテインメントの形を提案し続けています。
+            </p>
+            <p>
+                その活動は、単なるキャラクターコンテンツの枠を超え、一人のアーティストとして、あるいは一人のアイドルとしての成長を描く、ドキュメンタリー的な側面も併せ持っています。
+            </p>
+        </article>
+
+        <section class="gems-member-grid">
+            <div class="gems-card">
+                <span class="kana">みずしな あおい</span>
+                <h3>水科葵</h3>
+                <p>圧倒的な歌唱力でファンを魅了する、グループの歌姫。</p>
+                <a href="#" class="social-link">DETAILS</a>
+            </div>
+            <div class="gems-card">
+                <span class="kana">しろの ゆずき</span>
+                <h3>城乃柚希</h3>
+                <p>華やかなオーラと抜群のトーク力を持つ、中心的存在。</p>
+                <a href="#" class="social-link">DETAILS</a>
+            </div>
+            <div class="gems-card">
+                <span class="kana">あかばね ゆきの</span>
+                <h3>赤羽ユキノ</h3>
+                <p>クールな外見と、時折見せる情熱的なパフォーマンスが魅力。</p>
+                <a href="#" class="social-link">DETAILS</a>
+            </div>
+            <div class="gems-card">
+                <span class="kana">はせ みこと</span>
+                <h3>長谷みこと</h3>
+                <p>澄んだ歌声と、芯の強さを感じさせるアーティスト。</p>
+                <a href="#" class="social-link">DETAILS</a>
+            </div>
+            <div class="gems-card">
+                <span class="kana">たかなし たま</span>
+                <h3>小鳥遊たま</h3>
+                <p>天真爛漫な笑顔で、周囲を明るく照らす太陽のような存在。</p>
+                <a href="#" class="social-link">DETAILS</a>
+            </div>
+            <div class="gems-card">
+                <span class="kana">おとわ しずく</span>
+                <h3>音羽雫</h3>
+                <p>独特の世界観と、センスの光るパフォーマンスが持ち味。</p>
+                <a href="#" class="social-link">DETAILS</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="gems_script.js"></script>
+    <script src="../mobile_optimize.js"></script>
 </body>
 </html>
-

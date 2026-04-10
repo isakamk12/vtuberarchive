@@ -499,6 +499,24 @@ const agencies = [
             desc_ko: "소니 뮤직의 대형 프로젝트입니다. 공식 사이트는 매우 세련되었으며 소속 탤런트의 다양성이 강조되어 있습니다."
         },
         {
+            name: "プロプロプロダクション",
+            name_en: "ProPro Production",
+            name_es: "ProPro Production",
+            name_zh: "ProPro 制作 (ProPro Production)",
+            name_ko: "프로프로 프로덕션",
+            sub: "ProPro Production",
+            filter: "indie",
+            color: "255, 182, 193",
+            icon: "P",
+            url: "ProPro/propro_index.html",
+            tags: ["Boutique", "JP"],
+            desc: "「メンヘラ」をテーマとした個性的な事務所。各タレントの個性に合わせた独自の世界観と、ファンとの距離の近さが特徴。",
+            desc_en: "A unique agency with a boutique feel. Known for distinct character personalities and close interactions with their fanbase.",
+            desc_es: "Una agencia única con un toque boutique. Conocida por personalidades de personajes distintas e interacciones cercanas con su base de fans.",
+            desc_zh: "以“Menhera”为主题的独特事务所。其特点是契合各位艺人个性的独特世界观以及与粉丝之间的极近距离。",
+            desc_ko: "'멘헤라'를 테마로 한 개성 넘치는 사무소입니다. 각 탤런트의 개성에 맞춘 독자적인 세계관과 팬들과의 가까운 거리가 특징입니다."
+        },
+        {
             name: "FIRST STAGE PRODUCTION",
             name_en: "FIRST STAGE PRODUCTION",
             name_es: "FIRST STAGE PRODUCTION",
