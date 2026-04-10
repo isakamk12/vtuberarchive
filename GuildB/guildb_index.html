@@ -1,44 +1,71 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GuildB - VTuber Archive</title>
-  <link rel="stylesheet" href="../agency_base.css" />
-  <link rel="stylesheet" href="../agency_mobile.css" />
-  <style>
-    .container { max-width: 980px; margin: 0 auto; padding: 2.5rem 1.25rem; }
-    .card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 1.75rem; }
-    .pill { display:inline-block; padding: 0.25rem 0.6rem; border-radius: 999px; border: 1px solid var(--glass-border); color: var(--text-secondary); font-size: 0.85rem; }
-    h1 { margin: 0.75rem 0 0.75rem; letter-spacing: 1px; }
-    .muted { color: var(--text-secondary); }
-    .actions { display:flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.25rem; }
-    .btn { text-decoration:none; display:inline-block; padding: 0.75rem 1rem; border-radius: 12px; border: 1px solid var(--glass-border); color: var(--text-primary); background: rgba(255,255,255,0.04); }
-    .btn:hover { box-shadow: 0 0 0 2px rgba(59,130,246,0.25); }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GuildB (Fragmentary Records) | VTuber Archive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="guildb_index.css">
 </head>
 <body>
-  <div class="bg-layer" aria-hidden="true"></div>
-  <nav class="top-nav">
-    <a class="nav-brand" href="../index.html">VT_ARCHIVE</a>
-    <div class="nav-links">
-      <a href="../index.html">HOME</a>
-      <a href="#">GuildB</a>
-    </div>
-  </nav>
+    <div class="kb-bg-layer"></div>
 
-  <main class="container">
-    <div class="card">
-      <span class="pill">整備中 / Under construction</span>
-      <h1>GuildB</h1>
-      <p class="muted">このページは現在準備中です。メインの一覧（Index）からのリンク切れを避けるための仮ページです。</p>
-      <div class="actions">
-        <a class="btn" href="../index.html">← 戻る</a>
-      </div>
-    </div>
-  </main>
+    <nav class="kb-nav">
+        <a href="../index.html" style="color: white; text-decoration: none; font-size: 0.9rem;">
+            <i class="fa-solid fa-arrow-left"></i> BACK
+        </a>
+        <div class="kb-nav-logo">KOTOBUKIYA_FRAGMENTS</div>
+        <div class="kb-nav-tag" style="font-size: 0.6rem; opacity: 0.5;">STATUS: LEGACY_RECORD</div>
+    </nav>
 
-  <script src="../mobile_optimize.js"></script>
+    <header class="kb-hero">
+        <span class="kb-case-num">RECORD ID: GUILDB_RESTORED</span>
+        <h1 class="kb-hero-title">GuildB</h1>
+        <p style="color: var(--kb-dim); margin-top: 1rem; letter-spacing: 1px;">KOTOBUKIYA EARLY VTUBER INITIATIVE</p>
+    </header>
+
+    <main class="kb-container">
+        <section class="kb-fragment">
+            <h2>記録の概要 (Archival Fragment)</h2>
+            <p>
+                本アーカイブ「GuildB（ギルドビー）」は、壽屋（コトブキヤ）がVTuber黎明期において模索した、企業とバーチャル、そして立体造形を繋ぐプロジェクトの断片的な記録です。
+                現状の調査では、正式な「事務所（Agency）」としての継続的な活動記録は極めて限定的ですが、本レジストリにおける歴史的識別名として保存されています。
+            </p>
+            <p>
+                壽屋は早くから「アバター事業」に深く関わり、3Dモデルプロジェクト「S-Team」や公式キャラクター「エマ」を通じ、デジタルコンテンツとフィギュア文化の融合を提唱してきました。
+                「GuildB」という呼称は、これらの実験的な活動、あるいは特定のコミュニティ連携の中で生まれた初期の指定名称であったと推測されます。
+            </p>
+        </section>
+
+        <h2 style="font-size: 1rem; color: var(--kb-logo-green); margin-bottom: 2rem;">RELEVANT ENTITIES / 関連記録</h2>
+        <div class="kb-exhibit-grid">
+            <div class="kb-exhibit-card">
+                <span class="meta">ID: EMA_KOB</span>
+                <h3>エマ (Ema)</h3>
+                <p class="desc">壽屋を代表する初期VTuberキャラクター。3Dモデル販売やイベント出演を通じ、企業バーチャルタレントの先駆けとなった。</p>
+            </div>
+
+            <div class="kb-exhibit-card">
+                <span class="meta">ID: S_TEAM_PJ</span>
+                <h3>Kotobukiya S-Team</h3>
+                <p class="desc">壽屋が推進した3Dアバター・プロジェクト。高品質なアバターアセットの開発、およびその普及を目的とした活動の総称。</p>
+            </div>
+
+            <div class="kb-exhibit-card">
+                <span class="meta">ID: MODEL_COLAB</span>
+                <h3>Plamo Collaboration</h3>
+                <p class="desc">「ぶいすぽっ！」や「あおぎり高校」など、多くのVTuber事務所と壽屋実店舗が連携した、業界屈指のクロスメディア展開の記録。</p>
+            </div>
+        </div>
+
+        <section class="kb-fragment" style="margin-top: 6rem; border-color: #475569; border-left-style: dashed;">
+            <p style="font-size: 0.8rem; color: var(--kb-dim); font-style: italic;">
+                ※本項目は公式公認の物ではなく、アーカイブ構築時点での断片的な情報とユーザーレギュレーションに基づき、敬意を持って再構成・保存されています。
+            </p>
+        </section>
+    </main>
+
+    <script src="../mobile_optimize.js"></script>
 </body>
 </html>
-

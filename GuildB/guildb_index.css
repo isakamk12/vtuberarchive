@@ -1,0 +1,155 @@
+/* GuildB Fragmentary Record (Kotobukiya) Premium Theme */
+:root {
+    --kb-logo-green: #00ae42; /* Kotobukiya Corporate Green */
+    --kb-bg: #0f172a;
+    --kb-surface: #1e293b;
+    --kb-text: #f1f5f9;
+    --kb-dim: #94a3b8;
+    --kb-blueprint: rgba(0, 174, 66, 0.15);
+}
+
+body {
+    background-color: var(--kb-bg);
+    color: var(--kb-text);
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Blueprint Architecture Pattern */
+.kb-bg-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: 
+        linear-gradient(var(--kb-blueprint) 1px, transparent 1px),
+        linear-gradient(90deg, var(--kb-blueprint) 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+
+/* Nav */
+.kb-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    border-bottom: 2px solid var(--kb-logo-green);
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(8px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.kb-nav-logo {
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: var(--kb-logo-green);
+}
+
+/* Hero */
+.kb-hero {
+    padding: 8rem 5% 4rem;
+    text-align: center;
+}
+
+.kb-case-num {
+    display: inline-block;
+    border: 1px solid var(--kb-logo-green);
+    color: var(--kb-logo-green);
+    padding: 0.25rem 1rem;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+    font-family: monospace;
+}
+
+.kb-hero-title {
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    margin: 0;
+    font-weight: 900;
+}
+
+/* Container */
+.kb-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 4rem 5% 10rem;
+}
+
+/* Fragment Section */
+.kb-fragment {
+    background: var(--kb-surface);
+    padding: 4rem;
+    border-radius: 4px;
+    border-left: 5px solid var(--kb-logo-green);
+    margin-bottom: 4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.kb-fragment::after {
+    content: "FRAGMENT_ARCHIVE";
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 0.6rem;
+    font-family: monospace;
+    opacity: 0.2;
+}
+
+.kb-fragment h2 {
+    color: var(--kb-logo-green);
+    margin-top: 0;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+}
+
+.kb-fragment p {
+    line-height: 2;
+    color: #cbd5e1;
+}
+
+/* Exhibit Grid */
+.kb-exhibit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.kb-exhibit-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.05);
+    padding: 2.5rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.kb-exhibit-card:hover {
+    border-color: var(--kb-logo-green);
+    background: rgba(0, 174, 66, 0.05);
+}
+
+.kb-exhibit-card h3 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.kb-exhibit-card .meta {
+    font-size: 0.7rem;
+    font-family: monospace;
+    color: var(--kb-logo-green);
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.kb-exhibit-card .desc {
+    font-size: 0.9rem;
+    color: var(--kb-dim);
+    margin-top: 1rem;
+}

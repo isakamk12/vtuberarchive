@@ -164,3 +164,29 @@ body {
     font-size: 0.9rem;
     color: var(--pp-dim);
 }
+
+/* Provenance Section */
+.pp-provenance {
+    margin-top: 8rem;
+    padding: 3rem;
+    background: #fff;
+    border: 1px dashed var(--pp-border);
+    border-radius: 24px;
+    font-size: 0.9rem;
+    color: var(--pp-dim);
+}
+
+.pp-provenance-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--pp-primary);
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.pp-provenance p {
+    margin: 0.5rem 0;
+}

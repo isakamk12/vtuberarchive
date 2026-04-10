@@ -1045,12 +1045,12 @@ const agencies = [
             color: "153, 101, 21",
             icon: "G",
             url: "GuildB/guildb_index.html",
-            tags: ["Kotobukiya", "Model", "Agency"],
-            desc: "壽屋（コトブキヤ）運営。独自のVTuberとして配信活動を行うメンバーが存在し、プラモデルやフィギュア展開との親和性も高い。",
-            desc_en: "Operated by Kotobukiya. Members stream as original VTubers, with strong ties to plastic models and figure releases.",
-            desc_es: "Operado por Kotobukiya. Sus miembros transmiten como VTubers originales, con fuertes lazos con el mundo de las figuras y maquetas.",
-            desc_zh: "寿屋（Kotobukiya）运营。旗下成员作为专属VTuber进行直播活动，与塑料拼装模型、手办等周边开发有极高的适配度。",
-            desc_ko: "고토부키야 운영. 독자적인 버추얼 유튜버로서 방송 활동을 하는 멤버들이 존재하며, 프라모델이나 피규어 전개와도 친화성이 높습니다."
+            tags: ["Kotobukiya", "Model", "Fragment"],
+            desc: "壽屋（コトブキヤ）による初期のVTuber関連プロジェクトの断片的な記録。アバター事業『S-Team』等との関連が深く、黎明期の企業展開の足跡を保存している。",
+            desc_en: "Fragmentary record of Kotobukiya's early VTuber-related projects. Deeply linked with their 'S-Team' avatar initiative, preserving traces of early corporate virtual expansion.",
+            desc_es: "Registro fragmentario de los primeros proyectos de Kotobukiya relacionados con VTubers. Vinculado a su iniciativa 'S-Team', preservando huellas de la expansión virtual corporativa temprana.",
+            desc_zh: "寿屋（Kotobukiya）早期VTuber相关项目的碎片化记录。与化身事业“S-Team”等有着深厚关联，保存了黎明期企业化身开拓的足跡。",
+            desc_ko: "고토부키야 운영의 초기 버추얼 유튜버 관련 프로젝트의 단편적인 기록입니다. 아바타 사업 'S-Team' 등과 관련이 깊으며, 여명기 기업 전개의 발자취를 보존하고 있습니다."
         },
         {
             name: "らいとあっぷ！",
