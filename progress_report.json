@@ -1,35 +1,5 @@
 [
     {
-        "agency": "3AM",
-        "status": "Not Started",
-        "count": 0,
-        "expected": 8
-    },
-    {
-        "agency": "Astraline",
-        "status": "Not Started",
-        "count": 0,
-        "expected": 4
-    },
-    {
-        "agency": "Densetsu",
-        "status": "Not Started",
-        "count": 0,
-        "expected": 3
-    },
-    {
-        "agency": "LethalPlan",
-        "status": "Not Started",
-        "count": 0,
-        "expected": 6
-    },
-    {
-        "agency": "MAHA5",
-        "status": "Not Started",
-        "count": 0,
-        "expected": 23
-    },
-    {
         "agency": "MugenLive",
         "status": "Not Started",
         "count": 0,
@@ -49,9 +19,9 @@
     },
     {
         "agency": "ReAcT",
-        "status": "Progressing (7/14)",
-        "count": 7,
-        "expected": 14
+        "status": "Progressing (22/24)",
+        "count": 22,
+        "expected": 24
     },
     {
         "agency": "Shinsogumi",
@@ -102,12 +72,6 @@
         "expected": 0
     },
     {
-        "agency": "MAHA5JAPAN",
-        "status": "Found 5 pages",
-        "count": 5,
-        "expected": 0
-    },
-    {
         "agency": "NeoPorte",
         "status": "Found 22 pages",
         "count": 22,
@@ -123,6 +87,18 @@
         "agency": "StarFacet",
         "status": "Found 11 pages",
         "count": 11,
+        "expected": 0
+    },
+    {
+        "agency": "Stellahverse",
+        "status": "Found 4 pages",
+        "count": 4,
+        "expected": 0
+    },
+    {
+        "agency": "StellarVerse",
+        "status": "Found 8 pages",
+        "count": 8,
         "expected": 0
     },
     {
@@ -148,6 +124,12 @@
         "status": "Found 14 pages",
         "count": 14,
         "expected": 0
+    },
+    {
+        "agency": "3AM",
+        "status": "Likely Complete",
+        "count": 8,
+        "expected": 8
     },
     {
         "agency": "AKAVirtual",
@@ -186,6 +168,12 @@
         "expected": 1
     },
     {
+        "agency": "Astraline",
+        "status": "Likely Complete",
+        "count": 8,
+        "expected": 8
+    },
+    {
         "agency": "Balus",
         "status": "Likely Complete",
         "count": 6,
@@ -214,6 +202,12 @@
         "status": "Likely Complete",
         "count": 5,
         "expected": 5
+    },
+    {
+        "agency": "Densetsu",
+        "status": "Likely Complete",
+        "count": 3,
+        "expected": 3
     },
     {
         "agency": "Enogu",
@@ -254,8 +248,14 @@
     {
         "agency": "Hololive",
         "status": "Likely Complete",
-        "count": 100,
-        "expected": 99
+        "count": 75,
+        "expected": 74
+    },
+    {
+        "agency": "Holostars",
+        "status": "Likely Complete",
+        "count": 25,
+        "expected": 25
     },
     {
         "agency": "IdolCorp",
@@ -276,10 +276,22 @@
         "expected": 11
     },
     {
+        "agency": "LethalPlan",
+        "status": "Likely Complete",
+        "count": 6,
+        "expected": 6
+    },
+    {
         "agency": "LoveBox",
         "status": "Likely Complete",
         "count": 5,
         "expected": 5
+    },
+    {
+        "agency": "MAHA5",
+        "status": "Likely Complete",
+        "count": 22,
+        "expected": 15
     },
     {
         "agency": "MEWLIVE",
@@ -438,12 +450,6 @@
         "expected": 10
     },
     {
-        "agency": "Stellaverse",
-        "status": "Likely Complete",
-        "count": 4,
-        "expected": 4
-    },
-    {
         "agency": "TrillionStage",
         "status": "Likely Complete",
         "count": 14,
@@ -538,5 +544,83 @@
         "status": "Likely Complete",
         "count": 6,
         "expected": 6
+    },
+    {
+        "agency": "GuildB",
+        "status": "No characters folder",
+        "count": 0,
+        "expected": 0
+    },
+    {
+        "agency": "Hakohako",
+        "status": "No characters folder",
+        "count": 0,
+        "expected": 0
+    },
+    {
+        "agency": "Hanausagi",
+        "status": "No characters folder",
+        "count": 0,
+        "expected": 0
+    },
+    {
+        "agency": "Interlunium",
+        "status": "No characters folder",
+        "count": 0,
+        "expected": 0
+    },
+    {
+        "agency": "Irodori",
+        "status": "No characters folder",
+        "count": 0,
+        "expected": 0
+    },
+    {
+        "agency": "LightUp",
+        "status": "No characters folder",
+        "count": 0,
+        "expected": 0
+    },
+    {
+        "agency": "MyDear",
+        "status": "No characters folder",
+        "count": 0,
+        "expected": 0
+    },
+    {
+        "agency": "PixelLink",
+        "status": "No characters folder",
+        "count": 0,
+        "expected": 0
+    },
+    {
+        "agency": "SpringFish",
+        "status": "No characters folder",
+        "count": 0,
+        "expected": 0
+    },
+    {
+        "agency": "UniUni",
+        "status": "No characters folder",
+        "count": 0,
+        "expected": 0
+    },
+    {
+        "agency": "VDere",
+        "status": "No characters folder",
+        "count": 0,
+        "expected": 0
+    },
+    {
+        "agency": "VERSE",
+        "status": "No characters folder",
+        "count": 0,
+        "expected": 0
+    },
+    {
+        "agency": "WACTOR",
+        "status": "No characters folder",
+        "count": 0,
+        "expected": 0
     }
 ]

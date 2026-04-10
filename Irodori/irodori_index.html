@@ -1,44 +1,111 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>いろどり芸能郵便社 - VTuber Archive</title>
-  <link rel="stylesheet" href="../agency_base.css" />
-  <link rel="stylesheet" href="../agency_mobile.css" />
-  <style>
-    .container { max-width: 980px; margin: 0 auto; padding: 2.5rem 1.25rem; }
-    .card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 1.75rem; }
-    .pill { display:inline-block; padding: 0.25rem 0.6rem; border-radius: 999px; border: 1px solid var(--glass-border); color: var(--text-secondary); font-size: 0.85rem; }
-    h1 { margin: 0.75rem 0 0.75rem; letter-spacing: 1px; }
-    .muted { color: var(--text-secondary); }
-    .actions { display:flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.25rem; }
-    .btn { text-decoration:none; display:inline-block; padding: 0.75rem 1rem; border-radius: 12px; border: 1px solid var(--glass-border); color: var(--text-primary); background: rgba(255,255,255,0.04); }
-    .btn:hover { box-shadow: 0 0 0 2px rgba(59,130,246,0.25); }
-  </style>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>いろどり芸能郵便社 | Archive Analysis</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="irodori_index.css" rel="stylesheet"/>
 </head>
 <body>
-  <div class="bg-layer" aria-hidden="true"></div>
-  <nav class="top-nav">
-    <a class="nav-brand" href="../index.html">VT_ARCHIVE</a>
-    <div class="nav-links">
-      <a href="../index.html">HOME</a>
-      <a href="#">Irodori</a>
-    </div>
-  </nav>
+    <div class="envelope-bg"></div>
 
-  <main class="container">
-    <div class="card">
-      <span class="pill">整備中 / Under construction</span>
-      <h1>いろどり芸能郵便社</h1>
-      <p class="muted">このページは現在準備中です。メインの一覧（Index）からのリンク切れを避けるための仮ページです。</p>
-      <div class="actions">
-        <a class="btn" href="../index.html">← 戻る</a>
-      </div>
-    </div>
-  </main>
+    <header class="hero">
+        <div class="stamp-box"></div>
+        <h1 class="hero-title">いろどり芸能郵便社</h1>
+        <div class="hero-subtitle">Virtual Actor Record Archive</div>
+    </header>
 
-  <script src="../mobile_optimize.js"></script>
+    <main class="container">
+        <!-- Project Overview -->
+        <article class="article reveal">
+            <h2 class="article-title"><i class="fa-solid fa-envelope-open-text"></i> PROJECT OVERVIEW</h2>
+            <div class="article-content">
+                <p>
+                    「いろどり芸能郵便社」は、ブシロード・グループの株式会社ブシロードクリエイティブが、
+                    エンターテインメントの新しい形を模索するために2020年に始動させたバーチャルタレント・プロジェクトである。
+                    本作の最大の特徴は、従来の「配信主体のVTuber」という枠組みを超え、
+                    プロフェッショナルの表現者を育成する「バーチャルアクター（VA）」という概念を提唱した点にある。
+                </p>
+                <p>
+                    プロジェクトの世界観は、異世界「イロドリ世界」に存在する小さな芸能郵便社を中心に据えており、
+                    所属タレントたちはそこから現実世界と繋がる「郵便屋」として、視聴者（差出人・受取人）へと物語を届ける役割を担っていた。
+                    脚本・構成に『トリニティセブン』のサイトウケンジ氏を迎え、演技講師には声優の佐々木未来氏を起用するなど、
+                    アニメ・声優業界の第一線で培われたノウハウをVTuberの教育に直接注入する、極めて実験的かつ野心的な試みがなされた。
+                </p>
+            </div>
+        </article>
+
+        <!-- Method & Evolution -->
+        <article class="article reveal">
+            <h2 class="article-title"><i class="fa-solid fa-microphone-lines"></i> THE "VA" METHODOLOGY</h2>
+            <div class="article-content">
+                <p>
+                    「バーチャルアクター」としての活動は、生放送でのコミュニケーションに加え、
+                    ボイスドラマ、朗読劇、そして演技指導を通じた技術の研鑽に重きが置かれた。
+                    このアプローチにより、所属タレントは単なるキャラクターとしてではなく、
+                    「声を武器にするプロフェッショナル」としてのアイデンティティを確立することを目指した。
+                </p>
+                <p>
+                    2022年3月31日、運営はプロダクションとしての「いろどり芸能郵便社」ブランドを終了させることを発表した。
+                    これは組織の失敗ではなく、バーチャルタレント事業の「最適化」を目的とした発展的解消の側面が強い。
+                    プロジェクト終了後も、所属メンバーはブシロードクリエイティブ所属のVTuberとして個別の活動を継続し、
+                    郵便社という枠組みを超えた新しいフィールドでの活躍を選択することとなった。
+                </p>
+            </div>
+        </article>
+
+        <!-- Personnel Search -->
+        <section id="personnel">
+            <h2 style="text-align: center; margin-bottom: 2rem;">AGENT ROSTER</h2>
+            <div style="display: flex; justify-content: center; margin-bottom: 3rem;">
+                <div style="position: relative; width: 100%; max-width: 400px;">
+                    <i class="fa-solid fa-search" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); opacity: 0.5;"></i>
+                    <input type="text" id="memberSearch" placeholder="Filter agents..." style="width: 100%; padding: 1rem 1rem 1rem 3rem; border: 1px solid var(--ir-accent); font-family: inherit; background: white; outline: none;"/>
+                </div>
+            </div>
+
+            <div class="member-grid" id="memberGrid">
+                <a href="#" class="member-card" data-name="御園結唯 Misono Yui">
+                    <div class="card-stamp">VA-01</div>
+                    <span class="m-role">Virtual Actor</span>
+                    <span class="m-name">御園 結唯</span>
+                    <p style="font-size: 0.9rem; opacity: 0.7;">Natural & Standard Style</p>
+                </a>
+                <a href="#" class="member-card" data-name="服巻有香 Fukumaki Yuka">
+                    <div class="card-stamp">VA-02</div>
+                    <span class="m-role">Virtual Actor</span>
+                    <span class="m-name">服巻 有香</span>
+                    <p style="font-size: 0.9rem; opacity: 0.7;">Cool & Technical Style</p>
+                </a>
+                <a href="#" class="member-card" data-name="冬守しずく Fuyumori Shizuku">
+                    <div class="card-stamp">VA-03</div>
+                    <span class="m-role">Virtual Actor</span>
+                    <span class="m-name">冬守 しずく</span>
+                    <p style="font-size: 0.9rem; opacity: 0.7;">Cute & Character Style</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Virtual Actor Archive Center. Original Data by Bushiroad Creative.</p>
+        <a href="../index.html" class="back-btn"><i class="fa-solid fa-reply"></i> RETURN TO MAIN HUB</a>
+    </footer>
+
+    <script src="irodori_script.js"></script>
+    <script src="../mobile_optimize.js"></script>
+    <script>
+        // Custom Reveal Logic
+        window.addEventListener('scroll', () => {
+            document.querySelectorAll('.reveal').forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight * 0.8) {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
-

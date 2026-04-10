@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap');
+
+:root {
+    --ir-paper: #f4ece1;
+    --ir-ink: #2c3e50;
+    --ir-accent: #c0392b; /* Stamp Red */
+    --ir-border: rgba(44, 62, 80, 0.1);
+    --ir-glass: rgba(255, 255, 255, 0.5);
+    --ir-gold: #d4af37;
+}
+
+body {
+    background-color: var(--ir-paper);
+    color: var(--ir-ink);
+    font-family: 'Crimson Pro', 'Noto Serif JP', serif;
+    margin: 0;
+    line-height: 1.8;
+    background-image: 
+        radial-gradient(rgba(0,0,0,0.02) 1px, transparent 1px),
+        linear-gradient(rgba(200, 180, 150, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px, 100% 2px;
+}
+
+/* Post Office Aesthetic Elements */
+.envelope-bg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 80vw;
+    height: 80vh;
+    border: 2px solid var(--ir-border);
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.envelope-bg::before {
+    content: '';
+    position: absolute;
+    inset: 10px;
+    border: 1px dashed var(--ir-border);
+}
+
+/* Hero Section */
+.hero {
+    padding: 8rem 2rem 4rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-title {
+    font-size: clamp(2rem, 8vw, 4.5rem);
+    font-weight: 700;
+    margin: 0;
+    color: var(--ir-ink);
+    letter-spacing: 0.1em;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    color: var(--ir-accent);
+    margin-top: 1rem;
+}
+
+.stamp-box {
+    position: absolute;
+    top: 3rem;
+    right: 5vw;
+    width: 100px;
+    height: 120px;
+    border: 3px double var(--ir-accent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(15deg);
+    opacity: 0.6;
+}
+
+.stamp-box::after {
+    content: 'POSTED\n2022.03.31';
+    white-space: pre;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--ir-accent);
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Overview Article */
+.article {
+    background: white;
+    padding: 3rem;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+    margin-bottom: 5rem;
+    position: relative;
+    border: 1px solid var(--ir-border);
+}
+
+.article::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 60px; height: 60px;
+    background: linear-gradient(225deg, #ddd 0%, #fff 50%, #fff 100%);
+    box-shadow: -2px 2px 5px rgba(0,0,0,0.1);
+}
+
+.article-title {
+    font-size: 1.8rem;
+    color: var(--ir-ink);
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--ir-accent);
+    padding-bottom: 0.5rem;
+}
+
+.article-content {
+    column-count: 1;
+    text-align: justify;
+    font-size: 1.1rem;
+}
+
+/* Member Roster */
+.member-list {
+    margin-top: 4rem;
+}
+
+.member-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+}
+
+.member-card {
+    background: white;
+    border: 1px solid var(--ir-border);
+    padding: 2rem;
+    position: relative;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.member-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.card-stamp {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 60px;
+    height: 60px;
+    background: var(--ir-accent);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 0.7rem;
+    font-weight: 700;
+    transform: rotate(15deg);
+    border: 2px dashed white;
+}
+
+.m-name {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.m-role {
+    font-size: 0.8rem;
+    color: var(--ir-accent);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 6rem 2rem;
+    color: var(--ir-ink);
+    opacity: 0.6;
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border: 1px solid var(--ir-ink);
+    text-decoration: none;
+    color: var(--ir-ink);
+    font-weight: 700;
+    transition: all 0.3s;
+    margin-top: 2rem;
+}
+
+.back-btn:hover {
+    background: var(--ir-ink);
+    color: #fff;
+}
+
+@media (max-width: 600px) {
+    .article { padding: 1.5rem; }
+    .hero { padding: 4rem 1rem; }
+}

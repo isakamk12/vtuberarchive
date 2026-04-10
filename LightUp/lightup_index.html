@@ -1,44 +1,218 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LightUp - VTuber Archive</title>
-  <link rel="stylesheet" href="../agency_base.css" />
-  <link rel="stylesheet" href="../agency_mobile.css" />
-  <style>
-    .container { max-width: 980px; margin: 0 auto; padding: 2.5rem 1.25rem; }
-    .card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 1.75rem; }
-    .pill { display:inline-block; padding: 0.25rem 0.6rem; border-radius: 999px; border: 1px solid var(--glass-border); color: var(--text-secondary); font-size: 0.85rem; }
-    h1 { margin: 0.75rem 0 0.75rem; letter-spacing: 1px; }
-    .muted { color: var(--text-secondary); }
-    .actions { display:flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.25rem; }
-    .btn { text-decoration:none; display:inline-block; padding: 0.75rem 1rem; border-radius: 12px; border: 1px solid var(--glass-border); color: var(--text-primary); background: rgba(255,255,255,0.04); }
-    .btn:hover { box-shadow: 0 0 0 2px rgba(59,130,246,0.25); }
-  </style>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>らいとあっぷ！ (LightUp) | Archive Analysis</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="lightup_index.css" rel="stylesheet"/>
 </head>
 <body>
-  <div class="bg-layer" aria-hidden="true"></div>
-  <nav class="top-nav">
-    <a class="nav-brand" href="../index.html">VT_ARCHIVE</a>
-    <div class="nav-links">
-      <a href="../index.html">HOME</a>
-      <a href="#">LightUp</a>
-    </div>
-  </nav>
+    <div class="bg-mesh"></div>
 
-  <main class="container">
-    <div class="card">
-      <span class="pill">整備中 / Under construction</span>
-      <h1>LightUp</h1>
-      <p class="muted">このページは現在準備中です。メインの一覧（Index）からのリンク切れを避けるための仮ページです。</p>
-      <div class="actions">
-        <a class="btn" href="../index.html">← 戻る</a>
-      </div>
-    </div>
-  </main>
+    <header class="hero">
+        <h1 class="hero-title">LIGHT UP</h1>
+        <div class="hero-tagline">Stage Up Strategy Archive</div>
+    </header>
 
-  <script src="../mobile_optimize.js"></script>
+    <main class="container">
+        <!-- Agency Overview -->
+        <article class="overview-article">
+            <h2><i class="fa-solid fa-book-open"></i> AGENCY OVERVIEW</h2>
+            <div class="overview-text">
+                <p>
+                    「らいとあっぷ！」は、2018年2月に始動したコネクトネットワーク株式会社が運営するバーチャルライバープロジェクトである。
+                    「様々なタレントがそれぞれの夢に向かってステージアップを目指す」という明確なヴィジョンを掲げ、
+                    ライバー個々の主体性を尊重した多角的な活動支援を展開している。
+                </p>
+                <p>
+                    プロジェクトの名称に含まれる「アップ（up）」は、視聴者との共創を通じて目標を達成し、一段上のステージへ昇っていくという不退転の決意を象徴している。
+                    黎明期から現在に至るまで、クラウドファンディングを活用した大規模オフラインイベントの開催や、
+                    3Dライブプロジェクトの推進など、コミュニティとの強固な信頼関係を基盤とした運営スタイルが最大の特徴である。
+                </p>
+                <p>
+                    2024年以降、組織はさらなる専門分化を遂げ、女性タレント主体の本隊「らいとあっぷ！」、男性タレントユニット「グロウあっぷ」、
+                    そしてアイドル活動とバラエティ性を両立させた最新ユニット「ぷりずむあっぷ」の3本柱で構成されている。
+                    また、マルチチャンネルネットワーク（MCN）としての側面も持ち、自社プラットフォームを通じた外部クリエイター支援も積極的に行っている。
+                </p>
+            </div>
+        </article>
+
+        <!-- Management Section -->
+        <article class="overview-article">
+            <h2><i class="fa-solid fa-building-shield"></i> CORPORATE STRUCTURE</h2>
+            <div class="overview-text">
+                <p>
+                    運営母体であるコネクトネットワーク株式会社は、エンターテインメントとテクノロジーの融合を軸に、
+                    VTuberマネジメント、イベント企画、MD（グッズ展開）を一気通貫で手がけている。
+                    特に「らいとあっぷ！パートナー」制度は、独立したクリエイターに対して企業案件の紹介や権利保護、
+                    技術支援を提供する先進的なモデルとして評価されている。
+                </p>
+                <p>
+                    アーカイブ上の分析では、同事務所は「ライバーの卒業」に対しても、その功績を認めつつ新しい夢へのステップアップとしてポジティブに捉える広報戦略を採用しており、
+                    ファンのロスを最小限に抑えつつ、ブランドの継続性を維持する手法に長けている。
+                </p>
+            </div>
+        </article>
+
+        <!-- Talent Roster -->
+        <section id="roster">
+            <h2><i class="fa-solid fa-users"></i> ANALYTICAL ROSTER</h2>
+            
+            <div class="controls">
+                <div class="filter-group">
+                    <button class="filter-btn active" data-filter="all">ALL</button>
+                    <button class="filter-btn" data-filter="main">MAIN</button>
+                    <button class="filter-btn" data-filter="grow">GROW UP</button>
+                    <button class="filter-btn" data-filter="prism">PRISM UP</button>
+                </div>
+                <div class="search-wrap">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="memberSearch" class="search-input" placeholder="Search data..."/>
+                </div>
+            </div>
+
+            <div class="roster-grid" id="memberGrid">
+                <!-- Main Unit -->
+                <div class="member-card" data-name="ありさ" data-unit="main">
+                    <span class="m-id">LU-01</span>
+                    <span class="m-name">ありさ</span>
+                    <span class="m-unit main">MAIN</span>
+                </div>
+                <div class="member-card" data-name="兎羽理ここ" data-unit="main">
+                    <span class="m-id">LU-02</span>
+                    <span class="m-name">兎羽理ここ</span>
+                    <span class="m-unit main">MAIN</span>
+                </div>
+                <div class="member-card" data-name="緋乃あかね" data-unit="main">
+                    <span class="m-id">LU-03</span>
+                    <span class="m-name">緋乃あかね</span>
+                    <span class="m-unit main">MAIN</span>
+                </div>
+                <div class="member-card" data-name="熊間まゆ" data-unit="main">
+                    <span class="m-id">LU-04</span>
+                    <span class="m-name">熊間まゆ</span>
+                    <span class="m-unit main">MAIN</span>
+                </div>
+                <div class="member-card" data-name="桃園ねむ" data-unit="main">
+                    <span class="m-id">LU-05</span>
+                    <span class="m-name">桃園ねむ</span>
+                    <span class="m-unit main">MAIN</span>
+                </div>
+                <div class="member-card" data-name="神瀬よわ" data-unit="main">
+                    <span class="m-id">LU-06</span>
+                    <span class="m-name">神瀬よわ</span>
+                    <span class="m-unit main">MAIN</span>
+                </div>
+                <div class="member-card" data-name="アイリス・ルセン" data-unit="main">
+                    <span class="m-id">LU-07</span>
+                    <span class="m-name">アイリス・ルセン</span>
+                    <span class="m-unit main">MAIN</span>
+                </div>
+                <div class="member-card" data-name="鮪夢るむね" data-unit="main">
+                    <span class="m-id">LU-08</span>
+                    <span class="m-name">鮪夢るむね</span>
+                    <span class="m-unit main">MAIN</span>
+                </div>
+                <div class="member-card" data-name="宵夢みる" data-unit="main">
+                    <span class="m-id">LU-09</span>
+                    <span class="m-name">宵夢みる</span>
+                    <span class="m-unit main">MAIN</span>
+                </div>
+                <div class="member-card" data-name="甘苺みぷ" data-unit="main">
+                    <span class="m-id">LU-10</span>
+                    <span class="m-name">甘苺みぷ</span>
+                    <span class="m-unit main">MAIN</span>
+                </div>
+                <div class="member-card" data-name="志月るり" data-unit="main">
+                    <span class="m-id">LU-11</span>
+                    <span class="m-name">志月るり</span>
+                    <span class="m-unit main">MAIN</span>
+                </div>
+                <div class="member-card" data-name="陽葵えな" data-unit="main">
+                    <span class="m-id">LU-12</span>
+                    <span class="m-name">陽葵えな</span>
+                    <span class="m-unit main">MAIN</span>
+                </div>
+                <div class="member-card" data-name="恋彩あめ" data-unit="main">
+                    <span class="m-id">LU-13</span>
+                    <span class="m-name">恋彩あめ</span>
+                    <span class="m-unit main">MAIN</span>
+                </div>
+                <div class="member-card" data-name="水琴葉しき" data-unit="main">
+                    <span class="m-id">LU-14</span>
+                    <span class="m-name">水琴葉しき</span>
+                    <span class="m-unit main">MAIN</span>
+                </div>
+                <div class="member-card" data-name="癒乃川こはる" data-unit="main">
+                    <span class="m-id">LU-15</span>
+                    <span class="m-name">癒乃川こはる</span>
+                    <span class="m-unit main">MAIN</span>
+                </div>
+
+                <!-- Grow Up -->
+                <div class="member-card" data-name="ヤミパリ" data-unit="grow">
+                    <span class="m-id">GU-01</span>
+                    <span class="m-name">ヤミパリ</span>
+                    <span class="m-unit grow">GROW UP</span>
+                </div>
+                <div class="member-card" data-name="休眠瑠" data-unit="grow">
+                    <span class="m-id">GU-02</span>
+                    <span class="m-name">休眠瑠</span>
+                    <span class="m-unit grow">GROW UP</span>
+                </div>
+                <div class="member-card" data-name="一峰寺真" data-unit="grow">
+                    <span class="m-id">GU-03</span>
+                    <span class="m-name">一峰寺真</span>
+                    <span class="m-unit grow">GROW UP</span>
+                </div>
+                <div class="member-card" data-name="RUI" data-unit="grow">
+                    <span class="m-id">GU-04</span>
+                    <span class="m-name">RUI</span>
+                    <span class="m-unit grow">GROW UP</span>
+                </div>
+                <div class="member-card" data-name="蘇芳恋" data-unit="grow">
+                    <span class="m-id">GU-05</span>
+                    <span class="m-name">蘇芳恋</span>
+                    <span class="m-unit grow">GROW UP</span>
+                </div>
+
+                <!-- Prism Up -->
+                <div class="member-card" data-name="リアン・アニマリア・椿" data-unit="prism">
+                    <span class="m-id">PU-01</span>
+                    <span class="m-name">リアン・アニマリア・椿</span>
+                    <span class="m-unit prism">PRISM UP</span>
+                </div>
+                <div class="member-card" data-name="鶴来つゆ" data-unit="prism">
+                    <span class="m-id">PU-02</span>
+                    <span class="m-name">鶴来つゆ</span>
+                    <span class="m-unit prism">PRISM UP</span>
+                </div>
+                <div class="member-card" data-name="コモリニト" data-unit="prism">
+                    <span class="m-id">PU-03</span>
+                    <span class="m-name">コモリニト</span>
+                    <span class="m-unit prism">PRISM UP</span>
+                </div>
+                <div class="member-card" data-name="泡形ヒメイ" data-unit="prism">
+                    <span class="m-id">PU-04</span>
+                    <span class="m-name">泡形ヒメイ</span>
+                    <span class="m-unit prism">PRISM UP</span>
+                </div>
+                <div class="member-card" data-name="園原まこと" data-unit="prism">
+                    <span class="m-id">PU-05</span>
+                    <span class="m-name">園原まこと</span>
+                    <span class="m-unit prism">PRISM UP</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 VTuber Archive Project - Agency Analysis Report [LU_CONNECT]</p>
+        <a href="../index.html" class="back-link"><i class="fa-solid fa-chevron-left"></i> BACK TO CORE SYSTEM</a>
+    </footer>
+
+    <script src="lightup_script.js"></script>
+    <script src="../mobile_optimize.js"></script>
 </body>
 </html>
-
