@@ -159,7 +159,7 @@ const agencies = [
             desc_ko: "VR 아이돌 그룹으로서 독자적인 지위를 구축하고 있습니다. 공식 사이트는 라이브 정보와 디스코그래피 정리가 매우 정중합니다."
         },
         {
-            name: "KAMITSUBAKI", sub: "神椿スタジオ / THINKR", filter: "corporate", color: "123, 67, 151", icon: "K", url: "Kamitsubaki/kamitsubaki_index.html", tags: ["Virtual Art", "Music"],
+            name: "KAMITSUBAKI", sub: "神椿スタジオ / THINKR", filter: "major", color: "123, 67, 151", icon: "K", url: "Kamitsubaki/kamitsubaki_index.html", tags: ["Virtual Art", "Music"],
             desc: "音楽と物語を融合させた独特の世界観を持つ。公式サイトは非常に芸術性が高く、所属する歌唱魔女たちの情報が詳細に記されている。",
             desc_en: "Fuses music and storytelling into a unique world. Their highly artistic site details the 'Witches' of their musical roster.",
             desc_es: "Fusiona música y narrativa en un mundo único. Su sitio altamente artístico detalla a las 'Brujas' de su elenco musical.",
@@ -335,7 +335,7 @@ const agencies = [
             name_zh: "Nanashi Ink",
             name_ko: "나나시잉크",
             sub: "774inc.",
-            filter: "indie",
+            filter: "major",
             color: "252, 234, 187",
             icon: "7",
             url: "Nanashi/nanashi_index.html",
@@ -2067,8 +2067,11 @@ const app = createApp({
                 return (dict && dict[field]) || field;
             }
 
-            const postfix = currentLang.value === 'ja' ? '' : '_' + currentLang.value.split('-')[0];
-            return item[field + postfix] || item[field] || '';
+            const currentLangCode = currentLang.value.split('-')[0];
+            const postfix = currentLang.value === 'ja' ? '' : '_' + currentLangCode;
+            
+            // Fallback chain: Requested Lang -> English -> Japanese (original)
+            return item[field + postfix] || item[field + '_en'] || item[field] || '';
         };
 
         const filteredAgencies = computed(() => {

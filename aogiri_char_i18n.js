@@ -6,19 +6,23 @@
 (function () {
     'use strict';
 
-    const LANG_KEY = 'vtuber_lang';
+    const LANG_KEY = 'vt_archive_lang';
 
     const LANGS = [
-        { code: 'ja',       label: '日本語' },
-        { code: 'en',       label: 'English' },
-        { code: 'de',       label: 'Deutsch' },
-        { code: 'fr',       label: 'Français' },
-        { code: 'es',       label: 'Español' },
-        { code: 'pt',       label: 'Português' },
-        { code: 'zh-Hans',  label: '简体中文' },
-        { code: 'zh-Hant',  label: '繁體中文' },
-        { code: 'ko',       label: '한국어' },
-        { code: 'id',       label: 'Bahasa Indonesia' },
+        { code: 'ja',       label: 'JP (日本語)' },
+        { code: 'en',       label: 'EN (English)' },
+        { code: 'no',       label: 'NO (Norsk)' },
+        { code: 'sv',       label: 'SV (Svenska)' },
+        { code: 'fi',       label: 'FI (Suomi)' },
+        { code: 'fil',      label: 'FIL (Filipino)' },
+        { code: 'de',       label: 'DE (Deutsch)' },
+        { code: 'fr',       label: 'FR (Français)' },
+        { code: 'es',       label: 'ES (Español)' },
+        { code: 'pt',       label: 'PT (Português)' },
+        { code: 'zh-Hans',  label: 'ZH (简体中文)' },
+        { code: 'zh-Hant',  label: 'ZH (繁體中文)' },
+        { code: 'ko',       label: 'KO (한국어)' },
+        { code: 'id',       label: 'ID (Bahasa Indonesia)' },
     ];
 
     function getSavedLang() {
@@ -31,6 +35,7 @@
 
     function applyLanguage(lang) {
         const dict = (window.indie_translations && window.indie_translations[lang])
+            || (window.indie_translations && window.indie_translations[lang.split('-')[0]])
             || (window.indie_translations && window.indie_translations['ja'])
             || {};
 
@@ -44,8 +49,6 @@
             } else if (el.tagName === 'META') {
                 el.setAttribute('content', val);
             } else {
-                // Preserve child elements (e.g. <strong>, <a>)
-                // Only replace if the element has no child elements with data-i18n
                 const hasChildI18n = el.querySelector('[data-i18n]');
                 if (!hasChildI18n) {
                     el.textContent = val;
@@ -55,89 +58,75 @@
 
         document.documentElement.lang = lang;
 
-        // Update active state on switcher buttons
-        document.querySelectorAll('.aogiri-lang-btn').forEach(btn => {
-            btn.classList.toggle('active', btn.dataset.lang === lang);
-        });
+        // Update active state on switcher
+        const select = document.querySelector('.aogiri-lang-select');
+        if (select) select.value = lang;
     }
 
     function buildSwitcher() {
-        // Find nav element to attach switcher
-        const nav = document.querySelector('nav') || document.querySelector('.u-nav') || document.body;
+        const nav = document.querySelector('.nav-container') || document.querySelector('nav') || document.body;
 
         const wrapper = document.createElement('div');
-        wrapper.className = 'aogiri-lang-switcher';
-        wrapper.setAttribute('role', 'navigation');
-        wrapper.setAttribute('aria-label', 'Language selector');
+        wrapper.className = 'aogiri-lang-wrapper';
+        
+        const select = document.createElement('select');
+        select.className = 'aogiri-lang-select';
+        select.setAttribute('aria-label', 'Language selector');
 
         LANGS.forEach(({ code, label }) => {
-            const btn = document.createElement('button');
-            btn.className = 'aogiri-lang-btn';
-            btn.dataset.lang = code;
-            btn.textContent = label;
-            btn.setAttribute('title', `Switch to ${label}`);
-            btn.addEventListener('click', () => {
-                saveLang(code);
-                applyLanguage(code);
-            });
-            wrapper.appendChild(btn);
+            const opt = document.createElement('option');
+            opt.value = code;
+            opt.textContent = label;
+            select.appendChild(opt);
         });
 
+        select.addEventListener('change', (e) => {
+            const code = e.target.value;
+            saveLang(code);
+            applyLanguage(code);
+        });
+
+        wrapper.appendChild(select);
         nav.appendChild(wrapper);
     }
 
     function injectStyles() {
         const style = document.createElement('style');
         style.textContent = `
-            .aogiri-lang-switcher {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 4px;
-                padding: 6px 12px;
-                align-items: center;
-                font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            .aogiri-lang-wrapper {
+                margin-left: auto;
+                padding-left: 15px;
             }
-            .aogiri-lang-btn {
-                background: rgba(255,255,255,0.08);
-                border: 1px solid rgba(255,255,255,0.18);
-                color: rgba(255,255,255,0.75);
+            .aogiri-lang-select {
+                background: rgba(255, 255, 255, 0.05);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                color: rgba(255, 255, 255, 0.9);
                 border-radius: 4px;
-                padding: 3px 8px;
-                font-size: 0.68rem;
+                padding: 4px 8px;
+                font-size: 0.75rem;
                 font-family: inherit;
                 cursor: pointer;
-                letter-spacing: 0.03em;
-                transition: background 0.18s, color 0.18s, border-color 0.18s;
-                white-space: nowrap;
+                outline: none;
+                transition: border-color 0.2s, background 0.2s;
             }
-            .aogiri-lang-btn:hover {
-                background: rgba(255,255,255,0.18);
+            .aogiri-lang-select:hover {
+                border-color: rgba(255, 255, 255, 0.4);
+                background: rgba(255, 255, 255, 0.1);
+            }
+            .aogiri-lang-select option {
+                background: #1a1a1a;
                 color: #fff;
-                border-color: rgba(255,255,255,0.4);
-            }
-            .aogiri-lang-btn.active {
-                background: rgba(255,255,255,0.22);
-                color: #fff;
-                border-color: rgba(255,255,255,0.5);
-                font-weight: 700;
-            }
-            /* Urame page — dark nav override */
-            .urame-page .aogiri-lang-switcher {
-                border-top: 1px solid rgba(255,255,255,0.08);
-                margin-top: 4px;
             }
             @media (max-width: 600px) {
-                .aogiri-lang-switcher { gap: 3px; padding: 4px 8px; }
-                .aogiri-lang-btn { font-size: 0.62rem; padding: 2px 6px; }
+                .aogiri-lang-wrapper { padding-left: 0; margin-top: 5px; width: 100%; }
+                .aogiri-lang-select { width: 100%; font-size: 0.7rem; }
             }
         `;
         document.head.appendChild(style);
     }
 
     function init() {
-        // Wait for i18n_indie.js to be available
         if (typeof window.indie_translations === 'undefined') {
-            // Retry once after a short delay
             setTimeout(init, 150);
             return;
         }

@@ -429,26 +429,30 @@ body {
 }
 
 .dock-lang select {
-    background: rgba(0, 0, 0, 0.5);
-    border: 1px solid var(--glass-border);
-    color: var(--text-dim);
-    padding: 0.4rem 0.8rem;
+    background:
+        linear-gradient(135deg, rgba(0, 229, 255, 0.22), rgba(255, 0, 123, 0.18));
+    border: 1px solid rgba(0, 229, 255, 0.35);
+    color: var(--text-primary);
+    padding: 0.45rem 0.9rem;
     border-radius: 12px;
     font-family: var(--font-heading);
-    font-size: 0.75rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
     cursor: pointer;
     outline: none;
-    transition: 0.3s;
+    transition: 0.25s;
+    text-transform: uppercase;
+    box-shadow: 0 0 12px rgba(0, 229, 255, 0.15);
 }
 
 .dock-lang select:hover {
-    border-color: var(--accent-cyan);
-    color: var(--text-primary);
+    border-color: var(--accent-gold);
+    box-shadow: 0 0 18px rgba(255, 200, 61, 0.25);
 }
 
 .dock-lang select option {
-    background: var(--bg-void);
-    color: var(--text-primary);
+    background: #06060b;
+    color: #e8f9ff;
 }
 
 .dock-search {

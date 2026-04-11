@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
   langSelect.style.fontFamily = 'inherit';
 
   const langs = {
-    'ja': '日本語', 'en': 'English', 'es': 'Español', 
+    'ja': '日本語', 'en': 'English (USA)', 'es': 'Español', 
     'zh-Hans': '简体中文', 'zh-Hant': '繁體中文', 
     'ko': '한국어', 'de': 'Deutsch', 'fr': 'Français', 'id': 'Bahasa Indonesia'
   };

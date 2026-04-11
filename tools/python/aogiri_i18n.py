@@ -384,6 +384,7 @@ def translate_all(ja_dict):
             t_code = target_lang
             if t_code == 'zh-Hans': t_code = 'zh-CN'
             elif t_code == 'zh-Hant': t_code = 'zh-TW'
+            elif t_code == 'fil': t_code = 'tl'
             
             s_code = source_lang
             if s_code == 'zh-Hans': s_code = 'zh-CN'
@@ -396,7 +397,7 @@ def translate_all(ja_dict):
                 batch_texts = texts_to_translate[i:i+BATCH_SIZE]
                 batch_keys = keys_to_translate[i:i+BATCH_SIZE]
                 
-                print(f"    Batch {i//BATCH_SIZE + 1}/{(len(texts_to_translate)-1)//BATCH_SIZE + 1}...")
+                print(f"    Batch {i//BATCH_SIZE + 1}/{(len(texts_to_translate)-1)//BATCH_SIZE + 1}...", flush=True)
                 try:
                     translated = translator.translate_batch(batch_texts)
                     for k, t in zip(batch_keys, translated):
@@ -407,11 +408,11 @@ def translate_all(ja_dict):
                         if ja_t not in text_cache: text_cache[ja_t] = {}
                         text_cache[ja_t][target_lang] = t
                 except Exception as e:
-                    print(f"      [WARN] Batch failed: {e}. Falling back to source.")
+                    print(f"      [WARN] Batch failed: {e}. Falling back to source.", flush=True)
                     for k, txt in zip(batch_keys, batch_texts):
                         out[k] = txt
                 
-                time.sleep(1.0) # Graceful delay between batches
+                time.sleep(2.0) # Increased delay to avoid 429 Too Many Requests
 
         # Fill in any missing from ja_dict (safety)
         for key in ja_dict:
@@ -427,25 +428,20 @@ def translate_all(ja_dict):
     result['en'] = get_translated_dict('en', 'ja')
     merge_into_indie_js({'en': result['en']})
     
-    # EN -> DE, FR, ES
-    for lang in ['de', 'fr', 'es']:
+    # EN -> DE, FR, ES, NO, SV, FI, RU, PL, FIL
+    for lang in ['de', 'fr', 'es', 'no', 'sv', 'fi', 'ru', 'pl', 'fil']:
         result[lang] = get_translated_dict(lang, 'en', result['en'])
-        merge_into_indie_js({lang: result[lang]})
         
     # ES -> PT
     result['pt'] = get_translated_dict('pt', 'es', result['es'])
-    merge_into_indie_js({'pt': result['pt']})
     
     # JA -> ZH-Hans, ZH-Hant, KO, ID
     result['zh-Hans'] = get_translated_dict('zh-Hans', 'ja')
-    merge_into_indie_js({'zh-Hans': result['zh-Hans']})
     
     result['zh-Hant'] = get_translated_dict('zh-Hant', 'zh-Hans', result['zh-Hans'])
-    merge_into_indie_js({'zh-Hant': result['zh-Hant']})
     
     for lang in ['ko', 'id']:
         result[lang] = get_translated_dict(lang, 'ja')
-        merge_into_indie_js({lang: result[lang]})
     
     return result
 

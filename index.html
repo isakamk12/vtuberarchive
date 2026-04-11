@@ -91,16 +91,32 @@
         </div>
         <div class="dock-links">
             <a href="#" class="active"><i class="fa-solid fa-cubes"></i> <span
-                    data-i18n="nav_agencies">AGENCIES</span></a>
-            <a href="relationship/index.html"><i class="fa-solid fa-diagram-project"></i> <span data-i18n="nav_relationship">RELATIONSHIP</span></a>
-            <a href="#"><i class="fa-solid fa-chart-network"></i> <span data-i18n="nav_statistics">STATISTICS</span></a>
-            <a href="#"><i class="fa-solid fa-clock-rotate-left"></i> <span data-i18n="nav_history">HISTORY</span></a>
+                    data-i18n="nav_agencies">{{ t(null, 'nav_agencies') }}</span></a>
+            <a href="relationship/index.html"><i class="fa-solid fa-diagram-project"></i> <span data-i18n="nav_relationship">{{ t(null, 'nav_relationship') }}</span></a>
+            <a href="#"><i class="fa-solid fa-chart-network"></i> <span data-i18n="nav_statistics">{{ t(null, 'nav_statistics') }}</span></a>
+            <a href="#"><i class="fa-solid fa-clock-rotate-left"></i> <span data-i18n="nav_history">{{ t(null, 'nav_history') }}</span></a>
         </div>
         <div class="dock-lang">
             <select id="langSelect">
                 <option value="ja">JP</option>
-                <option value="en">EN</option>
+                <option value="en">EN (USA)</option>
+                <option value="en-GB">EN (UK)</option>
+                <option value="en-AU">EN (AU)</option>
+                <option value="en-IE">EN (IE)</option>
                 <option value="es">ES</option>
+                <option value="es-419">ES (LATAM)</option>
+                <option value="pt">PT</option>
+                <option value="pt-BR">PT (BR)</option>
+                <option value="fr">FR</option>
+                <option value="fr-CA">FR (CA)</option>
+                <option value="de">DE</option>
+                <option value="it">IT</option>
+                <option value="ru">RU</option>
+                <option value="pl">PL</option>
+                <option value="no">NO</option>
+                <option value="sv">SV</option>
+                <option value="fi">FI</option>
+                <option value="fil">FIL</option>
                 <option value="zh-Hans">简体</option>
                 <option value="zh-Hant">繁體</option>
                 <option value="ko">KO</option>
@@ -108,8 +124,8 @@
         </div>
         <div class="dock-search">
             <i class="fa-solid fa-search"></i>
-            <input type="text" id="searchInput" v-model.trim="searchQuery" placeholder="Query Database..."
-                data-i18n-placeholder="search_placeholder">
+            <input type="text" id="searchInput" v-model.trim="searchQuery"
+                :placeholder="t(null, 'search_placeholder')" data-i18n-placeholder="search_placeholder">
         </div>
     </nav>
 
@@ -122,15 +138,15 @@
         </div>
         <div class="hero-text-container">
             <h1 class="hero-title">VT_ARCHIVE</h1>
-            <p class="hero-subtitle" data-i18n="hero_subtitle">GLOBAL OBSERVATIONAL DATABASE</p>
+            <p class="hero-subtitle" data-i18n="hero_subtitle">{{ t(null, 'hero_subtitle') }}</p>
             <div class="hero-metrics">
                 <div class="metric">
                     <span class="metric-val" id="totalAgencies">{{ totalAgencies }}</span>
-                    <span class="metric-lbl" data-i18n="metric_sectors">ACTIVE SECTORS</span>
+                    <span class="metric-lbl" data-i18n="metric_sectors">{{ t(null, 'metric_sectors') }}</span>
                 </div>
                 <div class="metric">
                     <span class="metric-val status-ok">ONLINE</span>
-                    <span class="metric-lbl" data-i18n="metric_status">SYSTEM STATUS</span>
+                    <span class="metric-lbl" data-i18n="metric_status">{{ t(null, 'metric_status') }}</span>
                 </div>
             </div>
         </div>
@@ -140,13 +156,22 @@
     <div class="status-notice">
         <div class="status-notice-head" data-i18n="status_early_access">
             <i class="fa-solid fa-triangle-exclamation"></i>
-            STATUS: EARLY ACCESS — 構築中
+            {{ t(null, 'status_early_access') }}
         </div>
         <p class="status-notice-copy" data-i18n="status_notice_p1">
-            本アーカイブは現在構築中のため、各セクターの完成度にばらつきがあります。
+            {{ t(null, 'status_notice_p1') }}
         </p>
         <p class="status-notice-copy" data-i18n="status_notice_p2">
-            アクセス自体は可能ですが、一部ページはレイアウト未整備・内容暫定の状態です。
+            {{ t(null, 'status_notice_p2') }}
+        </p>
+        <p class="status-notice-copy">
+            ※「メジャー/大手」は「所属人数10人以上」「現役メンバーにチャンネル登録者10万人以上がいる」「現在も継続して活動している」の3条件を満たす場合に該当します。
+        </p>
+        <p class="status-notice-copy">
+            ※個人・企業とも掲載上限は設けません。ただし個人勢は容量次第で分離サイト化する予定があるため、一時的に削除される場合があります。
+        </p>
+        <p class="status-notice-copy">
+            ※内部タグで管理している項目は、初期段階ではタグ制作が間に合っていない箇所が多い可能性があります。気付いた場合は連絡いただければ反映します。
         </p>
         <div class="status-stack">
             <!-- Latest News -->
@@ -170,7 +195,7 @@
             <div class="status-row">
                 <span class="status-dot"></span>
                 <strong class="status-label" data-i18n="status_list_others">{{ t(null, 'status_list_others') }}</strong>
-                <span class="status-meta" data-i18n="status_list_others_desc">── 設計中</span>
+                <span class="status-meta" data-i18n="status_list_others_desc">{{ t(null, 'status_list_others_desc') }}</span>
             </div>
 
             <!-- Official Release Roadmap -->
@@ -189,7 +214,7 @@
             </div>
         </div>
         <p class="status-notice-footer" data-i18n="status_notice_footer">
-            ※ 上記リストにまだ追加していないプロジェクトも多数存在しますが、詳細な調査が完了次第順次制作するため掲載が遅延しています。
+            {{ t(null, 'status_notice_footer') }}
         </p>
     </div>
 
@@ -197,11 +222,11 @@
     <main class="omni-container">
         <!-- Filter Controls -->
         <div class="omni-filters" id="filterBar">
-            <button class="filter-btn" :class="{ active: filterMode === 'all' }" @click="setFilter('all')" data-filter="all" data-i18n="filter_all">ALL SECTORS</button>
-            <button class="filter-btn" :class="{ active: filterMode === 'major' }" @click="setFilter('major')" data-filter="major" data-i18n="filter_major">MAJOR</button>
-            <button class="filter-btn" :class="{ active: filterMode === 'corporate' }" @click="setFilter('corporate')" data-filter="corporate" data-i18n="filter_corporate">CORPORATE</button>
-            <button class="filter-btn" :class="{ active: filterMode === 'indie' }" @click="setFilter('indie')" data-filter="indie" data-i18n="filter_indie">INDIE / MID</button>
-            <button class="filter-btn" :class="{ active: filterMode === 'global' }" @click="setFilter('global')" data-filter="global" data-i18n="filter_global">GLOBAL</button>
+            <button class="filter-btn" :class="{ active: filterMode === 'all' }" @click="setFilter('all')" data-filter="all" data-i18n="filter_all">{{ t(null, 'filter_all') }}</button>
+            <button class="filter-btn" :class="{ active: filterMode === 'major' }" @click="setFilter('major')" data-filter="major" data-i18n="filter_major">{{ t(null, 'filter_major') }}</button>
+            <button class="filter-btn" :class="{ active: filterMode === 'corporate' }" @click="setFilter('corporate')" data-filter="corporate" data-i18n="filter_corporate">{{ t(null, 'filter_corporate') }}</button>
+            <button class="filter-btn" :class="{ active: filterMode === 'indie' }" @click="setFilter('indie')" data-filter="indie" data-i18n="filter_indie">{{ t(null, 'filter_indie') }}</button>
+            <button class="filter-btn" :class="{ active: filterMode === 'global' }" @click="setFilter('global')" data-filter="global" data-i18n="filter_global">{{ t(null, 'filter_global') }}</button>
         </div>
 
         <!-- 3D Card Grid -->
@@ -247,8 +272,8 @@
         <!-- Empty State -->
         <div class="empty-state" id="emptyState" v-if="filteredAgencies.length === 0">
             <i class="fa-solid fa-triangle-exclamation"></i>
-            <h3 data-i18n="empty_state_title">No Data Matches Query</h3>
-            <p data-i18n="empty_state_desc">Recalibrate search parameters and try again.</p>
+            <h3 data-i18n="empty_state_title">{{ t(null, 'empty_state_title') }}</h3>
+            <p data-i18n="empty_state_desc">{{ t(null, 'empty_state_desc') }}</p>
         </div>
     </main>
 

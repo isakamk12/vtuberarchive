@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const languageOrder = ['ja', 'en', 'de', 'fr', 'es', 'pt', 'zh', 'ko', 'id'];
+    const languageOrder = ['ja', 'en', 'no', 'sv', 'fi', 'fil', 'ko', 'zh-Hans', 'zh-Hant', 'de', 'fr', 'es', 'pt', 'ru', 'pl'];
     const pageTranslations = {
         ja: {
             title: 'あおぎり高校 非公式ファンサイト',
@@ -88,6 +88,138 @@ document.addEventListener('DOMContentLoaded', () => {
             graduates_title: 'Graduates',
             footer_copyright: '© 2026 Aogiri High School Fan Site. Developed with passion.',
             footer_disclaimer: 'This site is an unofficial fan project and has no affiliation with viviON Inc. or the official Aogiri High School project.'
+        },
+        no: {
+            title: 'Aogiri High School uoffisiell fanside',
+            description: 'En uoffisiell fanside som tar for seg Aogiri High School og deres konsept om at "hvis det er gøy, er alt lov".',
+            nav_about: 'Om',
+            nav_deep_dive: 'Dypdykk',
+            nav_members: 'Medlemmer',
+            hero_subtitle: 'Hvis det er gøy, er alt lov!',
+            hero_title_main: 'Aogiri High School',
+            hero_title_sub: 'Fanside',
+            hero_desc: 'En uoffisiell portal for en herlig kaotisk VTuber-gruppe der alle får nyte det de elsker i sin ideelle form.',
+            hero_cta: 'Ta en titt',
+            about_title: 'Hva er Aogiri High School?',
+            about_subtitle: 'AOGIRI HIGH SCHOOL',
+            about_body: 'Et sted i Tokyo finnes det et sted som heter "Aogiri High School".<br/>Det er hjemmet til medlemmer som ønsker å nyte det de elsker så mye de vil, i den versjonen av seg selv de føler seg best i.<br/><br/>Mottoet deres er "Hvis det er gøy, er alt lov!", og de lever fullt ut i skolelivet de forestiller seg.',
+            deep_title: 'Vil du se nærmere?',
+            deep_subtitle: 'En uformell tur gjennom Aogiris sjarm',
+            feature_1_title: 'En "spillklubb" som nesten ikke har spillkommentarer?!',
+            feature_1_body: 'Aogiri High School startet som "Aogiri High School Gaming Club" og vandret deretter lykkelig inn i ASMR, sangcovere, spøkeprosjekter, shorts og mer.',
+            feature_2_title: 'Kaotisk prosjektplanlegging uten grenser',
+            feature_2_body: 'Innholdet deres sprenger stadig vanlige VTuber-forventninger, og gjør de fleste opplastinger til et høytlytt og morsomt kaos.',
+            feature_3_title: 'En gjeng som overstrømmer av personlighet og sterke bånd',
+            feature_3_body: 'Mer enn 13 medlemmer skaper leken kjemi på tvers av ansiennitet, med mange hjertevarme øyeblikk også.',
+            feature_4_title: 'Momentumet stopper aldri',
+            feature_4_body: 'Med over én million abonnenter, store samarbeid og store offline-arrangementer i vente, fortsetter gruppen å vokse.',
+            categories_title: 'Innholdsindeks',
+            categories_subtitle: 'CONTENT ATTRIBUTES',
+            categories_intro: 'En rask liste over innholdstagger basert på deres videoer og prosjekter.',
+            category_1_title: '<span class="emoji-pop">🎬</span> Live-action prosjekter',
+            category_1_body: 'Fossefallstrening, strikkhopping, spiseutfordringer, fabrikkbesøk og mer.',
+            category_2_title: '<span class="emoji-pop">🛠️</span> Eksperimenter og teknologi',
+            category_2_body: 'Gunpla-bygging, hjemmelaget spillutvikling, AI-avhørsspill og mer.',
+            category_3_title: '<span class="emoji-pop">🗣️</span> Prat og varieté',
+            category_3_body: 'Intervjuer med forbudte ord, veskesjekker, rådgivningsøkter og ordspillkomedie.',
+            category_4_title: '<span class="emoji-pop">🎤</span> Musikk og forestilling',
+            category_4_body: '3D-karaoketurneringer, sangstrømmer med artisttema og historier om originale sanger.',
+            category_5_title: '<span class="emoji-pop">🎲</span> Murder Mystery og TRPG',
+            category_5_body: 'Historiedrevne bordopplevelser, inkludert "Mountains of Madness"-serien.',
+            members_title: 'Medlemsliste',
+            members_subtitle: 'MEMBER DIRECTORY',
+            active_members_title: 'Nåværende medlemmer',
+            graduates_title: 'Tidligere medlemmer',
+            footer_copyright: '© 2026 Aogiri High School Fan Site. Utviklet med lidenskap.',
+            footer_disclaimer: 'Dette nettstedet er et uoffisielt fanprosjekt og har ingen tilknytning til viviON Inc. eller det offisielle Aogiri High School-prosjektet.'
+        },
+        sv: {
+            title: 'Aogiri High School inofficiell fansida',
+            description: 'En inofficiell fansida som dyker in i Aogiri High School och dess "allt är tillåtet"-vibe.',
+            nav_about: 'Om',
+            nav_deep_dive: 'Djupdykning',
+            nav_members: 'Medlemmar',
+            hero_subtitle: 'Om det är kul är allt tillåtet!',
+            hero_title_main: 'Aogiri High School',
+            hero_title_sub: 'Fansida',
+            hero_desc: 'En inofficiell portal för en härligt kaotisk VTuber-grupp där alla får njuta av det de älskar i sin ideala form.',
+            hero_cta: 'Ta en titt',
+            about_title: 'Vad är Aogiri High School?',
+            about_subtitle: 'AOGIRI HIGH SCHOOL',
+            about_body: 'Någonstans i Tokyo finns en plats som heter "Aogiri High School".<br/>Det är hem för medlemmar som vill njuta av det de älskar så mycket de vill, i den version av sig själva de känner sig bäst i.<br/><br/>Deras motto är "Om det är kul är allt tillåtet!" och de lever fullt ut i det skolliv de föreställer sig.',
+            deep_title: 'Vill du se närmare?',
+            deep_subtitle: 'En informell rundtur i Aogiris charm',
+            feature_1_title: 'En "spelklubb" som knappt gör spelkommentarer?!',
+            feature_1_body: 'Aogiri High School började som "Aogiri High School Gaming Club" och vandrade sedan glatt in i ASMR, sångcovers, skämtprojekt, shorts och mer.',
+            feature_2_title: 'Kaotisk projektplanering utan gränser',
+            feature_2_body: 'Deras innehåll spränger ständigt vanliga VTuber-förväntningar och gör de flesta uppladdningar till ett högljutt och roligt kaos.',
+            feature_3_title: 'Ett gäng som sprudlar av personlighet och starka band',
+            feature_3_body: 'Mer än 13 medlemmar skapar lekfull kemi över senioritetsgränserna, med många hjärtliga ögonblick också.',
+            feature_4_title: 'Momentumet stannar aldrig',
+            feature_4_body: 'Med över en miljon prenumeranter, stora samarbeten och stora offline-evenemang framför sig, fortsätter gruppen att växa.',
+            categories_title: 'Innehållsindex',
+            categories_subtitle: 'CONTENT ATTRIBUTES',
+            categories_intro: 'En snabb lista över innehållstaggar baserade på deras videor och projekt.',
+            category_1_title: '<span class="emoji-pop">🎬</span> Live-action projekt',
+            category_1_body: 'Vattenfallsträning, bungee-jumping, matutmaningar, fabriksbesök och mer.',
+            category_2_title: '<span class="emoji-pop">🛠️</span> Experiment och teknik',
+            category_2_body: 'Gunpla-bygge, hemmaproducerad spelutveckling, AI-förhörsspel och mer.',
+            category_3_title: '<span class="emoji-pop">🗣️</span> Prat och varieté',
+            category_3_body: 'Intervjuer med förbjudna ord, väskkontroller, rådgivningssessioner och ordvitskomedi.',
+            category_4_title: '<span class="emoji-pop">🎤</span> Musik och framträdande',
+            category_4_body: '3D-karaoketurneringar, sångströmmar med artisttema och historier om originalsånger.',
+            category_5_title: '<span class="emoji-pop">🎲</span> Murder Mystery och TRPG',
+            category_5_body: 'Berättelsedrivna bordsupplevelser, inklusive "Mountains of Madness"-serien.',
+            members_title: 'Medlemslista',
+            members_subtitle: 'MEMBER DIRECTORY',
+            active_members_title: 'Nuvarande medlemmar',
+            graduates_title: 'Tidigare medlemmar',
+            footer_copyright: '© 2026 Aogiri High School Fan Site. Utvecklad med passion.',
+            footer_disclaimer: 'Denna webbplats är ett inofficiellt fanprojekt och har ingen anknytning till viviON Inc. eller det officiella Aogiri High School-projektet.'
+        },
+        fi: {
+            title: 'Aogiri High School epävirallinen fanisivusto',
+            description: 'Epävirallinen fanisivusto, joka sukeltaa rennosti Aogiri High Schooliin ja sen "kaikki käy" -henkeen.',
+            nav_about: 'Tietoa',
+            nav_deep_dive: 'Syväluotaus',
+            nav_members: 'Jäsenet',
+            hero_subtitle: 'Jos on hauskaa, kaikki on sallittua!',
+            hero_title_main: 'Aogiri High School',
+            hero_title_sub: 'Fanisivusto',
+            hero_desc: 'Epävirallinen portaali ihanan kaoottiselle VTuber-ryhmälle, jossa kaikki saavat nauttia rakastamistaan asioista ihanteellisessa muodossaan.',
+            hero_cta: 'Katso tarkemmin',
+            about_title: 'Mikä on Aogiri High School?',
+            about_subtitle: 'AOGIRI HIGH SCHOOL',
+            about_body: 'Jossain Tokiossa on paikka nimeltä "Aogiri High School".<br/>Se on koti jäsenille, jotka haluavat nauttia rakastamistaan asioista niin paljon kuin haluavat, siinä versiossa itsestään, jossa he tuntevat olonsa parhaaksi.<br/><br/>Heidän mottonsa on "Jos on hauskaa, kaikki on sallittua!", ja he elävät täysillä kuvittelemaansa kouluelämää.',
+            deep_title: 'Haluatko katsoa syvemmälle?',
+            deep_subtitle: 'Rento kierros Aogirin charmiin',
+            feature_1_title: ' "Peliklubi", joka ei juurikaan tee pelikommentointia?!',
+            feature_1_body: 'Aogiri High School alkoi "Aogiri High School Gaming Clubina" ja vaelsi sitten iloisesti ASMR:n, laulukansien, pilailuprojektien, shortsien ja muun pariin.',
+            feature_2_title: 'Kaoottinen projektisuunnittelu ilman rajoja',
+            feature_2_body: 'Heidän sisältönsä ylittää jatkuvasti tavalliset VTuber-odotukset ja tekee useimmista latauksista meluisan ja hauskan sotkun.',
+            feature_3_title: 'Ryhmä täynnä persoonallisuutta ja vahvoja siteitä',
+            feature_3_body: 'Yli 13 jäsentä luovat leikkisää kemiaa yli virkavuosirajojen, ja mukana on myös monia sydäntälämmittäviä hetkiä.',
+            feature_4_title: 'Momentum ei pysähdy koskaan',
+            feature_4_body: 'Yli miljoonalla tilaajalla, suurilla yhteistyöprojekteilla ja suurilla offline-tapahtumilla edessä, ryhmä kasvaa edelleen.',
+            categories_title: 'Sisältöindeksi',
+            categories_subtitle: 'CONTENT ATTRIBUTES',
+            categories_intro: 'Nopea luettelo sisältötageista heidän videoidensa ja projektiensa perusteella.',
+            category_1_title: '<span class="emoji-pop">🎬</span> Live-action -projektit',
+            category_1_body: 'Vesiputousharjoittelu, benjihyppy, syömisasteet, tehdasvierailut ja paljon muuta.',
+            category_2_title: '<span class="emoji-pop">🛠️</span> Kokeilut ja tekniikka',
+            category_2_body: 'Gunpla-rakennus, kotitekoinen pelikehitys, AI-kuulustelupelit ja paljon muuta.',
+            category_3_title: '<span class="emoji-pop">🗣️</span> Puhe ja viihde',
+            category_3_body: 'NG-sanahaastattelut, laukkutarkastukset, neuvontaistunnot ja sanaleikkikomedia.',
+            category_4_title: '<span class="emoji-pop">🎤</span> Musiikki ja esiintyminen',
+            category_4_body: '3D-karaoketurnaukset, artistiteemaiset laulustriimit ja tarinat alkuperäisistä lauluista.',
+            category_5_title: '<span class="emoji-pop">🎲</span> Murhamysteeri ja TRPG',
+            category_5_body: 'Tarinavetoiset pöytäpelikokemukset, mukaan lukien "Mountains of Madness" -sarja.',
+            members_title: 'Jäsenlista',
+            members_subtitle: 'MEMBER DIRECTORY',
+            active_members_title: 'Nykyiset jäsenet',
+            graduates_title: 'Entiset jäsenet',
+            footer_copyright: '© 2026 Aogiri High School Fan Site. Kehitetty intohimolla.',
+            footer_disclaimer: 'Tämä sivusto on epävirallinen fani-projekti eikä sillä ole yhteyttä viviON Inc.:iin tai viralliseen Aogiri High School -projektiin.'
         },
         de: {
             title: 'Inoffizielle Fanseite der Aogiri High School',
@@ -420,21 +552,27 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: 'natsuki', name: '水菜月 夏希', kana: 'みなづき なつき', nameEn: 'Minazuki Natsuki', color: '#5352ed', catchphrase: { ja: '「歌枠やMAD動画で活躍。」', en: 'Active in singing streams and MAD-style edited videos.' }, tags: { ja: ['#初期メンバー'], en: ['#FoundingMember'] } }
     ];
 
-    let currentLang = localStorage.getItem('aogiri_lang') || 'ja';
+    let currentLang = localStorage.getItem('vt_archive_lang') || 'ja';
     if (!languageOrder.includes(currentLang)) currentLang = 'ja';
     const titleElement = document.querySelector('title');
     const descriptionMeta = document.querySelector('meta[name="description"]');
     const langSelect = document.getElementById('lang-select');
     const languageLabels = {
-        ja: '日本語',
-        en: 'English',
-        de: 'Deutsch',
-        fr: 'Francais',
-        es: 'Espanol',
-        pt: 'Portugues',
-        zh: '中文',
-        ko: '한국어',
-        id: 'Bahasa Indonesia'
+        ja: 'JP (日本語)',
+        en: 'EN (English)',
+        no: 'NO (Norsk)',
+        sv: 'SV (Svenska)',
+        fi: 'FI (Suomi)',
+        fil: 'FIL (Filipino)',
+        de: 'DE (Deutsch)',
+        fr: 'FR (Français)',
+        es: 'ES (Español)',
+        pt: 'PT (Português)',
+        ru: 'RU (Русский)',
+        pl: 'PL (Polski)',
+        "zh-Hans": 'ZH (简体中文)',
+        "zh-Hant": 'ZH (繁體中文)',
+        ko: 'KO (한국어)',
     };
     const getTranslation = (key) => (pageTranslations[currentLang] || pageTranslations.ja)[key] || pageTranslations.en[key] || pageTranslations.ja[key] || '';
     const applyStaticTranslations = () => {
@@ -578,7 +716,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         langSelect.addEventListener('change', (e) => {
             currentLang = e.target.value;
-            localStorage.setItem('aogiri_lang', currentLang);
+            localStorage.setItem('vt_archive_lang', currentLang);
             applyStaticTranslations();
             renderMembers(revealObserver);
         });
