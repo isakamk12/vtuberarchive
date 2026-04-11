@@ -2,15 +2,18 @@ document.addEventListener("DOMContentLoaded", () => {
   // Use indie_translations loaded from i18n_indie.js
   if (typeof indie_translations === 'undefined') return;
 
-  const userLang = localStorage.getItem('vtuber_lang') || 'ja';
+  const userLang = localStorage.getItem('vt_archive_lang') || 'ja';
   
   // Inject language selector into the navigation if possible
   const navContainer = document.querySelector('nav') || document.body;
   const langSelectContainer = document.createElement('div');
-  langSelectContainer.style.position = 'absolute';
-  langSelectContainer.style.top = '10px';
-  langSelectContainer.style.right = '20px';
-  langSelectContainer.style.zIndex = '9999';
+  langSelectContainer.className = 'lang-switcher-container';
+  langSelectContainer.style.display = 'flex';
+  langSelectContainer.style.alignItems = 'center';
+  langSelectContainer.style.gap = '0.5rem';
+  langSelectContainer.style.marginLeft = 'auto';
+  langSelectContainer.style.flexShrink = '0';
+  langSelectContainer.style.paddingLeft = '1rem';
   
   const langSelect = document.createElement('select');
   langSelect.className = 'lang-switcher';
@@ -23,9 +26,29 @@ document.addEventListener("DOMContentLoaded", () => {
   langSelect.style.fontFamily = 'inherit';
 
   const langs = {
-    'ja': '日本語', 'en': 'English (USA)', 'es': 'Español', 
-    'zh-Hans': '简体中文', 'zh-Hant': '繁體中文', 
-    'ko': '한국어', 'de': 'Deutsch', 'fr': 'Français', 'id': 'Bahasa Indonesia'
+    'ja': '日本語',
+    'en': 'English',
+    'en-GB': 'English (UK)',
+    'en-AU': 'English (Australia)',
+    'en-IE': 'English (Ireland)',
+    'es': 'Español',
+    'es-419': 'Español (LatAm)',
+    'pt': 'Português',
+    'pt-BR': 'Português (Brasil)',
+    'fr': 'Français',
+    'fr-CA': 'Français (Canada)',
+    'de': 'Deutsch',
+    'it': 'Italiano',
+    'ru': 'Русский',
+    'pl': 'Polski',
+    'no': 'Norsk',
+    'sv': 'Svenska',
+    'fi': 'Suomi',
+    'fil': 'Filipino',
+    'zh-Hans': '简体中文',
+    'zh-Hant': '繁體中文',
+    'ko': '한국어',
+    'id': 'Bahasa Indonesia'
   };
 
   Object.entries(langs).forEach(([code, label]) => {
@@ -38,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   langSelect.addEventListener('change', (e) => {
     const selected = e.target.value;
-    localStorage.setItem('vtuber_lang', selected);
+    localStorage.setItem('vt_archive_lang', selected);
     applyLanguage(selected);
   });
 
