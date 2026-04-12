@@ -71,6 +71,7 @@
 - 一部ページ: `C:\Users\rpgmi\Documents\GitHub\vtuberarchive\i18n_indie.js`
 - Aogiri キャラ用: `C:\Users\rpgmi\Documents\GitHub\vtuberarchive\aogiri_char_i18n.js`
 - 生成/整形ツール: `C:\Users\rpgmi\Documents\GitHub\vtuberarchive\tools\python\*.py`
+ - 原則: 各フォルダに翻訳データをまとめる（そのページ/セクター用の翻訳は同じフォルダ内に配置する）
 
 ## キー設計
 

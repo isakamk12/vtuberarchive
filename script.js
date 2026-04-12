@@ -43,7 +43,7 @@ const agencies = [
             desc_ko: "도쿄의 중소규모 사무소에서 시작해, 현재는 독자적인 코미디 노선으로 확고한 인기를 자랑합니다. 공식 사이트에서 멤버들의 상세 프로필을 확인할 수 있습니다."
         },
         {
-            name: "APP LAND", sub: "アップランド", filter: "corporate", color: "80, 200, 120", icon: "A", url: "AppLand/appland_index.html", tags: ["Agency", "JP"],
+            name: "APP LAND", sub: "アップランド", filter: "major", color: "80, 200, 120", icon: "A", url: "AppLand/appland_index.html", tags: ["Agency", "JP"],
             desc: "電脳少女シロをはじめとする老舗。独自の技術力とバラエティ豊かな所属タレントが特徴で、公式サイトの更新も継続されている。",
             desc_en: "A long-standing agency home to Cyber Girl Siro. Known for unique tech and diverse talents with a constantly updated site.",
             desc_es: "Una agencia veterana hogar de Cyber Girl Siro. Conocida por su tecnología única y talentos diversos con un sitio actualizado.",
