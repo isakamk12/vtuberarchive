@@ -1,8 +1,0 @@
-<div class="card-glare"></div>
-                <div class="card-content">
-                    <h3 class="card-title" style="color: rgb(${agency.color})">${displayName}</h3>
-                    <p class="card-sub">${agency.sub}</p>
-                    ${shortDesc ? `<p class="card-desc">${shortDesc}</p>` : ''}
-                </div>
-                ${tagsHTML}
-                <div class="card-watermark">${agency.icon}</div>

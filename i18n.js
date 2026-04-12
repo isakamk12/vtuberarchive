@@ -904,3 +904,9 @@ const translations = {
         status_roadmap_no_lat: "Walang pagkakaiba sa priority ng domestic at international na proyekto."
     }
 };
+
+if (typeof window !== 'undefined') {
+    window.translations = translations;
+    window.VT_I18N_OBJECTS = window.VT_I18N_OBJECTS || [];
+    window.VT_I18N_OBJECTS.push(translations);
+}
